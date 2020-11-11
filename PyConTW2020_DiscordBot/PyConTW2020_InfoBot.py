@@ -2,20 +2,21 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki Template For Python3
+    Loki 2.0 Template For Python3
 
     Request:
         {
             "username": "your_username",
             "input_str": "your_input",
-            "loki_key": "your_loki_key"
+            "loki_key": "your_loki_key",
+            "filter_list": ["intent_filter_list"] # optional
         }
 
     Response:
         {
             "status": True,
             "msg": "Success!",
-            "version": "v193",
+            "version": "v224",
             "word_count_balance": 2000,
             "results": [
                 {
@@ -29,12 +30,25 @@
         }
 """
 
+import json
+import os
 import requests
-from intent import Loki_GetVenueAddress
+try:
+    from intent import Loki_GetVenueAddress
+except:
+    from .intent import Loki_GetVenueAddress
 
-#USERNAME 為你的 Droidtown 帳號 email；LOKI_KEY 為此 Loki 專案的 KEY (需登入 Loki 管理頁面才看得到)
-USERNAME = ""
-LOKI_KEY = ""
+try:
+    infoPath = "{}/account.info".format(os.path.dirname(os.path.abspath(__file__))).replace("/PyConTW2020_DiscordBot", "")
+    infoDICT = json.load(open(infoPath, "r"))
+    USERNAME = infoDICT["username"]
+    API_KEY = infoDICT["api_key"]
+    LOKI_KEY = infoDICT["PyConTW2020_DiscordBot_key"]
+except:
+    # HINT: 在這裡填入您在 https://api.droidtown.co 的帳號、Articut 的 API_Key 以及 Loki 專案的 Loki_Key
+    USERNAME = ""
+    API_KEY = ""
+    LOKI_KEY = ""
 
 class LokiResult():
     status = False
@@ -144,6 +158,6 @@ def runLoki(input_str):
     return resultDICT
 
 if __name__ == "__main__":
-    input_str = "Sprint辦在哪裡"
+    input_str = "PyConTW的會場的地址是什麼"
     resultDICT = runLoki(input_str)
     print("Result => {}".format(resultDICT))

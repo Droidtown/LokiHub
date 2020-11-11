@@ -2,7 +2,10 @@
 # -*- coding:utf-8 -*-
 
 #載入 runLoki() 以便稍後把 Discord 取得的句子交給 Loki 處理。
-from PyConTW2020_InfoBot import runLoki
+try:
+    from PyConTW2020_InfoBot import runLoki
+except:
+    from .PyConTW2020_InfoBot import runLoki
 
 #讀入大會相關資訊
 import json
