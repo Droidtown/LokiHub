@@ -7,7 +7,7 @@
     Request:
         {
             "username": "your_username",
-            "input_str": "your_sentence",
+            "input_str": "your_input",
             "loki_key": "your_loki_key",
             "filter_list": ["intent_filter_list"] # optional
         }
