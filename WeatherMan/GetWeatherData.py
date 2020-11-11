@@ -7,11 +7,14 @@ import requests
 
 from pprint import pprint
 
-BASEPATH = os.path.dirname(os.path.abspath(__file__))
-infoPath = "{}/account.info".format(os.path.dirname(os.path.abspath(__file__))).replace("/Demos/Loki/WeatherMan", "")
-infoDICT = json.load(open(infoPath, "r"))
-AuthorizationKEY = infoDICT["weather_api_key"]
+try:
+    infoPath = "{}/account.info".format(os.path.dirname(os.path.abspath(__file__))).replace("/WeatherMan", "")
+    infoDICT = json.load(open(infoPath, "r"))
+    AuthorizationKEY = infoDICT["weather_api_key"]
+except:
+    AuthorizationKEY = ""
 
+BASEPATH = os.path.dirname(os.path.abspath(__file__))
 weatherURL = "https://opendata.cwb.gov.tw/api/v1/rest/datastore"
 
 DatastoreID = {

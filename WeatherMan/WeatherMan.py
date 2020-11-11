@@ -2,20 +2,21 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki Template For Python3
+    Loki 2.0 Template For Python3
 
     Request:
         {
             "username": "your_username",
             "input_str": "your_input",
-            "loki_key": "your_loki_key"
+            "loki_key": "your_loki_key",
+            "filter_list": ["intent_filter_list"] # optional
         }
 
     Response:
         {
             "status": True,
             "msg": "Success!",
-            "version": "v193",
+            "version": "v224",
             "word_count_balance": 2000,
             "results": [
                 {
@@ -29,19 +30,24 @@
         }
 """
 
-import rapidjson as json
+import json
 import os
 import requests
-from intent import Loki_Weather
+try:
+    from intent import Loki_Weather
+except:
+    from .intent import Loki_Weather
 
 try:
-    infoPath = "{}/account.info".format(os.path.dirname(os.path.abspath(__file__))).replace("/Demos/Loki/WeatherMan", "")
+    infoPath = "{}/account.info".format(os.path.dirname(os.path.abspath(__file__))).replace("/WeatherMan", "")
     infoDICT = json.load(open(infoPath, "r"))
     USERNAME = infoDICT["username"]
-    LOKI_KEY = infoDICT["weather_loki_key"]
+    API_KEY = infoDICT["api_key"]
+    LOKI_KEY = infoDICT["WeatherMan_loki_key"]
 except:
     # HINT: 在這裡填入您在 https://api.droidtown.co 的帳號、Articut 的 API_Key 以及 Loki 專案的 Loki_Key
     USERNAME = ""
+    API_KEY = ""
     LOKI_KEY = ""
 
 class LokiResult():

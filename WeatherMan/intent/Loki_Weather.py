@@ -16,7 +16,7 @@
 import datetime
 import glob
 import os
-import rapidjson as json
+import json
 import requests
 
 
@@ -27,7 +27,7 @@ datetimeFMT = "%Y-%m-%d %H:%M:%S"
 defualtDatetime = datetime.datetime.now()
 
 try:
-    infoPath = "{}/account.info".format(os.path.dirname(os.path.abspath(__file__))).replace("/Demos/Loki/WeatherMan/intent", "")
+    infoPath = "{}/account.info".format(os.path.dirname(os.path.abspath(__file__))).replace("/WeatherMan/intent", "")
     infoDICT = json.load(open(infoPath, "r"))
     USERNAME = infoDICT["username"]
     API_KEY = infoDICT["api_key"]
