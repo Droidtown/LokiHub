@@ -1,4 +1,6 @@
-# 快速上手
+#Project: PyConTW2020_DiscordBot PyCon 2020 Discord 機器人
+
+### 快速上手
 
 ### 1 建立 Discord Bot 環境
 1. 把 template.env 檔案打開，在 [Discord Developer Portal](https://discord.com/developers/application) 中取得的 Bot Token 取代 **{DISCORD_BOT_TOKEN}** (包括左右兩個大括號也一起取代掉)。注意等號前後不留空格。

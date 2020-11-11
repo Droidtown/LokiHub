@@ -1,6 +1,6 @@
 #Project: FinBot 金融應用機器人
 
-### 安裝方法
+### 快速上手
 
 1. 登入 [Loki 控制台](https://api.droidtown.co/loki/)。
 
