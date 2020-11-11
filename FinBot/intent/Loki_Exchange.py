@@ -123,9 +123,4 @@ def getResult(pattern, utterance, args, resultDICT):
         resultDICT["target"] = args[2]
         resultDICT["amount"] = None
 
-    if utterance == "[上星期三][美金]兌換[台幣]是多少":
-        resultDICT["source"] = args[1]
-        resultDICT["target"] = args[2]
-        resultDICT["amount"] = None
-
     return resultDICT
