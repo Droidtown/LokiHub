@@ -5,18 +5,24 @@ from AIoT.AIoT import runLoki
 from devices import light
 from devices import tv
 from devices import ac
+import os
 
 app = Flask(__name__)
-BOT_NAME = "小三"
+BOT_NAME = "宅宅"
 devLight = None
 devTV = None
 devAC = None
 DEFAULT_MSG = "對不起，{}不太了懂您的意思 ...".format(BOT_NAME)
 
+deviceDICT = {
+    "ac": ["冷氣機", "冷氣", "空調", "風量", "風", "溫度", "室溫"],
+    "tv": ["電視", "電視機", "TV", "頻道", "聲音", "音量", "喇叭"],
+    "action": ["發光二極體", "LED", "房間燈", "電燈", "燈光", "亮度", "光線", "房間", "客房", "書房", "臥房", "臥室", "客廳", "廁所", "餐廳", "廚房", "陽台", "燈"]
+}
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    return render_template("index.html")
+    return render_template("index.html", bot=BOT_NAME)
 
 
 @app.route("/msg", methods=["POST"])
@@ -34,6 +40,22 @@ def processMsg():
                 return controlDevices(resultDICT)
 
             elif resultLen == 2:
+                # 沒有 question 的情況下，篩選正確的指令
+                if "question_ac" not in resultDICT and "question_tv" not in resultDICT and "question_action" not in resultDICT:
+                    keyLIST = list(resultDICT.keys())
+                    for key in keyLIST:
+                        status = True
+                        for x in deviceDICT[key]:
+                            if x in inputSTR:
+                                status = False
+                        if status:
+                            del resultDICT[key]
+
+                    if len(resultDICT) == 1:
+                        return controlDevices(resultDICT)
+                    else:
+                        return {"type": "msg", "msg": DEFAULT_MSG}
+
                 for x in ["ac", "tv", "action"]:
                     if x in resultDICT and "question_{}".format(x) in resultDICT:
                         del resultDICT[x]
@@ -72,12 +94,14 @@ def controlDevices(resultDICT):
     try:
 
         command = None
+        msg = ""
 
         # AC
         if "ac" in resultDICT:
             typeSTR = "msg"
             status = devAC.switch(resultDICT["ac"])
             if status:
+                os.system("aplay sounds/ac.wav")
                 if resultDICT["ac"]:
                     msg = "{}幫您開啟冷氣了。".format(BOT_NAME)
                 else:
@@ -94,66 +118,97 @@ def controlDevices(resultDICT):
                 msg = "請問要{}幫您關冷氣嗎？".format(BOT_NAME)
 
         if "set_temperature" in resultDICT:
+            if not devAC.getStatus():
+                status = devAC.switch(True)
+                if status:
+                    msg = "{}幫您開啟冷氣，".format(BOT_NAME)
+
             typeSTR = "msg"
             status = devAC.remoteNext("temp", resultDICT["set_temperature"])
+            os.system("aplay sounds/ac.wav")
             if status:
                 if resultDICT["set_temperature"] >= 0:
-                    msg = "{}幫您把冷氣調高 {} °C。".format(BOT_NAME, resultDICT["set_temperature"])
-                else:
-                    msg = "{}幫您把冷氣調低 {} °C。".format(BOT_NAME, abs(resultDICT["set_temperature"]))
-            else:
-                if devAC.getStatus() is False:
-                    msg = "您的冷氣未開機。"
-                else:
-                    if resultDICT["set_temperature"] >= 0:
-                        msg = "冷氣溫度已經最低了。".format(ac.TEMP_MIN)
+                    if msg == "":
+                        msg = "{}幫您把冷氣調高 {} °C。".format(BOT_NAME, resultDICT["set_temperature"])
                     else:
-                        msg = "冷氣溫度已經最高了。".format(ac.TEMP_MAX)
+                        msg += "並把冷氣調高 {} °C。".format(resultDICT["set_temperature"])
+                else:
+                    if msg == "":
+                        msg = "{}幫您把冷氣調低 {} °C。".format(BOT_NAME, abs(resultDICT["set_temperature"]))
+                    else:
+                        msg += "並把冷氣調低 {} °C。".format(resultDICT["set_temperature"])
+            else:
+                if resultDICT["set_temperature"] >= 0:
+                    msg = "冷氣溫度已經最低了。".format(ac.TEMP_MIN)
+                else:
+                    msg = "冷氣溫度已經最高了。".format(ac.TEMP_MAX)
 
         if "temperature" in resultDICT:
+            if not devAC.getStatus():
+                status = devAC.switch(True)
+                if status:
+                    msg = "{}幫您開啟冷氣，".format(BOT_NAME)
+
             typeSTR = "msg"
             status = devAC.remote("temp", resultDICT["temperature"])
+            os.system("aplay sounds/ac.wav")
             if status:
-                msg = "{}幫您把冷氣調至 {} °C。".format(BOT_NAME, resultDICT["temperature"])
-            else:
-                if devAC.getStatus() is False:
-                    msg = "您的冷氣未開機。"
+                if msg == "":
+                    msg = "{}幫您把冷氣調至 {} °C。".format(BOT_NAME, resultDICT["temperature"])
                 else:
-                    msg = "冷氣溫度只能設定 {} ~ {} °C。".format(ac.TEMP_MIN, ac.TEMP_MAX)
+                    msg += "並把冷氣調至 {} °C。".format(resultDICT["set_temperature"])
+            else:
+                msg = "冷氣溫度只能設定 {} ~ {} °C。".format(ac.TEMP_MIN, ac.TEMP_MAX)
 
         if "set_fan_speed" in resultDICT:
+            if not devAC.getStatus():
+                status = devAC.switch(True)
+                if status:
+                    msg = "{}幫您開啟冷氣，".format(BOT_NAME)
+
             typeSTR = "msg"
             status = devAC.remoteNext("fan", resultDICT["set_fan_speed"])
+            os.system("aplay sounds/ac.wav")
             if status:
                 if resultDICT["set_fan_speed"] >= 0:
-                    msg = "{}幫您把冷氣風量調大 {} 檔。".format(BOT_NAME, resultDICT["set_fan_speed"])
-                else:
-                    msg = "{]幫您把冷氣風量調小 {} 檔。".format(BOT_NAME, abs(resultDICT["set_fan_speed"]))
-            else:
-                if devAC.getStatus() is False:
-                    msg = "您的冷氣未開機。"
-                else:
-                    if resultDICT["set_fan_speed"] >= 0:
-                        msg = "冷氣風速已經最高檔了。"
+                    if msg == "":
+                        msg = "{}幫您把冷氣風量調大 {} 檔。".format(BOT_NAME, resultDICT["set_fan_speed"])
                     else:
-                        msg = "冷氣風速已經最低檔了。"
+                        msg += "並把冷氣風量調大 {} 檔。".format(resultDICT["set_fan_speed"])
+                else:
+                    if msg == "":
+                        msg = "{]幫您把冷氣風量調小 {} 檔。".format(BOT_NAME, abs(resultDICT["set_fan_speed"]))
+                    else:
+                        msg += "並把冷氣風量調小 {} 檔。".format(resultDICT["set_fan_speed"])
+            else:
+                if resultDICT["set_fan_speed"] >= 0:
+                    msg = "冷氣風速已經最高檔了。"
+                else:
+                    msg = "冷氣風速已經最低檔了。"
 
         if "time" in resultDICT:
+            if not devAC.getStatus():
+                status = devAC.switch(True)
+                if status:
+                    msg = "{}幫您開啟冷氣，".format(BOT_NAME)
+
             typeSTR = "msg"
             status = devAC.remote("timing", resultDICT["time"])
+            os.system("aplay sounds/ac.wav")
             if status:
-                msg = "{}幫您冷氣定時 {} 小時".format(BOT_NAME, resultDICT["time"])
-            else:
-                if devAC.getStatus() is False:
-                    msg = "您的冷氣未開機。"
+                if msg == "":
+                    msg = "{}幫您冷氣定時 {} 小時".format(BOT_NAME, resultDICT["time"])
                 else:
-                    msg = "冷氣定時只能設定 {} ~ {} 小時".format(ac.TIMING_MIN, ac.TIMING_MAX)
+                    msg += "並把冷氣風量定時 {} 小時。".format(resultDICT["time"])
+            else:
+                msg = "冷氣定時只能設定 {} ~ {} 小時".format(ac.TIMING_MIN, ac.TIMING_MAX)
 
         # TV
         if "tv" in resultDICT:
             typeSTR = "msg"
             status = devTV.switch(resultDICT["tv"])
             if status:
+                os.system("aplay sounds/television.wav")
                 if resultDICT["tv"]:
                     msg = "{}幫您開啟電視了。".format(BOT_NAME)
                 else:
@@ -170,57 +225,87 @@ def controlDevices(resultDICT):
                 msg = "請問要{}幫您關電視嗎？".format(BOT_NAME)
 
         if "set_channel" in resultDICT:
+            if not devTV.getStatus():
+                status = devTV.switch(True)
+                if status:
+                    msg = "{}幫您開啟電視，".format(BOT_NAME)
+
             typeSTR = "msg"
             status = devTV.switchNext("channel", resultDICT["set_channel"])
+            os.system("aplay sounds/television.wav")
             if status:
                 if resultDICT["set_channel"] >= 0:
-                    msg = "{}幫您把電視往後 {} 台。".format(BOT_NAME, resultDICT["set_channel"])
+                    if msg == "":
+                        msg = "{}幫您把電視往後 {} 台。".format(BOT_NAME, resultDICT["set_channel"])
+                    else:
+                        msg += "並把電視往後 {} 台。".format(resultDICT["set_channel"])
                 else:
-                    msg = "{}幫您把電視往前 {} 台。".format(BOT_NAME, abs(resultDICT["set_channel"]))
+                    if msg == "":
+                        msg = "{}幫您把電視往前 {} 台。".format(BOT_NAME, abs(resultDICT["set_channel"]))
+                    else:
+                        msg += "並把電視往前 {} 台。".format(resultDICT["set_channel"])
             else:
-                if devTV.getStatus() is False:
-                    msg = "您的電視未開機。"
-                else:
-                    msg = "電視頻道只能設定 {} ~ {} 台".format(tv.CHANNEL_MIN, tv.CHANNEL_MAX)
+                msg = "電視頻道只能設定 {} ~ {} 台".format(tv.CHANNEL_MIN, tv.CHANNEL_MAX)
 
         if "channel" in resultDICT:
+            if not devTV.getStatus():
+                status = devTV.switch(True)
+                if status:
+                    msg = "{}幫您開啟電視，".format(BOT_NAME)
+
             typeSTR = "msg"
             status = devTV.switchTo("channel", resultDICT["channel"])
+            os.system("aplay sounds/television.wav")
             if status:
-                msg = "{}幫您把電視調至 {} 台。".format(BOT_NAME, resultDICT["channel"])
-            else:
-                if devTV.getStatus() is False:
-                    msg = "您的電視未開機。"
+                if msg == "":
+                    msg = "{}幫您把電視調至 {} 台。".format(BOT_NAME, resultDICT["channel"])
                 else:
-                    msg = "電視頻道只能設定 {} ~ {} 台".format(tv.CHANNEL_MIN, tv.CHANNEL_MAX)
+                    msg += "並把電視調至 {} 台。".format(resultDICT["channel"])
+            else:
+                msg = "電視頻道只能設定 {} ~ {} 台".format(tv.CHANNEL_MIN, tv.CHANNEL_MAX)
 
         if "set_volume" in resultDICT:
+            if not devTV.getStatus():
+                status = devTV.switch(True)
+                if status:
+                    msg = "{}幫您開啟電視，".format(BOT_NAME)
+
             typeSTR = "msg"
             status = devTV.switchNext("volume", resultDICT["set_volume"])
+            os.system("aplay sounds/television.wav")
             if status:
                 if resultDICT["set_volume"] >= 0:
-                    msg = "{}幫您把電視音量調大 {} 格。".format(BOT_NAME, resultDICT["set_volume"])
-                else:
-                    msg = "{}幫您把電視音量調小 {} 格。".format(BOT_NAME, abs(resultDICT["set_volume"]))
-            else:
-                if devTV.getStatus() is False:
-                    msg = "您的電視未開機。"
-                else:
-                    if resultDICT["set_volume"] >= 0:
-                        msg = "電視音量已經最大聲了。"
+                    if msg == "":
+                        msg = "{}幫您把電視音量調大 {} 格。".format(BOT_NAME, resultDICT["set_volume"])
                     else:
-                        msg = "電視音量已經最小聲了。"
+                        msg += "並把電視音量調大 {} 格。".format(resultDICT["set_volume"])
+                else:
+                    if msg == "":
+                        msg = "{}幫您把電視音量調小 {} 格。".format(BOT_NAME, abs(resultDICT["set_volume"]))
+                    else:
+                        msg += "並把電視音量調小 {} 格。".format(resultDICT["set_volume"])
+            else:
+                if resultDICT["set_volume"] >= 0:
+                    msg = "電視音量已經最大聲了。"
+                else:
+                    msg = "電視音量已經最小聲了。"
 
         if "volume" in resultDICT:
+            if not devTV.getStatus():
+                status = devTV.switch(True)
+                if status:
+                    msg = "{}幫您開啟電視，".format(BOT_NAME)
+
             typeSTR = "msg"
             status = devTV.switchTo("volume", resultDICT["volume"])
+            os.system("aplay sounds/television.wav")
             if status:
-                msg = "{}幫您把電視音量調至 {} 格。".format(BOT_NAME, resultDICT["volume"])
-            else:
-                if devTV.getStatus() is False:
-                    msg = "您的電視未開機。"
+                if msg == "":
+                    msg = "{}幫您把電視音量調至 {} 格。".format(BOT_NAME, resultDICT["volume"])
                 else:
-                    msg = "電視音量只能設定 {} ~ {} 台".format(tv.VOLUME_MIN, tv.VOLUME_MAX)
+                    msg += "並把電視音量調至 {} 格。".format(resultDICT["volume"])
+            else:
+                msg = "電視音量只能設定 {} ~ {} 台".format(tv.VOLUME_MIN, tv.VOLUME_MAX)
 
         # Light
         if "action" in resultDICT:
@@ -252,6 +337,8 @@ def controlDevices(resultDICT):
                     msg = "{}幫您關閉 1 盞燈。".format(BOT_NAME)
                 else:
                     msg = "燈已經全關了。"
+
+            os.system("aplay sounds/Pikachu-PIKA.wav")
 
         if "question_action" in resultDICT:
             typeSTR = "question"
@@ -341,9 +428,9 @@ def askCommand(resultDICT):
     if "action" in resultDICT:
         commandDICT = {"command": "action", "value": resultDICT["action"]}
         if resultDICT["action"] == "++":
-            commandDICT["text"] = "電燈全開"
+            commandDICT["text"] = "開電燈"
         if resultDICT["action"] == "--":
-            commandDICT["text"] = "電燈全關"
+            commandDICT["text"] = "關電燈"
         if resultDICT["action"] == "+":
             commandDICT["text"] = "電燈調亮一格"
         if resultDICT["action"] == "-":

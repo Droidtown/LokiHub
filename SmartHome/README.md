@@ -1,72 +1,57 @@
-# Requirements
+#Project: SmartHome 宅宅管家
+
+## 設備
 
 - Raspberry Pi 4 Model B
 - LED (2 Pin)
 - [TFT LCD 2.4inch](https://github.com/adafruit/Adafruit_Python_ILI9341)
 - [1602 LCD I2C](https://github.com/adafruit/Adafruit_CircuitPython_RGB_Display)
 
----
+## 設置環境
 
-# Raspberry Pi 4 Model B
+### 1 安裝 Raspberry Pi OS
 
-### Raspberry Pi OS
+1. 下載 [Raspbian Buster 2019-09-30](https://downloads.raspberrypi.org/raspbian/images/raspbian-2019-09-30/2019-09-26-raspbian-buster.zip) 及 [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/)。
 
-[Download Raspbian Buster 2019-09-30](https://downloads.raspberrypi.org/raspbian/images/raspbian-2019-09-30/2019-09-26-raspbian-buster.zip)
+2. 打開 Raspberry Pi Imager，點擊 [CHOOSE OS] > [Use Custom] > `2019-09-26-raspbian-buster.zip`，再點擊 [CHOOSE SD CARD] > `YOUR_SD_CARD`，最後點擊 [WRITE] 開始燒入。
 
-```
-Release Date: 2019-09-30
-Release Name: 2019-09-26
-```
+3. 燒入完畢後編輯`SDCARD/config.txt`。
+	- hdmi_group=2
+	- hdmi_mode=16
+	- hdmi_driver=2
+	
+3. 將 SDCARD 放入 Raspberry Pi 後開機，並開啟 I2C 及 SPI 等介面。
 
-### HDMI Setting
+	```
+	$ sudo raspi-config
+	```
+	- 選擇 5 Interfacing Options 後，啟用 P4 SPI 及 P5 I2C
 
-```
-config.txt
-hdmi_group=2
-hdmi_mode=16
-hdmi_driver=2
-```
 
----
-
-# Python 3.6.8
-
-Install packages
+### 2 安裝相關套件
 
 ```
 $ sudo apt-get update
 $ sudo apt-get install build-essential bzip2 libbz2-dev libreadline6 libreadline6-dev libffi-dev libssl1.0-dev sqlite3 libsqlite3-dev libjpeg-dev zlib1g-dev python3-rpi.gpio
+
+$ wget https://github.com/adafruit/Adafruit_Python_ILI9341/archive/master.zip
+$ unzip master.zip
+$ cd Adafruit_Python_ILI9341-master
+$ python setup.py install
+
+$ pip3 install gpiozero
+$ pip3 install RPi.GPIO
+$ pip3 install Pillow
+$ pip3 install RPLCD
+$ pip3 install smbus2
+$ pip3 install Pillow
+$ pip3 install numpy
+$ pip3 install Adafruit_GPIO
 ```
 
-Dwonload pyenv
+### 3 連接設備
 
-```
-$ curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-```
-
-Append to ~/.bashrc
-
-```
-export PATH="~/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-```
-
-Download python 3.6.8
-
-```
-$ source ~/.bashrc
-$ pyenv install 3.6.8
-$ pyenv virtualenv 3.6.8 SmartHome_3.6.8
-$ cd ~/Desktop/SmartHome_3
-$ pyenv local SmartHome_3.6.8
-```
-
----
-
-# Devices
-
-### Connected Pin
+![](SmartHome.png)
 
 ```
 RPi            1602 LCD with I2C
@@ -92,52 +77,24 @@ Pin 39  <--->  LED 4
 Pin 40  <--->  GND
 ```
 
-### LED (light.py)
+## 建立服務
 
-```
-$ pip install gpiozero
-$ pip install RPi.GPIO
-```
+### 快速上手
 
-### 1602 LCD with I2C (tv.py)
+1. 登入 [Loki 控制台](https://api.droidtown.co/loki/)。
 
-```
-$ pip install Pillow
-$ pip install RPLCD
-$ pip install smbus2
-```
+2. 在 Loki 控制台中新建一個專案`SmartHome`，並進入專案。
 
-### TFT LCD with ILI9341 SPI (ac.py)
+3. 在專案下方選擇`ArticutModel`並依序點擊 [瀏覽] > 選擇`AIoT/ref/AC.ref`、`AIoT/ref/TV.ref`、`AIoT/ref/Light.ref`及`AIoT/ref/Question.ref` > [讀取意圖] ，並進入意圖。
 
-```
-$ wget https://github.com/adafruit/Adafruit_Python_ILI9341/archive/master.zip
-$ unzip master.zip
-$ cd Adafruit_Python_ILI9341-master
-$ python setup.py install
-$ pip install Pillow
-$ pip install numpy
-$ pip install Adafruit_GPIO
-```
+4. 在`5. 生成模型`區塊中點擊 [生成模型 (SmartHome)]。完成後，在畫面最上面點擊左邊的「房子」圖示，回到專案頁。這裡有`SmartHome`的專案金鑰。
 
----
+5. 編輯`AIoT/AIoT.py`、`AIoT/intent/Loki_AC.py`及`AIoT/intent/Loki_TV.py`。
+	- USERNAME 填入你的 Droidtown 使用者帳號 (email)
+	- API_KEY 填入你的 [Articut 金鑰](https://api.droidtown.co/member/)
+	- LOKI_KEY 填入你產生的`SmartHome`專案金鑰
 
-# Run
-
-Open AIoT/AIoT.py
-
-```
-Line 37: USERNAME = "YOUR_ACCOUNT"
-Line 38: LOKI_KEY = "YOUR_LOKI_KEY"
-```
-
-Open AIoT/intent/*.py
-
-```
-USERNAME = "YOUR_ACCOUNT"
-API_KEY  = "YOUR_ARTICUT_KEY"
-```
-
-Launch server
+### 啟動服務
 
 ```
 $ pip install flask

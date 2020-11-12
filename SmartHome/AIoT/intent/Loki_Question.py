@@ -14,26 +14,20 @@
         resultDICT    dict
 """
 
-import os
-
-try:
-    infoPath = "{}/account.info".format(os.path.dirname(os.path.abspath(__file__))).replace("/Demos/Loki/SmartHome/intent", "")
-    infoDICT = json.load(open(infoPath, "r"))
-    USERNAME = infoDICT["username"]
-    API_KEY = infoDICT["api_key"]
-except:
-    # HINT: 在這裡填入您在 https://api.droidtown.co 的帳號、Articut 的 API_Key 以及 Loki 專案的 Loki_Key
-    USERNAME = ""
-    API_KEY = ""
-
-DEBUG_Question = True
-userDefinedDICT = {"TV": ["八點檔", "電視", "電影", "新聞", "卡通", "美劇", "韓劇", "日劇", "台劇", "偶像劇", "兒童台", "幼幼台"]}
+import re
 
 entityDICT = {
-    "action": "燈",
+    "action": ["房間", "客房", "書房", "臥房", "臥室", "客廳", "廁所", "餐廳", "廚房", "陽台"],
     "ac": ["冷氣", "冷氣機", "空調"],
     "tv": ["電視", "電視機", "TV"]
 }
+
+actionPat = re.compile("(發光二極體|LED|光線|亮度|電燈|燈光|{房間|客房|書房|臥房|臥室|客廳|廁所|餐廳|廚房|陽台}|({房間|客房|書房|臥房|臥室|客廳|廁所|餐廳|廚房|陽台})?燈)$")
+tvPat = re.compile("((.*)?(卡通|[劇台臺]|節目|頻道)|電視(機)?|[Tt][Vv])$")
+acPat = re.compile("(冷氣(機)?|空調)$")
+
+
+DEBUG_Question = False
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(pattern, utterance, args):
@@ -42,111 +36,71 @@ def debugInfo(pattern, utterance, args):
 
 def getResult(pattern, utterance, args, resultDICT, input_str):
     debugInfo(pattern, utterance, args)
-    if utterance == "忘記關[冷氣]":
-        if entityDICT["action"] in args[0]:
+
+    if utterance in ["可以看[卡通]嗎", "有什麼[卡通]可以看嗎", "有什麼[卡通]嗎", "有[卡通]可以看嗎", "有[卡通]嗎"]:
+        if tvPat.search(args[0]):
+            resultDICT["question_tv"] = True
+
+    if utterance in ["忘記開[冷氣]", "好像忘記開[冷氣]", "忘記開[燈]", "好像忘記開[燈]"]:
+        if actionPat.search(args[0]):
+            resultDICT["question_action"] = "++"
+        if acPat.search(args[0]):
+            resultDICT["question_ac"] = True
+        if tvPat.search(args[0]):
+            resultDICT["question_tv"] = True
+
+    if utterance in ["好像沒開[冷氣]", "[冷氣]好像沒開", "沒開[冷氣]"]:
+        if "沒開" in input_str:
+            if actionPat.search(args[0]):
+                resultDICT["question_action"] = "++"
+            if acPat.search(args[0]):
+                resultDICT["question_ac"] = True
+            if tvPat.search(args[0]):
+                resultDICT["question_tv"] = True
+
+    if utterance in ["忘記關[冷氣]", "好像忘記關[冷氣]", "忘記關[燈]", "好像忘記關[燈]"]:
+        if actionPat.search(args[0]):
             resultDICT["question_action"] = "--"
-        if args[0] in entityDICT["ac"]:
+        if acPat.search(args[0]):
             resultDICT["question_ac"] = False
-        if args[0] in entityDICT["tv"]:
+        if tvPat.search(args[0]):
             resultDICT["question_tv"] = False
 
-    if utterance == "忘記關燈":
-        resultDICT["question_action"] = "--"
+    if utterance in ["好像沒關[冷氣]", "[冷氣]好像沒關", "沒關[冷氣]"]:
+        if "沒關" in input_str:
+            if actionPat.search(args[0]):
+                resultDICT["question_action"] = "--"
+            if acPat.search(args[0]):
+                resultDICT["question_ac"] = False
+            if tvPat.search(args[0]):
+                resultDICT["question_tv"] = False
+
+    if utterance in ["[燈]忘記開", "[燈]好像忘記開"]:
+        if actionPat.search(args[0]):
+            resultDICT["question_action"] = "++"
+        if acPat.search(args[0]):
+            resultDICT["question_ac"] = True
+        if tvPat.search(args[0]):
+            resultDICT["question_tv"] = True
+
+    if utterance in ["[燈]忘記關", "[燈]好像忘記關"]:
+        if actionPat.search(args[0]):
+            resultDICT["question_action"] = "--"
+        if acPat.search(args[0]):
+            resultDICT["question_ac"] = False
+        if tvPat.search(args[0]):
+            resultDICT["question_tv"] = False
+
+    if utterance == "想看[卡通]":
+        if tvPat.search(args[0]):
+            resultDICT["question_tv"] = True
 
     if utterance == "[燈]忘記開":
-        if entityDICT["action"] in args[0]:
+        if actionPat.search(args[0]):
             resultDICT["question_action"] = "++"
-        if args[0] in entityDICT["ac"]:
+        if acPat.search(args[0]):
             resultDICT["question_ac"] = True
-        if args[0] in entityDICT["tv"]:
-            resultDICT["question_tv"] = True
-
-    if utterance == "[燈]忘記關":
-        if entityDICT["action"] in args[0]:
-            resultDICT["question_action"] = "--"
-        if args[0] in entityDICT["ac"]:
-            resultDICT["question_ac"] = False
-        if args[0] in entityDICT["tv"]:
-            resultDICT["question_tv"] = False
-
-    if utterance == "[燈]忘記開":
-        if entityDICT["action"] in args[0]:
-            resultDICT["question_action"] = "++"
-        if args[0] in entityDICT["ac"]:
-            resultDICT["question_ac"] = True
-        if args[0] in entityDICT["tv"]:
-            resultDICT["question_tv"] = True
-
-    if utterance == "沒關[冷氣]":
-        if entityDICT["action"] in args[0]:
-            resultDICT["question_action"] = "--"
-        if args[0] in entityDICT["ac"]:
-            resultDICT["question_ac"] = False
-        if args[0] in entityDICT["tv"]:
-            resultDICT["question_tv"] = False
-
-    if utterance == "[好像]忘記關燈":
-        if args[0] in ["好像"]:
-            resultDICT["question_action"] = "--"
-
-    if utterance == "[好像]忘記開燈":
-        if args[0] in ["好像"]:
-            resultDICT["question_action"] = "++"
-
-    if utterance == "[燈][好像]忘記關":
-        if entityDICT["action"] in args[0]:
-            resultDICT["question_action"] = "--"
-        if args[0] in entityDICT["ac"]:
-            resultDICT["question_ac"] = False
-        if args[0] in entityDICT["tv"]:
-            resultDICT["question_tv"] = False
-
-    if utterance in ["[好像]忘記關[冷氣]", "[好像]沒關[冷氣]"]:
-        if entityDICT["action"] in args[1]:
-            resultDICT["question_action"] = "--"
-        if args[1] in entityDICT["ac"]:
-            resultDICT["question_ac"] = False
-        if args[1] in entityDICT["tv"]:
-            resultDICT["question_tv"] = False
-
-    if utterance in ["忘記開[冷氣]", "沒開[冷氣]", "[燈][好像]忘記開"]:
-        if entityDICT["action"] in args[0]:
-            resultDICT["question_action"] = "++"
-        if args[0] in entityDICT["ac"]:
-            resultDICT["question_ac"] = True
-        if args[0] in entityDICT["tv"]:
-            resultDICT["question_tv"] = True
-
-    if utterance in ["[好像]忘記開[冷氣]", "[好像]沒開[冷氣]"]:
-        if entityDICT["action"] in args[1]:
-            resultDICT["question_action"] = "++"
-        if args[1] in entityDICT["ac"]:
-            resultDICT["question_ac"] = True
-        if args[1] in entityDICT["tv"]:
-            resultDICT["question_tv"] = True
-
-    if utterance in ["[燈][好像]忘記開", "[冷氣][好像]沒開"]:
-        if entityDICT["action"] in args[0]:
-            resultDICT["question_action"] = "++"
-        if args[0] in entityDICT["ac"]:
-            resultDICT["question_ac"] = True
-        if args[0] in entityDICT["tv"]:
-            resultDICT["question_tv"] = True
-
-    if utterance in ["[燈][好像]忘記關", "[冷氣][好像]沒關"]:
-        if entityDICT["action"] in args[0]:
-            resultDICT["question_action"] = "--"
-        if args[0] in entityDICT["ac"]:
-            resultDICT["question_ac"] = False
-        if args[0] in entityDICT["tv"]:
-            resultDICT["question_tv"] = False
-
-    if utterance == "[我]想看[卡通]":
-        if args[1] in userDefinedDICT["TV"]:
-            resultDICT["question_tv"] = True
-
-    if utterance in ["有[卡通]可以看嗎", "可以看[卡通]嗎", "有什麼[卡通]可以看嗎"]:
-        if args[0] in userDefinedDICT["TV"]:
+        if tvPat.search(args[0]):
             resultDICT["question_tv"] = True
 
     return resultDICT

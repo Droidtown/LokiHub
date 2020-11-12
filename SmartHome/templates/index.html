@@ -3,7 +3,7 @@
 <html lang="zh-tw">
 <head>
     <meta charset="utf-8">
-    <title>小三管家</title>
+    <title>{{ bot }}管家</title>
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" />
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" />
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
@@ -17,13 +17,13 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header text-center border border-secondary">
-                    <img src="{{ url_for('static', filename='images/favicon.png') }}" /> 小三管家
+                    <img src="{{ url_for('static', filename='images/favicon.png') }}" /> {{ bot }}管家
                 </div>
                 <div class="card-body border border-secondary">
                     <div class="row">
                         <div class="col-auto">
                             <div class="alert alert-primary" role="alert">
-                                小三正在聆聽中 ...
+                                {{ bot }}正在聆聽中 ...
                             </div>
                         </div>
                     </div>
