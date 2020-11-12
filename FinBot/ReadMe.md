@@ -1,4 +1,4 @@
-#Project: FinBot 金融應用機器人
+# FinBot 金融應用機器人
 
 ### 快速上手
 

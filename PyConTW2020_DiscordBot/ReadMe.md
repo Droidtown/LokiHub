@@ -1,4 +1,4 @@
-#Project: PyConTW2020_DiscordBot PyCon 2020 Discord 機器人
+# PyConTW2020_DiscordBot PyCon 2020 Discord 機器人
 
 ### 快速上手
 

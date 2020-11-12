@@ -1,4 +1,4 @@
-#Project: SmartHome 宅宅管家
+# SmartHome 宅宅管家
 
 ## 設備
 

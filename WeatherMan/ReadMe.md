@@ -1,4 +1,4 @@
-#Project: WeatherMan 天氣管家機器人
+# WeatherMan 天氣管家機器人
 
 ### 快速上手
 
