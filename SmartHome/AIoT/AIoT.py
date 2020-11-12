@@ -45,7 +45,7 @@ except:
     from .intent import Loki_Question
 
 try:
-    infoPath = "{}/account.info".format(os.path.dirname(os.path.abspath(__file__))).replace("/Demos/Loki/SmartHome", "")
+    infoPath = "{}/account.info".format(os.path.dirname(os.path.abspath(__file__))).replace("/SmartHome/AIoT", "")
     infoDICT = json.load(open(infoPath, "r"))
     USERNAME = infoDICT["username"]
     LOKI_KEY = infoDICT["SmartHome_loki_key"]

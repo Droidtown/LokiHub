@@ -27,7 +27,7 @@ tvPat = re.compile("((.*)?(卡通|[劇台臺]|節目|頻道)|電視(機)?|[Tt][V
 acPat = re.compile("(冷氣(機)?|空調)$")
 
 
-DEBUG_Question = False
+DEBUG_Question = True
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(pattern, utterance, args):

@@ -50,7 +50,7 @@ tempUnitPat = re.compile("度$")
 unitPat = re.compile("(((小)?時)|[度檔格些點])$")
 degreePat = re.compile("[太很好]|非常")
 
-DEBUG_AC = False
+DEBUG_AC = True
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(pattern, utterance, args):
