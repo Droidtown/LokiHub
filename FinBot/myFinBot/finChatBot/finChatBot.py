@@ -193,7 +193,7 @@ def moneyName(inputSTR): # input src or tgt to get currency
                  "港幣": "HKD",
                  "泰銖": "THB"}
     if (inputSTR == None): # init = TWD
-        moneyDICT[inputSTR] = "台幣"
+        moneyDICT[inputSTR] = "TWD"
     return moneyDICT[inputSTR]
 
 def amountSTRconvert(inputSTR): # convert [X元] into [number X]
@@ -204,18 +204,19 @@ def amountSTRconvert(inputSTR): # convert [X元] into [number X]
         resultDICT = articut.parse(inputSTR, level="lv3") # 有換匯金額就轉成Number
     return resultDICT["number"]
 
-if __name__ == "__main__":
-    inputLIST = ["100英鎊要台幣多少"]
+if __name__ == "__main__": # python的程式進入點
+    inputLIST = ["我想要100元美金"]
     resultDICT = runLoki(inputLIST)
     print("Result => {}".format(resultDICT))
+    
     src = moneyName(resultDICT["source"])
     tgt = moneyName(resultDICT["target"])
     amt = amountSTRconvert(resultDICT['amount'])[resultDICT['amount']]
-    # amt = amountSTRconvert(resultDICT["amount"])
     
     rateDICT = getTodayExchangeRate() # get ExchangeRate table
     # calculate ExchangeRate by [source -> USD -> target]
-    exRate = (1/rateDICT["USD{}".format(src)]["Exrate"])*(rateDICT["USD{}".format(tgt)]["Exrate"])
-    
+
+    exRate = (1/rateDICT["USD{}".format(src)]["Exrate"]) * (rateDICT["USD{}".format(tgt)]["Exrate"])
+
     print("\nExchanging",amt, src, "to", tgt,"...")
     print("You need", amt*exRate,tgt) # 金額*匯率

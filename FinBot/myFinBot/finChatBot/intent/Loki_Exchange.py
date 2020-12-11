@@ -16,15 +16,15 @@
 
 DEBUG_Exchange = True
 userDefinedDICT = {"歐元":"EUR",
-                 "美金":"USD",
-                 "日圓":"JPY",
-                 "台幣":"TWD",
-                 "臺幣":"TWD",
-                 "英鎊":"GBP",
-                 "法郎":"CHF",
-                 "澳幣":"AUD",
-                 "港幣":"HKD",
-                 "泰銖":"THB"}
+                   "美金":"USD",
+                   "日圓":"JPY",
+                   "台幣":"TWD",
+                   "臺幣":"TWD",
+                   "英鎊":"GBP",
+                   "法郎":"CHF",
+                   "澳幣":"AUD",
+                   "港幣":"HKD",
+                   "泰銖":"THB"}
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
@@ -59,6 +59,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         pass
 
     if utterance == "[100台幣]換[美金]":
+        # 如果 userDefinedDICT 的 某個key x在 args[0] 裡面，就把他的key中的第0個資料拿出來（也就是貨幣的英文）
         resultDICT["source"] = [x for x in userDefinedDICT if x in args[0]][0]
         resultDICT["target"] = args[1]
         resultDICT["amount"] = args[0]
