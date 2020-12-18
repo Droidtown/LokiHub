@@ -48,16 +48,21 @@ try:
 except:
     from .intent import Loki_Exchange
 
+API_KEY = ""
+LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
+USERNAME = ""
+LOKI_KEY = ""
 try:
     from ArticutAPI import ArticutAPI
-    articut = ArticutAPI.Articut()
+    if API_KEY == "":
+        articut = ArticutAPI.Articut(username=USERNAME, API_KEY=API_KEY)
+    else:
+        articut = ArticutAPI.Articut(username=USERNAME, API_KEY=API_KEY)
 except:
     print("需配合 ArticutAPI 使用。請至 https://github.com/Droidtown/ArticutAPI 下載")
 
 
-LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
-USERNAME = ""
-LOKI_KEY = ""
+
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
 # INTENT_FILTER = [intentN] => 僅比對 INTENT_FILTER 內的意圖
