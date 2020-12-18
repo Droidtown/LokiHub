@@ -48,13 +48,16 @@ try:
 except:
     from .intent import Loki_Exchange
 
-from ArticutAPI import ArticutAPI
-articut = ArticutAPI.Articut()
+try:
+    from ArticutAPI import ArticutAPI
+    articut = ArticutAPI.Articut()
+except:
+    print("需配合 ArticutAPI 使用。請至 https://github.com/Droidtown/ArticutAPI 下載")
 
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
-USERNAME = "xww1748.fl06@g2.nctu.edu.tw"
-LOKI_KEY = "ZCL&=qc+Y1^5e@^aicqQu*yp%YuKEFW"
+USERNAME = ""
+LOKI_KEY = ""
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
 # INTENT_FILTER = [intentN] => 僅比對 INTENT_FILTER 內的意圖
@@ -208,11 +211,11 @@ if __name__ == "__main__": # python的程式進入點
     inputLIST = ["我想要100元美金"]
     resultDICT = runLoki(inputLIST)
     print("Result => {}".format(resultDICT))
-    
+
     src = moneyName(resultDICT["source"])
     tgt = moneyName(resultDICT["target"])
     amt = amountSTRconvert(resultDICT['amount'])[resultDICT['amount']]
-    
+
     rateDICT = getTodayExchangeRate() # get ExchangeRate table
     # calculate ExchangeRate by [source -> USD -> target]
 
