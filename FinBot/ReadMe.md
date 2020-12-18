@@ -13,6 +13,6 @@
 5. 編輯 `FinExchange.py`。
 	- USERNAME 填入你的 Droidtown 使用者帳號 (email)
 	- LOKI_KEY 填入你產生的`FinBot`專案金鑰
-	- 如果要使用自己的 Articut 額度，請新增 API_KEY 填入你的 [Articut 金鑰](https://api.droidtown.co/member/)
+	- 如果要使用自己的 Articut 額度，請在 API_KEY 填入你的 [Articut 金鑰](https://api.droidtown.co/member/)
 
 6. 開始使用`FinBot`。
