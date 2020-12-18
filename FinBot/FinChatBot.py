@@ -224,7 +224,7 @@ if __name__ == "__main__": # python的程式進入點
     rateDICT = getTodayExchangeRate() # get ExchangeRate table
     # calculate ExchangeRate by [source -> USD -> target]
 
-    exRate = (1/rateDICT["USD{}".format(src)]["Exrate"]) * (rateDICT["USD{}".format(tgt)]["Exrate"])
+    exRate = round(1/rateDICT["USD{}".format(src)]["Exrate"]) * (rateDICT["USD{}".format(tgt)]["Exrate"], 3)
 
     print("\nExchanging",amt, src, "to", tgt,"...")
     print("You need", amt*exRate,tgt) # 金額*匯率
