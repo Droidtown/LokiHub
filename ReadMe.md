@@ -15,4 +15,4 @@ LokiHub 則為開放性的 Loki 意圖模型交流中心。
 * SmartHome: 專為智慧家電操作設計的意圖模型
 * WeatherMan: 天氣情報互動機器人
 
-### [操作說明](https://api.droidtown.co/document/#91c6a81e78)
+### [操作說明](https://api.droidtown.co/document/Loki)
