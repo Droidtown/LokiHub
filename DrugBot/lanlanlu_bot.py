@@ -4,7 +4,7 @@
 import discord
 from DrugBot import runLoki as drugbot
 
-DISCORD_TOKEN="Nzg5Mzc1MDAzMDE5NDQ0MjY0.X9xIwg.MFSy0UnPRPgLrjJFc7gOT7Ddq08"
+DISCORD_TOKEN=""
 DISCORD_GUILD="Droidtown Linguistics Tech."
 BOT_NAME = "DrugBot"
 

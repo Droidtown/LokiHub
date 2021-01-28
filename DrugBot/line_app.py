@@ -12,8 +12,8 @@ from line_sdk import Linebot
 
 from DrugBot import runLoki as drugbot
 
-LINE_ACCESS_TOKEN   = "HkK5QBdyLPYKiNKrxL/e0yiir4sb2/7xJd3cfqDeePOhGabHYzCNzrq3oleK0cwLT+huhni7sQ34Qo9tiEMl2UCx7U7aGIfVJIZr7QHRLUvuQEV9Vt/dWsWVEWJQHk+UM0TuCMZqP8wd1IHF8cE+aAdB04t89/1O/w1cDnyilFU="
-LINE_CHANNEL_SECRET = "cb223c772a0d9819cd81bee1aeb6ea13"
+LINE_ACCESS_TOKEN   = ""
+LINE_CHANNEL_SECRET = ""
 
 app = Flask(__name__)
 
