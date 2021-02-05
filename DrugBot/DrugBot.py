@@ -59,7 +59,6 @@ except:
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
 USERNAME = ""
 LOKI_KEY = ""
-
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
 # INTENT_FILTER = [intentN] => 僅比對 INTENT_FILTER 內的意圖
@@ -165,6 +164,20 @@ class LokiResult():
             rst = lokiResultDICT["argument"]
         return rst
 
+#把字串全形轉半形
+def strQ2B(s):
+    rstring = ""
+    for uchar in s:
+        u_code = ord(uchar) # ord()拿到ASCII code
+        if u_code == 12288:  # 全形空格直接轉換
+            u_code = 32
+        elif 65313 <= u_code <= 65338:  # 全形A~Z
+            u_code -= 65248
+        rstring += chr(u_code)
+    if rstring == "":
+        return s
+    return rstring
+
 def runLoki(inputLIST):
     resultDICT = {}
     resultDICT["color"]={}
@@ -201,7 +214,7 @@ def runLoki(inputLIST):
         if (resultDICT["shape"]!={}):
             sum.append(resultDICT["shape"])
         if (resultDICT["character"]!={}):
-            sum.append(resultDICT["character"])
+            sum.append(strQ2B(resultDICT["character"]))
         if(resultDICT["number"]!={}):
             sum.append(resultDICT["number"])
             
@@ -215,7 +228,7 @@ def runLoki(inputLIST):
 
 # 測試用
 if __name__ == "__main__":
-    inputLIST = ["一顆藍色和白色的膠囊"]
+    inputLIST = ["紫色的藥粉"]
     resultDICT = runLoki(inputLIST)
     print("Result => {}".format(resultDICT))
     

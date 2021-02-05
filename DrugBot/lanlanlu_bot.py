@@ -31,28 +31,33 @@ async def on_message(message):
 
     print("message.content", message.content)
     if "<@!{}>".format(client.user.id) in message.content: # (client.user.id) is botID
-        if "haiyya" in message.content:
+
+        if "haiyya" == message.content:
             response = "Help!"
             await message.channel.send(response)
             
-        elif 'test' in message.content:
+        elif 'test' == message.content:
             response = "Sleeping zZzZ"
             await message.channel.send(response)
-        elif "你在幹嘛" in message.content:
+        elif "你在幹嘛" == message.content:
             response = "https://tenor.com/view/pedro-monkey-puppet-meme-awkward-gif-15268759"
             await message.channel.send(response)
         
-        elif "你有沒有那種白色的粉末" in message.content:
+        elif "你有沒有那種白色的粉末" == message.content:
             response = "我要報警了"
             await message.channel.send(response)
         
         else:
+            # 拿掉user ID
+            index = message.content.index("<@!{}>".format(client.user.id)) + len("<@!{}>".format(client.user.id))
+            message.content = message.content[index:]
+            # call RunLoki
             response = drugbot([message.content])
             if response == "https://drugs.olc.tw/drugs/outward/":
                 response = "非藥物查詢的話我不會回答啦(╬☉д⊙)"
             await message.channel.send(response)
         
-    elif "bot 點名" in message.content:
+    elif "bot 點名" == message.content:
         response = "又 (˙w˙)"
         await message.channel.send(response)
     
@@ -61,3 +66,4 @@ async def on_message(message):
 
 
 client.run(DISCORD_TOKEN)
+

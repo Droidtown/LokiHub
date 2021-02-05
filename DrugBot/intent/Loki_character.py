@@ -102,5 +102,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "有[個][P]":
          
         resultDICT["character"] = args[1]
-
+        
+    if utterance == "橢圓形藥丸刻著[ＳＶ]":
+        resultDICT["character"] = args[0]
+        
     return resultDICT
