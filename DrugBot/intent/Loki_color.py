@@ -65,4 +65,9 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "看起來是[紅色]":
         resultDICT["color"] = args[0]
 
+    if utterance == "[白色]的[六][角形][藥丸]":
+        resultDICT["color"] = args[0]
+
+    if utterance == "[一邊][白][一邊][紅]的[膠囊]":
+        resultDICT["color"] = args[1]+"%20"+args[3]
     return resultDICT

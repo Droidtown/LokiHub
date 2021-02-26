@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+__author__ = "lanlanlu"
+__contact__ = "xww1748.fl06@g2.nctu.edu.tw"
+
 """
     Loki 2.0 Template For Python3
 
@@ -164,7 +167,7 @@ class LokiResult():
             rst = lokiResultDICT["argument"]
         return rst
 
-#把字串全形轉半形
+# 把字串全形轉半形 (繁體中文的語音輸入會自動讓英文變全形)
 def strQ2B(s):
     rstring = ""
     for uchar in s:
@@ -208,18 +211,17 @@ def runLoki(inputLIST):
                     resultDICT = Loki_shape.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
                     print("shape: ",resultDICT["shape"])
                     
-        sum = [] #用來集合對到的intent
+        sumLIST = [] # 用來集合對到的intent
         if (resultDICT["color"]!={}):
-            sum.append(resultDICT["color"])
+            sumLIST.append(resultDICT["color"])
         if (resultDICT["shape"]!={}):
-            sum.append(resultDICT["shape"])
+            sumLIST.append(resultDICT["shape"])
         if (resultDICT["character"]!={}):
-            sum.append(strQ2B(resultDICT["character"]))
+            sumLIST.append(strQ2B(resultDICT["character"]))
         if(resultDICT["number"]!={}):
-            sum.append(resultDICT["number"])
+            sumLIST.append(resultDICT["number"])
             
-        sep="%20"
-        url = "https://drugs.olc.tw/drugs/outward/" + sep.join(sum) # 用join把sum裡面抓到的值 (intent) 插入sep (%20)
+        url = "https://drugs.olc.tw/drugs/outward/" + "%20".join(sumLIST) # 用join把sum裡面抓到的值 (intent) 插入sep (%20)
         #url = "https://drugs.olc.tw/drugs/outward/{}%20{}%20{}%20{}".format(resultDICT["color"],resultDICT["shape"], resultDICT["character"], resultDICT["number"])
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
@@ -228,7 +230,7 @@ def runLoki(inputLIST):
 
 # 測試用
 if __name__ == "__main__":
-    inputLIST = ["紫色的藥粉"]
+    inputLIST = ["紅色感冒糖漿"] # 咳嗽的糖漿 止痛的藥
     resultDICT = runLoki(inputLIST)
     print("Result => {}".format(resultDICT))
     
