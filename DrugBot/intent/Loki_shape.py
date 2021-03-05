@@ -16,7 +16,7 @@
 
 DEBUG_shape = True
 userDefinedDICT = {"粉": ["藥粉", "粉末", "粉狀","藥散"], "液體": ["液狀物", "液狀", "液態", "糖漿"], "膜衣錠": ["膜衣錠", "藥丸"], "膠囊":[]}
-ShapeTPL = ("糖漿","粉末","藥丸","藥片","膠囊","膜衣錠","藥粉","膏狀", "藥膏", "藥水", "藥散", "糖衣錠","凝膠")
+ShapeTPL = ("糖漿","粉末","藥丸","藥片","膠囊","膜衣錠","藥粉","膏狀", "藥膏", "藥水", "藥散", "糖衣錠","凝膠","藥","藥錠")
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
@@ -210,4 +210,16 @@ def getResult(inputSTR, utterance, args, resultDICT):
     
     if utterance == "半透明的[凝膠]":
         resultDICT["shape"] = args[0]
+    
+    if utterance == "[圓圓][綠色]藥":
+        dict = set(args[0]) # set()去重複化（會變成dict）
+        resultDICT["shape"] = dict.pop() # 取出dict裡的東西
+        
+    if utterance == "它是[尖]的藥":
+        resultDICT["shape"] = args[0]
+    
+    if utterance == "[白色]的[錠狀][上面]有[一條]線":
+        resultDICT["shape"] = args[1]
+        if args[1] == "錠狀":
+            resultDICT["shape"] = "錠"
     return resultDICT

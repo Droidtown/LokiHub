@@ -46,6 +46,8 @@ __contact__ = "xww1748.fl06@g2.nctu.edu.tw"
 """
 
 import requests
+import logging
+logging.basicConfig(level=logging.CRITICAL) # 檢查Bug
 
 try:
     from intent import Loki_character
@@ -182,6 +184,7 @@ def strQ2B(s):
     return rstring
 
 def runLoki(inputLIST):
+    logging.debug("runLoki in")
     resultDICT = {}
     resultDICT["color"]={}
     resultDICT["shape"]={}
@@ -189,7 +192,9 @@ def runLoki(inputLIST):
     resultDICT["number"]={}
     lokiRst = LokiResult(inputLIST)
     if lokiRst.getStatus():
+        logging.debug("2")
         for index, key in enumerate(inputLIST):
+            logging.debug("3")
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
                 # character
                 if lokiRst.getIntent(index, resultIndex) == "character":
@@ -215,6 +220,12 @@ def runLoki(inputLIST):
         if (resultDICT["color"]!={}):
             sumLIST.append(resultDICT["color"])
         if (resultDICT["shape"]!={}):
+            if resultDICT["shape"] == "藥":
+                resultDICT["shape"] = "藥丸"
+            elif resultDICT["shape"] == "藥水":
+                resultDICT["shape"] = "液"
+            elif resultDICT["shape"] == "藥錠":
+                resultDICT["shape"] = "錠"
             sumLIST.append(resultDICT["shape"])
         if (resultDICT["character"]!={}):
             sumLIST.append(strQ2B(resultDICT["character"]))
@@ -230,7 +241,7 @@ def runLoki(inputLIST):
 
 # 測試用
 if __name__ == "__main__":
-    inputLIST = ["紅色感冒糖漿"] # 咳嗽的糖漿 止痛的藥
+    inputLIST = ["白色的錠狀上面有一條線"] # 咳嗽的糖漿 止痛的藥
     resultDICT = runLoki(inputLIST)
     print("Result => {}".format(resultDICT))
     

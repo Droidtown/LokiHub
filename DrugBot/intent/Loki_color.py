@@ -53,7 +53,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["color"] = args[0]+'%20'+args[1]
 
     if utterance == "[透明]的":
-        resultDICT["color"] = args[0]
+        if args[0] =="透明":
+            resultDICT["color"] = args[0]
 
     if utterance == "好像是[紅]的":
         resultDICT["color"] = args[0]

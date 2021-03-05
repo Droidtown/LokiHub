@@ -87,4 +87,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "橢圓形藥丸刻著[ＳＶ]":
         resultDICT["character"] = args[0]
         
+    if utterance == "白色的錠狀[上面]有[一條][線]":
+        resultDICT["character"] = args[2]
+
     return resultDICT
