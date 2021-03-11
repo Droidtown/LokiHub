@@ -2,8 +2,11 @@
 # -*- coding:utf-8 -*-
 
 import logging
+import request
 import discord
 from DrugBot import runLoki as drugbot
+from bs4 import BeautifulSoup
+
 
 DISCORD_TOKEN=""
 DISCORD_GUILD="Droidtown Linguistics Tech."
@@ -14,7 +17,7 @@ BOT_NAME = "DrugBot"
 
 client = discord.Client()
 UserResponseDICT = {}
-logging.basicConfig(level=logging.DEBUG) # 檢查Bug
+logging.basicConfig(level=logging.CRITICAL) # 檢查Bug
 
 @client.event
 async def on_ready():
@@ -82,7 +85,15 @@ async def on_message(message):
                     msgLIST = UserResponseDICT[message.author.id].replace("藥片",message.content[1:])
                     
                 del UserResponseDICT[message.author.id] # 多輪對話結束，刪除此user的暫存訊息
-                await message.channel.send(userIDSTR + "\n" + msgLIST)
+                
+                # 讀取網頁，查看有無查詢到結果
+                r = request.get(msgLIST)
+                soup = BeautifulSoup(r.text, 'html.parser')
+                tags = soup.select_one('li.media')
+                if tags == None: # 查無結果
+                    await message.channel.send(userIDSTR + "\n很抱歉，目前沒有長這個樣子的藥。\n要不要再描述得仔細一點？")
+                else: # 有查到
+                    await message.channel.send(userIDSTR + "\n" + msgLIST)
         
         else:
             # call RunLoki
