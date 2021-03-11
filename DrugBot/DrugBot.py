@@ -89,7 +89,7 @@ class LokiResult():
                 "input_list": inputLIST,
                 "loki_key": LOKI_KEY,
                 "filter_list": INTENT_FILTER
-            })
+            },verify=False)
 
             if result.status_code == requests.codes.ok:
                 result = result.json()
@@ -241,7 +241,7 @@ def runLoki(inputLIST):
 
 # 測試用
 if __name__ == "__main__":
-    inputLIST = ["白色的錠狀上面有一條線"] # 咳嗽的糖漿 止痛的藥
+    inputLIST = ["它是尖的藥丸"]
     resultDICT = runLoki(inputLIST)
     print("Result => {}".format(resultDICT))
     

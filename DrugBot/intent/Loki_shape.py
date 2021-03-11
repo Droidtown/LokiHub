@@ -215,11 +215,15 @@ def getResult(inputSTR, utterance, args, resultDICT):
         dict = set(args[0]) # set()去重複化（會變成dict）
         resultDICT["shape"] = dict.pop() # 取出dict裡的東西
         
-    if utterance == "它是[尖]的藥":
+    if utterance == "它是[尖]的[藥]":
         resultDICT["shape"] = args[0]
     
     if utterance == "[白色]的[錠狀][上面]有[一條]線":
         resultDICT["shape"] = args[1]
         if args[1] == "錠狀":
             resultDICT["shape"] = "錠"
+            
+    if utterance == "[圓圓][綠色]的藥丸":
+        dict = set(args[0]) # set()去重複化（會變成dict）
+        resultDICT["shape"] = dict.pop() # 取出dict裡的東西
     return resultDICT
