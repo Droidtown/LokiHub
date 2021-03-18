@@ -241,7 +241,7 @@ def runLoki(inputLIST):
 
 # 測試用
 if __name__ == "__main__":
-    inputLIST = ["它是尖的藥丸"]
+    inputLIST = ["我的狗狗好可愛"] # 白色圓形藥丸，上面寫SMT
     resultDICT = runLoki(inputLIST)
     print("Result => {}".format(resultDICT))
     
