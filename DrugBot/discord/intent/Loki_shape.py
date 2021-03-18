@@ -209,7 +209,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["shape"] = args[0]
     
     if utterance == "半透明的[凝膠]":
-        resultDICT["shape"] = args[0]
+        if args[0] in ShapeTPL:
+            resultDICT["shape"] = args[0]
     
     if utterance == "[圓圓][綠色]藥":
         dict = set(args[0]) # set()去重複化（會變成dict）

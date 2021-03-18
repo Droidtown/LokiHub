@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import logging
-import request
+import requests
 import discord
 from DrugBot import runLoki as drugbot
 from bs4 import BeautifulSoup
@@ -87,7 +87,7 @@ async def on_message(message):
                 del UserResponseDICT[message.author.id] # 多輪對話結束，刪除此user的暫存訊息
                 
                 # 讀取網頁，查看有無查詢到結果
-                r = request.get(msgLIST)
+                r = requests.get(msgLIST)
                 soup = BeautifulSoup(r.text, 'html.parser')
                 tags = soup.select_one('li.media')
                 if tags == None: # 查無結果
@@ -102,17 +102,24 @@ async def on_message(message):
             logging.error(UserResponseDICT[message.author.id])
             # 當url中的shape出現無特定形狀的"藥丸"or"藥片"，以多輪對話詢問其確切形狀
             if "藥丸"in responseLIST:
-                await message.channel.send(userIDSTR + "\n請問此藥丸是什麼形狀？")
+                await message.channel.send(userIDSTR + "\n請問此藥丸是什麼形狀？\n請輸入「oo形」")
                 return
             elif "藥片"in responseLIST:
-                await message.channel.send(userIDSTR + "\n請問此藥片是什麼形狀？")
+                await message.channel.send(userIDSTR + "\n請問此藥片是什麼形狀？\n請輸入「oo形」")
                 return
             
             # 沒有get到intent
             elif responseLIST == "https://drugs.olc.tw/drugs/outward/": 
                 responseLIST = "這看起來不像藥物的外觀QQ" # 可以建 List of List 回答庫
-
-            await message.channel.send(userIDSTR + "\n" + responseLIST)
+            
+            # 讀取網頁，查看有無查詢到結果
+            r = requests.get(responseLIST)
+            soup = BeautifulSoup(r.text, 'html.parser')
+            tags = soup.select_one('li.media')
+            if tags == None: # 查無結果
+                await message.channel.send(userIDSTR + "\n很抱歉，目前沒有長這個樣子的藥。\n要不要再描述得仔細一點？")
+            else: # 有查到
+                await message.channel.send(userIDSTR + "\n" + responseLIST)
         
     elif "bot 點名" == message.content:
         responseLIST = "又 (˙w˙)"

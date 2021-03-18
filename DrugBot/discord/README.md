@@ -5,8 +5,7 @@
 
 1. 把本資料夾Pull下來
 
-4. 進入Loki
-   https://api.droidtown.co/loki/
+4. 進入[Loki](https://api.droidtown.co/loki/)
 
 6. 輸入專案名稱(英文)，並建立專案
 ![](https://i.imgur.com/DtFeyxp.png)
@@ -36,5 +35,45 @@
 15. 把 Loki的帳號(username) 跟 Loki_Key 填入
 ![](https://i.imgur.com/SnpJ8c5.png)
 
+
+
+| 到這邊你已經完成建立Loki上的DrugBot了！ | 
+| -------- | 
+
 ---
 ### 在Discord上建立DrugBot
+
+1. 進入discord的[開發者頁面]  (https://discord.com/developers/applications/)
+2. 註冊並登入  
+![](https://i.imgur.com/bIOPBLW.png)
+3. 點擊右上角的「New Application」  
+![](https://i.imgur.com/JFiNjz0.png)
+
+4. 建立屬於你的 Application  
+![](https://i.imgur.com/rcDplqR.png)
+
+5. 從左邊欄位中選擇**Bot**，並點擊「Add Bot」  
+![](https://i.imgur.com/DraxHYp.png)
+
+6. 建立好Bot之後，Copy它的**Token**  
+![](https://i.imgur.com/Jn4lNvJ.png)
+
+7. 開啟 **discord_DrugBot.py**  
+![](https://i.imgur.com/aOJDXmQ.png)
+
+8. 把剛剛copy的Token填入  
+![](https://i.imgur.com/NZBK2Yy.png)
+
+9. 把pull下來的整個資料夾放入你自己的server
+
+10. 從server中執行 **discord_DrugBot.py**
+
+11. 開始測試Bot!
+
+### 輸入範例
+![](https://i.imgur.com/i1vqxL3.png)
+
+
+### 輸出範例
+![](https://i.imgur.com/x1hYCox.png)
+![](https://i.imgur.com/QqizyqD.png)
