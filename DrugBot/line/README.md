@@ -65,3 +65,10 @@
 9. 把pull下來的整個資料夾放入你自己的server
 10. 從server中執行 **line_DrugBot.py**
 11. 開始測試Bot！
+
+### 輸入範例  
+![](https://i.imgur.com/e8qEdnb.png)
+
+### 輸出範例  
+![](https://i.imgur.com/i6K1Efp.png)
+![](https://i.imgur.com/0DGUepo.png)
