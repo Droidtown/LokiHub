@@ -17,8 +17,8 @@ from ref_data import stationLIST, animalLIST, TaiwanLIST, AroundLIST, BeforeLIST
 import time
 from TransportationBot import runLoki
 
-LINE_ACCESS_TOKEN   = "B75494DO0qrlKXCfNrGZwbw1PcTdF4AB9Y7J7qHhajML3G+KGZ6RS5D2MrvomkqqBecqbzGV2b8SHkZ+q1ACLdqwuiDfH083Drm0xBJ+JAzpqPp5ybC1lRFhNeryfRp7szU79BjZV0DNLOPoI0Dh6wdB04t89/1O/w1cDnyilFU="
-LINE_CHANNEL_SECRET = "a4a04fd9bddfdf479b24ac4a5f07e998"
+LINE_ACCESS_TOKEN   = ""
+LINE_CHANNEL_SECRET = ""
 
 app = Flask(__name__)
 def deleter(input_STR):
