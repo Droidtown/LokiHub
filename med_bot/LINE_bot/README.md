@@ -63,6 +63,4 @@
 ### `reference.py`
 本檔案儲存所有在前述兩張script所需的LIST與DICT。
 
-### 其他檔案
-如 'Procfile` `requirements.txt` `runtime.txt` 檔案夾 `templates` 和架構heroku 相關，需要這幾個檔案才可以部屬至heroku 
 
