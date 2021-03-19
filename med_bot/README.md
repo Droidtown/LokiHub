@@ -57,7 +57,7 @@
    
 4. 請掃描以下QRcode 
 
-   ![](https://upload.cc/i1/2021/03/05/n9Ekzv.png)
+   ![](https://upload.cc/i1/2021/03/19/yMOE3d.png)
 
 5. 接著和 my_med_bot 說你哪裡不舒服，可以多說說你是什麼病症，或是哪邊不舒服，接下來就med bot 就會和你說你可以去哪一科看診喔~
 
