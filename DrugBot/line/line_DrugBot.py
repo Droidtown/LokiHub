@@ -46,22 +46,17 @@ def webhook():
                     
                     # 多輪對話 - 收集更詳細的資訊
                     if UserResponseDICT != {}:
-                        print("UserResponseDICT: ", UserResponseDICT)
                         logging.error("UserResponseDICT: ", UserResponseDICT)
                         
                         # 把url中的"藥丸" or "藥片"換成"藥物形狀"
                         if UserResponseDICT["藥丸"] != {}:
-                            print("藥丸: ", UserResponseDICT["藥丸"])
-                            print("InputLIST: ", dataDICT["message"])
                             logging.error("藥丸: ", UserResponseDICT["藥丸"])
-                            msgLIST = UserResponseDICT["藥丸"].replace("藥丸",[dataDICT["message"]])
-                            print("msgLIST: ", msgLIST)
+                            msgLIST = UserResponseDICT["藥丸"].replace("藥丸",dataDICT["message"])
                             UserResponseDICT["藥丸"]={} # 用完歸0
                             
                         elif UserResponseDICT["藥片"] != {}:
-                            print("藥片: ", UserResponseDICT["藥片"])
                             logging.error("藥片: ", UserResponseDICT["藥片"])
-                            msgLIST = UserResponseDICT["藥片"].replace("藥片",[dataDICT["message"]])
+                            msgLIST = UserResponseDICT["藥片"].replace("藥片",dataDICT["message"])
                             UserResponseDICT["藥片"]={} # 用完歸0
                             
                         # 讀取網頁，查看有無查詢到結果
@@ -74,7 +69,6 @@ def webhook():
                             linebot.respTexts(dataDICT["replyToken"], ["以下為查詢結果：\n", msgLIST])
                             
                     else:
-                        print("RunLoki")
                         # Call RunLoki
                         # dataDICT["message"]是input的string，用[]包起來變 InputLIST 傳給RunLoki
                         responseLIST = drugbot([dataDICT["message"]])
@@ -107,3 +101,9 @@ def webhook():
     else:
         return jsonify({"status": False, "msg": "HTTP_405_METHOD_NOT_ALLOWED"})
 
+
+
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8006)
