@@ -19,21 +19,21 @@
         | pip3 install requests |
         | -------- |
         
-2. 註冊 Loki 帳號
+2. 註冊 Loki 帳號  
 [https://api.droidtown.co/login/](https://)
 ![](https://i.imgur.com/TXdsBez.png)
 
-3. 登入Loki
+3. 登入Loki  
 ![](https://i.imgur.com/LIaRTJR.png)
 
 
 
 ---
 ### 注意事項
-* 如果你想在***Discord***上操作這個bot
+* 如果你想在***Discord***上操作這個bot  
 請進入資料夾「[discord](https://github.com/Lanlanluuu/LokiHub/tree/main/DrugBot/discord)」
 
-* 如果你想在***Line***上操作這個bot
+* 如果你想在***Line***上操作這個bot  
 請進入資料夾「[line](https://github.com/Lanlanluuu/LokiHub/tree/main/DrugBot/line)」
 
 ---
