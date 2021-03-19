@@ -63,4 +63,9 @@
 ### `reference.py`
 本檔案儲存所有在前述兩張script所需的LIST與DICT。
 
+## 4. 備註
+`from account_info import accountInfoDICT`這行的意思是 import 進來 `account_info` 的py 檔，
+這個檔案裡面可以存成一個叫做 `accountInfoDICT` 的 dictionary 放您們重要的金鑰
+
+
 
