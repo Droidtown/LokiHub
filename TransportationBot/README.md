@@ -12,6 +12,7 @@
 - [相關Repositories](#相關Repositories)
 - [作者](#作者)
 
+Transportation ChatBot 可以讓你在最短的時間內用自然語言直接向聊天機器人提出班次的查詢！
 
 ## 目錄
 Transportation ChatBot的Repository包含以下內容：

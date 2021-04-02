@@ -14,5 +14,6 @@ LokiHub 則為開放性的 Loki 意圖模型交流中心。
 * PyConTW2020_DiscordBot: 用於 PyConTW2020 的 DiscordBot
 * SmartHome: 專為智慧家電操作設計的意圖模型
 * WeatherMan: 天氣情報互動機器人
+* TransportationBot: 高鐵的票價與車次時刻查詢聊天機器人
 
 ### [操作說明](https://api.droidtown.co/document/Loki)
