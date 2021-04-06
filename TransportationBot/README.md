@@ -39,9 +39,9 @@ Transportation ChatBot的Repository包含以下內容：
 ![](https://i.imgur.com/03aEksl.jpg)
 
 
-4. 順利登入會員之後，藉由「加值應用」區塊的第一個圖示進入Loki應用程式。
+4. 順利登入會員之後，藉由「服務資訊」區塊的第三個圖示進入Loki應用程式。
 
-![](https://i.imgur.com/nTf65Hp.jpg)
+![](https://www.droidtown.co/static/public_img/Loki_Start.png)
 
 
 
