@@ -55,9 +55,9 @@ LOKI_KEY = ""
 try:
     from ArticutAPI import ArticutAPI
     if API_KEY == "":
-        articut = ArticutAPI.Articut(username=USERNAME, API_KEY=API_KEY)
+        articut = ArticutAPI.Articut(username=USERNAME, apikey=API_KEY)
     else:
-        articut = ArticutAPI.Articut(username=USERNAME, API_KEY=API_KEY)
+        articut = ArticutAPI.Articut(username=USERNAME, apikey=API_KEY)
 except:
     print("需配合 ArticutAPI 使用。請至 https://github.com/Droidtown/ArticutAPI 下載")
 
@@ -213,7 +213,7 @@ def amountSTRconvert(inputSTR): # convert [X元] into [number X]
     return resultDICT["number"]
 
 if __name__ == "__main__": # python的程式進入點
-    inputLIST = ["我想要100元美金"]
+    inputLIST = ["400元美金可以兌換台幣多少"]
     resultDICT = runLoki(inputLIST)
     print("Result => {}".format(resultDICT))
 
@@ -224,7 +224,7 @@ if __name__ == "__main__": # python的程式進入點
     rateDICT = getTodayExchangeRate() # get ExchangeRate table
     # calculate ExchangeRate by [source -> USD -> target]
 
-    exRate = round(1/rateDICT["USD{}".format(src)]["Exrate"]) * (rateDICT["USD{}".format(tgt)]["Exrate"], 3)
+    exRate = round(1/rateDICT["USD{}".format(src)]["Exrate"]) * (rateDICT["USD{}".format(tgt)]["Exrate"])
 
     print("\nExchanging",amt, src, "to", tgt,"...")
     print("You need", amt*exRate,tgt) # 金額*匯率
