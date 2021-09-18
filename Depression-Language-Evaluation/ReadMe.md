@@ -61,7 +61,7 @@ pip install requests
 - Heroku
 
 ## 注意事項
-- 由於個人的表達習慣及方式不同，使用的詞彙傾向、頻率也不盡相同。因此，此憂鬱指數**僅供參考**。
+- 由於個人的表達習慣及方式不同，使用的詞彙傾向、頻率也有所不同。因此，此憂鬱指數**僅供參考**。
 
 ## 開始使用
 您可以透過輸入LINE Bot ID或是掃QR Code加入好友。
@@ -82,7 +82,3 @@ pip install requests
 ##### <font color=#0000FF>若您有任何疑問，歡迎透過email聯繫我們</font>
 - Melody Lin：yiihsuanlin@gmail.com
 - Helena Yang：mandy871019@gmail.com
-
-
-
-
