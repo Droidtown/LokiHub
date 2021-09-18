@@ -63,12 +63,15 @@ pip install requests
 - LINE Bot ID: ` @703xvlcr `
 - QR Code  
 
-<img src="https://github.com/Melody-Lin/Depression-Language-Evaluation/blob/main/Media/DLE.png" width="200"/>
+![QR Code](https://github.com/Melody-Lin/Depression-Language-Evaluation/blob/main/Media/DLE.png "QR Code")
+<!-- {:height="50%" width="50%"} -->
+<!-- <img src="https://github.com/Melody-Lin/Depression-Language-Evaluation/blob/main/Media/DLE.png" width="200"/> -->
 
 ## 使用範例
 1. 輸入有**潛在憂鬱傾向的文本**。
 2. LINE Bot會回傳代名詞、絕對性詞彙與負向詞彙之使用情況，以及憂鬱文本分析。
-<img src="https://github.com/Melody-Lin/Depression-Language-Evaluation/blob/main/Media/Example.jpg" width="400"/>
+![Example](https://github.com/Melody-Lin/Depression-Language-Evaluation/blob/main/Media/Example.jpg "Example")
+<!-- <img src="https://github.com/Melody-Lin/Depression-Language-Evaluation/blob/main/Media/Example.jpg" width="400"/> -->
 
 ## 聯絡E-Mail
 ##### <font color=#0000FF>若您有任何疑問，歡迎透過email聯繫我們</font>
