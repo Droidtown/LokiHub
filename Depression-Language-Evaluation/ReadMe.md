@@ -57,19 +57,19 @@ pip install requests
     - apikey：輸入先前複製的 Articut API金鑰    
 
 ### 架設平台
-- [LINE Developers](https://developers.line.biz/zh-hant/)  
-    - 在LINE Developers上選擇 **Messaging API**，建立LINE Bot帳號
+- **LINE Developers**  
+    - 在[LINE Developers](https://developers.line.biz/zh-hant/)上選擇 **Messaging API**，建立LINE Bot帳號
     - 取得Channel access token
         - 輸入`line_bot.json`的 **line_bot_api** 欄位
     - 取得Channel Secret
         - 輸入`line_bot.json`的 **handler** 欄位
-    - 若有疑問，請參閱[官方文件](https://developers.line.biz/zh-hant/docs/)
-- [Heroku](https://www.heroku.com/) 
-    - 在Heroku上建立相應於LINE Bot的app
+    - 請點此參閱[官方文件](https://developers.line.biz/zh-hant/docs/)
+- **Heroku** 
+    - 在[Heroku](https://www.heroku.com/)上建立相應於LINE Bot的app
     - 在LINE Developers的 **Webhook URL** 的欄位輸入
         - ` https://{請輸入您建立的Heroku Personal App名稱}.herokuapp.com/callback ` 
         - 以連接Heroku與LINE Bot
-    - 若有疑問，請參閱[官方文件](https://devcenter.heroku.com/)
+    - 請點此參閱[官方文件](https://devcenter.heroku.com/)
 
 ## 注意事項
 - 由於個人的表達習慣及方式不同，使用的詞彙傾向、頻率也有所不同。因此，此憂鬱指數**僅供參考**。
