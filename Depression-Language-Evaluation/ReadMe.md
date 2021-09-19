@@ -79,7 +79,7 @@ pip install requests
 - LINE Bot ID: ` @703xvlcr `
 - QR Code  
 
-<img src="https://github.com/Melody-Lin/Depression-Language-Evaluation/blob/main/Media/DLE.png" width="200"/>
+<img src="https://github.com/Droidtown/LokiHub/blob/main/Depression-Language-Evaluation/Media/DLE.png" width="200"/>
 
 ## 使用範例
 1. 輸入有**潛在憂鬱傾向的文本**。
