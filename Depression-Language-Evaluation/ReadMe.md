@@ -58,18 +58,18 @@ pip install requests
 
 ### 架設平台
 - [LINE Developers](https://developers.line.biz/zh-hant/)  
-    - 在LINE Developers上選擇**Messaging API**，建立LINE Bot帳號
+    - 在LINE Developers上選擇 **Messaging API**，建立LINE Bot帳號
     - 取得Channel access token
         - 輸入`line_bot.json`的 **line_bot_api** 欄位
     - 取得Channel Secret
         - 輸入`line_bot.json`的 **handler** 欄位
-    - 若有疑問，可以參閱[官方文件](https://developers.line.biz/zh-hant/docs/)
+    - 若有疑問，可自行參閱[官方文件](https://developers.line.biz/zh-hant/docs/)
 - [Heroku](https://www.heroku.com/) 
-    - 在Heroku上建立相應帳號
+    - 在Heroku上建立相應於LINE Bot的app
     - 在LINE Developers的 **Webhook URL** 的欄位輸入
         - ` https://{請輸入您建立的Heroku Personal App名稱}.herokuapp.com/callback ` 
         - 以連接Heroku與LINE Bot
-    - 若有疑問，可以參閱[官方文件](https://devcenter.heroku.com/)
+    - 若有疑問，可自行參閱[官方文件](https://devcenter.heroku.com/)
 
 ## 注意事項
 - 由於個人的表達習慣及方式不同，使用的詞彙傾向、頻率也有所不同。因此，此憂鬱指數**僅供參考**。
