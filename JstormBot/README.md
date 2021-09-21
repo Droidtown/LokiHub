@@ -6,7 +6,7 @@ Jstorm Bot運用爬蟲建立資料庫，提供Jstorm旗下成員的資料查詢�
 如果你是不認識他們的新朋友，可以運用Jstorm Bot得到各種基本資訊。
 如果你是已經熟悉的老朋友，也可以運用計算日期等功能，讓你慶祝不耽誤！
 
-[========]
+
 
 ## 專案内容列表
 - [目錄](#目錄)
@@ -17,7 +17,7 @@ Jstorm Bot運用爬蟲建立資料庫，提供Jstorm旗下成員的資料查詢�
 - [相關Repositories](#相關Repositories)
 - [作者](#作者)
 
-[========]
+
 
 ## 目錄
 Jstorm Bot的Repository包含以下內容：
@@ -65,7 +65,7 @@ Jstorm Bot的Repository包含以下內容：
 $ pip install -U discord.py
 ```
 
-[========]
+
 
 ## 建立Discord機器人
 建立Discord機器人你需要以下內容：
@@ -88,7 +88,7 @@ $ pip install -U discord.py
 ![](https://i.imgur.com/DSojxaP.jpg)
 7. 運用終端機執行[Jstorm_infoBot](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/Jstorm_infoBot.py)，你的機器人就正式上工了！
 
-[========]
+
 
 ## 使用者輸入範例
 在Discord的輸入欄用「@」呼叫你的機器人，跟他打招呼或單純叫他都可以得到可查詢的內容列表。
@@ -111,7 +111,7 @@ $ pip install -U discord.py
 7. 身高：「他多高」「KT誰最矮」「最高到最矮」
 8. 成員色：「誰是黃色」「代表色是什麼」「各是什麼顏色」「有人是紅色嗎」「阿智是藍色嗎」「有哪些應援色」
 
-[========]
+
 
 ## 更新資料庫
 由於本Bot是採用靜態資料庫進行，如果想要獲取團體或是成員的最新圖片，請運用[web_crawler](https://github.com/qinyanhao/LokiHub/tree/main/JstormBot/web_crawler)中的[profile.py](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/web_crawler/profile.py)進行更新。
