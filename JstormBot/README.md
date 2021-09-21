@@ -52,7 +52,8 @@ Jstorm Bot的Repository包含以下內容：
 1. 建立一個新的Loki專案
 2. 進入該專案後，運用**讀取意圖**的功能，將ref中的檔案依序匯入。
 3. 回到專案列表的頁面取得**專案金鑰**。
-4. 複製金鑰以後，將金鑰貼入[Jstorm_Loki](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/Jstorm_Loki.py)中的```LOKI_KEY = ""```。```USERNAME = ""```也要記得填入註冊的email。
+4. 複製金鑰以後，將金鑰貼入[Jstorm_Loki](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/Jstorm_Loki.py)中的```LOKI_KEY = ""```。
+   ```USERNAME = ""```也要記得填入註冊的email。
 
 ### 安裝Discord套件
 #### 環境設定與需求
