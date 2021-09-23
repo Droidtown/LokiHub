@@ -29,7 +29,7 @@
 2. 在 Loki 控制台中新建一個專案`PatentBot`，並進入專案。
 ![new_project.png](https://i.imgur.com/GPrIeDi.png)
 
-3. 在專案下方選擇`ArticutModel`並依序將`IPC_Number.ref`,`Type.ref`,`Probe.ref`依照下列步驟操作:
+3. 在專案下方選擇`ArticutModel`並將`IPC_Number.ref`,`Type.ref`,`Probe.ref`依照下列步驟操作以讀取意圖:
 點擊 [瀏覽] > 選擇`PatentBot/ref/IPC_Number.ref` > [讀取意圖]。
 ![ref_upload.png](https://i.imgur.com/tyanLl1.png)
 意圖(intent)建立完成
@@ -106,3 +106,10 @@
 	- [範例內容](https://github.com/yenjannn/PatentBot/blob/main/sample.txt)
 
 3. 輸入後PatentBot會再次跟你確認比對的領域和類型，確認無誤進入Articut分析比對內容並獲得比對結果。
+
+---
+
+#### 聯絡資訊
+如果有任何問題或建議，請與我們聯絡，謝謝您 :)
+* Jan Yen : a4730440@gmail.com
+* Meng-Chun Tsai : 96a4a19@gmail.com
