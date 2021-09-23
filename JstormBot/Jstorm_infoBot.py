@@ -8,7 +8,7 @@ import math
 import re
 from pprint import pprint
 
-from Jstorm2 import runLoki
+from Jstorm_Loki import runLoki
 logging.basicConfig(level=logging.INFO)
 
 
