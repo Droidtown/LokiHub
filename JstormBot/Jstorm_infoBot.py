@@ -407,7 +407,7 @@ async def on_message(message):
             mscDICT[client.user.id]["updatetime"] = datetimeNow    
         
         #如果member是list，換Group或是換request時清空member
-        if len(lokiResultDICT.keys()) == 1 and type(mscDICT[client.user.id]["member"])==list:
+        if len(lokiResultDICT.keys()) == 1:
             mscDICT[client.user.id]["member"] = ""
             
         #多輪對話
