@@ -96,9 +96,10 @@
 
 28. 打開**stockBOT_Loki**的檔案，分別在**username**、**lokikey**的地方填入**帳號名**與剛剛複製的**Loki金鑰**
 
-    `LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
+    ```LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
     USERNAME = 
-    LOKI_KEY = `
+    LOKI_KEY = 
+    ```
 
 29. 存檔後即完成Loki部分的設定
 
@@ -126,9 +127,9 @@
 
    ![copy_token.png](https://github.com/sydneylin0218/Picture/blob/main/copy_token.png?raw=true)
 
-7. 打開**stockBOT_Discord**填入**token**
+7. 打開**stockBOT_Discord.py**填入**token**
 
-8. 在填入stockBOT.py檔中token
+8. 在填入**stockBOT.py**檔中**token**
 
    ![token](https://github.com/sydneylin0218/Picture/blob/main/token.png?raw=true)
 
@@ -138,7 +139,7 @@
 
 10. 利用此連結把BOT加入**discord**聊天室中
 
-11. 執行stockBOT_Discord檔案後可以開始測試BOT
+11. 執行**stockBOT_Discord.py**檔案後可以開始測試BOT
 
 #### 輸入範例
 
