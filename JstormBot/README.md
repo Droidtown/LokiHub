@@ -1,10 +1,10 @@
 # Jstorm Bot - 愛豆資訊一把抓！
 
 ## 簡介
-![](https://www.j-storm.co.jp/files/45/js/assets/common/img/OGP.png)
-Jstorm Bot運用爬蟲建立資料庫，提供Jstorm旗下成員的資料查詢功能。
-如果你是不認識他們的新朋友，可以運用Jstorm Bot得到各種基本資訊。
-如果你是已經熟悉的老朋友，也可以運用計算日期等功能，讓你慶祝不耽誤！
+<img src="https://www.j-storm.co.jp/files/45/js/assets/common/img/OGP.png" height="300px"> <br>
+Jstorm Bot運用爬蟲建立資料庫，提供Jstorm旗下成員的資料查詢功能。<br>
+如果你是不認識他們的新朋友，可以運用Jstorm Bot得到各種基本資訊。<br>
+如果你是已經熟悉的老朋友，也可以運用計算日期等功能，讓你慶祝不耽誤！<br>
 
 
 
@@ -37,16 +37,16 @@ Jstorm Bot的Repository包含以下內容：
 
 2. 註冊會員 
 
-![](https://i.imgur.com/gQm1Pnz.jpg)
+<img src="https://i.imgur.com/gQm1Pnz.jpg" height="250px"> <br>
 
 註冊完成後的登入畫面↓
 
-![](https://i.imgur.com/OntQ5T0.jpg)
+<img src="https://i.imgur.com/OntQ5T0.jpg" height="250px"> <br>
 
 
 順利登入會員之後，藉由「服務資訊」區塊進入Loki應用程式頁面↓
 
-![](https://i.imgur.com/nr6WG0w.jpg)
+<img src="https://i.imgur.com/nr6WG0w.jpg" height="200px"> <br>
 
 ### 建立Loki專案
 1. 建立一個新的Loki專案
@@ -76,7 +76,7 @@ $ pip install -U discord.py
 1. 建立帳號並且登入後，在頁面的左側按 **+** ，建立自己的伺服器。
 2. 到[Discord Developer Portal－My Applications](https://discord.com/developers/applications) 的頁面，按左上角的**New Application**，建立新的APP。
 3. 建立以後，按頁面左側的Bot。進入頁面後，再按右側的**Add Bot**。<br>
-![](https://i.imgur.com/N7iaQpd.jpg)
+<img src="https://i.imgur.com/N7iaQpd.jpg" height="300px"> <br>
 
 #### 創建完機器人之後，應該要出現這樣的畫面<br>
 ![](https://i.imgur.com/Dxx0qiD.png)
@@ -85,13 +85,13 @@ $ pip install -U discord.py
 4. 創建成功後，在**Build-A-Bot**的區塊中，有**TOKEN**的部分，按下**Copy**。
 5. 把複製好的TOKEN貼到[Jstorm_infoBot](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/Jstorm_infoBot.py)中的```DISCORD_TOKEN=""```。
 6. 接下來請按左側的**OAuth2**，下方的**SCOPES**中選擇**Bot**會得到一個網址。將網址貼近瀏覽器中就可以把機器人加入自己的伺服器囉！<br>
-![](https://i.imgur.com/DSojxaP.jpg)
+<img src="https://i.imgur.com/DSojxaP.jpg" height="300px"> <br>
 7. 運用終端機執行[Jstorm_infoBot](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/Jstorm_infoBot.py)，你的機器人就正式上工了！
 
 
 
 ## 使用者輸入範例
-在Discord的輸入欄用「@」呼叫你的機器人，跟他打招呼或單純叫他都可以得到可查詢的內容列表。
+在Discord的輸入欄用「@」呼叫你的機器人，跟他打招呼或單純叫他都可以得到可查詢的內容列表。<br>
 查詢團體和成員的話用別名也是可以的喔！
 
 * Jstorm資訊：「旗下有誰」「Jstorm有幾團」「Jstorm有那些團體」
