@@ -26,9 +26,11 @@ Restaurant-recommendation_bot的Repository包含以下內容：
 2. 註冊會員
 
 ![](https://raw.githubusercontent.com/WuSiangRu/RestaurantAndHotel_bot/main/pic/001.JPG "001")
+
 3. 註冊成功後登入會員
 
 ![](https://raw.githubusercontent.com/WuSiangRu/RestaurantAndHotel_bot/main/pic/002.JPG "002")
+
 4. 登入會員之後，選擇在「服務資訊」區塊底下第四個圖示進入Loki應用
 
 ![](https://raw.githubusercontent.com/WuSiangRu/RestaurantAndHotel_bot/main/pic/003.JPG "003")
