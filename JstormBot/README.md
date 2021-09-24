@@ -75,16 +75,16 @@ $ pip install -U discord.py
 
 1. 建立帳號並且登入後，在頁面的左側按 **+** ，建立自己的伺服器。
 2. 到[Discord Developer Portal－My Applications](https://discord.com/developers/applications) 的頁面，按左上角的**New Application**，建立新的APP。
-3. 建立以後，按頁面左側的Bot。進入頁面後，再按右側的**Add Bot**。
+3. 建立以後，按頁面左側的Bot。進入頁面後，再按右側的**Add Bot**。<br>
 ![](https://i.imgur.com/N7iaQpd.jpg)
 
-#### 創建完機器人之後，應該要出現這樣的畫面
+#### 創建完機器人之後，應該要出現這樣的畫面<br>
 ![](https://i.imgur.com/Dxx0qiD.png)
 圖片來源：[Real Python](https://realpython.com/how-to-make-a-discord-bot-python)
 
 4. 創建成功後，在**Build-A-Bot**的區塊中，有**TOKEN**的部分，按下**Copy**。
 5. 把複製好的TOKEN貼到[Jstorm_infoBot](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/Jstorm_infoBot.py)中的```DISCORD_TOKEN=""```。
-6. 接下來請按左側的**OAuth2**，下方的**SCOPES**中選擇**Bot**會得到一個網址。將網址貼近瀏覽器中就可以把機器人加入自己的伺服器囉！
+6. 接下來請按左側的**OAuth2**，下方的**SCOPES**中選擇**Bot**會得到一個網址。將網址貼近瀏覽器中就可以把機器人加入自己的伺服器囉！<br>
 ![](https://i.imgur.com/DSojxaP.jpg)
 7. 運用終端機執行[Jstorm_infoBot](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/Jstorm_infoBot.py)，你的機器人就正式上工了！
 
