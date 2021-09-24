@@ -15,7 +15,7 @@
 """
 
 import json
-with open('../web_crawler/ProfileDICT.json', 'r') as f:
+with open('./web_crawler/ProfileDICT.json', 'r') as f:
     ProfileDICT=json.load(f)
 
 DEBUG_Profile_height = True
