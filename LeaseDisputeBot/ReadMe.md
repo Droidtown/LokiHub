@@ -148,4 +148,4 @@ Bot就會回覆簡易的法律建議給您 ~~~
 
 歡迎透過E-mail聯繫，謝謝
 
-Annie Chen ：loveyoosic4ever@gmail.com
+Annie Chen ：yeeanniechen@gmail.com
