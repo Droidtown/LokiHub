@@ -30,9 +30,9 @@ mscDICT = {# "userID": {requestTemplate}
 
     
 # 另一個寫法是：accountDICT = json.load(open("account.info", encoding="utf-8"))
-with open('D:\HAO\Hao的研所\實習\LokiHub\JstormBot\web_crawler\ProfileDICT.json', 'r') as f:
+with open('.\web_crawler\ProfileDICT.json', 'r') as f:
     ProfileDICT=json.load(f)
-with open('D:\HAO\Hao的研所\實習\LokiHub\JstormBot\web_crawler\GroupDICT.json', 'r') as f:
+with open('.\web_crawler\GroupDICT.json', 'r') as f:
     GroupDICT=json.load(f)
 
 tokio=['国分太一','城島茂','松岡昌宏']

@@ -15,10 +15,10 @@
 """
 
 import json
-with open('D:\HAO\Hao的研所\實習\LokiHub\JstormBot\web_crawler\ProfilePic.json', 'r') as f:
+with open('..\web_crawler\ProfilePic.json', 'r') as f:
     ProfilePic=json.load(f)
 
-with open('D:\HAO\Hao的研所\實習\LokiHub\JstormBot\web_crawler\GroupDICT.json', 'r') as f:
+with open('..\web_crawler\GroupDICT.json', 'r') as f:
     GroupDICT=json.load(f)
 
 DEBUG_Group = True

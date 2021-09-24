@@ -16,7 +16,7 @@
 import datetime
 import math
 import json
-with open('D:\HAO\Hao的研所\實習\LokiHub\JstormBot\web_crawler\ProfileDICT.json', 'r') as f:
+with open('..\web_crawler\ProfileDICT.json', 'r') as f:
     ProfileDICT=json.load(f)
 
 DEBUG_Profile_age = True

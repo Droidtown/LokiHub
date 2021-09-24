@@ -20,7 +20,7 @@ nicknameLIST=userDefinedDICT['城島茂']+userDefinedDICT['国分太一']+userDe
 
 import datetime
 import json
-with open('D:\HAO\Hao的研所\實習\LokiHub\JstormBot\web_crawler\ProfileDICT.json', 'r') as f:
+with open('..\web_crawler\ProfileDICT.json', 'r') as f:
     ProfileDICT=json.load(f)
 
 tokio=['国分太一','城島茂','松岡昌宏']
