@@ -145,5 +145,7 @@ Bot就會回覆簡易的法律建議給您 ~~~
 
 ## 聯絡資訊
 若您還有其他任何的疑問，或是對Loki與法律的應用有興趣
+
 歡迎透過E-mail聯繫，謝謝
+
 Annie Chen ：loveyoosic4ever@gmail.com
