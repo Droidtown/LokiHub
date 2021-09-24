@@ -57,7 +57,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['request']='height'
 
     if utterance == "顏色":
-        resultDICT['request']='color'
+        resultDICT['request']='color.list'
 
     if utterance == "體重":
         resultDICT['request']='weight'

@@ -20,7 +20,7 @@ nicknameLIST=userDefinedDICT['城島茂']+userDefinedDICT['国分太一']+userDe
 
 import datetime
 import json
-with open('..\web_crawler\ProfileDICT.json', 'r') as f:
+with open('../web_crawler/ProfileDICT.json', 'r') as f:
     ProfileDICT=json.load(f)
 
 tokio=['国分太一','城島茂','松岡昌宏']
@@ -200,29 +200,21 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 if args[0] in userDefinedDICT[k]:
                     key=k
             if key in tokio:
-                for p in ProfileDICT['TOKIO']:
-                    if p['JName'] == key:
-                        resultDICT['Group']='TOKIO'
-                        resultDICT['member']=key
-                        resultDICT['request']=str(countBirth(key))
+                resultDICT['Group']='TOKIO'
+                resultDICT['member']=key
+                resultDICT['request']=str(countBirth(key))
             if key in arashi:
-                for p in ProfileDICT['嵐']:
-                    if p['JName'] == key:
-                        resultDICT['Group']='嵐'
-                        resultDICT['member']=key
-                        resultDICT['request']=str(countBirth(key))
+                resultDICT['Group']='嵐'
+                resultDICT['member']=key
+                resultDICT['request']=str(countBirth(key))
             if key in kattun:
-                for p in ProfileDICT['KAT-TUN']:
-                    if p['JName'] == key:
-                        resultDICT['Group']='KAT-TUN'
-                        resultDICT['member']=key
-                        resultDICT['request']=str(countBirth(key))
+                resultDICT['Group']='KAT-TUN'
+                resultDICT['member']=key
+                resultDICT['request']=str(countBirth(key))
             if key in jump:
-                for p in ProfileDICT['Hey! Say! JUMP']:
-                    if p['JName'] == key:
-                        resultDICT['Group']='Hey! Say! JUMP'
-                        resultDICT['member']=key
-                        resultDICT['request']=str(countBirth(key))
+                resultDICT['Group']='Hey! Say! JUMP'
+                resultDICT['member']=key
+                resultDICT['request']=str(countBirth(key))
 
 
     if utterance == "[生日]是什麼[時候]":
@@ -248,5 +240,122 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT['request']='month'
         if args[0] in '日號':
             resultDICT['request']='day'
+            
+            
+    if utterance == "[龜龜]的生日是什麼[時候]":
+        if args[0] in nicknameLIST:
+            for k in userDefinedDICT.keys():
+                    if args[0] in userDefinedDICT[k]:
+                        key=k
+            if key in tokio:
+                for p in ProfileDICT['TOKIO']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='TOKIO'
+                        resultDICT['member']=key
+                        resultDICT['request']=p['Birth']
+            if key in arashi:
+                for p in ProfileDICT['嵐']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='嵐'
+                        resultDICT['member']=key
+                        resultDICT['request']=p['Birth']
+            if key in kattun:
+                for p in ProfileDICT['KAT-TUN']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='KAT-TUN'
+                        resultDICT['member']=key
+                        resultDICT['request']=p['Birth']
+            if key in jump:
+                for p in ProfileDICT['Hey! Say! JUMP']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='Hey! Say! JUMP'
+                        resultDICT['member']=key
+                        resultDICT['request']=p['Birth']
+
+
+    if utterance == "什麼[時候]是[涼介]生日":
+        if args[1] in nicknameLIST:
+            for k in userDefinedDICT.keys():
+                    if args[1] in userDefinedDICT[k]:
+                        key=k
+            if key in tokio:
+                for p in ProfileDICT['TOKIO']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='TOKIO'
+                        resultDICT['member']=key
+                        resultDICT['request']=p['Birth']
+            if key in arashi:
+                for p in ProfileDICT['嵐']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='嵐'
+                        resultDICT['member']=key
+                        resultDICT['request']=p['Birth']
+            if key in kattun:
+                for p in ProfileDICT['KAT-TUN']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='KAT-TUN'
+                        resultDICT['member']=key
+                        resultDICT['request']=p['Birth']
+            if key in jump:
+                for p in ProfileDICT['Hey! Say! JUMP']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='Hey! Say! JUMP'
+                        resultDICT['member']=key
+                        resultDICT['request']=p['Birth']
+
+    if utterance == "生日是何時":
+        resultDICT['request']='birth'
+
+    if utterance == "還有[幾天]到[念念]生日":
+        if args[1] in nicknameLIST and args[0] == '幾天':
+            for k in userDefinedDICT.keys():
+                if args[1] in userDefinedDICT[k]:
+                    key=k
+            if key in tokio:
+                for p in ProfileDICT['TOKIO']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='TOKIO'
+                        resultDICT['member']=key
+                        resultDICT['request']=str(countBirth(key))
+            if key in arashi:
+                for p in ProfileDICT['嵐']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='嵐'
+                        resultDICT['member']=key
+                        resultDICT['request']=str(countBirth(key))
+            if key in kattun:
+                for p in ProfileDICT['KAT-TUN']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='KAT-TUN'
+                        resultDICT['member']=key
+                        resultDICT['request']=str(countBirth(key))
+            if key in jump:
+                for p in ProfileDICT['Hey! Say! JUMP']:
+                    if p['JName'] == key:
+                        resultDICT['Group']='Hey! Say! JUMP'
+                        resultDICT['member']=key
+                        resultDICT['request']=str(countBirth(key))
+
+    if utterance == "離[念念]的生日還有[幾天]":
+        if args[1] == '幾天' and args[0] in nicknameLIST:
+            for k in userDefinedDICT.keys():
+                if args[0] in userDefinedDICT[k]:
+                    key=k
+            if key in tokio:
+                resultDICT['Group']='TOKIO'
+                resultDICT['member']=key
+                resultDICT['request']=str(countBirth(key))
+            if key in arashi:
+                resultDICT['Group']='嵐'
+                resultDICT['member']=key
+                resultDICT['request']=str(countBirth(key))
+            if key in kattun:
+                resultDICT['Group']='KAT-TUN'
+                resultDICT['member']=key
+                resultDICT['request']=str(countBirth(key))
+            if key in jump:
+                resultDICT['Group']='Hey! Say! JUMP'
+                resultDICT['member']=key
+                resultDICT['request']=str(countBirth(key))
 
     return resultDICT
