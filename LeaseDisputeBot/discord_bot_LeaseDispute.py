@@ -16,30 +16,14 @@ logging.basicConfig(level=logging.CRITICAL)
 # <取得多輪對話資訊>
 client = discord.Client()
 
-#leaseTemplate = {"confirm425_BOOL":None,
-                 #"confirm425tb1_BOOL":None,
-                 #"confirm425tb2_BOOL":None,
-                 #"confirm425tb3_BOOL":None,
-                 #"confirm429_BOOL":None,
-                 #"confirm429tb1_BOOL":None,
-                 #"confirm_Security_Deposit_BOOL":None,
-                 #"confirm_fees_BOOL":None,
-                 #"confirm_comein_BOOL":None,
-                 #"updatetime":"datetime",
-                 #"complete":False}
-
-
 mscDICT = {
     # "userID": {creditTemplate, mortgageTemplate}
-    #"PeterWolf":leaseTemplate,
-    #"怡安":leaseTemplate
 }
 # </取得多輪對話資訊>
 
 
-with open("account.info", encoding="utf-8") as f:
+with open("account.info", encoding="utf-8") as f: #讀取account.info
     accountDICT = json.loads(f.read())
-# 另一個寫法是：accountDICT = json.load(open("account.info", encoding="utf-8"))
 
 from ArticutAPI import Articut
 articut = Articut(username=accountDICT["username"], apikey=accountDICT["apikey"])
@@ -258,7 +242,7 @@ class BotClient(discord.Client):
                         replySTR = "抱歉，我有點不太懂您的意思，可以請您換一個說法再說一遍嗎？謝謝。"
                         await message.reply(replySTR)
 
-                #(二)429修繕義務的問題
+                #429修繕義務的問題
                 elif mscDICT[message.author.id]["confirm429_BOOL"] == True: #429的第二輪對話
                     lokiResultDICT = botRunLoki(msgSTR,filterLIST = ["429_tb1"]) #filterLIST只跑429_tb1
                     if "confirm429tb1_BOOL" in lokiResultDICT:
@@ -287,17 +271,6 @@ class BotClient(discord.Client):
 
 
 if __name__ == "__main__":
-    #leaseTemplate = {"confirm425_BOOL":None,
-                     #"confirm425tb1_BOOL":None,
-                     #"confirm425tb2_BOOL":None,
-                     #"confirm425tb3_BOOL":None,
-                     #"confirm429_BOOL":None,
-                     #"confirm429tb1_BOOL":None,
-                     #"confirm_Security_Deposit_BOOL":None,
-                     #"confirm_fees_BOOL":None,
-                     #"confirm_comein_BOOL":None,
-                     #"updatetime":"datetime",
-                     #"complete":False}
     client = BotClient()
     client.run(accountDICT["discord_token"])
 
