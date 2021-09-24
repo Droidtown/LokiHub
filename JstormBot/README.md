@@ -123,6 +123,6 @@ $ pip install -U discord.py
 
 ## 作者
 
-[@qinyanhao](https://github.com/qinyanhao)
+[@qinyanhao](https://github.com/qinyanhao) <br>
 Email: sylvia.wang4837@gmail.com
 歡迎提出建言或是提出反饋！
