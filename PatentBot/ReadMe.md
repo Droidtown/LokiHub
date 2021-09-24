@@ -20,26 +20,26 @@
 
 ### 在Loki上建立PatentBot
 #### 1 註冊 [卓騰語言科技](https://api.droidtown.co/login/) 帳號
-![registration.png](https://i.imgur.com/gVJon4J.png)
+<img src="https://i.imgur.com/gVJon4J.png" width="500" alt="registration.png">
 
 #### 2 建立 Loki Project
 1. 登入 [Loki 控制台](https://api.droidtown.co/loki/)。
-![login.png](https://i.imgur.com/Cn2pfYE.png)
+<img src="https://i.imgur.com/Cn2pfYE.png" width="500" alt="login.png">
 
 2. 在 Loki 控制台中新建一個專案`PatentBot`，並進入專案。
-![new_project.png](https://i.imgur.com/GPrIeDi.png)
+<img src="https://i.imgur.com/GPrIeDi.png" width="500" alt="new_project.png">
 
 3. 在專案下方選擇`ArticutModel`並將`IPC_Number.ref`,`Type.ref`,`Probe.ref`依照下列步驟操作以讀取意圖:
 點擊 [瀏覽] > 選擇`PatentBot/ref/IPC_Number.ref` > [讀取意圖]。
-![ref_upload.png](https://i.imgur.com/tyanLl1.png)
+<img src="https://i.imgur.com/tyanLl1.png" width="500" alt="ref_upload.png">
 意圖(intent)建立完成
-![ref_upload_fin.png](https://i.imgur.com/Ogp6AoI.png)
+<img src="https://i.imgur.com/Ogp6AoI.png" width="500" alt="ref_upload_fin.png">
 
 4. 進入每一個意圖，並在`5. 生成模型`區塊中點擊 [生成模型 (GetVenueAddress)]。
-![create_model.png](https://i.imgur.com/NYV9YWI.png)
+<img src="https://i.imgur.com/NYV9YWI.png" width="500" alt="create_model.png">
 
 5. 完成後，點擊畫面上方左邊的「房子」圖示，回到專案頁。取得`PatentBot`的專案金鑰。
-![Loki_key.png](https://i.imgur.com/NfE35BK.png)
+<img src="https://i.imgur.com/NfE35BK.png" width="500" alt="Loki_key.png">
 
 6. 在`PatentBot`目錄下建立 `account.info `。
 ```
@@ -55,30 +55,30 @@
  - loki_key 填入你產生的`PatentBot`專案金鑰
 
 7. 可以直接使用此專案裡寫好的intent code，也可以下載專案使用其提供的空白intent code自由發揮。
-![download.png](https://i.imgur.com/FaZp9uk.png)
+<img src="https://i.imgur.com/FaZp9uk.png" width="500" alt="download.png">
 
 ---
 
 ### 在Discord上建立PatentBot
 #### 1 註冊 [Discord](https://discord.com/register) 帳號
-![registration.png](https://i.imgur.com/6JWcS6X.png)
+<img src="https://i.imgur.com/6JWcS6X.png" width="500" alt="registration.png">
 
 #### 2. 建立Discord Bot
 1. 進入 [Discord開發者頁面](https://discord.com/developers/applications)，登入你的 Discord 帳號。
-![login.png](https://i.imgur.com/WyRO58k.png)
+<img src="https://i.imgur.com/WyRO58k.png" width="500" alt="login.png">
 
 2. 點擊畫面上方右邊的「New Application」建立一個Application。
-![new_application.png](https://i.imgur.com/d5axtgu.png)
+<img src="https://i.imgur.com/d5axtgu.png" width="500" alt="new_application.png">
 
 3. 設定Application的名字。
-![create_new_application.png](https://i.imgur.com/vuDfG9c.png)
+<img src="https://i.imgur.com/vuDfG9c.png" width="500" alt="create_new_application.png">
 
 4. 在 Application 裡，左邊切換到 Bot 的分頁，[Add Bot]，並設定它的名字。
 (建議設定一個和 Application 不同的名字。之後比較容易辨識)。
-![add_bot.png](https://i.imgur.com/CXX2l6n.png)
+<img src="https://i.imgur.com/CXX2l6n.png" width="500" alt="add_bot.png">
 
 5. 在 Bot 的分頁裡，取得 Bot 的 Token，並填入前述的 account.info 檔案中。
-![token.png](https://i.imgur.com/PeO9eOa.png)
+<img src="https://i.imgur.com/PeO9eOa.png" width="500" alt="token.png">
 
 ---
 
@@ -87,7 +87,8 @@
 `python3 discord_bot_patent.py`
 
 2. 在 Discord 的裡 @<你的bot> 然後就可以和它對話了！
-[![youtube.png](https://i.imgur.com/uc6xfrL.png)](https://www.youtube.com/watch?v=DVxMMq-5-Jo)
+
+<a href="https://www.youtube.com/watch?v=DVxMMq-5-Jo"><img src="https://i.imgur.com/uc6xfrL.png" width="500"></a>
 
 ---
 
@@ -103,7 +104,7 @@
 	- 例句：我想找發明的, 我想比對轉帳類別下跟發明相關的專利, 有後付的嗎
 
 2. 當Bot確認完你想比對的領域和類型，會請你輸入想比對的專利範圍。
-	- [範例內容](https://github.com/yenjannn/PatentBot/blob/main/sample.txt)
+	- [範例內容](https://github.com/Droidtown/LokiHub/blob/main/PatentBot/Dataset/sample.txt)
 
 3. 輸入後PatentBot會再次跟你確認比對的領域和類型，確認無誤進入Articut分析比對內容並獲得比對結果。
 
