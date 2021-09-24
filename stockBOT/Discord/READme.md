@@ -162,3 +162,4 @@
 目前這個BOT可以查詢上市半導體類股、食品類股、運輸類股還有營建類股的股票，如果要增加其他檔股票，可以到DICT.py的companyDICT字典中，以**"股票代碼"：["公司名稱","股票代碼"]**的格式增加公司名稱與股票代碼。
 
 ![DICT](https://github.com/sydneylin0218/Picture/blob/main/DICT.png?raw=true)
+

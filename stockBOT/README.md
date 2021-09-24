@@ -54,3 +54,7 @@
 
 專有名詞解釋資料來源為[財團法人證券投資人及期貨交易人保護中心](https://www.sfipc.org.tw/MainWeb/Index.aspx?L=1)
 
+#### 作者
+
+[@sydneylin0218](https://github.com/sydneylin0218)
+
