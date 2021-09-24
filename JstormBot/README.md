@@ -128,7 +128,8 @@ $ pip install -U discord.py
 <img src="https://i.imgur.com/7sHUiMX.jpg" width="350px"> <br>
 
 ## 更新資料庫
-由於本Bot是採用靜態資料庫進行，如果想要獲取團體或是成員的最新圖片，請運用[web_crawler](https://github.com/qinyanhao/LokiHub/tree/main/JstormBot/web_crawler)中的[profile.py](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/web_crawler/profile.py)進行更新。
+由於本Bot是採用靜態資料庫進行，如果想要獲取團體或是成員的最新圖片，請運用[web_crawler](https://github.com/qinyanhao/LokiHub/tree/main/JstormBot/web_crawler)中的[profile.py](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/web_crawler/profile.py)進行更新。<br>
+執行後將會更新資料庫中的內容。
 
 
 ## 相關Repositories
