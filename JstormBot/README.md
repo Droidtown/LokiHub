@@ -93,24 +93,39 @@ $ pip install -U discord.py
 在Discord的輸入欄用「@」呼叫你的機器人，跟他打招呼或單純叫他都可以得到可查詢的內容列表。<br>
 查詢團體和成員的話用別名也是可以的喔！
 
-* Jstorm資訊：「旗下有誰」「Jstorm有幾團」「Jstorm有那些團體」
+* 打招呼<br>
+<img src="https://i.imgur.com/KtX5h3T.jpg" width="400px"> <br>
+* Jstorm資訊：「旗下有誰」「Jstorm有幾團」「Jstorm有那些團體」<br>
+<img src="https://i.imgur.com/2VCbSFf.jpg" width="300px"> <br>
 
 * 團體資訊：
-1. 各團成員：「嵐有誰」「尼尼是嵐嗎」「櫻井翔是嵐的人嗎」
-2. 出道日、結成日：「結成日是何時」
-3. 計算日期：「出道幾年了」、「離結成日還有幾天」
+1. 各團成員：「嵐有誰」「尼尼是嵐嗎」「櫻井翔是嵐的人嗎」<br>
+<img src="https://i.imgur.com/OGpV68N.jpg" width="300px"> <br>
+2. 出道日、結成日：「結成日是何時」<br>
+<img src="https://i.imgur.com/n3SaPCm.jpg" width="350px"> <br>
+3. 計算日期：「出道幾年了」、「離結成日還有幾天」<br>
+<img src="https://i.imgur.com/APym2gy.jpg" width="350px"> <br>
 
 * 個人資訊
-1. 整體資訊：「松本潤是誰」
-2. 日英姓名：「大貴姓什麼」「阿慧全名是什麼」「涼介的英文名字是什麼」「雄也的英文姓氏是什麼」
-3. 年齡：「他幾歲」「最年長」「年齡順序為何」
-4. 生日：「幾年出生的」「生日是何時」「離念念的生日還有幾天」
-5. 血型：「誰是O型」「KT有O型嗎」「KT各是什麼血型」
-6. 出身地：「誰是東京人」「雄也是哪裡人」「光是宮城人嗎」
-7. 身高：「他多高」「KT誰最矮」「最高到最矮」
-8. 成員色：「誰是黃色」「代表色是什麼」「各是什麼顏色」「有人是紅色嗎」「阿智是藍色嗎」「有哪些應援色」
+1. 整體資訊：「松本潤是誰」<br>
+<img src="https://i.imgur.com/Vx7aBX3.jpg" width="500px"> <br>
+2. 日英姓名：「大貴姓什麼」「阿慧全名是什麼」「涼介的英文名字是什麼」「雄也的英文姓氏是什麼」<br>
+<img src="https://i.imgur.com/zIs5L3Z.jpg" width="350px"> <br>
+3. 年齡：「他幾歲」「最年長」「年齡順序為何」<br>
+<img src="https://i.imgur.com/hu26ZQd.jpg" width="350px"> <br>
+4. 生日：「幾年出生的」「生日是何時」「離念念的生日還有幾天」<br>
+<img src="https://i.imgur.com/vd80pE4.jpg" width="350px"> <br>
+5. 血型：「誰是O型」「KT有O型嗎」「KT各是什麼血型」<br>
+<img src="https://i.imgur.com/7RFsUrz.jpg" width="350px"> <br>
+6. 出身地：「誰是東京人」「雄也是哪裡人」「光是宮城人嗎」<br>
+<img src="https://i.imgur.com/wkgjX0u.jpg" width="350px"> <br>
+7. 身高：「他多高」「KT誰最矮」「最高到最矮」<br>
+<img src="https://i.imgur.com/x2Zclza.jpg" width="300px"> <br>
+8. 成員色：「誰是黃色」「代表色是什麼」「各是什麼顏色」「有人是紅色嗎」「阿智是藍色嗎」「有哪些應援色」<br>
+<img src="https://i.imgur.com/c7mY77L.jpg" width="300px"> <br>
 
-
+* 說掰掰－跟機器人說「謝謝/我問完了/掰掰/88/bye/byebye/再見/再會」將會結束對話並清除資料。<br>
+<img src="https://i.imgur.com/7sHUiMX.jpg" width="350px"> <br>
 
 ## 更新資料庫
 由於本Bot是採用靜態資料庫進行，如果想要獲取團體或是成員的最新圖片，請運用[web_crawler](https://github.com/qinyanhao/LokiHub/tree/main/JstormBot/web_crawler)中的[profile.py](https://github.com/qinyanhao/LokiHub/blob/main/JstormBot/web_crawler/profile.py)進行更新。
