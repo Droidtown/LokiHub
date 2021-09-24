@@ -42,27 +42,26 @@
         }
 """
 
-import requests
+from requests import post
+from requests import codes
+import math
 try:
-    from intent import Loki_Exchange
+    from intent import Loki_IPC_Number
+    from intent import Loki_Type
+    from intent import Loki_Probe
 except:
-    from .intent import Loki_Exchange
+    from .intent import Loki_IPC_Number
+    from .intent import Loki_Type
+    from .intent import Loki_Probe
 
-API_KEY = ""
+import json
+
+with open("account.info", encoding="utf-8") as f:
+    accountDICT = json.loads(f.read())
+
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
-USERNAME = ""
-LOKI_KEY = ""
-try:
-    from ArticutAPI import ArticutAPI
-    if API_KEY == "":
-        articut = ArticutAPI.Articut(username=USERNAME, apikey=API_KEY)
-    else:
-        articut = ArticutAPI.Articut(username=USERNAME, apikey=API_KEY)
-except:
-    print("需配合 ArticutAPI 使用。請至 https://github.com/Droidtown/ArticutAPI 下載")
-
-
-
+USERNAME = accountDICT["username"]
+LOKI_KEY = accountDICT["loki_key"]
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
 # INTENT_FILTER = [intentN] => 僅比對 INTENT_FILTER 內的意圖
@@ -75,22 +74,25 @@ class LokiResult():
     balance = -1
     lokiResultLIST = []
 
-    def __init__(self, inputLIST):
+    def __init__(self, inputLIST, filterLIST):
         self.status = False
         self.message = ""
         self.version = ""
         self.balance = -1
         self.lokiResultLIST = []
+        # filterLIST 空的就採用預設的 INTENT_FILTER
+        if filterLIST == []:
+            filterLIST = INTENT_FILTER
 
         try:
-            result = requests.post(LOKI_URL, json={
+            result = post(LOKI_URL, json={
                 "username": USERNAME,
                 "input_list": inputLIST,
                 "loki_key": LOKI_KEY,
-                "filter_list": INTENT_FILTER
+                "filter_list": filterLIST
             })
 
-            if result.status_code == requests.codes.ok:
+            if result.status_code == codes.ok:
                 result = result.json()
                 self.status = result["status"]
                 self.message = result["msg"]
@@ -168,63 +170,63 @@ class LokiResult():
             rst = lokiResultDICT["argument"]
         return rst
 
-def runLoki(inputLIST):
+def runLoki(inputLIST, filterLIST=[]):
     resultDICT = {}
-    lokiRst = LokiResult(inputLIST)
+    lokiRst = LokiResult(inputLIST, filterLIST)
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
-                # Exchange
-                if lokiRst.getIntent(index, resultIndex) == "Exchange":
-                    resultDICT = Loki_Exchange.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                # IPC_Number
+                if lokiRst.getIntent(index, resultIndex) == "IPC_Number":
+                    resultDICT = Loki_IPC_Number.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
+                # Type
+                if lokiRst.getIntent(index, resultIndex) == "Type":
+                    resultDICT = Loki_Type.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
+                # Probe
+                if lokiRst.getIntent(index, resultIndex) == "Probe":
+                    resultDICT = Loki_Probe.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
     return resultDICT
 
-def getTodayExchangeRate(): # get ExchangeRate table
-    response = requests.get("https://tw.rter.info/capi.php")
-    rateDICT = response.json()
-    return rateDICT
+def testLoki(inputLIST, filterLIST):
+    INPUT_LIMIT = 20
+    for i in range(0, math.ceil(len(inputLIST) / INPUT_LIMIT)):
+        resultDICT = runLoki(inputLIST[i*INPUT_LIMIT:(i+1)*INPUT_LIMIT], filterLIST)
 
-# def getSrc2TgtExchangeRate()
 
-def moneyName(inputSTR): # input src or tgt to get currency
-    moneyDICT = {"歐元": "EUR",
-                 "美金": "USD",
-                 "日圓": "JPY",
-                 "台幣": "TWD",
-                 "臺幣": "TWD",
-                 "英鎊": "GBP",
-                 "法郎": "CHF",
-                 "澳幣": "AUD",
-                 "港幣": "HKD",
-                 "泰銖": "THB"}
-    if (inputSTR == None): # init = TWD
-        moneyDICT[inputSTR] = "TWD"
-    return moneyDICT[inputSTR]
+if __name__ == "__main__":
+    # IPC_Number
+    #print("[TEST] IPC_Number")
+    #inputLIST = ['24','後付的','G06Q-02024','信用方案','轉帳的有嗎','我要找預付的','可以找到預付的嗎','後付的有哪些專利','查現付的相關專利','跟預付系統有關的是誰','我想要比對跟轉帳相關的專利','我想比對轉帳類別下跟發明相關的專利']
+    #testLoki(inputLIST, ['IPC_Number'])
+    #print("")
 
-def amountSTRconvert(inputSTR): # convert [X元] into [number X]
-    resultDICT = {}
-    if (inputSTR == None): # 沒說換匯金額多少就預設1
-        resultDICT["number"] = 1
-    else:
-        resultDICT = articut.parse(inputSTR, level="lv3") # 有換匯金額就轉成Number
-    return resultDICT["number"]
+    # Type
+    #print("[TEST] Type")
+    #inputLIST = ['M','m','發明','查找發明','我要看發明','有發明的嗎','我想比對轉帳類別下跟發明相關的專利']
+    #testLoki(inputLIST, ['Type'])
+    #print("")
 
-if __name__ == "__main__": # python的程式進入點
-    inputLIST = ["400元美金可以兌換台幣多少"]
-    resultDICT = runLoki(inputLIST)
+    # Probe
+    #print("[TEST] Probe")
+    #inputLIST = ['對','是','不對','不是','正確','沒錯','不正確']
+    #testLoki(inputLIST, ['Probe'])
+    #print("")
+
+    # 輸入其它句子試看看
+    inputLIST = ["設計"]
+    filterLIST = []
+    resultDICT = runLoki(inputLIST, filterLIST)
     print("Result => {}".format(resultDICT))
 
-    src = moneyName(resultDICT["source"])
-    tgt = moneyName(resultDICT["target"])
-    amt = amountSTRconvert(resultDICT['amount'])[resultDICT['amount']]
-
-    rateDICT = getTodayExchangeRate() # get ExchangeRate table
-    # calculate ExchangeRate by [source -> USD -> target]
-
-    exRate = round(1/rateDICT["USD{}".format(src)]["Exrate"]) * (rateDICT["USD{}".format(tgt)]["Exrate"])
-
-    print("\nExchanging",amt, src, "to", tgt,"...")
-    print("You need", amt*exRate,tgt) # 金額*匯率
+    # 測試衝突句子
+    if "不確定" in resultDICT.values():
+        print("IPC_Number或類別輸入錯誤!")
+    elif "IPC_Number" in resultDICT.keys() and "Type" in resultDICT.keys():
+        print("\n您想比對的是IPC_Number為{}中類別為{}的專利，對嗎?".format(resultDICT["IPC_Number"], resultDICT["Type"]))
+    else:
+        pass
