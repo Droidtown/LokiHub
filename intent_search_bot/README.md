@@ -84,4 +84,4 @@ QR Code </br>
 ## 聯絡資料
 若您有任何疑問，歡迎透過email聯繫我們
 - Wei : waiting.hchs@gmail.com
-- Emily Fang
+- Emily Fang: emilyfun199701@gmail.com
