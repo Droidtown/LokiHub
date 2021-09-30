@@ -10,10 +10,22 @@ Loki 為 Linguistic Oriented Keyword Interface 的縮寫，是新一代專為中
 LokiHub 則為開放性的 Loki 意圖模型交流中心。
 
 ## 目錄：
+* AML: 洗錢防治模型
+* BeautiBot: 醫美諮詢及預約機器人
+* Depression-Language-Evaluation: 憂鬱指數評估模型
+* DrugBot: 藥物外觀搜尋機器人
 * FinBot: 金融相關應用的模型
+* FearGreed_Bot: 恐懼貪婪指數機器人
+* ForSemTutor: 形式語意學小家教
+* JstormBot: J Storm 旗下成員資訊機器人
+* LeaseDisputeBot: 租賃糾紛簡易法律諮詢機器人
+* PatentBot: 專利範圍比對機器人 
 * PyConTW2020_DiscordBot: 用於 PyConTW2020 的 DiscordBot
 * SmartHome: 專為智慧家電操作設計的意圖模型
-* WeatherMan: 天氣情報互動機器人
 * TransportationBot: 高鐵的票價與車次時刻查詢聊天機器人
+* WeatherMan: 天氣情報互動機器人
+* intent_search_bot: Hippo Chamber 文章過濾機器人
+* med_bot: 醫療系統分科建議小助手
+* stockBOT: 公司財報資料查詢小幫手
 
 ### [操作說明](https://api.droidtown.co/document/Loki)
