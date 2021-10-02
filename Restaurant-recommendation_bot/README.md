@@ -49,7 +49,7 @@ pip install DateTime
 + 複製Articut API金鑰
 + 選擇Loki應用後建立專案(英文名稱)
 + 複製Loki專案金鑰
-+ 編輯`account.info`
++ 建立並編輯`account.info`
 ```
 {
 "username":"your account",  #你的帳號
