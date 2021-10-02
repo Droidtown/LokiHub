@@ -15,10 +15,10 @@
 ## **目錄**
 Restaurant-recommendation_bot的Repository包含以下內容：
 
-1. data/restaurant_domain.json
-2. trip_discord_bot.py
-3. ref
-4. RestaurantAndHotel_bot
+1. [restaurant_domain.json](https://github.com/WuSiangRu/LokiHub/blob/main/Restaurant-recommendation_bot/data/restaurant_domain.json)
+2. [trip_discord_bot.py](https://github.com/WuSiangRu/LokiHub/blob/main/Restaurant-recommendation_bot/trip_discord_bot.py)
+3. [ref](https://github.com/WuSiangRu/LokiHub/tree/main/Restaurant-recommendation_bot/ref)
+4. [RestaurantAndHotel_bot](https://github.com/WuSiangRu/LokiHub/blob/main/Restaurant-recommendation_bot/RestaurantAndHotel_bot.py)
 
 ## **環境建立**
 ### **註冊帳號**
@@ -31,7 +31,7 @@ Restaurant-recommendation_bot的Repository包含以下內容：
 
 ![](https://raw.githubusercontent.com/WuSiangRu/RestaurantAndHotel_bot/main/pic/002.JPG "002")
 
-4. 登入會員之後，選擇在「服務資訊」區塊底下第四個圖示進入Loki應用
+4. 登入會員之後，選擇在「服務資訊」區塊底下第四個圖示並點選「開始使用Loki」
 
 ![](https://raw.githubusercontent.com/WuSiangRu/RestaurantAndHotel_bot/main/pic/003.JPG "003")
 
@@ -40,7 +40,9 @@ Restaurant-recommendation_bot的Repository包含以下內容：
 ```
 pip install ArticutAPI
 ```
-
+```
+pip install DateTime
+```
 ## **使用說明**
 ### **Articut及Loki使用說明**
 + 登入帳號:[卓騰語言科技](https://api.droidtown.co/)
@@ -49,17 +51,21 @@ pip install ArticutAPI
 + 複製Loki專案金鑰
 + 編輯`account.info`
 ```
+{
 "username":"your account",  #你的帳號
 "articut_api_key":"your articut key",  #你的articut金鑰
 "loki_api_key":"your loki key",  #你的loki專案金鑰
 "discord_token": "your bot token"  #你的discord bot的token
+}
 ```
++ 欲使用已建立好的Loki意圖(intent)，請點選 ref 資料夾 [如何讀取ref檔](https://api.droidtown.co/document/#Loki_3)
 
 ### **Discord使用說明**
 #### **使用檔案**
-1. intent
-2. bot_for_loki
-3. discord_bot
+1. [intent](https://github.com/WuSiangRu/RestaurantAndHotel_bot/tree/main/intent)
+2. [RestaurantAndHotel_bot.py](https://github.com/WuSiangRu/RestaurantAndHotel_bot/blob/main/RestaurantAndHotel_bot.py)
+3. [trip_discord_bot.py](https://github.com/WuSiangRu/RestaurantAndHotel_bot/blob/main/trip_discord_bot.py)
+
 #### **環境設定**
 + python版本
     + python版本建議3.6+
