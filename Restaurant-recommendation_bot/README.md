@@ -62,9 +62,9 @@ pip install DateTime
 
 ### **Discord使用說明**
 #### **使用檔案**
-1. [intent](https://github.com/WuSiangRu/RestaurantAndHotel_bot/tree/main/intent)
-2. [RestaurantAndHotel_bot.py](https://github.com/WuSiangRu/RestaurantAndHotel_bot/blob/main/RestaurantAndHotel_bot.py)
-3. [trip_discord_bot.py](https://github.com/WuSiangRu/RestaurantAndHotel_bot/blob/main/trip_discord_bot.py)
+1. [intent](https://github.com/WuSiangRu/LokiHub/tree/main/Restaurant-recommendation_bot/intent)
+2. [RestaurantAndHotel_bot.py](https://github.com/WuSiangRu/LokiHub/blob/main/Restaurant-recommendation_bot/RestaurantAndHotel_bot.py)
+3. [trip_discord_bot.py](https://github.com/WuSiangRu/LokiHub/blob/main/Restaurant-recommendation_bot/trip_discord_bot.py)
 
 #### **環境設定**
 + python版本
