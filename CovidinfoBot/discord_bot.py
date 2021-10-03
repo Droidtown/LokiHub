@@ -81,14 +81,14 @@ async def on_message(message):
     # if message.channel.name != "dt_intern":
     #     return
 
-    if not re.search("<@[!&]{}> ?".format(client.user.id), message.content):    # 只有 @Bot 才會回應
+    if not re.search("<@[!&]{}> ?".format(message.author.id), message.content):    # 只有 @Bot 才會回應
         return
 
     if message.author == client.user:
         return
 # try:
-    print("client.user.id =", client.user.id, "\nmessage.content =", message.content)
-    msgSTR = re.sub("<@[!&]{}> ?".format(client.user.id), "", message.content)    # 收到 User 的訊息，將 id 取代成 ""
+    print("message.author.id =", message.author.id, "\nmessage.content =", message.content)
+    msgSTR = re.sub("<@[!&]{}> ?".format(message.author.id), "", message.content)    # 收到 User 的訊息，將 id 取代成 ""
     print("msgSTR =", msgSTR)
     replySTR = ""    # Bot 回應訊息
 
@@ -102,8 +102,8 @@ async def on_message(message):
 
     if lokiResultDICT:
         print(lokiResultDICT)
-        if client.user.id not in mscDICT: # 判斷 User 是否為第一輪對話
-            # mscDICT[client.user.id] = {
+        if message.author.id not in mscDICT: # 判斷 User 是否為第一輪對話
+            # mscDICT[message.author.id] = {
             #         "inquiry_type" : "",
             #         "vaccine_shot" : "",
             #         "side_effect": "",
@@ -116,19 +116,17 @@ async def on_message(message):
             #         "followup": [],
             #         "completed" : False
             #                         }
-            mscDICT[client.user.id] = allTemplate
-            print(lokiResultDICT)
+            mscDICT[message.author.id] = allTemplate
             for k in lokiResultDICT.keys(): #注意!
-                mscDICT[client.user.id][k] = lokiResultDICT[k]
-            mscDICT[client.user.id]["followup"] = {}
+                mscDICT[message.author.id][k] = lokiResultDICT[k]
+            mscDICT[message.author.id]["followup"] = {}
         else:
             datetimeNow = datetime.datetime.now()
-            timeDIFF = datetimeNow - mscDICT[client.user.id]["updatetime"]
-            print(lokiResultDICT)
+            timeDIFF = datetimeNow - mscDICT[message.author.id]["updatetime"]
             for k in lokiResultDICT.keys(): #注意!
-                mscDICT[client.user.id][k] = lokiResultDICT[k]
+                mscDICT[message.author.id][k] = lokiResultDICT[k]
             if timeDIFF.total_seconds() >= 300: # 回答時間超過五分鐘，對話內容重置
-                # mscDICT[client.user.id]= {
+                # mscDICT[message.author.id]= {
                 #     "inquiry_type" : "",
                 #     "vaccine_shot" : "",
                 #     "side_effect": "",
@@ -141,74 +139,74 @@ async def on_message(message):
                 #     "followup": [],
                 #     "completed" : False
                 #                     }
-                mscDICT[client.user.id] = allTemplate
+                mscDICT[message.author.id] = allTemplate
                 for k in lokiResultDICT.keys(): #注意!
-                    mscDICT[client.user.id][k] = lokiResultDICT[k]
-                mscDICT[client.user.id]["followup"] = {}
+                    mscDICT[message.author.id][k] = lokiResultDICT[k]
+                mscDICT[message.author.id]["followup"] = {}
     
     # if confirm == False : 確認不完整資訊
     # elif confirm == True : 問還要不要繼續問資訊
     if lokiResultDICT:
-        # if mscDICT[client.user.id]["inquiry_type"] == "" and replySTR == "":    
+        # if mscDICT[message.author.id]["inquiry_type"] == "" and replySTR == "":    
         #     replySTR = "\n請問要問關於疫苗的甚麼資訊呢？"
-        if mscDICT[client.user.id]["completed"] == False:
-            if mscDICT[client.user.id]["followup"] != []:
-                followupDICT = runLoki(mscDICT[client.user.id]["followup"], ["Probe", "confirm_check"])
+        if mscDICT[message.author.id]["completed"] == False:
+            if mscDICT[message.author.id]["followup"] != []:
+                followupDICT = runLoki(mscDICT[message.author.id]["followup"], ["Probe", "confirm_check"])
                 for k in followupDICT.keys():
-                    mscDICT[client.user.id][k] = followupDICT[k]
-                mscDICT[client.user.id]["followup"] = []
-            if mscDICT[client.user.id]["response"]:
-                replySTR = mscDICT[client.user.id]["response"]
+                    mscDICT[message.author.id][k] = followupDICT[k]
+                mscDICT[message.author.id]["followup"] = []
+            if mscDICT[message.author.id]["response"]:
+                replySTR = mscDICT[message.author.id]["response"]
 
-            if mscDICT[client.user.id]["inquiry_type"] == [] and replySTR == "":
+            if mscDICT[message.author.id]["inquiry_type"] == [] and replySTR == "":
                 replySTR = "\n請問要問關於疫苗的甚麼資訊呢？"
             
-            elif mscDICT[client.user.id]["inquiry_type"] == [] and mscDICT[client.user.id]["vaccine_shot"] != [] and replySTR == "":
+            elif mscDICT[message.author.id]["inquiry_type"] == [] and mscDICT[message.author.id]["vaccine_shot"] != [] and replySTR == "":
                 replySTR = "你想知道關於這支疫苗的甚麼事情?"
 
-            if mscDICT[client.user.id]["inquiry_type"] == "side_effect" and mscDICT[client.user.id]["vaccine_shot"] == []:
+            if mscDICT[message.author.id]["inquiry_type"] == "side_effect" and mscDICT[message.author.id]["vaccine_shot"] == []:
                 replySTR = "你想要詢問哪隻疫苗的副作用?"
             
-            if mscDICT[client.user.id]["inquiry_type"] == "severe_side_effect" and mscDICT[client.user.id]["vaccine_shot"] == []: 
+            if mscDICT[message.author.id]["inquiry_type"] == "severe_side_effect" and mscDICT[message.author.id]["vaccine_shot"] == []: 
                 replySTR = "你想要詢問哪隻疫苗的嚴重副作用?"
             
-            if mscDICT[client.user.id]["inquiry_type"] == "vaccine_stock" and mscDICT[client.user.id]["location"] == []:
+            if mscDICT[message.author.id]["inquiry_type"] == "vaccine_stock" and mscDICT[message.author.id]["location"] == []:
                 replySTR = "請問您要詢問哪個地區的疫苗庫存呢?"
             
-            if mscDICT[client.user.id]["inquiry_type"] == "vaccine_stock" and mscDICT[client.user.id]["vaccine_shot"] == []:
+            if mscDICT[message.author.id]["inquiry_type"] == "vaccine_stock" and mscDICT[message.author.id]["vaccine_shot"] == []:
                 replySTR = "請問您想知道哪個廠牌的疫苗庫存呢?"            
             
-            if mscDICT[client.user.id]["inquiry_type"] == "vaccine_stock" and mscDICT[client.user.id]["location"] == [] and mscDICT[client.user.id]["vaccine_shot"] == []:
+            if mscDICT[message.author.id]["inquiry_type"] == "vaccine_stock" and mscDICT[message.author.id]["location"] == [] and mscDICT[message.author.id]["vaccine_shot"] == []:
                 replySTR = "請問您想知道哪個廠牌以及哪個地區的疫苗庫存呢?"  
 
-            if mscDICT[client.user.id]["inquirt_type"] == "group" and replySTR == "":
-                replySTR += """{}族群為{}。\n""".format("".join(mscDICT[client.user.id]["group_num"]), "".join(mscDICT[client.user.id]["group_num_def"]))
+            if mscDICT[message.author.id]["inquirt_type"] == "group" and replySTR == "":
+                replySTR += """{}族群為{}。\n""".format("".join(mscDICT[message.author.id]["group_num"]), "".join(mscDICT[message.author.id]["group_num_def"]))
                 await message.reply(replySTR)
                 replySTR = "還想問其他的嗎?" 
-                del mscDICT[client.user.id]
+                del mscDICT[message.author.id]
 
-            if "side_effect" in mscDICT[client.user.id]["inquiry_type"] and mscDICT[client.user.id]["vaccine_shot"] != []:
-                replySTR += """{}疫苗的常見副作用是{}。\n""".format("".join(mscDICT[client.user.id]["vaccine_shot"]), "".join(mscDICT[client.user.id]["side_effect"]))
+            if "side_effect" in mscDICT[message.author.id]["inquiry_type"] and mscDICT[message.author.id]["vaccine_shot"] != []:
+                replySTR += """{}疫苗的常見副作用是{}。\n""".format("".join(mscDICT[message.author.id]["vaccine_shot"]), "".join(mscDICT[message.author.id]["side_effect"]))
                 await message.reply(replySTR)
                 replySTR = "還想問其他的嗎?" 
-                del mscDICT[client.user.id]
+                del mscDICT[message.author.id]
 
-            if "severe_side_effect" in mscDICT[client.user.id]["inquiry_type"] and mscDICT[client.user.id]["vaccine_shot"] != []:
-                replySTR += """{}疫苗的常見副作用是{}。\n""".format("".join(mscDICT[client.user.id]["vaccine_shot"]), "".join(mscDICT[client.user.id]["severe_side_effect"]))
+            if "severe_side_effect" in mscDICT[message.author.id]["inquiry_type"] and mscDICT[message.author.id]["vaccine_shot"] != []:
+                replySTR += """{}疫苗的常見副作用是{}。\n""".format("".join(mscDICT[message.author.id]["vaccine_shot"]), "".join(mscDICT[message.author.id]["severe_side_effect"]))
                 await message.reply(replySTR)
                 replySTR = "還想問其他的嗎?"
-                del mscDICT[client.user.id]
+                del mscDICT[message.author.id]
 
-            if "vaccine_stock" in mscDICT[client.user.id]["inquiry_type"] and mscDICT[client.user.id]["location"] != [] and mscDICT[client.user.id]["vaccine_shot"] != []:
-                replySTR = vaccine_stock_api.write_response(mscDICT[client.user.id])
+            if "vaccine_stock" in mscDICT[message.author.id]["inquiry_type"] and mscDICT[message.author.id]["location"] != [] and mscDICT[message.author.id]["vaccine_shot"] != []:
+                replySTR = vaccine_stock_api.write_response(mscDICT[message.author.id])
                 await message.reply(replySTR)
                 replySTR = "還想問其他的嗎?"
-                del mscDICT[client.user.id]
+                del mscDICT[message.author.id]
 
             if replySTR == "":
                 print("看到我就是種錯誤囉!")
         else:  
-            del mscDICT[client.user.id]
+            del mscDICT[message.author.id]
             replySTR = "對話結束囉! 謝謝你使用Covid_Info_Bot! 請務必給我們五個星喔XDD"
 
     print("mscDICT =")
