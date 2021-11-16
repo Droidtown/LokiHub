@@ -17,6 +17,7 @@ LokiHub 則為開放性的 Loki 意圖模型交流中心。
 * FinBot: 金融相關應用的模型
 * FearGreed_Bot: 恐懼貪婪指數機器人
 * ForSemTutor: 形式語意學小家教
+* Heroku: Heroku 平台佈署範例教學
 * JstormBot: J Storm 旗下成員資訊機器人
 * LeaseDisputeBot: 租賃糾紛簡易法律諮詢機器人
 * PatentBot: 專利範圍比對機器人 
