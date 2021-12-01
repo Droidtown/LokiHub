@@ -83,6 +83,6 @@ Heroku 最少需要佈署四個檔案
 
 ### 3. 測試 Line Webhook
 
-在 [Line Developers](https://developers.line.biz/zh-hant/) 中進入 bot 的 `Messaging API` 標籤，在 `Webhook URL` 填入 Heroku App 網址 `https://{YOUR_APP_NAME}.herokyapp.com/`，並點擊 `Verify` 測試是否成功接通。
+在 [Line Developers](https://developers.line.biz/zh-hant/) 中進入 bot 的 `Messaging API` 標籤，在 `Webhook URL` 填入 Heroku App 網址 `https://{YOUR_APP_NAME}.herokuapp.com/`，並點擊 `Verify` 測試是否成功接通。
 
 ![](./img/img15.png)
