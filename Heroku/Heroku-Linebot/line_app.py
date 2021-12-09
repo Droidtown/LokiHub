@@ -26,15 +26,21 @@ def webhook():
         linebot = Linebot(LINE_ACCESS_TOKEN, LINE_CHANNEL_SECRET)
 
         # dataLIST = [{status, type, message, userID, replyToken, timestamp}]
-        # replyToken = 聊天室ID , message = 送過來的內容
-        
+        # replyToken = 回覆需要的ID , message = 使用者輸入的內容
+
         dataLIST = linebot.parse(body, signature)
         for dataDICT in dataLIST:
             if dataDICT["status"]:
                 if dataDICT["type"] == "message":
-                    # 這裡輸入客製化內容
+                    try:
+                        # 這裡輸入客製化內容
+                        # dataDICT["message"] => 使用者輸入的內容
+                        msgSTR = "[MSG] {}".format(dataDICT["message"])
+                    except Exception as e:
+                        msgSTR = "[ERROR] {}".format(str(e))
+
                     # respText(聊天室ID, 要回覆的內容)
-                    linebot.respText(dataDICT["replyToken"], dataDICT["message"])
+                    linebot.respText(dataDICT["replyToken"], msgSTR)
 
         return jsonify({"status": True, "msg": "Line Webhook Success."})
 
