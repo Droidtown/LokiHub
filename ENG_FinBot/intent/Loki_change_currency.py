@@ -15,9 +15,33 @@
 """
 
 import re
+from word2number import w2n
 
 DEBUG_change_currency = True
-userDefinedDICT = {"Currency":["US Dollar","US Dollars","Korean Won","pound","pounds","New Taiwan dollars","euros"]}
+userDefinedDICT = {"_currency":["pound","pounds"]}
+
+def numberMoneyAnalizer(inputSTR):
+    '''Using word2number module to seperate amount and currency'''
+    inputLIST = inputSTR.split(" ")
+    resultDICT = {"number":[], "money":""}
+    for i in inputLIST:
+        try:
+            if i == "point":
+                resultDICT["number"].append(i)
+            else:
+                num = w2n.word_to_num(i)
+                resultDICT["number"].append(i)
+        except:
+            for i in resultDICT["number"]:
+                inputSTR = inputSTR.replace(i, "")
+            resultDICT["money"] = inputSTR.strip()
+            resultDICT["number"] = " ".join(resultDICT["number"])
+            return resultDICT
+    resultDICT["number"] = " ".join(resultDICT["number"])
+    return resultDICT
+
+
+
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
@@ -146,16 +170,16 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["tgt"] = args[5]
         resultDICT["amt"] = None
 
-    if utterance == "[I] would like [to] exchange [three] [point] [three four canadian dollars] [in] [United States]":
-        resultDICT["src"] = args[2] + args[3] + args[4]
+    if utterance == "[I] would like [to] exchange [three point three four canadian dollars] [in] [United States]":
+        resultDICT["src"] = numberMoneyAnalizer(args[2])["money"]
         resultDICT["tgt"] = args[6]
-        resultDICT["amt"] = args[2] + args[3] + args[4]
+        resultDICT["amt"] = numberMoneyAnalizer(args[2])["number"]
 
 
     if utterance == "[I] want [to] exchange [three point three four million] [pounds] [into] [USD]":
-        resultDICT["src"] = args[1] + args[2] + args[3]
+        resultDICT["src"] = args[3]
         resultDICT["tgt"] = args[5]
-        resultDICT["amt"] = args[1] + args[2] + args[3]
+        resultDICT["amt"] = args[2]
 
     if utterance == "Could [I] exchange [300 pesos] [to] [NTD]":
         resultDICT["src"] = "".join(re.findall(r'[A-Za-z ]+', args[1]))
