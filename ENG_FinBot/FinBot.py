@@ -63,9 +63,9 @@ LOKI_URL = "https://nlu.droidtown.co/Loki/BulkAPI/"
 USERNAME = userDICT["username"]
 LOKI_KEY = userDICT["finBot_key"]
 
-# 意圖過濾器說明
-# INTENT_FILTER = []        => 比對全部的意圖 (預設)
-# INTENT_FILTER = [intentN] => 僅比對 INTENT_FILTER 內的意圖
+# 意圖過濾器說明  Intention filter meaning
+# INTENT_FILTER = []        => 比對全部的意圖 (預設) Compare all the intentions (Default)
+# INTENT_FILTER = [intentN] => 僅比對 INTENT_FILTER 內的意圖 Only compare the intentions in INTENT_FILTER
 INTENT_FILTER = []
 
 class LokiResult():
@@ -80,6 +80,7 @@ class LokiResult():
         self.version = ""
         self.lokiResultLIST = []
         # filterLIST 空的就採用預設的 INTENT_FILTER
+        #If filterLIST is empty, then the default INTENT_FILTER would be used
         if filterLIST == []:
             filterLIST = INTENT_FILTER
 
@@ -414,10 +415,10 @@ def getExchange(inputSTR):
     return Amount,  getMoneyCode(source_1), Last_Result
 
 if __name__ == "__main__":
-    ## 測試所有意圖
+    ## 測試所有意圖 Test all the intention
     ##testIntent()
 
-    # 測試其它句子
+    # 測試其它句子 Test other sentences
     inputSTR = "Could I exchange 300 pennies to NTD"
 
 
@@ -432,7 +433,7 @@ if __name__ == "__main__":
         print("Please check again")
 
 
-    #測試通過
+    #測試通過 Pass the test
     # How much is 100 USD in NTD
     #How much is 100 EUR into TWD
     #How much is $100 USD in Taiwan?
