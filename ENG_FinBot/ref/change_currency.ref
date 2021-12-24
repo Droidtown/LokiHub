@@ -6,12 +6,9 @@
         "intent": "1.0"
     },
     "user_defined": {
-        "Currency": [
+        "_currency": [
             "pound",
             "pounds"
-        ],
-        "Conj_in_num": [
-            "and"
         ]
     },
     "utterance": {
@@ -507,11 +504,107 @@
                 }
             ]
         },
-        "May I exchange this into Korean Won?": {
-            "id": "81b9586d-79e5-40da-b81d-d960d946533d",
+        "I want to exchange some USD into NTD": {
+            "id": "22a75f89-b6e8-4380-ad7c-272ebb374a70",
             "argument": [
                 {
-                    "pos": "MODAL",
+                    "pos": "ENTITY_pronoun",
+                    "text": "I",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "want",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "truck",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "traffic",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "swap",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "interchange",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "commute",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "change",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "barter",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "bargain",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "exchange",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "some",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "USD",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "into",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "NTD",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "May I exchange this into Korean Won?": {
+            "id": "8572acb2-381e-4235-bb34-eaf0fb5496a4",
+            "argument": [
+                {
+                    "pos": "CLAUSE_YesNoQ",
                     "text": "May",
                     "checked": false,
                     "checkbox": false
@@ -538,7 +631,7 @@
                         {
                             "text": "swap",
                             "level": "tier_2",
-                            "checked": true
+                            "checked": false
                         },
                         {
                             "text": "interchange",
@@ -553,7 +646,7 @@
                         {
                             "text": "change",
                             "level": "tier_2",
-                            "checked": true
+                            "checked": false
                         },
                         {
                             "text": "barter",
@@ -1027,115 +1120,6 @@
                 }
             ]
         },
-        "I want to exchange some USD into NTD, please": {
-            "id": "8fc8cf60-5e71-4a39-bf43-1e3a338e5413",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "I",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [],
-                    "text": "want",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "FUNC_inner",
-                    "text": "to",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [
-                        {
-                            "text": "truck",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "traffic",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "swap",
-                            "level": "tier_2",
-                            "checked": true
-                        },
-                        {
-                            "text": "interchange",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "commute",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "change",
-                            "level": "tier_2",
-                            "checked": true
-                        },
-                        {
-                            "text": "barter",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "bargain",
-                            "level": "tier_2",
-                            "checked": false
-                        }
-                    ],
-                    "text": "exchange",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "QUANTIFIER",
-                    "text": "some",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "USD",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "RANGE_locality",
-                    "text": "into",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "NTD",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "PUNCTUATION",
-                    "text": ",",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [],
-                    "text": "please",
-                    "checked": false,
-                    "checkbox": false
-                }
-            ]
-        },
         "I want to exchange 5000 korean wons in Taiwan": {
             "id": "1a89997c-845c-4933-8e34-92b03c633c68",
             "argument": [
@@ -1334,11 +1318,119 @@
                 }
             ]
         },
-        "May I exchange 300 US dollars into Korean Won?": {
-            "id": "bd255a04-63f2-410d-bfc2-d7d605f84638",
+        "I would like to exchange some USD into pounds.": {
+            "id": "6dc9d018-0b04-4168-98e9-c4c1f0c1bb7a",
             "argument": [
                 {
+                    "pos": "ENTITY_pronoun",
+                    "text": "I",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
                     "pos": "MODAL",
+                    "text": "would",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "like",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "truck",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "traffic",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "swap",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "interchange",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "commute",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "change",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "barter",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "bargain",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "exchange",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "some",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "USD",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "into",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "pounds",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "May I exchange 300 US dollars into Korean Won?": {
+            "id": "e461c94f-3536-43d6-a51e-21249a7a0a81",
+            "argument": [
+                {
+                    "pos": "CLAUSE_YesNoQ",
                     "text": "May",
                     "checked": false,
                     "checkbox": false
@@ -1365,7 +1457,7 @@
                         {
                             "text": "swap",
                             "level": "tier_2",
-                            "checked": true
+                            "checked": false
                         },
                         {
                             "text": "interchange",
@@ -1380,7 +1472,7 @@
                         {
                             "text": "change",
                             "level": "tier_2",
-                            "checked": true
+                            "checked": false
                         },
                         {
                             "text": "barter",
@@ -1424,7 +1516,7 @@
             ]
         },
         "Can I swap three hundred forty five pesos into NTD": {
-            "id": "460969a2-cca5-4210-aa32-cd4032b86a02",
+            "id": "38817c41-418c-4f87-b2a2-2c9c4121010a",
             "argument": [
                 {
                     "pos": "CLAUSE_YesNoQ",
@@ -1439,10 +1531,11 @@
                     "checkbox": false
                 },
                 {
-                    "pos": "ENTITY_nouny",
+                    "pos": "ACTION_verb",
+                    "lexy": [],
                     "text": "swap",
-                    "checked": true,
-                    "checkbox": true
+                    "checked": false,
+                    "checkbox": false
                 },
                 {
                     "pos": "KNOWLEDGE_currency",
@@ -1726,324 +1819,6 @@
                 }
             ]
         },
-        "Could I exchange three point four five pesos in Taiwan": {
-            "id": "c9ea6608-3766-446f-835c-2712236f6c14",
-            "argument": [
-                {
-                    "pos": "CLAUSE_YesNoQ",
-                    "text": "Could",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "I",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [
-                        {
-                            "text": "truck",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "traffic",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "swap",
-                            "level": "tier_2",
-                            "checked": true
-                        },
-                        {
-                            "text": "interchange",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "commute",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "change",
-                            "level": "tier_2",
-                            "checked": true
-                        },
-                        {
-                            "text": "barter",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "bargain",
-                            "level": "tier_2",
-                            "checked": false
-                        }
-                    ],
-                    "text": "exchange",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "three",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "point",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "KNOWLEDGE_currency",
-                    "text": "four five pesos",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "RANGE_locality",
-                    "text": "in",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "LOCATION",
-                    "text": "Taiwan",
-                    "checked": true,
-                    "checkbox": true
-                }
-            ]
-        },
-        "I want to exchange three point five million USD in NTD": {
-            "id": "507dc07b-21da-41ee-a1e6-f4ceab99de90",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "I",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [],
-                    "text": "want",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "FUNC_inner",
-                    "text": "to",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [
-                        {
-                            "text": "truck",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "traffic",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "swap",
-                            "level": "tier_2",
-                            "checked": true
-                        },
-                        {
-                            "text": "interchange",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "commute",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "change",
-                            "level": "tier_2",
-                            "checked": true
-                        },
-                        {
-                            "text": "barter",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "bargain",
-                            "level": "tier_2",
-                            "checked": false
-                        }
-                    ],
-                    "text": "exchange",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "three",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "point",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "KNOWLEDGE_currency",
-                    "text": "five million USD",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "RANGE_locality",
-                    "text": "in",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "NTD",
-                    "checked": true,
-                    "checkbox": true
-                }
-            ]
-        },
-        "I would like to exchange some USD into pounds, please.": {
-            "id": "3058d830-76aa-4eec-a39e-4d96146dc2d4",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "I",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "MODAL",
-                    "text": "would",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [],
-                    "text": "like",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "FUNC_inner",
-                    "text": "to",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [
-                        {
-                            "text": "truck",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "traffic",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "swap",
-                            "level": "tier_2",
-                            "checked": true
-                        },
-                        {
-                            "text": "interchange",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "commute",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "change",
-                            "level": "tier_2",
-                            "checked": true
-                        },
-                        {
-                            "text": "barter",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "bargain",
-                            "level": "tier_2",
-                            "checked": false
-                        }
-                    ],
-                    "text": "exchange",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "QUANTIFIER",
-                    "text": "some",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "USD",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "RANGE_locality",
-                    "text": "into",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "UserDefined",
-                    "text": "pounds",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "PUNCTUATION",
-                    "text": ",",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [],
-                    "text": "please",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "PUNCTUATION",
-                    "text": ".",
-                    "checked": false,
-                    "checkbox": false
-                }
-            ]
-        },
         "I want to exchange 50 Korean won into New Taiwan dollars": {
             "id": "b5fb07f2-6bb1-4c45-a673-1e8f5cb86195",
             "argument": [
@@ -2231,7 +2006,7 @@
             ]
         },
         "I want to exchange three point three four million pounds into USD": {
-            "id": "5e8f2745-2604-4bdd-bf46-6fcd18237b03",
+            "id": "d3b104a5-75e4-4fc8-9c8e-ea58bc868edc",
             "argument": [
                 {
                     "pos": "ENTITY_pronoun",
@@ -2268,7 +2043,7 @@
                         {
                             "text": "swap",
                             "level": "tier_2",
-                            "checked": true
+                            "checked": false
                         },
                         {
                             "text": "interchange",
@@ -2283,7 +2058,7 @@
                         {
                             "text": "change",
                             "level": "tier_2",
-                            "checked": true
+                            "checked": false
                         },
                         {
                             "text": "barter",
@@ -2302,19 +2077,7 @@
                 },
                 {
                     "pos": "ENTITY_num",
-                    "text": "three",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "point",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "three <ENTITY_nouny>four</ENTITY_nouny> million",
+                    "text": "three point three four million",
                     "checked": true,
                     "checkbox": true
                 },
@@ -2339,7 +2102,7 @@
             ]
         },
         "I want to exchange three dollars and forty five cents into US dollars": {
-            "id": "061f2462-b619-4ac3-af23-fc0fe0e9a77c",
+            "id": "bc60010a-8cec-4aac-afbf-666724813861",
             "argument": [
                 {
                     "pos": "ENTITY_pronoun",
@@ -2376,7 +2139,7 @@
                         {
                             "text": "swap",
                             "level": "tier_2",
-                            "checked": true
+                            "checked": false
                         },
                         {
                             "text": "interchange",
@@ -2391,7 +2154,7 @@
                         {
                             "text": "change",
                             "level": "tier_2",
-                            "checked": true
+                            "checked": false
                         },
                         {
                             "text": "barter",
@@ -2415,10 +2178,10 @@
                     "checkbox": true
                 },
                 {
-                    "pos": "UserDefined",
+                    "pos": "FUNC_conjunction",
                     "text": "and",
-                    "checked": true,
-                    "checkbox": true
+                    "checked": false,
+                    "checkbox": false
                 },
                 {
                     "pos": "KNOWLEDGE_currency",
@@ -2441,7 +2204,7 @@
             ]
         },
         "I would like to exchange three point three four canadian dollars in United States": {
-            "id": "8aa7558c-bac1-4493-a50a-2a182d068432",
+            "id": "97b7f664-863d-49ff-a440-772b67d646f4",
             "argument": [
                 {
                     "pos": "ENTITY_pronoun",
@@ -2517,20 +2280,8 @@
                     "checkbox": false
                 },
                 {
-                    "pos": "ENTITY_num",
-                    "text": "three",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "point",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
                     "pos": "KNOWLEDGE_currency",
-                    "text": "three four canadian dollars",
+                    "text": "three point three four canadian dollars",
                     "checked": true,
                     "checkbox": true
                 },
