@@ -1,0 +1,326 @@
+{
+    "language": "en-us",
+    "type": "basic",
+    "version": {
+        "atk": "v100",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_timeword": [
+            "quarter",
+            "o'clock"
+        ]
+    },
+    "utterance": {
+        "it is one": {
+            "id": "c1948048-066d-4397-bb45-9d61b6d1d4a8",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "it",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "is",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "one",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "one-o-two": {
+            "id": "8eda5d17-1032-4c35-bd48-1ba2acfb44a9",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "one-o-two",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "one-oh-two": {
+            "id": "dd55a59d-ba53-4ae1-bbf0-493a4904150e",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "one-oh-two",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "one o'clock": {
+            "id": "630cf5fe-fdcf-4332-a193-366737ceb6dc",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "one",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "o'clock",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "two past one": {
+            "id": "ceae6004-1a67-4e07-b8b3-23ff802f8977",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "past",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "one",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "quarter to two": {
+            "id": "cff31bf1-6c1a-4a3f-a3b0-3cd266baed00",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "quarter",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "a quarter to two": {
+            "id": "549eadfb-392b-4384-ba69-6cc196d13dc6",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "quarter",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "one twenty-seven": {
+            "id": "07999b52-da5c-445f-8d0a-a728b8640a8d",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "one twenty-seven",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "quarter past one": {
+            "id": "3c465873-da41-48b7-813e-c631d8aff25e",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "quarter",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "past",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "one",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "it is one o'clock": {
+            "id": "26125b69-f55e-4ec1-a7e5-55141a1024b1",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "it",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "is",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "one",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "o'clock",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "a quarter past one": {
+            "id": "0c8d63f4-7224-4f6f-89e3-6a8d8a6eb7f4",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "quarter",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "past",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "one",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "twenty-four to two": {
+            "id": "c859dbcd-2a62-4251-9096-2f00d1ce38ed",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "twenty-four",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "two minutes past one": {
+            "id": "a0ecb8a7-4f9e-4ac9-a316-3df5b4584af9",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "minutes",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "past",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "one",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "twenty-four minutes to two": {
+            "id": "8d9c0eda-d9dd-4c39-bfac-b952bbf875ea",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "twenty-four",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "minutes",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}
