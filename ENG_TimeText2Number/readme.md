@@ -1,4 +1,4 @@
-#TimeText2Number
+# TimeText2Number
 
 Loki stands for _Linguistic Oriented Keyword Interface_, it comes with a friendly interface with Low-Code requirement to establish NLU-based language applications.
 
