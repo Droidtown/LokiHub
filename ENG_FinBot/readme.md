@@ -8,38 +8,36 @@ FinBot is a currency converter that could help you convert between different cur
 
 1. Log into [Loki interface] (https://nlu.droidtown.co/loki/)
 
-<img src=".\img\1_loki_en_login.png" style="zoom:15%" />
+<img src=".\img\1_loki_en_login.png" width="250">
 
 2. Build a new project `FinBot` by entering the name `FinBot` and click `Create Project`> click `FinBot` to enter the project
 
-
-<img src=".\img\2_create_project.png" style="zoom:15%" />
+![create project](.\img\2_create_project.png)
 
 3. Choose `ArticutModel` > browse your computer and choose `ref/change_currency.ref` > click Load Intent > click and enter the `change_currency` intent
 
-<img src=".\img\3_articut_model.png" style="zoom:15%" />
+![Articut Model](.\img\3_articut_model.png)
 
 4. Click [Deploy Model (change_currency)] to deploy the model. Then, click the house icon to go back the project page. Copy the project key in `Key`
 
+![Deploy step 1](.\img\4_deploy_model.png)
 
-<img src=".\img\4_deploy_model.png" style="zoom:10%" />
+![Deploy step 2](.\img\4-2_deploy_model.png)
 
-<img src=".\img\4-2_deploy_model.png" style="zoom:10%" />
-
-<img src=".\img\4-3_deploy_model.png" style="zoom:10%" />
+![Deploy step 3](.\img\4-3_deploy_model.png)
 
 5. Edit the `FinBot.py`
 	- Enter your Droidtown user email at USERNAME
 	- Enter your project key at LOKI_KEY
 	- If you would like to use your own Articut to deal with different nlp tasks, please enter your [Articut key]
 
-<img src=".\img\5_enterUSERNAME.png" style="zoom:15%" />
+![Edit the FinBot.py](.\img\5_enterUSERNAME.png)
 
 6. Start using `FinBot`
 	- Add in new patterns in the `change_currency` intent > copy the python code from TestTool > add that python code to `intent/Loki_change_currency.py`
 	- Test different sentences in `FinBot.py` (You could put in your sentence in `inputSTR` at the bottom of this script. 
 
-<img src=".\img\6_add_new_sentence.png" style="zoom:15%" />
+![Start using FinBot](.\img\6_add_new_sentence.png)
 
 
 For instance, 
