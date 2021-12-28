@@ -6,7 +6,7 @@ Loki stands for _Linguistic Oriented Keyword Interface_, it comes with a friendl
 
 FinBot is a currency converter that could help you convert between different currencies. 
 
-1. Log into [Loki interface] (https://nlu.droidtown.co/loki/)
+1. Log into [Loki interface](https://nlu.droidtown.co/loki/)
 
 <img src=".\img\1_loki_en_login.png" width="450">
 
