@@ -38,4 +38,4 @@ LokiHub 則為開放性的 Loki 意圖模型交流中心。
 * ENG_FinBot: Currency Exchange Bot using Loki
 * ENG_TimeText2Number: Time Format Converter (Text to Number)
 
-### [Document](https://nlu.droidtown.co/document/#Loki)
+### [Documentation](https://nlu.droidtown.co/document/#Loki)
