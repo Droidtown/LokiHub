@@ -209,8 +209,20 @@ def getResult(inputSTR, utterance, args, resultDICT):
                         break
 
     if utterance == "[今天][台北]需不[需]要帶[陽傘]":
-        # write your code here
-        pass
+        forecastDICT = getCityForecastDict(args[1])
+        queryDatetime = convertDatetime2ForecastFMT(args[0])
+        if args[3] in ("陽傘", "帽子", "遮陽帽"):
+            try:
+                value = int(elementTime["elementValue"][0]["value"])
+                if value >= 7:
+                    resultDICT[inputSTR]["answer"] += "紫外線指數 {}，{} 曝曬級數，建議做好防曬保護。\n".format(value, elementTime["elementValue"][1]["value"])
+                elif value >= 5:
+                    resultDICT[inputSTR]["answer"] += "紫外線指數 {}，{} 曝曬級數，中午陽光強烈時應該是需要的。\n".format(value, elementTime["elementValue"][1]["value"])
+                else:
+                    resultDICT[inputSTR]["answer"] += "紫外線指數 {}，{} 曝曬級數，屬弱紫外線輻射天氣，無需特別防護。若長期在戶外，建議塗擦SPF在8-12之間的防曬護膚品。\n".format(value, elementTime["elementValue"][1]["value"])
+            except:
+                pass
+
 
     if utterance == "[今天][台北][中午]過[後]天氣如何":
         forecastDICT = getCityForecastDict(args[1])
@@ -259,5 +271,493 @@ def getResult(inputSTR, utterance, args, resultDICT):
                             pass
                         break
 
+
+    if utterance == "[今天][台北][中午]過[後][天氣]如何":
+        forecastDICT = getCityForecastDict(args[1])
+        queryDatetime = convertDatetime2ForecastFMT(args[0]+args[2])
+        if args[4] in ("天氣", "氣溫"):
+            for weatherElement in forecastDICT["weatherElement"]:
+                if weatherElement["elementName"] == "WeatherDescription":
+                    for elementTime in weatherElement["time"]:
+                        if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                            resultDICT[inputSTR]["WeatherDescription"] = elementTime["elementValue"][0]["value"]
+                            resultDICT[inputSTR]["answer"] = "WeatherDescription"
+                            break
+
+    if utterance == "[今天][台北][午後][天氣]如何":
+        forecastDICT = getCityForecastDict(args[1])
+        queryDatetime = convertDatetime2ForecastFMT(args[0]+args[2])
+        if args[3] in ("天氣", "氣溫"):
+            for weatherElement in forecastDICT["weatherElement"]:
+                if weatherElement["elementName"] == "WeatherDescription":
+                    for elementTime in weatherElement["time"]:
+                        if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                            resultDICT[inputSTR]["WeatherDescription"] = elementTime["elementValue"][0]["value"]
+                            resultDICT[inputSTR]["answer"] = "WeatherDescription"
+                            break
+
+    if utterance == "[今天][台北][很熱]嗎":
+        forecastDICT = getCityForecastDict(args[1])
+        queryDatetime = convertDatetime2ForecastFMT(args[0])
+        for weatherElement in forecastDICT["weatherElement"]:
+            if weatherElement["elementName"] == "Td":
+                for elementTime in weatherElement["time"]:
+                    if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                        if "熱" in args[2] or "冷" in args[2]:
+                            pass
+                        else:
+                            break
+                        try:
+                            value = int(elementTime["elementValue"][0]["value"])
+                            if value >= 31:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫非常悶熱，容易中暑，請盡量補充水份。\n".format(value)
+                                if "熱" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "非常熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "不會冷，但非常熱。\n" + resultDICT[inputSTR]["answer"]
+                            elif value >= 27:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為悶熱。\n".format(value)
+                            elif value >= 20:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為舒適。\n".format(value)
+                            else:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫稍有寒意。\n".format(value)
+                                if "熱" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "不會熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "會冷，若要外出建議穿著外套。\n" + resultDICT[inputSTR]["answer"]
+                        except:
+                            pass
+                        break
+
+    if utterance == "[今天][台北][會][很熱]嗎":
+        forecastDICT = getCityForecastDict(args[1])
+        queryDatetime = convertDatetime2ForecastFMT(args[0])
+        for weatherElement in forecastDICT["weatherElement"]:
+            if weatherElement["elementName"] == "Td":
+                for elementTime in weatherElement["time"]:
+                    if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                        if "熱" in args[3] or "冷" in args[3] or "涼" in args[3]:
+                            pass
+                        else:
+                            break
+                        try:
+                            value = int(elementTime["elementValue"][0]["value"])
+                            if value >= 31:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫非常悶熱，容易中暑，請盡量補充水份。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "非常熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會冷，但非常熱。\n" + resultDICT[inputSTR]["answer"]
+                            elif value >= 27:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為悶熱。\n".format(value)
+                            elif value >= 20:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為舒適。\n".format(value)
+                            else:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫稍有寒意。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "會冷，若要外出建議穿著外套。\n" + resultDICT[inputSTR]["answer"]
+                        except:
+                            pass
+                        break
+
+
+    if utterance == "[今天][台北][會][熱]嗎":
+        forecastDICT = getCityForecastDict(args[1])
+        queryDatetime = convertDatetime2ForecastFMT(args[0])
+        for weatherElement in forecastDICT["weatherElement"]:
+            if weatherElement["elementName"] == "Td":
+                for elementTime in weatherElement["time"]:
+                    if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                        if "熱" in args[3] or "冷" in args[3] or "涼" in args[3]:
+                            pass
+                        else:
+                            break
+                        try:
+                            value = int(elementTime["elementValue"][0]["value"])
+                            if value >= 31:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫非常悶熱，容易中暑，請盡量補充水份。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "非常熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會冷，但非常熱。\n" + resultDICT[inputSTR]["answer"]
+                            elif value >= 27:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為悶熱。\n".format(value)
+                            elif value >= 20:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為舒適。\n".format(value)
+                            else:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫稍有寒意。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "會冷，若要外出建議穿著外套。\n" + resultDICT[inputSTR]["answer"]
+                        except:
+                            pass
+                        break
+
+    if utterance == "[今天][台北][熱]嗎":
+        forecastDICT = getCityForecastDict(args[1])
+        queryDatetime = convertDatetime2ForecastFMT(args[0])
+        for weatherElement in forecastDICT["weatherElement"]:
+            if weatherElement["elementName"] == "Td":
+                for elementTime in weatherElement["time"]:
+                    if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                        if "熱" in args[2] or "冷" in args[2]:
+                            pass
+                        else:
+                            break
+                        try:
+                            value = int(elementTime["elementValue"][0]["value"])
+                            if value >= 31:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫非常悶熱，容易中暑，請盡量補充水份。\n".format(value)
+                                if "熱" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "非常熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "不會冷，但非常熱。\n" + resultDICT[inputSTR]["answer"]
+                            elif value >= 27:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為悶熱。\n".format(value)
+                            elif value >= 20:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為舒適。\n".format(value)
+                            else:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫稍有寒意。\n".format(value)
+                                if "熱" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "不會熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "會冷，若要外出建議穿著外套。\n" + resultDICT[inputSTR]["answer"]
+                        except:
+                            pass
+                        break
+
+    if utterance == "[今天][台北]是不[是][很熱]":
+        forecastDICT = getCityForecastDict(args[1])
+        queryDatetime = convertDatetime2ForecastFMT(args[0])
+        for weatherElement in forecastDICT["weatherElement"]:
+            if weatherElement["elementName"] == "Td":
+                for elementTime in weatherElement["time"]:
+                    if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                        if "熱" in args[3] or "冷" in args[3] or "涼" in args[3]:
+                            pass
+                        else:
+                            break
+                        try:
+                            value = int(elementTime["elementValue"][0]["value"])
+                            if value >= 31:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫非常悶熱，容易中暑，請盡量補充水份。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "非常熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會冷，但非常熱。\n" + resultDICT[inputSTR]["answer"]
+                            elif value >= 27:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為悶熱。\n".format(value)
+                            elif value >= 20:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為舒適。\n".format(value)
+                            else:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫稍有寒意。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "會冷，若要外出建議穿著外套。\n" + resultDICT[inputSTR]["answer"]
+                        except:
+                            pass
+                        break
+
+    if utterance == "[台北][今天][很熱]嗎":
+        forecastDICT = getCityForecastDict(args[0])
+        queryDatetime = convertDatetime2ForecastFMT(args[1])
+        for weatherElement in forecastDICT["weatherElement"]:
+            if weatherElement["elementName"] == "Td":
+                for elementTime in weatherElement["time"]:
+                    if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                        if "熱" in args[2] or "冷" in args[2]:
+                            pass
+                        else:
+                            break
+                        try:
+                            value = int(elementTime["elementValue"][0]["value"])
+                            if value >= 31:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫非常悶熱，容易中暑，請盡量補充水份。\n".format(value)
+                                if "熱" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "非常熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "不會冷，但非常熱。\n" + resultDICT[inputSTR]["answer"]
+                            elif value >= 27:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為悶熱。\n".format(value)
+                            elif value >= 20:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為舒適。\n".format(value)
+                            else:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫稍有寒意。\n".format(value)
+                                if "熱" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "不會熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "會冷，若要外出建議穿著外套。\n" + resultDICT[inputSTR]["answer"]
+                        except:
+                            pass
+                        break
+
+    if utterance == "[台北][今天][會][很熱]嗎":
+        forecastDICT = getCityForecastDict(args[0])
+        queryDatetime = convertDatetime2ForecastFMT(args[1])
+        for weatherElement in forecastDICT["weatherElement"]:
+            if weatherElement["elementName"] == "Td":
+                for elementTime in weatherElement["time"]:
+                    if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                        if "熱" in args[3] or "冷" in args[3] or "涼" in args[3]:
+                            pass
+                        else:
+                            break
+                        try:
+                            value = int(elementTime["elementValue"][0]["value"])
+                            if value >= 31:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫非常悶熱，容易中暑，請盡量補充水份。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "非常熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會冷，但非常熱。\n" + resultDICT[inputSTR]["answer"]
+                            elif value >= 27:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為悶熱。\n".format(value)
+                            elif value >= 20:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為舒適。\n".format(value)
+                            else:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫稍有寒意。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "會冷，若要外出建議穿著外套。\n" + resultDICT[inputSTR]["answer"]
+                        except:
+                            pass
+                        break
+
+    if utterance == "[台北][今天][會][熱]嗎":
+        forecastDICT = getCityForecastDict(args[0])
+        queryDatetime = convertDatetime2ForecastFMT(args[1])
+        for weatherElement in forecastDICT["weatherElement"]:
+            if weatherElement["elementName"] == "Td":
+                for elementTime in weatherElement["time"]:
+                    if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                        if "熱" in args[3] or "冷" in args[3] or "涼" in args[3]:
+                            pass
+                        else:
+                            break
+                        try:
+                            value = int(elementTime["elementValue"][0]["value"])
+                            if value >= 31:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫非常悶熱，容易中暑，請盡量補充水份。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "非常熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會冷，但非常熱。\n" + resultDICT[inputSTR]["answer"]
+                            elif value >= 27:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為悶熱。\n".format(value)
+                            elif value >= 20:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為舒適。\n".format(value)
+                            else:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫稍有寒意。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "會冷，若要外出建議穿著外套。\n" + resultDICT[inputSTR]["answer"]
+                        except:
+                            pass
+                        break
+
+    if utterance == "[台北][今天][熱]嗎":
+        forecastDICT = getCityForecastDict(args[0])
+        queryDatetime = convertDatetime2ForecastFMT(args[1])
+        for weatherElement in forecastDICT["weatherElement"]:
+            if weatherElement["elementName"] == "Td":
+                for elementTime in weatherElement["time"]:
+                    if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                        if "熱" in args[2] or "冷" in args[2]:
+                            pass
+                        else:
+                            break
+                        try:
+                            value = int(elementTime["elementValue"][0]["value"])
+                            if value >= 31:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫非常悶熱，容易中暑，請盡量補充水份。\n".format(value)
+                                if "熱" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "非常熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "不會冷，但非常熱。\n" + resultDICT[inputSTR]["answer"]
+                            elif value >= 27:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為悶熱。\n".format(value)
+                            elif value >= 20:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為舒適。\n".format(value)
+                            else:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫稍有寒意。\n".format(value)
+                                if "熱" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "不會熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[2]:
+                                    resultDICT[inputSTR]["answer"] = "會冷，若要外出建議穿著外套。\n" + resultDICT[inputSTR]["answer"]
+                        except:
+                            pass
+                        break
+
+    if utterance == "[台北][今天]是不[是][很熱]":
+        forecastDICT = getCityForecastDict(args[0])
+        queryDatetime = convertDatetime2ForecastFMT(args[1])
+        for weatherElement in forecastDICT["weatherElement"]:
+            if weatherElement["elementName"] == "Td":
+                for elementTime in weatherElement["time"]:
+                    if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
+                        if "熱" in args[3] or "冷" in args[3] or "涼" in args[3]:
+                            pass
+                        else:
+                            break
+                        try:
+                            value = int(elementTime["elementValue"][0]["value"])
+                            if value >= 31:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫非常悶熱，容易中暑，請盡量補充水份。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "非常熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會冷，但非常熱。\n" + resultDICT[inputSTR]["answer"]
+                            elif value >= 27:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為悶熱。\n".format(value)
+                            elif value >= 20:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫較為舒適。\n".format(value)
+                            else:
+                                resultDICT[inputSTR]["answer"] += "平均露點溫度為攝氏 {} 度，氣溫稍有寒意。\n".format(value)
+                                if "熱" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "不會熱。\n" + resultDICT[inputSTR]["answer"]
+                                elif "冷" in args[3] or "涼" in args[3]:
+                                    resultDICT[inputSTR]["answer"] = "會冷，若要外出建議穿著外套。\n" + resultDICT[inputSTR]["answer"]
+                        except:
+                            pass
+                        break
+
+
+
+    if utterance == "[今天][台北][空氣][品質]如何":
+        # write your code here
+        pass
+    if utterance == "[今天][空氣][品質]怎麼樣":
+        # write your code here
+        pass
+    if utterance == "[台北][今天][空氣][品質]如何":
+        # write your code here
+        pass
+    if utterance == "[台北][今天][空氣][品質]怎麼樣":
+        # write your code here
+        pass
+    if utterance == "[今天][台北][空氣][品質]怎麼樣":
+        # write your code here
+        pass
+
+
+
+    if utterance == "[今天][台北]會不[會]下雨":
+        # write your code here
+        pass
+
+    if utterance == "[今天][天氣]好嗎":
+        # write your code here
+        pass
+
+    if utterance == "[今天][天氣]怎麼樣":
+        # write your code here
+        pass
+
+
+
+    if utterance == "[今天中午]過[後][台北][天氣]如何":
+        # write your code here
+        pass
+
+    if utterance == "[今天午後][台北][天氣]如何":
+        # write your code here
+        pass
+
+    if utterance == "[今天晚上][氣溫]如何":
+        # write your code here
+        pass
+
+    if utterance == "[今日][台北][體感][溫度]":
+        # write your code here
+        pass
+
+    if utterance == "[今日][白日][氣溫]":
+        # write your code here
+        pass
+
+    if utterance == "[今日][白日][氣溫]如何":
+        # write your code here
+        pass
+
+    if utterance == "[今日夜晚][氣溫]":
+        # write your code here
+        pass
+
+
+
+
+    if utterance == "[台北][今天][會]下雨嗎":
+        # write your code here
+        pass
+
+
+
+    if utterance == "[台北][今天]熱不[熱]":
+        # write your code here
+        pass
+
+
+    if utterance == "[台北][今天]會不[會]下雨":
+        # write your code here
+        pass
+
+
+    if utterance == "[台北][今天]需不[需]要帶[陽傘]":
+        # write your code here
+        pass
+
+    if utterance == "[台北][今天]需不[需]要帶傘":
+        # write your code here
+        pass
+
+    if utterance == "[台北][今天中午]過[後][天氣]如何":
+        # write your code here
+        pass
+
+    if utterance == "[台北][今天午後][天氣]如何":
+        # write your code here
+        pass
+
+    if utterance == "[台北][天氣]":
+        # write your code here
+        pass
+
+    if utterance == "[台北][天氣]如何":
+        # write your code here
+        pass
+
+    if utterance == "[台北][天氣]怎麼樣":
+        # write your code here
+        pass
+
+    if utterance == "[台北][後天晚上][適合]慢跑嗎":
+        # write your code here
+        pass
+
+    if utterance == "[台北][明天][天氣]":
+        # write your code here
+        pass
+
+    if utterance == "[台北][晚上]下雨嗎":
+        # write your code here
+        pass
+
+    if utterance == "[台北][晚上]要帶傘嗎":
+        # write your code here
+        pass
+
+    if utterance == "[台北][氣象]報告":
+        # write your code here
+        pass
+
+    if utterance == "[明天][台北][天氣]":
+        # write your code here
+        pass
 
     return resultDICT
