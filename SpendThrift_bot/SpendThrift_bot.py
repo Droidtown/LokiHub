@@ -61,7 +61,7 @@ except:
 accountDICT = json.load(open("account.info", encoding="utf-8"))
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
-USERNAME = accountDICT["UserName"]
+USERNAME = "ss96083@gmail.com"
 LOKI_KEY = "BbcY-sJJE-bmc&^s!wZuXCxmzoLeHUh"
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
