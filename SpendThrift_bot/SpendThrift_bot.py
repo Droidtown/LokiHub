@@ -42,24 +42,40 @@
         }
 """
 
+from distutils.log import debug
+from intent.Updater import USER_DEFINED_FILE
 from requests import post
 from requests import codes
 import math
 import re
+import json
+import os
+from datetime import datetime
+
 try:
     from intent import Loki_accounting
 except:
     from .intent import Loki_accounting
 
 
+accountDICT = json.load(open("account.info", encoding="utf-8"))
+
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
-USERNAME = "ss96083@gmail.com"
-LOKI_KEY = "BbcY-sJJE-bmc&^s!wZuXCxmzoLeHUh"
+USERNAME = accountDICT["UserName"]
+LOKI_KEY = accountDICT["LokiKey"]
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
 # INTENT_FILTER = [intentN] => 僅比對 INTENT_FILTER 內的意圖
 INTENT_FILTER = []
 INPUT_LIMIT = 20
+
+
+# user define
+try:
+    userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__ + "/intent"), "USER_DEFINED.json"), encoding="utf-8"))
+except:
+    userDefinedDICT = {"cost":["支出"],"place":["814","小7","小七"],"people":["Cynthia","Deric"],"earning":["收入"],"gambling":["大樂透"],"medicine":["醫藥費"]}
+
 
 class LokiResult():
     status = False
@@ -169,6 +185,7 @@ def runLoki(inputLIST, filterLIST=[]):
     resultDICT = {
        #"key": []
     }
+
     lokiRst = LokiResult(inputLIST, filterLIST)
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
@@ -251,13 +268,44 @@ def testIntent():
     print("")
 
 
-if __name__ == "__main__":
-    # 測試所有意圖
-    testIntent()
+# 把記帳資訊存進檔案中
+def SaveAccountToCSV(data, filename='testUser.csv'):
+    # initialize
+    if not os.path.exists("./user_data/" + filename):
+        with open("./user_data/" + filename, 'w', encoding="utf-8") as f:
+            f.write("account, amount\n" + data)
+            f.close()
 
-    # 測試其它句子
-    filterLIST = []
-    splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
-    resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST)            # output => ["今天天氣"]
-    resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST, splitLIST) # output => ["今天天氣", "後天氣象"]
-    resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"], filterLIST)      # output => ["今天天氣", "後天氣象"]
+    else:
+        with open("./user_data/" + filename, 'a', encoding="utf-8") as f:
+            f.write(data)
+            f.close()
+
+
+
+if __name__ == "__main__":
+    # # 測試所有意圖
+    # testIntent()
+
+    # # 測試其它句子
+    # inputLIST = []
+    # splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
+    
+    # 讓使用者輸入指令
+    command = [input("請輸入您的指令：")]
+
+    resultDICT = runLoki(command)
+    print(resultDICT)
+    print("您今天 {} 了 {} 元".format(resultDICT["account"], resultDICT["amount"]))
+
+    # save result 
+    result = resultDICT["account"] + ", "
+    
+    # 支出
+    if resultDICT["account"] in userDefinedDICT["cost"]:
+        result += resultDICT["amount"] + "\n"
+    # 收入
+    else:
+        result += resultDICT["amount"] + "\n"
+
+    SaveAccountToCSV(result)
