@@ -26,15 +26,6 @@ def getLokiResult(inputSTR):
     return resultDICT
 
 class BotClient(discord.Client):
-    def __init__(self):
-        # ################### Multi-Session Conversation :設定多輪對話資訊 ###################
-        self.templateDICT = {"updatetime" : None,
-                             "latestQuest": ""
-        }
-        self.mscDICT = { #userid:templateDICT
-        }
-        # ####################################################################################
-
     def resetMSCwith(self, messageAuthorID):
         '''
         清空與 messageAuthorID 之間的對話記錄
@@ -44,6 +35,13 @@ class BotClient(discord.Client):
         return templateDICT
 
     async def on_ready(self):
+        # ################### Multi-Session Conversation :設定多輪對話資訊 ###################
+        self.templateDICT = {"updatetime" : None,
+                             "latestQuest": ""
+        }
+        self.mscDICT = { #userid:templateDICT
+        }
+        # ####################################################################################
         print('Logged on as {} with id {}'.format(self.user, self.user.id))
 
     async def on_message(self, message):
