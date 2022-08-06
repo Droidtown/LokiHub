@@ -59,8 +59,6 @@ except:
     from .intent import Loki_accounting
 
 
-accountDICT = json.load(open("account.info", encoding="utf-8"))
-
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
 USERNAME = "ss96083@gmail.com"
 LOKI_KEY = "BbcY-sJJE-bmc&^s!wZuXCxmzoLeHUh"
