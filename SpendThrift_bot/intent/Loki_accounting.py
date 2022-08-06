@@ -86,4 +86,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["amount"] = args[1]
         resultDICT["account"] = args[0]
 
+
+    # 這次指令的意圖為"accounting"
+    resultDICT["intent"] = "accounting"
     return resultDICT
