@@ -51,6 +51,7 @@ import re
 import json
 import os
 from datetime import datetime
+from intent.Loki_accounting import userDefinedDICT
 
 try:
     from intent import Loki_accounting
@@ -69,12 +70,6 @@ LOKI_KEY = "BbcY-sJJE-bmc&^s!wZuXCxmzoLeHUh"
 INTENT_FILTER = []
 INPUT_LIMIT = 20
 
-
-# user define
-try:
-    userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__ + "/intent"), "USER_DEFINED.json"), encoding="utf-8"))
-except:
-    userDefinedDICT = {"cost":["支出"],"place":["814","小7","小七"],"people":["Cynthia","Deric"],"earning":["收入"],"gambling":["大樂透"],"medicine":["醫藥費"]}
 
 
 class LokiResult():

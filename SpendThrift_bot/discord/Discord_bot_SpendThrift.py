@@ -7,6 +7,7 @@ import json
 import re
 from datetime import datetime
 from pprint import pprint
+from SpendThrift_bot import runLoki
 
 #from <your_loki_main_program> import runLoki
 
