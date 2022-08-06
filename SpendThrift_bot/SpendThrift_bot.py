@@ -189,6 +189,12 @@ def runLoki(inputLIST, filterLIST=[]):
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
+    
+    
+    # check error
+    if resultDICT == {}:
+        resultDICT["intent"] = "error"
+    
     return resultDICT
 
 def execLoki(content, filterLIST=[], splitLIST=[]):
@@ -243,6 +249,8 @@ def execLoki(content, filterLIST=[], splitLIST=[]):
                     resultDICT[k] = []
                 resultDICT[k].extend(lokiResultDICT[k])
 
+
+
     return resultDICT
 
 def testLoki(inputLIST, filterLIST):
@@ -263,15 +271,25 @@ def testIntent():
 
 # 把記帳資訊存進檔案中
 def SaveAccountToCSV(data, filename='testUser.csv'):
+    # 把 datq 轉成 .csv 格式
+    result = data["account"] + ", "
+    
+    # 支出
+    if resultDICT["account"] in userDefinedDICT["cost"]:
+        result += data["amount"] + "\n"
+    # 收入
+    else:
+        result += data["amount"] + "\n"
+        
     # initialize
     if not os.path.exists("./user_data/" + filename):
         with open("./user_data/" + filename, 'w', encoding="utf-8") as f:
-            f.write("account, amount\n" + data)
+            f.write("account, amount\n" + result)
             f.close()
 
     else:
         with open("./user_data/" + filename, 'a', encoding="utf-8") as f:
-            f.write(data)
+            f.write(result)
             f.close()
 
 
@@ -287,18 +305,16 @@ if __name__ == "__main__":
     # 讓使用者輸入指令
     command = [input("請輸入您的指令：")]
 
+    # 執行使用者的指令
     resultDICT = runLoki(command)
-    print(resultDICT)
-    print("您今天 {} 了 {} 元".format(resultDICT["account"], resultDICT["amount"]))
 
-    # save result 
-    result = resultDICT["account"] + ", "
+    # 不同意圖對應的輸出
     
-    # 支出
-    if resultDICT["account"] in userDefinedDICT["cost"]:
-        result += resultDICT["amount"] + "\n"
-    # 收入
-    else:
-        result += resultDICT["amount"] + "\n"
-
-    SaveAccountToCSV(result)
+    # 記帳
+    if resultDICT["intent"] == "accounting":
+        print("您今天 {} 了 {} 元".format(resultDICT["account"], resultDICT["amount"]))
+        SaveAccountToCSV(resultDICT)
+    
+    # 錯誤
+    elif resultDICT["intent"] == "error":
+        print("無法辨識指令。\n你這敗家子給我去好好讀使用說明書:(")
