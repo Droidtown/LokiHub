@@ -5,14 +5,20 @@ import logging
 import discord
 import json
 import re
+import os, sys
 from datetime import datetime
 from pprint import pprint
+
+# add path
+path_current = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.dirname(path_current))
+
+# import local paht
 from SpendThrift_bot import runLoki
 
 logging.basicConfig(level=logging.DEBUG)
 
-
-with open("account.info", encoding="utf-8") as f: #讀取account.info
+with open(path_current + "\\account.info", encoding="utf-8") as f: #讀取account.info
     accountDICT = json.loads(f.read())
 
 punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
@@ -53,6 +59,7 @@ class BotClient(discord.Client):
 
         logging.debug("收到來自 {} 的訊息".format(message.author))
         logging.debug("訊息內容是 {}。".format(message.content))
+
         if self.user.mentioned_in(message):
             replySTR = "我是預設的回應字串…你會看到我這串字，肯定是出了什麼錯！"
             logging.debug("本 bot 被叫到了！")
@@ -86,7 +93,7 @@ class BotClient(discord.Client):
                 resulDICT = getLokiResult(msgSTR)
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resulDICT)
-        await message.reply(replySTR)
+            await message.reply(replySTR)
 
 
 if __name__ == "__main__":
