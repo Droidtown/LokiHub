@@ -9,6 +9,12 @@ import os, sys
 from datetime import datetime
 from pprint import pprint
 
+class bcolors:
+    OK = '\033[92m' #GREEN
+    WARNING = '\033[93m' #YELLOW
+    FAIL = '\033[91m' #RED
+    RESET = '\033[0m' #RESET COLOR
+
 # add path
 path_current = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.dirname(path_current))
@@ -54,17 +60,18 @@ class BotClient(discord.Client):
         # 如果訊息來自 bot 自己，就不要處理，直接回覆 None。不然會 Bot 會自問自答個不停。
         if message.author == self.user:
             return None
-        elif message.content.lower().replace(" ", "") in ("bot點名"):
+        elif message.content.lower().replace(" ", "") in ("bot點名"): 
             await message.reply("有！")
 
         logging.debug("收到來自 {} 的訊息".format(message.author))
         logging.debug("訊息內容是 {}。".format(message.content))
 
-        if self.user.mentioned_in(message):
+        if "<@!{}>".format(self.user.id) in message.content or "<@{}>".format(self.user.id) in message.content: # (client.user.id) is botID
             replySTR = "我是預設的回應字串…你會看到我這串字，肯定是出了什麼錯！"
             logging.debug("本 bot 被叫到了！")
             msgSTR = message.content.replace("<@{}> ".format(self.user.id), "").strip()
             logging.debug("人類說：{}".format(msgSTR))
+
             if msgSTR == "ping":
                 await message.reply('pong')
             elif msgSTR == "ping ping":
@@ -81,19 +88,19 @@ class BotClient(discord.Client):
                         replySTR = "嗨嗨，我們好像見過面，但卓騰的隱私政策不允許我記得你的資料，抱歉！"
                     #有講過話，而且還沒超過5分鐘就又跟我 hello (就繼續上次的對話)
                     else:
-                        replySTR = self.mscDICT[message.author.id]["latestQuest"]
+                        replySTR = self.mscDICT[message.author.id]["latestQuest"]+'1'
                 #沒有講過話(給他一個新的template)
                 else:
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
-                    replySTR = msgSTR.title()
+                    replySTR = msgSTR.title()+'2'
 
+                await message.reply(replySTR)
 # ##########非初次對話：這裡用 Loki 計算語意
-            else: #開始處理正式對話
-                #從這裡開始接上 NLU 模型
+            else: #開始處理正式對話，開始接上 NLU 模型
                 resulDICT = getLokiResult(msgSTR)
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resulDICT)
-            await message.reply(replySTR)
+                await message.reply(replySTR)
 
 
 if __name__ == "__main__":
