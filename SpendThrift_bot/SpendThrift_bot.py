@@ -186,6 +186,8 @@ def runLoki(inputLIST, filterLIST=[]):
                 # accounting
                 if lokiRst.getIntent(index, resultIndex) == "accounting":
                     resultDICT = Loki_accounting.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    # 這次指令的意圖為"accounting"
+                    resultDICT["intent"] = "accounting"
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
