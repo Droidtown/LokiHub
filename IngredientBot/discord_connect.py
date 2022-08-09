@@ -69,7 +69,7 @@ class BotClient(discord.Client):
             else: 
                 timeDIFF = datetime.now() - self.mscDICT[message.author.id]["updatetime"] #判斷對話時間差
                 if timeDIFF.total_seconds() > 120: 
-                    await message.reply('你剛說的我忘了，現在要聊啥別的')
+                    await message.reply("嗨嗨，我們好像見過面，但卓騰的隱私政策不允許我記得你的資料，抱歉！")
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
 
             #開始處理正式對話，接上 NLU 模型
