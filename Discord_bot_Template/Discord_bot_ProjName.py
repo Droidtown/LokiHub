@@ -13,8 +13,7 @@ from pprint import pprint
 logging.basicConfig(level=logging.DEBUG)
 
 
-with open("account.info", encoding="utf-8") as f: #讀取account.info
-    accountDICT = json.loads(f.read())
+
 
 punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
 def getLokiResult(inputSTR):
@@ -26,14 +25,6 @@ def getLokiResult(inputSTR):
     return resultDICT
 
 class BotClient(discord.Client):
-    def __init__(self):
-        # ################### Multi-Session Conversation :設定多輪對話資訊 ###################
-        self.templateDICT = {"updatetime" : None,
-                             "latestQuest": ""
-        }
-        self.mscDICT = { #userid:templateDICT
-        }
-        # ####################################################################################
 
     def resetMSCwith(self, messageAuthorID):
         '''
@@ -44,6 +35,13 @@ class BotClient(discord.Client):
         return templateDICT
 
     async def on_ready(self):
+        # ################### Multi-Session Conversation :設定多輪對話資訊 ###################
+        self.templateDICT = {"updatetime" : None,
+                             "latestQuest": ""
+        }
+        self.mscDICT = { #userid:templateDICT
+        }
+        # ####################################################################################
         print('Logged on as {} with id {}'.format(self.user, self.user.id))
 
     async def on_message(self, message):
@@ -62,9 +60,9 @@ class BotClient(discord.Client):
             msgSTR = message.content.replace("<@{}> ".format(self.user.id), "").strip()
             logging.debug("人類說：{}".format(msgSTR))
             if msgSTR == "ping":
-                await message.reply('pong')
+                replySTR = "pong"
             elif msgSTR == "ping ping":
-                await message.reply('pong pong')
+                replySTR = "pong pong"
 
 # ##########初次對話：這裡是 keyword trigger 的。
             elif msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello"]:
@@ -93,5 +91,7 @@ class BotClient(discord.Client):
 
 
 if __name__ == "__main__":
+    with open("account.info", encoding="utf-8") as f: #讀取account.info
+        accountDICT = json.loads(f.read())
     client = BotClient()
     client.run(accountDICT["discord_token"])
