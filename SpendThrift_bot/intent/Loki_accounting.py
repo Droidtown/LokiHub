@@ -29,61 +29,61 @@ def debugInfo(inputSTR, utterance):
         print("[accounting] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
-    debugInfo(inputSTR, utterance)
+    # debugInfo(inputSTR, utterance)
     if utterance == "[50040][支出]":
         resultDICT["amount"] = args[0]
-        resultDICT["account"] = args[1]
+        resultDICT["action"] = args[1]
 
     if utterance == "[50040元][支出]":
         resultDICT["amount"] = args[0][:-1]
-        resultDICT["account"] = args[1]
+        resultDICT["action"] = args[1]
 
     if utterance == "[我]跟[我]朋友去814閒逛了[兩個小時]，[支出][3000元]":
         resultDICT["amount"] = args[4]
-        resultDICT["account"] = args[3][:-1]
+        resultDICT["action"] = args[3][:-1]
 
     if utterance == "[支出][12000]，醫藥費":
         resultDICT["amount"] = args[1]
-        resultDICT["account"] = args[0]
+        resultDICT["action"] = args[0]
 
     if utterance == "[支出][12000元]，醫藥費":
         resultDICT["amount"] = args[1][:-1]
-        resultDICT["account"] = args[0]
+        resultDICT["action"] = args[0]
 
     if utterance == "[支出][2000元]":
         resultDICT["amount"] = args[1][:-1]
-        resultDICT["account"] = args[0]
+        resultDICT["action"] = args[0]
 
     if utterance == "[收入][15000]，[中]大樂透":
         resultDICT["amount"] = args[1]
-        resultDICT["account"] = args[0]
+        resultDICT["action"] = args[0]
 
     if utterance == "[收入][15000元]，[中]大樂透":
         resultDICT["amount"] = args[1][:-1]
-        resultDICT["account"] = args[0]
+        resultDICT["action"] = args[0]
         
     if utterance == "[收入][3000]":
         resultDICT["amount"] = args[1]
-        resultDICT["account"] = args[0]
+        resultDICT["action"] = args[0]
 
     if utterance == "去814[支出][300]":
         resultDICT["amount"] = args[1]
-        resultDICT["account"] = args[0]
+        resultDICT["action"] = args[0]
 
     if utterance == "去814[支出][300元]":
         resultDICT["amount"] = args[1][:-1]
-        resultDICT["account"] = args[0]
+        resultDICT["action"] = args[0]
 
     if utterance == "去[全聯][支出][3200元]":
         resultDICT["amount"] = args[2][:-1]
-        resultDICT["account"] = args[1]
+        resultDICT["action"] = args[1]
 
     if utterance == "去小7[收入][1300元]":
         resultDICT["amount"] = args[1][:-1]
-        resultDICT["account"] = args[0]
+        resultDICT["action"] = args[0]
 
     if utterance == "去小七[支出][3400]":
         resultDICT["amount"] = args[1]
-        resultDICT["account"] = args[0]
+        resultDICT["action"] = args[0]
 
     return resultDICT
