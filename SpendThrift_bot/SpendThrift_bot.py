@@ -49,15 +49,25 @@ from requests import codes
 import math
 import re
 import json
-import os
+import os, sys
 from datetime import datetime
-from intent.Loki_accounting import userDefinedDICT
+import csv
 
 try:
     from intent import Loki_accounting
+    from intent import Loki_searching
 except:
     from .intent import Loki_accounting
+    from .intent import Loki_searching
 
+# Local import
+from intent.Loki_accounting import userDefinedDICT
+
+
+# set path
+path_current = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(path_current)
+os.chdir(path_current)
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
 USERNAME = "ss96083@gmail.com"
@@ -183,6 +193,12 @@ def runLoki(inputLIST, filterLIST=[]):
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
+                # searching
+                if lokiRst.getIntent(index, resultIndex) == "searching":
+                    resultDICT = Loki_searching.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    # 這次指令的意圖為"searching"
+                    resultDICT["intent"] = "searching"
+
                 # accounting
                 if lokiRst.getIntent(index, resultIndex) == "accounting":
                     resultDICT = Loki_accounting.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
@@ -211,8 +227,7 @@ def execLoki(content, filterLIST=[], splitLIST=[]):
         resultDICT    DICT           合併 runLoki() 的結果，請先設定 runLoki() 的 resultDICT 初始值
 
     e.g.
-        splitLIST = ["！", "，", "。", "？", "!", ",", "
-", "；", "　", ";"]
+        splitLIST = ["！", "，", "。", "？", "!", ",", "", "；", "　", ";"]
         resultDICT = execLoki("今天天氣如何？後天氣象如何？")                      # output => ["今天天氣"]
         resultDICT = execLoki("今天天氣如何？後天氣象如何？", splitLIST=splitLIST) # output => ["今天天氣", "後天氣象"]
         resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"])                # output => ["今天天氣", "後天氣象"]
@@ -273,11 +288,11 @@ def testIntent():
 
 # 把記帳資訊存進檔案中
 def SaveAccountToCSV(data, filename='testUser.csv'):
-    # 把 datq 轉成 .csv 格式
-    result = data["account"] + ", "
+    # 把 data 轉成 .csv 格式
+    result = data["action"] + ", "
     
     # 支出
-    if resultDICT["account"] in userDefinedDICT["cost"]:
+    if data["action"] in userDefinedDICT["action_cost"]:
         result += data["amount"] + "\n"
     # 收入
     else:
@@ -286,13 +301,38 @@ def SaveAccountToCSV(data, filename='testUser.csv'):
     # initialize
     if not os.path.exists("./user_data/" + filename):
         with open("./user_data/" + filename, 'w', encoding="utf-8") as f:
-            f.write("account, amount\n" + result)
+            f.write("action, amount\n" + result)
             f.close()
 
     else:
         with open("./user_data/" + filename, 'a', encoding="utf-8") as f:
             f.write(result)
             f.close()
+
+# 從 [username].csv 中讀取資料
+def GetDataByCondition(username="testUser"):
+    # open csv
+    with open("./user_data/" + username + ".csv", 'r', encoding="utf-8") as f:
+        # read data
+        reader = csv.reader(f)
+        
+        # get data by condition
+        totalMoney = 0
+        for row in reader:
+            # 欄位說明
+            if row[0] == "action":
+                pass
+            # 收入
+            elif row[0] in userDefinedDICT["action_earn"]:
+                totalMoney += int(row[1])
+            # 支出
+            elif row[0] in userDefinedDICT["action_cost"]:
+                totalMoney -= int(row[1])
+            # 錯誤
+            else:
+                print("你這個敗家子，連存資料都給我存錯:(")
+                
+        return totalMoney
 
 
 
@@ -314,8 +354,13 @@ if __name__ == "__main__":
     
     # 記帳
     if resultDICT["intent"] == "accounting":
-        print("您今天 {} 了 {} 元".format(resultDICT["account"], resultDICT["amount"]))
+        # TODO: 改格式
+        print("您今天 {} 了 {} 元".format(resultDICT["action"], resultDICT["amount"]))
         SaveAccountToCSV(resultDICT)
+    
+    if resultDICT["intent"] == "searching":
+        result = GetDataByCondition()
+        print("您這個月的收支為 {} 元".format(result))
     
     # 錯誤
     elif resultDICT["intent"] == "error":
