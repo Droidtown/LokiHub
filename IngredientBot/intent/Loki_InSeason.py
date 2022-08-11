@@ -89,4 +89,48 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
+    if utterance == "[現在][該]吃哪些[水果]？":
+        # write your code here
+        pass
+
+    if utterance == "[現在]有什麼[水果][好吃]":
+        # write your code here
+        pass
+
+    if utterance == "[現在]有什麼[當季][食材]":
+        # write your code here
+        pass
+
+    if utterance == "[現在]有甚麼[好吃]的[當季][水果]":
+        # write your code here
+        pass
+
+    if utterance == "[現在]有甚麼[海鮮]":
+        # write your code here
+        pass
+
+    if utterance == "[現在]有甚麼[當季][水果][好吃]":
+        # write your code here
+        pass
+
+    if utterance == "[現在]的[當季][水果]":
+        # write your code here
+        pass
+
+    if utterance == "[現在當季][食材]有哪些":
+        # write your code here
+        pass
+
+    if utterance == "[現在當季]的[水果]是什麼":
+        # write your code here
+        pass
+
+    if utterance == "[目前]盛產甚麼[水果]":
+        # write your code here
+        pass
+
+    if utterance == "告訴[我][現在]有什麼[當季][食材]":
+        # write your code here
+        pass
+
     return resultDICT

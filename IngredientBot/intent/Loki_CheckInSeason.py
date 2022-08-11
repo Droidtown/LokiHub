@@ -39,7 +39,10 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "[烏魚子]是不[是][當季]食材？":
         resultDICT["ingredient"] = args[0]
 
-    #if utterance == "[芭樂]":
-    #    resultDICT["ingredient"] = args[0]
+    if utterance == "[葡萄]是[當季]水果嗎":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[葡萄]是不[是][當季]的":
+        resultDICT["ingredient"] = args[0]
 
     return resultDICT

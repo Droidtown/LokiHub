@@ -66,4 +66,11 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
+    if utterance == "[也]不喜歡":
+        # write your code here
+        pass
+
+    if utterance == "[我]討厭[水蜜桃]":
+        resultDICT["reject_ingr"] = args[1]
+
     return resultDICT

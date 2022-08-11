@@ -66,4 +66,22 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "請問[烏魚子][該]怎麼料理":
         resultDICT["ingredient"] = args[0]
 
+    if utterance == "[芭樂]有甚麼做法":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[葡萄][該]怎麼料理":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[葡萄][該]怎麼處理":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[葡萄]有什麼料理方式":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[香菇]有甚麼作法":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[香蕉]怎麼處理":
+        resultDICT["ingredient"] = args[0]
+
     return resultDICT
