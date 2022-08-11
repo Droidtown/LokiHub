@@ -62,6 +62,13 @@ def taboo(ingredient):
         return IngredientRelatedDICT[ingredient]["禁忌"]
     else:
         return {}
+    
+
+def selection(ingredient):
+    if ingredient in IngredientRelatedDICT:
+        return IngredientRelatedDICT[ingredient]["挑法"]
+    else:
+        return {}
 
 def getLokiResult(inputSTR):
     punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
@@ -133,6 +140,14 @@ def model(mscDICT):
                 mscDICT["replySTR"] = taboo_result
             else:
                 mscDICT["replySTR"] = "這邊沒有記載這項食材的禁忌 QAQ"
+              
+        #intent = selection
+        if "selection" in resultDICT.keys():
+            selection_result = selection(resultDICT["ingredient"])
+            if len(selection_result) > 0:
+                mscDICT["replySTR"] = selection_result
+            else:
+                mscDICT["replySTR"] = "查不到這種食材的挑法 QAQ"
             
     else: #沒有對應的句型
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
