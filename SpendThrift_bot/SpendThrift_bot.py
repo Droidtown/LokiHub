@@ -344,24 +344,25 @@ if __name__ == "__main__":
     # inputLIST = []
     # splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
     
-    # 讓使用者輸入指令
-    command = [input("請輸入您的指令：")]
+    while True:
+        # 讓使用者輸入指令
+        command = [input("請輸入您的指令：")]
 
-    # 執行使用者的指令
-    resultDICT = runLoki(command)
+        # 執行使用者的指令
+        resultDICT = runLoki(command)
 
-    # 不同意圖對應的輸出
-    
-    # 記帳
-    if resultDICT["intent"] == "accounting":
-        # TODO: 改格式
-        print("您今天 {} 了 {} 元".format(resultDICT["action"], resultDICT["amount"]))
-        SaveAccountToCSV(resultDICT)
-    
-    if resultDICT["intent"] == "searching":
-        result = GetDataByCondition()
-        print("您這個月的收支為 {} 元".format(result))
-    
-    # 錯誤
-    elif resultDICT["intent"] == "error":
-        print("無法辨識指令。\n你這敗家子給我去好好讀使用說明書:(")
+        # 不同意圖對應的輸出
+        
+        # 記帳
+        if resultDICT["intent"] == "accounting":
+            # TODO: 改格式
+            print("您今天 {} 了 {} 元".format(resultDICT["action"], resultDICT["amount"]))
+            SaveAccountToCSV(resultDICT)
+        
+        if resultDICT["intent"] == "searching":
+            result = GetDataByCondition()
+            print("您這個月的收支為 {} 元".format(result))
+        
+        # 錯誤
+        elif resultDICT["intent"] == "error":
+            print("無法辨識指令。\n你這敗家子給我去好好讀使用說明書:(")
