@@ -77,6 +77,14 @@ def getLokiResult(inputSTR):
 
     return resultDICT
 
+def findIngredient(resultDICT, mscDICT):
+    if "ingredient" in resultDICT.keys():
+        ingredient = resultDICT["ingredient"]
+    else:
+        ingredient = mscDICT["ingr_inseason"]   #如果回覆中未提到討厭甚麼食材，以上一次提供的當季食材當作討厭的食材
+
+    return ingredient
+
 def model(mscDICT):
     resultDICT = getLokiResult(mscDICT["msgSTR"])
     logging.info("Loki 回傳的結果: {}".format(resultDICT))
@@ -85,7 +93,8 @@ def model(mscDICT):
 
         #intent = check，想確認這項食材是不是當季
         if "check" in resultDICT.keys():
-            if checkInSeason(resultDICT["ingredient"]):
+            ingr = findIngredient(resultDICT, mscDICT)
+            if checkInSeason(ingr):
                 mscDICT["replySTR"] = resultDICT["ingredient"] + "是當季食材沒錯！"
             else:
                 mscDICT["replySTR"] = resultDICT["ingredient"] + "不是當季食材哦~"
@@ -95,11 +104,7 @@ def model(mscDICT):
             if datetime.today().weekday() == 0: #星期一休市
                 mscDICT["replySTR"] = "今日休市"
             else:
-                if "ingredient" in resultDICT.keys():
-                    ingr = resultDICT["ingredient"]
-                else:
-                    ingr = mscDICT["ingr_inseason"]   #如果回覆中未提到討厭甚麼食材，以上一次提供的當季食材當作討厭的食材
-
+                ingr = findIngredient(resultDICT, mscDICT)
                 ingr_priceDICT = price(ingr)
                 if len(ingr_priceDICT) > 0:
                     replySTR = ""
@@ -118,20 +123,18 @@ def model(mscDICT):
 
         #intent = reject
         if "reject" in resultDICT.keys():
-            if "reject_ingr" in resultDICT.keys():
-                reject_ingr = resultDICT["reject_ingr"]
-            else:
-                reject_ingr = mscDICT["ingr_inseason"]   #如果回覆中未提到討厭甚麼食材，以上一次提供的當季食材當作討厭的食材
+            reject_ingr = findIngredient(resultDICT, mscDICT)
             mscDICT["rejectLIST"].append(reject_ingr)   #紀錄使用者reject過的食材
 
-            #再提供另一個當季食材            
+            #再提供另一個當季食材
             ingr_inseason = inSeason(mscDICT["rejectLIST"])
             mscDICT["ingr_inseason"] = ingr_inseason
             mscDICT["replySTR"] = "那麼" + ingr_inseason + "如何？"
 
         #intent = recipe，想知道這項食材有什麼作法
         if "recipe" in resultDICT.keys():
-            recipe_result = recipe(resultDICT["ingredient"])
+            ingr = findIngredient(resultDICT, mscDICT)
+            recipe_result = recipe(ingr)
             if len(recipe_result) > 0:
                 mscDICT["replySTR"] = recipe_result
             else:
@@ -139,7 +142,8 @@ def model(mscDICT):
 
         #intent = taboo
         if "taboo" in resultDICT.keys():
-            taboo_result = taboo(resultDICT["ingredient"])
+            ingr = findIngredient(resultDICT, mscDICT)
+            taboo_result = taboo(ingr)
             if len(taboo_result) > 0:
                 mscDICT["replySTR"] = taboo_result
             else:
@@ -147,7 +151,8 @@ def model(mscDICT):
               
         #intent = selection
         if "selection" in resultDICT.keys():
-            selection_result = selection(resultDICT["ingredient"])
+            ingr = findIngredient(resultDICT, mscDICT)
+            selection_result = selection(ingr)
             if len(selection_result) > 0:
                 mscDICT["replySTR"] = selection_result
             else:
@@ -155,7 +160,7 @@ def model(mscDICT):
             
     else: #沒有對應的句型
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
-            mscDICT["replySTR"] = "嗨嗨 o(^▽^)o，我是小幫手~\n你可以問我關於當季食材的問題，像是：\n現在有什麼當季食材？多少錢？怎麼挑？都可以問我哦 :D"
+            mscDICT["replySTR"] = "嗨嗨 o(^▽^)o，我是小幫手~\n你可以問我關於當季食材的問題 :D"
         else:
             mscDICT["replySTR"] = "你說啥呢"
     

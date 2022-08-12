@@ -38,13 +38,13 @@ def getResult(inputSTR, utterance, args, resultDICT):
         pass
 
     if utterance == "[我]不喜歡[芭樂]":
-        resultDICT["reject_ingr"] = args[1]
+        resultDICT["ingredient"] = args[1]
 
     if utterance == "[我]不想吃[芭樂]":
-        resultDICT["reject_ingr"] = args[1]
+        resultDICT["ingredient"] = args[1]
 
     if utterance == "不要讓[我]看到[芭樂]！":
-        resultDICT["reject_ingr"] = args[1]
+        resultDICT["ingredient"] = args[1]
 
     if utterance == "再來[點][別]的？":
         # write your code here
@@ -71,6 +71,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
         pass
 
     if utterance == "[我]討厭[水蜜桃]":
-        resultDICT["reject_ingr"] = args[1]
+        resultDICT["ingredient"] = args[1]
 
     return resultDICT
