@@ -103,4 +103,14 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
+    if utterance == "[番茄]怎麼買":
+        resultDICT["ingredient"] = args[0]
+        # write your code here
+        pass
+
+    if utterance == "[西瓜]的選法":
+        resultDICT["ingredient"] = args[0]
+        # write your code here
+        pass
+
     return resultDICT

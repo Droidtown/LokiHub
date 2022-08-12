@@ -83,4 +83,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "[芭樂]有什麼禁忌":
         resultDICT["ingredient"] = args[0]
 
+    if utterance == "[芭樂]有什麼食用禁忌":
+        resultDICT["ingredient"] = args[0]
+
     return resultDICT

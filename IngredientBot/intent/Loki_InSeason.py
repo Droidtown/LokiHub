@@ -77,4 +77,20 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
+    if utterance == "[今天晚上]吃什麼":
+        # write your code here
+        pass
+
+    if utterance == "[當季]食材有什麼":
+        # write your code here
+        pass
+
+    if utterance == "[今天][晚餐]吃什麼":
+        # write your code here
+        pass
+
+    if utterance == "推薦吃什麼":
+        # write your code here
+        pass
+
     return resultDICT

@@ -63,7 +63,6 @@ def taboo(ingredient):
     else:
         return {}
     
-
 def selection(ingredient):
     if ingredient in IngredientRelatedDICT:
         return IngredientRelatedDICT[ingredient]["挑法"]
@@ -96,7 +95,12 @@ def model(mscDICT):
             if datetime.today().weekday() == 0: #星期一休市
                 mscDICT["replySTR"] = "今日休市"
             else:
-                ingr_priceDICT = price(resultDICT["ingredient"])
+                if "ingredient" in resultDICT.keys():
+                    ingr = resultDICT["ingredient"]
+                else:
+                    ingr = mscDICT["ingr_inseason"]   #如果回覆中未提到討厭甚麼食材，以上一次提供的當季食材當作討厭的食材
+
+                ingr_priceDICT = price(ingr)
                 if len(ingr_priceDICT) > 0:
                     replySTR = ""
                     for key in ingr_priceDICT:
@@ -151,7 +155,7 @@ def model(mscDICT):
             
     else: #沒有對應的句型
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
-            mscDICT["replySTR"] = "嗨嗨 o(^▽^)o"
+            mscDICT["replySTR"] = "嗨嗨 o(^▽^)o，我是小幫手~\n你可以問我關於當季食材的問題，像是：\n現在有什麼當季食材？多少錢？怎麼挑？都可以問我哦 :D"
         else:
             mscDICT["replySTR"] = "你說啥呢"
     
