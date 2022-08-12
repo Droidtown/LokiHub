@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki module for rules
+    Loki module for gym_yesNo
 
     Input:
         inputSTR      str,
@@ -17,7 +17,7 @@
 import json
 import os
 
-DEBUG_rules = True
+DEBUG_gym_yesNo = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
@@ -25,56 +25,48 @@ except:
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
-    if DEBUG_rules:
-        print("[rules] {} ===> {}".format(inputSTR, utterance))
+    if DEBUG_gym_yesNo:
+        print("[gym_yesNo] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[上攀]有什麼要注意的？":
+    if utterance == "[Dapro]在[台中]嗎":
         # write your code here
         pass
 
-    if utterance == "[上攀]有哪些要[小心]的？":
+    if utterance == "[Y17][很貴]嗎？":
         # write your code here
         pass
 
-    if utterance == "[上攀]的規則是什麼":
+    if utterance == "[原岩][假日]有營業嗎":
         # write your code here
         pass
 
-    if utterance == "[上攀]要[小心]什麼？":
+    if utterance == "[原岩][新竹]有[分店]嗎":
         # write your code here
         pass
 
-    if utterance == "[奧運]的攀岩規則是？":
+    if utterance == "[東部]有[岩館]嗎":
         # write your code here
         pass
 
-    if utterance == "[抱石]要注意什麼":
+    if utterance == "[紅石][假日]有開嗎":
         # write your code here
         pass
 
-    if utterance == "怎麼知道[我]是哪個[等級]":
+    if utterance == "[紅石][可以][抱石]嗎":
         # write your code here
         pass
 
-    if utterance == "攀岩有[規則]嗎":
+    if utterance == "[苗栗][可以][上攀]嗎":
         # write your code here
         pass
 
-    if utterance == "攀岩有[難度]之分嗎":
+    if utterance == "[苗栗][能]攀岩嗎":
         # write your code here
         pass
 
-    if utterance == "攀岩有哪些[規則]":
-        # write your code here
-        pass
-
-    if utterance == "攀岩的規則是什麼":
-        # write your code here
-        pass
-
-    if utterance == "要怎麼知道[自己]的[等級]":
+    if utterance == "[苗栗]有[岩館]嗎":
         # write your code here
         pass
 

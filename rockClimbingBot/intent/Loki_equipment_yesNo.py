@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki module for rock
+    Loki module for equipment_yesNo
 
     Input:
         inputSTR      str,
@@ -17,7 +17,7 @@
 import json
 import os
 
-DEBUG_rock = True
+DEBUG_equipment_yesNo = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
@@ -25,64 +25,160 @@ except:
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
-    if DEBUG_rock:
-        print("[rock] {} ===> {}".format(inputSTR, utterance))
+    if DEBUG_equipment_yesNo:
+        print("[equipment_yesNo] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[jug]是什麼":
+    if utterance == "[上攀][裝備]會不[會]很難買？":
         # write your code here
         pass
 
-    if utterance == "[jug]有什麼[特色]":
+    if utterance == "[北部]有[紅石]嗎":
         # write your code here
         pass
 
-    if utterance == "[jug]長什麼樣子":
+    if utterance == "[可以]不買[裝備]嗎":
         # write your code here
         pass
 
-    if utterance == "[jug]長怎樣":
+    if utterance == "[可以]穿[一般運動鞋]去[抱石]嗎":
         # write your code here
         pass
 
-    if utterance == "[pinch]怎麼抓":
+    if utterance == "[可以]穿[一般運動鞋]去攀岩嗎":
         # write your code here
         pass
 
-    if utterance == "[sloper][可以]怎麼爬":
+    if utterance == "[可以]穿[牛仔褲][抱石]嗎？":
         # write your code here
         pass
 
-    if utterance == "[岩點]有哪些":
+    if utterance == "[可以]穿[牛仔褲]攀岩嗎？":
         # write your code here
         pass
 
-    if utterance == "[岩點]有哪幾[種]":
+    if utterance == "[可以]穿運動[鞋]嗎":
         # write your code here
         pass
 
-    if utterance == "最不好抓的點是":
+    if utterance == "[安全吊帶]租得到嘛":
         # write your code here
         pass
 
-    if utterance == "最不好抓的點是哪個":
+    if utterance == "[安全吊帶]買得到嘛":
         # write your code here
         pass
 
-    if utterance == "最好抓的是哪種點":
+    if utterance == "[岩粉][必須]買嗎":
         # write your code here
         pass
 
-    if utterance == "最好爬的是哪種":
+    if utterance == "[岩粉]有需要買嗎":
         # write your code here
         pass
 
-    if utterance == "最難抓的點是哪個":
+    if utterance == "[岩鞋][岩館]租得到嗎":
         # write your code here
         pass
 
-    if utterance == "爬[jug]要注意什麼":
+    if utterance == "[岩鞋]在[岩館]買得到嗎":
+        # write your code here
+        pass
+
+    if utterance == "[岩館][可以]買[鞋子]嗎":
+        # write your code here
+        pass
+
+    if utterance == "[岩館]買得到[鞋子]嗎":
+        # write your code here
+        pass
+
+    if utterance == "[必須]買[岩粉]嗎":
+        # write your code here
+        pass
+
+    if utterance == "[抱石][一定]要穿[運動服]嗎":
+        # write your code here
+        pass
+
+    if utterance == "[抱石][可以]穿[短袖]嗎？":
+        # write your code here
+        pass
+
+    if utterance == "[抱石]租得到[鞋子]嗎":
+        # write your code here
+        pass
+
+    if utterance == "[抱石]要買[鞋子]嗎":
+        # write your code here
+        pass
+
+    if utterance == "[抱石]需要穿[運動褲]嗎":
+        # write your code here
+        pass
+
+    if utterance == "[新手]有需要買[裝備]嗎":
+        # write your code here
+        pass
+
+    if utterance == "[新竹]有[紅石]嗎":
+        # write your code here
+        pass
+
+    if utterance == "[衣著]有限制嗎？":
+        # write your code here
+        pass
+
+    if utterance == "去[岩館]要帶[岩粉]嗎":
+        # write your code here
+        pass
+
+    if utterance == "攀岩[一定]要穿[運動服]嗎":
+        # write your code here
+        pass
+
+    if utterance == "攀岩[可以]穿[短袖]嗎？":
+        # write your code here
+        pass
+
+    if utterance == "攀岩[裝備]會不[會]很難買？":
+        # write your code here
+        pass
+
+    if utterance == "攀岩租得到[鞋子]嗎":
+        # write your code here
+        pass
+
+    if utterance == "攀岩要買[鞋子]嗎":
+        # write your code here
+        pass
+
+    if utterance == "攀岩需要穿[運動褲]嗎":
+        # write your code here
+        pass
+
+    if utterance == "有dress code嗎？":
+        # write your code here
+        pass
+
+    if utterance == "有規定要穿什麼嗎":
+        # write your code here
+        pass
+
+    if utterance == "穿[短袖][可以][抱石]嗎":
+        # write your code here
+        pass
+
+    if utterance == "穿[短袖][可以]去攀岩嗎":
+        # write your code here
+        pass
+
+    if utterance == "穿[短袖][可以]攀岩嗎":
+        # write your code here
+        pass
+
+    if utterance == "要帶[岩粉]嗎":
         # write your code here
         pass
 

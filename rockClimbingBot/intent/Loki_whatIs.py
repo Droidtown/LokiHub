@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki module for rules
+    Loki module for whatIs
 
     Input:
         inputSTR      str,
@@ -17,7 +17,7 @@
 import json
 import os
 
-DEBUG_rules = True
+DEBUG_whatIs = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
@@ -25,56 +25,24 @@ except:
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
-    if DEBUG_rules:
-        print("[rules] {} ===> {}".format(inputSTR, utterance))
+    if DEBUG_whatIs:
+        print("[whatIs] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[上攀]有什麼要注意的？":
+    if utterance == "[jug]是什麼？":
         # write your code here
         pass
 
-    if utterance == "[上攀]有哪些要[小心]的？":
+    if utterance == "[星光票]的[意思]是？":
         # write your code here
         pass
 
-    if utterance == "[上攀]的規則是什麼":
+    if utterance == "什麼是[星光票]？":
         # write your code here
         pass
 
-    if utterance == "[上攀]要[小心]什麼？":
-        # write your code here
-        pass
-
-    if utterance == "[奧運]的攀岩規則是？":
-        # write your code here
-        pass
-
-    if utterance == "[抱石]要注意什麼":
-        # write your code here
-        pass
-
-    if utterance == "怎麼知道[我]是哪個[等級]":
-        # write your code here
-        pass
-
-    if utterance == "攀岩有[規則]嗎":
-        # write your code here
-        pass
-
-    if utterance == "攀岩有[難度]之分嗎":
-        # write your code here
-        pass
-
-    if utterance == "攀岩有哪些[規則]":
-        # write your code here
-        pass
-
-    if utterance == "攀岩的規則是什麼":
-        # write your code here
-        pass
-
-    if utterance == "要怎麼知道[自己]的[等級]":
+    if utterance == "那是什麼？":
         # write your code here
         pass
 

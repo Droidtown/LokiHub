@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki module for rules
+    Loki module for equipment_price
 
     Input:
         inputSTR      str,
@@ -17,7 +17,7 @@
 import json
 import os
 
-DEBUG_rules = True
+DEBUG_equipment_price = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
@@ -25,56 +25,48 @@ except:
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
-    if DEBUG_rules:
-        print("[rules] {} ===> {}".format(inputSTR, utterance))
+    if DEBUG_equipment_price:
+        print("[equipment_price] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[上攀]有什麼要注意的？":
+    if utterance == "[岩鞋][大概]多少[錢]？":
         # write your code here
         pass
 
-    if utterance == "[上攀]有哪些要[小心]的？":
+    if utterance == "[岩鞋][很貴]嗎？":
         # write your code here
         pass
 
-    if utterance == "[上攀]的規則是什麼":
+    if utterance == "[岩鞋]多貴？":
         # write your code here
         pass
 
-    if utterance == "[上攀]要[小心]什麼？":
+    if utterance == "[岩鞋]要價多少？":
         # write your code here
         pass
 
-    if utterance == "[奧運]的攀岩規則是？":
+    if utterance == "[岩鞋]要多少[錢]？":
         # write your code here
         pass
 
-    if utterance == "[抱石]要注意什麼":
+    if utterance == "多少[錢][能]買得到[岩鞋]？":
         # write your code here
         pass
 
-    if utterance == "怎麼知道[我]是哪個[等級]":
+    if utterance == "多少[錢]買得到[岩鞋]？":
         # write your code here
         pass
 
-    if utterance == "攀岩有[規則]嗎":
+    if utterance == "花多少[才]買得到[岩鞋]？":
         # write your code here
         pass
 
-    if utterance == "攀岩有[難度]之分嗎":
+    if utterance == "買[岩鞋]要花多少？":
         # write your code here
         pass
 
-    if utterance == "攀岩有哪些[規則]":
-        # write your code here
-        pass
-
-    if utterance == "攀岩的規則是什麼":
-        # write your code here
-        pass
-
-    if utterance == "要怎麼知道[自己]的[等級]":
+    if utterance == "買[岩鞋]需要花到[四個]小朋友嗎？":
         # write your code here
         pass
 

@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki module for rules
+    Loki module for equipment_whereGet
 
     Input:
         inputSTR      str,
@@ -17,7 +17,7 @@
 import json
 import os
 
-DEBUG_rules = True
+DEBUG_equipment_whereGet = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
@@ -25,56 +25,40 @@ except:
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
-    if DEBUG_rules:
-        print("[rules] {} ===> {}".format(inputSTR, utterance))
+    if DEBUG_equipment_whereGet:
+        print("[equipment_whereGet] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[上攀]有什麼要注意的？":
+    if utterance == "[你]知道[可以]去[哪買][岩粉]嗎":
         # write your code here
         pass
 
-    if utterance == "[上攀]有哪些要[小心]的？":
+    if utterance == "[你]知道[岩粉]哪裡租得到嗎":
         # write your code here
         pass
 
-    if utterance == "[上攀]的規則是什麼":
+    if utterance == "[你]知道[岩粉]哪裡買得到嗎":
         # write your code here
         pass
 
-    if utterance == "[上攀]要[小心]什麼？":
+    if utterance == "[你]知道[岩粉]要去[哪買]嗎":
         # write your code here
         pass
 
-    if utterance == "[奧運]的攀岩規則是？":
+    if utterance == "[岩粉][可以]去[哪買]？":
         # write your code here
         pass
 
-    if utterance == "[抱石]要注意什麼":
+    if utterance == "[岩粉]哪裡[可以]租得到？":
         # write your code here
         pass
 
-    if utterance == "怎麼知道[我]是哪個[等級]":
+    if utterance == "[岩粉]哪裡[可以]買得到？":
         # write your code here
         pass
 
-    if utterance == "攀岩有[規則]嗎":
-        # write your code here
-        pass
-
-    if utterance == "攀岩有[難度]之分嗎":
-        # write your code here
-        pass
-
-    if utterance == "攀岩有哪些[規則]":
-        # write your code here
-        pass
-
-    if utterance == "攀岩的規則是什麼":
-        # write your code here
-        pass
-
-    if utterance == "要怎麼知道[自己]的[等級]":
+    if utterance == "[岩粉]哪裡買得到？":
         # write your code here
         pass
 

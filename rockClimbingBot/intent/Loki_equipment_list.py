@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki module for rules
+    Loki module for equipment_list
 
     Input:
         inputSTR      str,
@@ -17,7 +17,7 @@
 import json
 import os
 
-DEBUG_rules = True
+DEBUG_equipment_list = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
@@ -25,56 +25,96 @@ except:
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
-    if DEBUG_rules:
-        print("[rules] {} ===> {}".format(inputSTR, utterance))
+    if DEBUG_equipment_list:
+        print("[equipment_list] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[上攀]有什麼要注意的？":
+    if utterance == "[上攀]要準備多少[裝備]":
         # write your code here
         pass
 
-    if utterance == "[上攀]有哪些要[小心]的？":
+    if utterance == "[抱石]有[服裝][上]的[規定]嗎":
         # write your code here
         pass
 
-    if utterance == "[上攀]的規則是什麼":
+    if utterance == "[抱石]有什麼是要[先]買好的？":
         # write your code here
         pass
 
-    if utterance == "[上攀]要[小心]什麼？":
+    if utterance == "[抱石]要[先]買哪些[裝備]":
         # write your code here
         pass
 
-    if utterance == "[奧運]的攀岩規則是？":
+    if utterance == "[抱石]要帶什麼":
         # write your code here
         pass
 
-    if utterance == "[抱石]要注意什麼":
+    if utterance == "[抱石]要準備什麼":
         # write your code here
         pass
 
-    if utterance == "怎麼知道[我]是哪個[等級]":
+    if utterance == "[抱石]要穿什麼":
         # write your code here
         pass
 
-    if utterance == "攀岩有[規則]嗎":
+    if utterance == "[抱石]需要[先]買好哪些[裝備]":
         # write your code here
         pass
 
-    if utterance == "攀岩有[難度]之分嗎":
+    if utterance == "[抱石]需要哪些[裝備]":
         # write your code here
         pass
 
-    if utterance == "攀岩有哪些[規則]":
+    if utterance == "[抱石]需要買哪些[裝備]":
         # write your code here
         pass
 
-    if utterance == "攀岩的規則是什麼":
+    if utterance == "哪些[裝備][一定]要買":
         # write your code here
         pass
 
-    if utterance == "要怎麼知道[自己]的[等級]":
+    if utterance == "攀岩有[服裝][上]的[規定]嗎":
+        # write your code here
+        pass
+
+    if utterance == "攀岩有什麼是要[先]買好的？":
+        # write your code here
+        pass
+
+    if utterance == "攀岩要[先]買哪些[裝備]":
+        # write your code here
+        pass
+
+    if utterance == "攀岩要帶什麼":
+        # write your code here
+        pass
+
+    if utterance == "攀岩要準備什麼":
+        # write your code here
+        pass
+
+    if utterance == "攀岩要準備多少[裝備]":
+        # write your code here
+        pass
+
+    if utterance == "攀岩要穿什麼":
+        # write your code here
+        pass
+
+    if utterance == "攀岩需要[先]買好哪些[裝備]":
+        # write your code here
+        pass
+
+    if utterance == "攀岩需要哪些[裝備]":
+        # write your code here
+        pass
+
+    if utterance == "攀岩需要買哪些[裝備]":
+        # write your code here
+        pass
+
+    if utterance == "要買哪些[裝備]":
         # write your code here
         pass
 
