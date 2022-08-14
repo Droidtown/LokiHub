@@ -79,9 +79,6 @@ class BotClient(discord.Client):
             #送出回覆
             await message.reply(self.mscDICT[message.author.id]["replySTR"])
 
-            #紀錄說話者說話內容
-            self.mscDICT[message.author.id]["msgSTR"] = msgSTR 
-
             logging.info("暫存資訊：{}".format(self.mscDICT))
 
 

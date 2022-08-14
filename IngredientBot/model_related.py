@@ -1,7 +1,6 @@
 #!/user/bin/env python
 # -*- coding: utf-8 -*-
 
-
 import re
 import json
 import logging
@@ -69,14 +68,6 @@ def selection(ingredient):
     else:
         return {}
 
-def getLokiResult(inputSTR):
-    punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
-    inputLIST = punctuationPat.sub("\n", inputSTR).split("\n")
-    filterLIST = []
-    resultDICT = iB.runLoki(inputLIST, filterLIST)
-
-    return resultDICT
-
 def findIngredient(resultDICT, mscDICT):
     if "ingredient" in resultDICT.keys():
         ingredient = resultDICT["ingredient"]
@@ -85,11 +76,26 @@ def findIngredient(resultDICT, mscDICT):
 
     return ingredient
 
+def getLokiResult(inputSTR):
+    punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
+    inputLIST = punctuationPat.sub("\n", inputSTR).split("\n")
+    filterLIST = []
+    resultDICT = iB.runLoki(inputLIST, filterLIST)
+
+    return resultDICT
+
 def model(mscDICT):
     resultDICT = getLokiResult(mscDICT["msgSTR"])
     logging.info("Loki 回傳的結果: {}".format(resultDICT))
     
     if len(resultDICT) > 0: #有找到對應的intent
+
+        #intent = inseason，想知道現在有哪些當季食材
+        if "inseason" in resultDICT.keys():
+            ingr_inseason = inSeason(mscDICT["rejectLIST"])
+            mscDICT["ingr_inseason"] = ingr_inseason
+            mscDICT["replySTR"] = ingr_inseason + "是現在的當季食材哦！"
+
 
         #intent = check，想確認這項食材是不是當季
         if "check" in resultDICT.keys():
@@ -98,6 +104,16 @@ def model(mscDICT):
                 mscDICT["replySTR"] = resultDICT["ingredient"] + "是當季食材沒錯！"
             else:
                 mscDICT["replySTR"] = resultDICT["ingredient"] + "不是當季食材哦~"
+        
+        #intent = reject
+        if "reject" in resultDICT.keys():
+            reject_ingr = findIngredient(resultDICT, mscDICT)
+            mscDICT["rejectLIST"].append(reject_ingr)   #紀錄使用者reject過的食材
+
+            #再提供另一個當季食材
+            ingr_inseason = inSeason(mscDICT["rejectLIST"])
+            mscDICT["ingr_inseason"] = ingr_inseason
+            mscDICT["replySTR"] = "那麼" + ingr_inseason + "如何？"
 
         #intent = price，想知道這項食材的價格
         if "price" in resultDICT.keys():
@@ -113,23 +129,7 @@ def model(mscDICT):
 
                     mscDICT["replySTR"] = replySTR
                 else:
-                    mscDICT["replySTR"] = "查不到這個品項的價錢 QAQ"
-        
-        #intent = inseason，想知道現在有哪些當季食材
-        if "inseason" in resultDICT.keys():
-            ingr_inseason = inSeason(mscDICT["rejectLIST"])
-            mscDICT["ingr_inseason"] = ingr_inseason
-            mscDICT["replySTR"] = ingr_inseason + "是現在的當季食材哦！"
-
-        #intent = reject
-        if "reject" in resultDICT.keys():
-            reject_ingr = findIngredient(resultDICT, mscDICT)
-            mscDICT["rejectLIST"].append(reject_ingr)   #紀錄使用者reject過的食材
-
-            #再提供另一個當季食材
-            ingr_inseason = inSeason(mscDICT["rejectLIST"])
-            mscDICT["ingr_inseason"] = ingr_inseason
-            mscDICT["replySTR"] = "那麼" + ingr_inseason + "如何？"
+                    mscDICT["replySTR"] = "查不到{}的價錢 QAQ".format(ingr)
 
         #intent = recipe，想知道這項食材有什麼作法
         if "recipe" in resultDICT.keys():
@@ -138,7 +138,7 @@ def model(mscDICT):
             if len(recipe_result) > 0:
                 mscDICT["replySTR"] = recipe_result
             else:
-                mscDICT["replySTR"] = "查不到這種食材的作法 QAQ"
+                mscDICT["replySTR"] = "查不到{}的作法 QAQ".format(ingr)
 
         #intent = taboo
         if "taboo" in resultDICT.keys():
@@ -147,7 +147,7 @@ def model(mscDICT):
             if len(taboo_result) > 0:
                 mscDICT["replySTR"] = taboo_result
             else:
-                mscDICT["replySTR"] = "這邊沒有記載這項食材的禁忌 QAQ"
+                mscDICT["replySTR"] = "這邊沒有記載{}的禁忌 QAQ".format(ingr)
               
         #intent = selection
         if "selection" in resultDICT.keys():
@@ -156,11 +156,11 @@ def model(mscDICT):
             if len(selection_result) > 0:
                 mscDICT["replySTR"] = selection_result
             else:
-                mscDICT["replySTR"] = "查不到這種食材的挑法 QAQ"
+                mscDICT["replySTR"] = "查不到{}的挑法 QAQ".format(ingr)
             
     else: #沒有對應的句型
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
-            mscDICT["replySTR"] = "嗨嗨 o(^▽^)o，我是小幫手~\n你可以問我關於當季食材的問題 :D"
+            mscDICT["replySTR"] = "嗨嗨，我是小幫手 o(^▽^)o\n你可以問我關於當季食材的問題哦 :D"
         else:
             mscDICT["replySTR"] = "你說啥呢"
     
