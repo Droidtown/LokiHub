@@ -42,7 +42,8 @@ class BotClient(discord.Client):
         self.templateDICT = {"gender": None,
                              "age":None,
                              "height":None,
-                             "weight":None
+                             "weight":None,
+                             "BMR":None
         }
         self.mscDICT = { 
                          
@@ -91,25 +92,36 @@ class BotClient(discord.Client):
             else: #開始處理正式對話
                 if msgSTR in ["男","女"]:
                     self.mscDICT[message.author.id]["gender"] = msgSTR
-                    replySTR = "請您提供您的年齡"
+                    replySTR = "請您提供您的年齡 (請回答__歲)"
                     #if isinstance(int(msgSTR), int) == False:
                         #replySTR = cn2num(msgSTR) 轉數值
-                elif int(msgSTR) < 110:
-                    self.mscDICT[message.author.id]["age"] = msgSTR
-                    replySTR = "請您提供您的身高 (單位：公分)"
+                elif re.search('(\d+)歲', msgSTR) != None:
+                    user_age = re.search('(\d+)歲', msgSTR).group(1)
+                    self.mscDICT[message.author.id]["age"] = user_age
+                    replySTR = "請您提供您的身高 (請回答__公分)"
                         #if isinstance(int(msgSTR), int) == False:
                             #replySTR = cn2num(msgSTR)
-                elif int(msgSTR) > 120:
-                    self.mscDICT[message.author.id]["height"] = msgSTR
-                    replySTR = "請您提供您的體重 (單位：公斤)"
-                elif isinstance(int(msgSTR), int) == True:
-                    self.mscDICT[message.author.id]["weight"] = msgSTR
-                else:
+                elif re.search('(\d+)公分', msgSTR) != None:
+                    user_height = re.search('(\d+)公分', msgSTR).group(1)
+                    self.mscDICT[message.author.id]["height"] = user_height
+                    replySTR = "請您提供您的體重 (請回答__公斤)"
+                elif re.search('(\d+)公斤', msgSTR) != None:
+                    user_weight = re.search('(\d+)公斤', msgSTR).group(1)
+                    self.mscDICT[message.author.id]["weight"] = user_weight
                     for i in self.mscDICT[message.author.id].values():
-                        if i.isnull() == False:
-                            replySTR = "請確認您的資料是否正確"
-                            #if isinstance(int(msgSTR), int) == False:
-                                #replySTR = cn2num(msgSTR)
+                        if i != None:
+                            replySTR = self.mscDICT[message.author.id]["gender"] + ", " + self.mscDICT[message.author.id]["age"] + "歲" + ", " + self.mscDICT[message.author.id]["height"] + "公分" + ", " + self.mscDICT[message.author.id]["weight"] + "公斤" + "。" + "請確認您的資料是否正確" + "，" + "請回答是或否"
+                elif msgSTR == "是":
+                    if self.mscDICT[message.author.id]["gender"] == "男":
+                        BMR = 66 + (13.7 * int(self.mscDICT[message.author.id]["weight"]) + 5 * int(self.mscDICT[message.author.id]["height"]) - 6.8 * int(self.mscDICT[message.author.id]["age"]))
+                        self.mscDICT[message.author.id]["BMR"] = BMR
+                        replySTR = "您的基礎代謝率為 " + str(self.mscDICT[message.author.id]["BMR"]) + " 卡"
+                    if  self.mscDICT[message.author.id]["gender"] == "女":
+                        BMR = 655 + (9.6 * int(self.mscDICT[message.author.id]["weight"]) + 1.8 * int(self.mscDICT[message.author.id]["height"]) - 4.7 * int(self.mscDICT[message.author.id]["age"]))
+                        self.mscDICT[message.author.id]["BMR"] = BMR
+                        replySTR = "您的基礎代謝率為 " + str(self.mscDICT[message.author.id]["BMR"]) + " 卡"
+                elif msgSTR == "否":
+                    replySTR = "為了更新您的資料，需要請您提供您的生理性別 (請回答男或女)"
                 
                 #從這裡開始接上 NLU 模型
                 #resulDICT = getLokiResult(msgSTR) #Loki 回來的結果
