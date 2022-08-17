@@ -232,6 +232,13 @@ def model(mscDICT):
             recommend_result = recommend()
             mscDICT["replySTR"] = "可以試試看{}".format(recommend_result)
 
+        #intent = all_ingre，想知道所有當季食材
+        if "all_ingre" in resultDICT.keys():
+            currentMonth = datetime.now().month
+            all_current_ingreLIST = inSeasonDICT[str(currentMonth)+"月"]
+            mscDICT["replySTR"] = all_current_ingreLIST
+
+            
         #紀錄本次的intent
         mscDICT["intent"] = []
         for key in resultDICT.keys():
