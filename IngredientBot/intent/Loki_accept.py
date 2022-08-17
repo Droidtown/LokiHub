@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki module for capability
+    Loki module for accept
 
     Input:
         inputSTR      str,
@@ -17,36 +17,35 @@
 import json
 import os
 
-DEBUG_capability = True
+DEBUG_accept = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
-    userDefinedDICT = {"_veg":["青江菜","地瓜葉","地瓜"],"_food":["水煮蛋","紅棗","白帶魚"],"_fruit":["火龍果","哈密瓜","藍莓"]}
+    userDefinedDICT = {"_veg":["地瓜","地瓜葉","青江菜"],"_food":["水煮蛋","白帶魚","紅棗"],"_fruit":["哈密瓜","火龍果","藍莓"]}
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
-    if DEBUG_capability:
-        print("[capability] {} ===> {}".format(inputSTR, utterance))
+    if DEBUG_accept:
+        print("[accept] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[你][可以]做什麼":
+
+    resultDICT["accept"] = True
+
+    if utterance == "Ok":
         # write your code here
         pass
 
-    if utterance == "[你][可以]幫[我]做什麼":
+    if utterance == "了解":
         # write your code here
         pass
 
-    if utterance == "[你][可以]幫[我]解決什麼問題":
+    if utterance == "好哦":
         # write your code here
         pass
 
-    #if utterance == "[你][會]什麼":
-    #    # write your code here
-    #    pass
-
-    if utterance == "[你]知道什麼":
+    if utterance == "沒問題":
         # write your code here
         pass
 

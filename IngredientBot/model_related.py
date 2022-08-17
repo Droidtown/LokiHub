@@ -156,12 +156,26 @@ def model(mscDICT):
                 mscDICT["replySTR"] = selection_result
             else:
                 mscDICT["replySTR"] = "查不到{}的挑法 QAQ".format(ingr)
-            
+
+        #intent = accept
+        if "accept" in resultDICT.keys():
+            if "reject" in mscDICT["intent"]:
+                mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 :)".format(mscDICT["ingr_inseason"])
+
+        #紀錄本次的intent
+        mscDICT["intent"] = []
+        for key in resultDICT.keys():
+            if key != "ingredient":
+                mscDICT["intent"].append(key)
+
     else: #沒有找到對應的intent
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
             mscDICT["replySTR"] = "嗨嗨，我是小幫手 o(^▽^)o\n你可以問我關於當季食材的問題哦 :D"
         else:
             mscDICT["replySTR"] = "你說啥呢"
     
+        #紀錄本次的intent
+        mscDICT["intent"] = []
+
     return mscDICT
 

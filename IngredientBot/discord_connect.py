@@ -36,6 +36,7 @@ class BotClient(discord.Client):
                              "rejectLIST": [],
                              "replySTR": "",
                              "ingr_inseason": "",
+                             "intent": [],
         }
         self.mscDICT = { #userid:templateDICT
         }
