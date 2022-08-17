@@ -18,7 +18,7 @@ def checkInSeason(ingredient):
     currentMonth = datetime.now().month
     ingr_inseasonLIST = inSeasonDICT[str(currentMonth)+"月"]
 
-    if ingredient in ingr_inseasonLIST:
+    if ingredient in ingr_inseasonLIST["蔬菜"]+ingr_inseasonLIST["水果"]+ingr_inseasonLIST["海鮮"]:
         return True
     else:
         return False
@@ -232,6 +232,15 @@ def model(mscDICT):
             recommend_result = recommend()
             mscDICT["replySTR"] = "可以試試看{}".format(recommend_result)
 
+        #intent = capability
+        if "capability" in resultDICT.keys():
+            mscDICT["replySTR"] = "我知道現在的當季食材有什麼，還有一些關於食材的資訊，像是價格、挑選方法或是禁忌，還有它可以做成什麼料理..."
+
+        #intent = which_season
+        if "which_season" in resultDICT.keys():
+            pass
+
+
         #紀錄本次的intent
         mscDICT["intent"] = []
         for key in resultDICT.keys():
@@ -240,7 +249,6 @@ def model(mscDICT):
 
     else: #沒有找到對應的intent
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
-            print("****")
             mscDICT["replySTR"] = "嗨嗨，我是小幫手 o(^▽^)o\n你可以問我關於當季食材的問題哦 :D"
         else:
             mscDICT["replySTR"] = "你說啥呢"

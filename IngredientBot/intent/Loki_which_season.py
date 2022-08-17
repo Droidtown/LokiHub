@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki module for all_ingre
+    Loki module for which_season
 
     Input:
         inputSTR      str,
@@ -17,7 +17,7 @@
 import json
 import os
 
-DEBUG_all_ingre = True
+DEBUG_which_season = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
@@ -25,24 +25,21 @@ except:
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
-    if DEBUG_all_ingre:
-        print("[all_ingre] {} ===> {}".format(inputSTR, utterance))
+    if DEBUG_which_season:
+        print("[which_season] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
 
-    resultDICT["all_ingr"] = True
+    resultDICT["which_season"] = True
 
-    if utterance == "[你][能]列出[所有]的[當季][食材]嗎":
-        # write your code here
-        pass
+    if utterance == "[幾月]盛產[烏魚子]":
+        resultDICT["ingredient"] = args[1]
+    
+    if utterance == "[烏魚子]是什麼[季節]的":
+        resultDICT["ingredient"] = args[0]
 
-    if utterance == "[我]想知道[所有]的[當季][食材]":
-        # write your code here
-        pass
-
-    if utterance == "[現在]的[當季][食材]有哪些":
-        # write your code here
-        pass
+    if utterance == "什麼[時候]有[烏魚子]":
+        resultDICT["ingredient"] = args[1]
 
     return resultDICT

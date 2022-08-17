@@ -30,6 +30,9 @@ def debugInfo(inputSTR, utterance):
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
+
+    resultDICT["capability"] = True
+
     if utterance == "[你][可以]做什麼":
         # write your code here
         pass

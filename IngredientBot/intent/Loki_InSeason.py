@@ -60,10 +60,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["time"] = args[0]
         resultDICT["type"] = args[2]
 
-    if utterance == "[現在當季][食材]有哪些":
-        resultDICT["time"] = args[0]
-        resultDICT["type"] = args[1]
-
     if utterance == "[現在當季]的[水果]是什麼":
         resultDICT["time"] = args[0]
         resultDICT["type"] = args[1]
