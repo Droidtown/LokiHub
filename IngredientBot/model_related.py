@@ -5,7 +5,7 @@ import re
 import json
 import logging
 import pandas as pd
-from random import choice
+from random import choice, random
 from datetime import datetime
 
 import ingredientBot as iB
@@ -23,9 +23,12 @@ def checkInSeason(ingredient):
     else:
         return False
 
-def inSeason(rejectLIST):
-    currentMonth = datetime.now().month
-    ingr_inseasonLIST = inSeasonDICT[str(currentMonth)+"月"]
+def inSeason(rejectLIST, time, type):
+    if time in ["現在", "目前", "今天"]:
+        currentMonth = datetime.now().month
+    else:
+        print(time)
+    ingr_inseasonLIST = inSeasonDICT[str(currentMonth)+"月"][type]
     ingr_inseason_excludeLIST = [x for x in ingr_inseasonLIST if x not in rejectLIST]
 
     return choice(ingr_inseason_excludeLIST)
@@ -91,30 +94,64 @@ def model(mscDICT):
     
     if len(resultDICT) > 0: #有找到對應的intent
 
-        #intent = inseason，想知道現在有哪些當季食材
-        if "inseason" in resultDICT.keys():
-            ingr_inseason = inSeason(mscDICT["rejectLIST"])
-            mscDICT["ingredient"] = ingr_inseason
-            mscDICT["replySTR"] = ingr_inseason + "是現在的當季食材哦！"
-
         #intent = check，想確認這項食材是不是當季
         if "check" in resultDICT.keys():
             ingr = findIngredient(resultDICT, mscDICT)
-            mscDICT["ingredient"] = ingr
+            
             if checkInSeason(ingr):
                 mscDICT["replySTR"] = resultDICT["ingredient"] + "是當季食材沒錯！"
             else:
                 mscDICT["replySTR"] = resultDICT["ingredient"] + "不是當季食材哦~"
+
+            #紀錄
+            mscDICT["ingredient"] = ingr
+
+        #intent = inseason，想知道現在有哪些當季食材
+        if "inseason" in resultDICT.keys():
+            if "time" in resultDICT.keys():
+                time = resultDICT["time"]
+            else:
+                time = "現在"
+            if "type" in resultDICT.keys():
+                if "蔬菜" in resultDICT["type"]:
+                    type = "蔬菜"
+                elif "水果" in resultDICT["type"]:
+                    type = "水果"
+                elif "海鮮" in resultDICT["type"]:
+                    type = "海鮮"
+                else:
+                    type = choice(["蔬菜", "水果", "海鮮"])
+            else:
+                type = choice(["蔬菜", "水果", "海鮮"])
+            ingr_inseason = inSeason(mscDICT["rejectLIST"], time, type)
         
+            mscDICT["replySTR"] = "你喜歡吃{}呀？{}最好吃的是{}哦！".format(type, time, ingr_inseason)
+
+            #紀錄
+            mscDICT["ingredient"] = ingr_inseason
+            mscDICT["time"] = time
+            mscDICT["type"] = type
+
         #intent = reject
         if "reject" in resultDICT.keys():
             reject_ingr = findIngredient(resultDICT, mscDICT)
             mscDICT["rejectLIST"].append(reject_ingr)   #紀錄使用者reject過的食材
 
             #再提供另一個當季食材
-            ingr_inseason = inSeason(mscDICT["rejectLIST"])
-            mscDICT["ingredient"] = ingr_inseason
+            if mscDICT["time"] == "":
+                time = "現在"
+            else:
+                time = mscDICT["time"]
+            if mscDICT["type"] == "":
+                type = choice(["蔬菜", "水果", "海鮮"])
+            else:
+                type = mscDICT["type"]
+
+            ingr_inseason = inSeason(mscDICT["rejectLIST"], time, type)
             mscDICT["replySTR"] = "那麼" + ingr_inseason + "如何？"
+
+            #紀錄
+            mscDICT["ingredient"] = ingr_inseason
 
         #intent = accept
         if "accept" in resultDICT.keys():
@@ -123,11 +160,10 @@ def model(mscDICT):
 
         #intent = price，想知道這項食材的價格
         if "price" in resultDICT.keys():
+            ingr = findIngredient(resultDICT, mscDICT)
             if datetime.today().weekday() == 0: #星期一休市
                 mscDICT["replySTR"] = "今日休市"
             else:
-                ingr = findIngredient(resultDICT, mscDICT)
-                mscDICT["ingredient"] = ingr
                 ingr_priceDICT = price(ingr)
                 if len(ingr_priceDICT) > 0:
                     replySTR = ""
@@ -138,40 +174,49 @@ def model(mscDICT):
                 else:
                     mscDICT["replySTR"] = "查不到{}的價錢 QAQ".format(ingr)
 
+            #紀錄
+            mscDICT["ingredient"] = ingr
+
         #intent = recipe，想知道這項食材有什麼作法
         if "recipe" in resultDICT.keys():
             ingr = findIngredient(resultDICT, mscDICT)
-            mscDICT["ingredient"] = ingr
             recipe_result = recipe(ingr)
             if len(recipe_result) > 0:
                 mscDICT["replySTR"] = recipe_result
             else:
                 mscDICT["replySTR"] = "查不到{}的作法 QAQ".format(ingr)
 
+            #紀錄
+            mscDICT["ingredient"] = ingr
+
         #intent = taboo
         if "taboo" in resultDICT.keys():
             ingr = findIngredient(resultDICT, mscDICT)
-            mscDICT["ingredient"] = ingr
             taboo_result = taboo(ingr)
             if len(taboo_result) > 0:
                 mscDICT["replySTR"] = taboo_result
             else:
                 mscDICT["replySTR"] = "這邊沒有記載{}的禁忌 QAQ".format(ingr)
               
+            #紀錄
+            mscDICT["ingredient"] = ingr
+
         #intent = selection
         if "selection" in resultDICT.keys():
             ingr = findIngredient(resultDICT, mscDICT)
-            mscDICT["ingredient"] = ingr
             selection_result = selection(ingr)
             if len(selection_result) > 0:
                 mscDICT["replySTR"] = selection_result
             else:
                 mscDICT["replySTR"] = "查不到{}的挑法 QAQ".format(ingr)
 
+            #紀錄
+            mscDICT["ingredient"] = ingr
+
         #紀錄本次的intent
         mscDICT["intent"] = []
         for key in resultDICT.keys():
-            if key != "ingredient":
+            if key not in ['ingredient', 'time']:
                 mscDICT["intent"].append(key)
 
     else: #沒有找到對應的intent

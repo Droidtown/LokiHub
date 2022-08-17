@@ -20,10 +20,12 @@ class BotClient(discord.Client):
         logging.info("--Reset--")
         templateDICT = {"updatetime" : None,
                         "msgSTR": "",
+                        "intent": [],
+                        "ingredient": "",
+                        "time": "",
+                        "type": "",
                         "rejectLIST": [],
                         "replySTR": "",
-                        "ingredient": "",
-                        "intent": [],
         }
         templateDICT["updatetime"] = datetime.now()
         return templateDICT
@@ -34,10 +36,12 @@ class BotClient(discord.Client):
         #Multi-Session Conversation :設定多輪對話資訊#
         self.templateDICT = {"updatetime" : None,
                              "msgSTR": "",
+                             "intent": [],
+                             "ingredient": "",
+                             "time": "",
+                             "type": "",
                              "rejectLIST": [],
                              "replySTR": "",
-                             "ingredient": "",
-                             "intent": [],
         }
         self.mscDICT = { #userid:templateDICT
         }

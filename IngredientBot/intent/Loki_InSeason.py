@@ -33,72 +33,54 @@ def getResult(inputSTR, utterance, args, resultDICT):
     resultDICT["inseason"] = True
 
     debugInfo(inputSTR, utterance)
-    if utterance == "[現在][該]吃哪些水果？":
-        # write your code here
-        pass
+    if utterance == "[現在][該]吃哪些[水果]？":
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[2]
 
     if utterance == "[現在]有什麼":
-        # write your code here
-        pass
+        resultDICT["time"] = args[0]
 
-    if utterance == "[現在]有什麼[當季]食材":
-        # write your code here
-        pass
+    if utterance == "[現在]有什麼[水果][好吃]":
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[1]
 
-    if utterance == "[現在]有什麼水果[好吃]":
-        # write your code here
-        pass
+    if utterance == "[現在]有什麼[當季][食材]":
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[2]
 
-    if utterance == "[現在]有甚麼[好吃]的[當季]水果":
-        # write your code here
-        pass
+    if utterance == "[現在]有甚麼[好吃]的[當季][水果]":
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[3]
 
-    if utterance == "[現在]有甚麼[當季]水果[好吃]":
-        # write your code here
-        pass
+    if utterance == "[現在]有甚麼[海鮮]":
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[1]
 
-    if utterance == "[現在]有甚麼海鮮":
-        # write your code here
-        pass
+    if utterance == "[現在]有甚麼[當季][水果][好吃]":
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[2]
 
     if utterance == "[現在當季][食材]有哪些":
-        # write your code here
-        pass
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[1]
 
-    if utterance == "[現在當季]的水果是什麼":
-        # write your code here
-        pass
+    if utterance == "[現在當季]的[水果]是什麼":
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[1]
 
-    if utterance == "[目前]盛產甚麼水果":
-        # write your code here
-        pass
+    if utterance == "[目前]盛產甚麼[水果]":
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[1]
 
-    if utterance == "告訴[我][現在]有什麼[當季]食材":
-        # write your code here
-        pass
+    if utterance == "告訴[我][現在]有什麼[當季][食材]":
+        resultDICT["time"] = args[1]
+        resultDICT["type"] = args[3]
 
-    if utterance == "[今天晚上]吃什麼":
-        # write your code here
-        pass
+    if utterance == "有什麼[水果]":
+        resultDICT["type"] = args[0]
 
-    if utterance == "[當季]食材有什麼":
-        # write your code here
-        pass
-
-    if utterance == "[今天][晚餐]吃什麼":
-        # write your code here
-        pass
-
-    if utterance == "推薦吃什麼":
-        # write your code here
-        pass
-
-    if utterance == "有什麼[當季]食材":
-        # write your code here
-        pass
-
-    if utterance == "有什麼水果":
-        # write your code here
-        pass
+    if utterance == "有什麼[當季][食材]":
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[1]
 
     return resultDICT
