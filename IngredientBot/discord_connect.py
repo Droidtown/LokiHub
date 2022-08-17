@@ -19,10 +19,11 @@ class BotClient(discord.Client):
     def resetMSCwith(self, messageAuthorID): #清空與 messageAuthorID 之間的對話記錄
         logging.info("--Reset--")
         templateDICT = {"updatetime" : None,
-                             "msgSTR": "",
-                             "rejectLIST": [],
-                             "replySTR": "",
-                             "ingr_inseason": "",
+                        "msgSTR": "",
+                        "rejectLIST": [],
+                        "replySTR": "",
+                        "ingredient": "",
+                        "intent": [],
         }
         templateDICT["updatetime"] = datetime.now()
         return templateDICT
@@ -35,7 +36,7 @@ class BotClient(discord.Client):
                              "msgSTR": "",
                              "rejectLIST": [],
                              "replySTR": "",
-                             "ingr_inseason": "",
+                             "ingredient": "",
                              "intent": [],
         }
         self.mscDICT = { #userid:templateDICT
