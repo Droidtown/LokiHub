@@ -15,6 +15,7 @@ try:
     from intent import Loki_recipe
     from intent import Loki_InSeason
     from intent import Loki_capability
+    from intent import Loki_all_ingre
 except:
     from .intent import Loki_CheckInSeason
     from .intent import Loki_taboo
@@ -24,6 +25,7 @@ except:
     from .intent import Loki_recipe
     from .intent import Loki_InSeason
     from .intent import Loki_capability
+    from .intent import Loki_all_ingre
 
 import json
 
@@ -181,6 +183,10 @@ def runLoki(inputLIST, filterLIST=[]):
                 if lokiRst.getIntent(index, resultIndex) == "capability":
                     resultDICT = Loki_capability.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
+                # all_ingre
+                if lokiRst.getIntent(index, resultIndex) == "all_ingre":
+                    resultDICT = Loki_all_ingre.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), 
+            resultDICT)
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}

@@ -96,7 +96,6 @@ def model(mscDICT):
             mscDICT["ingr_inseason"] = ingr_inseason
             mscDICT["replySTR"] = ingr_inseason + "是現在的當季食材哦！"
 
-
         #intent = check，想確認這項食材是不是當季
         if "check" in resultDICT.keys():
             ingr = findIngredient(resultDICT, mscDICT)
@@ -158,7 +157,7 @@ def model(mscDICT):
             else:
                 mscDICT["replySTR"] = "查不到{}的挑法 QAQ".format(ingr)
             
-    else: #沒有對應的句型
+    else: #沒有找到對應的intent
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
             mscDICT["replySTR"] = "嗨嗨，我是小幫手 o(^▽^)o\n你可以問我關於當季食材的問題哦 :D"
         else:
