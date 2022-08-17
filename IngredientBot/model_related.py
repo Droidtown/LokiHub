@@ -232,15 +232,6 @@ def model(mscDICT):
             recommend_result = recommend()
             mscDICT["replySTR"] = "可以試試看{}".format(recommend_result)
 
-        #intent = capability
-        if "capability" in resultDICT.keys():
-            mscDICT["replySTR"] = "我知道現在的當季食材有什麼，還有一些關於食材的資訊，像是價格、挑選方法或是禁忌，還有它可以做成什麼料理..."
-
-        #intent = which_season
-        if "which_season" in resultDICT.keys():
-            pass
-
-
         #紀錄本次的intent
         mscDICT["intent"] = []
         for key in resultDICT.keys():
