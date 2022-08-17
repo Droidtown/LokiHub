@@ -79,6 +79,16 @@ def recommend():
 
     return recommend
 
+def which_season(ingredient):
+    season = []
+    for month in inSeasonDICT.keys():
+        for type in inSeasonDICT[month].keys():
+            if ingredient in inSeasonDICT[month][type]:
+                season.append(month)
+    season = list(set(season))
+
+    return season
+
 def findIngredient(resultDICT, mscDICT):
     if "ingredient" in resultDICT.keys():
         ingredient = resultDICT["ingredient"]
@@ -231,6 +241,26 @@ def model(mscDICT):
         if "recommend" in resultDICT.keys():
             recommend_result = recommend()
             mscDICT["replySTR"] = "可以試試看{}".format(recommend_result)
+
+        #intent = capability
+        if "capability" in resultDICT.keys():
+            mscDICT["replySTR"] = "我知道現在的當季食材有什麼，還有一些關於食材的資訊，像是價格、挑選方法或是禁忌，還有它可以做成什麼料理..."
+
+        #intent = which_season
+        if "which_season" in resultDICT.keys():
+            ingr = findIngredient(resultDICT, mscDICT)
+            ws_result = which_season(ingr)
+            group = "、".join(ws_result)
+            mscDICT["replySTR"] = group + "月是{}的產季。".format(ingr)
+
+            #紀錄
+            mscDICT["ingredient"] = ingr
+
+        #intent = all_ingre，想知道所有當季食材
+        if "all_ingre" in resultDICT.keys():
+            currentMonth = datetime.now().month
+            all_current_ingreLIST = inSeasonDICT[str(currentMonth)+"月"]
+            mscDICT["replySTR"] = all_current_ingreLIST
 
         #紀錄本次的intent
         mscDICT["intent"] = []
