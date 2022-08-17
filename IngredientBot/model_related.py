@@ -5,7 +5,7 @@ import re
 import json
 import logging
 import pandas as pd
-from random import choice, random
+from random import choice
 from datetime import datetime
 
 import ingredientBot as iB
@@ -70,6 +70,12 @@ def selection(ingredient):
         return IngredientRelatedDICT[ingredient]["挑法"]
     else:
         return {}
+
+def recommend():
+    random_ingr = choice(list(IngredientRelatedDICT.keys()))
+    recommend = choice(IngredientRelatedDICT[random_ingr]["作法"])
+
+    return recommend
 
 def findIngredient(resultDICT, mscDICT):
     if "ingredient" in resultDICT.keys():
@@ -212,6 +218,11 @@ def model(mscDICT):
 
             #紀錄
             mscDICT["ingredient"] = ingr
+
+        #intent = recommend
+        if "recommend" in resultDICT.keys():
+            recommend_result = recommend()
+            mscDICT["replySTR"] = "可以試試看{}".format(recommend_result)
 
         #紀錄本次的intent
         mscDICT["intent"] = []

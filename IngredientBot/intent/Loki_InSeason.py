@@ -29,10 +29,10 @@ def debugInfo(inputSTR, utterance):
         print("[InSeason] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
-
+    debugInfo(inputSTR, utterance)
+    
     resultDICT["inseason"] = True
 
-    debugInfo(inputSTR, utterance)
     if utterance == "[現在][該]吃哪些[水果]？":
         resultDICT["time"] = args[0]
         resultDICT["type"] = args[2]
@@ -82,5 +82,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "有什麼[當季][食材]":
         resultDICT["time"] = args[0]
         resultDICT["type"] = args[1]
+
+    if utterance == "[現在]盛產什麼":
+        resultDICT["time"] = args[0]
 
     return resultDICT
