@@ -24,6 +24,8 @@ def checkInSeason(ingredient):
         return False
 
 def inSeason(rejectLIST, time, type):
+    if type == "":
+        type = choice(["蔬菜", "水果", "海鮮"])
     if time in ["現在", "目前", "今天"]:
         currentMonth = datetime.now().month
     else:
@@ -126,12 +128,16 @@ def model(mscDICT):
                 elif "海鮮" in resultDICT["type"]:
                     type = "海鮮"
                 else:
-                    type = choice(["蔬菜", "水果", "海鮮"])
+                    type = ""
             else:
-                type = choice(["蔬菜", "水果", "海鮮"])
+                type = ""
+            
             ingr_inseason = inSeason(mscDICT["rejectLIST"], time, type)
-        
-            mscDICT["replySTR"] = "你喜歡吃{}呀？{}最好吃的是{}哦！".format(type, time, ingr_inseason)
+
+            if type == "":
+                mscDICT["replySTR"] = "{}最好吃的是{}哦！".format(time, ingr_inseason)
+            else:
+                mscDICT["replySTR"] = "你喜歡吃{}呀？{}最好吃的是{}哦！".format(type, time, ingr_inseason)
 
             #紀錄
             mscDICT["ingredient"] = ingr_inseason
@@ -163,6 +169,8 @@ def model(mscDICT):
         if "accept" in resultDICT.keys():
             if "reject" in mscDICT["intent"]:
                 mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 :)".format(mscDICT["ingredient"])
+            else:
+                mscDICT["replySTR"] = "歡迎問我關於食材的問題哦 :)"
 
         #intent = price，想知道這項食材的價格
         if "price" in resultDICT.keys():
@@ -232,6 +240,7 @@ def model(mscDICT):
 
     else: #沒有找到對應的intent
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
+            print("****")
             mscDICT["replySTR"] = "嗨嗨，我是小幫手 o(^▽^)o\n你可以問我關於當季食材的問題哦 :D"
         else:
             mscDICT["replySTR"] = "你說啥呢"
