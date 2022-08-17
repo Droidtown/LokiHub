@@ -113,4 +113,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
+    if utterance == "怎麼挑":
+        # write your code here
+        pass
+
     return resultDICT

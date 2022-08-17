@@ -93,4 +93,12 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
+    if utterance == "有什麼[當季]食材":
+        # write your code here
+        pass
+
+    if utterance == "有什麼水果":
+        # write your code here
+        pass
+
     return resultDICT
