@@ -85,7 +85,7 @@ def which_season(ingredient):
         for type in inSeasonDICT[month].keys():
             if ingredient in inSeasonDICT[month][type]:
                 season.append(month)
-    season = list(set(season))
+    season = sorted(list(set(season)))
 
     return season
 
@@ -250,17 +250,20 @@ def model(mscDICT):
         if "which_season" in resultDICT.keys():
             ingr = findIngredient(resultDICT, mscDICT)
             ws_result = which_season(ingr)
-            group = "、".join(ws_result)
-            mscDICT["replySTR"] = group + "月是{}的產季。".format(ingr)
+            if len(ws_result) > 0:
+                group = "、".join(ws_result)
+                mscDICT["replySTR"] = group + "是{}的產季。".format(ingr)
+            else:
+                mscDICT["replySTR"] = "查不到{}的產季  QAQ".format(ingr)
 
             #紀錄
             mscDICT["ingredient"] = ingr
 
-        #intent = all_ingre，想知道所有當季食材
-        if "all_ingre" in resultDICT.keys():
+        #intent = all_ingr，想知道所有當季食材
+        if "all_ingr" in resultDICT.keys():
             currentMonth = datetime.now().month
             all_current_ingreLIST = inSeasonDICT[str(currentMonth)+"月"]
-            mscDICT["replySTR"] = all_current_ingreLIST
+            mscDICT["replySTR"] = all_current_ingreLIST["蔬菜"]+all_current_ingreLIST["水果"]+all_current_ingreLIST["海鮮"]
 
         #紀錄本次的intent
         mscDICT["intent"] = []

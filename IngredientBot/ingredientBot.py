@@ -18,6 +18,7 @@ try:
     from intent import Loki_all_ingre
     from intent import Loki_accept
     from intent import Loki_recommend
+    from intent import Loki_which_season
 except:
     from .intent import Loki_CheckInSeason
     from .intent import Loki_taboo
@@ -30,6 +31,7 @@ except:
     from .intent import Loki_all_ingre
     from .intent import Loki_accept
     from .intent import Loki_recommend
+    from .intent import Loki_which_season
 
 import json
 
@@ -199,6 +201,10 @@ def runLoki(inputLIST, filterLIST=[]):
                 # recommend
                 if lokiRst.getIntent(index, resultIndex) == "recommend":
                     resultDICT = Loki_recommend.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
+                # which_season
+                if lokiRst.getIntent(index, resultIndex) == "which_season":
+                    resultDICT = Loki_which_season.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
