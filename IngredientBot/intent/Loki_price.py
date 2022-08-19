@@ -79,4 +79,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
+    if utterance == "[蛤蠣]價錢":
+        resultDICT["ingredient"] = args[0]
+
     return resultDICT

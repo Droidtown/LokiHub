@@ -90,4 +90,10 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "[藍莓]的作法":
         resultDICT["ingredient"] = args[0]
 
+    if utterance == "[紅棗][可以]做什麼":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[紅棗]有甚麼料理":
+        resultDICT["ingredient"] = args[0]
+
     return resultDICT

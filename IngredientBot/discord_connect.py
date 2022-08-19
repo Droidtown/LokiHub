@@ -85,7 +85,7 @@ class BotClient(discord.Client):
             #送出回覆
             await message.reply(self.mscDICT[message.author.id]["replySTR"])
 
-            await message.reply("暫存資訊：{}".format(self.mscDICT))
+            #await message.reply("暫存資訊：{}".format(self.mscDICT))
 
             logging.info("暫存資訊：{}".format(self.mscDICT))
 

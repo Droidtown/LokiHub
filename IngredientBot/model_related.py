@@ -30,6 +30,7 @@ def inSeason(rejectLIST, time, type):
         currentMonth = datetime.now().month
     else:
         print(time)
+        currentMonth = datetime.now().month #
     ingr_inseasonLIST = inSeasonDICT[str(currentMonth)+"月"][type]
     ingr_inseason_excludeLIST = [x for x in ingr_inseasonLIST if x not in rejectLIST]
 
@@ -178,9 +179,12 @@ def model(mscDICT):
         #intent = accept
         if "accept" in resultDICT.keys():
             if "reject" in mscDICT["intent"]:
-                mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 :)".format(mscDICT["ingredient"])
+                mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 ^_^".format(mscDICT["ingredient"])
             else:
-                mscDICT["replySTR"] = "歡迎問我關於食材的問題哦 :)"
+                if mscDICT["ingredient"] == "":
+                    mscDICT["replySTR"] = "歡迎問我關於食材的問題哦 ^_^"
+                else:
+                    mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 ^_^".format(mscDICT["ingredient"])
 
         #intent = price，想知道這項食材的價格
         if "price" in resultDICT.keys():
@@ -196,7 +200,7 @@ def model(mscDICT):
 
                     mscDICT["replySTR"] = replySTR
                 else:
-                    mscDICT["replySTR"] = "查不到{}的價錢 QAQ".format(ingr)
+                    mscDICT["replySTR"] = "查不到{}的價錢！".format(ingr)
 
             #紀錄
             mscDICT["ingredient"] = ingr
@@ -208,7 +212,7 @@ def model(mscDICT):
             if len(recipe_result) > 0:
                 mscDICT["replySTR"] = recipe_result
             else:
-                mscDICT["replySTR"] = "查不到{}的作法 QAQ".format(ingr)
+                mscDICT["replySTR"] = "查不到{}的作法！".format(ingr)
 
             #紀錄
             mscDICT["ingredient"] = ingr
@@ -220,7 +224,7 @@ def model(mscDICT):
             if len(taboo_result) > 0:
                 mscDICT["replySTR"] = taboo_result
             else:
-                mscDICT["replySTR"] = "這邊沒有記載{}的禁忌 QAQ".format(ingr)
+                mscDICT["replySTR"] = "這邊沒有記載{}的禁忌！".format(ingr)
               
             #紀錄
             mscDICT["ingredient"] = ingr
@@ -232,7 +236,7 @@ def model(mscDICT):
             if len(selection_result) > 0:
                 mscDICT["replySTR"] = selection_result
             else:
-                mscDICT["replySTR"] = "查不到{}的挑法 QAQ".format(ingr)
+                mscDICT["replySTR"] = "查不到{}的挑法！".format(ingr)
 
             #紀錄
             mscDICT["ingredient"] = ingr
@@ -254,7 +258,7 @@ def model(mscDICT):
                 group = "、".join(ws_result)
                 mscDICT["replySTR"] = group + "是{}的產季。".format(ingr)
             else:
-                mscDICT["replySTR"] = "查不到{}的產季  QAQ".format(ingr)
+                mscDICT["replySTR"] = "查不到{}的產季！".format(ingr)
 
             #紀錄
             mscDICT["ingredient"] = ingr
@@ -273,9 +277,29 @@ def model(mscDICT):
 
     else: #沒有找到對應的intent
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
-            mscDICT["replySTR"] = "嗨嗨，我是小幫手 o(^▽^)o\n你可以問我關於當季食材的問題哦 :D"
+            
+            currentMonth = datetime.now().month
+            type = choice(["蔬菜", "水果", "海鮮"])            
+            ingr_inseason = choice(inSeasonDICT[str(currentMonth)+"月"][type])
+            
+            mscDICT["replySTR"] = "嗨，我是小幫手，你喜歡" + ingr_inseason + "嗎？"
+
+            #紀錄
+            mscDICT["ingredient"] = ingr_inseason
+            mscDICT["time"] = "現在"
+            mscDICT["type"] = type
+
+        elif mscDICT["msgSTR"].lower() in ["Ok","了解","好哦","好喔","沒問題","可以", "喜歡", "喜歡ㄟ", "好ㄟ"]:
+            if "reject" in mscDICT["intent"]:
+                mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 ^_^".format(mscDICT["ingredient"])
+            else:
+                if mscDICT["ingredient"] == "":
+                    mscDICT["replySTR"] = "歡迎問我關於食材的問題哦 ^_^"
+                else:
+                    mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 ^_^".format(mscDICT["ingredient"])
+
         else:
-            mscDICT["replySTR"] = "你說啥呢"
+            mscDICT["replySTR"] = "好喔"
     
         #紀錄本次的intent
         mscDICT["intent"] = []

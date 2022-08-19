@@ -31,7 +31,7 @@ def debugInfo(inputSTR, utterance):
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
 
-    resultDICT["accept"] = True
+    #resultDICT["accept"] = True
 
     if utterance == "Ok":
         # write your code here
@@ -46,6 +46,14 @@ def getResult(inputSTR, utterance, args, resultDICT):
         pass
 
     if utterance == "沒問題":
+        # write your code here
+        pass
+
+    if utterance == "[可以]":
+        # write your code here
+        pass
+
+    if utterance == "喜歡":
         # write your code here
         pass
 

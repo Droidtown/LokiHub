@@ -33,9 +33,9 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     resultDICT["capability"] = True
 
-    if utterance == "[你][可以]做什麼":
-        # write your code here
-        pass
+    #if utterance == "[你][可以]做什麼":
+    #    # write your code here
+    #    pass
 
     if utterance == "[你][可以]幫[我]做什麼":
         # write your code here
@@ -50,6 +50,22 @@ def getResult(inputSTR, utterance, args, resultDICT):
     #    pass
 
     if utterance == "[你]知道什麼":
+        # write your code here
+        pass
+
+    if utterance == "那[可以]問什麼":
+        # write your code here
+        pass
+
+    if utterance == "[你][可以]回答什麼問題":
+        # write your code here
+        pass
+
+    if utterance == "[我][可以]問[你]什麼":
+        # write your code here
+        pass
+
+    if utterance == "那[我]還[可以]問什麼":
         # write your code here
         pass
 

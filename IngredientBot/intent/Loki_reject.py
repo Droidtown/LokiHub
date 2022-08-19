@@ -85,4 +85,20 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
+    if utterance == "不是[很]喜歡ㄟ":
+        # write your code here
+        pass
+
+    if utterance == "有[別]的嗎":
+        # write your code here
+        pass
+
+    if utterance == "[我]想要[別]的[食材]":
+        # write your code here
+        pass
+
+    if utterance == "有沒[有]推薦[別]的[食材]":
+        # write your code here
+        pass
+
     return resultDICT
