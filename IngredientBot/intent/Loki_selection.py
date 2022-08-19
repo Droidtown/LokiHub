@@ -35,86 +35,57 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "[山藥]如何挑選[才][好吃]？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[新鮮][肉品]怎麼挑？":
         resultDICT["ingredient"] = args[1]
-        # write your code here
-        pass
 
     if utterance == "[火龍果][表皮]有[皺褶][正常]嗎？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[肉類]如何挑選？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[茄子]挑選[方法]":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[青椒]怎麼看？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[馬鈴薯][軟][一點]好還是[硬][一點][好]？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[馬鈴薯]是[軟]的好還是[硬]的[好]？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "什麼樣的[芭樂][比較好吃]？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "如何區分[新鮮]與不[新鮮]的[魚]?":
         resultDICT["ingredient"] = args[2]
-        # write your code here
-        pass
 
     if utterance == "如何挑選[新鮮][肉品]？":
         resultDICT["ingredient"] = args[1]
-        # write your code here
-        pass
 
     if utterance == "怎麼挑[山藥]？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "要怎麼選[芭樂]？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "買[茄子]如何挑選？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[番茄]怎麼買":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[西瓜]的選法":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "怎麼挑":
         # write your code here
         pass
+
+    if utterance == "[李子]挑法":
+        resultDICT["ingredient"] = args[0]
 
     return resultDICT

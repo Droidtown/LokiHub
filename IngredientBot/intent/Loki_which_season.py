@@ -42,4 +42,31 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "什麼[時候]有[烏魚子]":
         resultDICT["ingredient"] = args[1]
 
+    if utterance == "[你]知道[海膽]什麼[時候]買比較好嗎":
+        resultDICT["ingredient"] = args[1]
+
+    if utterance == "[海膽][該]什麼[時候]買":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[海膽]什麼[時候]買":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[海膽]是[幾月]產的食材":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[海膽]是[幾月]的[食材]":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[海膽] 盛產季":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[海膽]盛產季是什麼[時候]":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[葡萄]產季是什麼[時候]":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[葡萄]產季什麼[時候]":
+        resultDICT["ingredient"] = args[0]
+
     return resultDICT

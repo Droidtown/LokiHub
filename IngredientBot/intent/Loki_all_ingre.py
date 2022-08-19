@@ -45,4 +45,20 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
+    if utterance == "[你]知道[七月]的[當令][食材]有哪些嗎":
+        # write your code here
+        pass
+
+    if utterance == "[我]想知道[三月]的[當令][食材]有哪些":
+        # write your code here
+        pass
+
+    if utterance == "[你][可以]跟[我]說[所有]的[當季][食材]嗎":
+        # write your code here
+        pass
+
+    if utterance == "[所有][當季][食材]":
+        # write your code here
+        pass
+
     return resultDICT
