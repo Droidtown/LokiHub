@@ -54,14 +54,16 @@ from datetime import datetime
 import csv
 
 try:
-    from intent import Loki_accounting
-    from intent import Loki_searching
+    # from intent import Loki_accounting
+    from intent import Loki_searching_test
+    # from intent import Loki_searching
 except:
-    from .intent import Loki_accounting
-    from .intent import Loki_searching
+    # from .intent import Loki_accounting
+    from .intent import Loki_searching_test
+    # from .intent import Loki_searching
 
 # Local import
-from intent.Loki_accounting import userDefinedDICT
+# from intent.Loki_accounting import userDefinedDICT
 
 
 # set path
@@ -194,16 +196,16 @@ def runLoki(inputLIST, filterLIST=[]):
         for index, key in enumerate(inputLIST):
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
                 # searching
-                if lokiRst.getIntent(index, resultIndex) == "searching":
-                    resultDICT = Loki_searching.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                if lokiRst.getIntent(index, resultIndex) == "searching_test":
+                    resultDICT = Loki_searching_test.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
                     # 這次指令的意圖為"searching"
                     resultDICT["intent"] = "searching"
 
                 # accounting
-                if lokiRst.getIntent(index, resultIndex) == "accounting":
-                    resultDICT = Loki_accounting.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-                    # 這次指令的意圖為"accounting"
-                    resultDICT["intent"] = "accounting"
+                # if lokiRst.getIntent(index, resultIndex) == "accounting":
+                #     resultDICT = Loki_accounting.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                #     # 這次指令的意圖為"accounting"
+                #     resultDICT["intent"] = "accounting"
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
@@ -314,28 +316,49 @@ def SaveAccountToCSV(data, filename='testUser.csv'):
             f.close()
 
 # 從 [username].csv 中讀取資料
-def GetDataByCondition(username="testUser"):
+def GetDataByCondition(username="testUser", condition="all"):
     # open csv
     with open("./user_data/" + username + ".csv", 'r', encoding="utf-8") as f:
         # read data
         reader = csv.reader(f)
-        
+
         # get data by condition
         totalMoney = 0
-        for row in reader:
-            # 欄位說明
-            if row[0] == "action":
-                pass
-            # 收入
-            elif row[0] in userDefinedDICT["action_earn"]:
-                totalMoney += int(row[1])
-            # 支出
-            elif row[0] in userDefinedDICT["action_cost"]:
-                totalMoney -= int(row[1])
-            # 錯誤
-            else:
-                print("你這個敗家子，連存資料都給我存錯:(")
-                
+
+        # 管他的
+        if condition == "all":
+            for row in reader:
+                # 忽略欄位說明
+                if row[0] == "amount":
+                    pass
+                # 計算
+                else:
+                    totalMoney += int(row[0])
+
+        # 收入
+        elif condition == "earn":
+            for row in reader:
+                # 忽略欄位說明
+                if row[0] == "amount":
+                    pass
+                # 計算
+                else:
+                    if int(row[0]) > 0:
+                        totalMoney += int(row[0])
+        # 收入
+        elif condition == "cost":
+            for row in reader:
+                # 忽略欄位說明
+                if row[0] == "amount":
+                    pass
+                # 計算
+                else:
+                    if int(row[0]) < 0:
+                        totalMoney += int(row[0])
+            totalMoney=0-totalMoney #暫時的
+
+        else:
+            print("你這個敗家子，連存資料都給我存錯:(")
         return totalMoney
 
 
@@ -362,11 +385,11 @@ if __name__ == "__main__":
             # TODO: 改格式
             print("您今天 {} 了 {} 元".format(resultDICT["action"], resultDICT["amount"]))
             SaveAccountToCSV(resultDICT)
-        
+
+        # 查詢
         if resultDICT["intent"] == "searching":
-            result = GetDataByCondition()
-            print("您這個月的收支為 {} 元".format(result))
-        
+            print("查詢結果為 {} 元".format(resultDICT["amount"]))
+
         # 錯誤
         elif resultDICT["intent"] == "error":
             print("無法辨識指令。\n你這敗家子給我去好好讀使用說明書:(")

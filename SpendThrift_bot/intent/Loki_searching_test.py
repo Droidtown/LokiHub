@@ -16,6 +16,14 @@
 
 import json
 import os
+import sys
+
+# set path
+path_current = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.dirname(path_current))
+os.chdir(path_current)
+
+from SpendThrift_bot import GetDataByCondition
 
 DEBUG_searching_test = True
 try:
@@ -32,6 +40,15 @@ def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "查詢[收入]":
         # write your code here
+        if args[0]=='收入':
+            resultDICT['amount']=GetDataByCondition('testUser','earn')
+        elif args[0] == '支出':
+            resultDICT['amount']=GetDataByCondition('testUser','cost')
+        elif args[0] == '記帳狀況':
+            resultDICT['amount']=GetDataByCondition('testUser','all')
+        else:
+            print('哈囉敗家子')
+
         pass
 
     return resultDICT
