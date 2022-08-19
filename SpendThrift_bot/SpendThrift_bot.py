@@ -286,22 +286,26 @@ def testIntent():
     print("")
 
 
-# 把記帳資訊存進檔案中
+"""
+SaveAccoutToCSV(Json data, string filename)
+"""
 def SaveAccountToCSV(data, filename='testUser.csv'):
-    # 把 data 轉成 .csv 格式
-    result = data["action"] + ", "
+    """
+    把 data 轉成 .csv 格式
+    """
+    # 金額
+    result = data["amount"]
     
-    # 支出
-    if data["action"] in userDefinedDICT["action_cost"]:
-        result += data["amount"] + "\n"
-    # 收入
-    else:
-        result += data["amount"] + "\n"
+    # 時間
+    result += ", " + data["time"]
         
+    # 結束
+    result +=  "\n"    
+    
     # initialize
     if not os.path.exists("./user_data/" + filename):
         with open("./user_data/" + filename, 'w', encoding="utf-8") as f:
-            f.write("action, amount\n" + result)
+            f.write("amount, time\n" + result)
             f.close()
 
     else:
