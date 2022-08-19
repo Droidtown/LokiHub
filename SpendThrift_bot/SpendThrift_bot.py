@@ -53,13 +53,13 @@ import os, sys
 from datetime import datetime
 import csv
 
-try:
+#try:
     # from intent import Loki_accounting
-    from intent import Loki_searching_test
+from intent import Loki_searching_test
     # from intent import Loki_searching
-except:
+#except:
     # from .intent import Loki_accounting
-    from .intent import Loki_searching_test
+    # from intent import Loki_searching_test
     # from .intent import Loki_searching
 
 # Local import

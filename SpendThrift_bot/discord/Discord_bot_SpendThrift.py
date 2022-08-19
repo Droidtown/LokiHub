@@ -6,6 +6,14 @@ import discord
 import json
 import re
 import os, sys
+import csv
+
+# set path
+path_current = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.dirname(path_current))
+os.chdir(path_current)
+
+from SpendThrift_bot import runLoki
 from datetime import datetime
 from pprint import pprint
 
@@ -15,16 +23,10 @@ class bcolors:
     FAIL = '\033[91m' #RED
     RESET = '\033[0m' #RESET COLOR
 
-# add path
-path_current = os.path.dirname(os.path.realpath(__file__))
-sys.path.append(os.path.dirname(path_current))
-
-# import local paht
-from SpendThrift_bot import runLoki
 
 logging.basicConfig(level=logging.DEBUG)
 
-with open(path_current + "\\account.info", encoding="utf-8") as f: #讀取account.info
+with open(path_current + "/account.info", encoding="utf-8") as f: #讀取account.info
     accountDICT = json.loads(f.read())
 
 punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
@@ -71,12 +73,13 @@ class BotClient(discord.Client):
             logging.debug("本 bot 被叫到了！")
             msgSTR = message.content.replace("<@{}> ".format(self.user.id), "").strip()
             logging.debug("人類說：{}".format(msgSTR))
+            
+            print("here")
 
             if msgSTR == "ping":
                 await message.reply('pong')
             elif msgSTR == "ping ping":
                 await message.reply('pong pong')
-
 # ##########初次對話：這裡是 keyword trigger 的。
             elif msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello"]:
                 #有講過話(判斷對話時間差)
@@ -95,11 +98,15 @@ class BotClient(discord.Client):
                     replySTR = msgSTR.title()+'2'
 
                 await message.reply(replySTR)
-# ##########非初次對話：這裡用 Loki 計算語意
+# ##########非初次對話：這裡用 Loki 計算語意            
             else: #開始處理正式對話，開始接上 NLU 模型
-                resulDICT = getLokiResult(msgSTR)
+                resulDICT = runLoki([msgSTR])
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resulDICT)
+                print(resulDICT)
+                # 查詢
+                if resulDICT["intent"] == "searching":
+                    replySTR=resulDICT["amount"]
                 await message.reply(replySTR)
 
 
