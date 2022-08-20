@@ -275,10 +275,10 @@ def model(mscDICT):
     else: #沒有找到對應的intent
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
             
-            currentMonth = datetime.now().month
+            currentMonth = choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
             type = choice(["蔬菜", "水果", "海鮮"])            
             ingr_inseason = choice(inSeasonDICT[str(currentMonth)+"月"][type])
-            
+
             mscDICT["replySTR"] = "嗨，我是小幫手，你喜歡" + ingr_inseason + "嗎？"
 
             #紀錄
