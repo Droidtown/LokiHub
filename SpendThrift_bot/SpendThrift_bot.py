@@ -53,23 +53,19 @@ import os, sys
 from datetime import datetime
 import csv
 
-#try:
-    # from intent import Loki_accounting
-from intent import Loki_searching_test
-    # from intent import Loki_searching
-#except:
-    # from .intent import Loki_accounting
-    # from intent import Loki_searching_test
-    # from .intent import Loki_searching
 
-# Local import
-# from intent.Loki_accounting import userDefinedDICT
-
-
-# set path
+# set path to SpendThrift_bot
 path_current = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(path_current)
 os.chdir(path_current)
+
+# local import
+from intent import Loki_spend_adv
+from intent import Loki_searching_test
+from function import SaveAccountToCSV
+    
+# Local import
+# from intent.Loki_accounting import userDefinedDICT
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
 USERNAME = "ss96083@gmail.com"
@@ -201,12 +197,13 @@ def runLoki(inputLIST, filterLIST=[]):
                     # 這次指令的意圖為"searching"
                     resultDICT["intent"] = "searching"
 
-                # accounting
-                # if lokiRst.getIntent(index, resultIndex) == "accounting":
-                #     resultDICT = Loki_accounting.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-                #     # 這次指令的意圖為"accounting"
-                #     resultDICT["intent"] = "accounting"
+                # spend_adv
+                if lokiRst.getIntent(index, resultIndex) == "spend_adv":
+                    resultDICT = Loki_spend_adv.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    # 這次指令的意圖為"accounting"
+                    resultDICT["intent"] = "spend_adv"
 
+                
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
     
@@ -286,80 +283,6 @@ def testIntent():
     inputLIST = ['收入3000','50040支出','53000收入','支出2000元','收入5000元','50040元支出','53000元收入','去814支出300','去814支出300元','去814收入1300元','去小七支出3400','去小7收入1300元','去全聯支出3200元','支出12000，醫藥費','支出12000元，醫藥費','收入15000，中大樂透','收入15000元，中大樂透','我跟我朋友去814閒逛了兩個小時，支出3000元']
     testLoki(inputLIST, ['accounting'])
     print("")
-
-
-"""
-SaveAccoutToCSV(Json data, string filename)
-"""
-def SaveAccountToCSV(data, filename='testUser.csv'):
-    """
-    把 data 轉成 .csv 格式
-    """
-    # 金額
-    result = data["amount"]
-    
-    # 時間
-    result += ", " + data["time"]
-        
-    # 結束
-    result +=  "\n"    
-    
-    # initialize
-    if not os.path.exists("./user_data/" + filename):
-        with open("./user_data/" + filename, 'w', encoding="utf-8") as f:
-            f.write("amount, time\n" + result)
-            f.close()
-
-    else:
-        with open("./user_data/" + filename, 'a', encoding="utf-8") as f:
-            f.write(result)
-            f.close()
-
-# 從 [username].csv 中讀取資料
-def GetDataByCondition(username="testUser", condition="all"):
-    # open csv
-    with open("./user_data/" + username + ".csv", 'r', encoding="utf-8") as f:
-        # read data
-        reader = csv.reader(f)
-
-        # get data by condition
-        totalMoney = 0
-
-        # 管他的
-        if condition == "all":
-            for row in reader:
-                # 忽略欄位說明
-                if row[0] == "amount":
-                    pass
-                # 計算
-                else:
-                    totalMoney += int(row[0])
-
-        # 收入
-        elif condition == "earn":
-            for row in reader:
-                # 忽略欄位說明
-                if row[0] == "amount":
-                    pass
-                # 計算
-                else:
-                    if int(row[0]) > 0:
-                        totalMoney += int(row[0])
-        # 收入
-        elif condition == "cost":
-            for row in reader:
-                # 忽略欄位說明
-                if row[0] == "amount":
-                    pass
-                # 計算
-                else:
-                    if int(row[0]) < 0:
-                        totalMoney += int(row[0])
-            totalMoney=0-totalMoney #暫時的
-
-        else:
-            print("你這個敗家子，連存資料都給我存錯:(")
-        return totalMoney
 
 
 
