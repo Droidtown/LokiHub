@@ -28,7 +28,7 @@ def debugInfo(inputSTR, utterance):
     if DEBUG_which_season:
         print("[which_season] {} ===> {}".format(inputSTR, utterance))
 
-def getResult(inputSTR, utterance, args, resultDICT):
+def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     debugInfo(inputSTR, utterance)
 
     resultDICT["which_season"] = True
@@ -55,7 +55,12 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["ingredient"] = args[0]
 
     if utterance == "[海膽]是[幾月]的[食材]":
-        resultDICT["ingredient"] = args[0]
+        if "[葡萄]是[當季]水果嗎" in all_utt:
+            resultDICT.pop("which_season")
+        elif "[烏魚子]是[當季]食材嗎" in all_utt:
+            resultDICT.pop("which_season")
+        else:
+            resultDICT["ingredient"] = args[0]
 
     if utterance == "[海膽] 盛產季":
         resultDICT["ingredient"] = args[0]

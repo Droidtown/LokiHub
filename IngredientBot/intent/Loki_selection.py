@@ -28,7 +28,7 @@ def debugInfo(inputSTR, utterance):
     if DEBUG_selection:
         print("[selection] {} ===> {}".format(inputSTR, utterance))
 
-def getResult(inputSTR, utterance, args, resultDICT):
+def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     debugInfo(inputSTR, utterance)
 
     resultDICT["selection"] = True

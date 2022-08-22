@@ -112,7 +112,6 @@ def model(mscDICT):
     logging.info("Loki 回傳的結果: {}".format(resultDICT))
     
     if len(resultDICT) > 0: #有找到對應的intent
-
         #intent = check，想確認這項食材是不是當季
         if "check" in resultDICT.keys():
             ingr = findIngredient(resultDICT, mscDICT)
@@ -276,7 +275,7 @@ def model(mscDICT):
         #紀錄本次的intent
         mscDICT["intent"] = []
         for key in resultDICT.keys():
-            if key not in ['ingredient', 'time']:
+            if key not in ['ingredient', 'time' 'type']:
                 mscDICT["intent"].append(key)
 
     else: #沒有找到對應的intent

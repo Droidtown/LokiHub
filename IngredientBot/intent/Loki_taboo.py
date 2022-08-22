@@ -29,7 +29,7 @@ def debugInfo(inputSTR, utterance):
         print("[taboo] {} ===> {}".format(inputSTR, utterance))
 
 
-def getResult(inputSTR, utterance, args, resultDICT):
+def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     debugInfo(inputSTR, utterance)
 
     resultDICT["taboo"] = True

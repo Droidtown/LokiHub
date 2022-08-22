@@ -28,7 +28,7 @@ def debugInfo(inputSTR, utterance):
     if DEBUG_InSeason:
         print("[InSeason] {} ===> {}".format(inputSTR, utterance))
 
-def getResult(inputSTR, utterance, args, resultDICT):
+def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     debugInfo(inputSTR, utterance)
     
     resultDICT["inseason"] = True
@@ -73,7 +73,16 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["type"] = args[3]
 
     if utterance == "有什麼[水果]":
-        resultDICT["type"] = args[0]
+        if '有什麼禁忌' in all_utt:
+            resultDICT.pop("inseason")
+        elif "[芭樂]有什麼禁忌" in all_utt:
+            resultDICT.pop("inseason")
+        elif "[紅棗]有甚麼料理" in all_utt:
+            resultDICT.pop("inseason")
+        elif "[葡萄]有什麼料理方式" in all_utt:
+            resultDICT.pop("inseason")
+        else:
+            resultDICT["type"] = args[0]
 
     if utterance == "有什麼[當季][食材]":
         resultDICT["time"] = args[0]
@@ -83,7 +92,15 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["time"] = args[0]
 
     if utterance == "[當季][食材]有啥":
-        resultDICT["time"] = args[0]
-        resultDICT["type"] = args[1]
+
+        if "[現在]的[當季][食材]有哪些" in all_utt:
+            resultDICT.pop("inseason")
+        elif "[你]知道[七月]的[當令][食材]有哪些嗎" in all_utt:
+            resultDICT.pop("inseason")
+        elif "[我]想知道[三月]的[當令][食材]有哪些" in all_utt:
+            resultDICT.pop("inseason")
+        else:
+            resultDICT["time"] = args[0]
+            resultDICT["type"] = args[1]
 
     return resultDICT

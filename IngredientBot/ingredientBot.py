@@ -152,53 +152,61 @@ def runLoki(inputLIST, filterLIST=[]):
        #"key": []
     }
     lokiRst = LokiResult(inputLIST, filterLIST)
+
+    all_utt = []
+    if lokiRst.getStatus():
+        for index, key in enumerate(inputLIST):
+            for resultIndex in range(0, lokiRst.getLokiLen(index)):
+                all_utt.append(lokiRst.getUtterance(index, resultIndex))
+    print(all_utt)
+
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
                 # CheckInSeason
                 if lokiRst.getIntent(index, resultIndex) == "CheckInSeason":
-                    resultDICT = Loki_CheckInSeason.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_CheckInSeason.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
 
                 # taboo
                 if lokiRst.getIntent(index, resultIndex) == "taboo":
-                    resultDICT = Loki_taboo.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_taboo.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
 
                 # reject
                 if lokiRst.getIntent(index, resultIndex) == "reject":
-                    resultDICT = Loki_reject.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_reject.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
 
                 # selection
                 if lokiRst.getIntent(index, resultIndex) == "selection":
-                    resultDICT = Loki_selection.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_selection.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
 
                 # price
                 if lokiRst.getIntent(index, resultIndex) == "price":
-                    resultDICT = Loki_price.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_price.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
 
                 # recipe
                 if lokiRst.getIntent(index, resultIndex) == "recipe":
-                    resultDICT = Loki_recipe.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_recipe.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
 
                 # InSeason
                 if lokiRst.getIntent(index, resultIndex) == "InSeason":
-                    resultDICT = Loki_InSeason.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_InSeason.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
 
                 # capability
                 if lokiRst.getIntent(index, resultIndex) == "capability":
-                    resultDICT = Loki_capability.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_capability.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
 
                 # all_ingre
                 if lokiRst.getIntent(index, resultIndex) == "all_ingre":
                     resultDICT = Loki_all_ingre.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), 
-            resultDICT)
+            resultDICT, all_utt)
 
                 # recommend
                 if lokiRst.getIntent(index, resultIndex) == "recommend":
-                    resultDICT = Loki_recommend.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_recommend.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
 
                 # which_season
                 if lokiRst.getIntent(index, resultIndex) == "which_season":
-                    resultDICT = Loki_which_season.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_which_season.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}

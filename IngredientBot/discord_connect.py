@@ -7,6 +7,7 @@ import json
 from datetime import datetime
 
 import model_related as mr
+import ingredientBot as ib
 
 logging.basicConfig(level=logging.INFO) 
 # ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
@@ -54,8 +55,8 @@ class BotClient(discord.Client):
             return None
 
         #bot點名
-        elif message.content.lower().replace(" ", "") in ("bot點名"):
-            await message.reply("有！")
+        #elif message.content.lower().replace(" ", "") in ("bot點名"):
+        #    await message.reply("有！")
 
         #當bot被呼叫到
         if client.user.mentioned_in(message):
@@ -64,10 +65,14 @@ class BotClient(discord.Client):
             msgSTR = message.content.replace("<@{}> ".format(client.user.id), "").strip()
 
             #測試訊息
-            if msgSTR in '呼叫機器人':
+            if '呼叫機器人' in msgSTR:
                 await message.reply('幹嘛')
                 return None
 
+            if '測試所有意圖' in msgSTR:
+                ib.testIntent()
+                return None
+            
             #初次對話，init template
             if message.author.id not in self.mscDICT.keys(): 
                 self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
