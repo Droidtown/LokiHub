@@ -77,9 +77,9 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
-    if utterance == "有甚麼[別]的":
-        # write your code here
-        pass
+    #if utterance == "有甚麼[別]的":
+    #    # write your code here
+    #    pass
 
     if utterance == "還有[別]的嗎":
         # write your code here
@@ -98,10 +98,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
         pass
 
     if utterance == "有沒[有]推薦[別]的[食材]":
-        # write your code here
-        pass
-
-    if utterance == "有甚麼[別]的[食材]":
         # write your code here
         pass
 

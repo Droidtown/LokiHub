@@ -45,12 +45,4 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
-    if utterance == "推薦[一道]料理":
-        # write your code here
-        pass
-
-    if utterance == "推薦[一道]料理給[我]":
-        # write your code here
-        pass
-
     return resultDICT

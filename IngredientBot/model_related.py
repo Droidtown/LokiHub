@@ -203,8 +203,8 @@ def model(mscDICT):
                 recipeGroup = "、".join(recipe_result)
                 
                 replySTR0 = "{}，這些都是{}的料理，你可以做看看。".format(recipeGroup, ingr)
-                replySTR1 = "{}的料理有以下這些：{}".format(ingr, recipeGroup)
-                replySTR2 = "{}，你想試試哪一道{}料理？。".format(recipeGroup, ingr)
+                replySTR1 = "{}可以這樣料理：{}".format(ingr, recipeGroup)
+                replySTR2 = "{}，你想做哪一道{}料理？。".format(recipeGroup, ingr)
                 replyLIST = [replySTR0, replySTR1, replySTR2]
 
                 mscDICT["replySTR"] = choice(replyLIST)
@@ -319,6 +319,7 @@ def model(mscDICT):
                 type = mscDICT["type"]
 
             ingr_inseason = inSeason(mscDICT["rejectLIST"], time, type)
+            
             mscDICT["replySTR"] = "那麼" + ingr_inseason + "如何？"
 
             #紀錄
