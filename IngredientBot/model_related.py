@@ -200,7 +200,14 @@ def model(mscDICT):
             ingr = findIngredient(resultDICT, mscDICT)
             recipe_result = recipe(ingr)
             if len(recipe_result) > 0:
-                mscDICT["replySTR"] = recipe_result
+                recipeGroup = "、".join(recipe_result)
+                
+                replySTR0 = "{}，這些都是{}的料理，你可以做看看。".format(recipeGroup, ingr)
+                replySTR1 = "{}的料理有以下這些：{}".format(ingr, recipeGroup)
+                replySTR2 = "{}，你想試試哪一道{}料理？。".format(recipeGroup, ingr)
+                replyLIST = [replySTR0, replySTR1, replySTR2]
+
+                mscDICT["replySTR"] = choice(replyLIST)
             else:
                 mscDICT["replySTR"] = "查不到{}的作法！".format(ingr)
 
