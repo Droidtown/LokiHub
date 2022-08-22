@@ -25,33 +25,33 @@ def checkInSeason(ingredient):
 
 def inSeason(rejectLIST, time, type):
     if time in ["現在", "目前", "今天"]:
-        currentMonth = str(datetime.now().month)+"月"
-    elif "1月" in time:
-        currentMonth = "1月"
-    elif "2月" in time:
-        currentMonth = "2月"
-    elif "3月" in time:
-        currentMonth = "3月"
-    elif "4月" in time:
-        currentMonth = "4月"
-    elif "5月" in time:
-        currentMonth = "5月"
-    elif "6月" in time:
-        currentMonth = "6月"
-    elif "7月" in time:
-        currentMonth = "7月"
-    elif "8月" in time:
-        currentMonth = "8月"
-    elif "9月" in time:
-        currentMonth = "9月"
-    elif "10月" in time:
-        currentMonth = "10月"
-    elif "11月" in time:
-        currentMonth = "11月"
-    elif "12月" in time:
-        currentMonth = "12月"
+        month = str(datetime.now().month)+"月"
+    elif "1月" in time or "一月" in time:
+        month = "1月"
+    elif "2月" in time or "二月" in time:
+        month = "2月"
+    elif "3月" in time or "三月" in time:
+        month = "3月"
+    elif "4月" in time or "四月" in time:
+        month = "4月"
+    elif "5月" in time or "五月" in time:
+        month = "5月"
+    elif "6月" in time or "六月" in time:
+        month = "6月"
+    elif "7月" in time or "七月" in time:
+        month = "7月"
+    elif "8月" in time or "八月" in time:
+        month = "8月"
+    elif "9月" in time or "九月" in time:
+        month = "9月"
+    elif "10月" in time or "十月" in time:
+        month = "10月"
+    elif "11月" in time or "十一月" in time:
+        month = "11月"
+    elif "12月" in time or "十二月" in time:
+        month = "12月"
     else:
-        currentMonth = str(datetime.now().month)+"月"
+        month = str(datetime.now().month)+"月"
 
     if "蔬菜" in type:
         type = "蔬菜"
@@ -62,10 +62,10 @@ def inSeason(rejectLIST, time, type):
     else:
         type = choice(["蔬菜", "水果", "海鮮"])
 
-    ingr_inseasonLIST = inSeasonDICT[currentMonth][type]
+    ingr_inseasonLIST = inSeasonDICT[month][type]
     ingr_inseason_excludeLIST = [x for x in ingr_inseasonLIST if x not in rejectLIST]
 
-    return choice(ingr_inseason_excludeLIST)
+    return choice(ingr_inseason_excludeLIST), month, type
 
 def price(ingredient):
     table = pd.read_html("http://www.tapmc.com.taipei/")
@@ -121,6 +121,53 @@ def which_season(ingredient):
 
     return season
 
+def all_ingr(time, type):
+    if time in ["現在", "目前", "今天"]:
+        month = str(datetime.now().month)+"月"
+    elif "1月" in time or "一月" in time:
+        month = "1月"
+    elif "2月" in time or "二月" in time:
+        month = "2月"
+    elif "3月" in time or "三月" in time:
+        month = "3月"
+    elif "4月" in time or "四月" in time:
+        month = "4月"
+    elif "5月" in time or "五月" in time:
+        month = "5月"
+    elif "6月" in time or "六月" in time:
+        month = "6月"
+    elif "7月" in time or "七月" in time:
+        month = "7月"
+    elif "8月" in time or "八月" in time:
+        month = "8月"
+    elif "9月" in time or "九月" in time:
+        month = "9月"
+    elif "10月" in time or "十月" in time:
+        month = "10月"
+    elif "11月" in time or "十一月" in time:
+        month = "11月"
+    elif "12月" in time or "十二月" in time:
+        month = "12月"
+    else:
+        month = str(datetime.now().month)+"月"
+
+    if "蔬菜" in type:
+        type = "蔬菜"
+    elif "水果" in type:
+        type = "水果"
+    elif "海鮮" in type:
+        type = "海鮮"
+    else:
+        type = "食材"
+
+    if type == "食材":
+        all_ingr_inseasonLIST = inSeasonDICT[month]["蔬菜"] + inSeasonDICT[month]["水果"] + inSeasonDICT[month]["海鮮"]
+    else:
+        all_ingr_inseasonLIST = inSeasonDICT[month][type]
+
+    return all_ingr_inseasonLIST, month, type
+
+
 def findIngredient(resultDICT, mscDICT):
     if "ingredient" in resultDICT.keys():
         ingredient = resultDICT["ingredient"]
@@ -166,17 +213,23 @@ def model(mscDICT):
             else:
                 type = ""
             
-            ingr_inseason = inSeason(mscDICT["rejectLIST"], time, type)
+            ingr_inseason, res_time, res_type = inSeason(mscDICT["rejectLIST"], time, type)
 
-            if type == "":
-                mscDICT["replySTR"] = "{}最好吃的是{}哦！".format(time, ingr_inseason)
+            if type == "" or  type == "食材":
+                if time == "":
+                    mscDICT["replySTR"] = "現在最好吃的是{}哦！".format(ingr_inseason)
+                else:
+                    mscDICT["replySTR"] = "{}最好吃的是{}哦！".format(res_time, ingr_inseason)
             else:
-                mscDICT["replySTR"] = "你喜歡吃{}呀？{}最好吃的是{}哦！".format(type, time, ingr_inseason)
+                if time == "":
+                    mscDICT["replySTR"] = "你喜歡吃{}呀？現在最好吃的是{}哦！".format(res_type, ingr_inseason)
+                else:
+                    mscDICT["replySTR"] = "你喜歡吃{}呀？{}最好吃的是{}哦！".format(res_type, res_time, ingr_inseason)
 
             #紀錄
             mscDICT["ingredient"] = ingr_inseason
-            mscDICT["time"] = time
-            mscDICT["type"] = type
+            mscDICT["time"] = res_time
+            mscDICT["type"] = res_type
 
         #intent = reject
         if "reject" in resultDICT.keys():
@@ -188,6 +241,7 @@ def model(mscDICT):
                 time = "現在"
             else:
                 time = mscDICT["time"]
+            
             if mscDICT["type"] == "":
                 type = choice(["蔬菜", "水果", "海鮮"])
             else:
@@ -286,15 +340,27 @@ def model(mscDICT):
         #intent = all_ingr，想知道所有當季食材
         if "all_ingr" in resultDICT.keys():
             if "time" in resultDICT.keys():
-                if "月" in resultDICT["time"]:
-                    time = resultDICT["time"]
-                elif resultDICT["time"] in ["現在", "目前", "今天"]:
-                    time = str(datetime.now().month)+"月"
+                time = resultDICT["time"]
             else:
-                time = str(datetime.now().month)+"月"
+                time = ""
+            if "type" in resultDICT.keys():
+                type = resultDICT["type"]
+            else:
+                type = ""
 
-            all_current_ingreLIST = inSeasonDICT[time]
-            mscDICT["replySTR"] = all_current_ingreLIST["蔬菜"]+all_current_ingreLIST["水果"]+all_current_ingreLIST["海鮮"]
+            all_ingrLIST, res_time, res_type = all_ingr(time, type)
+
+            all_ingrGroup = "、".join(all_ingrLIST)
+            if type == "":
+                if time == "":
+                    mscDICT["replySTR"] = "這些全是現在的當季食材：{}".format(all_ingrGroup)
+                else:
+                    mscDICT["replySTR"] = "這些全是{}的當季食材：{}".format(res_time, all_ingrGroup)
+            else:
+                if time == "":
+                    mscDICT["replySTR"] = "這些全是現在的當季{}：{}".format(res_type, all_ingrGroup)
+                else:
+                    mscDICT["replySTR"] = "這些全是{}的當季{}：{}".format(res_time, res_type, all_ingrGroup)
 
         #紀錄本次的intent
         mscDICT["intent"] = []

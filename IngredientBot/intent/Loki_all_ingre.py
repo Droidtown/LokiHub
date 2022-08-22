@@ -41,15 +41,15 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
 
     if utterance == "[現在]的[當季][食材]有哪些":
         resultDICT["time"] = args[0]
-        resultDICT["type"] = args[2]
+        resultDICT["type"] = args[1]
 
     if utterance == "[你]知道[七月]的[當令][食材]有哪些嗎":
         resultDICT["time"] = args[1]
-        resultDICT["type"] = args[3]
+        resultDICT["type"] = args[2]
 
     if utterance == "[我]想知道[三月]的[當令][食材]有哪些":
         resultDICT["time"] = args[1]
-        resultDICT["type"] = args[3]
+        resultDICT["type"] = args[2]
 
     if utterance == "[你][可以]跟[我]說[所有]的[當季][食材]嗎":
         resultDICT["type"] = args[5]
