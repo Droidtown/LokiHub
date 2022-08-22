@@ -34,28 +34,25 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     resultDICT["all_ingr"] = True
 
     if utterance == "[你][能]列出[所有]的[當季][食材]嗎":
-        # write your code here
-        pass
+        resultDICT["type"] = args[4]
 
     if utterance == "[我]想知道[所有]的[當季][食材]":
-        # write your code here
-        pass
+        resultDICT["type"] = args[3]
 
     if utterance == "[現在]的[當季][食材]有哪些":
-        if "[當季][食材]有啥" in all_utt:
-            resultDICT.pop("all_ingr")
+        resultDICT["time"] = args[0]
+        resultDICT["type"] = args[2]
 
     if utterance == "[你]知道[七月]的[當令][食材]有哪些嗎":
-        # write your code here
-        pass
+        resultDICT["time"] = args[1]
+        resultDICT["type"] = args[3]
 
     if utterance == "[我]想知道[三月]的[當令][食材]有哪些":
-        # write your code here
-        pass
+        resultDICT["time"] = args[1]
+        resultDICT["type"] = args[3]
 
     if utterance == "[你][可以]跟[我]說[所有]的[當季][食材]嗎":
-        # write your code here
-        pass
+        resultDICT["type"] = args[5]
 
     if utterance == "[所有][當季][食材]":
         if "[葡萄]是[當季]水果嗎" in all_utt:
@@ -81,6 +78,6 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         elif "[海膽]是[幾月]產的食材" in all_utt:
             resultDICT.pop("all_ingr")
         else:
-            pass
+            resultDICT["type"] = args[2]
 
     return resultDICT

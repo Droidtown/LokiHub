@@ -24,14 +24,45 @@ def checkInSeason(ingredient):
         return False
 
 def inSeason(rejectLIST, time, type):
-    if type == "":
-        type = choice(["蔬菜", "水果", "海鮮"])
     if time in ["現在", "目前", "今天"]:
-        currentMonth = datetime.now().month
+        currentMonth = str(datetime.now().month)+"月"
+    elif "1月" in time:
+        currentMonth = "1月"
+    elif "2月" in time:
+        currentMonth = "2月"
+    elif "3月" in time:
+        currentMonth = "3月"
+    elif "4月" in time:
+        currentMonth = "4月"
+    elif "5月" in time:
+        currentMonth = "5月"
+    elif "6月" in time:
+        currentMonth = "6月"
+    elif "7月" in time:
+        currentMonth = "7月"
+    elif "8月" in time:
+        currentMonth = "8月"
+    elif "9月" in time:
+        currentMonth = "9月"
+    elif "10月" in time:
+        currentMonth = "10月"
+    elif "11月" in time:
+        currentMonth = "11月"
+    elif "12月" in time:
+        currentMonth = "12月"
     else:
-        print(time)
-        currentMonth = datetime.now().month #
-    ingr_inseasonLIST = inSeasonDICT[str(currentMonth)+"月"][type]
+        currentMonth = str(datetime.now().month)+"月"
+
+    if "蔬菜" in type:
+        type = "蔬菜"
+    elif "水果" in type:
+        type = "水果"
+    elif "海鮮" in type:
+        type = "海鮮"
+    else:
+        type = choice(["蔬菜", "水果", "海鮮"])
+
+    ingr_inseasonLIST = inSeasonDICT[currentMonth][type]
     ingr_inseason_excludeLIST = [x for x in ingr_inseasonLIST if x not in rejectLIST]
 
     return choice(ingr_inseason_excludeLIST)
@@ -129,16 +160,9 @@ def model(mscDICT):
             if "time" in resultDICT.keys():
                 time = resultDICT["time"]
             else:
-                time = "現在"
+                time = ""
             if "type" in resultDICT.keys():
-                if "蔬菜" in resultDICT["type"]:
-                    type = "蔬菜"
-                elif "水果" in resultDICT["type"]:
-                    type = "水果"
-                elif "海鮮" in resultDICT["type"]:
-                    type = "海鮮"
-                else:
-                    type = ""
+                type = resultDICT["type"]
             else:
                 type = ""
             
