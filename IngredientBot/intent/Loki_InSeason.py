@@ -81,6 +81,10 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
             resultDICT.pop("inseason")
         elif "[葡萄]有什麼料理方式" in all_utt:
             resultDICT.pop("inseason")
+        elif "有甚麼[紫甘藍]的作法" in all_utt:
+            resultDICT.pop("inseason")
+        elif "有甚麼料理" in all_utt:
+            resultDICT.pop("inseason")
         else:
             resultDICT["type"] = args[0]
 

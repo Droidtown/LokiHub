@@ -54,10 +54,6 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         # write your code here
         pass
 
-    if utterance == "還推薦什麼":
-        # write your code here
-        pass
-
     if utterance == "還有什麼？":
 
         if "[杏仁]跟什麼相剋" in all_utt:
@@ -154,6 +150,10 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         elif "[現在]有甚麼[海鮮]" in all_utt:
             resultDICT.pop("reject")
         elif "[現在]有什麼[水果][好吃]" in all_utt:
+            resultDICT.pop("reject")
+        elif "有甚麼[紫甘藍]的作法" in all_utt:
+            resultDICT.pop("reject")
+        elif "有甚麼料理" in all_utt:
             resultDICT.pop("reject")
         else:
             pass

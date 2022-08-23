@@ -102,4 +102,20 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     if utterance == "[梨子]的做法":
         resultDICT["ingredient"] = args[0]
 
+    if utterance == "[他][能]做什麼":
+        pass
+
+    if utterance == "有什麼[大白菜]的料理":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "有甚麼[紫甘藍]的作法":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "有甚麼[紫甘藍]的做法":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "有甚麼料理":
+        # write your code here
+        pass
+
     return resultDICT

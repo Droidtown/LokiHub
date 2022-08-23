@@ -405,7 +405,7 @@ def model(mscDICT):
                     mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 ^_^".format(mscDICT["ingredient"])
 
         #reject
-        elif mscDICT["msgSTR"].lower() in ["討厭"]:
+        elif mscDICT["msgSTR"].lower() in ["討厭", "還有呢"]:
             reject_ingr = findIngredient(resultDICT, mscDICT)
             mscDICT["rejectLIST"].append(reject_ingr)   #紀錄使用者reject過的食材
 
@@ -419,12 +419,13 @@ def model(mscDICT):
             else:
                 type = mscDICT["type"]
 
-            ingr_inseason = inSeason(mscDICT["rejectLIST"], time, type)
-            
+            ingr_inseason, res_time, res_type = inSeason(mscDICT["rejectLIST"], time, type)
             mscDICT["replySTR"] = "那麼" + ingr_inseason + "如何？"
 
             #紀錄
             mscDICT["ingredient"] = ingr_inseason
+            mscDICT["time"] = res_time
+            mscDICT["type"] = res_type
             
         else: #DEFAULT
             mscDICT["replySTR"] = choice(["好喔", "Ok", "繼續問我更多食材問題吧"])

@@ -45,9 +45,15 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         # write your code here
         pass
 
-    #if utterance == "[你][會]什麼":
-    #    # write your code here
-    #    pass
+    if utterance == "[你][會]什麼":
+        if '有甚麼[紫甘藍]的作法' in all_utt:
+            resultDICT.pop("capability")
+        elif '有甚麼料理' in all_utt:
+            resultDICT.pop("capability")
+        elif '還推薦什麼' in all_utt:
+            resultDICT.pop("capability")
+        else:
+            pass
 
     if utterance == "[你]知道什麼":
         # write your code here
@@ -66,6 +72,16 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         pass
 
     if utterance == "那[我]還[可以]問什麼":
+        # write your code here
+        pass
+
+    if utterance == "[你][會]做啥":
+        if '[他][能]做什麼' in all_utt:
+            resultDICT.pop("capability")
+        else:
+            pass
+
+    if utterance == "那[你]還[會]什麼":
         # write your code here
         pass
 

@@ -53,4 +53,8 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         # write your code here
         pass
 
+    if utterance == "還推薦什麼":
+        # write your code here
+        pass
+
     return resultDICT
