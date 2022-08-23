@@ -31,7 +31,7 @@
     └── loki_op.py
 ```
     
-#### Installation
+#### Quick Installation (text only)
 You may install this model under your Droidtown account, then do more detailed adjustment on it. This section explains how to do this. It consisits of 5 steps.
 
 1. Sign up an account in Droidtown [[link](https://nlu.droidtown.co)]
@@ -44,4 +44,26 @@ You may install this model under your Droidtown account, then do more detailed a
 8. Let's go back to the files you've just downloaded. In the "Loki" directory, Change the name of the ***template_account.info*** file into ***account.info*** , then open it and fill in the account.info. 
 The "username" is the email you used to sign in Droidtown.
 The "loki-key" is the **[Loki Project Key]** you just copied in [Step 7].
-9. You are all set. Now you can execute the "MathWord_Solver.py" to do some math. :)
+9. You are all set. Now you can execute the "**MathWord_Solver.py**" to do some math. :)
+
+#### Detailed Installation (with screenshots)
+1. Sign up an account in Droidtown [[link](https://nlu.droidtown.co)]
+<img src="./media/step01.png" alt="step01" width="800"/>
+2. Git clone (or Download) this repository.
+<img src="./media/step02.png" alt="step02" width="800"/>
+3. Sign in your Droidtown account at [[link](https://nlu.droidtown.co)], then click **[Start Loki]** to start Loki NLU system.
+<img src="./media/step03a.png" alt="step03a" width="800"/>
+<img src="./media/step03b.png" alt="step03b" width="800"/>
+4. **[Create a new project]**, and name it whatever you like. (I use "***MWP***" for example)
+<img src="./media/step04.png" alt="step04" width="800"/>
+5. Click in the **[MWP]** project just created, then click **[Browse...]** in the buttom of the page and select the *.ref files downloaded in [Step 2].
+6. Click **[Load Intent]** button and **[Deploy All Models]** button.
+<img src="./media/step05.png" alt="step05" width="800"/>
+7. Click the little house icon on the top left, then click **[Copy]** to get your **[Loki Project Key]**. (almost there)
+<img src="./media/step07.png" alt="step07" width="800"/>
+8. Let's go back to the files you've just downloaded. In the "**Loki**" directory, Change the name of the ***template_account.info*** file into ***account.info*** , then open it and fill in the file **account.info**. 
+The "username" is the email you used to sign in Droidtown.
+The "loki-key" is the **[Loki Project Key]** you just copied in [Step 7].
+<img src="./media/step08.png" alt="step08" width="800"/>
+9. You are all set. Now you can execute the "**MathWord_Solver.py**" to do some math. :)
+<img src="./media/step09.png" alt="step09" width="800"/>
