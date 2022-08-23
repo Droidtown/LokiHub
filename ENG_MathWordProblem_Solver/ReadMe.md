@@ -66,4 +66,4 @@ The "username" is the email you used to sign in Droidtown.
 The "loki-key" is the **[Loki Project Key]** you just copied in [Step 7].
 <img src="./media/step08.png" alt="step08" width="800"/>
 9. You are all set. Now you can execute the "**MathWord_Solver.py**" to do some math. :)
-<img src="./media/step09.png" alt="step09" width="800"/>
+<img src="./media/step09.png" alt="step09" width="400"/>
