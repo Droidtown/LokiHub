@@ -54,6 +54,10 @@ class BotClient(discord.Client):
         if message.author == client.user:
             return None
 
+        #避免bot間互相對話
+        if message.author.bot:
+            return None
+
         #bot點名
         #elif message.content.lower().replace(" ", "") in ("bot點名"):
         #    await message.reply("有！")

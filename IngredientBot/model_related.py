@@ -247,17 +247,29 @@ def model(mscDICT):
             else:
                 type = mscDICT["type"]
 
-            ingr_inseason = inSeason(mscDICT["rejectLIST"], time, type)
+            ingr_inseason, res_time, res_type = inSeason(mscDICT["rejectLIST"], time, type)
             mscDICT["replySTR"] = "那麼" + ingr_inseason + "如何？"
 
             #紀錄
             mscDICT["ingredient"] = ingr_inseason
+            mscDICT["time"] = res_time
+            mscDICT["type"] = res_type
 
         #intent = price，想知道這項食材的價格
         if "price" in resultDICT.keys():
             ingr = findIngredient(resultDICT, mscDICT)
-            if datetime.today().weekday() == 0: #星期一休市
-                mscDICT["replySTR"] = "今日休市"
+            
+            close_time0 = datetime.strptime(str(datetime.now().date())+'0:00', '%Y-%m-%d%H:%M')
+            close_time1 =  datetime.strptime(str(datetime.now().date())+'7:30', '%Y-%m-%d%H:%M')
+            n_time = datetime.now()
+            n_weekday = datetime.today().weekday()
+
+            if n_weekday == 0:
+                mscDICT["replySTR"] = "星期一休市"
+            
+            elif close_time0 < n_time and n_time < close_time1:
+                mscDICT["replySTR"] = "食材尚在運送拍賣中"
+
             else:
                 ingr_priceDICT = price(ingr)
                 if len(ingr_priceDICT) > 0:
@@ -369,7 +381,7 @@ def model(mscDICT):
                 mscDICT["intent"].append(key)
 
     else: #沒有找到對應的intent
-        if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早"]:
+        if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早", "HIHI"]:
             
             currentMonth = choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
             type = choice(["蔬菜", "水果", "海鮮"])            
@@ -414,8 +426,8 @@ def model(mscDICT):
             #紀錄
             mscDICT["ingredient"] = ingr_inseason
             
-        else:
-            mscDICT["replySTR"] = "好喔"
+        else: #DEFAULT
+            mscDICT["replySTR"] = choice(["好喔", "Ok", "繼續問我更多食材問題吧"])
     
         #紀錄本次的intent
         mscDICT["intent"] = []
