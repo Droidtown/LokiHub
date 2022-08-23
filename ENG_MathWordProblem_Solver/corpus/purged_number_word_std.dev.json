@@ -1,0 +1,614 @@
+[
+    {
+        "postve_num": ["One number is 3 less than a second number"],
+        "multiplicand": ["Twice the second number is 12 less than 5 times the first"],
+        "quest_goal": ["Find the two numbers."],
+        "full_text": "One number is 3 less than a second number. Twice the second number is 12 less than 5 times the first. Find the two numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x + 3 = y",
+            "equ: 2*y + 12 = 5*x"
+        ]
+    },
+    {
+        "postve_num": ["two numbers whose sum is 62"],
+        "negtve_num": ["whose difference is  6"],
+        "multiplicand": ["find two numbers"],
+        "quest_goal": [],
+        "full_text": "Find two numbers whose sum is 62 and whose difference is  6.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=62",
+            "equ: x-y=6"
+        ]
+    },
+    {
+        "postve_num": ["the sum of two numbers is 68"],
+        "negtve_num": ["their difference is 16"],
+        "multiplicand": [],
+        "quest_goal": ["what are the numbers"],
+        "full_text": "the sum of two numbers is 68. their difference is 16. what are the numbers?",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=68",
+            "equ: x-y=16"
+        ]
+    },
+    {
+        "postve_num": ["the sum of two numbers is 97"],
+        "negtve_num": ["the difference of the two numbers is 57"],
+        "multiplicand": [],
+        "quest_goal": ["find the two numbers"],
+        "full_text": "the sum of two numbers is 97. the difference of the two numbers is 57. find the two numbers",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=97",
+            "equ: x-y=57"
+        ]
+    },
+    {
+        "postve_num": ["the sum of two numbers is 18"],
+        "multiplicand": ["their difference is 22"],
+        "quest_goal": ["what are the numbers"],
+        "full_text": "the sum of two numbers is 18. their difference is 22. what are the numbers?",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=18",
+            "equ: x-y=22"
+        ]
+    },
+    {
+        "postve_num": ["the sum is 36"],
+        "negtve_num": ["the difference is 9"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "bg_setting": ["I have two numbers"],
+        "full_text": "I have two numbers. the sum is 36 and the difference is 9. what are the two numbers?",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=36",
+            "equ: x-y=9"
+        ]
+    },
+    {
+        "postve_num": ["The sum of 2 integers is 36"],
+        "negtve_num": ["The difference of the same 2 numbers is 4"],
+        "multiplicand": [],
+        "quest_goal": ["Find the integers"],
+        "full_text": "The sum of 2 integers is 36. The difference of the same 2 numbers is 4. Find the integers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=36",
+            "equ: y-x=4"
+        ]
+    },
+    {
+        "postve_num": ["their sum is 37"],
+        "negtve_num": ["The difference of two numbers is 9"],
+        "multiplicand": [],
+        "quest_goal": ["what are the numbers"],
+        "full_text": "The difference of two numbers is 9 and their sum is 37. what are the numbers?",
+        "equations": [
+            "unkn: x,y",
+            "equ: x-y=9",
+            "equ: x+y=37"
+        ]
+    },
+    {
+        "postve_num": ["The sum of the numbers is thirty-three"],
+        "negtve_num": ["One number is seven less than another number"],
+        "multiplicand": [],
+        "quest_goal": ["find the numbers"],
+        "full_text": "One number is seven less than another number. The sum of the numbers is thirty-three. Find the numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x=y-7",
+            "equ: x+y=33"
+        ]
+    },
+    {
+        "postve_num": ["their sum is 88"],
+        "negtve_num": ["The difference between two numbers is 24"],
+        "multiplicand": ["find the numbers"],
+        "quest_goal": [],
+        "full_text": "The difference between two numbers is 24. Find the numbers if their sum is 88.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x-y=24",
+            "equ: x+y=88"
+        ]
+    },
+    {
+        "postve_num": ["The sum of the numbers is 28"],
+        "negtve_num": ["A number is 12 less than another"],
+        "multiplicand": [],
+        "quest_goal": ["find the numbers"],
+        "full_text": "A number is 12 less than another.  The sum of the numbers is 28.  find the Numbers.",
+        "equations": [
+            "unkn: m,n",
+            "equ: m = n - 12",
+            "equ: m + n = 28"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is twenty-three", "the larger number is five more than the smaller number"],
+        "multiplicand": [],
+        "quest_goal": ["Find these numbers"],
+        "full_text": "The sum of two numbers is twenty-three, and the larger number is five more than the smaller number. Find these numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x + y = 23",
+            "equ: x = 5 + y"
+        ]
+    },
+    {
+        "postve_num": ["with sum 10"],
+        "multiplicand": ["and product 20"],
+        "quest_goal": ["Find two numbers"],
+        "full_text": "Find two numbers with sum 10 and product 20.",
+        "equations": [
+            "unkn: x, y",
+            "equ: x + y = 10",
+            "equ: x * y = 20"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is 64"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of two numbers is 64. If twice the smaller number is subtracted from the larger number, the result is 16. Find the two numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=64",
+            "equ: y - 2*x = 16"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is 91"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of two numbers is 91.  The larger number is 1 more than 4 times the smaller number. Find the numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x + y = 91",
+            "equ: x = 1 + 4*y"
+        ]
+    },
+    {
+        "postve_num": ["One positive integer is 3 less than a second positive integer"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "One positive integer is 3 less than a second positive integer. The sum of the squares of the two integers is 65. Find both positive integers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+3=y",
+            "equ: x^2+y^2=65",
+            "equ: x>0"
+        ]
+    },
+    {
+        "postve_num": ["The sum of the digits of a two digit number is 8"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of the digits of a two digit number is 8. When the digits are reversed, the number is increased by 36. Find the number.",
+        "equations": [
+            "unkn: 10*x+y",
+            "equ: x+y=8",
+            "equ: 10*x+y+36=10*y+x"
+        ]
+    },
+    {
+        "postve_num": ["the sum of the digits of a two digit number is 15"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "the sum of the digits of a two digit number is 15. if the digits are interchanged the result exceeds the original number by 9. find the number.",
+        "equations": [
+            "unkn: x+10*y",
+            "equ: x+y=15",
+            "equ: (10*x+y)-(x+10*y)=9"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is 42"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of two numbers is 42. one number is 3 less than 4 times the other number. what are the numbers?",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=42",
+            "equ: x = 4*y - 3"
+        ]
+    },
+    {
+        "postve_num": ["the sum of the numbers is 330"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "One number is 3 less than twice another number.  If the sum of the numbers is 330, find the two numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x=2*y-3",
+            "equ: x+y=330"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is fourteen"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of two numbers is fourteen. The sum of the squares of the two numbers is one hundred thirty. Find the two numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x + y = 14",
+            "equ: x^2 + y^2 = 130"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two integers is 10"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of two integers is 10. Three times the larger integer is three less than eight times the smaller integer. Find the integers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=10",
+            "equ: 3*y+3=8*x"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two integers is twenty-nine"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of two integers is twenty-nine. Eight times the smaller integer is eleven more than five times the larger integer. Find the integers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=29",
+            "equ: 8*x=5*y+11"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is 125"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of two numbers is 125. Five times one number minus three times the other is 41. Find the numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x + y = 125",
+            "equ: 5*x - 3*y = 41"
+        ]
+    },
+    {
+        "postve_num": ["their sum is 164"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "one number is three times another number and their sum is 164. find the number?",
+        "equations": [
+            "unkn: x",
+            "equ: x=3*y",
+            "equ: x+y=164"
+        ]
+    },
+
+    {
+        "postve_num": ["one number is 11 more than another number"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "one number is 11 more than another number. Find the two numbers if three times the larger exceeds four times the smaller number by 4.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x=y+11",
+            "equ: 3*x=4*y+4"
+        ]
+    },
+
+    {
+        "postve_num": ["The sum of two numbers is 574"],
+        "multiplicand": ["One number is six times the other"],
+        "quest_goal": ["Find the larger number"],
+        "full_text": "The sum of two numbers is 574. One number is six times the other. Find the larger number.",
+        "equations": [
+            "unkn: x",
+            "equ: x + y = 574",
+            "equ: x = 6*y"
+        ]
+    },
+    {
+        "postve_num": ["one number is 11 less than the other number", "their sum is -9"],
+        "multiplicand": [],
+        "quest_goal": ["find the two numbers"],
+        "full_text": "one number is 11 less than the other number. If their sum is -9, find the two numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+11=y",
+            "equ: x+y=-9"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two positive integers is 1,287"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of two positive integers is 1,287. If the larger number is 9 And 1/2 more than 2 And 1/2 times the smaller number, then what are the two numbers?",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=1287",
+            "equ: x-9-1/2=(2+1/2)y"
+        ]
+    },
+    {
+        "postve_num": ["The sum of the digits of two digits number is 9"],
+        "negtve_num": ["the units digit is 5 more than the ten's digit"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of the digits of two digits number is 9. If the units digit is 5 more than the ten's digit, What is the number?",
+        "equations": [
+            "unkn: 10*x+y",
+            "equ: x+y=9",
+            "equ: y-x=5"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is 87"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of two numbers is 87. Three times the smaller plus twice the larger is 216. Find the larger number.",
+        "equations": [
+            "unkn: y",
+            "equ: x+y=87",
+            "equ: 3*x+2*y=216"
+        ]
+    },
+    {
+        "postve_num": ["whose sum AND product are 11"],
+        "multiplicand": ["whose sum AND product are 11"],
+        "quest_goal": ["Find 2 numbers"],
+        "full_text": "Find 2 numbers whose sum AND product are 11.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x + y = 11",
+            "equ: xy = 11"
+        ]
+    },
+    {
+        "postve_num": ["the sum of two numbers is 120"],
+        "multiplicand": ["the larger number is 4 times the smaller number"],
+        "quest_goal": [],
+        "full_text": "the sum of two numbers is 120. if the larger number is 4 times the smaller number, find the two numbers?",
+        "equations": [
+            "unkn: x,y",
+            "equ: x + y = 120",
+            "equ: x = 4*y"
+        ]
+    },
+    {
+        "postve_num": ["their sum is 48"],
+        "multiplicand": ["a number is twice another number"],
+        "quest_goal": ["find the numbers"],
+        "full_text": "a number is twice another number. if their sum is 48 find the numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x = 2*y",
+            "equ: x + y = 48"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is 42"],
+        "multiplicand": ["One number is 2 times as large as the other"],
+        "quest_goal": ["What are the numbers"],
+        "full_text": "The sum of two numbers is 42. One number is 2 times as large as the other. What are the numbers?",
+        "equations": [
+            "unkn: x,y",
+            "equ: x=2*y",
+            "equ: x+y=42"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is ten"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of two numbers is ten. Three times the larger number is three less than eight times the smaller number. What is the smaller number?",
+        "equations": [
+            "unkn: x",
+            "equ: x+y=10",
+            "equ: 3*y=8*x-3"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is 56"],
+        "negtve_num": ["Their difference is 22"],
+        "multiplicand": [],
+        "quest_goal": ["Find the larger number"],
+        "full_text": "The sum of two numbers is 56. Their difference is 22. Find the larger number.",
+        "equations": [
+            "unkn: x",
+            "equ: x + y = 56",
+            "equ: x - y = 22"
+        ]
+    },
+    {
+        "postve_num": ["whose sum is 23"],
+        "negtve_num": ["the difference of whose squares is 207"],
+        "multiplicand": [],
+        "quest_goal": ["Find two numbers"],
+        "full_text": "Find two numbers whose sum is 23 and the difference of whose squares is 207",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=23",
+            "equ: x^2-y^2=207"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two numbers is 40"],
+        "multiplicand": [],
+        "quest_goal": ["Find the numbers"],
+        "full_text": "The sum of two numbers is 40. The sum of twice the larger and 4 times the smaller is 108. Find the numbers.",
+        "equations": [
+            "unkn: x,y",
+            "equ: x+y=40",
+            "equ: 2*x+4*y=108"
+        ]
+    },
+    {
+        "postve_num": ["the sum of the two digit number is 7"],
+        "reverse_num": ["you reversed the number it was increased by 27"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "the sum of the two digit number is 7, when you reversed the number it was increased by 27. what is the original number?",
+        "equations": [
+            "unkn: n",
+            "equ: n = 10*a + b",
+            "equ: a+b=7",
+            "equ: 10*b+a = 27 + n"
+        ]
+    },
+    {
+        "postve_num": ["The sum of the digits of a two digit number is 9"],
+        "multiplicand": [],
+        "reverse_num": ["If the digits are reversed, the number is increased by 45"],
+        "quest_goal": ["Find the original number"],
+        "full_text": "The sum of the digits of a two digit number is 9. If the digits are reversed, the number is increased by 45. Find the original number.",
+        "equations": [
+            "unkn: m",
+            "equ: m = 10*x + y",
+            "equ: x + y = 9",
+            "equ: 10*y + x = 45 + m"
+        ]
+    },
+    {
+        "postve_num": ["The sum of the first and second number is 3"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of three numbers is 5.  The sum of the first and second number is 3, and the first number is one more than three times the third number.  How many of the numbers are even numbers?",
+        "equations": [
+            "equ: x + y + z= 5",
+            "equ: x + y= 3",
+            "equ: x = 3*z + 1"
+        ]
+    },
+    {
+        "postve_num": ["the sum of its digits is 8", "the sum of the squares of its digits is 50"],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "It is an odd two-digit number, the sum of its digits is 8, the sum of the squares of its digits is 50. What is it?",
+        "equations": [
+            "unkn: 10*x+y",
+            "equ: x+y=8",
+            "equ: x^2+y^2=50"
+        ]
+    },
+    {
+        "postve_num": ["The sum of the digits of a 2-digit number is 7"],
+        "multiplicand": [],
+        "quest_goal": ["Find the number"],
+        "full_text": "The sum of the digits of a 2-digit number is 7. If 27 is added to the number, the result is expressed by the digits in reverse order. Find the number",
+        "equations": [
+            "unkn: n",
+            "equ: n = 10*a + b",
+            "equ: a + b = 7",
+            "equ: n + 27 = 10*b + a"
+        ]
+    },
+    {
+        "postve_num": [],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "Given that a + b = 10 and a^2 - b^2 = 40, find the value of a - b.",
+        "equations": [
+            "unkn: a-b",
+            "equ: a+b=10",
+            "equ: a^2-b^2=40"
+        ]
+    },
+    {
+        "postve_num": ["the sum of the digits of a two digit number is 13"],
+        "multiplicand": [],
+        "quest_goal": ["find the number"],
+        "full_text": "the sum of the digits of a two digit number is 13. The number is 4 more than 5 times the unit digit. find the number.",
+        "equations": [
+            "unkn: n",
+            "equ: n = 10*a + b",
+            "equ: a + b = 13",
+            "equ: n = 4 + 5*b"
+        ]
+    },
+    {
+        "postve_num": [],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of the digits of a 2-digit is 10. If the digits are reversed the new is 18 less than the original. What is the answer?",
+        "equations": [
+            "unkn: m",
+            "equ: m = 10*x + y",
+            "equ: x + y = 10",
+            "equ: 10*y + x = m - 18"
+        ]
+    },
+    {
+        "postve_num": [],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "Find the 3 consecutive integers with the sum of 267.",
+        "equations": [
+            "unkn: x, y, z",
+            "equ: x + 1 = y",
+            "equ: y + 1 = z",
+            "equ: x + y + z = 267"
+        ]
+    },
+    {
+        "postve_num": [],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "Find four consecutive odd integers so that the sum of smallest integer and the largest integer is the same as the sum of the four integers?",
+        "equations": [
+            "unkn: x, y, z, m",
+            "equ: x + 2 = y",
+            "equ: y + 2 = z",
+            "equ: z + 2 = m",
+            "equ: x + m = x + y + z + m"
+        ]
+    },
+    {
+        "postve_num": ["The sum of two consecutive integers is -313"],
+        "multiplicand": [],
+        "quest_goal": ["Find the larger integer"],
+        "full_text": "The sum of two consecutive integers is -313. Find the larger integer?",
+        "equations": [
+            "unkn: y",
+            "equ: x + 1 = y",
+            "equ: x + y = -313"
+        ]
+    },
+    {
+        "postve_num": [],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The first and second terms of a geometric sequence have a sum of 15, while the second and third terms have a sum of 60.  Use an algebraic method to find the first three terms.",
+        "equations": [
+            "unkn: a,ar,a*r^2",
+            "equ: a + ar = 15",
+            "equ: ar + a*r^2 = 60"
+        ]
+    },
+    {
+        "postve_num": [],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "If x + y = 4, and x + z = 9, what is the value of ( y - z)?",
+        "equations": [
+            "unkn: y-z",
+            "equ: x + y = 4",
+            "equ: x + z = 9"
+        ]
+    },
+    {
+        "postve_num": [],
+        "multiplicand": [],
+        "quest_goal": [],
+        "full_text": "The sum of 4 consecutive odd integers is 3 more than 5 times the least of the integers. Find the integers.",
+        "equations": [
+            "unkn: m, n, x, y",
+            "equ: m % 2 = 1",
+            "equ: m + 2 = n",
+            "equ: n + 2 = x",
+            "equ: x + 2 = y",
+            "equ: m + n + x + y = 3 + 5*m"
+        ]
+    }
+]

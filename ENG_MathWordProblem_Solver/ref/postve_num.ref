@@ -1,0 +1,3139 @@
+{
+    "language": "en-us",
+    "type": "basic",
+    "version": {
+        "atk": "v100",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_soup": [
+            "broth",
+            "chowder",
+            "consomme",
+            "consommé",
+            "cream",
+            "cream of chicken",
+            "cream of mushroom",
+            "cream of tomato",
+            "gazpacho",
+            "mulligatawny",
+            "puree",
+            "veloute",
+            "velouté",
+            "vichyssoise"
+        ],
+        "_tmpFix": [
+            "Andrew's",
+            "Dean's"
+        ],
+        "_MassNounUnit": [
+            "block",
+            "bottle",
+            "box",
+            "bucket",
+            "case",
+            "chunk",
+            "cup",
+            "glass",
+            "handful",
+            "mouthful",
+            "pair",
+            "piece",
+            "pile",
+            "string"
+        ]
+    },
+    "utterance": {
+        "In one box": {
+            "id": "a8ea0b2d-1dad-4044-b84c-c4d6f6268946",
+            "argument": [
+                {
+                    "pos": "RANGE_locality",
+                    "text": "In",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "one",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "box",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "with sum 10": {
+            "id": "cd3d63d1-16b0-461a-b220-48c943c65d08",
+            "argument": [
+                {
+                    "pos": "FUNC_inner",
+                    "text": "with",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "sum",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the sum is 36": {
+            "id": "46a4e982-97e6-4e0a-8196-59539ed14393",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "sum",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "36",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "their sum is 88": {
+            "id": "e0596ee9-cfd3-46e3-bf09-56ce1d209f89",
+            "argument": [
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "their",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "sum",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "88",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Billy had 2 books": {
+            "id": "797856dc-7291-4b2d-9e44-f01efb6d0e3f",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Billy",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "2",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "books",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Dan is 6 feet tall": {
+            "id": "10b0f29b-441d-4398-8819-dc357ee2704f",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Dan",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_measurement",
+                    "text": "6 feet",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "tall",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "she has 80 crayons": {
+            "id": "0044888b-6ff9-481b-9f87-4a3859d73b17",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "80",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "crayons",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "there are 7 tables": {
+            "id": "7179bbe4-c146-408d-96ec-bd32dbae9ad6",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "there",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "7",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "tables",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "she drew 54 animals": {
+            "id": "05e50721-c2ca-400b-9161-55caad12c530",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "drag",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "draw",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "54",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "animals",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "7 stacks of brownies": {
+            "id": "2400c847-1e7d-4d6b-a5c0-757612312fb7",
+            "argument": [
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "7 stacks of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "brownies",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "He then bought 1 book": {
+            "id": "6108d527-e694-4a2c-a14b-f81efde2f6ae",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "He",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inter",
+                    "text": "then",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "buy",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "book",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Shiela has 6 neighbors": {
+            "id": "d89a626a-1c1d-41cd-a0d7-1fe349039b3d",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Shiela",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "6",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "neighbors",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "The school has $20,000": {
+            "id": "7c896f4f-9a62-410c-a192-61ed02481ffa",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "The",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "school",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "KNOWLEDGE_currency",
+                    "text": "$20,000",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "If Tom has 3 fly robots": {
+            "id": "29a0dc8d-5344-48aa-a292-a73aeb3b2e6e",
+            "argument": [
+                {
+                    "pos": "FUNC_inter",
+                    "text": "If",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Tom",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "fly",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "robots",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "The tall one is 16 feet": {
+            "id": "4218e151-f0e6-48a4-9238-376ffd3d5697",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "The",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "tall",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "one",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_measurement",
+                    "text": "16 feet",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "there are 6 tennis balls": {
+            "id": "ec993553-9235-41b3-820f-d7426c780972",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "there",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "6",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "tennis",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "balls",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "and 5 stacks of pasta salad": {
+            "id": "093ab462-cc41-4e05-85fe-e7b4c715b3e9",
+            "argument": [
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "5 stacks of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pasta",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "salad",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "two numbers whose sum is 62": {
+            "id": "af725ec1-57f8-4717-8dbb-6f0937579030",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "whose",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "sum",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "62",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "The bag had 102 blue candies": {
+            "id": "691f0f40-167c-4aef-ba36-40d946955f04",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "The",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "bag",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "102",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "blue",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "candies",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "The sum of the numbers is 28": {
+            "id": "5648dbc6-0caa-46fb-87a1-71ba023ffd2f",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "The",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "sum",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "28",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        " there is a stack of 6 bricks": {
+            "id": "111b0216-4b9c-4cb8-9fab-5e89f454c24c",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "there",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "stack of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "6",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "bricks",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Adrianna has 10 pieces of gum": {
+            "id": "51a1d0ee-f9ff-444e-b4b7-2411a920915d",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Adrianna",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "10 pieces of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "gum",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Next to the 3 juice fountains": {
+            "id": "74e8ca65-a6f1-4137-b0c9-51c16e855210",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "Next",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "juice",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "fountains",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "If Michael has 8 animal robots": {
+            "id": "50a53eda-6e63-451f-aff0-4ec6ffd545d5",
+            "argument": [
+                {
+                    "pos": "FUNC_inter",
+                    "text": "If",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Michael",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "animal",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "robots",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "1 of her shots went in the hoop": {
+            "id": "b8ec3bb5-2fcb-4fae-b2ea-784b3cf04e91",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "her",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "shots",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "go in",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "hoop",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "she has 18 paintings of flowers": {
+            "id": "c6aa7ee7-7477-4e2a-ac19-aa05692d178f",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "18 paintings of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "flowers",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Ashley bought a big bag of candy": {
+            "id": "5a0270de-ea30-4ddf-b65f-b943554b5cde",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Ashley",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "buy",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "big",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "bag",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "candy",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "She bought 36 star-shaped stones": {
+            "id": "5593e508-c80e-4947-984a-22f67f62738e",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "She",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "buy",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "36",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "star-shape",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "stones",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Lexie has 32 watercolor paintings": {
+            "id": "0d5d4027-5f72-4f7b-9356-846092513c63",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Lexie",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "32",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "watercolor",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "paintings",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "a stack of 700 sheets of used paper": {
+            "id": "20277991-1237-4862-aed0-06fe0b777730",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "stack of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "700",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "sheets",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "used",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "paper",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "100 red candies and 94 green candies": {
+            "id": "36591e94-44a7-499a-98a9-5c7008e8abb8",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "100",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "red",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "candies",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "94",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "green",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "candies",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "A bricklayer stacks bricks in 2 rows": {
+            "id": "78ea2c48-3fa1-47dd-83c7-a06034866129",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "A",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "bricklayer",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "stacks",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "bricks",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "2",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "rows",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Christian brought a bag of 140 nails": {
+            "id": "641a9a27-fd98-403d-b558-9a7ce450a3a9",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "Christian",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "transport",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "produce",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "procure",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "induce",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "import",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "fetch",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "convey",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "cause",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "carry",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "bear",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "adduce",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "bring",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "bag of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "140",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "nails",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Melissa buys 2 packs of tennis balls": {
+            "id": "de5a5875-e68f-4f7c-bd48-9726a02b5de4",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Melissa",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "buy",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "2 packs of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "tennis",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "balls",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the CN Tower stands at 553 meters high": {
+            "id": "8360b59d-e062-4312-b76b-e26f19254198",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "CN",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "Tower",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "stand",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "at",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_measurement",
+                    "text": "553 meters",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "high",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "the sum of two numbers is twenty-three": {
+            "id": "a979197a-4917-41a0-8293-ec81da689244",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "sum",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "twenty-three",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "After delivering newspapers for 8 weeks": {
+            "id": "4e726665-22a3-4332-a549-46d69582b07e",
+            "argument": [
+                {
+                    "pos": "RANGE_period",
+                    "text": "After",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "utter",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "pronounce",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "liberate",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "give forth",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "discharge",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "deliver",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "newspapers",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "for",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "weeks",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Dave have a ladder that is 14 feet tall": {
+            "id": "94dcd896-c9df-4854-8adf-8b8aa72130aa",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Dave",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "ladder",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "that",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_measurement",
+                    "text": "14 feet",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "tall",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "Betty bought 140 shiny blue round stones": {
+            "id": "30901dfa-17eb-4958-b445-75f606cfefb9",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Betty",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "buy",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "140",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "shiny",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "blue",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "round",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "stones",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "there are 4 stacks of chocolate puddings": {
+            "id": "d2fe73cc-79f8-4717-91ab-1db268eab3de",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "there",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "4 stacks of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "chocolate",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "puddings",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "There are 6 chef assistants and 2 servers": {
+            "id": "a63b3c95-4481-4050-8113-dc400655521b",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "There",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "6",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "chef",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "assistants",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "2",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "servers",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Together with the 5 guitars that the store has": {
+            "id": "13775295-046b-438e-a73e-3f6e922017be",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "Together",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "with",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "the",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "5",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "guitars",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "that",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "the",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "store",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "He went to the library to take out 2 more books": {
+            "id": "1e11fd69-567f-4cb8-860a-0970c06a89e6",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "He",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "go to",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "library",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "take out",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "2",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "more",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "books",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "it is taller than the Space Needle by 369 meters": {
+            "id": "295fa5dd-6580-4ed5-8316-08069593589b",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "it",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "taller",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "than",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "Space",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "Needle",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "by",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_measurement",
+                    "text": "369 meters",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "restaurant receives a shipment of 86 veal cutlets": {
+            "id": "bfff9968-5aa5-416d-a537-8cc7c1e3c8c7",
+            "argument": [
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "restaurant",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "take",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "retain",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "hold",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "allow",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "admit",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "accept",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "receive",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "shipment of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "86",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "veal",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "cutlets",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "she went to the store to get 3 more pieces of gum": {
+            "id": "5c08e658-f573-4169-afdb-f6d250885f14",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "go to",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "store",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "win",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "obtain",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "gain",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "acquire",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "get",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "more",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pieces",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "gum",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the sum of the digits of a two digit number is 15": {
+            "id": "2d45e1e3-705e-4d80-b898-2d61f6e0d8bb",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "sum",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "digits",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "digit",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "15",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Christian to help him place 420 seedlings in packets": {
+            "id": "fabb1891-f100-4f0b-a969-62ce8a0e4929",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "Christian",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "sustain",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "support",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "succor",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "serve",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "relieve",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "befriend",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "assist",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "aid",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "help",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "him",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "place",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "420",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "seedlings",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "packets",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Melissa buys 2 packs of tennis balls for $12 in total": {
+            "id": "438b6038-1572-4b9c-b3f2-321fd8ab8698",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Melissa",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "buy",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "2 packs of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "tennis",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "balls",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "for",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "KNOWLEDGE_currency",
+                    "text": "$12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "total",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "for 3 pack of tomato seeds and 4 pack of pumpkin seeds": {
+            "id": "e60cde3f-8dc6-4f30-9a8b-53bd0eb28b30",
+            "argument": [
+                {
+                    "pos": "FUNC_inner",
+                    "text": "for",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "pack",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "tomato",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "seeds",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "4",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "pack",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pumpkin",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "seeds",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the larger number is five more than the smaller number": {
+            "id": "096a60c0-ef3c-40c3-a379-f811155a1d15",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "larger",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "five",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "more",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "than",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "smaller",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Brenda wanted to have 3 bracelets with star-shaped stones": {
+            "id": "3603ab47-40c3-4118-b4f8-8663c8b402bb",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Brenda",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "want",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "bracelets",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "with",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "star-shaped",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "stones",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "There are 8 classic guitars and 3 classic flutes from the order": {
+            "id": "516cfe6f-8e9b-494f-b24b-580f48b4b0b5",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "There",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "classic",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "guitars",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "classic",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "flutes",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "from",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "order",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "The restaurant has 175 normal chairs and 20 big chairs for babies": {
+            "id": "98de587d-eab2-4fed-9f17-982be73c61c8",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "The",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "restaurant",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "175",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "normal",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "chairs",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "big",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "chairs",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "for",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "babies",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "There are 9 pots of cream of mushroom and 8 pots of vegetable soup": {
+            "id": "7306af55-ba7f-4504-b431-c4f5ac36ec9b",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "There",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "9 pots of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "cream of mushroom",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "8 pots of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "vegetable",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "soup",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "if the digits are interchanged the result exceeds the original number by 9": {
+            "id": "75b57d44-31b5-4d60-a95b-a93ac161ee2a",
+            "argument": [
+                {
+                    "pos": "FUNC_inter",
+                    "text": "if",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "digits",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "interchanged",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "result",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "transcend",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "surpass",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "overtop",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "outvie",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "outstrip",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "outdo",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "excel",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "exceed",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "original",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "by",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "9",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "There are 4 classic violins in the store room and 3 modern violins on display": {
+            "id": "1c3002f3-e9f9-419f-bedf-9a5242df670d",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "There",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "4",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "classic",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "violins",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "store",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "room",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "modern",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "violins",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "on",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "display",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "she went to the store and got 70 pieces of strawberry gum and 10 pieces of bubble gum": {
+            "id": "b0912b9a-2281-4ac4-ab33-48e2b0522941",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "go to",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "store",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "win",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "obtain",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "gain",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "acquire",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "get",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "70 pieces of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "strawberry",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "gum",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "10 pieces of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "bubble",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "gum",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}
