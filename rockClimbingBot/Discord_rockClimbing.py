@@ -7,7 +7,7 @@ import json
 import re
 from datetime import datetime
 from pprint import pprint
-#from rockClimbingBot import runLoki
+from rockClimbing import runLoki
 
 #from <your_loki_main_program> import runLoki
 
@@ -39,7 +39,10 @@ class BotClient(discord.Client):
     async def on_ready(self):
         # ################### Multi-Session Conversation :設定多輪對話資訊 ###################
         self.templateDICT = {"updatetime" : None,
-                             "latestQuest": ""
+                             "latestQuest": "",
+                             "_gym_place":"",
+                             "_gym_time":"",
+                             "_person_loc":""
         }
         self.mscDICT = { #userid:templateDICT
         }
@@ -62,7 +65,7 @@ class BotClient(discord.Client):
             logging.debug("本 bot 被叫到了！")
             msgSTR = message.content.replace("<@{}> ".format(self.user.id), "").strip()
             logging.debug("人類說：{}".format(msgSTR))
-            
+
             if msgSTR == "ping":
                 await message.reply('pong')
             elif msgSTR == "ping ping":
@@ -89,10 +92,36 @@ class BotClient(discord.Client):
 # ##########非初次對話：這裡用 Loki 計算語意
             else: #開始處理正式對話
                 #從這裡開始接上 NLU 模型
-                resulDICT = getLokiResult(msgSTR)
+                resultDICT = getLokiResult(msgSTR)
+
+                #將取回的資訊 update 到人類的 msc 裡。
+
+                #若有地點資訊，可以回答的問題
+                #有區域or地址：附近岩館
+                #
+                if resultDICT["_person_loc"] == None:
+                    replySTR = "請問您在哪裡呢？"
+
+                else:
+                    self.mscDICT[message.author.id]["_person_loc"] = resultDICT["_person_loc"]
+                
+                #有岩館名稱，可回答：營業時間、裝備價格、入館費用、
+                if self.mscDICT[massage.author.id]["_gym_name"] == None:
+                    # if resultDICT["_gym_name"][0] == None:
+                    #     if mscDICT[message.author.id]["_gym_name"] != None:
+                    #         replySTR = None
+                    #     else:
+                    replySTR = ""
+                else:
+                    replySTR = "請問您問的是哪間{}呢？".format(resultDICT["_gym_name"][1])
+
+                #若有時間資訊，可以回答的問題
+
+
+
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resulDICT)
-                
+
         await message.reply(replySTR)
 
 
