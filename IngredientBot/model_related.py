@@ -122,8 +122,13 @@ def which_season(ingredient):
     return season
 
 def all_ingr(time, type):
+
     if time in ["現在", "目前", "今天"]:
         month = str(datetime.now().month)+"月"
+    elif "11月" in time or "十一月" in time:
+        month = "11月"
+    elif "12月" in time or "十二月" in time:
+        month = "12月"
     elif "1月" in time or "一月" in time:
         month = "1月"
     elif "2月" in time or "二月" in time:
@@ -144,10 +149,6 @@ def all_ingr(time, type):
         month = "9月"
     elif "10月" in time or "十月" in time:
         month = "10月"
-    elif "11月" in time or "十一月" in time:
-        month = "11月"
-    elif "12月" in time or "十二月" in time:
-        month = "12月"
     else:
         month = str(datetime.now().month)+"月"
 
