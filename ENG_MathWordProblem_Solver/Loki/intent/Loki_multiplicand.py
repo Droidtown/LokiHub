@@ -722,11 +722,12 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # 3. Assign value to Symbols
         resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
-    if utterance == "One number be 2 times [as] [large] [as] the [other]":
+
+    if utterance == "One number be [2] times [as] [large] [as] the [other]":
         # write your code here
         pass
 
-    if utterance == "One number be six times the [other]":
+    if utterance == "One number be [six] times the [other]":
         # write your code here
         pass
 
@@ -734,7 +735,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
-    if utterance == "[Twice] the second number be 12 [less] [than] 5 times the first":
+    if utterance == "[Twice] the second number be [12] [less] [than] [5] times the first":
         # write your code here
         pass
 
@@ -742,7 +743,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
-    if utterance == "and product 20":
+    if utterance == "and product [20]":
         # write your code here
         pass
 
@@ -758,11 +759,11 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
-    if utterance == "their difference be 22":
+    if utterance == "their difference be [22]":
         # write your code here
         pass
 
-    if utterance == "whose sum AND product be 11":
+    if utterance == "whose sum AND product be [11]":
         # write your code here
         pass
 
