@@ -44,129 +44,6 @@
         ]
     },
     "utterance": {
-        "brand B is $48 per 4 kg": {
-            "id": "575db9ee-97b4-41d9-8551-1af39351587c",
-            "argument": [
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "brand",
-                    "checked": false,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_oov",
-                    "text": "B",
-                    "checked": false,
-                    "checkbox": true
-                },
-                {
-                    "pos": "AUX",
-                    "text": "be",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "KNOWLEDGE_currency",
-                    "text": "$48",
-                    "checked": false,
-                    "checkbox": true
-                },
-                {
-                    "pos": "FUNC_inner",
-                    "text": "per",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_measurement",
-                    "text": "4 kg",
-                    "checked": true,
-                    "checkbox": false
-                }
-            ]
-        },
-        "there are 6 tennis balls": {
-            "id": "aa426f69-6419-4d8a-95bb-cb0d17d0646c",
-            "argument": [
-                {
-                    "pos": "LOCATION",
-                    "text": "there",
-                    "checked": false,
-                    "checkbox": true
-                },
-                {
-                    "pos": "AUX",
-                    "text": "be",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "6",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "tennis",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_oov",
-                    "text": "balls",
-                    "checked": true,
-                    "checkbox": true
-                }
-            ]
-        },
-        "If brand A is $50 for 5 kg": {
-            "id": "61c71183-2af0-40ff-94c6-23d1da4bd561",
-            "argument": [
-                {
-                    "pos": "FUNC_inter",
-                    "text": "If",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "brand",
-                    "checked": false,
-                    "checkbox": true
-                },
-                {
-                    "pos": "FUNC_determiner",
-                    "text": "A",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "AUX",
-                    "text": "be",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "KNOWLEDGE_currency",
-                    "text": "$50",
-                    "checked": false,
-                    "checkbox": true
-                },
-                {
-                    "pos": "FUNC_inner",
-                    "text": "for",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_measurement",
-                    "text": "5 kg",
-                    "checked": true,
-                    "checkbox": false
-                }
-            ]
-        },
         "each glass needs two lemons": {
             "id": "2cbec6dc-8457-47e6-985c-a96e946559f0",
             "argument": [
@@ -257,7 +134,7 @@
                 {
                     "pos": "UserDefined",
                     "text": "piece",
-                    "checked": false,
+                    "checked": true,
                     "checkbox": true
                 },
                 {
@@ -337,42 +214,6 @@
                 {
                     "pos": "ENTITY_noun",
                     "text": "dish",
-                    "checked": true,
-                    "checkbox": true
-                }
-            ]
-        },
-        "Melissa buys 2 packs of tennis balls": {
-            "id": "3092714d-9169-4310-95e6-2cba17a270ed",
-            "argument": [
-                {
-                    "pos": "ENTITY_person",
-                    "text": "Melissa",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [],
-                    "text": "buy",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_classifier",
-                    "text": "2 packs of",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "tennis",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_oov",
-                    "text": "balls",
                     "checked": true,
                     "checkbox": true
                 }
@@ -707,7 +548,7 @@
                 {
                     "pos": "ENTITY_nouny",
                     "text": "number",
-                    "checked": false,
+                    "checked": true,
                     "checkbox": true
                 },
                 {
@@ -749,173 +590,6 @@
                 {
                     "pos": "ENTITY_nouny",
                     "text": "rooms",
-                    "checked": true,
-                    "checkbox": true
-                }
-            ]
-        },
-        "you have 4 pieces of candy split evenly into 2 bags": {
-            "id": "c8b1e92e-926f-4c81-bc16-43b90010f69e",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "you",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [
-                        {
-                            "text": "to own",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "possess",
-                            "level": "tier_2",
-                            "checked": false
-                        }
-                    ],
-                    "text": "have",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_classifier",
-                    "text": "4 pieces of",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_oov",
-                    "text": "candy",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [],
-                    "text": "split",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "MODIFIER",
-                    "text": "evenly",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "RANGE_locality",
-                    "text": "into",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "2",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "bags",
-                    "checked": true,
-                    "checkbox": true
-                }
-            ]
-        },
-        "you have 80 tickets for the fair and each ride costs 5 tickets": {
-            "id": "02cd0c92-9581-42bd-8428-1a06cba4573f",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "you",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [
-                        {
-                            "text": "to own",
-                            "level": "tier_2",
-                            "checked": false
-                        },
-                        {
-                            "text": "possess",
-                            "level": "tier_2",
-                            "checked": false
-                        }
-                    ],
-                    "text": "have",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "80",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "tickets",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "FUNC_inner",
-                    "text": "for",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "FUNC_determiner",
-                    "text": "the",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "MODIFIER",
-                    "text": "fair",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "FUNC_conjunction",
-                    "text": "and",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "MODIFIER",
-                    "text": "each",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "ride",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "costs",
-                    "checked": false,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "5",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "tickets",
                     "checked": true,
                     "checkbox": true
                 }
