@@ -197,8 +197,8 @@ def runLoki(inputLIST, filterLIST=[]):
                     resultDICT = Loki_earn_adv.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
                 # spend_adv
                 if lokiRst.getIntent(index, resultIndex) == "spend_adv":
+                    print("intent: spend_adv")
                     resultDICT = Loki_spend_adv.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-                    # 這次指令的意圖為"accounting"
                 # searching
                 if lokiRst.getIntent(index, resultIndex) == "searching":
                     resultDICT = Loki_searching.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
@@ -304,11 +304,6 @@ if __name__ == "__main__":
 
         # 不同意圖對應的輸出
         
-        # 記帳
-        if resultDICT["intent"] == "accounting":
-            # TODO: 改格式
-            print("您今天 {} 了 {} 元".format(resultDICT["action"], resultDICT["amount"]))
-            SaveAccountToCSV(resultDICT)
 
         # 查詢
         if resultDICT["intent"] == "searching":
@@ -316,7 +311,7 @@ if __name__ == "__main__":
             
         # 進階花費
         if resultDICT["intent"] == "spend_adv":
-            print("花費為 {} 元".format(resultDICT["amount"]))
+            print("{} 去 {} 花費為 {} 元".format(resultDICT["time"], resultDICT["description"], resultDICT["amount"]))
 
         # 錯誤
         elif resultDICT["intent"] == "error":
