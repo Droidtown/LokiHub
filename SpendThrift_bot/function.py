@@ -95,6 +95,7 @@ def GetDataByCondition(username="testUser", condition="all"):
             print("你這個敗家子，連存資料都給我存錯:(")
         return totalMoney
 
+
 """
 從 LOKI API 得到符合意圖的 regex
 並使用 Articut 處理斷詞結果拿到參數
@@ -102,6 +103,7 @@ def GetDataByCondition(username="testUser", condition="all"):
 """
 def getAdvArgs(intent, utterance, inputSTR, groupIndexLIST):
     url = "https://api.droidtown.co/Loki/API/"
+    # TODO: account.info
     username = "ss96083@gmail.com"
     articut_key = "NRLknK9bqwxLWVcHMM!%QHvpiUMqKB+"
     loki_key = "BbcY-sJJE-bmc&^s!wZuXCxmzoLeHUh"
@@ -141,7 +143,7 @@ def getAdvArgs(intent, utterance, inputSTR, groupIndexLIST):
         for i in range(len(response["results"])):
             if response["results"][i]["intent"] == intent:
                 pat = re.compile(response["results"][i]["pattern"])
-                
+
         # 將輸入用 re 比較
         patGroups = re.search(pat, articutResultDICT["result_pos"][0])
         args = []
