@@ -38,7 +38,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
     # debugInfo(inputSTR, utterance)
     
     if utterance == "去全聯支出3000":
-        # write your code here
         pass
 
     if utterance == "去全聯花了3000":
@@ -62,7 +61,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
         pass
 
     if utterance == "支出3000":
-        # write your code here
         pass
 
     if utterance == "昨天去全聯支出3000":
@@ -74,7 +72,22 @@ def getResult(inputSTR, utterance, args, resultDICT):
         pass
 
     if utterance == "昨天去六福村支出3000":
-        # write your code here
+        """
+            3: 時間
+            9: 地點
+            12: 補充說明
+            16: 金額
+        """
+        status, result = getAdvArgs(intent, utterance, inputSTR, [3,9,12,16])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = result[0]        # 時間
+            resultDICT["description"] = result[1] # 地點(先當說明用)
+            resultDICT["amount"] = result[3]      # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
 
     if utterance == "昨天去六福村花了3000":
@@ -89,12 +102,10 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # write your code here
         pass
 
-    if utterance == "昨天支出3000":
-        # write your code here
+    if utterance == "昨天支出3000": 
         pass
 
     if utterance == "昨天花了3000":
-        # write your code here
         pass
 
     if utterance == "花了3000":
