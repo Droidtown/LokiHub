@@ -61,7 +61,8 @@ os.chdir(path_current)
 
 # local import
 from intent import Loki_spend_adv
-from intent import Loki_searching_test
+from intent import Loki_earn_adv
+from intent import Loki_searching
 from function import SaveAccountToCSV
     
 # Local import
@@ -191,17 +192,17 @@ def runLoki(inputLIST, filterLIST=[]):
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
-                # searching
-                if lokiRst.getIntent(index, resultIndex) == "searching_test":
-                    resultDICT = Loki_searching_test.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-                    # 這次指令的意圖為"searching"
-                    resultDICT["intent"] = "searching"
-
+                # earn_adv
+                if lokiRst.getIntent(index, resultIndex) == "earn_adv":
+                    resultDICT = Loki_earn_adv.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
                 # spend_adv
                 if lokiRst.getIntent(index, resultIndex) == "spend_adv":
                     resultDICT = Loki_spend_adv.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
                     # 這次指令的意圖為"accounting"
-                    resultDICT["intent"] = "spend_adv"
+                # searching
+                if lokiRst.getIntent(index, resultIndex) == "searching":
+                    resultDICT = Loki_searching.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
 
                 
     else:
@@ -312,6 +313,10 @@ if __name__ == "__main__":
         # 查詢
         if resultDICT["intent"] == "searching":
             print("查詢結果為 {} 元".format(resultDICT["amount"]))
+            
+        # 進階花費
+        if resultDICT["intent"] == "spend_adv":
+            print("花費為 {} 元".format(resultDICT["amount"]))
 
         # 錯誤
         elif resultDICT["intent"] == "error":

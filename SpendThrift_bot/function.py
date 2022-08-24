@@ -1,6 +1,9 @@
 import re
 import os, sys
+from sre_constants import GROUPREF_UNI_IGNORE
 import csv
+from ArticutAPI import Articut
+from requests import post
 
 # set path
 path_current = os.path.dirname(os.path.realpath(__file__))
@@ -92,3 +95,61 @@ def GetDataByCondition(username="testUser", condition="all"):
             print("你這個敗家子，連存資料都給我存錯:(")
         return totalMoney
 
+"""
+從 LOKI API 得到符合意圖的 regex
+並使用 Articut 處理斷詞結果拿到參數
+參考：https://api.droidtown.co/document/?python#Loki_7
+"""
+def getAdvArgs(intent, utterance, inputSTR, groupIndexLIST):
+    url = "https://api.droidtown.co/Loki/API/"
+    username = "ss96083@gmail.com"
+    articut_key = "NRLknK9bqwxLWVcHMM!%QHvpiUMqKB+"
+    loki_key = "BbcY-sJJE-bmc&^s!wZuXCxmzoLeHUh"
+    payload = {     
+        "username": username,
+        "loki_key": loki_key,
+        "input_str": utterance
+    }
+    
+    # 去 LOKI 取得這個 utterance 的 regex
+    # region responseExample
+    """
+    {
+        "status": true,
+        "msg": "Success!",
+        "version": "v193",
+        "word_count_balance": 99988,
+        "results": [
+            {"intent": "Exchange",
+            "pattern": "<KNOWLEDGE_currency>[^<]*?</KNOWLEDGE_currency>(<MODAL>[^<]*?</MODAL>)?((<ACTION_verb>[^<不]*?[換][^<不]*?</ACTION_verb>)|(<VerbP>[^<不]*?[換][^<不]*?</VerbP>))<CLAUSE_HowQ>[^<]*?</CLAUSE_HowQ><ENTITY_UserDefined>[^<]*?</ENTITY_UserDefined>",
+            "utterance": "[100美金]能換多少[台幣]",
+            "argument": ["100美金", "台幣"]}
+        ]
+    }
+    """
+    # endregion
+    response = post(url, json=payload).json()
+    
+    # success
+    if response["status"] == True:
+        
+        # 將輸入丟進 articut 斷詞
+        articut = Articut(username, articut_key, level="lv2")
+        articutResultDICT = articut.parse(inputSTR)
+        
+        # 要對應到指定的意圖
+        for i in range(len(response["results"])):
+            if response["results"][i]["intent"] == intent:
+                pat = re.compile(response["results"][i]["pattern"])
+                
+        # 將輸入用 re 比較
+        patGroups = re.search(pat, articutResultDICT["result_pos"][0])
+        args = []
+        
+        # 把我們要的參數拿出來
+        for i in groupIndexLIST:
+            args.append(patGroups.group(i))
+        return (response["status"], args)
+    # error
+    else:
+        return (response["status"], response["msg"])

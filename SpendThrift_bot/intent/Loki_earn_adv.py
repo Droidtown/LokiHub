@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki module for spend_adv
+    Loki module for earn_adv
 
     Input:
         inputSTR      str,
@@ -17,9 +17,7 @@
 import json
 import os
 
-from function import getAdvArgs
-
-DEBUG_spend_adv = True
+DEBUG_earn_adv = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
@@ -27,77 +25,72 @@ except:
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
-    if DEBUG_spend_adv:
-        print("[spend_adv] {} ===> {}".format(inputSTR, utterance))
-
-
-# 這個意圖的名字
-intent = "spend_adv"
+    if DEBUG_earn_adv:
+        print("[earn_adv] {} ===> {}".format(inputSTR, utterance))
 
 def getResult(inputSTR, utterance, args, resultDICT):
-    # debugInfo(inputSTR, utterance)
-    
-    if utterance == "去全聯支出3000":
+    debugInfo(inputSTR, utterance)
+    if utterance == "去全聯收入3000":
         # write your code here
         pass
 
-    if utterance == "去全聯花了3000":
+    if utterance == "去全聯賺了3000":
         # write your code here
         pass
 
-    if utterance == "去六福村支出3000":
+    if utterance == "去六福村收入3000":
         # write your code here
         pass
 
-    if utterance == "去六福村花了3000":
+    if utterance == "去六福村賺了3000":
         # write your code here
         pass
 
-    if utterance == "去台北支出3000":
+    if utterance == "去台北收入3000":
         # write your code here
         pass
 
-    if utterance == "去台北花了3000":
+    if utterance == "去台北賺了3000":
         # write your code here
         pass
 
-    if utterance == "支出3000":
+    if utterance == "收入3000":
         # write your code here
         pass
 
-    if utterance == "昨天去全聯支出3000":
+    if utterance == "昨天去全聯收入3000":
         # write your code here
         pass
 
-    if utterance == "昨天去全聯花了3000":
+    if utterance == "昨天去全聯賺了3000":
         # write your code here
         pass
 
-    if utterance == "昨天去六福村支出3000":
+    if utterance == "昨天在六福村收入3000":
         # write your code here
         pass
 
-    if utterance == "昨天去六福村花了3000":
+    if utterance == "昨天在六福村賺了3000":
         # write your code here
         pass
 
-    if utterance == "昨天去台北支出3000":
+    if utterance == "昨天在台北收入3000":
         # write your code here
         pass
 
-    if utterance == "昨天去台北花了3000":
+    if utterance == "昨天在台北賺了3000":
         # write your code here
         pass
 
-    if utterance == "昨天支出3000":
+    if utterance == "昨天收入3000":
         # write your code here
         pass
 
-    if utterance == "昨天花了3000":
+    if utterance == "昨天賺了3000":
         # write your code here
         pass
 
-    if utterance == "花了3000":
+    if utterance == "賺了3000":
         # write your code here
         pass
 
