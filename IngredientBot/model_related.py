@@ -263,11 +263,16 @@ def model(mscDICT):
 
                 ingr_inseason, res_time, res_type = inSeason(mscDICT["rejectLIST"], time, type)
 
-                replySTR0 = "恩恩，那麼{}如何？它能用來做成很多不一樣的料理哦。".format(ingr_inseason)
-                replySTR1 = "了解，其他像{}也不錯哦，但要注意它跟其他食材的搭配。".format(ingr_inseason)
-                replyLIST = [replySTR0, replySTR1]
+                replySTR0 = "恩恩，那麼{}如何？".format(ingr_inseason)
+                replySTR1 = "了解，其他像{}也不錯哦，".format(ingr_inseason)
+                replySTR00 = "它能用來做成很多不一樣的料理哦。"
+                replySTR01 = "不知道最近它的價格高不高？"
+                replySTR10 = "它的挑選方法很有趣哦。"
+                replySTR11 = "但要注意它有一些搭配禁忌。"
+                replyLIST0 = [replySTR0, replySTR1]
+                replyLIST1 = [replySTR00, replySTR01, replySTR10, replySTR11]
 
-                mscDICT["replySTR"] = choice(replyLIST)
+                mscDICT["replySTR"] = choice(replyLIST0) + choice(replyLIST1)
 
                 #紀錄
                 mscDICT["ingredient"] = ingr_inseason
@@ -368,7 +373,12 @@ def model(mscDICT):
             ws_result = which_season(ingr)
             if len(ws_result) > 0:
                 group = "、".join(ws_result)
-                mscDICT["replySTR"] = group + "是{}的產季。".format(ingr)
+
+                replySTR0 = "{}是{}的產季，你喜歡吃{}嗎？".format(group, ingr, ingr)
+                replySTR1 = "{}的產季是{}，{}能做成好多不同的料理。".format(ingr, group, ingr)
+                replyLIST = [replySTR0, replySTR1]
+
+                mscDICT["replySTR"] = choice(replyLIST)
             else:
                 mscDICT["replySTR"] = "查不到{}的產季！".format(ingr)
 
@@ -436,7 +446,7 @@ def model(mscDICT):
             mscDICT["rejectLIST"].append(reject_ingr)   #紀錄使用者reject過的食材
 
         #capability
-        elif mscDICT["msgSTR"].lower() in ["你會什麼"]:
+        elif mscDICT["msgSTR"].lower() in ["你會什麼, 你會做啥"]:
             mscDICT["replySTR"] = "我知道現在的當季食材有什麼，還有一些關於食材的資訊，像是價格、挑選方法或是禁忌，還有它可以做成什麼料理..."
 
             #再提供另一個當季食材
