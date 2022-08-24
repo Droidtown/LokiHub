@@ -114,7 +114,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 if args[1] in clockNumDICT.keys():
                     if clockNumDICT[args[1]] <= 24:
                         hour = clockNumDICT[args[1]]
-                        resultDICT["time"] = "{} is {:02}:00".format(args[0], hour)
+                        resultDICT["time"] = "{:02}:00".format(hour)
             elif len(args[1].split(" ")) <= 3:
                 hour = None
                 minute = None
