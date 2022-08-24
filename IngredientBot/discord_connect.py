@@ -27,6 +27,8 @@ class BotClient(discord.Client):
                         "type": "",
                         "rejectLIST": [],
                         "replySTR": "",
+                        "reject_inse": False,
+                        "reject_reco": False
         }
         templateDICT["updatetime"] = datetime.now()
         return templateDICT
@@ -43,6 +45,8 @@ class BotClient(discord.Client):
                              "type": "",
                              "rejectLIST": [],
                              "replySTR": "",
+                             "reject_inse": False,
+                             "reject_reco": False
         }
         self.mscDICT = { #userid:templateDICT
         }
