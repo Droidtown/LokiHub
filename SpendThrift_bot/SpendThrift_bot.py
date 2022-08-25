@@ -54,6 +54,9 @@ from datetime import datetime
 import csv
 
 
+# local import
+import function as fun
+
 # set path to SpendThrift_bot
 path_current = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(path_current)
@@ -182,7 +185,7 @@ class LokiResult():
             rst = lokiResultDICT["argument"]
         return rst
 
-def runLoki(inputLIST, filterLIST=[]):
+def runLoki(userID, inputLIST, filterLIST=[]):
     # 將 intent 會使用到的 key 預先設爲空列表
     resultDICT = {
        #"key": []
@@ -192,16 +195,16 @@ def runLoki(inputLIST, filterLIST=[]):
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
+                # 記得要把 ID 傳進 intent 裡
                 # earn_adv
-                if lokiRst.getIntent(index, resultIndex) == "earn_adv":
-                    resultDICT = Loki_earn_adv.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                # if lokiRst.getIntent(index, resultIndex) == "earn_adv":
+                #     resultDICT = Loki_earn_adv.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
                 # spend_adv
                 if lokiRst.getIntent(index, resultIndex) == "spend_adv":
-                    print("intent: spend_adv")
-                    resultDICT = Loki_spend_adv.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_spend_adv.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
                 # searching
                 if lokiRst.getIntent(index, resultIndex) == "searching":
-                    resultDICT = Loki_searching.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_searching.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
 
                 
@@ -300,19 +303,7 @@ if __name__ == "__main__":
         command = [input("請輸入您的指令：")]
 
         # 執行使用者的指令
-        resultDICT = runLoki(command)
+        resultDICT = runLoki("testUser",command)
 
         # 不同意圖對應的輸出
-        
-
-        # 查詢
-        if resultDICT["intent"] == "searching":
-            print("查詢結果為 {} 元".format(resultDICT["amount"]))
-            
-        # 進階花費
-        if resultDICT["intent"] == "spend_adv":
-            print("{} 去 {} 花費為 {} 元".format(resultDICT["time"], resultDICT["description"], resultDICT["amount"]))
-
-        # 錯誤
-        elif resultDICT["intent"] == "error":
-            print("無法辨識指令。\n你這敗家子給我去好好讀使用說明書:(")
+        fun.SpendThriftReply(resultDICT)
