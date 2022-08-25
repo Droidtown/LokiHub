@@ -5,16 +5,20 @@ import logging
 import discord
 import json
 import re
+from urllib import response
 from datetime import datetime
 from pprint import pprint
-
-#from <your_loki_main_program> import runLoki
+from ChiCorrBot import runLoki, explanationDICT
 
 logging.basicConfig(level=logging.DEBUG)
 
 
 with open("account.info", encoding="utf-8") as f: #讀取account.info
     accountDICT = json.loads(f.read())
+
+mscDICT = {
+    # 'userID':{templateDICT}
+    }
 
 punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
 def getLokiResult(inputSTR):
@@ -37,7 +41,10 @@ class BotClient(discord.Client):
 
     async def on_ready(self):
         self.templateDICT = {"updatetime" : None,
-                             "latestQuest": ""
+                             "latestQuest": "你輸入一個華語句子，讓我來幫你檢查有沒有錯誤！",
+                             'inq' : None,
+                             'suggestion' : None,
+                             'error' : None
         }
         self.mscDICT = { #userid:templateDICT
         }
@@ -83,9 +90,29 @@ class BotClient(discord.Client):
 # ##########非初次對話：這裡用 Loki 計算語意
             else: #開始處理正式對話
                 #從這裡開始接上 NLU 模型
-                resulDICT = getLokiResult(msgSTR)
+                resultDICT = getLokiResult(msgSTR)
                 logging.debug("######\nLoki 處理結果如下：")
-                logging.debug(resulDICT)
+                logging.debug(resultDICT)
+                if not resultDICT: #如果resultDICT為空字典
+                    replySTR = '本bot覺得你的句子是對的！'
+                else: #如果resultDICT不是空字典
+                    mscDICT[message.author.id]['inq'] = resultDICT['inq']
+                    mscDICT[message.author.id]['suggestion'] = resultDICT['suggestion']
+                    mscDICT[message.author.id]['error'] = resultDICT['error']
+
+                    res = f"那你可以說：{mscDICT[message.author.id]['suggestion']}"
+                    expl = f"錯誤說明：{explanationDICT[mscDICT[message.author.id]['error']]}"
+                    replySTR = f'{res}\n{expl}'
+
+                    if not mscDICT[message.author.id]['inq']:
+                        replySTR = replySTR
+                    elif mscDICT[message.author.id]['inq'] == '是':
+                        replySTR = replySTR
+                    elif mscDICT[message.author.id]['inq'] == '否':
+                        replySTR = '啊！本bot不知道，只好請教老師了！'
+                    else:
+                        replySTR = mscDICT[message.author.id]['inq']
+          
         await message.reply(replySTR)
 
 

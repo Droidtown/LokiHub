@@ -165,4 +165,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'word'
 
+    resultDICT['inq'] = None #inq的值為None
+
     return resultDICT

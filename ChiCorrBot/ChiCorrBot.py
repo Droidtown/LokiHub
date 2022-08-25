@@ -343,7 +343,7 @@ if __name__ == "__main__":
     #testIntent()
 
     #testLIST = ['他有多顆糖','看起來那個小孩反思','觀光在美國','還許多學生無視學校的校園的規範','他會報告健康飲食對這三個部分怎麼樣','我的心情不是很壞','我們怕給朋友新冠肺炎','少部分的臺灣人民的生活都變壞了']
-    testLIST = ['馬上變成了台灣人的生活、經濟、政治']
+    testLIST = ['常常有很同的看法']
     for text in testLIST:
         resDICT = runLoki([text])
         print() #區隔runLoki的結果與建議說明

@@ -163,4 +163,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'hai'
 
+    resultDICT['inq'] = None #inq的值為None
+    
     return resultDICT
