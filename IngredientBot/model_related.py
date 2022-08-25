@@ -74,6 +74,9 @@ def getInSeason(rejectLIST, time, type):
 
 def getPrice(ingredient):
     table = pd.read_html("http://www.tapmc.com.taipei/")
+        
+    if(len(table[0].columns)) != 5: return {}
+
     table[0].columns = ['品名', '品種', '上價', '中價', '下價']
 
     priceDICT={}
