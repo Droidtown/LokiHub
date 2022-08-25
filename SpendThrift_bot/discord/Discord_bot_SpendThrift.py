@@ -16,6 +16,7 @@ os.chdir(path_current)
 from SpendThrift_bot import runLoki
 from datetime import datetime
 from pprint import pprint
+import function as fun
 
 class bcolors:
     OK = '\033[92m' #GREEN
@@ -96,16 +97,10 @@ class BotClient(discord.Client):
 
             print("here")
 
-
-            # 特殊指令，套用自定義回應
-            if msgSTR == "ping":
-                await message.reply('pong')
-            elif msgSTR == "ping ping":
-                await message.reply('pong pong')
 # ##########初次對話：這裡是 keyword trigger 的。
 
             # 如果在跟 bot 打招呼
-            elif msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello"]:
+            if msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello"]:
                 #有講過話(判斷對話時間差)
                 if message.author.id in self.mscDICT.keys():
                     timeDIFF = datetime.now() - self.mscDICT[message.author.id]["updatetime"]
@@ -123,15 +118,14 @@ class BotClient(discord.Client):
 
 # ##########非初次對話：這裡用 Loki 計算語意            
             else: #開始處理正式對話，開始接上 NLU 模型
-                resulDICT = runLoki([msgSTR])
+                resultDICT = runLoki(str(message.author.id), [msgSTR])
                 logging.debug("######\nLoki 處理結果如下：")
-                logging.debug(resulDICT)
-                print(resulDICT)
-                
-                
+                logging.debug(resultDICT)
+                print(resultDICT)
+                print("safe file")
                 # TODO: 針對不同種類的意圖，做出不同的回覆：
                 # Our Code here...
-                    
+                replySTR = fun.SpendThriftReply(resultDICT)
             # 判斷完畢，回覆使用者
             await message.reply(replySTR)
 
