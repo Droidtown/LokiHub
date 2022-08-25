@@ -2,21 +2,22 @@
 # -*- coding: utf-8 -*-
 
 import logging
+import datetime
 import discord
 import json
 import re
-from datetime import datetime
 from pprint import pprint
 from pycnnum import cn2num
-#from ArticutAPI import Articut
+from ArticutAPI import Articut
 
-#from <your_loki_main_program> import runLoki #放 Loki 主程式
+from FitBoty import runLoki #放 Loki 主程式
 
 logging.basicConfig(level=logging.DEBUG)
 
 
 with open("account.info.json", encoding="utf-8") as f: #讀取account.info
     accountDICT = json.loads(f.read())
+articut = Articut(username = accountDICT["username"], apikey = accountDICT["api_key"])
 
 punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
 def getLokiResult(inputSTR):
@@ -27,13 +28,18 @@ def getLokiResult(inputSTR):
     logging.debug("Loki Result => {}".format(resultDICT))
     return resultDICT
 
+def loadJson(filename):
+    with open(filename,"r") as f:
+        result = json.load(f)
+    return result
+
 class BotClient(discord.Client):
     def resetMSCwith(self, messageAuthorID):
         '''
         清空與 messageAuthorID 之間的對話記錄
         '''
         templateDICT = self.templateDICT 
-        templateDICT["updatetime"] = datetime.now()
+        templateDICT["updatetime"] = datetime.datetime.now()
         return templateDICT
 
     async def on_ready(self):
@@ -43,9 +49,10 @@ class BotClient(discord.Client):
                              "age":None,
                              "height":None,
                              "weight":None,
-                             "BMR":None
+                             "BMR":None,
+                             "updatetime": datetime.datetime.now()
         }
-        self.mscDICT = { 
+        self.mscDICT = {
                          
         }
         # ####################################################################################
@@ -71,7 +78,7 @@ class BotClient(discord.Client):
                 replySTR="pong pong"
 
 # ##########初次對話：這裡是 keyword trigger 的。
-            elif msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello"]:
+            elif msgSTR.lower() in ["哈囉","嗨","你好","您好","安安","hi","hello"]:
                 #有講過話(判斷對話時間差)
                 if message.author.id in self.mscDICT.keys():
                     timeDIFF = datetime.now() - self.mscDICT[message.author.id]["updatetime"]
@@ -85,51 +92,78 @@ class BotClient(discord.Client):
                 else:
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                     await message.reply("嗨嗨我是 FitBoty :)")
-                    replySTR = "為了計算基礎代謝率，需要請您提供您的生理性別 (請回答男或女)"
+                    replySTR = "我會計算你每日攝取熱量與基礎代謝率之差值，並推薦你適合的運動項目。\n為了計算你的基礎代謝率，想請問你的生理性別是？"
 
 
 # ##########非初次對話：這裡用 Loki 計算語意 (真正的邏輯應該寫在這)
             else: #開始處理正式對話
-                if msgSTR in ["男","女"]:
-                    self.mscDICT[message.author.id]["gender"] = msgSTR
-                    replySTR = "請您提供您的年齡 (請回答__歲)"
-                    #if isinstance(int(msgSTR), int) == False:
-                        #replySTR = cn2num(msgSTR) 轉數值
-                elif re.search('(\d+)歲', msgSTR) != None:
-                    user_age = re.search('(\d+)歲', msgSTR).group(1)
-                    self.mscDICT[message.author.id]["age"] = user_age
-                    replySTR = "請您提供您的身高 (請回答__公分)"
-                        #if isinstance(int(msgSTR), int) == False:
-                            #replySTR = cn2num(msgSTR)
-                elif re.search('(\d+)公分', msgSTR) != None:
-                    user_height = re.search('(\d+)公分', msgSTR).group(1)
-                    self.mscDICT[message.author.id]["height"] = user_height
-                    replySTR = "請您提供您的體重 (請回答__公斤)"
-                elif re.search('(\d+)公斤', msgSTR) != None:
-                    user_weight = re.search('(\d+)公斤', msgSTR).group(1)
-                    self.mscDICT[message.author.id]["weight"] = user_weight
-                    for i in self.mscDICT[message.author.id].values():
-                        if i != None:
-                            replySTR = self.mscDICT[message.author.id]["gender"] + ", " + self.mscDICT[message.author.id]["age"] + "歲" + ", " + self.mscDICT[message.author.id]["height"] + "公分" + ", " + self.mscDICT[message.author.id]["weight"] + "公斤" + "。" + "請確認您的資料是否正確" + "，" + "請回答是或否"
-                elif msgSTR == "是":
-                    if self.mscDICT[message.author.id]["gender"] == "男":
-                        BMR = 66 + (13.7 * int(self.mscDICT[message.author.id]["weight"]) + 5 * int(self.mscDICT[message.author.id]["height"]) - 6.8 * int(self.mscDICT[message.author.id]["age"]))
-                        self.mscDICT[message.author.id]["BMR"] = BMR
-                        replySTR = "您的基礎代謝率為 " + str(self.mscDICT[message.author.id]["BMR"]) + " 卡"
-                    if  self.mscDICT[message.author.id]["gender"] == "女":
-                        BMR = 655 + (9.6 * int(self.mscDICT[message.author.id]["weight"]) + 1.8 * int(self.mscDICT[message.author.id]["height"]) - 4.7 * int(self.mscDICT[message.author.id]["age"]))
-                        self.mscDICT[message.author.id]["BMR"] = BMR
-                        replySTR = "您的基礎代謝率為 " + str(self.mscDICT[message.author.id]["BMR"]) + " 卡"
-                elif msgSTR == "否":
-                    replySTR = "為了更新您的資料，需要請您提供您的生理性別 (請回答男或女)"
+                
+                        #use datetime to get current time.
+                        #if before 12:00pm, ask breakfast
+                        #if between 12pm to 7pm, ask breakfast and lunch
+                        #if after 7pm, ask what are eaten in this day
                 
                 #從這裡開始接上 NLU 模型
-                #resulDICT = getLokiResult(msgSTR) #Loki 回來的結果
-                #logging.debug("######\nLoki 處理結果如下：") #寫 if else 問基本資訊
-                #logging.debug(resulDICT)
+                resultDICT = getLokiResult(msgSTR)
+                print(resultDICT)#Loki 回來的結果
+                for i in resultDICT.keys():
+                    if i == "gender":
+                        self.mscDICT[message.author.id]["gender"] = resultDICT["gender"]
+                        replySTR = "你今年幾歲呢？"
+                    if i == "age":
+                        self.mscDICT[message.author.id]["age"] = resultDICT["age"]
+                        replySTR = "你身高幾公分？"
+                        
+                    if i == "height":
+                        self.mscDICT[message.author.id]["height"] = resultDICT["height"]
+                        replySTR = "你體重幾公斤？"
+                    
+                    if i == "weight":
+                        self.mscDICT[message.author.id]["weight"] = resultDICT["weight"]
+                        for i in self.mscDICT[message.author.id].values():
+                            if i != None:
+                                replySTR = self.mscDICT[message.author.id]["gender"] + "\n" + self.mscDICT[message.author.id]["age"] + "歲" + "\n" + self.mscDICT[message.author.id]["height"] + "公分" + "\n" + self.mscDICT[message.author.id]["weight"] + "公斤" + "\n" + "請確認以上資料是否正確？"
+
+                if msgSTR.lower() in ["是","對","是的","對的","沒錯","正確","yes"]:
+                    if self.mscDICT[message.author.id]["gender"] == "男性":
+                        BMR = 66 + (13.7 * int(self.mscDICT[message.author.id]["weight"]) + 5 * int(self.mscDICT[message.author.id]["height"]) - 6.8 * int(self.mscDICT[message.author.id]["age"]))
+                        #self.mscDICT[message.author.id]["BMR"] = BMR
+                        replySTR = "你的基礎代謝率為 " + str(BMR) + " 卡" + "。"
+                        self.mscDICT[message.author.id]["BMR"] = BMR
+                        if self.mscDICT[message.author.id]["BMR"] != None:
+                            if int(datetime.datetime.now().strftime('%H')) < 12:
+                                replySTR = "你早餐吃了什麼呢？"
+                            elif int(datetime.datetime.now().strftime('%H')) > 12 and int(datetime.datetime.now().strftime('%H')) < 19:
+                                replySTR = "你早餐和午餐吃了什麼呢？"
+                            elif int(datetime.datetime.now().strftime('%H')) > 19:
+                                replySTR = "你今天三餐吃了些什麼呢？"
+                            
+                    if  self.mscDICT[message.author.id]["gender"] == "女性":
+                        BMR = 655 + (9.6 * int(self.mscDICT[message.author.id]["weight"]) + 1.8 * int(self.mscDICT[message.author.id]["height"]) - 4.7 * int(self.mscDICT[message.author.id]["age"]))
+                        self.mscDICT[message.author.id]["BMR"] = BMR
+                        replySTR = "你的基礎代謝率為 " + str(self.mscDICT[message.author.id]["BMR"]) + " 卡" + "。"
+                        if self.mscDICT[message.author.id]["BMR"] != None:
+                            #if int(datetime.datetime.now().strftime('%H')) < 12:
+                                #replySTR = "你早餐吃了什麼呢？"
+                            #elif int(datetime.datetime.now().strftime('%H')) > 12 and int(datetime.datetime.now().strftime('%H')) < 19:
+                                #replySTR = "你早餐和午餐吃了什麼呢？"
+                            #elif int(datetime.datetime.now().strftime('%H')) > 19:
+                                #replySTR = "你今天三餐吃了些什麼呢？" 
+                            replySTR = "你今天吃了什麼？"
+                                
+                elif msgSTR.lower() in ["否","錯","有錯","錯誤","no"]:
+                    replySTR = "為了更新您的資料，需要請你提供你的生理性別"
+                
+                for i in resultDICT.keys():
+                    if i == "food":
+                        self.mscDICT[message.author.id]["food_cal"] = resultDICT["food_cal"]
+                        replySTR = "總共" + self.mscDICT[message.author.id]["food_cal"] + "卡"
+                
+                logging.debug("######\nLoki 處理結果如下：") 
+                logging.debug(resultDICT)
+                
 
         await message.reply(replySTR) #機器人統一回覆
-        # if 欄位滿了，跳確認訊息
         print(self.mscDICT)
 
 
