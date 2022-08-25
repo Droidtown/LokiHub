@@ -57,4 +57,8 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         # write your code here
         pass
 
+    if utterance == "推薦[我][一道]料理":
+        # write your code here
+        pass
+
     return resultDICT
