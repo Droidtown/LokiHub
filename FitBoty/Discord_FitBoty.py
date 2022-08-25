@@ -50,6 +50,7 @@ class BotClient(discord.Client):
                              "height":None,
                              "weight":None,
                              "BMR":None,
+                             "food_cal":None,
                              "updatetime": datetime.datetime.now()
         }
         self.mscDICT = {
@@ -124,40 +125,35 @@ class BotClient(discord.Client):
                             if i != None:
                                 replySTR = self.mscDICT[message.author.id]["gender"] + "\n" + self.mscDICT[message.author.id]["age"] + "歲" + "\n" + self.mscDICT[message.author.id]["height"] + "公分" + "\n" + self.mscDICT[message.author.id]["weight"] + "公斤" + "\n" + "請確認以上資料是否正確？"
 
+
                 if msgSTR.lower() in ["是","對","是的","對的","沒錯","正確","yes"]:
                     if self.mscDICT[message.author.id]["gender"] == "男性":
                         BMR = 66 + (13.7 * int(self.mscDICT[message.author.id]["weight"]) + 5 * int(self.mscDICT[message.author.id]["height"]) - 6.8 * int(self.mscDICT[message.author.id]["age"]))
                         #self.mscDICT[message.author.id]["BMR"] = BMR
-                        replySTR = "你的基礎代謝率為 " + str(BMR) + " 卡" + "。"
+                        await message.reply("你的基礎代謝率為 " + str(BMR) + " 卡" + "。")
                         self.mscDICT[message.author.id]["BMR"] = BMR
-                        if self.mscDICT[message.author.id]["BMR"] != None:
-                            if int(datetime.datetime.now().strftime('%H')) < 12:
-                                replySTR = "你早餐吃了什麼呢？"
-                            elif int(datetime.datetime.now().strftime('%H')) > 12 and int(datetime.datetime.now().strftime('%H')) < 19:
-                                replySTR = "你早餐和午餐吃了什麼呢？"
-                            elif int(datetime.datetime.now().strftime('%H')) > 19:
-                                replySTR = "你今天三餐吃了些什麼呢？"
-                            
                     if  self.mscDICT[message.author.id]["gender"] == "女性":
                         BMR = 655 + (9.6 * int(self.mscDICT[message.author.id]["weight"]) + 1.8 * int(self.mscDICT[message.author.id]["height"]) - 4.7 * int(self.mscDICT[message.author.id]["age"]))
                         self.mscDICT[message.author.id]["BMR"] = BMR
-                        replySTR = "你的基礎代謝率為 " + str(self.mscDICT[message.author.id]["BMR"]) + " 卡" + "。"
-                        if self.mscDICT[message.author.id]["BMR"] != None:
-                            #if int(datetime.datetime.now().strftime('%H')) < 12:
-                                #replySTR = "你早餐吃了什麼呢？"
-                            #elif int(datetime.datetime.now().strftime('%H')) > 12 and int(datetime.datetime.now().strftime('%H')) < 19:
-                                #replySTR = "你早餐和午餐吃了什麼呢？"
-                            #elif int(datetime.datetime.now().strftime('%H')) > 19:
-                                #replySTR = "你今天三餐吃了些什麼呢？" 
-                            replySTR = "你今天吃了什麼？"
-                                
+                        await message.reply("你的基礎代謝率為 " + str(self.mscDICT[message.author.id]["BMR"]) + " 卡" + "。")
                 elif msgSTR.lower() in ["否","錯","有錯","錯誤","no"]:
                     replySTR = "為了更新您的資料，需要請你提供你的生理性別"
+
+                if self.mscDICT[message.author.id]["BMR"] != None:
+                    if int(datetime.datetime.now().strftime('%H')) < 12:
+                        replySTR = "你早餐吃了什麼呢？"
+                    elif int(datetime.datetime.now().strftime('%H')) > 12 and int(datetime.datetime.now().strftime('%H')) < 19:
+                        replySTR = "你早餐和午餐吃了什麼呢？"
+                    elif int(datetime.datetime.now().strftime('%H')) > 19:
+                        replySTR = "你今天三餐吃了些什麼呢？"
                 
                 for i in resultDICT.keys():
-                    if i == "food":
+                    if i == "food_cal":
                         self.mscDICT[message.author.id]["food_cal"] = resultDICT["food_cal"]
-                        replySTR = "總共" + self.mscDICT[message.author.id]["food_cal"] + "卡"
+                        replySTR = "總共" + str(self.mscDICT[message.author.id]["food_cal"]) + "卡"
+                
+                
+                
                 
                 logging.debug("######\nLoki 處理結果如下：") 
                 logging.debug(resultDICT)
