@@ -19,6 +19,9 @@ with open("account.info.json", encoding="utf-8") as f: #讀取account.info
     accountDICT = json.loads(f.read())
 articut = Articut(username = accountDICT["username"], apikey = accountDICT["api_key"])
 
+with open("sports_dict.json", encoding="utf-8") as f: #讀取account.info
+    sports_dict = json.loads(f.read())
+
 punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
 def getLokiResult(inputSTR):
     punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
@@ -129,7 +132,6 @@ class BotClient(discord.Client):
                 if msgSTR.lower() in ["是","對","是的","對的","沒錯","正確","yes"]:
                     if self.mscDICT[message.author.id]["gender"] == "男性":
                         BMR = 66 + (13.7 * int(self.mscDICT[message.author.id]["weight"]) + 5 * int(self.mscDICT[message.author.id]["height"]) - 6.8 * int(self.mscDICT[message.author.id]["age"]))
-                        #self.mscDICT[message.author.id]["BMR"] = BMR
                         await message.reply("你的基礎代謝率為 " + str(BMR) + " 卡" + "。")
                         self.mscDICT[message.author.id]["BMR"] = BMR
                     if  self.mscDICT[message.author.id]["gender"] == "女性":
@@ -137,7 +139,7 @@ class BotClient(discord.Client):
                         self.mscDICT[message.author.id]["BMR"] = BMR
                         await message.reply("你的基礎代謝率為 " + str(self.mscDICT[message.author.id]["BMR"]) + " 卡" + "。")
                 elif msgSTR.lower() in ["否","錯","有錯","錯誤","no"]:
-                    replySTR = "為了更新您的資料，需要請你提供你的生理性別"
+                    replySTR = "為了更新你的資料，需要請你提供你的生理性別"
 
                 if self.mscDICT[message.author.id]["BMR"] != None:
                     if int(datetime.datetime.now().strftime('%H')) < 12:
@@ -150,10 +152,21 @@ class BotClient(discord.Client):
                 for i in resultDICT.keys():
                     if i == "food_cal":
                         self.mscDICT[message.author.id]["food_cal"] = resultDICT["food_cal"]
-                        replySTR = "總共" + str(self.mscDICT[message.author.id]["food_cal"]) + "卡"
-                
-                
-                
+                        replySTR = "總共" + str(self.mscDICT[message.author.id]["food_cal"]) + "卡" + "。\n" + "請問你今天做了什麼運動且做了多久？"
+                    
+                    if i == "sports_cal":
+                        self.mscDICT[message.author.id]["sports_cal"] = resultDICT["sports_cal"]
+                        today_cal = str(float(self.mscDICT[message.author.id]["BMR"]) - float(self.mscDICT[message.author.id]["food_cal"]) + float(self.mscDICT[message.author.id]["sports_cal"])) 
+                        rec_sportsLIST1 = []
+                        for i in list(sports_dict.values()):
+                            if float(today_cal) <= i*100:
+                                rec_sportsLIST1.append(list(sports_dict.keys())[list(sports_dict.values()).index(i)])
+                                rec_sportsSTR1 = '、'.join([str(s) for s in rec_sportsLIST1])
+                        
+                        replySTR = "你今日剩餘熱量為" + str(today_cal) + "卡。\n推薦你可以做以下運動消耗今日所剩的熱量喔！\n" + rec_sportsSTR1 + "任一項進行100分鐘。"
+                                                       
+                                #replySTR = "你今日剩餘熱量為" + str(float(self.mscDICT[message.author.id]["BMR"]) - float(self.mscDICT[message.author.id]["food_cal"]) + float(self.mscDICT[message.author.id]["sports_cal"])) + "卡" + "。"
+
                 
                 logging.debug("######\nLoki 處理結果如下：") 
                 logging.debug(resultDICT)
