@@ -33,10 +33,6 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
 
     resultDICT["capability"] = True
 
-    #if utterance == "[你][可以]做什麼":
-    #    # write your code here
-    #    pass
-
     if utterance == "[你][可以]幫[我]做什麼":
         # write your code here
         pass

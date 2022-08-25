@@ -13,6 +13,11 @@ import ingredientBot as iB
 inSeasonDICT = json.load(open("./info/inSeason.json", encoding="utf-8")) 
 IngredientRelatedDICT = json.load(open("./info/ingredient.json", encoding="utf-8"))
 
+reject_msg = ["討厭", "還有呢", "有甚麼別的食材", "有甚麼別的", "還有什麼？", "還有什麼"]
+capability_msg = ["你會什麼", "你會做啥", "你可以做什麼"]
+all_ingr_msg = ["所有當季食材"]
+inseason_msg = ["當季食材有啥"]
+msgLIST = reject_msg + capability_msg + all_ingr_msg + inseason_msg
 
 def checkInSeason(ingredient):
     currentMonth = datetime.now().month
@@ -26,6 +31,10 @@ def checkInSeason(ingredient):
 def inSeason(rejectLIST, time, type):
     if time in ["現在", "目前", "今天"]:
         month = str(datetime.now().month)+"月"
+    elif "11月" in time or "十一月" in time:
+        month = "11月"
+    elif "12月" in time or "十二月" in time:
+        month = "12月"
     elif "1月" in time or "一月" in time:
         month = "1月"
     elif "2月" in time or "二月" in time:
@@ -46,10 +55,6 @@ def inSeason(rejectLIST, time, type):
         month = "9月"
     elif "10月" in time or "十月" in time:
         month = "10月"
-    elif "11月" in time or "十一月" in time:
-        month = "11月"
-    elif "12月" in time or "十二月" in time:
-        month = "12月"
     else:
         month = str(datetime.now().month)+"月"
 
@@ -122,7 +127,6 @@ def which_season(ingredient):
     return season
 
 def all_ingr(time, type):
-
     if time in ["現在", "目前", "今天"]:
         month = str(datetime.now().month)+"月"
     elif "11月" in time or "十一月" in time:
@@ -190,7 +194,7 @@ def model(mscDICT):
     resultDICT = getLokiResult(mscDICT["msgSTR"])
     logging.info("Loki 回傳的結果: {}".format(resultDICT))
     
-    if len(resultDICT) > 0: #有找到對應的intent
+    if len(resultDICT) > 0 or mscDICT["msgSTR"] in msgLIST: #有找到對應的intent
         #intent = check，想確認這項食材是不是當季
         if "check" in resultDICT.keys():
             ingr = findIngredient(resultDICT, mscDICT)
@@ -204,7 +208,7 @@ def model(mscDICT):
             mscDICT["ingredient"] = ingr
 
         #intent = inseason，想知道現在有哪些當季食材
-        if "inseason" in resultDICT.keys():
+        if "inseason" in resultDICT.keys() or mscDICT["msgSTR"] in inseason_msg:
             if "time" in resultDICT.keys():
                 time = resultDICT["time"]
             else:
@@ -233,7 +237,7 @@ def model(mscDICT):
             mscDICT["type"] = res_type
 
         #intent = reject
-        if "reject" in resultDICT.keys():
+        if "reject" in resultDICT.keys() or mscDICT["msgSTR"] in reject_msg:
 
             if ('recommend' in mscDICT["intent"] or mscDICT["reject_reco"] == True) and 'inseason' not in mscDICT["intent"]:
                 recommend_result, ingr = recommend()
@@ -365,7 +369,7 @@ def model(mscDICT):
             mscDICT["replySTR"] = choice(replyLIST)
 
         #intent = capability
-        if "capability" in resultDICT.keys():
+        if "capability" in resultDICT.keys() or mscDICT["msgSTR"] in capability_msg:
             mscDICT["replySTR"] = "我知道現在的當季食材有什麼，還有一些關於食材的資訊，像是價格、挑選方法或是禁忌，還有它可以做成什麼料理..."
 
         #intent = which_season
@@ -387,7 +391,7 @@ def model(mscDICT):
             mscDICT["ingredient"] = ingr
 
         #intent = all_ingr，想知道所有當季食材
-        if "all_ingr" in resultDICT.keys():
+        if "all_ingr" in resultDICT.keys() or mscDICT["msgSTR"] in all_ingr_msg:
             if "time" in resultDICT.keys():
                 time = resultDICT["time"]
             else:
@@ -418,6 +422,8 @@ def model(mscDICT):
                 mscDICT["intent"].append(key)
 
     else: #沒有找到對應的intent
+
+        #打招呼
         if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早", "HIHI"]:
             
             currentMonth = choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
@@ -440,35 +446,9 @@ def model(mscDICT):
                     mscDICT["replySTR"] = "歡迎問我關於食材的問題哦 ^_^"
                 else:
                     mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 ^_^".format(mscDICT["ingredient"])
-
-        #reject
-        elif mscDICT["msgSTR"].lower() in ["討厭", "還有呢"]:
-            reject_ingr = findIngredient(resultDICT, mscDICT)
-            mscDICT["rejectLIST"].append(reject_ingr)   #紀錄使用者reject過的食材
-
-        #capability
-        elif mscDICT["msgSTR"].lower() in ["你會什麼, 你會做啥"]:
-            mscDICT["replySTR"] = "我知道現在的當季食材有什麼，還有一些關於食材的資訊，像是價格、挑選方法或是禁忌，還有它可以做成什麼料理..."
-
-            #再提供另一個當季食材
-            if mscDICT["time"] == "":
-                time = "現在"
-            else:
-                time = mscDICT["time"]
-            if mscDICT["type"] == "":
-                type = choice(["蔬菜", "水果", "海鮮"])
-            else:
-                type = mscDICT["type"]
-
-            ingr_inseason, res_time, res_type = inSeason(mscDICT["rejectLIST"], time, type)
-            mscDICT["replySTR"] = "那麼" + ingr_inseason + "如何？"
-
-            #紀錄
-            mscDICT["ingredient"] = ingr_inseason
-            mscDICT["time"] = res_time
-            mscDICT["type"] = res_type
-            
-        else: #DEFAULT
+        
+        #default
+        else: 
             mscDICT["replySTR"] = choice(["好喔", "Ok", "繼續問我更多食材問題吧"])
     
         #紀錄本次的intent

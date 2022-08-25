@@ -36,49 +36,31 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
 
     if utterance == "[杏仁] 禁忌":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[杏仁][可以]跟什麼[一起]吃":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[杏仁]不[可以]跟什麼[一起]吃":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[杏仁]的食用禁忌有哪些":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[杏仁]與什麼食物相剋？":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[杏仁]跟什麼不[能][一起]吃":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[杏仁]跟什麼相剋":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[螃蟹]跟[柿子][可以][一起]吃嗎":
         resultDICT["ingredient"] = args[0]
         resultDICT["ingredient_2"] = args[1]
-        # write your code here
-        pass
 
     if utterance == "和[杏仁]相剋的食物有哪些":
         resultDICT["ingredient"] = args[0]
-        # write your code here
-        pass
 
     if utterance == "[芭樂]有什麼禁忌":
         resultDICT["ingredient"] = args[0]

@@ -73,17 +73,7 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         resultDICT["type"] = args[3]
 
     if utterance == "有什麼[水果]":
-        if '有什麼禁忌' in all_utt:
-            resultDICT.pop("inseason")
-        elif "[芭樂]有什麼禁忌" in all_utt:
-            resultDICT.pop("inseason")
-        elif "[紅棗]有甚麼料理" in all_utt:
-            resultDICT.pop("inseason")
-        elif "[葡萄]有什麼料理方式" in all_utt:
-            resultDICT.pop("inseason")
-        elif "有甚麼[紫甘藍]的作法" in all_utt:
-            resultDICT.pop("inseason")
-        elif "有甚麼料理" in all_utt:
+        if args[0] not in ("蔬菜", "水果", "海鮮", "食材"):
             resultDICT.pop("inseason")
         else:
             resultDICT["type"] = args[0]
@@ -93,17 +83,5 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
 
     if utterance == "[現在]盛產什麼":
         resultDICT["time"] = args[0]
-
-    if utterance == "[當季][食材]有啥":
-
-        if "[現在]的[當季][食材]有哪些" in all_utt:
-            resultDICT.pop("inseason")
-        elif "[你]知道[七月]的[當令][食材]有哪些嗎" in all_utt:
-            resultDICT.pop("inseason")
-        elif "[我]想知道[三月]的[當令][食材]有哪些" in all_utt:
-            resultDICT.pop("inseason")
-        else:
-            resultDICT["time"] = args[0]
-            resultDICT["type"] = args[1]
 
     return resultDICT

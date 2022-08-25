@@ -54,10 +54,8 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     if utterance == "[海膽]是[幾月]產的食材":
         resultDICT["ingredient"] = args[0]
 
-    if utterance == "[海膽]是[幾月]的[食材]":
-        if "[葡萄]是[當季]水果嗎" in all_utt:
-            resultDICT.pop("which_season")
-        elif "[烏魚子]是[當季]食材嗎" in all_utt:
+    if utterance == "[海膽]是[幾月]的食材":
+        if args[1] != "幾月":
             resultDICT.pop("which_season")
         else:
             resultDICT["ingredient"] = args[0]

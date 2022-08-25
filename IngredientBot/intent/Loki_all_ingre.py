@@ -54,30 +54,4 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     if utterance == "[你][可以]跟[我]說[所有]的[當季][食材]嗎":
         resultDICT["type"] = args[5]
 
-    if utterance == "[所有][當季][食材]":
-        if "[葡萄]是[當季]水果嗎" in all_utt:
-            resultDICT.pop("all_ingr")
-        elif "[烏魚子]是[當季]食材嗎" in all_utt:
-            resultDICT.pop("all_ingr")
-        elif "[烏魚子]是不[是][當季]食材？" in all_utt:
-            resultDICT.pop("all_ingr")
-        elif "有什麼[當季][食材]" in all_utt:
-            resultDICT.pop("all_ingr")
-        elif "[現在]有甚麼[好吃]的[當季][水果]" in all_utt:
-            resultDICT.pop("all_ingr")
-        elif "[現在當季]的[水果]是什麼" in all_utt:
-            resultDICT.pop("all_ingr")
-        elif "[現在]有甚麼[當季][水果][好吃]" in all_utt:
-            resultDICT.pop("all_ingr")
-        elif "告訴[我][現在]有什麼[當季][食材]" in all_utt:
-            resultDICT.pop("all_ingr")
-        elif "[今天][晚餐]吃什麼" in all_utt:
-            resultDICT.pop("all_ingr")
-        elif "[海膽]是[幾月]的[食材]" in all_utt:
-            resultDICT.pop("all_ingr")
-        elif "[海膽]是[幾月]產的食材" in all_utt:
-            resultDICT.pop("all_ingr")
-        else:
-            resultDICT["type"] = args[2]
-
     return resultDICT
