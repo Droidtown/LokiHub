@@ -33,160 +33,156 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "[岩鞋][大概]多少[錢]？":
         if "租" not in utterance:
             if args[0] in userDefinedDICT["_shoes"]:
-                resultDICT["equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
+                resultDICT["reply_equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
             elif args[0] in userDefinedDICT["_climbingEquip"]:
-                resultDICT["equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
+                resultDICT["reply_equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
             elif args[0] in userDefinedDICT["_topRopingEquip"]:
-                resultDICT["equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
+                resultDICT["reply_equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
             else:
-                resultDICT["equipment_price"] = '這我不知道噎'
+                resultDICT["reply_equipment_price"] = '這我不知道噎'
         else:
             if args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_climbingEquip"] or args[0] in userDefinedDICT["_topRopingEquip"]:
-                resultDICT["equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
+                resultDICT["reply_equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
             else:
-                resultDICT["equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
+                resultDICT["reply_equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
 
     if utterance == "[岩鞋][很貴]嗎？":
         if "租" not in utterance:
             if args[0] in userDefinedDICT["_shoes"]:
-                resultDICT["equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
+                resultDICT["reply_equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
             elif args[0] in userDefinedDICT["_climbingEquip"]:
-                resultDICT["equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
+                resultDICT["reply_equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
             elif args[0] in userDefinedDICT["_topRopingEquip"]:
-                resultDICT["equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
+                resultDICT["reply_equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
             else:
-                resultDICT["equipment_price"] = '這我不知道噎'
+                resultDICT["reply_equipment_price"] = '這我不知道噎'
         else:
             if args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_climbingEquip"] or args[0] in userDefinedDICT["_topRopingEquip"]:
-                resultDICT["equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
+                resultDICT["reply_equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
             else:
-                resultDICT["equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
+                resultDICT["reply_equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
 
     if utterance == "[岩鞋]多貴？":
         if "租" not in utterance:
             if args[0] in userDefinedDICT["_shoes"]:
-                resultDICT["equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
+                resultDICT["reply_equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
             elif args[0] in userDefinedDICT["_climbingEquip"]:
-                resultDICT["equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
+                resultDICT["reply_equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
             elif args[0] in userDefinedDICT["_topRopingEquip"]:
-                resultDICT["equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
+                resultDICT["reply_equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
             else:
-                resultDICT["equipment_price"] = '這我不知道噎'
+                resultDICT["reply_equipment_price"] = '這我不知道噎'
         else:
             if args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_climbingEquip"] or args[0] in userDefinedDICT["_topRopingEquip"]:
-                resultDICT["equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
+                resultDICT["reply_equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
             else:
-                resultDICT["equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
+                resultDICT["reply_equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
 
     if utterance == "[岩鞋]要價多少？":
         if "租" not in utterance:
             if args[0] in userDefinedDICT["_shoes"]:
-                resultDICT["equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
+                resultDICT["reply_equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
             elif args[0] in userDefinedDICT["_climbingEquip"]:
-                resultDICT["equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
+                resultDICT["reply_equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
             elif args[0] in userDefinedDICT["_topRopingEquip"]:
-                resultDICT["equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
+                resultDICT["reply_equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
             else:
-                resultDICT["equipment_price"] = '這我不知道噎'
+                resultDICT["reply_equipment_price"] = '這我不知道噎'
         else:
             if args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_climbingEquip"] or args[0] in userDefinedDICT["_topRopingEquip"]:
-                resultDICT["equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
+                resultDICT["reply_equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
             else:
-                resultDICT["equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
+                resultDICT["reply_equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
 
     if utterance == "[岩鞋]要多少[錢]？":
         if "租" not in utterance:
             if args[0] in userDefinedDICT["_shoes"]:
-                resultDICT["equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
+                resultDICT["reply_equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
             elif args[0] in userDefinedDICT["_climbingEquip"]:
-                resultDICT["equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
+                resultDICT["reply_equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
             elif args[0] in userDefinedDICT["_topRopingEquip"]:
-                resultDICT["equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
+                resultDICT["reply_equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
             else:
-                resultDICT["equipment_price"] = '這我不知道噎'
+                resultDICT["reply_equipment_price"] = '這我不知道噎'
         else:
             if args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_climbingEquip"] or args[0] in userDefinedDICT["_topRopingEquip"]:
-                resultDICT["equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
+                resultDICT["reply_equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
             else:
-                resultDICT["equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
+                resultDICT["reply_equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
 
     if utterance == "多少[錢][能]買得到[岩鞋]？":
         if args[2] in userDefinedDICT["_shoes"]:
-            resultDICT["equipment_price"] = args[2]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
+            resultDICT["reply_equipment_price"] = args[2]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
         elif args[2] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["equipment_price"] = args[2]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
+            resultDICT["reply_equipment_price"] = args[2]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
         elif args[2] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["equipment_price"] = args[2]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
+            resultDICT["reply_equipment_price"] = args[2]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
         else:
-            resultDICT["equipment_price"] = '這我不知道噎'
+            resultDICT["reply_equipment_price"] = '這我不知道噎'
 
     if utterance == "多少[錢]買得到[岩鞋]？":
         if args[1] in userDefinedDICT["_shoes"]:
-            resultDICT["equipment_price"] = args[1]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
+            resultDICT["reply_equipment_price"] = args[1]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
         elif args[1] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["equipment_price"] = args[1]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
+            resultDICT["reply_equipment_price"] = args[1]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
         elif args[1] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["equipment_price"] = args[1]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
+            resultDICT["reply_equipment_price"] = args[1]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
         else:
-            resultDICT["equipment_price"] = '這我不知道噎'
+            resultDICT["reply_equipment_price"] = '這我不知道噎'
 
     if utterance == "花多少[才]買得到[岩鞋]？":
         if args[1] in userDefinedDICT["_shoes"]:
-            resultDICT["equipment_price"] = args[1]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
+            resultDICT["reply_equipment_price"] = args[1]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
         elif args[1] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["equipment_price"] = args[1]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
+            resultDICT["reply_equipment_price"] = args[1]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
         elif args[1] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["equipment_price"] = args[1]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
+            resultDICT["reply_equipment_price"] = args[1]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
         else:
             resultDICT["equipment_price"] = '這我不知道噎'
 
     if utterance == "買[岩鞋]要花多少？":
         if args[0] in userDefinedDICT["_shoes"]:
-            resultDICT["equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
+            resultDICT["reply_equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
         elif args[0] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
+            resultDICT["reply_equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
         elif args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
+            resultDICT["reply_equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
         else:
-            resultDICT["equipment_price"] = '這我不知道噎'
-
-    if utterance == "買[岩鞋]需要花到[四個]小朋友嗎？":
-        if args[0] in userDefinedDICT["_shoes"]:
-            resultDICT["equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
-        elif args[0] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
-        elif args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
-        else:
-            resultDICT["equipment_price"] = '這我不知道噎'
+            resultDICT["reply_equipment_price"] = '這我不知道噎'
 
     if utterance == "多少[錢][可以]租到[岩鞋]":
         if args[2] in userDefinedDICT["_shoes"] or args[2] in userDefinedDICT["_climbingEquip"] or args[2] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
+            resultDICT["reply_equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
         else:
-            resultDICT["equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
+            resultDICT["reply_equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
 
     if utterance == "多少[錢]租得到[岩鞋]":
         if args[1] in userDefinedDICT["_shoes"] or args[1] in userDefinedDICT["_climbingEquip"] or args[2] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
+            resultDICT["reply_equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
         else:
-            resultDICT["equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
+            resultDICT["reply_equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
 
     if utterance == "租[岩鞋]要花多少":
         if args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_climbingEquip"] or args[2] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
+            resultDICT["reply_equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
         else:
-            resultDICT["equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
+            resultDICT["reply_equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
 
     if utterance == "花多少[才]租得到[岩鞋]？":
         if args[1] in userDefinedDICT["_shoes"] or args[1] in userDefinedDICT["_climbingEquip"] or args[2] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
+            resultDICT["reply_equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
         else:
-            resultDICT["equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
+            resultDICT["reply_equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
 
     if utterance == "買[岩鞋]需要[花]到[四個]小朋友嗎？":
-        # write your code here
-        pass
+        if args[0] in userDefinedDICT["_shoes"]:
+            resultDICT["reply_equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
+        elif args[0] in userDefinedDICT["_climbingEquip"]:
+            resultDICT["reply_equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
+        elif args[0] in userDefinedDICT["_topRopingEquip"]:
+            resultDICT["reply_equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
+        else:
+            resultDICT["reply_equipment_price"] = '這我不知道噎'
 
     return resultDICT
 

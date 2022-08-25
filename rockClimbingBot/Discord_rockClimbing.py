@@ -8,51 +8,41 @@ import re
 from datetime import datetime
 from pprint import pprint
 from rockClimbing import runLoki
-
-#from <your_loki_main_program> import runLoki
+from rockClimbingNLUmodel import NLUmodel
 
 logging.basicConfig(level=logging.DEBUG)
-
 
 with open("account.info", encoding="utf-8") as f: #讀取account.info
     accountDICT = json.loads(f.read())
 
-punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
-def getLokiResult(inputSTR):
-    punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
-    inputLIST = punctuationPat.sub("\n", inputSTR).split("\n")
-    filterLIST = []
-    resultDICT = runLoki(inputLIST, filterLIST)
-    logging.debug("Loki Result => {}".format(resultDICT))
-    return resultDICT
-
 class BotClient(discord.Client):
 
-    def resetMSCwith(self, messageAuthorID):
-        '''
-        清空與 messageAuthorID 之間的對話記錄
-        '''
+    def resetMSCwith(self, messageAuthorID): #清空與 messageAuthorID 之間的對話記錄
+        logging.info("\n--reset message--")
         templateDICT = self.templateDICT
         templateDICT["updatetime"] = datetime.now()
         return templateDICT
 
     async def on_ready(self):
-        # ################### Multi-Session Conversation :設定多輪對話資訊 ###################
-        self.templateDICT = {"updatetime" : None,
+        self.templateDICT = {"updatetime": None,
                              "latestQuest": "",
+                             "replySTR":"",
+                             "msgSTR":"",
                              "_gym_place":"",
                              "_gym_time":"",
-                             "_person_loc":""
-        }
-        self.mscDICT = { #userid:templateDICT
-        }
-        # ####################################################################################
+                             "_person_loc":"",
+                             "_day_of_week": "",
+                             "_gym_name":"",
 
+
+        }
+        self.templateDICT["_day_of_week"] = datetime.today().weekday()
+        self.mscDICT = { 
+        }
         print('Logged on as {} with id {}'.format(self.user, self.user.id))
 
     async def on_message(self, message):
         # Don't respond to bot itself. Or it would create a non-stop loop.
-        # 如果訊息來自 bot 自己，就不要處理，直接回覆 None。不然會 Bot 會自問自答個不停。
         if message.author == self.user:
             return None
         elif message.content.lower().replace(" ", "") in ("bot點名"):
@@ -60,69 +50,41 @@ class BotClient(discord.Client):
 
         logging.debug("收到來自 {} 的訊息".format(message.author))
         logging.debug("訊息內容是 {}。".format(message.content))
-        if self.user.mentioned_in(message):
-            replySTR = "我是預設的回應字串…你會看到我這串字，肯定是出了什麼錯！"
-            logging.debug("本 bot 被叫到了！")
+        if self.user.mentioned_in(message):#if "<@!{}>".format(self.user.id) in message.content or "<@{}>".format(self.user.id) in message.content:#
+            #replySTR = "我是預設的回應字串…你會看到我這串字，肯定是出了什麼錯！"
             msgSTR = message.content.replace("<@{}> ".format(self.user.id), "").strip()
+            
+            logging.debug("本 bot 被叫到了！")
             logging.debug("人類說：{}".format(msgSTR))
 
-            if msgSTR == "ping":
-                await message.reply('pong')
-            elif msgSTR == "ping ping":
-                await message.reply('pong pong')
-
-# ##########初次對話：這裡是 keyword trigger 的。
-            elif msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello"]:
+            # keyword trigger 打招呼 
+            if msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello","妳好","嗨嗨","安安","hey","yo","阿羅哈"]:
+                logging.debug("msgSTR1:{}\n".format(msgSTR))
                 #有講過話(判斷對話時間差)
+                print("message.author.id = {}".format(message.author.id))
+                print("self.mscDICT.keys() =",self.mscDICT.keys())
                 if message.author.id in self.mscDICT.keys():
                     timeDIFF = datetime.now() - self.mscDICT[message.author.id]["updatetime"]
-                    #有講過話，但與上次差超過 5 分鐘(視為沒有講過話，刷新template)
-                    if timeDIFF.total_seconds() >= 300:
+                    if timeDIFF.total_seconds() >= 300: #有講過話，但與上次差超過 5 分鐘(視為沒有講過話，刷新template)
                         self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
-                        replySTR = "嗨嗨，我們好像見過面，但卓騰的隱私政策不允許我記得你的資料，抱歉！"
-                    #有講過話，而且還沒超過5分鐘就又跟我 hello (就繼續上次的對話)
-                    else:
-                        replySTR = self.mscDICT[message.author.id]["latestQuest"]
+                        self.mscDICT[message.author.id]["replySTR"] = "嗨嗨，我們好像見過面，但卓騰的隱私政策不允許我記得你的資料，抱歉！"
+                    else:#有講過話，而且還沒超過5分鐘就又跟我 hello (就繼續上次的對話)
+                        self.mscDICT[message.author.id]["replySTR"] = self.mscDICT[message.author.id]["latestQuest"]
                 #沒有講過話(給他一個新的template)
                 else:
+                    print("message.author.id = {}".format(message.author.id))
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
-                    replySTR = msgSTR.title()
-                    #replySTR = "哈囉！我是阿攀，你的攀岩小幫手～\n幫你解決攀岩的各種問題。對攀岩有沒有什麼想了解的呢？"
+                    self.mscDICT[message.author.id]["replySTR"] = "哈囉！我是你的攀岩知識小幫手～\n幫你解決對攀岩的各種疑惑！\n有什麼想問的呢？"#msgSTR.title()
+            #非初次對話：這裡用 Loki 計算語意
+            else: #開始處理正式對話，接上 NLU 模型
+                print("msgSTR2:",msgSTR,)
+                print(self.mscDICT.keys())
+                if message.author.id not in self.mscDICT.keys():
+                    self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
+                self.mscDICT[message.author.id]["msgSTR"] = msgSTR #將取回的資訊 update 到人類的 msc 裡。
+                self.mscDICT[message.author.id] = NLUmodel(self.mscDICT[message.author.id])
 
-# ##########非初次對話：這裡用 Loki 計算語意
-            else: #開始處理正式對話
-                #從這裡開始接上 NLU 模型
-                resultDICT = getLokiResult(msgSTR)
-
-                #將取回的資訊 update 到人類的 msc 裡。
-
-                #若有地點資訊，可以回答的問題
-                #有區域or地址：附近岩館
-                #
-                if resultDICT["_person_loc"] == None:
-                    replySTR = "請問您在哪裡呢？"
-
-                else:
-                    self.mscDICT[message.author.id]["_person_loc"] = resultDICT["_person_loc"]
-                
-                #有岩館名稱，可回答：營業時間、裝備價格、入館費用、
-                if self.mscDICT[massage.author.id]["_gym_name"] == None:
-                    # if resultDICT["_gym_name"][0] == None:
-                    #     if mscDICT[message.author.id]["_gym_name"] != None:
-                    #         replySTR = None
-                    #     else:
-                    replySTR = ""
-                else:
-                    replySTR = "請問您問的是哪間{}呢？".format(resultDICT["_gym_name"][1])
-
-                #若有時間資訊，可以回答的問題
-
-
-
-                logging.debug("######\nLoki 處理結果如下：")
-                logging.debug(resulDICT)
-
-        await message.reply(replySTR)
+        await message.reply(self.mscDICT[message.author.id]["replySTR"])
 
 
 if __name__ == "__main__":

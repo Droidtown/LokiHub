@@ -32,124 +32,124 @@ def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "[你]知道[可以]去哪買[岩粉]嗎":
         if args[2] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[2] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[2] in userDefinedDICT["_shoes"] or args[2] in userDefinedDICT["_peClothes"]:
-            resultDICT["_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
+            resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
-            resultDICT["_equipment_whereGet"] = '這超出我能力範圍了'
+            resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     if utterance == "[你]知道[岩粉]哪裡租得到嗎":
         if args[1] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '一般岩館都有提供租借哦！'
+            resultDICT["reply_equipment_whereGet"] = '一般岩館都有提供租借哦！'
         elif args[1] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '一般上攀岩館都租借得到哦！'
+            resultDICT["reply_equipment_whereGet"] = '一般上攀岩館都租借得到哦！'
         else:
             resultDICT["equipment_whereGet"] = '這應該租不太到'
 
     if utterance == "[你]知道[岩粉]哪裡買得到嗎":
         if args[1] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[1] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[1] in userDefinedDICT["_shoes"] or args[1] in userDefinedDICT["_peClothes"]:
-            resultDICT["_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
+            resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
-            resultDICT["_equipment_whereGet"] = '這超出我能力範圍了'
+            resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     if utterance == "[你]知道[岩粉]要去[哪買]嗎":
         if args[0] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_peClothes"]:
-            resultDICT["_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
+            resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
-            resultDICT["_equipment_whereGet"] = '這超出我能力範圍了'
+            resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     if utterance == "[岩粉][可以]去哪買？":
         if args[0] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_peClothes"]:
-            resultDICT["_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
+            resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
-            resultDICT["_equipment_whereGet"] = '這超出我能力範圍了'
+            resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     if utterance == "[岩粉]哪裡[可以]租得到？":
         if args[1] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '一般岩館都有提供租借哦！'
+            resultDICT["reply_equipment_whereGet"] = '一般岩館都有提供租借哦！'
         elif args[1] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '一般上攀岩館都租借得到哦！'
+            resultDICT["reply_equipment_whereGet"] = '一般上攀岩館都租借得到哦！'
         else:
             resultDICT["equipment_whereGet"] = '這應該租不太到'
 
     if utterance == "[岩粉]哪裡[可以]買得到？":
         if args[0] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_peClothes"]:
-            resultDICT["_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
+            resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
-            resultDICT["_equipment_whereGet"] = '這超出我能力範圍了'
+            resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     if utterance == "[岩粉]哪裡買得到？":
         if args[0] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_peClothes"]:
-            resultDICT["_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
+            resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
-            resultDICT["_equipment_whereGet"] = '這超出我能力範圍了'
+            resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     if utterance == "哪裡[可以]租[岩粉]":
         if args[1] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '一般岩館都有提供租借哦！'
+            resultDICT["reply_equipment_whereGet"] = '一般岩館都有提供租借哦！'
         elif args[1] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '一般上攀岩館都租借得到哦！'
+            resultDICT["reply_equipment_whereGet"] = '一般上攀岩館都租借得到哦！'
         else:
             resultDICT["equipment_whereGet"] = '這應該租不太到'
 
     if utterance == "哪裡[可以]買[岩粉]":
         if args[1] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[1] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[1] in userDefinedDICT["_shoes"] or args[1] in userDefinedDICT["_peClothes"]:
-            resultDICT["_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
+            resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
-            resultDICT["_equipment_whereGet"] = '這超出我能力範圍了'
+            resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     if utterance == "哪裡[可以]買到[岩粉]":
         if args[1] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[1] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[1] in userDefinedDICT["_shoes"] or args[1] in userDefinedDICT["_peClothes"]:
-            resultDICT["_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
+            resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
-            resultDICT["_equipment_whereGet"] = '這超出我能力範圍了'
+            resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     if utterance == "哪裡租得到[岩粉]":
         if args[0] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '一般岩館都有提供租借哦！'
+            resultDICT["reply_equipment_whereGet"] = '一般岩館都有提供租借哦！'
         elif args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '一般上攀岩館都租借得到哦！'
+            resultDICT["reply_equipment_whereGet"] = '一般上攀岩館都租借得到哦！'
         else:
             resultDICT["equipment_whereGet"] = '這應該租不太到'
 
     if utterance == "哪裡買得到[岩粉]":
         if args[0] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
+            resultDICT["reply_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
         elif args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_peClothes"]:
-            resultDICT["_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
+            resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
-            resultDICT["_equipment_whereGet"] = '這超出我能力範圍了'
+            resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     return resultDICT

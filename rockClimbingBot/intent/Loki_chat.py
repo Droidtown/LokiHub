@@ -50,43 +50,37 @@ def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "[你][會]攀岩嗎":
         if args[0][0] in ("你", "妳", "您"):
-            resultDICT["chat"] = _reply(utterance)
+            resultDICT["reply_chat"] = _reply(utterance)
 
     if utterance == "[你]喜歡攀岩嗎？":
         if args[0][0] in ("你", "妳", "您"):
-            resultDICT["chat"] = _reply(utterance)
+            resultDICT["reply_chat"] = _reply(utterance)
 
     if utterance == "[你]愛攀岩[麻]":
         if args[0][0] in ("你", "妳", "您"):
-            resultDICT["chat"] = _reply(utterance)
+            resultDICT["reply_chat"] = _reply(utterance)
 
     if utterance == "[我]不喜歡[上攀]":
         if args[0][0] in ("我", "咱") and args[1] not in userDefinedDICT["_climbing"]:
-            resultDICT["chat"] = _reply(utterance)
+            resultDICT["reply_chat"] = _reply(utterance)
 
     if utterance == "[我]喜歡[抱石]":
         if args[0][0] in ("我", "咱") and args[1] not in userDefinedDICT["_climbing"]:
             resultDICT["chat"] = _reply(utterance)
 
-    if utterance == "[抱石]":
-        resultDICT["chat"] = utterance
-
     if utterance == "[抱石][好玩]嗎":
-        resultDICT["chat"] = _reply(utterance)
+        resultDICT["reply_chat"] = _reply(utterance)
 
     if utterance == "[抱石]要穿[長褲]還[短褲]？":
-        resultDICT["chat"] = "以方便運動為主哦！"
+        resultDICT["reply_chat"] = "以方便運動為主哦！"
 
     if utterance == "[攀岩鞋子]要買多[大]？":
-        resultDICT["chat"] = _reply(utterance)
-
-    if utterance == "攀岩":
-        resultDICT["chat"] = _reply(utterance)
+        resultDICT["reply_chat"] = _reply(utterance)
 
     if utterance == "攀岩[好無聊]！":
-        resultDICT["chat"] = _reply(utterance)
+        resultDICT["reply_chat"] = _reply(utterance)
 
     if utterance == "攀岩要穿[長褲]還[短褲]？":
-        resultDICT["chat"] = "以方便運動為主哦！"
+        resultDICT["reply_chat"] = "以方便運動為主哦！"
 
     return resultDICT

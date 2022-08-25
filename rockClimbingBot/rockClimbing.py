@@ -47,6 +47,7 @@ from requests import codes
 import math
 import re
 import json
+import rockClimbingFunc
 try:
     from intent import Loki_gym_city
     from intent import Loki_equipment_price
@@ -104,9 +105,9 @@ class LokiResult():
         self.version = ""
         self.balance = -1
         self.lokiResultLIST = []
-        # filterLIST 空的就採用預設的 INTENT_FILTER
-        if filterLIST == []:
-            filterLIST = INTENT_FILTER
+        # # filterLIST 空的就採用預設的 INTENT_FILTER
+        # if filterLIST == []:
+        #     filterLIST = INTENT_FILTER
 
         try:
             result = post(LOKI_URL, json={
@@ -197,11 +198,27 @@ class LokiResult():
 def runLoki(inputLIST, filterLIST=[]):
     # 將 intent 會使用到的 key 預先設爲空列表
     resultDICT = {
-        "_person_loc":None, # gym city, gym price
-        "_gym_name":None, 
-        "_gym_location":None,
-        "_ask_time":None,
-        "_what":None
+        "_person_loc":[], # gym city, gym price
+        "_ask_time":"",
+        "_what_is":"",
+        "_gym_name": "",
+        ##############
+        # "reply_gym_name": "",
+        # "reply_gym_distance":"",
+        # "reply_gym_yesNo":"",
+        # "reply_gym_price":"",
+        # "reply_gym_location":"", #gym_city
+        # "reply_gym_time":"",
+        # "reply_gym_howMany":"",
+        # "reply_chat":"",
+        # "reply_equipment_list":"",
+        # "reply_equipment_price":"",
+        # "reply_equipment_whereGet":"",
+        # "reply_equipment_YesNo":"",
+        # "reply_rocks":"",
+        # "reply_rules":"",
+        # "reply_whatIs":""
+        ###############
     }
     lokiRst = LokiResult(inputLIST, filterLIST)
     if lokiRst.getStatus():
@@ -366,7 +383,7 @@ def testIntent():
 
     # rock
     print("[TEST] rock")
-    inputLIST = ['jug是什麼','jug長怎樣','pinch怎麼抓','岩點有哪些','jug有什麼特色','jug長什麼樣子','岩點有哪幾種','sloper可以怎麼爬','最不好抓的點是','最好爬的是哪種','爬jug要注意什麼','最好抓的是哪種點','最難抓的點是哪個','最不好抓的點是哪個']
+    inputLIST = ['jug的特色是什麼','jug長怎樣','pinch怎麼抓','岩點有哪些','jug有什麼特色','jug長什麼樣子','岩點有哪幾種','sloper可以怎麼爬','最不好抓的點是','最好爬的是哪種','爬jug要注意什麼','最好抓的是哪種點','最難抓的點是哪個','最不好抓的點是哪個']
     testLoki(inputLIST, ['rock'])
     print("")
 
@@ -402,7 +419,7 @@ def testIntent():
 
     # chat
     print("[TEST] chat")
-    inputLIST = ['抱石','攀岩','你愛攀岩麻','你會攀岩嗎','我喜歡抱石','抱石好玩嗎','我不喜歡上攀','攀岩好無聊！','你喜歡攀岩嗎？','攀岩鞋子要買多大？','抱石要穿長褲還短褲？','攀岩要穿長褲還短褲？']
+    inputLIST = ['你愛攀岩麻','你會攀岩嗎','我喜歡抱石','抱石好玩嗎','我不喜歡上攀','攀岩好無聊！','你喜歡攀岩嗎？','攀岩鞋子要買多大？','抱石要穿長褲還短褲？','攀岩要穿長褲還短褲？']
     testLoki(inputLIST, ['chat'])
     print("")
 
@@ -424,12 +441,20 @@ def testIntent():
     testLoki(inputLIST, ['gym_distance'])
     print("")
 
+def result(inputSTR):
+    inputSTR = ""
 
 if __name__ == "__main__":
     # 測試所有意圖
-    testIntent()
+    #testIntent()
 
     # 測試其它句子
     filterLIST = []
     splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
-    resultDICT = execLoki("台南哪裡有岩館？", filterLIST, splitLIST)            # output => ["今天天氣"]
+
+    # resultDICT = execLoki("攀岩的規則是什麼？")
+    # print(resultDICT) 
+    # resultDICT = execLoki("攀岩有規則嗎？") 
+    # print(resultDICT) 
+    # resultDICT = execLoki("台南哪裡有岩館？")  
+    # print(resultDICT)  

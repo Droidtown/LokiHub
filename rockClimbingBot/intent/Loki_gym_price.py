@@ -68,116 +68,116 @@ def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "[double 8][一個][人]多少[錢]":
         if args[0] in userDefinedDICT["_gymsShort"]:
-            resultDICT["_gym_name"] = args[0]
+            resultDICT["reply_gym_name"] = args[0]
             gymPrice = getGymPrice(args[0])
-            resultDICT["_gym_price"] = gymPrice
+            resultDICT["reply_gym_price"] = gymPrice
         elif args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
-            resultDICT["_gym_price"] = "台灣沒有這間岩館哦"
+            resultDICT["reply_gym_price"] = "台灣沒有這間岩館哦"
 
     if utterance == "[抱石][一次]多少[錢]":
         if args[0] in userDefinedDICT["_gymsShort"]:
-            resultDICT["_gym_name"] = args[0]
+            resultDICT["reply_gym_name"] = args[0]
             gymPrice = getGymPrice(args[0])
-            resultDICT["_gym_price"] = gymPrice
+            resultDICT["reply_gym_price"] = gymPrice
         elif args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
-            resultDICT["_gym_price"] = "台灣沒有這間岩館哦"
+            resultDICT["reply_gym_price"] = "台灣沒有這間岩館哦"
 
     if utterance == "[抱石][通常]要花多少":
         if args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
-            resultDICT["_gym_price"] = "台灣沒有這間岩館哦"
+            resultDICT["reply_gym_price"] = "台灣沒有這間岩館哦"
 
     if utterance == "[紅石][一次]多少":
         if args[0] in userDefinedDICT["_gymsShort"]:
-            resultDICT["_gym_name"] = args[0]
+            resultDICT["reply_gym_name"] = args[0]
             gymPrice = getGymPrice(args[0])
-            resultDICT["_gym_price"] = gymPrice
+            resultDICT["reply_gym_price"] = gymPrice
         elif args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
-            resultDICT["_gym_price"] = "台灣沒有這間岩館哦"
+            resultDICT["reply_gym_price"] = "台灣沒有這間岩館哦"
 
     if utterance == "[紅石][票價]多少":
         if args[0] in userDefinedDICT["_gymsShort"]:
-            resultDICT["_gym_name"] = args[0]
+            resultDICT["reply_gym_name"] = args[0]
             gymPrice = getGymPrice(args[0])
-            resultDICT["_gym_price"] = gymPrice
+            resultDICT["reply_gym_price"] = gymPrice
         elif args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
-            resultDICT["_gym_price"] = "台灣沒有這間岩館哦"
+            resultDICT["reply_gym_price"] = "台灣沒有這間岩館哦"
 
     if utterance == "[紅石]攀岩[一天]多少[錢]":
         if args[0] in userDefinedDICT["_gymsShort"]:
-            resultDICT["_gym_name"] = args[0]
+            resultDICT["reply_gym_name"] = args[0]
             gymPrice = getGymPrice(args[0])
-            resultDICT["_gym_price"] = gymPrice
+            resultDICT["reply_gym_price"] = gymPrice
         elif args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
-            resultDICT["_gym_price"] = "台灣沒有這間岩館哦"
+            resultDICT["reply_gym_price"] = "台灣沒有這間岩館哦"
 
     if utterance == "[紅石]攀岩[一次]多少":
         if args[0] in userDefinedDICT["_gymsShort"]:
-            resultDICT["_gym_name"] = args[0]
+            resultDICT["reply_gym_name"] = args[0]
             gymPrice = getGymPrice(args[0])
-            resultDICT["_gym_price"] = gymPrice
+            resultDICT["reply_gym_price"] = gymPrice
         elif args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
-            resultDICT["_gym_price"] = "台灣沒有這間岩館哦"
+            resultDICT["reply_gym_price"] = "台灣沒有這間岩館哦"
 
     if utterance == "去[double8]攀岩[一次]多少":
         if args[0] in userDefinedDICT["_gymsShort"]:
-            resultDICT["_gym_name"] = args[0]
+            resultDICT["reply_gym_name"] = args[0]
             gymPrice = getGymPrice(args[0])
-            resultDICT["_gym_price"] = gymPrice
+            resultDICT["reply_gym_price"] = gymPrice
         elif args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
-            resultDICT["_gym_price"] = "台灣沒有這間岩館哦"
+            resultDICT["reply_gym_price"] = "台灣沒有這間岩館哦"
 
     if utterance == "去[一次][岩館]多少[錢]":
         if args[1] in userDefinedDICT["_gymsShort"]:
-            resultDICT["_gym_name"] = args[1]
+            resultDICT["reply_gym_name"] = args[1]
             gymPrice = getGymPrice(args[1])
-            resultDICT["_gym_price"] = gymPrice
+            resultDICT["reply_gym_price"] = gymPrice
         elif args[1] in userDefinedDICT["_climbing"]:
-            resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
-            resultDICT["_gym_price"] = "台灣沒有這間岩館哦"
+            resultDICT["reply_gym_price"] = "台灣沒有這間岩館哦"
 
     if utterance == "去[抱石][一次]多少":
         if args[0] in userDefinedDICT["_gymsShort"]:
-            resultDICT["_gym_name"] = args[0]
+            resultDICT["reply_gym_name"] = args[0]
             gymPrice = getGymPrice(args[0])
-            resultDICT["_gym_price"] = gymPrice
+            resultDICT["reply_gym_price"] = gymPrice
         elif args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
-            resultDICT["_gym_price"] = "台灣沒有這間岩館哦"
+            resultDICT["reply_gym_price"] = "台灣沒有這間岩館哦"
 
     if utterance == "去攀[一次]岩多少[錢]":
-        resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+        resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
 
     if utterance == "去攀岩[一次]多少":
-        resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+        resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
 
     if utterance == "去攀岩[一次]多少[錢]":
-        resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+        resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
 
     if utterance == "攀岩[一次]多少[錢]":
-        resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+        resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
 
     if utterance == "攀岩[通常]要花多少":
-        resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+        resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
 
     if utterance == "去攀[一次][岩]多少[錢]":
-        resultDICT["_gym_price"] = defaultResponse["_climbing_price"]
+        resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
 
     return resultDICT

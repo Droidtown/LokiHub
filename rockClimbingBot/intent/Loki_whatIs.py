@@ -35,47 +35,48 @@ def debugInfo(inputSTR, utterance):
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "[jug]是什麼？":
-        resultDICT["_what"] = args[0]
+        resultDICT["_what_is"] = args[0]
         if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_what_is"] = "{}是一種岩點".format(args[0])
+            resultDICT["reply_whatIs"] = "{}是一種岩點".format(args[0])
         elif args[0] in userDefinedDICT["_climbingEquip"] and args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_what_is"] = "{}是一種攀岩用具".format(args[0])
+            resultDICT["reply_whatIs"] = "{}是一種攀岩用具".format(args[0])
         elif args[0] in whatIs.keys():
-            resultDICT["_what_is"] = whatIs[args[0]]
+            resultDICT["reply_whatIs"] = "{0}{1}".format(args[0],whatIs[args[0]])
         else:
-            resultDICT["_what_is"] = random.choice(defaultResponse["_Not_sure"])
+            resultDICT["reply_whatIs"] = random.choice(defaultResponse["_Not_sure"])
 
     if utterance == "[星光票]的[意思]是？":
-        resultDICT["_what"] = args[0]
+        resultDICT["_what_is"] = args[0]
         if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_what_is"] = "{}是一種岩點".format(args[0])
+            resultDICT["reply_whatIs"] = "{}是一種岩點".format(args[0])
         elif args[0] in userDefinedDICT["_climbingEquip"] and args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_what_is"] = "{}是一種攀岩用具".format(args[0])
+            resultDICT["reply_whatIs"] = "{}是一種攀岩用具".format(args[0])
         elif args[0] in whatIs.keys():
-            resultDICT["_what_is"] = whatIs[args[0]]
+            resultDICT["reply_whatIs"] = "{0}{1}".format(args[0],whatIs[args[0]])
         else:
-            resultDICT["_what_is"] = random.choice(defaultResponse["_Not_sure"])
+            resultDICT["reply_whatIs"] = random.choice(defaultResponse["_Not_sure"])
 
     if utterance == "什麼是[星光票]？":
-        resultDICT["_what"] = args[0]
+        resultDICT["_what_is"] = args[0]
         if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_what_is"] = "{}是一種岩點".format(args[0])
+            resultDICT["reply_whatIs"] = "{}是一種岩點".format(args[0])
         elif args[0] in userDefinedDICT["_climbingEquip"] and args[0] in userDefinedDICT["_topRopingEquip"]:
-            resultDICT["_what_is"] = "{}是一種攀岩用具".format(args[0])
+            resultDICT["reply_whatIs"] = "{}是一種攀岩用具".format(args[0])
         elif args[0] in whatIs.keys():
-            resultDICT["_what_is"] = whatIs[args[0]]
+            resultDICT["reply_whatIs"] = "{0}{1}".format(args[0],whatIs[args[0]])
         else:
-            resultDICT["_what_is"] = random.choice(defaultResponse["_Not_sure"])
+            resultDICT["reply_whatIs"] = random.choice(defaultResponse["_Not_sure"])
 
     if utterance == "那是什麼？":
-        resultDICT["_what"] = None
+        resultDICT["_what_is"] = None #改
+        resultDICT["reply_whatIs"] = "什麼是什麼？"
 
     if utterance == "什麼是攀岩？":
-        resultDICT["_what"] = "攀岩"
-        resultDICT["_what_is"] = whatIs["攀岩"]
+        resultDICT["_what_is"] = "攀岩"
+        resultDICT["reply_whatIs"] = "{0}{1}".format("攀岩",whatIs["攀岩"])
 
     if utterance == "攀岩是什麼":
-        resultDICT["_what"] = "攀岩"
-        resultDICT["_what_is"] = whatIs["攀岩"]
+        resultDICT["_what_is"] = "攀岩"
+        resultDICT["reply_whatIs"] = "{0}{1}".format("攀岩",whatIs["攀岩"])
 
     return resultDICT

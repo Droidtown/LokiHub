@@ -33,53 +33,53 @@ def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "[上攀]有什麼要注意的？":
         if args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_rules"] = defaultResponse["_be_aware"]
+            resultDICT["reply_rules"] = defaultResponse["_be_aware"]
         else:
-            resultDICT["_rules"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_rules"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[上攀]有哪些要[小心]的？":
         if args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_rules"] = defaultResponse["_be_aware"]
+            resultDICT["reply_rules"] = defaultResponse["_be_aware"]
         else:
-            resultDICT["_rules"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_rules"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[上攀]要[小心]什麼？":
         if args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_rules"] = defaultResponse["_be_aware"]
+            resultDICT["reply_rules"] = defaultResponse["_be_aware"]
         else:
-            resultDICT["_rules"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_rules"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[抱石]要注意什麼":
         if args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_rules"] = defaultResponse["_be_aware"]
+            resultDICT["reply_rules"] = defaultResponse["_be_aware"]
         else:
-            resultDICT["_rules"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_rules"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "怎麼知道[我]是哪個[等級]":
-        resultDICT["_rules"] = "爬過就知道了"
+        resultDICT["reply_rules"] = "爬過就知道了"
 
     if utterance == "攀岩有[規則]嗎":
-        resultDICT["_rules"] = "有啊！{}".format(defaultResponse["_general_rules"])
+        resultDICT["reply_rules"] = "有啊！{}".format(defaultResponse["_general_rules"])
 
     if utterance == "攀岩有[難度]之分嗎":
-        resultDICT["_rules"] = "有啊！{}".format(defaultResponse["_climbing_levels"])
+        resultDICT["reply_rules"] = "有啊！{}".format(defaultResponse["_climbing_levels"])
 
     if utterance == "攀岩有哪些[規則]":
-        resultDICT["_rules"] = defaultResponse["_general_rules"]
+        resultDICT["reply_rules"] = defaultResponse["_general_rules"]
 
     if utterance == "攀岩的[規則]是什麼":
-        resultDICT["_rules"] = defaultResponse["_general_rules"]
+        resultDICT["reply_rules"] = defaultResponse["_general_rules"]
 
     if utterance == "要怎麼知道[自己]的[等級]":
-        resultDICT["_rules"] = "爬過就知道了"
+        resultDICT["reply_rules"] = "爬過就知道了"
 
     if utterance == "[上攀]的[規則]是什麼":
-        resultDICT["_rules"] = defaultResponse["_general_rules"]
+        resultDICT["reply_rules"] = defaultResponse["_general_rules"]
 
     if utterance == "[奧運]的攀岩[規則]是？":
         if args[0] == "奧運":
-            resultDICT["_rules"] = defaultResponse["_olympic_rules"]
+            resultDICT["reply_rules"] = defaultResponse["_olympic_rules"]
         else:
-            resultDICT["_rules"] = defaultResponse["_general_rules"]
+            resultDICT["reply_rules"] = defaultResponse["_general_rules"]
 
     return resultDICT

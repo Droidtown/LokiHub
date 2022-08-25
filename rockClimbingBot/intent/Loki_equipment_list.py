@@ -34,113 +34,113 @@ def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "[上攀]要準備多少[裝備]":
         if "抱石" in args[0]:
-            resultDICT["_equipment_list"] = defaultResponse["_equipment_bring_b"]
+            resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring_b"]
         elif "上攀" in args[0] or "先鋒" in args[0] or "速度" in args[0]:
-            resultDICT["_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
+            resultDICT["reply_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
         else:
-            resultDICT["_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[抱石]有[服裝][上]的[規定]嗎":
         if args[0] in userDefinedDICT["_climbing"]:
             if args[1] in userDefinedDICT["_clothesPants"]:
-                resultDICT["_equipment_list"] = defaultResponse["_equipment_wear"]
+                resultDICT["reply_equipment_list"] = defaultResponse["_equipment_wear"]
         else:
-            resultDICT["_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[抱石]有什麼是要[先]買好的？":
         if args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+            resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
         else:
-            resultDICT["_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[抱石]要[先]買哪些[裝備]":
         if "抱石" in args[0]:
-            resultDICT["_equipment_list"] = defaultResponse["_equipment_bring_b"]
+            resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring_b"]
         elif "上攀" in args[0] or "先鋒" in args[0] or "速度" in args[0]:
-            resultDICT["_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
+            resultDICT["reply_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
         else:
-            resultDICT["_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[抱石]要帶什麼":
         if "抱石" in args[0]:
-            resultDICT["_equipment_list"] = defaultResponse["_equipment_bring_b"]
+            resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring_b"]
         elif "上攀" in args[0] or "先鋒" in args[0] or "速度" in args[0]:
-            resultDICT["_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
+            resultDICT["reply_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
         else:
-            resultDICT["_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[抱石]要準備什麼":
         if "抱石" in args[0]:
-            resultDICT["_equipment_list"] = defaultResponse["_equipment_bring_b"]
+            resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring_b"]
         elif "上攀" in args[0] or "先鋒" in args[0] or "速度" in args[0]:
-            resultDICT["_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
+            resultDICT["reply_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
         else:
-            resultDICT["_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[抱石]要穿什麼":####
         if args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["_equipment_list"] = defaultResponse["_equipment_wear"]
+            resultDICT["reply_equipment_list"] = defaultResponse["_equipment_wear"]
         else:
-            resultDICT["_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[抱石]需要[先]買好哪些[裝備]":
         if "抱石" in args[0]:
-            resultDICT["_equipment_list"] = defaultResponse["_equipment_bring_b"]
+            resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring_b"]
         elif "上攀" in args[0] or "先鋒" in args[0] or "速度" in args[0]:
-            resultDICT["_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
+            resultDICT["reply_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
         else:
-            resultDICT["_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[抱石]需要哪些[裝備]":
         if "抱石" in args[0]:
-            resultDICT["_equipment_list"] = defaultResponse["_equipment_bring_b"]
+            resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring_b"]
         elif "上攀" in args[0] or "先鋒" in args[0] or "速度" in args[0]:
-            resultDICT["_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
+            resultDICT["reply_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
         else:
-            resultDICT["_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[抱石]需要買哪些[裝備]":
         if "抱石" in args[0]:
-            resultDICT["_equipment_list"] = defaultResponse["_equipment_bring_b"]
+            resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring_b"]
         elif "上攀" in args[0] or "先鋒" in args[0] or "速度" in args[0]:
-            resultDICT["_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
+            resultDICT["reply_equipment_list"] = args[0] + defaultResponse["_equipment_bring_t"]
         else:
-            resultDICT["_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "哪些[裝備][一定]要買":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
 
     if utterance == "攀岩有[服裝][上]的[規定]嗎":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_wear"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_wear"]
 
     if utterance == "攀岩有什麼是要[先]買好的？":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
 
     if utterance == "攀岩要[先]買哪些[裝備]":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
 
     if utterance == "攀岩要帶什麼":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
 
     if utterance == "攀岩要準備什麼":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
 
     if utterance == "攀岩要準備多少[裝備]":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
 
     if utterance == "攀岩要穿什麼":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_wear"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_wear"]
 
     if utterance == "攀岩需要[先]買好哪些[裝備]":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
 
     if utterance == "攀岩需要哪些[裝備]":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
 
     if utterance == "攀岩需要買哪些[裝備]":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
 
     if utterance == "要買哪些[裝備]":
-        resultDICT["_equipment_list"] = defaultResponse["_equipment_bring"]
+        resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
 
     return resultDICT

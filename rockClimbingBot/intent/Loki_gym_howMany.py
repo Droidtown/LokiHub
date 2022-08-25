@@ -92,22 +92,22 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["person_loc"] = args[0]
             gymCount = countLocGym(args[0], args[1])
             if gymCount > 0: 
-                resultDICT["_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[1], str(gymCount))
+                resultDICT["reply_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[1], str(gymCount))
             else:
-                resultDICT["_gym_howMany"] = "{0}沒有{1}哦".format(args[0], args[1])
+                resultDICT["reply_gym_howMany"] = "{0}沒有{1}哦".format(args[0], args[1])
         else:
-            resultDICT["_gym_name"] = defaultResponse["_not_rock_climbing"][random.randint(1,4)]
+            resultDICT["reply_gym_howMany"] = defaultResponse["_not_rock_climbing"][random.randint(1,4)]
 
     if utterance == "[新竹]有幾[間][岩館]":
         if args[2] in userDefinedDICT["_climbingGym"]:
             resultDICT["person_loc"] = args[0]
             gymCount = countLocGym(args[0], args[1])
             if gymCount > 0: 
-                resultDICT["_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[2], str(gymCount))
+                resultDICT["reply_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[2], str(gymCount))
             else:
-                resultDICT["_gym_howMany"] = "{0}沒有{1}哦".format(args[0], args[2])
+                resultDICT["reply_gym_howMany"] = "{0}沒有{1}哦".format(args[0], args[2])
         else:
-            resultDICT["_gym_name"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_gym_howMany"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     if utterance == "[東部]有多少[岩館]":
         if args[1] in userDefinedDICT["_climbingGym"]:
@@ -117,16 +117,16 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 gymCount = 0
                 for county in counties:
                     gymCount += countLocGym(county, args[1])
-                resultDICT["_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[1], str(gymCount))
+                resultDICT["reply_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[1], str(gymCount))
             elif args[1] in userDefinedDICT["_taiwanAlias"]:
                 resultDICT["person_loc"] = None
                 counties = extendedDICT["_taiwanCities"]
                 gymCount = countAllGym(args[1])
-                resultDICT["_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[1], str(gymCount))
+                resultDICT["reply_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[1], str(gymCount))
             else:
-                resultDICT["_gym_howMany"] = random.choice(defaultResponse["_not_taiwan_city"])
+                resultDICT["reply_gym_howMany"] = random.choice(defaultResponse["_not_taiwan_city"])
         else:
-            resultDICT["_gym_name"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_gym_howMany"] = random.choice(defaultResponse["_not_rock_climbing"])
     if utterance == "[東部]有幾[間][岩館]":
         if args[2] in userDefinedDICT["_climbingGym"]:
             if args[0] in userDefinedDICT["_sides"]:
@@ -135,15 +135,15 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 gymCount = 0
                 for county in counties:
                     gymCount += countLocGym(county, args[1])
-                resultDICT["_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[2], str(gymCount))
+                resultDICT["reply_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[2], str(gymCount))
             elif args[2] in userDefinedDICT["_taiwanAlias"]:
                 resultDICT["person_loc"] = None
                 counties = extendedDICT["_taiwanCities"]
                 gymCount = countAllGym(args[1])
-                resultDICT["_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[2], str(gymCount))
+                resultDICT["reply_gym_howMany"] = "{0}的{1}有{2}間".format(args[0], args[2], str(gymCount))
             else:
-                resultDICT["_gym_howMany"] = random.choice(defaultResponse["_not_taiwan_city"])
+                resultDICT["reply_gym_howMany"] = random.choice(defaultResponse["_not_taiwan_city"])
         else:
-            resultDICT["_gym_name"] = random.choice(defaultResponse["_not_rock_climbing"])
+            resultDICT["reply_gym_howMany"] = random.choice(defaultResponse["_not_rock_climbing"])
 
     return resultDICT

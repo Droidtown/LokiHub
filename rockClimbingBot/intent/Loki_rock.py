@@ -32,17 +32,17 @@ def debugInfo(inputSTR, utterance):
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[jug]是什麼":
+    if utterance == "[jug]的[特色]是什麼":
         if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_rocks"] = "{0}{1}".format(args[0], rocksInfo[args[0]][0])
+            resultDICT["reply_rocks"] = "{0}{1}".format(args[0], rocksInfo[args[0]][0])
         else:
-            resultDICT["_rocks"] = "我不認識這種岩點耶！"
+            resultDICT["reply_rocks"] = "我不認識這種岩點耶！"
 
     if utterance == "[jug]有什麼[特色]":
         if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_rocks"] = "{0}{1}".format(args[0], rocksInfo[args[0]][0])
+            resultDICT["reply_rocks"] = "{0}{1}".format(args[0], rocksInfo[args[0]][0])
         else:
-            resultDICT["_rocks"] = "我不認識這種岩點耶！"
+            resultDICT["reply_rocks"] = "我不認識這種岩點耶！"
 
     if utterance == "[jug]長怎樣":
         # write your code here
@@ -50,55 +50,51 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "[pinch]怎麼抓":
         if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_rocks"] = "{0}{1}".format(args[0], rocksInfo[args[0]][1])
+            resultDICT["reply_rocks"] = "{0}{1}".format(args[0], rocksInfo[args[0]][1])
         else:
-            resultDICT["_rocks"] = "我不認識這種岩點耶！"
+            resultDICT["reply_rocks"] = "我不認識這種岩點耶！"
 
     if utterance == "[sloper][可以]怎麼爬":
         if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_rocks"] = "{0}{1}".format(args[0], rocksInfo[args[0]][1])
+            resultDICT["reply_rocks"] = "{0}{1}".format(args[0], rocksInfo[args[0]][1])
         else:
-            resultDICT["_rocks"] = "我不認識這種岩點耶！"
+            resultDICT["reply_rocks"] = "我不認識這種岩點耶！"
 
     if utterance == "[岩點]有哪些":
-        if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_rocks"] = "{0}大致分為{1}".format(args[0], userDefinedDICT["_rockTypes"])
+        if args[0] in userDefinedDICT["_rocks"]:
+            resultDICT["reply_rocks"] = "{0}大致分為{1}".format(args[0], userDefinedDICT["_rockTypes"])
         elif args[0] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_list"] = args[0]+"有岩粉、岩鞋、粉袋、確保器、安全吊帶、手套等"
+            resultDICT["reply_equipment_list"] = args[0]+"有岩粉、岩鞋、粉袋、確保器、安全吊帶、手套等"
         else:
-            resultDICT["func_rock"] = "不確定你的問題，可否再問明確點"
+            resultDICT["reply_rocks"] = "不確定你的問題，可否再問明確點"
 
     if utterance == "[岩點]有哪幾[種]":
-        if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_rocks"] = "{0}大致分為{1}".format(args[0], userDefinedDICT["_rockTypes"])
+        if args[0] in userDefinedDICT["_rocks"]:
+            resultDICT["reply_rocks"] = "{0}大致分為{1}".format(args[0], userDefinedDICT["_rockTypes"])
         elif args[0] in userDefinedDICT["_climbingEquip"]:
-            resultDICT["_equipment_list"] = args[0]+"有岩粉、岩鞋、粉袋、確保器、安全吊帶、手套等"
+            resultDICT["reply_equipment_list"] = args[0]+"有岩粉、岩鞋、粉袋、確保器、安全吊帶、手套等"
         else:
-            resultDICT["func_rock"] = "不確定你的問題，可否再問明確點"
+            resultDICT["reply_rocks"] = "不確定你的問題，可否再問明確點"
 
     if utterance == "[最好爬]的是哪種":
-        resultDICT["func_rock"] = "jug是新手會遇到的最初階岩點類型"
+        resultDICT["reply_rocks"] = "jug是新手會遇到的最初階岩點類型"
 
     if utterance == "爬[jug]要注意什麼":
         if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_rocks"] = "{0}{1}".format(args[0], rocksInfo[args[0]][1])
+            resultDICT["reply_rocks"] = "{0}{1}".format(args[0], rocksInfo[args[0]][1])
         else:
-            resultDICT["_rocks"] = "我不認識這種岩點耶！"
-
-    if utterance == "[jug]長什麼樣[子]":
-        # write your code here
-        pass
+            resultDICT["reply_rocks"] = "我不認識這種岩點耶！"
 
     if utterance == "最不好抓的[點]是":
-        resultDICT["func_rock"] = "我覺得是flat"
+        resultDICT["reply_rocks"] = "我覺得是flat"
 
     if utterance == "最不好抓的[點]是哪個":
-        resultDICT["func_rock"] = "我覺得是flat"
+        resultDICT["reply_rocks"] = "我覺得是flat"
 
     if utterance == "最好抓的是哪種[點]":
-        resultDICT["func_rock"] = "jug是新手會遇到的最初階岩點類型"
+        resultDICT["reply_rocks"] = "jug是新手會遇到的最初階岩點類型"
 
     if utterance == "最難抓的[點]是哪個":
-        resultDICT["func_rock"] = "我覺得是flat"
+        resultDICT["reply_rocks"] = "我覺得是flat"
 
     return resultDICT
