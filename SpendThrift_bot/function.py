@@ -23,30 +23,75 @@ loki_key = "BbcY-sJJE-bmc&^s!wZuXCxmzoLeHUh"
 """_summary_
 """
 def SpendThriftReply(resultDICT):
+    replySTR = ""
     # 查詢
-        if resultDICT["intent"] == "searching":
-            return "查詢結果為 {} 元".format(resultDICT["search_result"])
-            
-        # 進階花費
-        if resultDICT["intent"] == "spend_adv":
-            # 沒有地點和說明
-            if resultDICT["location"] == "" and resultDICT["description"] == "":
-                return "{} 花費了 {} 元。".format(resultDICT["time"], resultDICT["amount"])
-            # 沒說明
-            elif resultDICT["description"] == "":
-                return "{} 去 {} 花費了 {} 元。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"])
-            # 沒地點
-            elif resultDICT["location"] == "":
-                return "{} 花費了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["amount"], resultDICT["description"])
-            # 全部都有
-            else:
-                return "{} 去 {} 花費了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"], resultDICT["description"])
+    if resultDICT["intent"] == "searching":
+        replySTR = "查詢結果為 {} 元".format(resultDICT["search_result"])
+    
+    
+    # 進階收入
+    if resultDICT["intent"] == "earn_adv":
+        # 沒有地點和說明
+        if resultDICT["location"] == "" and resultDICT["description"] == "":
+            replySTR += "{} 賺到了 {} 元。".format(resultDICT["time"], resultDICT["amount"])
+        # 沒說明
+        elif resultDICT["description"] == "":
+            replySTR += "{} 去 {} 賺到了 {} 元。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"])
+        # 沒地點
+        elif resultDICT["location"] == "":
+            replySTR += "{} 賺到了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["amount"], resultDICT["description"])
+        # 全部都有
+        else:
+            replySTR += "{} 去 {} 賺到了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"], resultDICT["description"])
+    
+    
+        """
+            收入超過一定數目：增加特別的提示語
+        """
+        amount = int(resultDICT["amount"])
+        # 10000 元以上
+        if amount > 10000:
+            replySTR += "\n看來你想通了呢...歡迎來到正常的人世界，恭喜你脫離敗家子的可悲生活：)"        
+        # 1000元以上
+        elif amount > 5000:
+            replySTR += "\n幹得不錯！再過 50 年你就可以買一台二手車了呢。"        
+        # 1000元以上
+        elif amount > 1000:
+            replySTR += "\n好好保持，繼續下去你就不會被房債，卡債和稅務壓垮了。"
+    
+    # 進階支出
+    if resultDICT["intent"] == "spend_adv":
+        # 沒有地點和說明
+        if resultDICT["location"] == "" and resultDICT["description"] == "":
+            replySTR += "{} 花費了 {} 元。".format(resultDICT["time"], resultDICT["amount"])
+        # 沒說明
+        elif resultDICT["description"] == "":
+            replySTR += "{} 去 {} 花費了 {} 元。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"])
+        # 沒地點
+        elif resultDICT["location"] == "":
+            replySTR += "{} 花費了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["amount"], resultDICT["description"])
+        # 全部都有
+        else:
+            replySTR += "{} 去 {} 花費了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"], resultDICT["description"])
 
-        # 錯誤
-        elif resultDICT["intent"] == "error":
-            return "出現錯誤:" + resultDICT["err_msg"] + "。\n你這敗家子給我去好好讀使用說明書:("
 
+        """
+            支出超過一定數目：增加特別的提示語
+        """
+        amount = int(resultDICT["amount"])
+        # 10000 元以上
+        if amount > 10000:
+            replySTR += "\n我的天，你沒救了...\n沒關係，你就繼續當你的敗家子，到時候缺錢我可不會借你。"                
+        # 1000元以上
+        elif amount > 1000:
+            replySTR += "\n你這個臭敗家子！給我克制一點，不然你就等著去吃土吧>:("
+    
 
+    # 錯誤
+    elif resultDICT["intent"] == "error":
+        replySTR += "出現錯誤:" + resultDICT["err_msg"] + "。\n你這敗家子給我去好好讀使用說明書:("
+
+    return replySTR
 
 
 """
@@ -78,7 +123,6 @@ def TransformDate(inputSTR):
     # endregion
     articut = Articut(account, articut_key, level="lv3")
     articutResultDICT = articut.parse(inputSTR)
-    print(articutResultDICT)
     return articutResultDICT["time"][0][0]["datetime"][0:10]
 
 
@@ -155,7 +199,7 @@ def GetDataByCondition(userID="testUser", condition="all"):
             
             # 支出        
             elif condition == "cost":
-                if row[1] == "spend_adv":   # 花費的 intent 名稱
+                if row[1] == "spend_adv":   # 支出的 intent 名稱
                     totalMoney += int(row[2])
 
                         
