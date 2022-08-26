@@ -185,6 +185,11 @@ class LokiResult():
             rst = lokiResultDICT["argument"]
         return rst
 
+
+""" 
+runLoki(string, string[], string[])
+將輸出對應到所屬的 utterance，用 LOKI 把需要的參數取出來
+"""
 def runLoki(userID, inputLIST, filterLIST=[]):
     # 將 intent 會使用到的 key 預先設爲空列表
     resultDICT = {
@@ -196,13 +201,16 @@ def runLoki(userID, inputLIST, filterLIST=[]):
         for index, key in enumerate(inputLIST):
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
                 # 記得要把 ID 傳進 intent 裡
-                # earn_adv
-                # if lokiRst.getIntent(index, resultIndex) == "earn_adv":
-                #     resultDICT = Loki_earn_adv.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-                # spend_adv
+                
+                # earn_adv: 收入記賬
+                if lokiRst.getIntent(index, resultIndex) == "earn_adv":
+                    resultDICT = Loki_earn_adv.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                
+                # spend_adv: 支出記賬
                 if lokiRst.getIntent(index, resultIndex) == "spend_adv":
                     resultDICT = Loki_spend_adv.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-                # searching
+                    
+                # searching: 查詢記賬結果
                 if lokiRst.getIntent(index, resultIndex) == "searching":
                     resultDICT = Loki_searching.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
@@ -306,4 +314,4 @@ if __name__ == "__main__":
         resultDICT = runLoki("testUser",command)
 
         # 不同意圖對應的輸出
-        fun.SpendThriftReply(resultDICT)
+        print(fun.SpendThriftReply(resultDICT))
