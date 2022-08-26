@@ -17,6 +17,9 @@
 import json
 import os
 
+# local import
+import function as fun
+
 DEBUG_earn_adv = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
@@ -28,70 +31,312 @@ def debugInfo(inputSTR, utterance):
     if DEBUG_earn_adv:
         print("[earn_adv] {} ===> {}".format(inputSTR, utterance))
 
-def getResult(inputSTR, utterance, args, resultDICT):
-    debugInfo(inputSTR, utterance)
+
+# 這個意圖的名字
+intent = "earn_adv"
+
+"""
+對照 utterance 拿到參數
+getResult() 多了第一個參數 userID，以使用者的 ID 作為檔案名稱記賬
+"""
+def getResult(userID, inputSTR, utterance, args, resultDICT):
+    # debugInfo(inputSTR, utterance)
+    
     if utterance == "去全聯收入3000":
-        # write your code here
+        """
+            4: 地點
+            6: 說明
+            10: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [4,6,10])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.GetCurrentDate()   # 時間
+            resultDICT["location"] = result[0]      # 地點
+            resultDICT["description"] = result[1]   # 說明
+            resultDICT["amount"] = result[2]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
 
     if utterance == "去全聯賺了3000":
-        # write your code here
+        """
+            4: 地點
+            6: 說明
+            10: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [4,6,10])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.GetCurrentDate()   # 時間
+            resultDICT["location"] = result[0]      # 地點
+            resultDICT["description"] = result[1]   # 說明
+            resultDICT["amount"] = result[2]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
 
     if utterance == "去六福村收入3000":
-        # write your code here
+        """
+            3: 地點
+            7: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,7])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.GetCurrentDate()   # 時間
+            resultDICT["location"] = result[0]      # 地點
+            resultDICT["description"] = ""          # 說明
+            resultDICT["amount"] = result[1]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
 
     if utterance == "去六福村賺了3000":
-        # write your code here
+        """
+            3: 地點
+            7: 金額
+        """ 
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,7])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.GetCurrentDate()   # 時間
+            resultDICT["location"] = result[0]      # 地點
+            resultDICT["description"] = ""          # 說明
+            resultDICT["amount"] = result[1]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
 
     if utterance == "去台北收入3000":
-        # write your code here
+        """
+            6: 地點
+            8: 說明
+            12: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [6,8,12])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.GetCurrentDate()   # 時間
+            resultDICT["location"] = result[0]      # 地點
+            resultDICT["description"] = result[1]   # 說明
+            resultDICT["amount"] = result[2]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
 
     if utterance == "去台北賺了3000":
-        # write your code here
+        """
+            6: 地點
+            8: 說明
+            12: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [6,8,12])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.GetCurrentDate()   # 時間
+            resultDICT["location"] = result[0]      # 地點
+            resultDICT["description"] = result[1]   # 說明
+            resultDICT["amount"] = result[2]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
 
     if utterance == "收入3000":
-        # write your code here
+        """
+            4: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [4])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.GetCurrentDate()   # 時間
+            resultDICT["location"] = ""             # 地點
+            resultDICT["description"] = ""          # 說明
+            resultDICT["amount"] = result[0]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
 
     if utterance == "昨天去全聯收入3000":
-        # write your code here
+        """
+            3: 時間
+            9: 地點
+            11: 說明
+            15: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,9,11,15])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.TransformDate(result[0])   # 時間
+            resultDICT["location"] = result[1]      # 地點
+            resultDICT["description"] = result[2]   # 說明
+            resultDICT["amount"] = result[3]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
 
     if utterance == "昨天去全聯賺了3000":
-        # write your code here
+        """
+            3: 時間
+            9: 地點
+            11: 說明
+            15: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,9,11,15])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.TransformDate(result[0])          # 時間
+            resultDICT["location"] = result[1]      # 地點
+            resultDICT["description"] = result[2]   # 說明
+            resultDICT["amount"] = result[3]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
-
-    if utterance == "昨天在六福村收入3000":
-        # write your code here
-        pass
-
-    if utterance == "昨天在六福村賺了3000":
-        # write your code here
-        pass
-
-    if utterance == "昨天在台北收入3000":
-        # write your code here
-        pass
-
-    if utterance == "昨天在台北賺了3000":
-        # write your code here
-        pass
+    
 
     if utterance == "昨天收入3000":
-        # write your code here
+        """
+            3: 時間
+            5: 說明
+            9: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,5,9])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.TransformDate(result[0])   # 時間
+            resultDICT["location"] = ""                     # 地點 
+            resultDICT["description"] = result[1]           # 說明
+            resultDICT["amount"] = result[2]                # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
 
     if utterance == "昨天賺了3000":
-        # write your code here
+        """
+            3: 時間
+            5: 說明
+            9: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,5,9])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.TransformDate(result[0])   # 時間
+            resultDICT["location"] = ""                     # 地點
+            resultDICT["description"] = result[1]           # 說明
+            resultDICT["amount"] = result[2]                # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
 
     if utterance == "賺了3000":
-        # write your code here
+        """
+            4: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [4])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.GetCurrentDate() # 時間
+            resultDICT["location"] = ""           # 地點
+            resultDICT["description"] = ""        # 說明
+            resultDICT["amount"] = result[0]      # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
+    
+
+    if utterance == "昨天去六福村收入3000":
+        # 進不來 :(
+        resultDICT["intent"] = "error"
+        resultDICT["err_msg"] = "不知道怎麼著但你成功進入我們無法進入的領域了！你成功證明了自己不是一個敗家子:)"
+        pass
+    
+
+    if utterance == "昨天去六福村賺了3000":
+        # 進不來 :(
+        resultDICT["intent"] = "error"
+        resultDICT["err_msg"] = "不知道怎麼著但你成功進入我們無法進入的領域了！你成功證明了自己不是一個敗家子:)"
+        pass
+    
+
+    if utterance == "昨天去台北收入3000":
+        """
+            3: 時間
+            8: 地點
+            10: 說明
+            14: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,8,10,14])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.TransformDate(result[0])   # 時間
+            resultDICT["location"] = result[1]      # 地點
+            resultDICT["description"] = result[2]   # 說明
+            resultDICT["amount"] = result[3]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
+        pass
+    
+
+    if utterance == "昨天去台北賺了3000":
+        """
+            3: 時間
+            10: 地點
+            12: 說明
+            16: 金額
+        """
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,10,12,16])
+        
+        if status == True:
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.TransformDate(result[0])   # 時間
+            resultDICT["location"] = result[1]      # 地點
+            resultDICT["description"] = result[2]   # 說明
+            resultDICT["amount"] = result[3]        # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
+        pass
+
+
+    # 分析完畢，儲存結果
+    if resultDICT["intent"] != "error":
+        fun.SaveAccountToCSV(resultDICT, userID)
+
 
     return resultDICT
