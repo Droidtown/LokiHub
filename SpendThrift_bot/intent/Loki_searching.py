@@ -41,15 +41,21 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
     if utterance == "查詢[收入]":
         if args[0] in ["支出"]:
             result = fun.GetDataByCondition(userID, "cost")
-            
-            # 錯誤
-            if result == "error":
-                resultDICT["intent"] = "error"
-                resultDICT["err_msg"] = "支出錯誤"
-            #
-            else:
-                resultDICT["intent"] = intent
-                resultDICT["search_result"] = result
+        elif args[0] in ["收入"]:
+            result = fun.GetDataByCondition(userID, "earn")
+        elif args[0] in ["記帳狀況"]:
+            result = fun.GetDataByCondition(userID, "all")
+        
+        # 錯誤
+        if result == "error":
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = "錯誤"
+        #
+        else:
+            resultDICT["intent"] = intent
+            resultDICT["search_result"] = result
         pass
+    
+
 
     return resultDICT
