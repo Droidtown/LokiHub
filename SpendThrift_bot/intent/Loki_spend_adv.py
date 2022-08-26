@@ -35,9 +35,13 @@ def debugInfo(inputSTR, utterance):
 # 這個意圖的名字
 intent = "spend_adv"
 
+"""
+對照 utterance 拿到參數
+getResult() 多了第一個參數 userID，以使用者的 ID 作為檔案名稱記賬
+"""
 def getResult(userID, inputSTR, utterance, args, resultDICT):
     # debugInfo(inputSTR, utterance)
-    
+
     if utterance == "去全聯支出3000":
         """
             4: 地點
@@ -185,7 +189,7 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         
         if status == True:
             resultDICT["intent"] = intent
-            resultDICT["time"] = result[0]   # 時間
+            resultDICT["time"] = fun.TransformDate(result[0])   # 時間
             resultDICT["location"] = result[1]      # 地點
             resultDICT["description"] = result[2]   # 說明
             resultDICT["amount"] = result[3]        # 金額
@@ -206,7 +210,7 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         
         if status == True:
             resultDICT["intent"] = intent
-            resultDICT["time"] = result[0]          # 時間
+            resultDICT["time"] = fun.TransformDate(result[0])          # 時間
             resultDICT["location"] = result[1]      # 地點
             resultDICT["description"] = result[2]   # 說明
             resultDICT["amount"] = result[3]        # 金額
@@ -232,15 +236,15 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
     if utterance == "昨天去台北支出3000":
         """
             3: 時間
-            9: 地點
+            8: 地點
             10: 說明
             14: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,9,10,14])
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,8,10,14])
         
         if status == True:
             resultDICT["intent"] = intent
-            resultDICT["time"] = result[0]   # 時間
+            resultDICT["time"] = fun.TransformDate(result[0])   # 時間
             resultDICT["location"] = result[1]      # 地點
             resultDICT["description"] = result[2]   # 說明
             resultDICT["amount"] = result[3]        # 金額
@@ -253,15 +257,15 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
     if utterance == "昨天去台北花了3000":
         """
             3: 時間
-            9: 地點
-            10: 說明
-            14: 金額
+            10: 地點
+            12: 說明
+            16: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,9,10,14])
+        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,10,12,16])
         
         if status == True:
             resultDICT["intent"] = intent
-            resultDICT["time"] = result[0]   # 時間
+            resultDICT["time"] = fun.TransformDate(result[0])   # 時間
             resultDICT["location"] = result[1]      # 地點
             resultDICT["description"] = result[2]   # 說明
             resultDICT["amount"] = result[3]        # 金額
