@@ -157,12 +157,12 @@ class BotClient(discord.Client):
                     if i == "sports_cal":
                         self.mscDICT[message.author.id]["sports_cal"] = resultDICT["sports_cal"]
                         today_cal = str(float(self.mscDICT[message.author.id]["BMR"]) - float(self.mscDICT[message.author.id]["food_cal"]) + float(self.mscDICT[message.author.id]["sports_cal"])) 
-                        rec_sportsLIST1 = []
+                        rec_sportsLIST = []
                         for i in list(sports_dict.values()):
                             if float(today_cal) <= i*100:
-                                rec_sportsLIST1.append(list(sports_dict.keys())[list(sports_dict.values()).index(i)])
-                                rec_sportsSTR1 = '、'.join([str(s) for s in rec_sportsLIST1])
-                        replySTR = "你今日剩餘熱量為" + str(today_cal) + "卡。\n推薦你可以做以下運動消耗今日所剩的熱量喔！\n" + rec_sportsSTR1 + "任一項進行100分鐘。"
+                                rec_sportsLIST.append(list(sports_dict.keys())[list(sports_dict.values()).index(i)])
+                        rec_sportsSTR = '、'.join([str(s) for s in rec_sportsLIST])
+                        replySTR = "你今日剩餘熱量為" + str(today_cal) + "卡。\n推薦你可以做以下運動消耗今日所剩的熱量喔！\n" + rec_sportsSTR + "任一項進行100分鐘。"
                                                        
                         #replySTR = "你今日剩餘熱量為" + str(float(self.mscDICT[message.author.id]["BMR"]) - float(self.mscDICT[message.author.id]["food_cal"]) + float(self.mscDICT[message.author.id]["sports_cal"])) + "卡" + "。"
 
