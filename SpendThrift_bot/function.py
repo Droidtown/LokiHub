@@ -123,6 +123,7 @@ def TransformDate(inputSTR):
     # endregion
     articut = Articut(account, articut_key, level="lv3")
     articutResultDICT = articut.parse(inputSTR)
+    print(articutResultDICT)
     return articutResultDICT["time"][0][0]["datetime"][0:10]
 
 
@@ -205,8 +206,10 @@ def GetDataByCondition(userID="testUser", condition="all"):
                         
             # 管他的
             elif condition == "all":
-                 totalMoney += int(row[2])
-
+                if row[1] == "earn_adv":    # 收入的 intent 名稱
+                    totalMoney += int(row[2])
+                elif row[1] == "spend_adv":   # 支出的 intent 名稱
+                    totalMoney -= int(row[2])
             
             # error
             else:
@@ -264,6 +267,9 @@ def GetAdvArgs(intent, utterance, inputSTR, groupIndexLIST):
         patGroups = re.search(pat, articutResultDICT["result_pos"][0])
         args = []
         
+        for i in articutResultDICT["result_pos"]:
+            print(i)
+
         # 把我們要的參數拿出來
         for i in groupIndexLIST:
             args.append(patGroups.group(i))
