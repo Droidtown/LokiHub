@@ -306,6 +306,8 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.TransformDate(result[0])   # 時間
+
+            print("昨天花了3000"+result[0])
             resultDICT["location"] = ""                     # 地點
             resultDICT["description"] = result[1]           # 說明
             resultDICT["amount"] = result[2]                # 金額
