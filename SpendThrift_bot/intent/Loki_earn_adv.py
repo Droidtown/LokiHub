@@ -53,9 +53,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
-            resultDICT["description"] = result[1]   # 說明
-            resultDICT["amount"] = result[2]        # 金額
+            resultDICT["location"] = result[0]          # 地點
+            resultDICT["description"] = result[1]       # 說明
+            resultDICT["amount"] = result[2]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -73,9 +73,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
-            resultDICT["description"] = result[1]   # 說明
-            resultDICT["amount"] = result[2]        # 金額
+            resultDICT["location"] = result[0]          # 地點
+            resultDICT["description"] = result[1]       # 說明
+            resultDICT["amount"] = result[2]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -92,9 +92,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
-            resultDICT["description"] = ""          # 說明
-            resultDICT["amount"] = result[1]        # 金額
+            resultDICT["location"] = result[0]          # 地點
+            resultDICT["description"] = ""              # 說明
+            resultDICT["amount"] = result[1]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -111,9 +111,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
-            resultDICT["description"] = ""          # 說明
-            resultDICT["amount"] = result[1]        # 金額
+            resultDICT["location"] = result[0]          # 地點
+            resultDICT["description"] = ""              # 說明
+            resultDICT["amount"] = result[1]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -131,9 +131,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
-            resultDICT["description"] = result[1]   # 說明
-            resultDICT["amount"] = result[2]        # 金額
+            resultDICT["location"] = result[0]          # 地點
+            resultDICT["description"] = result[1]       # 說明
+            resultDICT["amount"] = result[2]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -151,9 +151,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
-            resultDICT["description"] = result[1]   # 說明
-            resultDICT["amount"] = result[2]        # 金額
+            resultDICT["location"] = result[0]          # 地點
+            resultDICT["description"] = result[1]       # 說明
+            resultDICT["amount"] = result[2]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -169,9 +169,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = ""             # 地點
-            resultDICT["description"] = ""          # 說明
-            resultDICT["amount"] = result[0]        # 金額
+            resultDICT["location"] = ""                 # 地點
+            resultDICT["description"] = ""              # 說明
+            resultDICT["amount"] = result[0]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -190,9 +190,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.TransformDate(result[0])   # 時間
-            resultDICT["location"] = result[1]      # 地點
-            resultDICT["description"] = result[2]   # 說明
-            resultDICT["amount"] = result[3]        # 金額
+            resultDICT["location"] = result[1]                  # 地點
+            resultDICT["description"] = result[2]               # 說明
+            resultDICT["amount"] = result[3]                    # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -211,9 +211,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.TransformDate(result[0])          # 時間
-            resultDICT["location"] = result[1]      # 地點
-            resultDICT["description"] = result[2]   # 說明
-            resultDICT["amount"] = result[3]        # 金額
+            resultDICT["location"] = result[1]                         # 地點
+            resultDICT["description"] = result[2]                      # 說明
+            resultDICT["amount"] = result[3]                           # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -231,9 +231,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.TransformDate(result[0])   # 時間
-            resultDICT["location"] = ""                     # 地點 
-            resultDICT["description"] = result[1]           # 說明
-            resultDICT["amount"] = result[2]                # 金額
+            resultDICT["location"] = ""                         # 地點 
+            resultDICT["description"] = result[1]               # 說明
+            resultDICT["amount"] = result[2]                    # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -251,9 +251,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.TransformDate(result[0])   # 時間
-            resultDICT["location"] = ""                     # 地點
-            resultDICT["description"] = result[1]           # 說明
-            resultDICT["amount"] = result[2]                # 金額
+            resultDICT["location"] = ""                         # 地點
+            resultDICT["description"] = result[1]               # 說明
+            resultDICT["amount"] = result[2]                    # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -268,10 +268,10 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         
         if status == True:
             resultDICT["intent"] = intent
-            resultDICT["time"] = fun.GetCurrentDate() # 時間
-            resultDICT["location"] = ""           # 地點
-            resultDICT["description"] = ""        # 說明
-            resultDICT["amount"] = result[0]      # 金額
+            resultDICT["time"] = fun.GetCurrentDate()   # 時間
+            resultDICT["location"] = ""                 # 地點
+            resultDICT["description"] = ""              # 說明
+            resultDICT["amount"] = result[0]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -304,9 +304,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.TransformDate(result[0])   # 時間
-            resultDICT["location"] = result[1]      # 地點
-            resultDICT["description"] = result[2]   # 說明
-            resultDICT["amount"] = result[3]        # 金額
+            resultDICT["location"] = result[1]                  # 地點
+            resultDICT["description"] = result[2]               # 說明
+            resultDICT["amount"] = result[3]                    # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -325,9 +325,9 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.TransformDate(result[0])   # 時間
-            resultDICT["location"] = result[1]      # 地點
-            resultDICT["description"] = result[2]   # 說明
-            resultDICT["amount"] = result[3]        # 金額
+            resultDICT["location"] = result[1]                  # 地點
+            resultDICT["description"] = result[2]               # 說明
+            resultDICT["amount"] = result[3]                    # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
