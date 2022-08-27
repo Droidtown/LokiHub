@@ -67,6 +67,11 @@ $ pip3 install ArticutAPI
     - 依支出查詢
         - 範例：@SpendThrift 查詢我昨天支出多少
 
+## 使用機器人注意事項
+- 該機器人脾氣不好，如有冒犯請概括承受，誰叫你是敗家子。
+- 若要輸入時間，請使用中文。例如：八月十二日賺了1450元。
+- 再次重申，機器人脾氣欠佳，所以**請不要**記兩周以前的帳，乖乖每天記賬就對了。
+
 ## 作者
 - [Grammyship](https://github.com/Grammyship)
 - [Yunyun0404](https://github.com/Yunyun0404)
