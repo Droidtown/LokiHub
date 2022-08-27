@@ -41,7 +41,7 @@ getResult() 多了第一個參數 userID，以使用者的 ID 作為檔案名稱
 """
 def getResult(userID, inputSTR, utterance, args, resultDICT):
     # debugInfo(inputSTR, utterance)
-    
+    print(utterance)
     if utterance == "去全聯收入3000":
         """
             4: 地點
@@ -92,8 +92,8 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]          # 地點
-            resultDICT["description"] = ""              # 說明
+            resultDICT["location"] = ""                 # 地點
+            resultDICT["description"] = result[0]       # 說明
             resultDICT["amount"] = result[1]            # 金額
         else:
             resultDICT["intent"] = "error"
@@ -111,14 +111,16 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         if status == True:
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]          # 地點
-            resultDICT["description"] = ""              # 說明
+            resultDICT["location"] = ""                 # 地點
+            resultDICT["description"] = result[0]       # 說明
             resultDICT["amount"] = result[1]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
+ 
         pass
-    
+        
+
 
     if utterance == "去台北收入3000":
         """
