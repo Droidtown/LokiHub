@@ -190,7 +190,7 @@ def getIngredient(resultDICT, mscDICT):
     if "ingredient" in resultDICT.keys():
         ingredient = resultDICT["ingredient"]
     else:
-        ingredient = mscDICT["ingredient"]   #如果回覆中未提到討厭甚麼食材，以上一次提供的當季食材當作討厭的食材
+        ingredient = mscDICT["ingredient"]   #如果回覆中未提到甚麼食材，以上一次提供的當季食材當作本次的食材
 
     return ingredient
 
@@ -461,7 +461,7 @@ def model(mscDICT):
     else: #沒有找到對應的intent
 
         #intent = 向bot打招呼
-        if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早", "HIHI"]:
+        if mscDICT["msgSTR"].lower() in ["哈囉","嗨","你好","您好","hi","hello", "早安", "午安", "晚安", "早", "hihi", "hey", "安安"]:
             
             currentMonth = choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
             type = choice(["蔬菜", "水果", "海鮮"])            
@@ -475,7 +475,7 @@ def model(mscDICT):
             mscDICT["type"] = type
 
         #intent = accept，表示接受
-        elif mscDICT["msgSTR"].lower() in ["Ok", "ok", "了解","好哦","好喔","沒問題","可以", "喜歡", "喜歡ㄟ", "好ㄟ"]:
+        elif mscDICT["msgSTR"].lower() in ["ok", "了解","好哦","好喔","沒問題","可以", "喜歡", "喜歡ㄟ", "好ㄟ"]:
             if "reject" in mscDICT["intent"]:
                 mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 ^_^".format(mscDICT["ingredient"])
             else:
@@ -486,7 +486,7 @@ def model(mscDICT):
         
         #default
         else: 
-            mscDICT["replySTR"] = choice(["好喔", "Ok", "繼續問我更多食材問題吧"])
+            mscDICT["replySTR"] = choice(["好喔", "好的Ok", "繼續問我更多食材問題吧"])
     
         #紀錄本次的intent
         mscDICT["intent"] = []

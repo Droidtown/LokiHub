@@ -76,10 +76,6 @@ class BotClient(discord.Client):
             if '呼叫機器人' in msgSTR:
                 await message.reply('幹嘛')
                 return None
-
-            if '測試所有意圖' in msgSTR:
-                ib.testIntent()
-                return None
             
             #初次對話，init template
             if message.author.id not in self.mscDICT.keys(): 

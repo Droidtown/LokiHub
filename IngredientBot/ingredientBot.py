@@ -146,20 +146,20 @@ class LokiResult():
             rst = lokiResultDICT["argument"]
         return rst
 
-def runLoki(inputLIST, filterLIST=[]):
+def runLoki(inputLIST, filterLIST=[]): #放標點符號省略
     # 將 intent 會使用到的 key 預先設爲空列表
     resultDICT = {
        #"key": []
     }
     lokiRst = LokiResult(inputLIST, filterLIST)
-    print(lokiRst.lokiResultLIST)
+    #print(lokiRst.lokiResultLIST)
 
     all_utt = []
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
                 all_utt.append(lokiRst.getUtterance(index, resultIndex))
-    print(all_utt)
+    #print(all_utt)
 
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
@@ -263,7 +263,7 @@ def execLoki(content, filterLIST=[], splitLIST=[]):
             for k in lokiResultDICT:
                 if k not in resultDICT:
                     resultDICT[k] = []
-                resultDICT[k].extend(lokiResultDICT[k])
+                #resultDICT[k].extend(lokiResultDICT[k])
 
     return resultDICT
 
@@ -276,16 +276,22 @@ def testLoki(inputLIST, filterLIST):
         print(resultDICT["msg"])
 
 def testIntent():
+    # which_season
+    print("[TEST] which_season")
+    inputLIST = ['海膽 盛產季','幾月盛產烏魚子','海膽什麼時候買','什麼時候有烏魚子','海膽是幾月的食材','海膽該什麼時候買','葡萄產季什麼時候','海膽是幾月產的食材','烏魚子是什麼季節的','葡萄產季是什麼時候','海膽盛產季是什麼時候','你知道海膽什麼時候買比較好嗎']
+    testLoki(inputLIST, ['which_season'])
+    print("")
+
     # CheckInSeason
     print("[TEST] CheckInSeason")
     inputLIST = ['葡萄是不是當季的','葡萄是當季水果嗎','烏魚子是當季食材嗎','烏魚子是不是當季食材？']
     testLoki(inputLIST, ['CheckInSeason'])
     print("")
 
-    # which_season
-    print("[TEST] which_season")
-    inputLIST = ['海膽 盛產季','幾月盛產烏魚子','海膽什麼時候買','什麼時候有烏魚子','海膽是幾月的食材','海膽該什麼時候買','葡萄產季什麼時候','海膽是幾月產的食材','烏魚子是什麼季節的','葡萄產季是什麼時候','海膽盛產季是什麼時候','你知道海膽什麼時候買比較好嗎']
-    testLoki(inputLIST, ['which_season'])
+    # recommend
+    print("[TEST] recommend")
+    inputLIST = ['推薦吃什麼','還推薦什麼','推薦一道料理','今天晚上吃什麼','今天晚餐吃什麼','推薦我一道料理','推薦一道料理給我']
+    testLoki(inputLIST, ['recommend'])
     print("")
 
     # selection
@@ -294,34 +300,10 @@ def testIntent():
     testLoki(inputLIST, ['selection'])
     print("")
 
-    # InSeason
-    print("[TEST] InSeason")
-    inputLIST = ['有什麼水果','現在有什麼','現在盛產什麼','當季食材有啥','有什麼當季食材','現在有甚麼海鮮','目前盛產甚麼水果','現在有什麼水果好吃','現在有什麼當季食材','現在該吃哪些水果？','現在當季的水果是什麼','現在有甚麼當季水果好吃','告訴我現在有什麼當季食材','現在有甚麼好吃的當季水果']
-    testLoki(inputLIST, ['InSeason'])
-    print("")
-
     # capability
     print("[TEST] capability")
-    inputLIST = ['你知道什麼','那可以問什麼','我可以問你什麼','你可以幫我做什麼','那我還可以問什麼','你可以回答什麼問題','你可以幫我解決什麼問題']
+    inputLIST = ['你知道什麼','那你還會什麼','那可以問什麼','我可以問你什麼','你可以幫我做什麼','那我還可以問什麼','你可以回答什麼問題','你可以幫我解決什麼問題']
     testLoki(inputLIST, ['capability'])
-    print("")
-
-    # recommend
-    print("[TEST] recommend")
-    inputLIST = ['推薦吃什麼','推薦一道料理','今天晚上吃什麼','今天晚餐吃什麼','推薦一道料理給我']
-    testLoki(inputLIST, ['recommend'])
-    print("")
-
-    # reject
-    print("[TEST] reject")
-    inputLIST = ['也不喜歡','有別的嗎','還有嗎？','有沒有別的','有甚麼別的','還推薦什麼','還有什麼？','還有別的嗎','不是很喜歡ㄟ','再來點別的？','我不喜歡芭樂','我不想吃芭樂','我討厭水蜜桃','我想要別的食材','有甚麼別的食材','可以說點別的嗎？','不要讓我看到芭樂！','有沒有推薦別的食材']
-    testLoki(inputLIST, ['reject'])
-    print("")
-
-    # recipe
-    print("[TEST] recipe")
-    inputLIST = ['梨子的做法','芭樂怎麼吃','藍莓的作法','芭樂要怎麼弄','芭樂該怎麼弄','香蕉怎麼處理','紅棗可以做什麼','紅棗有甚麼料理','紅蘿蔔可以幹嘛','芭樂有甚麼做法','葡萄該怎麼料理','葡萄該怎麼處理','蘋果相關的料理','香菇有甚麼作法','烏魚子可以怎麼做','皮蛋可以用烤的嗎','芭樂可以做成什麼','葡萄有什麼料理方式','芭樂可以做成什麼料理','請問烏魚子該怎麼料理','我想知道蘋果相關的料理','我想知道蘋果能做什麼料理']
-    testLoki(inputLIST, ['recipe'])
     print("")
 
     # price
@@ -330,26 +312,138 @@ def testIntent():
     testLoki(inputLIST, ['price'])
     print("")
 
+    # InSeason
+    print("[TEST] InSeason")
+    inputLIST = ['有什麼水果','現在有什麼','推薦一個食材','推薦什麼食材','現在盛產什麼','有什麼當季食材','現在有甚麼海鮮','目前盛產甚麼水果','現在有什麼水果好吃','現在有什麼當季食材','現在該吃哪些水果？','現在當季的水果是什麼','現在有甚麼當季水果好吃','告訴我現在有什麼當季食材','現在有甚麼好吃的當季水果']
+    testLoki(inputLIST, ['InSeason'])
+    print("")
+
+    # all_ingre
+    print("[TEST] all_ingre")
+    inputLIST = ['現在的當季食材有哪些','我想知道所有的當季食材','你能列出所有的當季食材嗎','你可以跟我說所有的當季食材嗎','你知道七月的當令食材有哪些嗎','你能列出所有四月的當令食材嗎','我想知道三月的當令食材有哪些']
+    testLoki(inputLIST, ['all_ingre'])
+    print("")
+
+    # reject
+    print("[TEST] reject")
+    inputLIST = ['也不喜歡','有別的嗎','還有嗎？','有沒有別的','還有別的嗎','不是很喜歡ㄟ','再來點別的？','我不喜歡芭樂','我不想吃芭樂','我討厭水蜜桃','我想要別的食材','可以說點別的嗎？','不要讓我看到芭樂！','有沒有推薦別的食材']
+    testLoki(inputLIST, ['reject'])
+    print("")
+
+    # recipe
+    print("[TEST] recipe")
+    inputLIST = ['他能做什麼','有甚麼料理','梨子的做法','芭樂怎麼吃','藍莓的作法','芭樂要怎麼弄','芭樂該怎麼弄','香蕉怎麼處理','紅棗可以做什麼','紅棗有甚麼料理','紅蘿蔔可以幹嘛','芭樂有甚麼做法','葡萄該怎麼料理','葡萄該怎麼處理','蘋果相關的料理','香菇有甚麼作法','烏魚子可以怎麼做','皮蛋可以用烤的嗎','芭樂可以做成什麼','有什麼大白菜的料理','有甚麼紫甘藍的作法','有甚麼紫甘藍的做法','葡萄有什麼料理方式','芭樂可以做成什麼料理','請問烏魚子該怎麼料理','我想知道番茄有甚麼料理','我想知道蘋果相關的料理','我想知道蘋果能做什麼料理']
+    testLoki(inputLIST, ['recipe'])
+    print("")
+
     # taboo
     print("[TEST] taboo")
     inputLIST = ['杏仁 禁忌','有什麼禁忌','杏仁跟什麼相剋','芭樂有什麼禁忌','芭樂有什麼食用禁忌','杏仁可以跟什麼一起吃','杏仁的食用禁忌有哪些','杏仁與什麼食物相剋？','杏仁跟什麼不能一起吃','和杏仁相剋的食物有哪些','杏仁不可以跟什麼一起吃','螃蟹跟柿子可以一起吃嗎']
     testLoki(inputLIST, ['taboo'])
     print("")
 
-    # all_ingre
-    print("[TEST] all_ingre")
-    inputLIST = ['所有當季食材','現在的當季食材有哪些','我想知道所有的當季食材','你能列出所有的當季食材嗎','你可以跟我說所有的當季食材嗎','你知道七月的當令食材有哪些嗎','你能列出所有四月的當令食材嗎','我想知道三月的當令食材有哪些']
-    testLoki(inputLIST, ['all_ingre'])
-    print("")
+
+def testConflict():
+    which_season_inputLIST = ['海膽 盛產季','幾月盛產烏魚子','海膽什麼時候買','什麼時候有烏魚子','海膽是幾月的食材','海膽該什麼時候買','葡萄產季什麼時候','海膽是幾月產的食材','烏魚子是什麼季節的','葡萄產季是什麼時候','海膽盛產季是什麼時候','你知道海膽什麼時候買比較好嗎']
+
+    taboo_inputLIST = ['葡萄是不是當季的','葡萄是當季水果嗎','烏魚子是當季食材嗎','烏魚子是不是當季食材？']
+
+    CheckInSeason_inputLIST = ['推薦吃什麼','還推薦什麼','推薦一道料理','今天晚上吃什麼','今天晚餐吃什麼','推薦我一道料理','推薦一道料理給我']
+
+    recommend_inputLIST = ['怎麼挑','李子挑法','番茄怎麼買','西瓜的選法','怎麼挑山藥？','茄子挑選方法','青椒怎麼看？','肉類如何挑選？','要怎麼選芭樂？','新鮮肉品怎麼挑？','買茄子如何挑選？','如何挑選新鮮肉品？','山藥如何挑選才好吃？','什麼樣的芭樂比較好吃？','火龍果表皮有皺褶正常嗎？','如何區分新鮮與不新鮮的魚?','馬鈴薯是軟的好還是硬的好？','馬鈴薯軟一點好還是硬一點好？']
+
+    selection_inputLIST = ['你知道什麼','那你還會什麼','那可以問什麼','我可以問你什麼','你可以幫我做什麼','那我還可以問什麼','你可以回答什麼問題','你可以幫我解決什麼問題']
+
+    capability_inputLIST = ['多少錢','蛤蠣價錢','一盒蛋多少','皮蛋多少錢','芭樂賣多少','蘋果怎麼賣','一塊肉怎麼賣','一條魚多少錢','我要買一盒皮蛋','瘦肉一斤多少錢','菠菜一把多少錢','葡萄現在多少錢','現在一盒皮蛋要多少錢','請告訴我一盒蛋多少錢','我想買一盒蛋需要帶多少錢','現在一條白鯧的價格是多少']
+
+    price_inputLIST = ['有什麼水果','現在有什麼','推薦一個食材','推薦什麼食材','現在盛產什麼','有什麼當季食材','現在有甚麼海鮮','目前盛產甚麼水果','現在有什麼水果好吃','現在有什麼當季食材','現在該吃哪些水果？','現在當季的水果是什麼','現在有甚麼當季水果好吃','告訴我現在有什麼當季食材','現在有甚麼好吃的當季水果']
+
+    all_ingre_inputLIST = ['現在的當季食材有哪些','我想知道所有的當季食材','你能列出所有的當季食材嗎','你可以跟我說所有的當季食材嗎','你知道七月的當令食材有哪些嗎','你能列出所有四月的當令食材嗎','我想知道三月的當令食材有哪些']
+
+    reject_inputLIST = ['也不喜歡','有別的嗎','還有嗎？','有沒有別的','還有別的嗎','不是很喜歡ㄟ','再來點別的？','我不喜歡芭樂','我不想吃芭樂','我討厭水蜜桃','我想要別的食材','可以說點別的嗎？','不要讓我看到芭樂！','有沒有推薦別的食材']
+
+    recipe_inputLIST = ['他能做什麼','有甚麼料理','梨子的做法','芭樂怎麼吃','藍莓的作法','芭樂要怎麼弄','芭樂該怎麼弄','香蕉怎麼處理','紅棗可以做什麼','紅棗有甚麼料理','紅蘿蔔可以幹嘛','芭樂有甚麼做法','葡萄該怎麼料理','葡萄該怎麼處理','蘋果相關的料理','香菇有甚麼作法','烏魚子可以怎麼做','皮蛋可以用烤的嗎','芭樂可以做成什麼','有什麼大白菜的料理','有甚麼紫甘藍的作法','有甚麼紫甘藍的做法','葡萄有什麼料理方式','芭樂可以做成什麼料理','請問烏魚子該怎麼料理','我想知道番茄有甚麼料理','我想知道蘋果相關的料理','我想知道蘋果能做什麼料理']
+
+    taboo_inputLIST = ['杏仁 禁忌','有什麼禁忌','杏仁跟什麼相剋','芭樂有什麼禁忌','芭樂有什麼食用禁忌','杏仁可以跟什麼一起吃','杏仁的食用禁忌有哪些','杏仁與什麼食物相剋？','杏仁跟什麼不能一起吃','和杏仁相剋的食物有哪些','杏仁不可以跟什麼一起吃','螃蟹跟柿子可以一起吃嗎']
+
+    allinputLIST = taboo_inputLIST + recipe_inputLIST + reject_inputLIST + all_ingre_inputLIST + price_inputLIST + capability_inputLIST + selection_inputLIST + recommend_inputLIST + CheckInSeason_inputLIST + taboo_inputLIST + which_season_inputLIST
+    
+    filterLIST = []
+    for inputSTR in allinputLIST:
+        punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
+        inputSTR = punctuationPat.sub("\n", inputSTR).split("\n")
+
+        #print(inputSTR)
+        # 將 intent 會使用到的 key 預先設爲空列表
+        resultDICT = {
+        #"key": []
+        }
+        lokiRst = LokiResult(inputSTR, filterLIST)
+        #print(lokiRst.lokiResultLIST)
+
+        all_utt = []
+        if lokiRst.getStatus():
+            for index, key in enumerate(inputSTR):
+                for resultIndex in range(0, lokiRst.getLokiLen(index)):
+                    all_utt.append(lokiRst.getUtterance(index, resultIndex))
+        #print(all_utt)
+
+        if lokiRst.getStatus():
+            if len(all_utt)>1:
+                for index, key in enumerate(inputSTR):
+                    for resultIndex in range(0, lokiRst.getLokiLen(index)):
+                        # CheckInSeason
+                        if lokiRst.getIntent(index, resultIndex) == "CheckInSeason":
+                            resultDICT = Loki_CheckInSeason.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
+
+                        # taboo
+                        if lokiRst.getIntent(index, resultIndex) == "taboo":
+                            resultDICT = Loki_taboo.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
+
+                        # reject
+                        if lokiRst.getIntent(index, resultIndex) == "reject":
+                            resultDICT = Loki_reject.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
+
+                        # selection
+                        if lokiRst.getIntent(index, resultIndex) == "selection":
+                            resultDICT = Loki_selection.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
+
+                        # price
+                        if lokiRst.getIntent(index, resultIndex) == "price":
+                            resultDICT = Loki_price.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
+
+                        # recipe
+                        if lokiRst.getIntent(index, resultIndex) == "recipe":
+                            resultDICT = Loki_recipe.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
+
+                        # InSeason
+                        if lokiRst.getIntent(index, resultIndex) == "InSeason":
+                            resultDICT = Loki_InSeason.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
+
+                        # capability
+                        if lokiRst.getIntent(index, resultIndex) == "capability":
+                            resultDICT = Loki_capability.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
+
+                        # all_ingre
+                        if lokiRst.getIntent(index, resultIndex) == "all_ingre":
+                            resultDICT = Loki_all_ingre.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), 
+                    resultDICT, all_utt)
+
+                        # recommend
+                        if lokiRst.getIntent(index, resultIndex) == "recommend":
+                            resultDICT = Loki_recommend.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
+
+                        # which_season
+                        if lokiRst.getIntent(index, resultIndex) == "which_season":
+                            resultDICT = Loki_which_season.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT, all_utt)
+                        
+                print("-----------")
+
+        else:
+            resultDICT = {"msg": lokiRst.getMessage()}
 
 
 if __name__ == "__main__":
-    # 測試所有意圖
-    testIntent()
-
-    # 測試其它句子
-    filterLIST = []
-    splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
-    resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST)            # output => ["今天天氣"]
-    resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST, splitLIST) # output => ["今天天氣", "後天氣象"]
-    resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"], filterLIST)      # output => ["今天天氣", "後天氣象"]
+    
+    # 測試所有句型是否存在多種intent情況
+    testConflict()

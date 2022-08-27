@@ -54,9 +54,11 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         pass
 
     if utterance == "還推薦什麼":
-        # write your code here
-        pass
-
+        if "蔬菜" in inputSTR or "水果" in inputSTR or "海鮮" in inputSTR or "食材" in inputSTR:
+            resultDICT.pop("recommend")
+        else:
+            pass
+            
     if utterance == "推薦[我][一道]料理":
         # write your code here
         pass

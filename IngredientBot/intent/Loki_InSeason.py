@@ -84,4 +84,10 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     if utterance == "[現在]盛產什麼":
         resultDICT["time"] = args[0]
 
+    if utterance == "推薦[一個][食材]":
+        resultDICT["type"] = args[1]
+
+    if utterance == "推薦什麼[食材]":
+        resultDICT["type"] = args[0]
+
     return resultDICT
