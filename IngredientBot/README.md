@@ -10,7 +10,7 @@ DEMO
 -------------
 ```
 .
-├── ingredient_bot.py  # 啟動 bot，處理與 discord 間的互動
+├── ingredient_bot.py  # main program，執行以啟動 bot，處理與 discord 間的互動
 ├── Loki.py            # 主要使用到 function runLoki 
 ├── model.py           # NLU model 以及相關的 function
 ├── README.md
@@ -20,7 +20,7 @@ DEMO
 │  ├── ingredient.json # 紀錄每個月份的當季食材
 │  └── inSeason.json   # 紀錄每個食材的作法、挑法與禁忌
 │      
-├─intent # 所有的 intent 都放在這
+├─intent # 所有的 intent 都放在這邊
 │  ├── Loki_all_ingre.py
 │  ├── Loki_capability.py
 │  ├── Loki_CheckInSeason.py
@@ -35,7 +35,7 @@ DEMO
 │  ├── Updater.py
 │  └── USER_DEFINED.json
 │          
-└─ref # 需要將裡面的所有檔案匯入 Loki project
+└─ref # 啟用 Loki 服務時，需要將裡面的所有檔案匯入 Loki project 中
    ├── all_ingre.ref
    ├── capability.ref
    ├── CheckInSeason.ref
@@ -63,11 +63,23 @@ DEMO
 
 啟用 Loki 服務
 -------------
-- 匯入ref
-- 新增account.info
+1. 登入後進入 [Loki 控制台]([https://](https://api.droidtown.co/loki/))
+2. 輸入專案名稱，點選 `建立專案`
+3. 點選剛建立完成的專案名稱以進入專案
+4. 點選 `選擇檔案` > 選擇所有 ref 內的檔案 > 點選 `讀取意圖`
+5. 點選左上角房子圖示，回到 [Loki 控制台]([https://](https://api.droidtown.co/loki/))，點選 `複製` 專案金鑰
+6. 將複製下來的金鑰貼上到檔案 account.info 中：
+```
+{
+    "username" : " ***輸入USERNAME(註冊信箱)*** ",
+    "apikey_ing" : " ***將專案金鑰貼到這裡*** ",
+    "discord_token": ""
+}
+```
 
-執行
+執行以啟動 Ingredient Bot / 當季食材小幫手
 -------------
+- 執行指令：`$ python ingredient_bot.py`
 
 引用資料
 -------------
@@ -77,3 +89,17 @@ DEMO
 
 聯絡資訊
 -------------
+若您還有其他任何的疑問，或是對 Loki 與食材相關的問題有興趣 
+
+歡迎透過E-mail聯繫，謝謝 
+
+Joe Huang：[joehuangx@gmail.com](mailto:joehuangx@gmail.com)      
+
+Lisi Yang：[lisi16810@gmail.com](mailto:lisi16810@gmail.com)
+
+
+
+
+
+
+
