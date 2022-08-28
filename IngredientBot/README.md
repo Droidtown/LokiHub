@@ -8,6 +8,22 @@ DEMO
 
 檔案總覽/目錄
 -------------
+```
+IngredientBot
+│  discord_connect.py
+│  ingredientBot.py
+│  model_related.py
+│  README.md
+│  requirements.txt
+│  
+├──info
+│    ingredient.json
+│    inSeason.json
+│      
+├──intent
+│          
+└──ref
+```
 
 設置環境
 -------------
