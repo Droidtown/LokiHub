@@ -922,55 +922,185 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT = value2variable(resultDICT, entityX, x, resultDICT["symbolLIST"][0][1]-w2n(args[6].split(" ")[0]))
 
     if utterance == "The [school] have [$20,000]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = "money_{}".format(sgForm(args[0]))
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
     if utterance == "[Betty] buy [140] [shiny] [blue] [round] [stones]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[5])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
     if utterance == "[Brenda] want [to] have [3] [bracelets] [with] [star-shaped] [stones]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[3])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[2])
 
     if utterance == "[Christian] [to] help [him] place [420] [seedlings] [in] [packets]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[4])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[3])
 
     if utterance == "[Christian] bring a [bag of] [140] [nails]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[3])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[2])
 
     if utterance == "[Lexie] have [32] [watercolor] [paintings]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[3])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
     if utterance == "[Melissa] buy [2 packs of] [tennis] [balls] [for] [$12] [in] [total]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[3])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
     if utterance == "[She] buy [36] star-shape [stones]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[2])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
     if utterance == "[Shiela] have [6] [neighbors]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[2])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
     if utterance == "[she] draw [54] [animals]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[2])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
     if utterance == "[she] have [18 paintings of] [flowers]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[1])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
     if utterance == "[she] have [80] [crayons]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[2])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
     if utterance == "a [stack of] [700] [sheets] [of] [used] [paper]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[5])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
     return resultDICT

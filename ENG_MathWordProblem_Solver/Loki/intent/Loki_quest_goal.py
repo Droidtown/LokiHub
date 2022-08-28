@@ -195,83 +195,83 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["questGoalLIST"].append("{}_{}".format(sgForm(args[1]), sgForm(args[2])))
 
     if utterance == "How [many] [boxes] do [she] need ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "How [many] [crayon] [boxes] do [she] need ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 2)
 
     if utterance == "How [many] [pieces] [of] [candy] be [in] [each] [bag] ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 3)
 
     if utterance == "How [many] [pieces] can the [school] buy in [total] ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "How [many] [rides] can [you] go on ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "How [much] do [1] [tennis] [ball] cost ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 3)
 
     if utterance == "How [much] do [1] pack [of] [tennis] [balls] cost ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 4)
 
-    if utterance == "find the [larger] number":
-        # write your code here
-        pass
+    if utterance == "find the [larger] [number]":
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "how [many] [bracelets] [of] [blue] [shiny] [round] [stones] will there be ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "how [many] [colors] do [Sheila] use ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "how [many] [cutlets] will the [restaurant] have leave over [after] make [as] [many] [dishes] [as] [possible] ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "how [many] [drawings] will [each] [neighbor] receive ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "how [many] [glasses] [of] [fresh] [lemonade] can [she] make":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "how [many] [marbles] will [each] [of] the [boys] receive ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "how [many] [paintings] can [she] give [to] [each] [of] her [two] [grandmothers] ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "how [many] [paintings] will be place [in] [each] [of] the [four] [rooms] ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "how [many] [pink] [flower] [stones] will [each] [bracelet] have ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 3)
 
     if utterance == "how [many] [seeds] will be place [in] [each] can [if] [she] places an [equal] [number] [of] [seeds] [in] [each] can ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     if utterance == "how [many] [star-shape] [stones] will be [in] [each] [bracelet] ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 2)
 
     if utterance == "how [many] [stations] do [they] visit ?":
-        # write your code here
-        pass
+        resultDICT["intentLIST"].append("simulEq")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
 
     return resultDICT

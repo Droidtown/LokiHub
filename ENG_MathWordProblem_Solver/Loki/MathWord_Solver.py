@@ -288,26 +288,26 @@ if __name__ == "__main__":
     #testIntent()
 
     # Test other
-    inputLIST = ["A bricklayer stacks bricks in 2 rows",
-                 "with 10 bricks in each row",
-                 "How many bricks are there in total?"]
+    #inputLIST = ["A bricklayer stacks bricks in 2 rows",
+    #             "with 10 bricks in each row",
+    #             "How many bricks are there in total?"]
 
     #problems are labeled the same in Loki_postve_num.py
 
     #1st problem
     #status: working
-    inputLIST = ["A new order of instruments comes in today.",
-                 "There are 8 guitars and 3 flutes from the order.",
-                 "And together with the 5 guitars that the store has,",
-                 "how many flutes are there in total?"]
+    #inputLIST = ["A new order of instruments comes in today.",
+    #             "There are 8 guitars and 3 flutes from the order.",
+    #             "And together with the 5 guitars that the store has,",
+    #             "how many flutes are there in total?"]
 
     #2nd problem
     #status: working
-    inputLIST = ["Next to the 3 juice fountains",
-                 "there are 5 tables.",
-                 "On the other side of the cafeteria",
-                 "there are 7 tables.",
-                 "How many tables are there in total?"]
+    #inputLIST = ["Next to the 3 juice fountains",
+    #             "there are 5 tables.",
+    #             "On the other side of the cafeteria",
+    #             "there are 7 tables.",
+    #             "How many tables are there in total?"]
 
 
     #3rd problem
@@ -387,19 +387,25 @@ if __name__ == "__main__":
                  #"and the larger number is five more than the smaller number",
                  #"Find these numbers"]
 
-    inputLIST = ["A number is 12 less than another",
-                 "The sum of the numbers is 28",
-                 "find the Numbers"]
+    #inputLIST = ["A number is 12 less than another",
+    #             "The sum of the numbers is 28",
+    #             "find the Numbers"]
 
-    inputLIST = ["the sum of the digits of a two digit number is 15.",
-                 "if the digits are interchanged the result exceeds the original number by 9",
-                 "find the number."]
+    #inputLIST = ["the sum of the digits of a two digit number is 15.",
+    #             "if the digits are interchanged the result exceeds the original number by 9",
+    #             "find the number."]
 
-    inputLIST = ["Lastly",
-                 "Rob compared Canada’s CN Tower and Seattle’s Space Needle.",
-                 "How tall is the Space Needle if the CN Tower stands at 553 meters high",
-                 "and it is taller than the Space Needle by 369 meters?"
-    ]
+    #inputLIST = ["Lastly",
+    #             "Rob compared Canada’s CN Tower and Seattle’s Space Needle.",
+    #             "How tall is the Space Needle if the CN Tower stands at 553 meters high",
+    #             "and it is taller than the Space Needle by 369 meters?"
+    #]
+
+    #inputLIST = ["If you have 4 pieces of candy split evenly into 2 bags",
+    #             "how many pieces of candy are in each bag?"]
+
+    inputLIST = ["If you have 80 tickets for the fair and each ride costs 5 tickets",
+                 "how many rides can you go on?"]
 
     filterLIST = []
     resultDICT = runLoki(inputLIST, filterLIST)
