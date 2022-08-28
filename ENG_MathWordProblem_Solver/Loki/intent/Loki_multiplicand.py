@@ -123,7 +123,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT = value2variable(resultDICT, entityX, x, args[1])
             resultDICT = value2variable(resultDICT, entityY, y, args[3])
 
-
     if utterance == "[Cayley] earn [$5] an [hour]":
         if inputSTR in resultDICT["inputStrLIST"]:
             return resultDICT
@@ -134,7 +133,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         entityX = "money_{}".format(sgForm(args[2]))
         resultDICT = entity2symbol(resultDICT, entityX)
         # 2. Assign variables to Symbols
-        resultDICT = value2variable(resultDICT, entityX, x, entityX)
+        x = symbol2variable(resultDICT, entityX)
         # 3. Assign value to Symbols
         resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
@@ -372,7 +371,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
         x = symbol2variable(resultDICT, entityX)
         # 3. Assign value to Symbols
         resultDICT = value2variable(resultDICT, entityX, x, numExtractor(args[1])*numExtractor(args[5]))
-
 
     if utterance == "[Melissa] buy [2] pack [of] [tennis] [balls]":
         if inputSTR in resultDICT["inputStrLIST"]:
@@ -722,49 +720,241 @@ def getResult(inputSTR, utterance, args, resultDICT):
         # 3. Assign value to Symbols
         resultDICT = value2variable(resultDICT, entityX, x, args[1])
 
-
     if utterance == "One number be [2] times [as] [large] [as] the [other]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        for i in range(0, len(resultDICT["symbolLIST"])):
+            if "number_{}".format(i) in resultDICT["symbolDICT"].keys():
+                pass
+            else:
+                resultDICT["symbolDICT"]["number_{}".format(i)] = []
+
+        variableLIST = []
+        # 2. Assign variables to Symbols
+        for n in range(0, len(resultDICT["symbolDICT"].keys())):
+            variableLIST.append(sympy.Symbol("number_{}".format(n)))
+
+        # 3. Add equation to eqLIST and symbols to symbolLIST
+        equation = "number_0 - {}*number_1".format(numExtractor(args[0]))
+        resultDICT["eqLIST"].append(sympy.sympify(equation))
+        for v in variableLIST:
+            if v in resultDICT["symbolLIST"]:
+                pass
+            else:
+                resultDICT["symbolLIST"].append(v)
 
     if utterance == "One number be [six] times the [other]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        for i in range(0, len(resultDICT["symbolLIST"])):
+            if "number_{}".format(i) in resultDICT["symbolDICT"].keys():
+                pass
+            else:
+                resultDICT["symbolDICT"]["number_{}".format(i)] = []
+
+        variableLIST = []
+        # 2. Assign variables to Symbols
+        for n in range(0, len(resultDICT["symbolDICT"].keys())):
+            variableLIST.append(sympy.Symbol("number_{}".format(n)))
+
+        # 3. Add equation to eqLIST and symbols to symbolLIST
+        equation = "number_0 - {}*number_1".format(numExtractor(args[0]))
+        resultDICT["eqLIST"].append(sympy.sympify(equation))
+        for v in variableLIST:
+            if v in resultDICT["symbolLIST"]:
+                pass
+            else:
+                resultDICT["symbolLIST"].append(v)
 
     if utterance == "[If] [each] [game] take [5] [minutes] [to] prepare and [he] prepare a [total of] [5] [games]":
         # write your code here
         pass
 
     if utterance == "[Twice] the second number be [12] [less] [than] [5] times the first":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        for i in range(0, len(resultDICT["symbolLIST"])):
+            if "number_{}".format(i) in resultDICT["symbolDICT"].keys():
+                pass
+            else:
+                resultDICT["symbolDICT"]["number_{}".format(i)] = []
+
+        variableLIST = []
+        # 2. Assign variables to Symbols
+        for n in range(0, len(resultDICT["symbolDICT"].keys())):
+            variableLIST.append(sympy.Symbol("number_{}".format(n)))
+
+        # 3. Add equation to eqLIST and symbols to symbolLIST
+        if args[0].lower() == "twice":
+            args[0] = 2
+        elif args[0].lower() == "thrice":
+            args[0] = 3
+        equation = "{}*number_0 - {}*number_1+12".format(numExtractor(args[4]), args[0])
+        resultDICT["eqLIST"].append(sympy.sympify(equation))
+        for v in variableLIST:
+            if v in resultDICT["symbolLIST"]:
+                pass
+            else:
+                resultDICT["symbolLIST"].append(v)
 
     if utterance == "a number be [twice] [another] number":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        for i in range(0, len(resultDICT["symbolLIST"])):
+            if "number_{}".format(i) in resultDICT["symbolDICT"].keys():
+                pass
+            else:
+                resultDICT["symbolDICT"]["number_{}".format(i)] = []
+
+        variableLIST = []
+        # 2. Assign variables to Symbols
+        for n in range(0, len(resultDICT["symbolDICT"].keys())):
+            variableLIST.append(sympy.Symbol("number_{}".format(n)))
+
+        # 3. Add equation to eqLIST and symbols to symbolLIST
+        if args[0].lower() == "twice":
+            args[0] = 2
+        elif args[0].lower() == "thrice":
+            args[0] = 3
+        equation = "number_0 - {}*number_1".format(args[0])
+        resultDICT["eqLIST"].append(sympy.sympify(equation))
+        for v in variableLIST:
+            if v in resultDICT["symbolLIST"]:
+                pass
+            else:
+                resultDICT["symbolLIST"].append(v)
 
     if utterance == "and product [20]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
 
-    if utterance == "find the numbers":
-        # write your code here
-        pass
+        # 1. Assign Symbols
+        for i in range(0, len(resultDICT["symbolLIST"])):
+            if "number_{}".format(i) in resultDICT["symbolDICT"].keys():
+                pass
+            else:
+                resultDICT["symbolDICT"]["number_{}".format(i)] = []
 
-    if utterance == "find two numbers":
-        # write your code here
-        pass
+        variableLIST = []
+        # 2. Assign variables to Symbols
+        for n in range(0, len(resultDICT["symbolDICT"].keys())):
+            variableLIST.append(sympy.Symbol("number_{}".format(n)))
 
-    if utterance == "the [larger] number be 4 times the [smaller] number":
-        # write your code here
-        pass
+        # 3. Add equation to eqLIST and symbols to symbolLIST
+        equation = "*"
+        for v in variableLIST:
+            equation = equation + v.name + "*"
+        equation.strip("*")
+        equation = equation + "-20"
+        resultDICT["eqLIST"].append(sympy.sympify(equation))
+        for v in variableLIST:
+            if v in resultDICT["symbolLIST"]:
+                pass
+            else:
+                resultDICT["symbolLIST"].append(v)
+
+    if utterance == "the [larger] number be [4] times the [smaller] number":
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        for i in range(0, len(resultDICT["symbolLIST"])):
+            if "number_{}".format(i) in resultDICT["symbolDICT"].keys():
+                pass
+            else:
+                resultDICT["symbolDICT"]["number_{}".format(i)] = []
+
+        variableLIST = []
+        # 2. Assign variables to Symbols
+        for n in range(0, len(resultDICT["symbolDICT"].keys())):
+            variableLIST.append(sympy.Symbol("number_{}".format(n)))
+
+        # 3. Add equation to eqLIST and symbols to symbolLIST
+        equation = "number_0 - {}*number_1".format(numExtractor(args[1]))
+
+        resultDICT["eqLIST"].append(sympy.sympify(equation))
+        for v in variableLIST:
+            if v in resultDICT["symbolLIST"]:
+                pass
+            else:
+                resultDICT["symbolLIST"].append(v)
 
     if utterance == "their difference be [22]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        for i in range(0, len(resultDICT["symbolLIST"])):
+            if "number_{}".format(i) in resultDICT["symbolDICT"].keys():
+                pass
+            else:
+                resultDICT["symbolDICT"]["number_{}".format(i)] = []
+
+        variableLIST = []
+        # 2. Assign variables to Symbols
+        for n in range(0, len(resultDICT["symbolDICT"].keys())):
+            variableLIST.append(sympy.Symbol("number_{}".format(n)))
+
+        # 3. Add equation to eqLIST and symbols to symbolLIST
+        equation = "number_0 - number_1 - {}".format(numExtractor(args[0]))
+
+        resultDICT["eqLIST"].append(sympy.sympify(equation))
+        for v in variableLIST:
+            if v in resultDICT["symbolLIST"]:
+                pass
+            else:
+                resultDICT["symbolLIST"].append(v)
 
     if utterance == "whose sum AND product be [11]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        for i in range(0, len(resultDICT["symbolLIST"])):
+            if "number_{}".format(i) in resultDICT["symbolDICT"].keys():
+                pass
+            else:
+                resultDICT["symbolDICT"]["number_{}".format(i)] = []
+
+        variableLIST = []
+        # 2. Assign variables to Symbols
+        for n in range(0, len(resultDICT["symbolDICT"].keys())):
+            variableLIST.append(sympy.Symbol("number_{}".format(n)))
+
+        # 3. Add equation to eqLIST and symbols to symbolLIST
+        equation = "number_0 + number_1 -{}".format(numExtractor(args[0]))
+        resultDICT["eqLIST"].append(sympy.sympify(equation))
+
+        equation = "number_0 * number_1 -{}".format(numExtractor(args[0]))
+        resultDICT["eqLIST"].append(sympy.sympify(equation))
+        for v in variableLIST:
+            if v in resultDICT["symbolLIST"]:
+                pass
+            else:
+                resultDICT["symbolLIST"].append(v)
 
     return resultDICT
