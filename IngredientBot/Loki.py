@@ -32,6 +32,7 @@ except:
     from .intent import Loki_which_season
 
 accountDICT = json.load(open("account.info", encoding="utf-8"))
+
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
 USERNAME = accountDICT["username"]
 LOKI_KEY = accountDICT["apikey_ing"]

@@ -8,7 +8,7 @@ import pandas as pd
 from random import choice
 from datetime import datetime
 
-import ingredientBot as iB
+import Loki
 
 inSeasonDICT = json.load(open("./info/inSeason.json", encoding="utf-8")) 
 IngredientRelatedDICT = json.load(open("./info/ingredient.json", encoding="utf-8"))
@@ -200,7 +200,7 @@ def getLokiResult(inputSTR):
     punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
     inputLIST = punctuationPat.sub("\n", inputSTR).split("\n")
     filterLIST = []
-    resultDICT = iB.runLoki(inputLIST, filterLIST)
+    resultDICT = Loki.runLoki(inputLIST, filterLIST)
 
     return resultDICT
 

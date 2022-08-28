@@ -5,8 +5,7 @@ import logging
 import discord
 import json
 from datetime import datetime
-
-import model_related as mr
+import model
 
 logging.basicConfig(level=logging.INFO) 
 # ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
@@ -88,7 +87,7 @@ class BotClient(discord.Client):
 
             #開始處理正式對話，接上 NLU 模型
             self.mscDICT[message.author.id]["msgSTR"] = msgSTR
-            self.mscDICT[message.author.id] = mr.model(self.mscDICT[message.author.id])
+            self.mscDICT[message.author.id] = model.model(self.mscDICT[message.author.id])
 
             #送出回覆
             await message.reply(self.mscDICT[message.author.id]["replySTR"])
