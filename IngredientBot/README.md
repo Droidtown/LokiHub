@@ -10,9 +10,9 @@ DEMO
 -------------
 ```
 .
-├── discord_connect.py # 處理與 discord 間的互動
-├── ingredientBot.py   # 主要使用到 function runLoki 
-├── model_related.py   # NLU model 以及相關的 function
+├── ingredient_bot.py  # 啟動 bot，處理與 discord 間的互動
+├── Loki.py            # 主要使用到 function runLoki 
+├── model.py           # NLU model 以及相關的 function
 ├── README.md
 ├── requirements.txt
 │  
