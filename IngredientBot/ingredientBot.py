@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-#哈囉
 
 from requests import post
 from requests import codes
 import math
+import json
 import re
 try:
     from intent import Loki_CheckInSeason
@@ -31,15 +31,11 @@ except:
     from .intent import Loki_recommend
     from .intent import Loki_which_season
 
-import json
-
 accountDICT = json.load(open("account.info", encoding="utf-8"))
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
 USERNAME = accountDICT["username"]
 LOKI_KEY = accountDICT["apikey_ing"]
-# 意圖過濾器說明
-# INTENT_FILTER = []        => 比對全部的意圖 (預設)
-# INTENT_FILTER = [intentN] => 僅比對 INTENT_FILTER 內的意圖
+
 INTENT_FILTER = []
 INPUT_LIMIT = 20
 

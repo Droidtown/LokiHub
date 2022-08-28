@@ -7,7 +7,6 @@ import json
 from datetime import datetime
 
 import model_related as mr
-import ingredientBot as ib
 
 logging.basicConfig(level=logging.INFO) 
 # ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF

@@ -210,7 +210,7 @@ def model(mscDICT):
     根據訊息內容的意圖 (intent) 做相對應的處理，將處理結果記錄在 mscDICT 回傳。
 
     多輪對話資訊 (mscDICT) 所記錄的參數：
-        Argument name   Type         Description
+        Argument        Type         Description
         ---------------------------------------------------------
         updatetime      (datetime)   第一次傳送訊息的時間
         msgSTR          (str)        本次訊息內容
