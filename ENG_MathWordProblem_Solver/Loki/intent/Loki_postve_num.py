@@ -587,6 +587,64 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT = value2variable(resultDICT, entityX, x, args[1])
         resultDICT = value2variable(resultDICT, entityY, y, args[5])
 
+    if utterance == "[she] [only] have a [total of] [10] [stickers]":
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        if args[1] in ("only", "merely", "just"):
+            if args[2] == "total of":
+                # 1. Assign Symbols
+                entityX = sgForm(args[4])
+                resultDICT = entity2symbol(resultDICT, entityX)
+                # 2. Assign variables to Symbols
+                x = symbol2variable(resultDICT, entityX)
+                # 3. Assign value to Symbols
+                resultDICT = value2variable(resultDICT, entityX, x, args[3])
+
+    if utterance == "Your [team] score a [total of] [123] [points]":
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[3])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[2])
+
+    if utterance == "[67] [points] be score [in] the first [half]":
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[1])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[0])
+
+    if utterance == "[He] start [with] [965] [ants]":
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = sgForm(args[3])
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[2])
+
     if utterance == "[Melissa] buy [2 packs of] [tennis] [balls]":
         if inputSTR in resultDICT["inputStrLIST"]:
             return resultDICT
@@ -977,6 +1035,34 @@ def getResult(inputSTR, utterance, args, resultDICT):
         x = symbol2variable(resultDICT, entityX)
         # 3. Assign value to Symbols
         resultDICT = value2variable(resultDICT, entityX, x, args[3])
+
+    if utterance == "[Charles] have a [pack of] [35] [pencil] [crayons]":
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = "{}_{}".format(sgForm(args[4]), sgForm(args[1].split(" ")[0]))
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[2])
+
+    if utterance == "[Charlene] have a [pack of] [35] [pencil] [crayons]":
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        # 1. Assign Symbols
+        entityX = "{}_{}".format(sgForm(args[4]), sgForm(args[1].split(" ")[0]))
+        resultDICT = entity2symbol(resultDICT, entityX)
+        # 2. Assign variables to Symbols
+        x = symbol2variable(resultDICT, entityX)
+        # 3. Assign value to Symbols
+        resultDICT = value2variable(resultDICT, entityX, x, args[2])
 
     if utterance == "[Christian] bring a [bag of] [140] [nails]":
         if inputSTR in resultDICT["inputStrLIST"]:

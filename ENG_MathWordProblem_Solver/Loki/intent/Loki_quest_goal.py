@@ -274,4 +274,31 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["intentLIST"].append("simulEq")
         resultDICT = questGoalChecker(resultDICT, args, 1)
 
+    if utterance == "How [many] [ants] do [he] have":
+        resultDICT["intentLIST"].append("subtraction")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
+
+    if utterance == "How [many] [pencil] [crayons] do [Charlene] have leave":
+        resultDICT["intentLIST"].append("subtraction")
+        resultDICT = questGoalChecker(resultDICT, args, 2)
+
+    if utterance == "How [many] [stickers] be miss":
+        resultDICT["intentLIST"].append("subtraction")
+        resultDICT = questGoalChecker(resultDICT, args, 1)
+        if resultDICT["symbolDICT"][sgForm(args[1])][-1][-1] > 0:
+            resultDICT["symbolDICT"][sgForm(args[1])][-1] = (resultDICT["symbolDICT"][sgForm(args[1])][-1][0], resultDICT["symbolDICT"][sgForm(args[1])][-1][-1]*-1)
+            resultDICT["symbolLIST"][-1] = (resultDICT["symbolLIST"][-1][0], resultDICT["symbolLIST"][-1][-1]*-1)
+
+    if utterance == "How [many] be score [in] the second [half]":
+        resultDICT["intentLIST"].append("subtraction")
+        if "score" in resultDICT["symbolDICT"].keys():
+            questGoal = "score"
+        else:
+            questGoal = list(resultDICT["symbolDICT"].keys())[0]
+        if resultDICT["symbolDICT"][questGoal][-1][-1] > 0:
+            resultDICT["symbolDICT"][questGoal][-1] = (resultDICT["symbolDICT"][questGoal][-1][0], resultDICT["symbolDICT"][questGoal][-1][-1]*-1)
+            resultDICT["symbolLIST"][-1] = (resultDICT["symbolLIST"][-1][0], resultDICT["symbolLIST"][-1][-1]*-1)
+
+
+
     return resultDICT

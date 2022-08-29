@@ -338,7 +338,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["inputStrLIST"].append(inputSTR)
 
             # 1. Assign Symbols
-            entityX = "{}_{}".format(sgForm(args[2].rstrip(" of").split(" ")[-1]), sgForm(args[4]))
+            entityX = "{}_{}".format(sgForm(args[4]), sgForm(args[2].rstrip(" of").split(" ")[-1]))
             resultDICT = entity2symbol(resultDICT, entityX)
             # 2. Assign variables to Symbols
             x = symbol2variable(resultDICT, entityX)
@@ -437,10 +437,38 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["symbolDICT"][args[2]].append((x, args[1]))
             resultDICT["symbolLIST"].append((x, args[1]))
 
-    # how to extract subject from context clues?
+    if utterance == "[She] give [3] [to] her [friend]":
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        symbolK = "_".join(resultDICT["symbolLIST"][-1][0].name.split("_")[:-1])
+        entityX = sympy.Symbol("{}_{}".format(symbolK, int(resultDICT["symbolLIST"][-1][0].name.split("_")[-1])+1))
+        resultDICT["symbolLIST"].append((entityX, -1*numExtractor(args[1])))
+        resultDICT["symbolDICT"][symbolK].append((entityX, -1*numExtractor(args[1])))
+
     if utterance == "[She] give [6] [to] [Theresa]":
-        # write your code here
-        pass
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        symbolK = "_".join(resultDICT["symbolLIST"][-1][0].name.split("_")[:-1])
+        entityX = sympy.Symbol("{}_{}".format(symbolK, int(resultDICT["symbolLIST"][-1][0].name.split("_")[-1])+1))
+        resultDICT["symbolLIST"].append((entityX, -1*numExtractor(args[1])))
+        resultDICT["symbolDICT"][symbolK].append((entityX, -1*numExtractor(args[1])))
+
+    if utterance == "[He] sell [213]":
+        if inputSTR in resultDICT["inputStrLIST"]:
+            return resultDICT
+        else:
+            resultDICT["inputStrLIST"].append(inputSTR)
+
+        symbolK = "_".join(resultDICT["symbolLIST"][-1][0].name.split("_")[:-1])
+        entityX = sympy.Symbol("{}_{}".format(symbolK,  int(resultDICT["symbolLIST"][-1][0].name.split("_")[-1])+1))
+        resultDICT["symbolLIST"].append((entityX, -1*numExtractor(args[1])))
+        resultDICT["symbolDICT"][symbolK].append((entityX, -1*numExtractor(args[1])))
 
     if utterance == "[She] share [10 pieces of] [strawberry] [gum]":
         if inputSTR in resultDICT["inputStrLIST"]:
@@ -449,7 +477,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["inputStrLIST"].append(inputSTR)
 
             # 1. Assign Symbols
-            entityX = "{}_{}".format(sgForm(args[1].rstrip(" of").split(" ")[-1]), sgForm(args[3]))
+            entityX = "{}_{}".format(sgForm(args[3]), sgForm(args[1].rstrip(" of").split(" ")[-1]))
             resultDICT = entity2symbol(resultDICT, entityX)
             # 2. Assign variables to Symbols
             x = symbol2variable(resultDICT, entityX)
@@ -664,7 +692,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 v = sympy.Symbol(entityV)
                 variableLIST.append(v)
 
-            equation = "{} - {} + {}".format(variableLIST[0].name, variableLIST[1].name, w2n(args[0]))
+            equation = "{} - {} - {}".format(variableLIST[0].name, variableLIST[1].name, w2n(args[0]))
             resultDICT["eqLIST"].append(sympy.sympify(equation))
             resultDICT["symbolLIST"].extend(variableLIST)
 
