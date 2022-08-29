@@ -70,7 +70,7 @@ except:
 
 from pprint import pprint
 
-accountDICT = json.load(open("../src/account.info", encoding="utf-8"))
+accountDICT = json.load(open("account.info", encoding="utf-8"))
 LOKI_URL = "https://nlu.droidtown.co/Loki/BulkAPI/"
 USERNAME = accountDICT["username"]
 LOKI_KEY = accountDICT["loki_key"]
