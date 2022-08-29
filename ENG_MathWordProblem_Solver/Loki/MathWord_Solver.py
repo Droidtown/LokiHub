@@ -287,7 +287,41 @@ if __name__ == "__main__":
     # Test all intents
     #testIntent()
 
-    # Test other
+    inputLIST = ["Charlene had a pack of 35 pencil crayons",
+                 "She gave 6 to Theresa",
+                 "She gave 3 to her friend Mandy",
+                 "How many pencil crayons does Charlene have left?"
+                ]
+
+    inputLIST = ["There were 3 pizzas in total at the pizza shop",
+                 "A customer bought 1 pizza.",
+                 "How many pizzas are left?"
+                ]
+
+    inputLIST = ["Your friend said she had 11 stickers",
+                 "When you helped her clean her desk",
+                 "she only had a total of 10 stickers",
+                 "How many stickers are missing?"
+                ]
+
+    inputLIST = ["Adrianna has 100 pieces of gum to share with her friends",
+                 "When she went to the park",
+                 "she shared 10 pieces of strawberry gum",
+                 "When she left the park",
+                 "Adrianna shared another 10 pieces of bubble gum",
+                 "How many pieces of gum does Adrianna have now?"
+                ]
+
+    inputLIST = ["Your team scored a total of 123 points",
+                 "67 points were scored in the first half",
+                 "How many were scored in the second half?"
+                ]
+
+    inputLIST = ["Nathan has a big ant farm",
+                 "He decided to sell some of his ants",
+                 "He started with 965 ants",
+                 "He sold 213. How many ants does he have now?"
+                 ]
     #inputLIST = ["A bricklayer stacks bricks in 2 rows",
     #             "with 10 bricks in each row",
     #             "How many bricks are there in total?"]
@@ -378,10 +412,7 @@ if __name__ == "__main__":
     #inputLIST = ["A garden has 52 rows and 15 columns of bean plants",
                  #"How many plants are there in all?"]
 
-    #index out of range error for utterance "There are 3 pizzas"
-    #inputLIST = ["There are 3 pizzas",
-                 #"A customer bought 1 pizza.",
-                 #"How many pizzas are left?"]
+
 
     #inputLIST = ["The sum of two numbers is twenty-three",
                  #"and the larger number is five more than the smaller number",
@@ -404,8 +435,8 @@ if __name__ == "__main__":
     #inputLIST = ["If you have 4 pieces of candy split evenly into 2 bags",
     #             "how many pieces of candy are in each bag?"]
 
-    inputLIST = ["If you have 80 tickets for the fair and each ride costs 5 tickets",
-                 "how many rides can you go on?"]
+    #inputLIST = ["If you have 80 tickets for the fair and each ride costs 5 tickets",
+                 #"how many rides can you go on?"]
 
     filterLIST = []
     resultDICT = runLoki(inputLIST, filterLIST)
