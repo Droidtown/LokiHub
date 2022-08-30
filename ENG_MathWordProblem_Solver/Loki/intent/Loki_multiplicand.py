@@ -863,7 +863,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         for v in variableLIST:
             equation = equation + v.name + "*"
         equation.strip("*")
-        equation = equation + "-20"
+        equation = equation + "{}".format(-1*numExtractor(args[0]))
         resultDICT["eqLIST"].append(sympy.sympify(equation))
         for v in variableLIST:
             if v in resultDICT["symbolLIST"]:

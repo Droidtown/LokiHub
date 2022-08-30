@@ -92,9 +92,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT = entity2symbol(resultDICT, entityY)
         # 2. Assign variables to Symbols
         x = symbol2variable(resultDICT, entityX)
-        y = symbol2variable(resultDICT, entityY)
-        # 3. Assign value to Symbols
         resultDICT = value2variable(resultDICT, entityX, x, args[1])
+        y = symbol2variable(resultDICT, entityY)
         resultDICT = value2variable(resultDICT, entityY, y, args[4])
         #resultDICT["intentLIST"].append("addition")
 
@@ -110,11 +109,10 @@ def getResult(inputSTR, utterance, args, resultDICT):
         entityY = sgForm(args[4])
         resultDICT = entity2symbol(resultDICT, entityX)
         resultDICT = entity2symbol(resultDICT, entityY)
-        # 2. Assign variables to Symbols
+        # 2. Assign variables to Symbols # 3. Assign value to Symbols
         x = symbol2variable(resultDICT, entityX)
-        y = symbol2variable(resultDICT, entityY)
-        # 3. Assign value to Symbols
         resultDICT = value2variable(resultDICT, entityX, x, args[0])
+        y = symbol2variable(resultDICT, entityY)
         resultDICT = value2variable(resultDICT, entityY, y, args[3])
         #resultDICT["intentLIST"].append("addition")
 
