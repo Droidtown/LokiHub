@@ -26,10 +26,7 @@ def NLUmodel(mscDICT):
 
     if len(resultDICT) > 0: #放找得到對應intent
         if "reply_gym_distance" in resultDICT.keys():
-            if resultDICT["_person_loc"] == []: #若有地點資訊，可以回答的問題：附近岩館
-                mscDICT["replySTR"] = "請問您在哪裡呢？可以給我一個地址或縣市嗎？"
-            else:
-                mscDICT["replySTR"] = resultDICT["reply_gym_distance"]  
+            mscDICT["replySTR"] = resultDICT["reply_gym_distance"]  
 
         if "reply_gym_time" in resultDICT.keys():
             if resultDICT["_gym_name"] == "":
@@ -53,7 +50,10 @@ def NLUmodel(mscDICT):
             mscDICT["replySTR"] = resultDICT["reply_chat"]
 
         if "reply_gym_name" in resultDICT.keys():
-            mscDICT["replySTR"] = resultDICT["reply_gym_name"]
+            if resultDICT["_person_loc"] == "": #若有地點資訊，可以回答的問題：附近岩館
+                mscDICT["replySTR"] = "請問您在哪裡呢？可以給我一個地址或縣市嗎？"
+            else:
+                mscDICT["replySTR"] = resultDICT["reply_gym_name"]
 
         if "reply_gym_howMany" in resultDICT.keys():
             mscDICT["replySTR"] = resultDICT["reply_gym_howMany"]
@@ -78,6 +78,9 @@ def NLUmodel(mscDICT):
 
         if "reply_rules" in resultDICT.keys():
             mscDICT["replySTR"] = resultDICT["reply_rules"]
+
+        if "reply_person_location" in resultDICT.keys():
+            mscDICT["replySTR"] = resultDICT["reply_person_location"]
     
     else: #沒有對應intent
         mscDICT["replySTR"] = "不太明白你的意思欸"

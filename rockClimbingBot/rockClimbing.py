@@ -48,39 +48,41 @@ import math
 import re
 import json
 import rockClimbingFunc
+import pandas as pd
 try:
+    from intent import Loki_gym_name
     from intent import Loki_gym_city
+    from intent import Loki_whatIs
+    from intent import Loki_location
     from intent import Loki_equipment_price
     from intent import Loki_equipment_whereGet
     from intent import Loki_gym_howMany
-    from intent import Loki_gym_name
-    from intent import Loki_rock
     from intent import Loki_rules
-    from intent import Loki_gym_price
     from intent import Loki_gym_time
-    from intent import Loki_gym_yesNo
-    from intent import Loki_whatIs
     from intent import Loki_chat
     from intent import Loki_equipment_list
     from intent import Loki_equipment_yesNo
     from intent import Loki_gym_distance
+    from intent import Loki_gym_yesNo
+    from intent import Loki_rock
+    from intent import Loki_gym_price
 except:
+    from .intent import Loki_gym_name
     from .intent import Loki_gym_city
+    from .intent import Loki_whatIs
+    from .intent import Loki_location
     from .intent import Loki_equipment_price
     from .intent import Loki_equipment_whereGet
     from .intent import Loki_gym_howMany
-    from .intent import Loki_gym_name
-    from .intent import Loki_rock
     from .intent import Loki_rules
-    from .intent import Loki_gym_price
     from .intent import Loki_gym_time
-    from .intent import Loki_gym_yesNo
-    from .intent import Loki_whatIs
     from .intent import Loki_chat
     from .intent import Loki_equipment_list
     from .intent import Loki_equipment_yesNo
     from .intent import Loki_gym_distance
-
+    from .intent import Loki_gym_yesNo
+    from .intent import Loki_rock
+    from .intent import Loki_gym_price
 
 accountDICT = json.load(open("account.info", encoding= "utf-8"))
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
@@ -105,9 +107,9 @@ class LokiResult():
         self.version = ""
         self.balance = -1
         self.lokiResultLIST = []
-        # # filterLIST 空的就採用預設的 INTENT_FILTER
-        # if filterLIST == []:
-        #     filterLIST = INTENT_FILTER
+        # filterLIST 空的就採用預設的 INTENT_FILTER
+        if filterLIST == []:
+            filterLIST = INTENT_FILTER
 
         try:
             result = post(LOKI_URL, json={
@@ -198,10 +200,11 @@ class LokiResult():
 def runLoki(inputLIST, filterLIST=[]):
     # 將 intent 會使用到的 key 預先設爲空列表
     resultDICT = {
-        "_person_loc":[], # gym city, gym price
+        "_person_loc":"", # gym city, gym price
         "_ask_time":"",
         "_what_is":"",
         "_gym_name": "",
+        "_img_send":"",
         ##############
         # "reply_gym_name": "",
         # "reply_gym_distance":"",
@@ -217,16 +220,29 @@ def runLoki(inputLIST, filterLIST=[]):
         # "reply_equipment_YesNo":"",
         # "reply_rocks":"",
         # "reply_rules":"",
-        # "reply_whatIs":""
+        # "reply_whatIs":"",
+        # "reply_person_location":""
         ###############
     }
     lokiRst = LokiResult(inputLIST, filterLIST)
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
+                # gym_name
+                if lokiRst.getIntent(index, resultIndex) == "gym_name":
+                    resultDICT = Loki_gym_name.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
                 # gym_city
                 if lokiRst.getIntent(index, resultIndex) == "gym_city":
                     resultDICT = Loki_gym_city.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
+                # whatIs
+                if lokiRst.getIntent(index, resultIndex) == "whatIs":
+                    resultDICT = Loki_whatIs.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
+                # location
+                if lokiRst.getIntent(index, resultIndex) == "location":
+                    resultDICT = Loki_location.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
                 # equipment_price
                 if lokiRst.getIntent(index, resultIndex) == "equipment_price":
@@ -240,33 +256,13 @@ def runLoki(inputLIST, filterLIST=[]):
                 if lokiRst.getIntent(index, resultIndex) == "gym_howMany":
                     resultDICT = Loki_gym_howMany.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
-                # gym_name
-                if lokiRst.getIntent(index, resultIndex) == "gym_name":
-                    resultDICT = Loki_gym_name.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-
-                # rock
-                if lokiRst.getIntent(index, resultIndex) == "rock":
-                    resultDICT = Loki_rock.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-
                 # rules
                 if lokiRst.getIntent(index, resultIndex) == "rules":
                     resultDICT = Loki_rules.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
-                # gym_price
-                if lokiRst.getIntent(index, resultIndex) == "gym_price":
-                    resultDICT = Loki_gym_price.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-
                 # gym_time
                 if lokiRst.getIntent(index, resultIndex) == "gym_time":
                     resultDICT = Loki_gym_time.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-
-                # gym_yesNo
-                if lokiRst.getIntent(index, resultIndex) == "gym_yesNo":
-                    resultDICT = Loki_gym_yesNo.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-
-                # whatIs
-                if lokiRst.getIntent(index, resultIndex) == "whatIs":
-                    resultDICT = Loki_whatIs.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
                 # chat
                 if lokiRst.getIntent(index, resultIndex) == "chat":
@@ -283,6 +279,18 @@ def runLoki(inputLIST, filterLIST=[]):
                 # gym_distance
                 if lokiRst.getIntent(index, resultIndex) == "gym_distance":
                     resultDICT = Loki_gym_distance.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
+                # gym_yesNo
+                if lokiRst.getIntent(index, resultIndex) == "gym_yesNo":
+                    resultDICT = Loki_gym_yesNo.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
+                # rock
+                if lokiRst.getIntent(index, resultIndex) == "rock":
+                    resultDICT = Loki_rock.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
+                # gym_price
+                if lokiRst.getIntent(index, resultIndex) == "gym_price":
+                    resultDICT = Loki_gym_price.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
@@ -338,7 +346,7 @@ def execLoki(content, filterLIST=[], splitLIST=[]):
             for k in lokiResultDICT:
                 if k not in resultDICT:
                     resultDICT[k] = []
-                resultDICT[k].extend(lokiResultDICT[k])
+                resultDICT[k].extend([lokiResultDICT[k]])
 
     return resultDICT
 
@@ -351,10 +359,28 @@ def testLoki(inputLIST, filterLIST):
         print(resultDICT["msg"])
 
 def testIntent():
+    # gym_name
+    print("[TEST] gym_name")
+    inputLIST = ['中部岩館有哪些','台中岩館有哪些','台中有哪些岩館','東部有哪些岩館','中部上攀可以去哪','台北哪裡可以抱石','台北哪裡可以攀岩','臺中上攀可以去哪','中部上攀可以去哪裡','台中上攀可以去哪裡','台中攀岩可以去哪裡','台中有哪些上攀岩館','哪幾間岩館有速度攀','東部有哪些上攀岩館','那東部有哪些岩館呢','台北哪些岩館可以抱石','台北有名的岩館有哪些','東部哪些岩館可以抱石','東部有名的岩館有哪些']
+    testLoki(inputLIST, ['gym_name'])
+    print("")
+
     # gym_city
     print("[TEST] gym_city")
-    inputLIST = ['double 8在哪裡','double 8在哪個縣市','哪裡有速度攀場館','新竹紅石的地址是？','台灣哪些縣市有岩館呢','哪個縣市有速度攀場館','可以給我double 8的地址嗎','可以告訴我double 8的地址嗎','可以給我double 8岩館的地址嗎','可以告訴我double 8岩館的地址嗎']
+    inputLIST = ['double 8在哪裡','紅石聯絡方式','double 8在哪個縣市','台北哪裡有速度攀','哪裡有速度攀場館','東部哪裡有速度攀','中部哪裡有上攀岩館','新竹紅石的地址是？','新竹紅石的電話多少','台灣哪些縣市有岩館呢','哪個縣市有速度攀場館','我需要新竹紅石的電話','新竹紅石的電話是幾號','可以給我double 8的地址嗎','可以告訴我double 8的地址嗎','可以給我double 8岩館的地址嗎','可以告訴我double 8岩館的地址嗎']
     testLoki(inputLIST, ['gym_city'])
+    print("")
+
+    # whatIs
+    print("[TEST] whatIs")
+    inputLIST = ['jug是什麼？','攀岩是什麼','那是什麼？','什麼是攀岩？','什麼是星光票？','星光票的意思是？']
+    testLoki(inputLIST, ['whatIs'])
+    print("")
+
+    # location
+    print("[TEST] location")
+    inputLIST = ['台中','我在台中','我在東部','台北市大安區','猩猩縣豬豬市悟淨路141號','我在猩猩縣豬豬市悟淨路141號']
+    testLoki(inputLIST, ['location'])
     print("")
 
     # equipment_price
@@ -375,46 +401,16 @@ def testIntent():
     testLoki(inputLIST, ['gym_howMany'])
     print("")
 
-    # gym_name
-    print("[TEST] gym_name")
-    inputLIST = ['中部岩館有哪些','台中岩館有哪些','台中有哪些岩館','東部有哪些岩館','台北哪裡可以抱石','台北哪裡可以攀岩','台北哪裡有速度攀','東部哪裡有速度攀','中部上攀可以去哪裡','台中上攀可以去哪裡','台中攀岩可以去哪裡','哪幾間岩館有速度攀','那東部有哪些岩館呢','台北哪些岩館可以抱石','東部哪些岩館可以抱石']
-    testLoki(inputLIST, ['gym_name'])
-    print("")
-
-    # rock
-    print("[TEST] rock")
-    inputLIST = ['jug的特色是什麼','jug長怎樣','pinch怎麼抓','岩點有哪些','jug有什麼特色','jug長什麼樣子','岩點有哪幾種','sloper可以怎麼爬','最不好抓的點是','最好爬的是哪種','爬jug要注意什麼','最好抓的是哪種點','最難抓的點是哪個','最不好抓的點是哪個']
-    testLoki(inputLIST, ['rock'])
-    print("")
-
     # rules
     print("[TEST] rules")
-    inputLIST = ['攀岩有規則嗎','抱石要注意什麼','攀岩有哪些規則','上攀的規則是什麼','上攀要小心什麼？','攀岩有難度之分嗎','攀岩的規則是什麼','奧運的攀岩規則是？','上攀有什麼要注意的？','上攀有哪些要小心的？','怎麼知道我是哪個等級','要怎麼知道自己的等級']
+    inputLIST = ['攀岩有規則嗎','抱石要注意什麼','攀岩有哪些規則','上攀的規則是什麼','上攀的規則有哪些','上攀要小心什麼？','攀岩有難度之分嗎','攀岩的規則是什麼','攀岩的規則有哪些','奧運的攀岩規則是？','上攀有什麼要注意的？','上攀有哪些要小心的？','怎麼知道我是哪個等級','要怎麼知道自己的等級']
     testLoki(inputLIST, ['rules'])
-    print("")
-
-    # gym_price
-    print("[TEST] gym_price")
-    inputLIST = ['紅石一次多少','紅石票價多少','去抱石一次多少','去攀岩一次多少','抱石一次多少錢','攀岩一次多少錢','去一次岩館多少錢','去攀一次岩多少錢','去攀岩一次多少錢','抱石通常要花多少','攀岩通常要花多少','紅石攀岩一次多少','double 8 一個人多少錢','紅石攀岩一天多少錢','去double8攀岩一次多少']
-    testLoki(inputLIST, ['gym_price'])
     print("")
 
     # gym_time
     print("[TEST] gym_time")
     inputLIST = ['多早開','幾點開','啥時開門','幾時營業','幾點營業','幾點開門','幾點關？','平常幾點開','營業時間是？','營業時間是幾點？','營業時間幾點到幾點？']
     testLoki(inputLIST, ['gym_time'])
-    print("")
-
-    # gym_yesNo
-    print("[TEST] gym_yesNo")
-    inputLIST = ['Y17很貴嗎？','Dapro在台中嗎','東部有岩館嗎','苗栗有岩館嗎','苗栗能攀岩嗎','紅石假日有開嗎','紅石可以抱石嗎','苗栗可以上攀嗎','原岩假日有營業嗎','原岩新竹有分店嗎']
-    testLoki(inputLIST, ['gym_yesNo'])
-    print("")
-
-    # whatIs
-    print("[TEST] whatIs")
-    inputLIST = ['jug是什麼？','攀岩是什麼','那是什麼？','什麼是攀岩？','什麼是星光票？','星光票的意思是？']
-    testLoki(inputLIST, ['whatIs'])
     print("")
 
     # chat
@@ -437,24 +433,47 @@ def testIntent():
 
     # gym_distance
     print("[TEST] gym_distance")
-    inputLIST = ['我在台中','我在東部','哪裡可以上攀','哪裡可以攀岩','哪裡有速度攀','有哪些岩館呢','上攀可以去哪裡','想攀岩可以去哪','攀岩可以去哪裡','有推薦的岩館麻','哪間岩館離我最近','想抱石可以去哪裡','要抱石可以去哪裡','想攀先鋒攀可以去哪','比較近的岩館有哪些','推薦一些距離近的岩館','推薦哪些距離近的岩館','推薦幾間距離近的岩館','離我最近的岩館是哪間','離我最近的岩館有哪些','離我媽最近的岩館有哪些','離我家最近的岩館是哪間','我在猩猩縣豬豬市悟淨路141號','離我近的岩館有比較推薦的嗎']
+    inputLIST = ['哪裡可以上攀','哪裡可以攀岩','哪裡有速度攀','有哪些岩館呢','附近有岩館嗎','上攀可以去哪裡','想攀岩可以去哪','我附近有岩館嗎','攀岩可以去哪裡','有推薦的岩館麻','哪間岩館離我最近','想抱石可以去哪裡','我附近有什麼岩館','要抱石可以去哪裡','想攀先鋒攀可以去哪','比較近的岩館有哪些','推薦一些距離近的岩館','推薦哪些距離近的岩館','推薦幾間距離近的岩館','離我最近的岩館是哪間','離我最近的岩館有哪些','離我媽最近的岩館有哪些','離我家最近的岩館是哪間','離我近的岩館有比較推薦的嗎']
     testLoki(inputLIST, ['gym_distance'])
     print("")
 
-def result(inputSTR):
-    inputSTR = ""
+    # gym_yesNo
+    print("[TEST] gym_yesNo")
+    inputLIST = ['原岩倒了嗎','Dapro在台中嗎','東部有岩館嗎','苗栗有岩館嗎','苗栗能攀岩嗎','紅石假日有開嗎','紅石可以抱石嗎','苗栗可以上攀嗎','原岩假日有營業嗎','原岩新竹有分店嗎']
+    testLoki(inputLIST, ['gym_yesNo'])
+    print("")
+
+    # rock
+    print("[TEST] rock")
+    inputLIST = ['jug長怎樣','pinch怎麼抓','岩點有哪些','jug有什麼特色','jug長什麼樣子','岩點有哪幾種','jug的特色是什麼','sloper可以怎麼爬','最不好抓的點是','最好爬的是哪種','爬jug要注意什麼','最好抓的是哪種點','最難抓的點是哪個','最不好抓的點是哪個']
+    testLoki(inputLIST, ['rock'])
+    print("")
+
+    # gym_price
+    print("[TEST] gym_price")
+    inputLIST = ['Y17很貴嗎？','抱石會很貴嗎','攀岩會很貴嗎','紅石一次多少','紅石票價多少','去抱石一次多少','去攀岩一次多少','抱石一次多少錢','攀岩一次多少錢','去一次岩館多少錢','去攀一次岩多少錢','去攀岩一次多少錢','抱石通常要花多少','攀岩通常要花多少','紅石攀岩一次多少','double 8 一個人多少錢','紅石攀岩一天多少錢','去double8攀岩一次多少']
+    testLoki(inputLIST, ['gym_price'])
+    print("")
+
 
 if __name__ == "__main__":
     # 測試所有意圖
-    #testIntent()
+    testIntent()
 
     # 測試其它句子
     filterLIST = []
     splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
-
-    # resultDICT = execLoki("攀岩的規則是什麼？")
-    # print(resultDICT) 
-    # resultDICT = execLoki("攀岩有規則嗎？") 
-    # print(resultDICT) 
-    # resultDICT = execLoki("台南哪裡有岩館？")  
-    # print(resultDICT)  
+    #resultDICT = execLoki("攀岩的規則是什麼？")
+    #print(resultDICT)
+    #resultDICT = execLoki("攀岩有規則嗎？")
+    #print(resultDICT)
+    #resultDICT = execLoki("台南哪裡有岩館？")
+    #print(resultDICT)
+    #resultDICT = execLoki("中部上攀可以去哪")
+    #print(resultDICT)
+    resultDICT = execLoki(["中部上攀可以去哪裡"])
+    print(resultDICT)
+    resultDICT = execLoki(["去double 8攀岩一次多少錢"])
+    print(resultDICT)    
+    resultDICT = execLoki(["double 8攀岩一次多少錢"])
+    print(resultDICT)    

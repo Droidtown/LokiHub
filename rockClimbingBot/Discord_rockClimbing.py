@@ -28,13 +28,11 @@ class BotClient(discord.Client):
                              "latestQuest": "",
                              "replySTR":"",
                              "msgSTR":"",
-                             "_gym_place":"",
                              "_gym_time":"",
                              "_person_loc":"",
                              "_day_of_week": "",
                              "_gym_name":"",
-
-
+                             "_img_send":""
         }
         self.templateDICT["_day_of_week"] = datetime.today().weekday()
         self.mscDICT = { 
@@ -45,15 +43,13 @@ class BotClient(discord.Client):
         # Don't respond to bot itself. Or it would create a non-stop loop.
         if message.author == self.user:
             return None
-        elif message.content.lower().replace(" ", "") in ("bot點名"):
-            await message.reply("有！")
+        #elif message.content.lower().replace(" ", "") in ("bot點名"):
+            #await message.reply("有！")
 
         logging.debug("收到來自 {} 的訊息".format(message.author))
         logging.debug("訊息內容是 {}。".format(message.content))
         if self.user.mentioned_in(message):#if "<@!{}>".format(self.user.id) in message.content or "<@{}>".format(self.user.id) in message.content:#
-            #replySTR = "我是預設的回應字串…你會看到我這串字，肯定是出了什麼錯！"
             msgSTR = message.content.replace("<@{}> ".format(self.user.id), "").strip()
-            
             logging.debug("本 bot 被叫到了！")
             logging.debug("人類說：{}".format(msgSTR))
 
@@ -83,7 +79,10 @@ class BotClient(discord.Client):
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                 self.mscDICT[message.author.id]["msgSTR"] = msgSTR #將取回的資訊 update 到人類的 msc 裡。
                 self.mscDICT[message.author.id] = NLUmodel(self.mscDICT[message.author.id])
-
+                if self.mscDICT[message.author.id]["_img_send"] != "":
+                    await channel.send(file=discord.File('data/rocks_pics/'+resultDICT["_img_send"]+'.png'))
+                    self.mscDICT[message.author.id]["_img_send"] = "" #cleaning
+        
         await message.reply(self.mscDICT[message.author.id]["replySTR"])
 
 
