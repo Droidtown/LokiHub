@@ -20,15 +20,7 @@ from hashlib import new
 import json
 from ntpath import join
 import os
-import re
 from unittest import result
-from ArticutAPI import Articut
-
-with open('./intent/account.info', 'r', encoding='utf-8') as f:
-    accountDICT = json.load(f)
-
-articut = Articut(username=accountDICT['username'], apikey=accountDICT['articut_key'])
-
 
 DEBUG_semantics = True
 try:

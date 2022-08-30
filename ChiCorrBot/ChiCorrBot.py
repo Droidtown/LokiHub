@@ -47,14 +47,16 @@ from requests import codes
 import math
 import re
 import json
-try:
-    from intent import Loki_syntax
-    from intent import Loki_semantics
-    from intent import Loki_vocabulary
-except:
-    from .intent import Loki_syntax
-    from .intent import Loki_semantics
-    from .intent import Loki_vocabulary
+#try:
+from intent import Loki_syntax
+from intent import Loki_semantics
+from intent import Loki_vocabulary
+from intent import Loki_ans
+# except:
+#     from .intent import Loki_syntax
+#     from .intent import Loki_semantics
+#     from .intent import Loki_vocabulary
+#     from .intent import Loki_ans
 
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
@@ -251,6 +253,10 @@ def runLoki(inputLIST, filterLIST=[]):
                 # vocabulary
                 if lokiRst.getIntent(index, resultIndex) == "vocabulary":
                     resultDICT = Loki_vocabulary.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                
+                # ans
+                if lokiRst.getIntent(index, resultIndex) == "ans":
+                    resultDICT = Loki_ans.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
@@ -337,25 +343,29 @@ def testIntent():
     testLoki(inputLIST, ['vocabulary'])
     print("")
 
+    # ans
+    print("[TEST] ans")
+    inputLIST = ['是']
+    testLoki(inputLIST, ['ans'])
+    print("")
 
 if __name__ == "__main__":
     # 測試所有意圖
     #testIntent()
 
-    #testLIST = ['他有多顆糖','看起來那個小孩反思','觀光在美國','還許多學生無視學校的校園的規範','他會報告健康飲食對這三個部分怎麼樣','我的心情不是很壞','我們怕給朋友新冠肺炎','少部分的臺灣人民的生活都變壞了']
-    testLIST = ['常常有很同的看法']
-    for text in testLIST:
-        resDICT = runLoki([text])
-        print() #區隔runLoki的結果與建議說明
-        #print(resDICT)
-        print(f"那你可以說：{resDICT['suggestion']}")
-        print(f"錯誤說明：{explanationDICT[resDICT['error']]}")
-        print()
-        print()
+    # testLIST = ['他有多顆糖','看起來那個小孩反思','觀光在美國','還許多學生無視學校的校園的規範','他會報告健康飲食對這三個部分怎麼樣','我的心情不是很壞','我們怕給朋友新冠肺炎','少部分的臺灣人民的生活都變壞了']
+    # for text in testLIST:
+    #     resDICT = runLoki([text])
+    #     print() #區隔runLoki的結果與建議說明
+    #     #print(resDICT)
+    #     print(f"那你可以說：{resDICT['suggestion']}")
+    #     print(f"錯誤說明：{explanationDICT[resDICT['error']]}")
+    #     print()
+    #     print()
 
-    # # 測試其它句子
-    # filterLIST = []
-    # splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
-    # resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST)            # output => ["今天天氣"]
-    # resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST, splitLIST) # output => ["今天天氣", "後天氣象"]
-    # resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"], filterLIST)      # output => ["今天天氣", "後天氣象"]
+    # 測試其它句子
+    filterLIST = []
+    splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
+    resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST)            # output => ["今天天氣"]
+    resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST, splitLIST) # output => ["今天天氣", "後天氣象"]
+    resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"], filterLIST)      # output => ["今天天氣", "後天氣象"]

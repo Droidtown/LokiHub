@@ -18,14 +18,6 @@ from hashlib import new
 import json
 import os
 from unittest import result
-from ArticutAPI import Articut
-
-with open('./intent/account.info', 'r', encoding='utf-8') as f:
-    accountDICT = json.load(f)
-
-articut = Articut(username=accountDICT['username'], apikey=accountDICT['articut_key'])
-
-DEBUG_syntax = True
 
 DEBUG_syntax = True
 try:

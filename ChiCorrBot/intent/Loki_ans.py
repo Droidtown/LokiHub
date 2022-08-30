@@ -15,7 +15,6 @@
 """
 
 import json
-from msilib.schema import InstallUISequence
 import os
 
 DEBUG_ans = True
@@ -31,12 +30,26 @@ def debugInfo(inputSTR, utterance):
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[是]":
-        if args[0] in userDefinedDICT:
-            resultDICT['inq'] = args[0]
-        elif args[0] in userDefinedDICT['是']:
+    
+    if utterance == "[resp]":
+        if args[0] in userDefinedDICT['_agreeExp']:
             resultDICT['inq'] = '是'
-        elif args[0] in userDefinedDICT['否']:
+        elif args[0] in userDefinedDICT['_disagreeExp']:
             resultDICT['inq'] = '否'
-        
+
+    if utterance == "[對]":
+        if len(inputSTR) == 1:
+            resultDICT['inq'] = '是' #「對」為是
+        elif len(inputSTR) == 2:
+            resultDICT['inq'] = '否' #「不對」為否
+
+    if utterance == "不是":
+        resultDICT['inq'] = '否'
+
+    if utterance == "否":
+        resultDICT['inq'] = '否'
+
+    if utterance == "是":
+        resultDICT['inq'] = '是'
+
     return resultDICT

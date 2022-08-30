@@ -21,13 +21,6 @@ import json
 import os
 from sre_constants import AT_END_STRING
 from unittest import result
-from ArticutAPI import Articut
-
-with open('./intent/account.info', 'r', encoding='utf-8') as f:
-    accountDICT = json.load(f)
-
-articut = Articut(username=accountDICT['username'], apikey=accountDICT['articut_key'])
-
 
 DEBUG_vocabulary = True
 try:
@@ -123,7 +116,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "[新冠肺炎][確實]對每[一個][人]有真不好的[影響]":
         newSTR = inputSTR.replace('真','很')
         resultDICT['suggestion'] = newSTR
-        resultDICT['error'] = ''
+        resultDICT['error'] = 'word'
 
     if utterance == "[春]草的[性格]很強":
         newSTR = inputSTR.replace('強','堅強')
@@ -133,7 +126,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "[當然]不是成心的":
         newSTR = inputSTR.replace('成','真')
         resultDICT['suggestion'] = newSTR
-        resultDICT['error'] = ''
+        resultDICT['error'] = 'word'
 
     if utterance == "從[經濟]和[政治]到[人民]的人精和[人際][關係]":
         newSTR = inputSTR.replace('人精','精神')
@@ -143,7 +136,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "我[兄弟][姐妹]給[我]很深的幸福":
         newSTR = inputSTR.replace('給','讓').replace('很','感到深')
         resultDICT['suggestion'] = newSTR
-        resultDICT['error'] = ''
+        resultDICT['error'] = 'word'
 
     if utterance == "把[美國][人]的[生活][都]改變了的一乾二淨":
         newSTR = inputSTR.replace('的一乾二淨','')

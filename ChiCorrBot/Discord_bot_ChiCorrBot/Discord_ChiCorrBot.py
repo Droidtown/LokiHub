@@ -16,10 +16,6 @@ logging.basicConfig(level=logging.DEBUG)
 with open("account.info", encoding="utf-8") as f: #讀取account.info
     accountDICT = json.loads(f.read())
 
-mscDICT = {
-    # 'userID':{templateDICT}
-    }
-
 punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
 def getLokiResult(inputSTR):
     punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
@@ -42,9 +38,7 @@ class BotClient(discord.Client):
     async def on_ready(self):
         self.templateDICT = {"updatetime" : None,
                              "latestQuest": "你輸入一個華語句子，讓我來幫你檢查有沒有錯誤！",
-                             'inq' : None,
-                             'suggestion' : None,
-                             'error' : None
+
         }
         self.mscDICT = { #userid:templateDICT
         }
@@ -96,23 +90,25 @@ class BotClient(discord.Client):
                 if not resultDICT: #如果resultDICT為空字典
                     replySTR = '本bot覺得你的句子是對的！'
                 else: #如果resultDICT不是空字典
-                    mscDICT[message.author.id]['inq'] = resultDICT['inq']
-                    mscDICT[message.author.id]['suggestion'] = resultDICT['suggestion']
-                    mscDICT[message.author.id]['error'] = resultDICT['error']
+                    self.mscDICT[message.author.id]['inq'] = resultDICT['inq']
+                    if not resultDICT['suggestion']: #當使用者回覆是否時，先保留病句的建議句子和錯誤說明。
+                        self.mscDICT[message.author.id]['suggestion'] = resultDICT['suggestion']
+                    if not resultDICT['error']:
+                        self.mscDICT[message.author.id]['error'] = resultDICT['error']
 
-                    res = f"那你可以說：{mscDICT[message.author.id]['suggestion']}"
-                    expl = f"錯誤說明：{explanationDICT[mscDICT[message.author.id]['error']]}"
+                    res = f"那你可以說：{self.mscDICT[message.author.id]['suggestion']}"
+                    expl = f"錯誤說明：{explanationDICT[self.mscDICT[message.author.id]['error']]}"
                     replySTR = f'{res}\n{expl}'
 
-                    if not mscDICT[message.author.id]['inq']:
+                    if not self.mscDICT[message.author.id]['inq']: #不需要再次詢問的intent(vocabulary,syntax)，則直接印出建議句子和錯誤說明。
                         replySTR = replySTR
-                    elif mscDICT[message.author.id]['inq'] == '是':
+                    elif self.mscDICT[message.author.id]['inq'] == '是': #辨識回答為「是」，則印出建議句子和錯誤說明。
                         replySTR = replySTR
-                    elif mscDICT[message.author.id]['inq'] == '否':
+                    elif self.mscDICT[message.author.id]['inq'] == '否': #辨識回答為「否」，則印出該回答。
                         replySTR = '啊！本bot不知道，只好請教老師了！'
                     else:
-                        replySTR = mscDICT[message.author.id]['inq']
-          
+                        replySTR = self.mscDICT[message.author.id]['inq']
+              
         await message.reply(replySTR)
 
 
