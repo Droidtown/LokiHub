@@ -322,6 +322,12 @@ if __name__ == "__main__":
                  "He started with 965 ants",
                  "He sold 213. How many ants does he have now?"
                  ]
+
+    inputLIST = ["The hobby store normally sells 10,576 trading cards per month",
+                 "In July",
+                 "the hobby store sold a total of 20,777 trading cards",
+                 "How many more trading cards did the hobby store sell in July compared with a normal month?"]
+
     #inputLIST = ["A bricklayer stacks bricks in 2 rows",
     #             "with 10 bricks in each row",
     #             "How many bricks are there in total?"]
@@ -365,8 +371,8 @@ if __name__ == "__main__":
 
     #5th problem
     #status: working
-    #inputLIST = ["The restaurant has 175 normal chairs and 20 chairs for babies.",
-               #"How many chairs does the restaurant have in total?"]
+    inputLIST = ["The restaurant has 175 normal chairs and 20 chairs for babies.",
+                 "How many chairs does the restaurant have in total?"]
 
     #6th problem
     #status: working
@@ -406,8 +412,8 @@ if __name__ == "__main__":
     #test if loki recognizes background info
     #issue: Loki recognizes assistants and servers as assistant_0 and 1
     #quest goal is "staff"
-    #inputLIST = ["There are 6 chef assistants and 2 servers.",
-                 #"How many staff are working there?"]
+    inputLIST = ["There are 6 chef staff and 2 staff.",
+                 "How many staff are working there?"]
 
     #inputLIST = ["A garden has 52 rows and 15 columns of bean plants",
                  #"How many plants are there in all?"]
