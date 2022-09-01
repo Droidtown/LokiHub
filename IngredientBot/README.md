@@ -2,9 +2,15 @@
 
 Bot 可以解決的問題
 -------------
+* 推薦當季食材 
+* 如何挑選特定食材 
+* 特定食材的價格 
+* 推薦與食材相關料理
+* 食材相關的食用禁忌 
 
 DEMO
 -------------
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/-nN0iRo6ejM/0.jpg)](https://www.youtube.com/watch?v=-nN0iRo6ejM "Unity Snake Game")
 
 檔案總覽/目錄
 -------------
@@ -59,6 +65,18 @@ DEMO
 
 建立 Discord Bot
 -------------
+1. 進入 [Discord Developer](https://discord.com/developers/applications) 後登入Discord帳號
+2. 點擊右上角的New Application，在Name的欄位中輸入機器人名稱
+3. 新增一個Bot，在BOT PERMISSIONS的欄位勾選Sends Messages、Embed Links、Attach Files及Read Message History
+4. 將Bot加入伺服器
+5. 將複製下來的 token 貼上到檔案 account.info 中
+```
+{
+    "username" : "  ",
+    "apikey_ing" : "  ",
+    "discord_token": "***將Token貼在這邊***"
+}
+```
 
 啟用 Loki 服務
 -------------
@@ -82,9 +100,15 @@ DEMO
 
 引用資料
 -------------
+* [icook](https://icook.tw/)
+* [Cookpad](https://cookpad.com/tw)
+* [台北農產運銷股份有限公司](http://www.tapmc.com.taipei/)
+* [農業知識入口網](https://kmweb.coa.gov.tw/)
+* [美食天下](https://www.meishichina.com/)
 
 參考資料
 -------------
+[卓騰語言科技產品說明文件](https://api.droidtown.co/document/)
 
 聯絡資訊
 -------------
