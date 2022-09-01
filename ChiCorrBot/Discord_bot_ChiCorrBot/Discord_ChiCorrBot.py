@@ -2,12 +2,15 @@
 # -*- coding: utf-8 -*-
 
 import logging
+from unicodedata import name
+from unittest import result
 import discord
 import json
 import re
 from urllib import response
 from datetime import datetime
 from pprint import pprint
+from ArticutAPI import Articut
 from ChiCorrBot import runLoki, explanationDICT
 
 logging.basicConfig(level=logging.DEBUG)
@@ -15,6 +18,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 with open("account.info", encoding="utf-8") as f: #讀取account.info
     accountDICT = json.loads(f.read())
+
+articut = Articut(username=accountDICT['username'], apikey=accountDICT['articut_key'])
 
 punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
 def getLokiResult(inputSTR):
@@ -37,7 +42,7 @@ class BotClient(discord.Client):
 
     async def on_ready(self):
         self.templateDICT = {"updatetime" : None,
-                             "latestQuest": "你輸入一個華語句子，讓我來幫你檢查有沒有錯誤！",
+                             "latestQuest": "我們已經打過招呼囉！你的華語名字是什麼呀？",
 
         }
         self.mscDICT = { #userid:templateDICT
@@ -79,36 +84,68 @@ class BotClient(discord.Client):
                 #沒有講過話(給他一個新的template)
                 else:
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
-                    replySTR = msgSTR.title()
+                    replySTR = f'{msgSTR.title()}，你的華語名字是什麼呀？'
 
 # ##########非初次對話：這裡用 Loki 計算語意
             else: #開始處理正式對話
+
+                responseDICT = articut.parse(msgSTR)
+                #問候對話
+                #判斷「叫+名字」的句子，搜尋「叫」和「POS:ENTITY_nouny」。
+                if '>叫<' in responseDICT['result_pos'][0] and 'ENTITY_nouny' in responseDICT['result_pos'][0]:
+                    userName = responseDICT['result_pos'][0].split('<ENTITY_nouny>')[-1].rstrip('</ENTITY_nouny>')
+                    replySTR = f'{userName}，你好呀，很開心認識你，那你華語學多久了？'
+                #判斷使用者的回覆只回覆一個字詞，避免「是或否」等回覆。
+                elif msgSTR.lower() not in "是 否 對 不對 yes no y n".split() and len(responseDICT['result_obj'][0]) == 1: 
+                    if 'ENTITY_nouny' in responseDICT['result_pos'][0] or 'ENTITY_person' in responseDICT['result_pos'][0]:
+                        userName = msgSTR
+                        replySTR = f'{userName}，你好呀，很開心認識你，那你華語學多久了？'
+                    #判斷使用者只回覆「時間」
+                    elif 'TIME_' in responseDICT['result_pos'][0]:
+                        replySTR = '讓我幫你提升華語能力吧！\n請你輸入一個華語句子，如果有錯誤，我將會告訴你建議的說法和錯誤之處。\n我們開始學習華語吧！'
+                #判斷使用者的名字，POS:ENTITY_person。
+                elif 'ENTITY_person' in responseDICT['result_pos'][0]:
+                    userName = responseDICT['result_pos'][0].split('<ENTITY_person>')[-1].rstrip('</ENTITY_person>')
+                    replySTR = f'{userName}，你好呀，很開心認識你，那你華語學多久了？'
+                #判斷使用者回覆「學了+時間」的句子
+                elif '學了' in msgSTR and 'TIME_' in responseDICT['result_pos'][0]:
+                    replySTR = '讓我幫你提升華語能力吧！\n請你輸入一個華語句子，如果有錯誤，我將會告訴你建議的說法和錯誤之處。\n我們開始學習華語吧！'
+
+                else:
                 #從這裡開始接上 NLU 模型
-                resultDICT = getLokiResult(msgSTR)
-                logging.debug("######\nLoki 處理結果如下：")
-                logging.debug(resultDICT)
-                if not resultDICT: #如果resultDICT為空字典
-                    replySTR = '本bot覺得你的句子是對的！'
-                else: #如果resultDICT不是空字典
-                    self.mscDICT[message.author.id]['inq'] = resultDICT['inq']
-                    if not resultDICT['suggestion']: #當使用者回覆是否時，先保留病句的建議句子和錯誤說明。
-                        self.mscDICT[message.author.id]['suggestion'] = resultDICT['suggestion']
-                    if not resultDICT['error']:
-                        self.mscDICT[message.author.id]['error'] = resultDICT['error']
-
-                    res = f"那你可以說：{self.mscDICT[message.author.id]['suggestion']}"
-                    expl = f"錯誤說明：{explanationDICT[self.mscDICT[message.author.id]['error']]}"
-                    replySTR = f'{res}\n{expl}'
-
-                    if not self.mscDICT[message.author.id]['inq']: #不需要再次詢問的intent(vocabulary,syntax)，則直接印出建議句子和錯誤說明。
-                        replySTR = replySTR
-                    elif self.mscDICT[message.author.id]['inq'] == '是': #辨識回答為「是」，則印出建議句子和錯誤說明。
-                        replySTR = replySTR
-                    elif self.mscDICT[message.author.id]['inq'] == '否': #辨識回答為「否」，則印出該回答。
-                        replySTR = '啊！本bot不知道，只好請教老師了！'
+                    resultDICT = getLokiResult(msgSTR)
+                    logging.debug("######\nLoki 處理結果如下：")
+                    logging.debug(resultDICT)
+                    
+                    #如果resultDICT為空字典
+                    if not resultDICT: 
+                        replySTR = '本bot覺得你的句子是對的！'
+                    #如果resultDICT不是空字典
                     else:
-                        replySTR = self.mscDICT[message.author.id]['inq']
-              
+                        #inq有兩種可能，一是確認語意問題，二是使用者的回覆是或否。
+                        self.mscDICT[message.author.id]['inq'] = resultDICT['inq']
+                        if 'suggestion' in resultDICT:
+                            self.mscDICT[message.author.id]['suggestion'] = resultDICT['suggestion']
+                        if 'error' in resultDICT:
+                            self.mscDICT[message.author.id]['error'] = resultDICT['error']
+
+                        res = f"那你可以說：{self.mscDICT[message.author.id]['suggestion']}"
+                        expl = f"錯誤說明：{explanationDICT[self.mscDICT[message.author.id]['error']]}"
+                        replySTR = f'{res}\n{expl}'
+
+                        #不需要再次詢問的intent(vocabulary,syntax)，則直接印出建議句子和錯誤說明。
+                        if not self.mscDICT[message.author.id]['inq']:
+                            replySTR = replySTR
+                        #辨識回答為「是」，則印出建議句子和錯誤說明。
+                        elif self.mscDICT[message.author.id]['inq'] == '是':
+                            replySTR = replySTR
+                        #辨識回答為「否」，則印出該回答。
+                        elif self.mscDICT[message.author.id]['inq'] == '否':
+                            replySTR = '啊！本bot不知道，只好請教老師了！'
+                        #需要再次確認語意的intent(syntax)，則印出該問題。
+                        else:
+                            replySTR = self.mscDICT[message.author.id]['inq']
+                
         await message.reply(replySTR)
 
 

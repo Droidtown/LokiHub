@@ -119,7 +119,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['error'] = 'word'
 
     if utterance == "[春]草的[性格]很強":
-        newSTR = inputSTR.replace('強','堅強')
+        newSTR = inputSTR.replace('性格','個性').replace('強','堅強')
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'gexing'
 

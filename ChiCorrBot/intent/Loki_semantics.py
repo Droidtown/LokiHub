@@ -50,7 +50,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['error'] = 'sent3'
 
     if utterance == "[大部][美國]的部分選了人隔離":
-        inq = f'你是說「很多{args[1]}的地方選擇了{utterance[-1]}」嗎？'
+        inq = f'你是說「很多{args[1]}的地方選擇了{utterance[-2:]}」嗎？'
         if args[0].endswith('部') and args[0][0] in ('一','大'):
             newSTR = args[0]+'分'+args[1]+'的地方都'+'選了'+utterance[-2:]
         else:
@@ -96,7 +96,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "[我]看的[最近]":
         inq = f'你是說「近期有看的書籍或影集」嗎？'
-        newSTR = args[0]+'最近'+inputSTR[1:3]+'(名詞)'
+        newSTR = args[0]+'最近'+inputSTR[1:3]+'(+名詞)'
         resultDICT['inq'] = inq
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'recently'

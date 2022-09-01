@@ -43,12 +43,12 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['error'] = 'often'
 
     if utterance == "[夏天]我[爸爸]說":
-        newSTR = args[0]+'的時候'+args[1]+'說+(內容)'
+        newSTR = args[0]+'的時候'+args[1]+'說(+內容)'
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'time'
 
     if utterance == "[大家][都]希望[會]快[點]得到解決[這個][很嚴重]的問題":
-        newSTR = inputSTR.replace('得到','')
+        newSTR = inputSTR.replace('會','能').replace('得到','')
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'solution'
 
@@ -58,7 +58,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['error'] = 'dao'
 
     if utterance == "[我][只][會]聊天[我]的最愛":
-        newSTR = inputSTR.replace('最愛','最愛的+事物')
+        newSTR = inputSTR.replace('聊天', '聊').replace('最愛','最愛的(+事物)')
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'liao'
 
@@ -83,7 +83,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['error'] = 'liao'
 
     if utterance == "[我們][下個星期]再會談論[這部][電視劇]":
-        if args[1] == '下個星期':
+        if '下' in args[1] or '明' in args[1] or '後' in args[1]:
             newSTR = inputSTR.replace('再會','會再')
         else:
             newSTR = args[0]+args[1]+'談論過'+args[2]+args[3]
@@ -106,7 +106,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['error'] = 'sent6'
 
     if utterance == "[最近]教育和工作的變化[都]就是[額外]的[壓力]":
-        newSTR = inputSTR.replace('就是','是')
+        newSTR = inputSTR.replace('就是','都是')
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'dou'
 
@@ -133,7 +133,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "根據[她]說":
         newSTR = inputSTR.replace('說','說的內容')
         resultDICT['suggestion'] = newSTR
-        resultDICT['error'] = 'gexing'
+        resultDICT['error'] = 'genju'
 
     if utterance == "每[夏天][他]讓了我[妹妹]和[我]寫書報告":
         newSTR = inputSTR.replace('每','每到').replace('讓了','讓')
