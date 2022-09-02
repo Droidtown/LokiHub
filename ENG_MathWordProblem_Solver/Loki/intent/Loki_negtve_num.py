@@ -317,6 +317,9 @@ def getResult(inputSTR, utterance, args, resultDICT):
             # 3. Assign value to Symbols
             resultDICT = value2variable(resultDICT, entityX, x, args[0])
 
+    if utterance == "[25] [out] [of] [55] [salmon] [families]":
+        pass
+
     if utterance == "[32] [bird] [families] fly [away]":
         if inputSTR in resultDICT["inputStrLIST"]:
             return resultDICT
@@ -413,8 +416,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
             # 3. Assign value to Symbols
             args[2] = w2n(args[2])
-            resultDICT["symbolDICT"][args[3]].append((x, args[2]))
-            resultDICT["symbolLIST"].append((x, args[2]))
+            resultDICT["symbolDICT"][args[3]].append((x, -1*args[2]))
+            resultDICT["symbolLIST"].append((x, -1*args[2]))
 
     if utterance == "[She] give [105] [candies] [to] [Marissa]":
         if inputSTR in resultDICT["inputStrLIST"]:

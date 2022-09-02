@@ -287,12 +287,6 @@ if __name__ == "__main__":
     # Test all intents
     #testIntent()
 
-    inputLIST = ["Charlene had a pack of 35 pencil crayons",
-                 "She gave 6 to Theresa",
-                 "She gave 3 to her friend Mandy",
-                 "How many pencil crayons does Charlene have left?"
-                ]
-
     inputLIST = ["There were 3 pizzas in total at the pizza shop",
                  "A customer bought 1 pizza.",
                  "How many pizzas are left?"
@@ -327,6 +321,26 @@ if __name__ == "__main__":
                  "In July",
                  "the hobby store sold a total of 20,777 trading cards",
                  "How many more trading cards did the hobby store sell in July compared with a normal month?"]
+
+    inputLIST = ["Charlene had a pack of 35 pencil crayons",
+                 "She gave 6 to her friend Theresa",
+                 "She gave 3 to her friend Mandy",
+                 "How many pencil crayons does Charlene have left?"]
+
+    inputLIST = ["Ashley bought a big bag of candy to share with her friends",
+                 "In total",
+                 "there were 296 candies",
+                 "She gave 105 candies to Marissa",
+                 "She also gave 86 candies to Kayla",
+                 "How many candies were left?"]
+
+    inputLIST = ["There are 67 bird families living near the mountain",
+                 "If 32 bird families flew away for winter",
+                 "how many bird families were left near the mountain?"]
+
+    inputLIST = ["At the river, 25 out of 55 salmon families went to warmer waters to avoid being frozen",
+                 "They had to swim 125 miles to get there",
+                 "How many salmon families were left in the river?"]
 
     #inputLIST = ["A bricklayer stacks bricks in 2 rows",
     #             "with 10 bricks in each row",
@@ -371,8 +385,8 @@ if __name__ == "__main__":
 
     #5th problem
     #status: working
-    inputLIST = ["The restaurant has 175 normal chairs and 20 chairs for babies.",
-                 "How many chairs does the restaurant have in total?"]
+    #inputLIST = ["The restaurant has 175 normal chairs and 20 chairs for babies.",
+                 #"How many chairs does the restaurant have in total?"]
 
     #6th problem
     #status: working
@@ -412,8 +426,8 @@ if __name__ == "__main__":
     #test if loki recognizes background info
     #issue: Loki recognizes assistants and servers as assistant_0 and 1
     #quest goal is "staff"
-    inputLIST = ["There are 6 chef staff and 2 staff.",
-                 "How many staff are working there?"]
+    #inputLIST = ["There are 6 chef staff and 2 staff.",
+                 #"How many staff are working there?"]
 
     #inputLIST = ["A garden has 52 rows and 15 columns of bean plants",
                  #"How many plants are there in all?"]
@@ -514,18 +528,20 @@ if __name__ == "__main__":
                 except NameError:
                     pass
         elif intent == "subtraction":
-            equation = ""
-            for k in resultDICT["symbolDICT"].keys():
-                for v in resultDICT["symbolDICT"][k]:
-                    var = v[0]
-                    equation = equation + var.name + " + "
-                    resultDICT["eqLIST"].append(v)
-            equation = equation.rstrip(" + ")
-            print("answer = {}".format(equation))
+            for goal in resultDICT["questGoalLIST"]:
+                equation = ""
+                for k in resultDICT["symbolDICT"].keys():
+                    if goal in k:
+                        for v in resultDICT["symbolDICT"][k]:
+                            var = v[0]
+                            equation = equation + var.name + " + "
+                            resultDICT["eqLIST"].append(v)
+                equation = equation.rstrip(" + ")
+                print("answer = {}".format(equation))
 
-            # add abs to ensure positive result
-            expr = sympy.sympify(equation)
-            print("answer = {}".format(abs(expr.subs(resultDICT["eqLIST"]))))
+                # add abs to ensure positive result
+                expr = sympy.sympify(equation)
+                print("answer = {}".format(abs(expr.subs(resultDICT["eqLIST"]))))
         elif intent == "division":
             pass
 

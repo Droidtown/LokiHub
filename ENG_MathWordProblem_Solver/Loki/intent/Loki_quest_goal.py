@@ -282,6 +282,10 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["intentLIST"].append("subtraction")
         resultDICT = questGoalChecker(resultDICT, args, 2)
 
+    if utterance == "how [many] [bird] [families] be leave":
+        resultDICT["intentLIST"].append("subtraction")
+        resultDICT = questGoalChecker(resultDICT, args, 2)
+
     if utterance == "How [many] [stickers] be miss":
         resultDICT["intentLIST"].append("subtraction")
         resultDICT = questGoalChecker(resultDICT, args, 1)
