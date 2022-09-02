@@ -27,11 +27,11 @@
 
 [SpendThrift的Repository](https://github.com/Intern-CD/SpendThrift_bot/tree/main/SpendThrift_bot)
 
-- \discord
+- `\discord`
   - discord 機器人運作程式
   - \user_data
     - 以.csv存放使用者的記帳資料，檔名為使用者的 `discord ID`。
-- \intent
+- `\intent`
   - 利用 [LOKI](https://github.com/Droidtown/LokiHub) 建立的意圖檔
     - 記帳
       - Loki_earn_adv.py
@@ -39,7 +39,7 @@
     - 查詢
       - Loki_searching.py
   - USER_DEFINED的json檔
-- \ref
+- `\ref`
   - [LOKI](https://github.com/Droidtown/LokiHub) 的意圖參考檔
 - `SpendThrift_bot.py`
   - 主程式
