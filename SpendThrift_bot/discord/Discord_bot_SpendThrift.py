@@ -88,14 +88,12 @@ class BotClient(discord.Client):
         # 如果 bot 有被 @ 到        
         if "<@!{}>".format(self.user.id) in message.content or "<@{}>".format(self.user.id) in message.content: # (client.user.id) is botID
             # 消除 @ bot 的文字內容
-            replySTR = "我是預設的回應字串…你會看到我這串字，肯定是出了什麼錯！"
+            replySTR = "真不知道你這敗家子怎麼搞得...能讓我完全不知道你在幹嘛也是不簡單呢"
             msgSTR = message.content.replace("<@{}> ".format(self.user.id), "").strip()
             
             # 顯示剩餘訊息
             logging.debug("本 bot 被叫到了！")
             logging.debug("人類說：{}".format(msgSTR))
-
-            print("here")
 
 # ##########初次對話：這裡是 keyword trigger 的。
 
@@ -107,25 +105,44 @@ class BotClient(discord.Client):
                     #有講過話，但與上次差超過 5 分鐘(視為沒有講過話，刷新template)
                     if timeDIFF.total_seconds() >= 300:
                         self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
-                        replySTR = "嗨嗨，我們好像見過面，但卓騰的隱私政策不允許我記得你的資料，抱歉！"
+                        replySTR = "你之前好像跟我講過話呢...不過像你這種敗家子我不屑記得"
                     #有講過話，而且還沒超過5分鐘就又跟我 hello (就繼續上次的對話)
                     else:
                         replySTR = self.mscDICT[message.author.id]["latestQuest"]
                 #沒有講過話(給他一個新的template)
                 else:
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
-                    replySTR = msgSTR.title()
+                    replySTR = msgSTR.title() + "敗家子"
 
-# ##########非初次對話：這裡用 Loki 計算語意            
+# ##########非初次對話：
+
+            # 呼叫指令集
+            elif msgSTR == "出來":
+                replySTR = "你好啊敗家子：\n\n\我必須讚賞你的精神，至少你還願意看我的使用說明，比起其他可悲的人類好上不少了\n" + \
+                "如果你愚笨的腦袋實在不知道要怎麼跟我對話的話可以參考以下設定：\n\n" + \
+                "\[記帳\]：至少須包含 「形式」 與 「金額」\n" + \
+                "        - 支出\n" + \
+                "                - 範例：@SpendThrift 昨天去全聯購物花了300元\n" + \
+                "        - 收入\n" + \
+                "                - 範例：@SpendThrift 上週五去打工賺了1400元\n\n" + \
+                "\[查詢\]：須包含一樣條件\n" + \
+                "        - 依\[時間\]查詢\n" + \
+                "                - 範例：@SpendThrift 查詢我上週五花了多少錢\n" + \
+                "        - 依\[收入\]查詢\n" + \
+                "                - 範例：@SpendThrift 查詢我上周收入多少\n" + \
+                "        - 依\[支出\]查詢\n" + \
+                "                - 範例：@SpendThrift 查詢我昨天支出多少"
+
+
+            # 用 Loki 計算語意            
             else: #開始處理正式對話，開始接上 NLU 模型
                 resultDICT = runLoki(str(message.author.id), [msgSTR])
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resultDICT)
-                print(resultDICT)
-                print("safe file")
-                # TODO: 針對不同種類的意圖，做出不同的回覆：
-                # Our Code here...
+
+                # 針對不同種類的意圖，做出不同的回覆：
                 replySTR = fun.SpendThriftReply(resultDICT)
+                
             # 判斷完畢，回覆使用者
             await message.reply(replySTR)
 
