@@ -44,6 +44,30 @@
         ]
     },
     "utterance": {
+        "He sold 213": {
+            "id": "b5ec553d-f525-4997-85a6-6b35877453e0",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "He",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "sell",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "213",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
         "He sold 213 ants": {
             "id": "c722f7b4-a7f7-4a80-ba16-f6116fa5b3d3",
             "argument": [
@@ -208,6 +232,59 @@
                 }
             ]
         },
+        "She gave 3 to her friend": {
+            "id": "3b6abe10-83a3-45e2-a5e5-ac7ffe1664bb",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "She",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "grant",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "confer",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "give",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "her",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "friend",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
         "she sent 66 of her gifts": {
             "id": "749e5149-ee1b-4b2d-8c53-f63787b2ece6",
             "argument": [
@@ -355,6 +432,47 @@
                     "text": "misspell",
                     "checked": false,
                     "checkbox": false
+                }
+            ]
+        },
+        "25 out of 55 salmon families": {
+            "id": "fa50b105-10d1-499f-9cc5-e94b4e602107",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "25",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "out",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "55",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "salmon",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "families",
+                    "checked": true,
+                    "checkbox": true
                 }
             ]
         },

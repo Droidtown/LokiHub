@@ -536,6 +536,42 @@
                 }
             ]
         },
+        "He started with 965 ants": {
+            "id": "398b4e96-8773-4f80-99ae-aa4c81812e9e",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "He",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "start",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "with",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "965",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "ants",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
         "there are 6 tennis balls": {
             "id": "ec993553-9235-41b3-820f-d7426c780972",
             "argument": [
@@ -1185,6 +1221,65 @@
                 }
             ]
         },
+        "she only had a total of 10 stickers": {
+            "id": "f46e70ce-f8fc-4f4f-ad38-ed2396c6d767",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "only",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "total of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "stickers",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
         "100 red candies and 94 green candies": {
             "id": "36591e94-44a7-499a-98a9-5c7008e8abb8",
             "argument": [
@@ -1413,6 +1508,54 @@
                 }
             ]
         },
+        "Your team scored a total of 123 points": {
+            "id": "af2166ab-c411-4fcd-a681-1959d1a090e0",
+            "argument": [
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "Your",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "team",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "score",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "total of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "123",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "points",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
         "the CN Tower stands at 553 meters high": {
             "id": "8360b59d-e062-4312-b76b-e26f19254198",
             "argument": [
@@ -1508,6 +1651,54 @@
                 }
             ]
         },
+        "67 points were scored in the first half": {
+            "id": "7f66fc33-8d8c-41da-af7b-5e68ce93b7ed",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "67",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "points",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "score",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_DetPhrase",
+                    "text": "the first",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "half",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
         "After delivering newspapers for 8 weeks": {
             "id": "4e726665-22a3-4332-a549-46d69582b07e",
             "argument": [
@@ -1571,6 +1762,65 @@
                 {
                     "pos": "ENTITY_nouny",
                     "text": "weeks",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Charles had a pack of 35 pencil crayons": {
+            "id": "6bc16aab-4fe4-4955-a069-109d212678c0",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Charles",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "pack of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "35",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "pencil",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "crayons",
                     "checked": true,
                     "checkbox": true
                 }
@@ -1684,6 +1934,65 @@
                 {
                     "pos": "ENTITY_oov",
                     "text": "stones",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Charlene had a pack of 35 pencil crayons": {
+            "id": "b09fda42-eb87-44fe-aaa6-9656ac9202b9",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Charlene",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "pack of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "35",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "pencil",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "crayons",
                     "checked": true,
                     "checkbox": true
                 }
