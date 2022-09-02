@@ -66,9 +66,9 @@ DEMO
 建立 Discord Bot
 -------------
 1. 進入 [Discord Developer](https://discord.com/developers/applications) 後登入Discord帳號
-2. 點擊右上角的New Application，在Name的欄位中輸入機器人名稱
-3. 新增一個Bot，在BOT PERMISSIONS的欄位勾選Sends Messages、Embed Links、Attach Files及Read Message History
-4. 將Bot加入伺服器
+2. 點擊右上角的 New Application，在 Name 的欄位中輸入機器人名稱
+3. 新增一個 Bot，在 BOT PERMISSIONS 的欄位勾選 Sends Messages、Embed Links、Attach Files 及 Read Message History
+4. 將 Bot 加入伺服器
 5. 將複製下來的 token 貼上到檔案 account.info 中
 ```
 {
