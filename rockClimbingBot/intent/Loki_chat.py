@@ -39,7 +39,8 @@ def _reply(key):
                     "攀岩":["請問想問什麼呢？", "想問什麼呢？","有什麼想問的呢？"],
                     "攀岩[好無聊]！":["這樣啊","是哦","好哦","謝謝你告訴我"],
                     "[攀岩鞋子]要買多[大]？":["要親自試過才知道哦"],
-                    "[抱石][好玩]嗎":["當然！","好玩呀！","你覺得呢？"]
+                    "[抱石][好玩]嗎":["當然！","好玩呀！","你覺得呢？"],
+                    "攀岩[好玩]嗎":["當然！","好玩呀！","你覺得呢？"]
 
     }
     return random.choice(responseDICT[key])
@@ -93,5 +94,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "攀岩要穿[長褲]還[短褲]？":
         resultDICT["reply_chat"] = "以方便運動為主哦！"
+
+    if utterance == "攀岩[好玩]嗎？":
+        resultDICT["reply_chat"] = _reply(utterance)
 
     return resultDICT
