@@ -10,7 +10,8 @@
             "地瓜",
             "地瓜葉",
             "青江菜",
-            "紫甘藍"
+            "紫甘藍",
+            "冬筍"
         ],
         "_food": [
             "水煮蛋",
@@ -18,7 +19,8 @@
             "紅棗",
             "紅蘿蔔",
             "白果",
-            "日本馬頭魚"
+            "日本馬頭魚",
+            "透抽"
         ],
         "_temp": [
             "產季",
@@ -31,26 +33,238 @@
         ]
     },
     "utterance": {
-        "海膽 盛產季": {
-            "id": "2fb8f6d5-2033-4f05-a7ac-b43fc5f89200",
+        "鮭魚的產季": {
+            "id": "e239ac52-f139-4e1f-9316-c409a607e651",
             "argument": [
                 {
                     "pos": "ENTITY_oov",
-                    "text": "海膽",
+                    "text": "鮭魚",
                     "checked": true,
                     "checkbox": true
                 },
                 {
-                    "pos": "PUNCTUATION",
-                    "text": " ",
+                    "pos": "FUNC_inner",
+                    "text": "的",
                     "checked": false,
                     "checkbox": false
                 },
                 {
                     "pos": "UserDefined",
-                    "text": "盛產季",
+                    "text": "產季",
                     "checked": false,
                     "checkbox": true
+                }
+            ]
+        },
+        "九月有螃蟹嗎": {
+            "id": "1bad1c10-2ef8-4abe-bdc1-9bf95d8c5e54",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "九月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "螃蟹",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "檸檬有產季嗎": {
+            "id": "65b5ecb4-08f6-4096-a5e8-8ffb9076d6ac",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "檸檬",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "產季",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
                 }
             ]
         },
@@ -230,6 +444,112 @@
                         }
                     ],
                     "text": "買",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "草莓什麼時候有": {
+            "id": "06a54dd9-4460-457d-9141-0ae0883e61c3",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "草莓",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "時候",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
                     "checked": false,
                     "checkbox": false
                 }
@@ -517,6 +837,265 @@
                 }
             ]
         },
+        "螃蟹的產季是幾月": {
+            "id": "177bd2e3-077c-4ad9-8ea8-046e4ee09db3",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "螃蟹",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "產季",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_month",
+                    "text": "幾月",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "海膽什麼時候可以吃": {
+            "id": "a9566943-d835-4264-97c6-1d1b920fb716",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "海膽",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "時候",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "吃掉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "吸收",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "攝入",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "耗損",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "花掉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "生吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "啃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "喝",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "煮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃過",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "吃",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "海膽什麼時候可以買": {
+            "id": "009ec7b2-21b0-4881-88bf-d327e9da6c54",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "海膽",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "時候",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "採買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "收買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "買進",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "購買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "購得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買不起",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買不到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買東西",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "買",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
         "海膽是幾月產的食材": {
             "id": "076a4772-1b8c-4cce-b772-697c25674ec6",
             "argument": [
@@ -628,6 +1207,47 @@
                 }
             ]
         },
+        "旗魚的季節是什麼時候": {
+            "id": "2f556871-63b7-4319-81b0-63ddfe4d811a",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "旗魚",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "季節",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "時候",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
         "海膽盛產季是什麼時候": {
             "id": "7adfcbe4-d7d0-49b0-aa6a-baaa3ed9a5eb",
             "argument": [
@@ -652,6 +1272,47 @@
                 {
                     "pos": "CLAUSE_WhatQ",
                     "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "時候",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "烏魚的產季是甚麼時候": {
+            "id": "1b3ef031-9fd6-431c-afa2-d1704c2b5b47",
+            "argument": [
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "烏魚",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "產季",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "甚麼",
                     "checked": false,
                     "checkbox": false
                 },

@@ -10,7 +10,8 @@
             "地瓜",
             "地瓜葉",
             "青江菜",
-            "紫甘藍"
+            "紫甘藍",
+            "冬筍"
         ],
         "_food": [
             "水煮蛋",
@@ -18,7 +19,8 @@
             "紅棗",
             "紅蘿蔔",
             "白果",
-            "日本馬頭魚"
+            "日本馬頭魚",
+            "透抽"
         ],
         "_temp": [
             "產季",
@@ -31,6 +33,29 @@
         ]
     },
     "utterance": {
+        "9月的食材": {
+            "id": "9e2c9035-0830-42c9-aebf-b64e1d7353cf",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "9月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "食材",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
         "有什麼水果": {
             "id": "e4985c15-b876-4e1a-8259-7aed7d26f3ab",
             "argument": [
@@ -675,6 +700,112 @@
                     "text": "海鮮",
                     "checked": true,
                     "checkbox": true
+                }
+            ]
+        },
+        "秋天可以吃什麼": {
+            "id": "931640bf-57d8-43ac-87c4-24e344c54fba",
+            "argument": [
+                {
+                    "pos": "TIME_season",
+                    "text": "秋天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "吃掉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "吸收",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "攝入",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "耗損",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "花掉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "生吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "啃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "喝",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "煮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃過",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "吃",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
                 }
             ]
         },

@@ -35,9 +35,11 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
 
     if utterance == "[你][能]列出[所有]的[當季][食材]嗎":
         resultDICT["type"] = args[4]
+        resultDICT["time"] = args[3]
 
     if utterance == "[我]想知道[所有]的[當季][食材]":
         resultDICT["type"] = args[3]
+        resultDICT["time"] = args[1]        
 
     if utterance == "[現在]的[當季][食材]有哪些":
         resultDICT["time"] = args[0]
@@ -53,5 +55,8 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
 
     if utterance == "[你][可以]跟[我]說[所有]的[當季][食材]嗎":
         resultDICT["type"] = args[5]
+
+    if utterance == "告訴[我][所有]的[當季][食材]":
+        resultDICT["type"] = args[3]
 
     return resultDICT

@@ -33,6 +33,14 @@ def getInSeason(rejectLIST, time, type):
     # 查詢指定時間食材/蔬菜/水果/海鮮
     if time in ["現在", "目前", "今天"]:
         month = str(datetime.now().month)+"月"
+    elif time in ["春天", "春季"]:
+        month = "春天"
+    elif time in ["夏天", "夏季"]:
+        month = "夏天"
+    elif time in ["秋天", "秋季"]:
+        month = "秋天"
+    elif time in ["冬天", "冬季"]:
+        month = "冬天"
     elif "11月" in time or "十一月" in time:
         month = "11月"
     elif "12月" in time or "十二月" in time:
@@ -69,7 +77,17 @@ def getInSeason(rejectLIST, time, type):
     else:
         type = choice(["蔬菜", "水果", "海鮮"])
 
-    ingr_inseasonLIST = inSeasonDICT[month][type]
+    if month in ["春天", "夏天", "秋天", "冬天"]:
+        if month == "春天":
+            ingr_inseasonLIST = inSeasonDICT["2月"][type] + inSeasonDICT["3月"][type] + inSeasonDICT["4月"][type]
+        elif month == "夏天":
+            ingr_inseasonLIST = inSeasonDICT["5月"][type] + inSeasonDICT["6月"][type] + inSeasonDICT["7月"][type]
+        elif month == "秋天":
+            ingr_inseasonLIST = inSeasonDICT["8月"][type] + inSeasonDICT["9月"][type] + inSeasonDICT["10月"][type]
+        elif month == "冬天":
+            ingr_inseasonLIST = inSeasonDICT["11月"][type] + inSeasonDICT["12月"][type] + inSeasonDICT["1月"][type]
+    else:
+        ingr_inseasonLIST = inSeasonDICT[month][type]
     ingr_inseason_excludeLIST = [x for x in ingr_inseasonLIST if x not in rejectLIST]
 
     return choice(ingr_inseason_excludeLIST), month, type
@@ -141,6 +159,14 @@ def getAllIngr(time, type):
     # 查詢指定時間的所有食材/蔬菜/水果/海鮮
     if time in ["現在", "目前", "今天"]:
         month = str(datetime.now().month)+"月"
+    elif time in ["春天", "春季"]:
+        month = "春天"
+    elif time in ["夏天", "夏季"]:
+        month = "夏天"
+    elif time in ["秋天", "秋季"]:
+        month = "秋天"
+    elif time in ["冬天", "冬季"]:
+        month = "冬天"
     elif "11月" in time or "十一月" in time:
         month = "11月"
     elif "12月" in time or "十二月" in time:
@@ -177,10 +203,33 @@ def getAllIngr(time, type):
     else:
         type = "食材"
 
-    if type == "食材":
-        all_ingr_inseasonLIST = inSeasonDICT[month]["蔬菜"] + inSeasonDICT[month]["水果"] + inSeasonDICT[month]["海鮮"]
+
+    if month in ["春天", "夏天", "秋天", "冬天"]:
+        if month == "春天":
+            if type == "食材":
+                all_ingr_inseasonLIST = inSeasonDICT["2月"]["蔬菜"] + inSeasonDICT["2月"]["水果"] + inSeasonDICT["2月"]["海鮮"] + inSeasonDICT["3月"]["蔬菜"] + inSeasonDICT["3月"]["水果"] + inSeasonDICT["3月"]["海鮮"] + inSeasonDICT["4月"]["蔬菜"] + inSeasonDICT["4月"]["水果"] + inSeasonDICT["4月"]["海鮮"]
+            else:
+                all_ingr_inseasonLIST = inSeasonDICT["2月"][type] + inSeasonDICT["3月"][type] + inSeasonDICT["4月"][type]
+        elif month == "夏天":
+            if type == "食材":
+                all_ingr_inseasonLIST = inSeasonDICT["5月"]["蔬菜"] + inSeasonDICT["5月"]["水果"] + inSeasonDICT["5月"]["海鮮"] + inSeasonDICT["6月"]["蔬菜"] + inSeasonDICT["6月"]["水果"] + inSeasonDICT["6月"]["海鮮"] + inSeasonDICT["7月"]["蔬菜"] + inSeasonDICT["7月"]["水果"] + inSeasonDICT["7月"]["海鮮"]
+            else:
+                all_ingr_inseasonLIST = inSeasonDICT["5月"][type] + inSeasonDICT["6月"][type] + inSeasonDICT["7月"][type]
+        elif month == "秋天":
+            if type == "食材":
+                all_ingr_inseasonLIST = inSeasonDICT["8月"]["蔬菜"] + inSeasonDICT["8月"]["水果"] + inSeasonDICT["8月"]["海鮮"] + inSeasonDICT["9月"]["蔬菜"] + inSeasonDICT["9月"]["水果"] + inSeasonDICT["9月"]["海鮮"] + inSeasonDICT["10月"]["蔬菜"] + inSeasonDICT["10月"]["水果"] + inSeasonDICT["10月"]["海鮮"]
+            else:
+                all_ingr_inseasonLIST = inSeasonDICT["8月"][type] + inSeasonDICT["9月"][type] + inSeasonDICT["10月"][type]
+        elif month == "冬天":
+            if type == "食材":
+                all_ingr_inseasonLIST = inSeasonDICT["11月"]["蔬菜"] + inSeasonDICT["11月"]["水果"] + inSeasonDICT["11月"]["海鮮"] + inSeasonDICT["12月"]["蔬菜"] + inSeasonDICT["12月"]["水果"] + inSeasonDICT["12月"]["海鮮"] + inSeasonDICT["1月"]["蔬菜"] + inSeasonDICT["1月"]["水果"] + inSeasonDICT["1月"]["海鮮"]
+            else:
+                all_ingr_inseasonLIST = inSeasonDICT["11月"][type] + inSeasonDICT["12月"][type] + inSeasonDICT["1月"][type]
     else:
-        all_ingr_inseasonLIST = inSeasonDICT[month][type]
+        if type == "食材":
+            all_ingr_inseasonLIST = inSeasonDICT[month]["蔬菜"] + inSeasonDICT[month]["水果"] + inSeasonDICT[month]["海鮮"]
+        else:
+            all_ingr_inseasonLIST = inSeasonDICT[month][type]
 
     return all_ingr_inseasonLIST, month, type
 
@@ -257,14 +306,14 @@ def model(mscDICT):
 
             if type == "" or  type == "食材":
                 if time == "":
-                    mscDICT["replySTR"] = "現在最好吃的是{}哦！".format(ingr_inseason)
+                    mscDICT["replySTR"] = "現在的{}很好吃哦！".format(ingr_inseason)
                 else:
-                    mscDICT["replySTR"] = "{}最好吃的是{}哦！".format(res_time, ingr_inseason)
+                    mscDICT["replySTR"] = "{}的{}很好吃哦！".format(res_time, ingr_inseason)
             else:
                 if time == "":
-                    mscDICT["replySTR"] = "你喜歡吃{}呀？現在最好吃的是{}哦！".format(res_type, ingr_inseason)
+                    mscDICT["replySTR"] = "你喜歡吃{}呀？現在的{}很好吃哦！".format(res_type, ingr_inseason)
                 else:
-                    mscDICT["replySTR"] = "你喜歡吃{}呀？{}最好吃的是{}哦！".format(res_type, res_time, ingr_inseason)
+                    mscDICT["replySTR"] = "你喜歡吃{}呀？{}的{}很好吃哦！".format(res_type, res_time, ingr_inseason)
 
             #紀錄
             mscDICT["ingredient"] = ingr_inseason
@@ -308,7 +357,7 @@ def model(mscDICT):
                 replySTR0 = "恩恩，那麼{}如何？".format(ingr_inseason)
                 replySTR1 = "了解，其他像{}也不錯哦，".format(ingr_inseason)
                 replySTR00 = "它能用來做成很多不一樣的料理哦。"
-                replySTR01 = "不知道最近它的價格高不高？"
+                replySTR01 = "不知道最近{}多少錢？".format(ingr_inseason)
                 replySTR10 = "它的挑選方法很有趣哦。"
                 replySTR11 = "但要注意它有一些搭配禁忌。"
                 replyLIST0 = [replySTR0, replySTR1]

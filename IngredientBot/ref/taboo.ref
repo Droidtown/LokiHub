@@ -10,7 +10,8 @@
             "地瓜",
             "地瓜葉",
             "青江菜",
-            "紫甘藍"
+            "紫甘藍",
+            "冬筍"
         ],
         "_food": [
             "水煮蛋",
@@ -18,7 +19,8 @@
             "紅棗",
             "紅蘿蔔",
             "白果",
-            "日本馬頭魚"
+            "日本馬頭魚",
+            "透抽"
         ],
         "_temp": [
             "產季",
@@ -51,6 +53,29 @@
                     "text": "禁忌",
                     "checked": false,
                     "checkbox": true
+                }
+            ]
+        },
+        "什麼禁忌？": {
+            "id": "295f47e4-4107-4287-b7a5-68636abaae33",
+            "argument": [
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "禁忌",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "？",
+                    "checked": false,
+                    "checkbox": false
                 }
             ]
         },
@@ -151,6 +176,112 @@
                     "text": "禁忌",
                     "checked": false,
                     "checkbox": true
+                }
+            ]
+        },
+        "苦瓜有禁忌嗎": {
+            "id": "23c597c0-7dd8-42af-b578-a773181dd8d3",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "苦瓜",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "禁忌",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
                 }
             ]
         },
@@ -325,6 +456,282 @@
                 {
                     "pos": "CLAUSE_WhatQ",
                     "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "禁忌",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "鯷魚的搭配禁忌": {
+            "id": "2af414fc-edf5-4804-b5a4-cbfb0d264330",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "鯷魚",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "匹配",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "搭伙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "搭接",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "搭調",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "相配",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "併吞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "依附",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "侵吞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼併",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "切合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "加入",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "匯合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "協調",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "合併",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吞併",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "團結",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "媒合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "安排",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "待遇",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拼接",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "接合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "搬鋪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "操辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擘劃",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擺放",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擺設",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "歸併",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "歸入",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "添加",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "相接",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "相稱",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "符合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "籌辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "約出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "約見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "編排",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "聯合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "連接",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "銜接",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "鋪排",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "搭配了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "特製",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "點綴",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "搭配著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "選用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "貼合",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "混搭",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "配搭",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "結合",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "搭配",
                     "checked": false,
                     "checkbox": false
                 },

@@ -82,4 +82,10 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     if utterance == "[蛤蠣]價錢":
         resultDICT["ingredient"] = args[0]
 
+    if utterance == "[螃蟹]價格高嗎":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[高麗菜]的價格":
+        resultDICT["ingredient"] = args[0]
+
     return resultDICT

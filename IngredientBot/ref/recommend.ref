@@ -10,7 +10,8 @@
             "地瓜",
             "地瓜葉",
             "青江菜",
-            "紫甘藍"
+            "紫甘藍",
+            "冬筍"
         ],
         "_food": [
             "水煮蛋",
@@ -18,7 +19,8 @@
             "紅棗",
             "紅蘿蔔",
             "白果",
-            "日本馬頭魚"
+            "日本馬頭魚",
+            "透抽"
         ],
         "_temp": [
             "產季",
@@ -812,6 +814,98 @@
                     "text": "我",
                     "checked": false,
                     "checkbox": false
+                }
+            ]
+        },
+        "推薦一個秋天的料理": {
+            "id": "937f3104-7cfc-4984-af86-51d42991c516",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "引薦",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "舉薦",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "引進",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "介紹",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "挑選",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推荐",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推介",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "欽點",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "提拔",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推舉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "邀請",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "推薦",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一個",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "秋天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "料理",
+                    "checked": false,
+                    "checkbox": true
                 }
             ]
         }

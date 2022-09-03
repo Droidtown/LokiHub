@@ -10,7 +10,8 @@
             "地瓜",
             "地瓜葉",
             "青江菜",
-            "紫甘藍"
+            "紫甘藍",
+            "冬筍"
         ],
         "_food": [
             "水煮蛋",
@@ -18,7 +19,8 @@
             "紅棗",
             "紅蘿蔔",
             "白果",
-            "日本馬頭魚"
+            "日本馬頭魚",
+            "透抽"
         ],
         "_temp": [
             "產季",
@@ -43,23 +45,6 @@
                 {
                     "pos": "ENTITY_oov",
                     "text": "錢",
-                    "checked": false,
-                    "checkbox": true
-                }
-            ]
-        },
-        "蛤蠣價錢": {
-            "id": "be28ed47-2d43-476e-a989-3648dafff925",
-            "argument": [
-                {
-                    "pos": "ENTITY_oov",
-                    "text": "蛤蠣",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "價錢",
                     "checked": false,
                     "checkbox": true
                 }
@@ -366,6 +351,58 @@
                 {
                     "pos": "ENTITY_oov",
                     "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "螃蟹價格高嗎": {
+            "id": "41d5e9d1-cb9b-4566-997b-897b744c97de",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "螃蟹",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "價格",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "高",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "高麗菜的價格": {
+            "id": "3b7057a3-64a0-44d8-9113-d563a2a9420b",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "高麗菜",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "價格",
                     "checked": false,
                     "checkbox": true
                 }

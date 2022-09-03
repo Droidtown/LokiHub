@@ -10,7 +10,8 @@
             "地瓜",
             "地瓜葉",
             "青江菜",
-            "紫甘藍"
+            "紫甘藍",
+            "冬筍"
         ],
         "_food": [
             "水煮蛋",
@@ -18,7 +19,8 @@
             "紅棗",
             "紅蘿蔔",
             "白果",
-            "日本馬頭魚"
+            "日本馬頭魚",
+            "透抽"
         ],
         "_temp": [
             "產季",
@@ -420,6 +422,101 @@
                     "text": "法",
                     "checked": false,
                     "checkbox": true
+                }
+            ]
+        },
+        "白果怎麼煮": {
+            "id": "7a014bda-cb9e-4106-9693-7c126bac821f",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "白果",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "烹煮",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "煮飯",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "燒煮",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "烹製",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "烹調",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "燉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "醃製",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "醃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "燉煮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "醃漬",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "熬煮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "煎",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "煮成",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "烤",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "煮",
+                    "checked": false,
+                    "checkbox": false
                 }
             ]
         },

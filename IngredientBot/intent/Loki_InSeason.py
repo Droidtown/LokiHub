@@ -73,7 +73,7 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         resultDICT["type"] = args[3]
 
     if utterance == "有什麼[水果]":
-        if args[0] not in ("蔬菜", "水果", "海鮮", "食材"):
+        if args[0] not in ["蔬菜", "水果", "海鮮", "食材"]:
             resultDICT.pop("inseason")
         else:
             resultDICT["type"] = args[0]
@@ -89,5 +89,18 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
 
     if utterance == "推薦什麼[食材]":
         resultDICT["type"] = args[0]
+
+    if utterance == "[9月]的[食材]":
+        if "當季" in args[0] or "當令" in args[0] or "幾月" in args[0] or args[1] in ["料理", "早餐", "午餐", "晚餐"]:
+            resultDICT.pop("inseason")
+        else:
+            resultDICT["time"] = args[0]
+            resultDICT["type"] = args[1]
+
+    if utterance == "[秋天][可以]吃什麼":
+        if "今天" in args[0]:
+            resultDICT.pop("inseason")
+        else:
+            resultDICT["time"] = args[0]
 
     return resultDICT

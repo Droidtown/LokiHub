@@ -10,7 +10,8 @@
             "地瓜",
             "地瓜葉",
             "青江菜",
-            "紫甘藍"
+            "紫甘藍",
+            "冬筍"
         ],
         "_food": [
             "水煮蛋",
@@ -18,7 +19,8 @@
             "紅棗",
             "紅蘿蔔",
             "白果",
-            "日本馬頭魚"
+            "日本馬頭魚",
+            "透抽"
         ],
         "_temp": [
             "產季",
@@ -31,6 +33,41 @@
         ]
     },
     "utterance": {
+        "空心菜是當季的嗎": {
+            "id": "452dd723-6d2b-4776-a8a0-95421f6cd356",
+            "argument": [
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "空心菜",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
         "葡萄是不是當季的": {
             "id": "aa4ebe8d-491c-441c-ae47-7883cb967ae3",
             "argument": [
