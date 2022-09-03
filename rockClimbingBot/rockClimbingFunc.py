@@ -6,9 +6,12 @@ import random
 
 extendedDICT = {"_taiwanCities":["雲林","嘉義","台南","高雄","屏東","花蓮","台東","基隆","台北","桃園","新竹","宜蘭","新北","苗栗","台中","彰化","南投","蘭嶼","綠島","金門","馬祖","龜山島","離島"],"_midTW":["苗栗","台中","彰化","南投"],"_eastTW":["花蓮","台東"],"_northTW":["基隆","台北","桃園","新竹","宜蘭","新北"],"_southTW":["雲林","嘉義","台南","高雄","屏東"],"_islandsTW":["離島","金門","馬祖","澎湖","龜山島"]}
 gymsInfo = pd.read_csv('data/climbingGym.csv', encoding = 'utf-8')
+try:
+    userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
+except:
+    userDefinedDICT = {"_rocks":["岩石","岩點","手點","石頭","點"],"_shoes":["岩鞋","抱石鞋","鞋子","攀岩鞋","攀岩鞋子"],"_sides":["中部","北部","南部","東部","西部"],"_whatIs":["星光票"],"_climbing":["上攀","先鋒","先鋒攀","先鋒攀岩","先鋒攀登","抱石","抱石攀岩","速度攀","速度攀登","攀登","運動攀登"],"_cityAlias":["區域","地區","城市","縣市","都市","地方"],"_gymsShort":["達文西","8a攀岩場","B-plus","Boulder Space","Camp 4","Corner","Dapro","K2","MegaSTONE","POGO","TheDepotCity","Up聯盟","Y17","double 8","double8","久淘","千手抱石","原岩","嗨翻","嘉義攀岩會館","圓石","圓石空間","宜蘭運動中心","小岩館","崩岩","抱石基地","攀吶","新竹紅石","水美iClimb","汐止抱石館","爬森","破舊二廠","破舊工廠","禾匠","紅石","艾思博","蕃薯藤","角岩館","風城"],"_peClothes":["單車褲","瑜珈褲","運動服","運動衣","運動褲","運動鞋","攀岩褲"],"_rockTypes":["crimp","edge","flat","horn","jug","pinch","pocket","sloper","volume"],"_climbingGym":["岩場","岩館","攀岩場","攀岩館","抱石館","上攀館"],"_taiwanAlias":["全台","全台各地","全臺","全臺各地","台灣","臺灣","全台灣"],"_clothesPants":["上衣","服裝","短袖","短袖上衣","短袖衣服","衣服","衣著","衣褲","長袖","長袖上衣","長袖衣服","單車褲","瑜珈褲","短褲","運動褲","長褲"],"_climbingEquip":["岩粉","岩點刷","攀岩刷","攀岩粉","攀岩粉袋","止滑粉","碳酸鎂粉","粉球","粉袋","裝","裝備","鎂粉","鎂粉球"],"_topRopingEquip":["吊帶","垂降手套","安全吊帶","安全扣","安全扣環","快扣","手套","確保器","確保手套","耐磨手套"]}
 
-
- #取得岩館位置或電話
+#取得岩館位置或電話
 def getGymLocPh(gym, c_a_p):
     lpDict = {}
     if gym == "double8":
@@ -17,6 +20,8 @@ def getGymLocPh(gym, c_a_p):
         gym = "Camp 4"
     elif gym == "角岩館":
         gym = "角·攀岩館"
+    elif gym == "pogo":
+        gym = "POGO"    
     if c_a_p == "c":
         for i in range(len(gymsInfo)):
             if gym in gymsInfo.iloc[i, 0]:
@@ -29,6 +34,13 @@ def getGymLocPh(gym, c_a_p):
         for i in range(len(gymsInfo)):
             if gym in gymsInfo.iloc[i, 0]:
                 lpDict[gymsInfo.iloc[i, 0]] = gymsInfo.iloc[i, 1]
+    elif c_a_p == "pa":
+        for i in range(len(gymsInfo)):
+            paList = []
+            if gym in gymsInfo.iloc[i, 0]:
+                paList.append(gymsInfo.iloc[i, 1])
+                paList.append(gymsInfo.iloc[i, 2])
+                lpDict[gymsInfo.iloc[i, 0]] = paList   
     return lpDict
 
  #取得有岩館的縣市
@@ -55,6 +67,55 @@ def getBTScity(bts):
                 citySet.add(gymsInfo.iloc[i, 2][:2])  
     return citySet  
 
+def getGymTime(gym):
+    gymTimeDict = {} 
+    if gym == "double8":
+        gym = "double 8"
+    elif gym == "camp4" or gym == "Camp4" or gym == "camp 4":
+        gym = "Camp 4"
+    elif gym == "角岩館":
+        gym = "角·攀岩館"
+    elif gym == "pogo":
+        gym = "POGO"      
+    for i in range(len(gymsInfo)):
+        if gym in gymsInfo.iloc[i, 0]:
+            gymTimeList = []
+            for j in range(13, 15):
+                gymTimeList.append(gymsInfo.iloc[i, j])
+            gymTimeDict[gymsInfo.iloc[i, 0]] = gymTimeList
+    return gymTimeDict
+
+def timeToString(timeDict, daySTR):
+    string = ""
+    if "平日" in daySTR:
+        for gym, time in timeDict.items():
+            if time[0] != "n.a.":
+                string += gym + "平日營業時間是" +time[0] + "\n"
+            else:
+                string += gym + "平日不營業哦"
+    elif "假日" in daySTR:
+        for gym, time in timeDict.items():
+            if time[0] != "n.a.":
+                string += gym + "假日營業時間是" +time[0] + "\n"
+            else:
+                string += gym + "假日不營業哦"
+    #elif "今天" in daySTR or "今日" in daySTR:
+    else:
+        for gym, time in timeDict.items():
+            if time[0] == "預約制":
+                string += gym + "採預約制，如想至"+gym+"攀岩請先預約"
+            else:
+                string += gym + ":\n"
+                if time[0] != "n.a.":
+                    string += "\t平日營業時間 " +time[0] + "\n"
+                else:
+                    string += "\t平日不營業"
+                if time[1] != "n.a.":
+                    string += "\t假日營業時間 " +time[1] + "\n"
+                else:
+                    string += "\t假日不營業"
+    return string
+
 #取得岩館票價
 def getGymPrice(gym):
     gymPriceDict = {} 
@@ -64,6 +125,8 @@ def getGymPrice(gym):
         gym = "Camp 4"
     elif gym == "角岩館":
         gym = "角·攀岩館"
+    elif gym == "pogo":
+        gym = "POGO"      
     for i in range(len(gymsInfo)):
         if gym in gymsInfo.iloc[i, 0]:
             gymPriceList = []
@@ -74,13 +137,13 @@ def getGymPrice(gym):
 
 def priceToString(priceDict):
     string = ""
-    print("-----priceDict:",priceDict,"-----")
+    #print("-----priceDict:",priceDict,"-----")
     for gym, prices in priceDict.items():
-        string += gym + ":\n"
+        string += gym + "：\n"
         if prices[0] != "n.a.":
-            string += "\t平日票價 "+ str(prices[0]) + "\n"
+            string += "\t平日單日票價 "+ str(prices[0]) + "\n"
         if prices[1] != "n.a.":
-            string += "\t假日票價 "+ str(prices[1]) + "\n"
+            string += "\t假日單日票價 "+ str(prices[1]) + "\n"
         if prices[2] != "n.a.":
             string += "\t星光票 "+ str(prices[2]) + "\n"
         if prices[3] != "n.a.":
@@ -266,5 +329,18 @@ def checkGymLoc(gym, loc):
             return True
     return False 
 
+def checkGymInString(inputSTR):
+    theGym = ""
+    for i in userDefinedDICT["_gymsShort"]:
+        if i in inputSTR:
+            theGym = i
+            return theGym
+    return ""
 
+def checkGymCity(gym, city):
+    for i in range(len(gymsInfo)):
+        if gym in gymsInfo.iloc[i, 0]:
+            if city in gymsInfo.iloc[i, 2]:
+                return True
+    return False
 

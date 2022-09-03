@@ -71,7 +71,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["reply_chat"] = _reply(utterance)        
 
     if utterance == "[抱石][好玩]嗎":
-        if args[0] in userDefinedDICT["_climbing"] or args[0] == "攀岩":
+        if args[0] in userDefinedDICT["_climbing"]:
             resultDICT["reply_chat"] = _reply(utterance)
         else:
             resultDICT["reply_chat"] = random.choice(defaultResponse["_not_rock_climbing"])

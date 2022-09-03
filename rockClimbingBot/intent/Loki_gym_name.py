@@ -171,7 +171,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         else:
             resultDICT["reply_gym_name"] = choice(defaultResponse["_not_taiwan_city"])
 
-    if utterance == "[台北][有名]的[岩館]有哪些":
+    if utterance == "[台北][有名]的[岩館]":
         if args[2] not in userDefinedDICT["_climbingGym"]:
             resultDICT["reply_gym_name"] = choice(defaultResponse["_not_rock_climbing"])
             return resultDICT
@@ -228,7 +228,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         else:
             resultDICT["reply_gym_name"] = choice(defaultResponse["_not_taiwan_city"])
 
-    if utterance == "[東部][有名]的[岩館]有哪些":
+    if utterance == "[東部][有名]的[岩館]":
         if args[2] not in userDefinedDICT["_climbingGym"] or args[2] not in userDefinedDICT["_climbing"]:
             resultDICT["reply_gym_name"] = choice(defaultResponse["_not_rock_climbing"])
             return resultDICT
@@ -331,6 +331,34 @@ def getResult(inputSTR, utterance, args, resultDICT):
         if args[1] not in userDefinedDICT["_climbingGym"]:
             resultDICT["reply_gym_name"] = choice(defaultResponse["_not_rock_climbing"])
             return resultDICT
+        if args[0] in userDefinedDICT["_sides"]:
+            resultDICT["_person_loc"] = args[0]
+            counties = getSideCounties(args[0])
+            selectedGyms = set()
+            for county in counties:
+                selectedGyms.update(getLocBTSGym(county, args[1]))
+            gymsNames = containerToString(selectedGyms)
+            resultDICT["reply_gym_name"] = "{0}的{1}有{2}".format(args[0], args[1], gymsNames)
+        elif args[0] in userDefinedDICT["_taiwanAlias"]:
+            selectedGyms = getBTSGym(args[1])
+            gymsNames = containerToString(selectedGyms)
+            resultDICT["reply_gym_name"] = "{0}的{1}有{2}".format(args[0], args[1], gymsNames)
+        else:
+            resultDICT["reply_gym_name"] = choice(defaultResponse["_not_taiwan_city"])
+
+    if utterance == "[台北]哪些[地方][可以]攀岩":
+        if checkLocation(args[0]):
+            resultDICT["_person_loc"] = args[0]
+            selectedGyms = getLocBTSGym(resultDICT["_person_loc"], "")
+            gymsNames = containerToString(selectedGyms)
+            if len(selectedGyms) != 0:
+                resultDICT["reply_gym_name"] = "{0}的岩館有{1}".format(args[0], gymsNames)
+            else:
+                resultDICT["reply_gym_name"] = "{0}沒有岩館哦！".format(arg[0])
+        else:
+            resultDICT["reply_gym_name"] = choice(defaultResponse["_not_taiwan_city"])
+
+    if utterance == "[東部]攀岩[可以]去哪裡":
         if args[0] in userDefinedDICT["_sides"]:
             resultDICT["_person_loc"] = args[0]
             counties = getSideCounties(args[0])

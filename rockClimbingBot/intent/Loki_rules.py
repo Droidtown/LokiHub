@@ -94,5 +94,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "要怎麼知道[自己]的[等級]":
         resultDICT["reply_rules"] = "爬過就知道了"
+    
+    if utterance == "攀岩要注意什麼":
+        resultDICT["reply_rules"] = defaultResponse["_be_aware"]
 
     return resultDICT

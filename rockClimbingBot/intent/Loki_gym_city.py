@@ -107,7 +107,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             elif "價" in args[4]: #price
                 gymPriceDict = getGymPrice(args[2])
                 gymPrice = priceToString(gymPriceDict)
-                resultDICT["reply_gym_location"] = gymPrice
+                resultDICT["reply_gym_price"] = gymPrice
             elif "電話" in args[4]: #phone
                 phoneDict = getGymLocPh(args[2], "p")
                 gymPh = ""
@@ -131,7 +131,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             elif "價" in args[3]: #price
                 gymPriceDict = getGymPrice(args[2])
                 gymPrice = priceToString(gymPriceDict)
-                resultDICT["reply_gym_location"] = gymPrice
+                resultDICT["reply_gym_price"] = gymPrice
             elif "電話" in args[3]: #phone
                 phoneDict = getGymLocPh(args[2], "p")
                 gymPh = ""
@@ -155,7 +155,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             elif "價" in args[4]: #price
                 gymPriceDict = getGymPrice(args[2])
                 gymPrice = priceToString(gymPriceDict)
-                resultDICT["reply_gym_location"] = gymPrice
+                resultDICT["reply_gym_price"] = gymPrice
             elif "電話" in args[4]: #phone
                 phoneDict = getGymLocPh(args[2], "p")
                 gymPh = ""
@@ -179,7 +179,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             elif "價" in args[3]: #price
                 gymPriceDict = getGymPrice(args[2])
                 gymPrice = priceToString(gymPriceDict)
-                resultDICT["reply_gym_location"] = gymPrice
+                resultDICT["reply_gym_price"] = gymPrice
             elif "電話" in args[3]: #phone
                 phoneDict = getGymLocPh(args[2], "p")
                 gymPh = ""
@@ -192,7 +192,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_gym_location"] = choice(defaultResponse["_gym_unknown"])
 
     if utterance == "[台北]哪裡有[速度攀]": #區、市
-        if args[1] not in userDefinedDICT["_climbing"] or args[1] not in userDefinedDICT["_climbingGym"]:
+        if args[1] not in userDefinedDICT["_climbing"] and args[1] not in userDefinedDICT["_climbingGym"]:
             resultDICT["reply_gym_location"] = choice(defaultResponse["_not_rock_climbing"])
             return resultDICT
         districtSet = getGymDistrict(args[0])
@@ -237,7 +237,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             elif "價" in args[2]: #price
                 gymPriceDict = getGymPrice(args[1])
                 gymPrice = priceToString(gymPriceDict)
-                resultDICT["reply_gym_location"] = gymPrice
+                resultDICT["reply_gym_price"] = gymPrice
             elif "電話" in args[2]: #phone
                 phoneDict = getGymLocPh(args[1], "p")
                 gymPh = ""
@@ -261,7 +261,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             elif "價" in args[3]: #price
                 gymPriceDict = getGymPrice(args[2])
                 gymPrice = priceToString(gymPriceDict)
-                resultDICT["reply_gym_location"] = gymPrice
+                resultDICT["reply_gym_price"] = gymPrice
             elif "電話" in args[3]: #phone
                 phoneDict = getGymLocPh(args[2], "p")
                 gymPh = ""
@@ -285,7 +285,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             elif "價" in args[1]: #price
                 gymPriceDict = getGymPrice(args[0])
                 gymPrice = priceToString(gymPriceDict)
-                resultDICT["reply_gym_location"] = gymPrice
+                resultDICT["reply_gym_price"] = gymPrice
             elif "電話" in args[1]: #phone
                 phoneDict = getGymLocPh(args[0], "p")
                 gymPh = ""
@@ -320,7 +320,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_gym_location"] = choice(defaultResponse["_gym_unknown"])
 
     if utterance == "[東部]哪裡有[速度攀]":
-        if args[1] not in userDefinedDICT["_climbingGym"] or args[1] not in userDefinedDICT["_climbing"]:
+        if args[1] not in userDefinedDICT["_climbingGym"] and args[1] not in userDefinedDICT["_climbing"]:
             resultDICT["reply_gym_location"] = choice(defaultResponse["_not_rock_climbing"])
             return resultDICT
         if args[0] in userDefinedDICT["_taiwanAlias"]:
@@ -330,7 +330,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 if hasGymCounty(county, args[1]):
                     countySet2.add(county)
             counties = containerToString(countySet2)
-            resultDICT["reply_gym_location"] = "{0}有{1}的有{2}".format(args[0], args[1], counties)
+            resultDICT["_gym_name"] = "no_need"
+            resultDICT["reply_gym_location"] = "{0}有{1}的縣市有{2}".format(args[0], args[1], counties)
         elif args[0] in userDefinedDICT["_sides"]:
             counties = getSideCounties(args[0])
             countySet2 = set()
@@ -338,7 +339,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 if hasGymCounty(county, args[1]):
                     countySet2.add(county)
             counties = containerToString(countySet2)
-            resultDICT["reply_gym_location"] = "{0}有{1}的有{2}".format(args[0], args[1], counties)                        
+            resultDICT["_gym_name"] = "no_need"
+            resultDICT["reply_gym_location"] = "{0}有{1}的縣市有{2}".format(args[0], args[1], counties)                        
         else:
             resultDICT["reply_gym_location"] = choice(defaultResponse["_not_taiwan_city"])        
 
@@ -371,5 +373,38 @@ def getResult(inputSTR, utterance, args, resultDICT):
         citySet = getBTScity(args[0])
         cities = containerToString(citySet)
         resultDICT["reply_gym_location"] = "有{0}的地區有{1}".format(args[0], cities)
+
+    if utterance == "[紅石]資訊":
+        if args[0] in userDefinedDICT["_gymsShort"]:
+            resultDICT["_gym_name"] = args[0]
+            phoneDict = getGymLocPh(args[0], "pa")
+            gymInfo = ""
+            for gym, info in phoneDict.items():
+                gymInfo += "{0}\n電話:{1}\n地址:{2}\n".format(gym, info[0], info[1])
+            resultDICT["reply_gym_location"] = gymInfo
+        else:
+            resultDICT["reply_gym_location"] = choice(defaultResponse["_gym_unknown"])
+
+    if utterance == "[紅石]電話":
+        if args[0] in userDefinedDICT["_gymsShort"]:
+            resultDICT["_gym_name"] = args[0]
+            phoneDict = getGymLocPh(args[0], "p")
+            gymPh = ""
+            for gym, phone in phoneDict.items():
+                gymPh += "{0}電話:{1}\n".format(gym, phone)
+            resultDICT["reply_gym_location"] = gymPh
+        else:
+            resultDICT["reply_gym_location"] = choice(defaultResponse["_gym_unknown"])
+
+    if utterance == "[紅石]電話號碼":
+        if args[0] in userDefinedDICT["_gymsShort"]:
+            resultDICT["_gym_name"] = args[0]
+            phoneDict = getGymLocPh(args[0], "p")
+            gymPh = ""
+            for gym, phone in phoneDict.items():
+                gymPh += "{0}電話:{1}\n".format(gym, phone)
+            resultDICT["reply_gym_location"] = gymPh
+        else:
+            resultDICT["reply_gym_location"] = choice(defaultResponse["_gym_unknown"])
 
     return resultDICT

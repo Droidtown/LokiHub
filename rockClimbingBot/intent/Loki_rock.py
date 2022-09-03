@@ -46,15 +46,47 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "[jug]長什麼樣子":
         if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_img_send"] = args[0]
-            resultDICT["reply_rocks"] = args[0]
+            if args[0] == "jug":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/idnc3ekvnuid6bm/jug.png?dl=0"#args[0]
+            elif args[0] == "crimp":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/f8pby7052vzfg0m/crimp.png?dl=0"
+            elif args[0] == "edge":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/fzs4ae0jjiapgzm/edge.png?dl=0"
+            elif args[0] == "flat":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/vntlf9bmw795ww4/flat.png?dl=0"
+            elif args[0] == "horn":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/dfxxayjbgq8grzv/horn.png?dl=0"
+            elif args[0] == "pinch":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/z4vvzvppl6imgax/pinch.png?dl=0"
+            elif args[0] == "pocket":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/5azmi5pjrf4048s/pocket.png?dl=0"
+            elif args[0] == "sloper":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/8vaeh37qypa69b7/sloper.png?dl=0"
+            else:#volume
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/oz76sdzv57rbb5x/volume.png?dl=0"
         else:
             resultDICT["reply_rocks"] = "我不認識這種岩點耶！"
 
     if utterance == "[jug]長怎樣":
         if args[0] in userDefinedDICT["_rockTypes"]:
-            resultDICT["_img_send"] = args[0]
-            resultDICT["reply_rocks"] = args[0]
+            if args[0] == "jug":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/idnc3ekvnuid6bm/jug.png?dl=0"#args[0]
+            elif args[0] == "crimp":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/f8pby7052vzfg0m/crimp.png?dl=0"
+            elif args[0] == "edge":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/fzs4ae0jjiapgzm/edge.png?dl=0"
+            elif args[0] == "flat":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/vntlf9bmw795ww4/flat.png?dl=0"
+            elif args[0] == "horn":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/dfxxayjbgq8grzv/horn.png?dl=0"
+            elif args[0] == "pinch":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/z4vvzvppl6imgax/pinch.png?dl=0"
+            elif args[0] == "pocket":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/5azmi5pjrf4048s/pocket.png?dl=0"
+            elif args[0] == "sloper":
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/8vaeh37qypa69b7/sloper.png?dl=0"
+            else:#volume
+                resultDICT["reply_rocks"] = "https://www.dropbox.com/s/oz76sdzv57rbb5x/volume.png?dl=0"
         else:
             resultDICT["reply_rocks"] = "我不認識這種岩點耶！"
 

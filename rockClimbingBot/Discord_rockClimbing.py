@@ -32,7 +32,7 @@ class BotClient(discord.Client):
                              "_person_loc":"",
                              "_day_of_week": "",
                              "_gym_name":"",
-                             "_img_send":""
+                             "_distance_intent":0
         }
         self.templateDICT["_day_of_week"] = datetime.today().weekday()
         self.mscDICT = { 
@@ -54,7 +54,7 @@ class BotClient(discord.Client):
             logging.debug("人類說：{}".format(msgSTR))
 
             # keyword trigger 打招呼 
-            if msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello","妳好","嗨嗨","安安","hey","yo","阿羅哈"]:
+            if msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello","妳好","嗨嗨","安安","hey","yo","阿羅哈","你好啊","你好呀",""]:
                 logging.debug("msgSTR1:{}\n".format(msgSTR))
                 #有講過話(判斷對話時間差)
                 print("message.author.id = {}".format(message.author.id))
@@ -79,9 +79,6 @@ class BotClient(discord.Client):
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                 self.mscDICT[message.author.id]["msgSTR"] = msgSTR #將取回的資訊 update 到人類的 msc 裡。
                 self.mscDICT[message.author.id] = NLUmodel(self.mscDICT[message.author.id])
-                if self.mscDICT[message.author.id]["_img_send"] != "":
-                    await channel.send(file=discord.File('data/rocks_pics/'+resultDICT["_img_send"]+'.png'))
-                    self.mscDICT[message.author.id]["_img_send"] = "" #cleaning
         
         await message.reply(self.mscDICT[message.author.id]["replySTR"])
 

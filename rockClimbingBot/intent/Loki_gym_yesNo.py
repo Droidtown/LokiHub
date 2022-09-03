@@ -21,7 +21,10 @@ from random import choice
 from rockClimbingFunc import hasGymCounty
 from rockClimbingFunc import checkGymBTS
 from rockClimbingFunc import checkGymLoc
-
+from rockClimbingFunc import checkGymInString
+from rockClimbingFunc import getGymTime
+from rockClimbingFunc import timeToString
+from rockClimbingFunc import checkGymCity
 DEBUG_gym_yesNo = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
@@ -48,12 +51,25 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_gym_yesNo"] = choice(defaultResponse["_gym_unknown"])
 
     if utterance == "[原岩][假日]有營業嗎":
-        # write your code here
-        pass
+        resultDICT["_gym_name"] = checkGymInString(args[0])
+        if resultDICT["_gym_name"] != "":
+            gymTimeDict = getGymTime(resultDICT["_gym_name"])
+            gymTime = timeToString(gymTimeDict, args[1])
+            resultDICT["reply_gym_time"] = gymTime
+        else:
+            resultDICT["reply_gym_time"] = choice(defaultResponse["_gym_unknown"])
 
     if utterance == "[原岩][新竹]有[分店]嗎":
-        # write your code here
-        pass
+        if args[0] in userDefinedDICT["_gymsShort"]:
+            if args[1] in extendedDICT["_taiwanCities"]:
+                if checkGymCity(args[0], args[1]):
+                    resultDICT["reply_gym_yesNo"] = "有"
+                else:
+                    resultDICT["reply_gym_yesNo"] = "沒有"
+            else:
+                resultDICT["reply_gym_yesNo"] = choice(defaultResponse["_not_taiwan_city"])
+        else:
+            resultDICT["reply_gym_time"] = choice(defaultResponse["_gym_unknown"])
 
     if utterance == "[原岩]倒了嗎":
         if args[0] in userDefinedDICT["_gymsShort"]:
@@ -71,8 +87,13 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_gym_yesNo"] = choice(defaultResponse["_not_taiwan_city"])
 
     if utterance == "[紅石][假日]有開嗎":
-        # write your code here
-        pass
+        resultDICT["_gym_name"] = checkGymInString(args[0])
+        if resultDICT["_gym_name"] != "":
+            gymTimeDict = getGymTime(resultDICT["_gym_name"])
+            gymTime = timeToString(gymTimeDict, args[1])
+            resultDICT["reply_gym_time"] = gymTime
+        else:
+            resultDICT["reply_gym_time"] = choice(defaultResponse["_gym_unknown"])
 
     if utterance == "[紅石][可以][抱石]嗎":
         if args[2] not in userDefinedDICT["_climbing"]:

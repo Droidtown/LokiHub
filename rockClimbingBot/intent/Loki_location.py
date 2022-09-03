@@ -17,6 +17,9 @@
 import json
 import os
 import random
+from rockClimbingFunc import getLocBTSGym
+from rockClimbingFunc import containerToString
+
 DEBUG_location = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
@@ -32,21 +35,40 @@ def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "[台中]":
         resultDICT["_person_loc"] = args[0]
-        resultDICT["reply_person_location"] = random.choice(defaultResponse["_msg_received"])
-
+        print('resultDICT["_distance_intent"]',resultDICT["_distance_intent"])
+        if resultDICT["_distance_intent"] == 1:
+            selectedGyms = getLocBTSGym(args[0],"")
+            gymsNames = containerToString(selectedGyms)
+            resultDICT["reply_person_location"] = "{0}的岩館有{1}".format(args[0], gymsNames)
+        else:
+            resultDICT["reply_person_location"] = random.choice(defaultResponse["_msg_received"])
+        
     if utterance == "[台北市][大安區]":
-        resultDICT["_person_loc"] = inputSTR
-        resultDICT["reply_person_location"] = random.choice(defaultResponse["_msg_received"])
+        resultDICT["_person_loc"] = args[0]
+        if resultDICT["_distance_intent"] == 1:
+            selectedGyms = getLocBTSGym(args[0],"")
+            gymsNames = containerToString(selectedGyms)
+            resultDICT["reply_person_location"] = "{0}的岩館有{1}".format(args[0], gymsNames)
+        else:
+            resultDICT["reply_person_location"] = random.choice(defaultResponse["_msg_received"])
 
     if utterance == "[我]在[台中]":
         if args[0][0] not in ("祢", "你","妳","您"):
             resultDICT["_person_loc"] = args[1]
-            resultDICT["reply_person_location"] = random.choice(defaultResponse["_msg_received"])
+            if resultDICT["_distance_intent"] == 1:
+                selectedGyms = getLocBTSGym(args[1],"")
+                gymsNames = containerToString(selectedGyms)
+                resultDICT["reply_person_location"] = "{0}的岩館有{1}".format(args[1], gymsNames)
+            else:
+                resultDICT["reply_person_location"] = random.choice(defaultResponse["_msg_received"])
+        else:
+            resultDICT["reply_person_location"] = "你怎麼知道"
 
     if utterance == "[我]在[東部]":
         if args[0][0] not in ("祢", "你","妳","您"):
-            resultDICT["_person_loc"] = args[1]
-            resultDICT["reply_person_location"] = random.choice(defaultResponse["_msg_received"])
+            if args[1] in userDefinedDICT["_sides"]:
+                resultDICT["_person_loc"] = args[1]
+                resultDICT["reply_person_location"] = random.choice(defaultResponse["_msg_received"])
 
     if utterance == "[我]在[猩猩縣豬豬市悟淨路141號]":
         if args[0][0] not in ("祢", "你","妳","您"):

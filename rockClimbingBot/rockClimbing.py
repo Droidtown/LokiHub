@@ -86,7 +86,7 @@ except:
 
 accountDICT = json.load(open("account.info", encoding= "utf-8"))
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
-USERNAME = accountDICT["userName"]
+USERNAME = accountDICT["username"]
 LOKI_KEY = accountDICT["lokiKey"]
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
@@ -201,10 +201,9 @@ def runLoki(inputLIST, filterLIST=[]):
     # 將 intent 會使用到的 key 預先設爲空列表
     resultDICT = {
         "_person_loc":"", # gym city, gym price
-        "_ask_time":"",
         "_what_is":"",
         "_gym_name": "",
-        "_img_send":"",
+        "_distance_intent":1
         ##############
         # "reply_gym_name": "",
         # "reply_gym_distance":"",
@@ -361,14 +360,8 @@ def testLoki(inputLIST, filterLIST):
 def testIntent():
     # gym_name
     print("[TEST] gym_name")
-    inputLIST = ['中部岩館有哪些','台中岩館有哪些','台中有哪些岩館','東部有哪些岩館','中部上攀可以去哪','台北哪裡可以抱石','台北哪裡可以攀岩','臺中上攀可以去哪','中部上攀可以去哪裡','台中上攀可以去哪裡','台中攀岩可以去哪裡','台中有哪些上攀岩館','哪幾間岩館有速度攀','東部有哪些上攀岩館','那東部有哪些岩館呢','台北哪些岩館可以抱石','台北有名的岩館有哪些','東部哪些岩館可以抱石','東部有名的岩館有哪些']
+    inputLIST = ['中部岩館有哪些','台中岩館有哪些','台中有哪些岩館','東部有哪些岩館','中部上攀可以去哪','台北哪裡可以抱石','台北哪裡可以攀岩','臺中上攀可以去哪','中部上攀可以去哪裡','台中上攀可以去哪裡','台中攀岩可以去哪裡','台中有哪些上攀岩館','哪幾間岩館有速度攀','東部攀岩可以去哪裡','東部有哪些上攀岩館','那東部有哪些岩館呢','台北哪些地方可以攀岩','台北哪些岩館可以抱石','台北有名的岩館','東部哪些岩館可以抱石','東部有名的岩館']
     testLoki(inputLIST, ['gym_name'])
-    print("")
-
-    # gym_city
-    print("[TEST] gym_city")
-    inputLIST = ['double 8在哪裡','紅石聯絡方式','double 8在哪個縣市','台北哪裡有速度攀','哪裡有速度攀場館','東部哪裡有速度攀','中部哪裡有上攀岩館','新竹紅石的地址是？','新竹紅石的電話多少','台灣哪些縣市有岩館呢','哪個縣市有速度攀場館','我需要新竹紅石的電話','新竹紅石的電話是幾號','可以給我double 8的地址嗎','可以告訴我double 8的地址嗎','可以給我double 8岩館的地址嗎','可以告訴我double 8岩館的地址嗎']
-    testLoki(inputLIST, ['gym_city'])
     print("")
 
     # whatIs
@@ -377,16 +370,16 @@ def testIntent():
     testLoki(inputLIST, ['whatIs'])
     print("")
 
-    # location
-    print("[TEST] location")
-    inputLIST = ['台中','我在台中','我在東部','台北市大安區','猩猩縣豬豬市悟淨路141號','我在猩猩縣豬豬市悟淨路141號']
-    testLoki(inputLIST, ['location'])
-    print("")
-
     # equipment_price
     print("[TEST] equipment_price")
     inputLIST = ['岩鞋多貴？','岩鞋很貴嗎？','岩鞋要價多少？','岩鞋要多少錢？','租岩鞋要花多少','多少錢租得到岩鞋','岩鞋大概多少錢？','買岩鞋要花多少？','多少錢可以租到岩鞋','多少錢買得到岩鞋？','多少錢能買得到岩鞋？','花多少才租得到岩鞋？','花多少才買得到岩鞋？','買岩鞋需要花到四個小朋友嗎？']
     testLoki(inputLIST, ['equipment_price'])
+    print("")
+
+    # gym_city
+    print("[TEST] gym_city")
+    inputLIST = ['紅石資訊','紅石電話','double 8在哪裡','紅石聯絡方式','紅石電話號碼','double 8在哪個縣市','台北哪裡有速度攀','哪裡有速度攀場館','東部哪裡有速度攀','中部哪裡有上攀岩館','新竹紅石的地址是？','新竹紅石的電話多少','台灣哪些縣市有岩館呢','哪個縣市有速度攀場館','我需要新竹紅石的電話','新竹紅石的電話是幾號','可以給我double 8的地址嗎','可以告訴我double 8的地址嗎','可以給我double 8岩館的地址嗎','可以告訴我double 8岩館的地址嗎']
+    testLoki(inputLIST, ['gym_city'])
     print("")
 
     # equipment_whereGet
@@ -401,6 +394,12 @@ def testIntent():
     testLoki(inputLIST, ['gym_howMany'])
     print("")
 
+    # location
+    print("[TEST] location")
+    inputLIST = ['台中','我在台中','我在東部','台北市大安區','猩猩縣豬豬市悟淨路141號','我在猩猩縣豬豬市悟淨路141號']
+    testLoki(inputLIST, ['location'])
+    print("")
+
     # rules
     print("[TEST] rules")
     inputLIST = ['攀岩有規則嗎','抱石要注意什麼','攀岩有哪些規則','上攀的規則是什麼','上攀的規則有哪些','上攀要小心什麼？','攀岩有難度之分嗎','攀岩的規則是什麼','攀岩的規則有哪些','奧運的攀岩規則是？','上攀有什麼要注意的？','上攀有哪些要小心的？','怎麼知道我是哪個等級','要怎麼知道自己的等級']
@@ -409,7 +408,7 @@ def testIntent():
 
     # gym_time
     print("[TEST] gym_time")
-    inputLIST = ['多早開','幾點開','啥時開門','幾時營業','幾點營業','幾點開門','幾點關？','平常幾點開','營業時間是？','營業時間是幾點？','營業時間幾點到幾點？']
+    inputLIST = ['多早開','幾點開','啥時開門','幾時營業','幾時開門','幾時關門','幾點營業','幾點開門','幾點關？','平常幾點開','什麼時候開門','今天有開嗎？','營業時間是？','今天有營業嗎？','營業時間是幾點？','營業時間幾點到幾點？']
     testLoki(inputLIST, ['gym_time'])
     print("")
 
@@ -451,7 +450,7 @@ def testIntent():
 
     # gym_price
     print("[TEST] gym_price")
-    inputLIST = ['Y17很貴嗎？','抱石會很貴嗎','攀岩會很貴嗎','紅石一次多少','紅石票價多少','去抱石一次多少','去攀岩一次多少','抱石一次多少錢','攀岩一次多少錢','去一次岩館多少錢','去攀一次岩多少錢','去攀岩一次多少錢','抱石通常要花多少','攀岩通常要花多少','紅石攀岩一次多少','double 8 一個人多少錢','紅石攀岩一天多少錢','去double8攀岩一次多少']
+    inputLIST = ['Y17很貴嗎？','抱石會很貴嗎','攀岩會很貴嗎','紅石一次多少','紅石票價多少','去抱石一次多少','去攀岩一次多少','抱石一次多少錢','攀岩一次多少錢','去一次岩館多少錢','去攀一次岩多少錢','去攀岩一次多少錢','抱石通常要花多少','攀岩通常要花多少','紅石攀岩一次多少','double 8一個人多少錢','紅石攀岩一天多少錢','去double8攀岩一次多少','double 8攀岩一次多少錢']
     testLoki(inputLIST, ['gym_price'])
     print("")
 
@@ -477,3 +476,9 @@ if __name__ == "__main__":
     print(resultDICT)    
     resultDICT = execLoki(["double 8攀岩一次多少錢"])
     print(resultDICT)    
+    resultDICT = execLoki(["double 8假日幾點開"])
+    print(resultDICT)
+    resultDICT = execLoki(["平日double 8營業時間是"])
+    print(resultDICT)
+    resultDICT = execLoki(["double 8假日幾點關門"])
+    print(resultDICT)

@@ -164,6 +164,17 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
         else:
             resultDICT["reply_gym_price"] = choice(defaultResponse["_gym_unknown"])
+    
+    if utterance == "[double 8]攀岩[一次]多少[錢]":
+        if args[0] in userDefinedDICT["_gymsShort"]:
+            resultDICT["_gym_name"] = args[0]
+            gymPriceDict = getGymPrice(args[0])
+            gymPrice = priceToString(gymPriceDict)
+            resultDICT["reply_gym_price"] = gymPrice
+        elif args[0] in userDefinedDICT["_climbing"] or args[0] in userDefinedDICT["_climbingGym"]:
+            resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
+        else:
+            resultDICT["reply_gym_price"] = choice(defaultResponse["_gym_unknown"])
 
     if utterance == "去攀[一次][岩]多少[錢]":
         resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
@@ -182,5 +193,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "攀岩[通常]要花多少":
         resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
+
 
     return resultDICT
