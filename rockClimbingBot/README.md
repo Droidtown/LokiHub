@@ -78,6 +78,6 @@
     - [Driodtown Linguistic Tech](https://api.droidtown.co/document/#Loki_9)
 
 ### 作者
-Ansley Hung
+Ansley Hung<br>
 倘若使用上有任何疑問，歡迎提出pull request或透過Email聯繫
  <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">ansleyh125@gmail.com</a>
