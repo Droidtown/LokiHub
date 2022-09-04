@@ -368,7 +368,7 @@ def model(mscDICT):
                 replySTR00 = "它能用來做成很多不一樣的料理哦。"
                 replySTR01 = "不知道最近{}多少錢？".format(ingr_inseason)
                 replySTR10 = "它的挑選方法很有趣哦。"
-                replySTR11 = "但要注意它有一些搭配禁忌。"
+                replySTR11 = "但要注意它有一些禁忌哦。"
                 replyLIST0 = [replySTR0, replySTR1]
                 replyLIST1 = [replySTR00, replySTR01, replySTR10, replySTR11]
 
@@ -549,7 +549,7 @@ def model(mscDICT):
         
         #default
         else: 
-            mscDICT["replySTR"] = choice(["好喔", "好的Ok", "繼續問我更多食材問題吧"])
+            mscDICT["replySTR"] = choice(["好喔", "好的 Ok", "好的，請繼續問我更多食材問題吧"])
     
         #紀錄本次的intent
         mscDICT["intent"] = []

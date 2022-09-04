@@ -47,7 +47,7 @@ https://user-images.githubusercontent.com/58472945/188080414-a8320f4a-15b1-4157-
 │  ├── Updater.py
 │  └── USER_DEFINED.json
 │          
-└─ ref # 啟用 Loki 服務時，需要將裡面的所有檔案匯入 Loki project 中
+└─ ref # 啟用 Loki 服務時，需要將裡面所有的檔案匯入 Loki project 中
    ├── all_ingre.ref
    ├── capability.ref
    ├── CheckInSeason.ref
