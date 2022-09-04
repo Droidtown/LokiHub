@@ -5,6 +5,7 @@
 - [環境設置](##環境設置)
 - [Loki啟用說明](##Loki啟用說明)
 - [Discord Bot建置](##DiscordBot建置)
+- [使用者互動說明](##使用者互動說明)
 - [參考資料](##參考資料)
 - [作者](##作者)
 ## Bot介紹 
@@ -84,6 +85,8 @@
 8. 將剛剛`複製`的金鑰貼入lokiKey的value中
 ## DiscordBot建置
 
+## 使用者互動說明
+
 ## 參考資料
 - 岩館資訊：
   - [轟菌體能](https://shenlee799.com/climbinggyms-taiwan/) 
@@ -95,6 +98,7 @@
     - [Yinggan Chen-Medium](https://yinggan.medium.com/%E7%B0%A1%E6%98%93%E6%94%80%E5%B2%A9%E8%A1%93%E8%AA%9E%E4%B8%80%E6%AC%A1%E4%BA%86%E8%A7%A3-223387bf04e7)
 - NLU模型＆Loki操作
     - [Driodtown Linguistic Tech](https://api.droidtown.co/document/#Loki_9)
+    - [LokiHub](https://github.com/Droidtown/LokiHub)
 
 ## 作者
 [Ansley Hung](https://github.com/Chilinhung) <br>
