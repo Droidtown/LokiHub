@@ -16,7 +16,7 @@
 
 DEMO
 -------------
-https://user-images.githubusercontent.com/58472945/188080414-a8320f4a-15b1-4157-a8e9-5d1ed3ef9c54.mp4
+![demo](https://user-images.githubusercontent.com/60727654/188308106-9ed17f09-9d18-4ac2-98f6-bfae481b6eb2.gif)
 
 檔案總覽/目錄
 -------------
