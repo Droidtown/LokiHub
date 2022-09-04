@@ -100,7 +100,7 @@ DEMO
 }
 ```
 
-啟動當季食材小幫手
+啟動 Ingredient Bot
 -------------
 - 執行指令：`$ python ingredient_bot.py`
 
