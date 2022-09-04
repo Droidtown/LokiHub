@@ -73,7 +73,7 @@
 4. 點擊進入設立完成之專案
 5. 點擊`選擇檔案`匯入所有`.ref`檔<br>⚠一次最多匯10筆，共16筆，請分兩次匯入
 6. 點選左上角房子圖示，回到 Loki控制台，點選`複製`專案金鑰
-7. 在rockClimbingBot資料夾底下創建`account.info`檔案，輸入以下內容，並將剛剛複製的金鑰貼入LokiKey的value中
+7. 在rockClimbingBot資料夾底下創建`account.info`檔案，並輸入以下內容
 ```
 {
     "discord_token":"",
@@ -81,7 +81,7 @@
     "lokiKey":"--填入專案金鑰--",
 }
 ```
-
+8. 將剛剛`複製`的金鑰貼入lokiKey的value中
 ## DiscordBot建置
 
 ## 參考資料
