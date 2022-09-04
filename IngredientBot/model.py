@@ -17,7 +17,8 @@ reject_msg = ["討厭", "還有呢", "有甚麼別的食材", "有什麼別的�
 capability_msg = ["你會什麼", "你會做啥", "你可以做什麼"]
 all_ingr_msg = ["所有當季食材"]
 inseason_msg = ["當季食材有啥"]
-msgLIST = reject_msg + capability_msg + all_ingr_msg + inseason_msg
+recipe_msg = ["什麼料理"]
+msgLIST = reject_msg + capability_msg + all_ingr_msg + inseason_msg + recipe_msg
 
 def checkInSeason(ingredient):
     # 檢查目標是否為當季食材
@@ -103,15 +104,23 @@ def getPrice(ingredient):
     priceDICT={}
     for index,row in table[0].iterrows():
         tmp=[]
+        tmp.append(row["品名"])
+        if type(row["品種"]) is float:
+            tmp.append("")
+        else:
+            tmp.append(row["品種"])
         tmp.append(row["上價"])
         tmp.append(row["中價"])
         tmp.append(row["下價"])
-        name = str(row["品名"]) + "(" + str(row["品種"]) + ")"
-        priceDICT[name]=tmp
+        if type(row["品種"]) is float:
+            name = str(row["品名"])
+        else:
+            name = str(row["品名"]) + "(" + str(row["品種"]) + ")"
+        priceDICT[name] = tmp
 
     ingr_priceDICT={}
     for key in priceDICT.keys():
-        if ingredient in key:
+        if ingredient == priceDICT[key][0]:
             ingr_priceDICT[key]=priceDICT[key]
 
     return ingr_priceDICT
@@ -374,7 +383,11 @@ def model(mscDICT):
 
         #intent = price，想知道這項食材的價格
         if "price" in resultDICT.keys():
-            ingr = getIngredient(resultDICT, mscDICT)
+            ingr_is_unknown = False
+            if "ingredient" in resultDICT.keys():
+                ingr = resultDICT["ingredient"]
+            else:
+                ingr_is_unknown = True
             
             close_time0 = datetime.strptime(str(datetime.now().date())+'0:00', '%Y-%m-%d%H:%M')
             close_time1 =  datetime.strptime(str(datetime.now().date())+'7:30', '%Y-%m-%d%H:%M')
@@ -383,26 +396,27 @@ def model(mscDICT):
 
             if n_weekday == 0:
                 mscDICT["replySTR"] = "星期一休市"
-            
             elif close_time0 < n_time and n_time < close_time1:
                 mscDICT["replySTR"] = "食材尚在運送拍賣中"
-
+            elif ingr_is_unknown:
+                mscDICT["replySTR"] = "查詢不到它的價格，請確認一下你想查詢的目標用字是否正確哦 ~"
             else:
                 ingr_priceDICT = getPrice(ingr)
                 if len(ingr_priceDICT) > 0:
                     replySTR = ""
                     for key in ingr_priceDICT:
-                        replySTR = replySTR + key + "的今日價格：{}元(上價)，{}元(中價)，{}元(下價)".format(ingr_priceDICT[key][0], ingr_priceDICT[key][1], ingr_priceDICT[key][2]) + "\n"
+                        replySTR = replySTR + key + "的今日價格：{}元(上價)，{}元(中價)，{}元(下價)".format(ingr_priceDICT[key][2], ingr_priceDICT[key][3], ingr_priceDICT[key][4]) + "\n"
 
                     mscDICT["replySTR"] = replySTR
                 else:
                     mscDICT["replySTR"] = "查不到{}的價錢！".format(ingr)
 
             #紀錄
-            mscDICT["ingredient"] = ingr
+            if "ingredient" in resultDICT.keys():
+                mscDICT["ingredient"] = ingr
 
         #intent = recipe，想知道這項食材有什麼作法
-        if "recipe" in resultDICT.keys():
+        if "recipe" in resultDICT.keys() or mscDICT["msgSTR"] in recipe_msg:
             ingr = getIngredient(resultDICT, mscDICT)
             recipe_result = getRecipe(ingr)
             if len(recipe_result) > 0:
@@ -526,12 +540,12 @@ def model(mscDICT):
         #intent = accept，表示接受
         elif mscDICT["msgSTR"].lower() in ["ok", "了解","好哦","好喔","沒問題","可以", "喜歡", "喜歡ㄟ", "好ㄟ"]:
             if "reject" in mscDICT["intent"]:
-                mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 ^_^".format(mscDICT["ingredient"])
+                mscDICT["replySTR"] = "你可以問我更多關於{}的問題哦 ^_^".format(mscDICT["ingredient"])
             else:
                 if mscDICT["ingredient"] == "":
                     mscDICT["replySTR"] = "歡迎問我關於食材的問題哦 ^_^"
                 else:
-                    mscDICT["replySTR"] = "你可以問我更多關於{}的資訊哦 ^_^".format(mscDICT["ingredient"])
+                    mscDICT["replySTR"] = "你可以問我更多關於{}的問題哦 ^_^".format(mscDICT["ingredient"])
         
         #default
         else: 

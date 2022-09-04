@@ -82,8 +82,10 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         pass
 
     if utterance == "[我]想要[別]的[食材]":
-        # write your code here
-        pass
+        if "蔬菜" not in args[2] and "水果" not in args[2] or "海鮮" not in args[2] or "食材" not in args[2]:
+            resultDICT.pop("reject")
+        else:
+            pass
 
     if utterance == "有沒[有]推薦[別]的[食材]":
         # write your code here
