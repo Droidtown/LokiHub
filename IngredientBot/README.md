@@ -100,7 +100,7 @@ https://user-images.githubusercontent.com/58472945/188080414-a8320f4a-15b1-4157-
 }
 ```
 
-執行以啟動 Ingredient Bot / 當季食材小幫手
+啟動 Ingredient Bot / 當季食材小幫手
 -------------
 - 執行指令：`$ python ingredient_bot.py`
 
@@ -112,7 +112,7 @@ https://user-images.githubusercontent.com/58472945/188080414-a8320f4a-15b1-4157-
 * [農業知識入口網](https://kmweb.coa.gov.tw/)
 * [美食天下](https://www.meishichina.com/)
 
-參考資料
+參考文件
 -------------
 [卓騰語言科技產品說明文件](https://api.droidtown.co/document/)
 
