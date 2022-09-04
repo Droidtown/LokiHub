@@ -13,7 +13,7 @@ import Loki
 inSeasonDICT = json.load(open("./info/inSeason.json", encoding="utf-8")) 
 IngredientRelatedDICT = json.load(open("./info/ingredient.json", encoding="utf-8"))
 
-reject_msg = ["討厭", "還有呢", "有甚麼別的食材", "有什麼別的食材", "有甚麼別的", "有什麼別的", "還有什麼？", "還有什麼", "有什麼其他的"]
+reject_msg = ["討厭", "還有呢", "有甚麼別的食材", "有什麼別的食材", "有甚麼別的", "有什麼別的", "還有什麼？", "還有什麼", "有什麼其他的", "不太喜歡"]
 capability_msg = ["你會什麼", "你會做啥", "你可以做什麼"]
 all_ingr_msg = ["所有當季食材"]
 inseason_msg = ["當季食材有啥"]
