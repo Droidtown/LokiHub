@@ -13,7 +13,7 @@ import Loki
 inSeasonDICT = json.load(open("./info/inSeason.json", encoding="utf-8")) 
 IngredientRelatedDICT = json.load(open("./info/ingredient.json", encoding="utf-8"))
 
-reject_msg = ["討厭", "還有呢", "有甚麼別的食材", "有什麼別的食材", "有甚麼別的", "有什麼別的", "還有什麼？", "還有什麼", "有什麼其他的", "不太喜歡"]
+reject_msg = ["討厭", "還有呢", "有甚麼別的食材", "有什麼別的食材", "有甚麼別的", "有什麼別的", "還有什麼", "還有什麼", "有什麼其他的", "不太喜歡"]
 capability_msg = ["你會什麼", "你會做啥", "你可以做什麼"]
 all_ingr_msg = ["所有當季食材"]
 inseason_msg = ["當季食材有啥"]
@@ -470,7 +470,7 @@ def model(mscDICT):
 
         #intent = capability，想知道能詢問bot什麼問題
         if "capability" in resultDICT.keys() or mscDICT["msgSTR"] in capability_msg:
-            mscDICT["replySTR"] = "我知道現在的當季食材有什麼，還有一些關於食材的資訊，像是價格、挑選方法或是禁忌，還有它可以做成什麼料理..."
+            mscDICT["replySTR"] = "以下這些是我知道的食材知識：\n1. 所有的當季食材種類\n2. 確認特定食材是否當季\n3. 食材的挑選方法\n4. 食材的價格\n5. 食材相關的禁忌\n6. 食材相關的料理\n7. 食材的產季\n你可以針對它們問我問題哦！\n"
 
         #intent = which_season，想了解某個食材的產季
         if "which_season" in resultDICT.keys():
