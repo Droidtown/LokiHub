@@ -101,7 +101,7 @@
 }
 ```
 ## 使用者互動說明
-執行`python3 Discord_rockClimbing.py`即可開始與Bot互動<br>
+完成上述程序後，執行`python3 Discord_rockClimbing.py`即可開始與Bot互動<br>
 <互動示例><br>
 User: `@台灣攀岩`嘉義哪裡可以攀岩<br>
 台灣攀岩: 嘉義的岩館有「嘉義市國民運動中心8a攀岩場」, 「嘉義攀岩會館」<br>
