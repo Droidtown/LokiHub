@@ -396,9 +396,9 @@ def model(mscDICT):
             n_weekday = datetime.today().weekday()
 
             if n_weekday == 0:
-                mscDICT["replySTR"] = "星期一休市"
+                mscDICT["replySTR"] = "星期一休市哦"
             elif close_time0 < n_time and n_time < close_time1:
-                mscDICT["replySTR"] = "食材尚在運送拍賣中"
+                mscDICT["replySTR"] = "目前食材尚在運送拍賣中，還查不到價錢哦"
             elif ingr_is_unknown:
                 mscDICT["replySTR"] = "查詢不到它的價格，請確認一下你想查詢的目標用字是否正確哦 ~"
             else:
@@ -413,7 +413,7 @@ def model(mscDICT):
                     mscDICT["replySTR"] = "查不到{}的價錢！".format(ingr)
 
             #紀錄
-            if "ingredient" in resultDICT.keys():
+            if ingr_is_unknown == False:
                 mscDICT["ingredient"] = ingr
 
         #intent = recipe，想知道這項食材有什麼作法
