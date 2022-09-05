@@ -222,8 +222,7 @@ def execLoki(content, filterLIST=[], splitLIST=[]):
         resultDICT    DICT           合併 runLoki() 的結果，請先設定 runLoki() 的 resultDICT 初始值
 
     e.g.
-        splitLIST = ["！", "，", "。", "？", "!", ",", "
-", "；", "　", ";"]
+        splitLIST = ["！", "，", "。", "？", "!", ",", "", "；", "　", ";"]
         resultDICT = execLoki("今天天氣如何？後天氣象如何？")                      # output => ["今天天氣"]
         resultDICT = execLoki("今天天氣如何？後天氣象如何？", splitLIST=splitLIST) # output => ["今天天氣", "後天氣象"]
         resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"])                # output => ["今天天氣", "後天氣象"]

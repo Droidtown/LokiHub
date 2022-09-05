@@ -212,7 +212,6 @@ def getAllIngr(time, type):
     else:
         type = "食材"
 
-
     if month in ["春天", "夏天", "秋天", "冬天"]:
         if month == "春天":
             if type == "食材":
@@ -242,7 +241,6 @@ def getAllIngr(time, type):
 
     return all_ingr_inseasonLIST, month, type
 
-
 def getIngredient(resultDICT, mscDICT):
     # 取得食材
     if "ingredient" in resultDICT.keys():
@@ -252,7 +250,6 @@ def getIngredient(resultDICT, mscDICT):
 
     return ingredient
 
-
 def getLokiResult(inputSTR):
     # 取得 Loki 回傳的結果
     punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
@@ -261,6 +258,7 @@ def getLokiResult(inputSTR):
     resultDICT = Loki.runLoki(inputLIST, filterLIST)
 
     return resultDICT
+
 
 def model(mscDICT):
     """
