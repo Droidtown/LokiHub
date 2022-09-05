@@ -13,7 +13,7 @@ import Loki
 inSeasonDICT = json.load(open("./info/inSeason.json", encoding="utf-8")) 
 IngredientRelatedDICT = json.load(open("./info/ingredient.json", encoding="utf-8"))
 
-reject_msg = ["討厭", "還有呢", "有甚麼別的食材", "有什麼別的食材", "有甚麼別的", "有什麼別的", "還有什麼", "還有什麼", "有什麼其他的", "不太喜歡"]
+reject_msg = ["討厭", "還有呢", "有甚麼別的食材", "有什麼別的食材", "有甚麼別的", "有什麼別的", "還有什麼", "還有什麼", "有什麼其他的", "不太喜歡", "不好", "沒有", "還好"]
 capability_msg = ["你會什麼", "你會做啥", "你可以做什麼"]
 all_ingr_msg = ["所有當季食材"]
 inseason_msg = ["當季食材有啥"]
@@ -338,7 +338,8 @@ def model(mscDICT):
 
                 replySTR0 = "那麼{}你覺得如何？".format(recommend_result)
                 replySTR1 = "再給你另外一道，{}料理：{}".format(ingr, recommend_result)
-                replyLIST = [replySTR0, replySTR1]
+                replySTR2 = "這道呢？{}料理：{}".format(ingr, recommend_result)
+                replyLIST = [replySTR0, replySTR1, replySTR2]
 
                 mscDICT["replySTR"] = choice(replyLIST)
 
@@ -462,8 +463,8 @@ def model(mscDICT):
         if "recommend" in resultDICT.keys():
             recommend_result, ingr = getRecommend()
 
-            replySTR0 = "可以試試看{}".format(recommend_result)
-            replySTR1 = "給你這個，{}料理：{}".format(ingr, recommend_result)
+            replySTR0 = "可以試試看{}，這道你喜歡嗎？".format(recommend_result)
+            replySTR1 = "給你這個，{}料理：{}，你喜歡嗎？".format(ingr, recommend_result)
             replyLIST = [replySTR0, replySTR1]
 
             mscDICT["replySTR"] = choice(replyLIST)
@@ -539,13 +540,12 @@ def model(mscDICT):
 
         #intent = accept，表示接受
         elif mscDICT["msgSTR"].lower() in ["ok", "了解","好哦","好喔","沒問題","可以", "喜歡", "喜歡ㄟ", "好ㄟ"]:
-            if "reject" in mscDICT["intent"]:
-                mscDICT["replySTR"] = "你可以問我更多關於{}的問題哦 ^_^".format(mscDICT["ingredient"])
-            else:
-                if mscDICT["ingredient"] == "":
-                    mscDICT["replySTR"] = "歡迎問我關於食材的問題哦 ^_^"
-                else:
-                    mscDICT["replySTR"] = "你可以問我更多關於{}的問題哦 ^_^".format(mscDICT["ingredient"])
+            replySTR0 = "好耶，你可以問我更多關於食材的問題哦 ^_^，"
+            replySTR1 = "OK，歡迎繼續問我關於食材的問題哦 ^_^"
+            replySTR2 = "嗯嗯，繼續問我問題吧，我還知道很多其他食材的知識哦 ^_^"
+            replyLIST = [replySTR0, replySTR1, replySTR2]
+
+            mscDICT["replySTR"] = choice(replyLIST)
         
         #default
         else: 
