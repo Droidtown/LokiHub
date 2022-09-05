@@ -39,7 +39,7 @@
 │    ├── Loki_whatIs.py
 │    ├── USER_DEFINED.json
 │    └── Updater.py
-├── ref     #於登入Loki並創建專案後讀取，即可更動原始意圖
+├── ref       #於登入Loki並創建專案後讀取，即可更動原始意圖
 │    ├── chat.ref
 │    ├── equipment_list.ref
 │    ├── equipment_price.ref
@@ -63,7 +63,7 @@
 ```
 ## 環境設置
 - 環境需求
-    - Python 3 or above (p.s. 此Bot用python 3.7建立)
+    - Python 3 or above (此Bot以python 3.7建立)
 - 套件安裝
     - `pip3 install ArticutAPI`
     - 其他常用套件：pandas, random, re, datetime
