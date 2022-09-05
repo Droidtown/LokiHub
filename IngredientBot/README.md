@@ -113,6 +113,7 @@ Demo
 * [台北農產運銷股份有限公司](http://www.tapmc.com.taipei/)
 * [農業知識入口網](https://kmweb.coa.gov.tw/)
 * [美食天下](https://www.meishichina.com/)
+* [台灣盛產當季蔬菜、水果、海鮮有哪些？整理1月到12月份時令食物清單](https://www.remembuy.com/list/NHUPaR)
 
 參考文件
 -------------
