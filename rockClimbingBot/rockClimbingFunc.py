@@ -238,6 +238,18 @@ def containerToString(container):
             string += "「" + i + "」"
     return string
 
+def containerToString1(container):
+    conlen = len(container)
+    c = 1
+    string = ""
+    for i in container:
+        if c != conlen:
+            string += i + ", "
+            c += 1
+        else:
+            string += i 
+    return string
+
 def getGymDistrict(city, bts):
     districtSet = set()
     if "抱石" in bts:

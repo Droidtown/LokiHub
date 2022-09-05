@@ -16,6 +16,7 @@
 
 import json
 import os
+from rockClimbingFunc import containerToString1
 
 DEBUG_rock = True
 try:
@@ -104,7 +105,9 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "[岩點]有哪些":
         if args[0] in userDefinedDICT["_rocks"]:
-            resultDICT["reply_rocks"] = "{0}較常見的有{1}".format(args[0], userDefinedDICT["_rockTypes"])
+            rocksStr = containerToString1(userDefinedDICT["_rockTypes"])
+            resultDICT["reply_rocks"] = "{0}較常見的有{1}".format(args[0], rocksStr)
+            return resultDICT
         elif args[0] in userDefinedDICT["_climbingEquip"]:
             resultDICT["reply_equipment_list"] = args[0]+"有岩粉、岩鞋、粉袋、確保器、安全吊帶、手套等"
         else:
@@ -112,7 +115,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "[岩點]有哪幾[種]":
         if args[0] in userDefinedDICT["_rocks"]:
-            resultDICT["reply_rocks"] = "{0}較常見的有{1}".format(args[0], userDefinedDICT["_rockTypes"])
+            rocksStr = containerToString1(userDefinedDICT["_rockTypes"])
+            resultDICT["reply_rocks"] = "{0}較常見的有{1}".format(args[0], rocksStr)
         elif args[0] in userDefinedDICT["_climbingEquip"]:
             resultDICT["reply_equipment_list"] = args[0]+"有岩粉、岩鞋、粉袋、確保器、安全吊帶、手套等"
         else:

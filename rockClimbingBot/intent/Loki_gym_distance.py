@@ -45,7 +45,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -57,7 +56,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -69,7 +67,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -81,7 +78,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -93,7 +89,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -104,7 +99,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
         else:
             resultDICT["reply_gym_name"] = ""
-            resultDICT["_distance_intent"] = 1
 
     if utterance == "哪裡有[速度攀]":
         if args[0] in userDefinedDICT["_climbing"]:
@@ -114,7 +108,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         elif args[0] in userDefinedDICT["_climbingGym"]:
             if resultDICT["_person_loc"] != "": #bot 知道人在哪裡
                 selectedGyms = getLocBTSGym(resultDICT["_person_loc"][:2], args[0])
@@ -122,7 +115,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])        
         
@@ -140,7 +132,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])        
 
@@ -152,7 +143,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])        
 
@@ -163,7 +153,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_gym_name"] = "{0}的岩館有{1}".format(resultDICT["_person_loc"], gymsNames)
         else:
             resultDICT["reply_gym_name"] = ""
-            resultDICT["_distance_intent"] = 1
 
     if utterance == "推薦[一些][距離][近]的[岩館]":
         if args[3] in userDefinedDICT["_climbingGym"]:
@@ -173,7 +162,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}有{2}".format(resultDICT["_person_loc"],args[3], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])        
 
@@ -185,7 +173,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}有{2}".format(resultDICT["_person_loc"],args[2], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -197,7 +184,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}有{2}".format(resultDICT["_person_loc"],args[3], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -208,7 +194,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_gym_name"] = "{0}的岩館有{2}".format(resultDICT["_person_loc"], gymsNames)
         else:
             resultDICT["reply_gym_name"] = ""
-            resultDICT["_distance_intent"] = 1
 
     if utterance == "有哪些[岩館]呢":
         if args[0] in userDefinedDICT["_climbingGym"]:
@@ -218,7 +203,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -230,7 +214,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -243,7 +226,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -255,7 +237,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}岩館有{2}".format(resultDICT["_person_loc"],args[0], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 
@@ -279,7 +260,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
                 resultDICT["reply_gym_name"] = "{0}的{1}有{2}".format(resultDICT["_person_loc"],args[2], gymsNames)
             else:
                 resultDICT["reply_gym_name"] = ""
-                resultDICT["_distance_intent"] = 1
         else:
             resultDICT["reply_gym_distance"] = random.choice(defaultResponse["_not_rock_climbing"])
 

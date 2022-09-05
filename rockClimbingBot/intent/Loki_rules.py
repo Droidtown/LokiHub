@@ -62,7 +62,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         else:
             resultDICT["reply_rules"] = random.choice(defaultResponse["_not_rock_climbing"])
 
-    if utterance == "[奧運]的攀岩[規則]是？":
+    if utterance == "[奧運]的攀岩[規則]是":
         if args[0] == "奧運":
             resultDICT["reply_rules"] = defaultResponse["_olympic_rules"]
         else:
@@ -96,6 +96,12 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["reply_rules"] = "爬過就知道了"
     
     if utterance == "攀岩要注意什麼":
+        resultDICT["reply_rules"] = defaultResponse["_be_aware"]
+
+    if utterance == "想問攀岩的[規則]":
+        resultDICT["reply_rules"] = defaultResponse["_general_rules"]
+
+    if utterance == "攀岩的注意[事項]":
         resultDICT["reply_rules"] = defaultResponse["_be_aware"]
 
     return resultDICT

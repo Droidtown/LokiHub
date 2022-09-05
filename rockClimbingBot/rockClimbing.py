@@ -203,7 +203,7 @@ def runLoki(inputLIST, filterLIST=[]):
         "_person_loc":"", # gym city, gym price
         "_what_is":"",
         "_gym_name": "",
-        "_distance_intent":1
+        #"_distance_intent":1
         ##############
         # "reply_gym_name": "",
         # "reply_gym_distance":"",
