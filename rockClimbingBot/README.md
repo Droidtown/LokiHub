@@ -85,7 +85,7 @@
 ## DiscordBot建置
 1. 註冊並登入Discord帳號
 2. 進入[Discord Developers](https://discord.com/developers/applications)
-3. 點擊畫面右上方的`New Application`->填上Bot名稱->`create`建立Discord Bot，
+3. 點擊畫面右上方的`New Application`->填上Bot名稱->`create`建立Discord Bot
 4. 點選右方欄位SETTINGS中的`Bot`->點選`Add Bot`
 5. 點選右方欄位SETTINGS中的`OAuth2`->點選`URL Generator`
 6. 於SCOPES欄位勾選「bot」
