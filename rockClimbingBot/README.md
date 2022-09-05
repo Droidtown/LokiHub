@@ -119,6 +119,7 @@ User: `@台灣攀岩` 攀岩有規則嗎<br>
     - [Yinggan Chen-Medium](https://yinggan.medium.com/%E7%B0%A1%E6%98%93%E6%94%80%E5%B2%A9%E8%A1%93%E8%AA%9E%E4%B8%80%E6%AC%A1%E4%BA%86%E8%A7%A3-223387bf04e7)
 - NLU模型＆Loki操作
     - [Driodtown Linguistic Tech](https://api.droidtown.co/document/#Loki_9)
+    - [LokiHub](https://github.com/Droidtown/LokiHub/tree/main/StatsBot)
 
 ## 作者
 [Ansley Hung](https://github.com/Chilinhung) <br>
