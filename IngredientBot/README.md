@@ -26,6 +26,7 @@ Demo
 ├── ingredient_bot.py  # main program，執行以啟動 bot，處理與 discord 間的互動
 ├── Loki.py            # 主要使用到 function runLoki 
 ├── model.py           # NLU model 以及相關的 function
+├── Demo.gif           # Demo 影片
 ├── README.md
 ├── requirements.txt
 │  
