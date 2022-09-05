@@ -63,7 +63,7 @@
 ```
 ## 環境設置
 - 環境需求
-    - Python 3 or above (此Bot以python 3.7建立)
+    - Python 3 or above (此Bot以python 3.7製作)
 - 套件安裝
     - `pip3 install ArticutAPI`
     - 其他常用套件：pandas, random, re, datetime
@@ -92,7 +92,7 @@
 7. 於BOT PERMISSIONS欄位勾選「Send Messages」、「Embed Links」、「Attach Files」及「Read Message History」
 8. 複製GENERATED URL到新分頁中貼上，選擇Bot欲加入之伺服器，即完成添加
 9. 點選SETTINGS`Bot`->`Reset Token`
-10. 將Token貼上至`account.info`中
+10. 將Token貼至`account.info`中
 ```
 {
     "discord_token":"--填入token--",
@@ -101,7 +101,13 @@
 }
 ```
 ## 使用者互動說明
-
+執行`python3 Discord_rockClimbing.bot`即可開始與Bot互動
+<互動示例>
+User: `@台灣攀岩`嘉義哪裡可以攀岩
+台灣攀岩: 嘉義的岩館有「嘉義市國民運動中心8a攀岩場」, 「嘉義攀岩會館」
+User: `@台灣攀岩` 攀岩有規則嗎
+台灣攀岩: 有啊！攀岩規則包含 ...
+❗與Bot對話不要忘了@它哦！
 ## 參考資料
 - 岩館資訊：
   - [轟菌體能](https://shenlee799.com/climbinggyms-taiwan/) 
