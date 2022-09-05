@@ -63,7 +63,7 @@
 ```
 ## 環境設置
 - 環境需求
-    - Python 3 or above (此Bot以python 3.7製作)
+    - Python 3 (此Bot以python 3.7製作)
 - 套件安裝
     - `pip3 install ArticutAPI`
     - 其他常用套件：pandas, random, re, datetime
