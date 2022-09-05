@@ -91,7 +91,7 @@
 6. 於SCOPES欄位勾選「bot」
 7. 於BOT PERMISSIONS欄位勾選「Send Messages」、「Embed Links」、「Attach Files」及「Read Message History」
 8. 複製GENERATED URL到新分頁中貼上，選擇Bot欲加入之伺服器，即完成添加
-9. 點選SETTINGS`Bot`->`Reset Token`
+9. 點選SETTINGS中的`Bot`->點選`Reset Token`
 10. 將Token貼至`account.info`中
 ```
 {
