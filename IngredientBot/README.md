@@ -64,7 +64,7 @@ DEMO
 設置環境
 -------------
 - 環境需求
-    - Python 3 or above
+    - Python 3.6 or above
     - pip or pip3 is installed
 - 安裝相關套件
     - 執行指令：`$ pip install -r requirements.txt`
