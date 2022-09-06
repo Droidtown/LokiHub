@@ -88,4 +88,13 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
     if utterance == "[高麗菜]的價格":
         resultDICT["ingredient"] = args[0]
 
+    if utterance == "[現在][馬鈴薯]是多少錢":
+        resultDICT["ingredient"] = args[1]
+
+    if utterance == "[秋刀魚][現在]怎麼賣？":
+        resultDICT["ingredient"] = args[0]
+
+    if utterance == "[秋刀魚]很貴嗎":
+        resultDICT["ingredient"] = args[0]
+
     return resultDICT

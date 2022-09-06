@@ -91,7 +91,7 @@ def getResult(inputSTR, utterance, args, resultDICT, all_utt):
         resultDICT["type"] = args[0]
 
     if utterance == "[9月]的[食材]":
-        if "當季" in args[0] or "當令" in args[0] or "幾月" in args[0] or args[1] in ["料理", "早餐", "午餐", "晚餐"]:
+        if "現在" in args[0] or "當季" in args[0] or "當令" in args[0] or "幾月" in args[0] or args[1] in ["料理", "早餐", "午餐", "晚餐"]:
             resultDICT.pop("inseason")
         else:
             resultDICT["time"] = args[0]

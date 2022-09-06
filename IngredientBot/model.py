@@ -484,7 +484,11 @@ def model(mscDICT):
 
                 mscDICT["replySTR"] = choice(replyLIST)
             else:
-                mscDICT["replySTR"] = "查不到{}的產季！".format(ingr)
+                replySTR0 = "這邊沒有{}的相關資料，它可能不是季節性的食材".format(ingr)
+                replySTR1 = "這邊沒有{}的相關資料，可能要請你自己查一下".format(ingr)
+                replyLIST = [replySTR0, replySTR1]
+
+                mscDICT["replySTR"] = choice(replyLIST)
 
             #紀錄
             mscDICT["ingredient"] = ingr

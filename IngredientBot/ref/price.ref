@@ -23,7 +23,8 @@
             "白果",
             "日本馬頭魚",
             "透抽",
-            "黃魚"
+            "黃魚",
+            "比目魚"
         ],
         "_temp": [
             "產季",
@@ -360,6 +361,29 @@
                 }
             ]
         },
+        "秋刀魚很貴嗎": {
+            "id": "d2a9f49d-eb3f-485e-b7dd-a798ea78ea2f",
+            "argument": [
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "秋刀魚",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很貴",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
         "螃蟹價格高嗎": {
             "id": "41d5e9d1-cb9b-4566-997b-897b744c97de",
             "argument": [
@@ -680,6 +704,128 @@
                     "text": "錢",
                     "checked": false,
                     "checkbox": true
+                }
+            ]
+        },
+        "現在馬鈴薯是多少錢": {
+            "id": "975ec08d-946b-448b-b014-48dd2cc5a5f7",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "馬鈴薯",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "秋刀魚現在怎麼賣？": {
+            "id": "55246181-f208-468d-862a-c0ddbf120f02",
+            "argument": [
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "秋刀魚",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "售賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "販售",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "販賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "賣",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "？",
+                    "checked": false,
+                    "checkbox": false
                 }
             ]
         },
