@@ -1,7 +1,7 @@
 # 當季食材小幫手 Ingredient Bot
-當季食材小幫手 (Ingredient Bot) 是一個 Discord 上的機器人，他透過 NLU 引擎 Loki 理解說話者的意圖，進而解答人們對料理食材的疑惑。
+當季食材小幫手 (Ingredient Bot) 是一個 Discord 機器人，它透過 NLU 引擎 Loki 理解說話者的意圖，進而解答人們對料理食材的疑惑。
 
-小幫手知道以下這些食材知識，你能使用日常生活用語與小幫手進行多輪對話 (Multi-Session Conversation)，獲得你想知道的食材資訊。
+小幫手知道以下這些食材知識：
 
 | 小幫手知道的食材知識 | 問法舉例 |
 | --------- | -------- |
@@ -13,11 +13,15 @@
 | 食材相關的料理 | 鮭魚怎麼料理？ |
 | 食材的產季 | 螃蟹的產季是幾月？ |
 
+你能夠與它進行多輪對話 (Multi-Session Conversation)，以獲得你想知道的食材資訊。
+
 NOTE: 如果你在對話時不知道或忘記了小幫手知道的食材知識，你可以問問看他例如：「你知道什麼」，小幫手就會回答你囉。
 
 Demo
 -------------
 <img src = "https://github.com/joehuangx/LokiHub/blob/main/IngredientBot/Demo.gif"></img>
+
+NOTE: 用 `@` 標註機器人，它才會回覆你哦。
 
 檔案總覽
 -------------
