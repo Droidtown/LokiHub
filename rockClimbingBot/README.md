@@ -69,12 +69,12 @@
     - 其他常用套件：pandas, random, re, datetime
 ## Loki啟用說明
 1. 註冊並登入[卓騰語言科技AI](https://api.droidtown.co/login/)
-2. 點選`Loki`->`開始啟用Loki`進入Loki控制台
-3. 輸入專案名稱並點選`建立專案`
+2. 點選 `Loki` -> `開始啟用Loki` 進入Loki控制台
+3. 輸入專案名稱並點選 `建立專案`
 4. 點擊進入設立完成之專案
-5. 點擊`選擇檔案`->選擇`.ref`檔->點選`讀取意圖`匯入檔案<br>⚠一次最多可匯10筆，共16筆，最少需分兩次匯入
-6. 點選畫面左上角房子圖示，回到 Loki控制台，點選`複製`專案金鑰
-7. 在rockClimbingBot資料夾底下創建`account.info`檔案，並輸入以下內容
+5. 點擊 `選擇檔案` ->選擇 `.ref` 檔->點選 `讀取意圖` 匯入檔案<br>⚠一次最多可匯10筆，共16筆，最少需分兩次匯入
+6. 點選畫面左上角房子圖示，回到 Loki控制台，點選 `複製` 專案金鑰
+7. 在rockClimbingBot資料夾底下創建 `account.info` 檔案，並輸入以下內容
 ```
 {
     "discord_token":"",
@@ -85,14 +85,14 @@
 ## DiscordBot建置
 1. 註冊並登入Discord帳號
 2. 進入[Discord Developers](https://discord.com/developers/applications)
-3. 點擊畫面右上方的`New Application`->填上Bot名稱->`create`建立Discord Bot
-4. 點選右方欄位SETTINGS中的`Bot`->點選`Add Bot`
-5. 點選右方欄位SETTINGS中的`OAuth2`->點選`URL Generator`
+3. 點擊畫面右上方的 `New Application` ->填上 Bot 名稱-> `create` 建立Discord Bot
+4. 點選右方欄位SETTINGS中的 `Bot` ->點選 `Add Bot`
+5. 點選右方欄位SETTINGS中的 `OAuth2` ->點選 `URL Generator`
 6. 於SCOPES欄位勾選「bot」
 7. 於BOT PERMISSIONS欄位勾選「Send Messages」、「Embed Links」、「Attach Files」及「Read Message History」
 8. 複製GENERATED URL到新分頁中貼上，選擇Bot欲加入之伺服器，即完成添加
-9. 點選SETTINGS中的`Bot`->點選`Reset Token`
-10. 將Token貼至`account.info`中
+9. 點選SETTINGS中的 `Bot` ->點選 `Reset Token`
+10. 將Token貼至 `account.info` 中
 ```
 {
     "discord_token":"--填入token--",
@@ -101,7 +101,7 @@
 }
 ```
 ## 使用者互動說明
-完成上述程序後，執行`python3 Discord_rockClimbing.py`即可開始與Bot互動<br>
+完成上述程序後，執行 `python3 Discord_rockClimbing.py` 即可開始與 Bot 互動<br>
 <互動示例><br>
 User: `@台灣攀岩`嘉義哪裡可以攀岩<br>
 台灣攀岩: 嘉義的岩館有「嘉義市國民運動中心8a攀岩場」, 「嘉義攀岩會館」<br>
