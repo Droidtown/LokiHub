@@ -1,0 +1,1678 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v254",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_veg": [
+            "地瓜",
+            "地瓜葉",
+            "青江菜",
+            "紫甘藍",
+            "冬筍",
+            "綠竹筍",
+            "筊白筍"
+        ],
+        "_food": [
+            "水煮蛋",
+            "白帶魚",
+            "紅棗",
+            "紅蘿蔔",
+            "白果",
+            "日本馬頭魚",
+            "透抽",
+            "黃魚",
+            "比目魚"
+        ],
+        "_temp": [
+            "產季",
+            "盛產季"
+        ],
+        "_fruit": [
+            "哈密瓜",
+            "火龍果",
+            "藍莓",
+            "百香果"
+        ]
+    },
+    "utterance": {
+        "多少錢": {
+            "id": "cb7b661f-cabc-4c53-abb6-ffb301860040",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "一盒蛋多少": {
+            "id": "24bd1300-ffae-473a-889b-f72f012423b2",
+            "argument": [
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一盒",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "蛋",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "皮蛋多少錢": {
+            "id": "846b51a1-990b-4b8f-bd97-df6cf98f7b94",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "皮蛋",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "芭樂賣多少": {
+            "id": "f5ae36a0-6cbb-4675-9e1f-5cbfa9c65896",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "芭樂",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "售賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "販售",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "販賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "賣",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "蘋果怎麼賣": {
+            "id": "7e38d400-4dfc-48a9-897b-fc62d7dbd94a",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "蘋果",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "售賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "販售",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "販賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "賣",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "一塊肉怎麼賣": {
+            "id": "2e2798fb-6117-4743-b8ad-478a79bcba3a",
+            "argument": [
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一塊",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "肉",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "售賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "販售",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "販賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "賣",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "一條魚多少錢": {
+            "id": "8bbe1867-c47f-481b-8ad8-b73822e7c295",
+            "argument": [
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一條",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "魚",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "秋刀魚很貴嗎": {
+            "id": "d2a9f49d-eb3f-485e-b7dd-a798ea78ea2f",
+            "argument": [
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "秋刀魚",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很貴",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "螃蟹價格高嗎": {
+            "id": "41d5e9d1-cb9b-4566-997b-897b744c97de",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "螃蟹",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "價格",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "高",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "高麗菜的價格": {
+            "id": "3b7057a3-64a0-44d8-9113-d563a2a9420b",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "高麗菜",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "價格",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我要買一盒皮蛋": {
+            "id": "99588f65-fd94-4034-90fa-d9ef74a818c3",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "採買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "收買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "買進",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "購買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "購得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買不到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買東西",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買不起",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買到",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "買",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一盒",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "皮蛋",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "瘦肉一斤多少錢": {
+            "id": "34488505-ae96-4bd7-844b-50769f35b3cf",
+            "argument": [
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "瘦肉",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_measurement",
+                    "text": "一斤",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "菠菜一把多少錢": {
+            "id": "70ef5fed-0ec9-43a1-b58c-bdd09a8d6acf",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "菠菜",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一把",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "葡萄現在多少錢": {
+            "id": "4f21d443-24c8-436f-b19d-b9329c2fc313",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "葡萄",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "現在馬鈴薯是多少錢": {
+            "id": "975ec08d-946b-448b-b014-48dd2cc5a5f7",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "馬鈴薯",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "秋刀魚現在怎麼賣？": {
+            "id": "55246181-f208-468d-862a-c0ddbf120f02",
+            "argument": [
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "秋刀魚",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "售賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "販售",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "販賣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "賣",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "？",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "現在一盒皮蛋要多少錢": {
+            "id": "681a0e57-e391-40d3-9e91-b23e0e02bc24",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一盒",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "皮蛋",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "請告訴我一盒蛋多少錢": {
+            "id": "b2be6d12-7537-483d-a527-b5ad2c2bceb5",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "請求",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拜託",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要求",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "勸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "懇請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼籲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "建議",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "提醒",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "傳告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傾訴",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告別",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告辭",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "報告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "敬告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "訴說",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂講",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "交談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳經",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "商量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "啟奏",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "報信",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "對談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "念叨",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扯談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "敘述",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "暢談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞎扯",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞎說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "胡說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "表示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "說到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "說服",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "談到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講述",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "責令",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "賜教",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "辯護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "通知",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "開導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "關說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "告知了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "問過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "反問",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "告誡",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "奉勸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "知道了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "轉告",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打給",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "告訴了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "告知",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "知道",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "問",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "告訴",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一盒",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "蛋",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我想買一盒蛋需要帶多少錢": {
+            "id": "9245134b-c13f-4c36-8524-f897583bc3ff",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想拿",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "買不起",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買不到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "偷了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "愛吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "買了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "偷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "想買",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一盒",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "蛋",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "索要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "要求",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需求",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "索求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "索討",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願意",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "允許",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "需要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "佩帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "夾帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶病",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶走",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "挾帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "攜帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "佩戴",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "承接",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "披掛",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "穿破",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "肩扛",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "背負",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "負載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "載攜",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運送",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "配戴",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "馱運",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶等",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有帶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "送",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "忙趕",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常帶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶灘",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "忙送",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶拉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶著",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "帶",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "現在一條白鯧的價格是多少": {
+            "id": "c18a9ca5-5453-4254-ab13-db7061f7d510",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一條",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "白鯧",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "價格",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    }
+}
