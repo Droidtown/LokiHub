@@ -22,7 +22,7 @@
 
 [實際操作範例：](https://youtu.be/slSJLKAhcxs)
 
-<video src="C:\Users\chenj\OneDrive\桌面\TutorAssist_Bot\Demo Video.mp4"></video>
+https://user-images.githubusercontent.com/86584322/189078205-7694952f-16aa-4c8b-a952-d27d804d58dc.mp4
 
 ---
 ### 檔案總攬
