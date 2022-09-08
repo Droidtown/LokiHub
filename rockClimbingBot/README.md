@@ -56,10 +56,10 @@
 │    ├── rock.ref
 │    ├── rules.ref
 │    └── whatIs.ref
-├── rockClimbing.py         #主程式
+├── rockClimbing.py         #Loki主程式
 ├── Discord_rockClimbing.py #discord連線
-├── rockClimbingFunc.py     #所有運作主程式會用到的自定義函式
-└── rockClimbingNLUmodel.py #連接主程式和discord的NLU模型
+├── rockClimbingFunc.py     #所有會用到的自定義函式
+└── rockClimbingNLUmodel.py #連接Loki主程式和discord的NLU模型
 ```
 ## 環境設置
 - 環境需求
