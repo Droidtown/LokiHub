@@ -1,0 +1,82 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v256",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_asNoun": [
+            "連假",
+            "線上",
+            "進班",
+            "遠距",
+            "面對面",
+            "愉快",
+            "線下",
+            "到班",
+            "實體課程"
+        ],
+        "_asOkay": [
+            "ok",
+            "OK",
+            "oK",
+            "Ok",
+            "Okay",
+            "okay",
+            "OKAY"
+        ],
+        "_asTime": [
+            "小時半"
+        ],
+        "_asVerb": [
+            "改一下",
+            "討論一下",
+            "調整一下"
+        ]
+    },
+    "utterance": {
+        "no": {
+            "id": "c56ce9fa-e96f-41ad-84f3-0f97bd43629b",
+            "pos": "<ENTITY_oov>no</ENTITY_oov>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[Nn][Oo]</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "否": {
+            "id": "addf530a-a6ef-4d1d-abd8-e4b1c6bc4176",
+            "pos": "<ENTITY_oov>否</ENTITY_oov>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>否</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "錯": {
+            "id": "fdc116da-6e63-41b4-b8e1-1cf61030fa68",
+            "pos": "<MODIFIER>錯</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>錯</(MODIFIER|ModifierP)>"
+        },
+        "不對": {
+            "id": "54289afe-7ab9-4b77-a2d9-d073a835dfa5",
+            "pos": "<MODIFIER>不對</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>不對</(MODIFIER|ModifierP)>"
+        },
+        "不是": {
+            "id": "d43d239c-eca9-4944-8bb3-86206f3ca278",
+            "pos": "<FUNC_negation>不</FUNC_negation><AUX>是</AUX>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]*?</FUNC_negation><AUX>是</AUX>"
+        },
+        "錯誤": {
+            "id": "a8780484-01da-453d-9bff-d0dc755c1797",
+            "pos": "<ENTITY_oov>錯誤</ENTITY_oov>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>錯誤</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "不正確": {
+            "id": "b72b62e9-e980-4b9e-9e4d-521dc8392f79",
+            "pos": "<FUNC_negation>不</FUNC_negation><MODIFIER>正確</MODIFIER>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]*?</FUNC_negation><(MODIFIER|ModifierP)>正確</(MODIFIER|ModifierP)>"
+        }
+    }
+}

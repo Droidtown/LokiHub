@@ -1,0 +1,306 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v256",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_asNoun": [
+            "連假",
+            "線上",
+            "進班",
+            "遠距",
+            "面對面",
+            "愉快",
+            "線下",
+            "到班",
+            "實體課程"
+        ],
+        "_asOkay": [
+            "ok",
+            "OK",
+            "oK",
+            "Ok",
+            "Okay",
+            "okay",
+            "OKAY"
+        ],
+        "_asTime": [
+            "小時半"
+        ],
+        "_asVerb": [
+            "改一下",
+            "討論一下",
+            "調整一下"
+        ]
+    },
+    "utterance": {
+        "祝你": {
+            "id": "0205c41c-b7aa-47a6-9c71-bc5eaee4d815",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "祝好",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝福",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "祝願",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "希望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "期冀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "護佑",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝賀",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "預祝",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "敬祝",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "懇請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想取",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保佑",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "祝",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "你",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "祝老師": {
+            "id": "9fdeeb7c-4ea1-44d7-9e10-88ad835430a5",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "祝好",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝福",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "祝願",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "希望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "期冀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "敬祝",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "預祝",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "護佑",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想取",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "懇請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝賀",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保佑",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "祝",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "老師",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "假期快樂": {
+            "id": "3fee88d8-1b6d-4103-92db-8b22b5bf2634",
+            "argument": [
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "假期",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "快樂",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "假期愉快": {
+            "id": "004a90aa-0bfb-4d31-a286-5f4102651e5c",
+            "argument": [
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "假期",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "愉快",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "中秋節快樂": {
+            "id": "e3c2f6d6-20d1-4119-90c3-817ad5b0997b",
+            "argument": [
+                {
+                    "pos": "TIME_holiday",
+                    "text": "中秋節",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "快樂",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "中秋節愉快": {
+            "id": "1d3f8d74-6147-41ee-abe9-90aa51c01426",
+            "argument": [
+                {
+                    "pos": "TIME_holiday",
+                    "text": "中秋節",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "愉快",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}
