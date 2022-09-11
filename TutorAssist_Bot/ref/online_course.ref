@@ -1,0 +1,2725 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v256",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_asNoun": [
+            "連假",
+            "線上",
+            "進班",
+            "遠距",
+            "面對面",
+            "愉快",
+            "線下",
+            "到班",
+            "實體課程"
+        ],
+        "_asOkay": [
+            "ok",
+            "OK",
+            "oK",
+            "Ok",
+            "Okay",
+            "okay",
+            "OKAY"
+        ],
+        "_asTime": [
+            "小時半"
+        ],
+        "_asVerb": [
+            "改一下",
+            "討論一下",
+            "調整一下"
+        ]
+    },
+    "utterance": {
+        "先線上": {
+            "id": "bca23fea-bf31-4f39-9b26-7f1bfce6a047",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "線上",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先視訊": {
+            "id": "df4b140f-b2af-42e8-ae76-c07ac7ca5dc8",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "視訊",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先遠距": {
+            "id": "a365f32a-95d0-4506-bfa8-6533df5c9b45",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先改線上": {
+            "id": "bc025d96-52a5-43b7-ad24-16bbeac09941",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "改建",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "改變",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "改造",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "翻過",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "蛻變",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "變換",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉換",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉移",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "轉變",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "改為",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "改置",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "後改",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更改",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "改成",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "改行",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "改回",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "升府",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復改",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "改稱",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "改",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "線上",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先改視訊": {
+            "id": "d44c6aee-cf47-4593-b185-6151f84c88d0",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "改建",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "改變",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "改造",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "翻過",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "蛻變",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "變換",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉換",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉移",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "轉變",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "改為",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "改置",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "後改",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更改",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "改成",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "改行",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "改回",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "升府",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復改",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "改稱",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "改",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "視訊",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先改遠距": {
+            "id": "d6a72b5a-7c77-46f9-bb00-94f36cd6c966",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "改建",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "改變",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "改造",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "翻過",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "蛻變",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "變換",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉換",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉移",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉變",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "復改",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "改回",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "升府",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "改行",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "改置",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更改",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "後改",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "改成",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "改稱",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "改為",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "改",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先用線上": {
+            "id": "ed0dc6eb-2618-48ca-89da-be894e46ca63",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "線上",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先用視訊": {
+            "id": "240e7f13-5148-4e5b-91d0-4c6f9929565b",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "視訊",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先用遠距": {
+            "id": "e4ae7b0f-0384-4d96-902b-b87944c3df8e",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先都線上": {
+            "id": "64b26c3b-5fab-419f-8ac8-dbf5973f1162",
+            "argument": [
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "先都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "線上",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先都視訊": {
+            "id": "8d80d64f-46bf-45aa-9710-3bd6d5e6bea2",
+            "argument": [
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "先都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "視訊",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先都遠距": {
+            "id": "aa2eeb21-0ce9-447f-9953-bfadb9da8ea6",
+            "argument": [
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "先都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "要先線上": {
+            "id": "6e0b0e2d-9a71-458c-b0c9-12813f6a32ab",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "線上",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "要先視訊": {
+            "id": "3b1cdf16-6b18-4721-8c16-cd2ccee7ac37",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "視訊",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "要先遠距": {
+            "id": "fc4ea32c-6d8f-441b-96b3-e8491c2c2034",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先恢復線上": {
+            "id": "d8173bdb-ab68-4819-971d-8012ba7a676d",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "修復",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回復",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "康復",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復位",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復原",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "復學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復活",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復甦",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復職",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復課",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復辟",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復返",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "休養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "取回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "回去",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "回敬",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "回返",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "報答",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "尋獲",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扳回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "振作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "挽回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "歸來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "治癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "甦醒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "病癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "痊癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "療傷",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "療癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "療養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "補給",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "起用",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "返回",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "追回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "退回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "重建",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "重獲",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "重返",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "維持",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "消退",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "改回",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "回復了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "停止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "喪失",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恢復了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "重拾",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回復",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "恢復",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "線上",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先恢復視訊": {
+            "id": "0f332834-d701-4e70-8d20-2598d03169d2",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "修復",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回復",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "康復",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復位",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復原",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "復學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復活",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復甦",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復職",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復課",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復辟",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復返",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "休養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "取回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "回去",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "回敬",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "回返",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "報答",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "尋獲",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扳回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "振作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "挽回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "歸來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "治癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "甦醒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "病癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "痊癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "療傷",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "療癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "療養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "補給",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "起用",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "返回",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "追回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "退回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "重建",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "重獲",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "重返",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "維持",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "恢復了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "喪失",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "改回",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "回復了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "重拾",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "消退",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回復",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "恢復",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "視訊",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先恢復遠距": {
+            "id": "f60dfa8d-a626-4a8e-9fcb-c24aacb5bc43",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "修復",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回復",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "康復",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復位",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復原",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "復學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復活",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復甦",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復職",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復課",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復辟",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "復返",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "休養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "取回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "回去",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "回敬",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "回返",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "報答",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "尋獲",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扳回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "振作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "挽回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "歸來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "治癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "甦醒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "病癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "痊癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "療傷",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "療癒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "療養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "補給",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "起用",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "返回",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "追回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "退回",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "重建",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "重獲",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "重返",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "維持",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "消退",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "改回",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "回復了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "停止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "喪失",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恢復了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "重拾",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回復",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "恢復",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先維持線上": {
+            "id": "30cd5271-0902-4ae4-9d86-07379ad2e797",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保持",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "持守",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持續",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "維繫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "養護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保有",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "維持著",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "恢復",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保持著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維持了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "延續",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保留",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保持了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保持",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "維持",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "線上",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先維持視訊": {
+            "id": "1a9c9401-e6b5-41fa-aec8-2a7ab50b724f",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保持",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "持守",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持續",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "維繫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "養護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保持了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "恢復",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維持了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "維持著",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "延續",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保持著",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保持",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "維持",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "視訊",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先維持遠距": {
+            "id": "d3c58db6-84a5-4cdb-ae52-6b2c464f5b62",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保持",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "持守",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持續",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "維繫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "養護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維持著",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "恢復",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保持著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維持了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "延續",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保留",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保持了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "保持",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "維持",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先調整為線上": {
+            "id": "f65f25e7-1980-4e12-a9a1-5bf910d5fa5b",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "整治",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "整理",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調控",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調準",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調節",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調製",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調諧",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調適",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "合用",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吻合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改動",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "改編",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改裝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "磨練",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "裝修",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "配合",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "配製",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改變",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "修正",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "變動",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "微調",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "變更",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "優化",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "縮減",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "修改",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉換",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "更改",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "調整",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "為",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "線上",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先調整為視訊": {
+            "id": "b5a2aee4-c910-4636-a4ac-11acce05622f",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "整治",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "整理",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調控",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調準",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調節",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調製",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調諧",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調適",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "合用",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吻合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改動",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "改編",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改裝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "磨練",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "裝修",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "配合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "配製",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改變",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "修正",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更改",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "變動",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "修改",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "微調",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉換",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "變更",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "縮減",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "優化",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "調整",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "為",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "視訊",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先調整為遠距": {
+            "id": "275cb287-b1d9-46e1-827d-222f652f273c",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "整治",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "整理",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調控",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調準",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調節",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調製",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調諧",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "調適",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "合用",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吻合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改動",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "改編",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改裝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "磨練",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "裝修",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "配合",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "配製",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改變",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "修正",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "變動",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "微調",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "變更",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "優化",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "縮減",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "修改",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉換",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "更改",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "調整",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "為",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,1618 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v256",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_asNoun": [
+            "連假",
+            "線上",
+            "進班",
+            "遠距",
+            "面對面",
+            "愉快",
+            "線下",
+            "到班",
+            "實體課程"
+        ],
+        "_asOkay": [
+            "ok",
+            "OK",
+            "oK",
+            "Ok",
+            "Okay",
+            "okay",
+            "OKAY"
+        ],
+        "_asTime": [
+            "小時半"
+        ],
+        "_asVerb": [
+            "改一下",
+            "討論一下",
+            "調整一下"
+        ]
+    },
+    "utterance": {
+        "8.": {
+            "id": "394e6044-5132-4b8b-a0da-5629ae964b3f",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "8.-10.": {
+            "id": "45256bab-e54d-43bb-bf16-a4fae7572e97",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "-",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "8.到10.": {
+            "id": "b969c83d-0e9b-456f-b67b-7a2512f0e4cd",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到約",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "到受",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到離",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到回",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到隨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到愛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "8.至10.": {
+            "id": "1c45e348-ec2f-40ce-8396-3ec1ebcb19f5",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "至",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "8:30-10.": {
+            "id": "f7adaba7-a01c-4fa1-9977-5622a935a494",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "-",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "8:30-10:30": {
+            "id": "0bc51dc0-eb09-4aad-87c7-5b88288f7489",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "-",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "8:30到10.": {
+            "id": "2b53a053-a5fa-4261-993b-a298cbf49af9",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到約",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "到受",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到離",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到回",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到隨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到愛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "8:30至10.": {
+            "id": "99d7e229-2954-4c6a-8009-8d5e6a99c3d8",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "至",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "8:30到10:30": {
+            "id": "3051d19e-aa1d-48a3-981b-d3e20ca36344",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到約",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "到受",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到離",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到回",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到隨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到愛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "8:30至10:30": {
+            "id": "d0c8da97-4dd1-41e2-bb74-1cac48801b5f",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "至",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "八月三十": {
+            "id": "5f1496a1-40a7-4efc-92b9-9a95194b8a9d",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "三十",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "八點-十點": {
+            "id": "65b09bd7-a7f7-4165-bfaf-3a6f826759c4",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "八點",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "-",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "十點",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十日": {
+            "id": "1e84c7cc-f1db-4cb1-bca7-fcf84fe16b87",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "三十日",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八點到十點": {
+            "id": "1d211836-5bf1-444f-99e6-ee9543fa6965",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "八點",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "十點",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八點至十點": {
+            "id": "9e68eb96-2bf8-419f-9822-012af6cc9058",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "八點",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "至",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "十點",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十的10.-12.": {
+            "id": "19a0044d-a879-482b-a87b-3af3d5dee70d",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "三十",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "-",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十的10.到12.": {
+            "id": "f379ecdb-59a1-40d6-b258-916fd461f89a",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "三十",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到約",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "到受",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到離",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到回",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到隨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到愛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十的10.至12.": {
+            "id": "b2961750-dc5b-4d68-9aa7-312ed08854c2",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "三十",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "至",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十的10:30-12.": {
+            "id": "42c7b2f4-14bc-403d-bfab-f821e6709b80",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "三十",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "-",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十日的10.-12.": {
+            "id": "1d891021-3709-4c03-b482-bb823340d295",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "三十日",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "-",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十的10:30-12:00": {
+            "id": "d6503115-51e8-48c0-9156-af6995ad62b3",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "三十",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "-",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "00",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "八月三十的10:30到12.": {
+            "id": "7bceb1ce-3c1e-455d-8d60-a14547f1bd28",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "三十",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到約",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "到受",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到離",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到回",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到隨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到愛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十的10:30至12.": {
+            "id": "b9c93e3e-7a1f-448b-a097-4b9a66798813",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "三十",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "至",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十日的10.到12.": {
+            "id": "a7ffb220-ee32-4355-89e3-9934b142c6cb",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "三十日",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到約",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "到受",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到離",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到回",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到隨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到愛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十日的10.至12.": {
+            "id": "d3e776bd-0857-4753-b618-3b125e8136d0",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "三十日",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "至",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "八月三十的10:30到12:00": {
+            "id": "afd6494a-0a45-4151-bb9b-8de2959916b6",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "三十",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到約",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "到受",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到離",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到回",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到隨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到愛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "00",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "八月三十的10:30至12:00": {
+            "id": "6c114cf8-9b4c-458c-bd97-ff0d701207f9",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "八月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "三十",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "至",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ":",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "00",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}

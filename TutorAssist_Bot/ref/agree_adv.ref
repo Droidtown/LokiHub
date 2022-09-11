@@ -1,0 +1,100 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v256",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_asNoun": [
+            "連假",
+            "線上",
+            "進班",
+            "遠距",
+            "面對面",
+            "愉快",
+            "線下",
+            "到班",
+            "實體課程"
+        ],
+        "_asOkay": [
+            "ok",
+            "OK",
+            "oK",
+            "Ok",
+            "Okay",
+            "okay",
+            "OKAY"
+        ],
+        "_asTime": [
+            "小時半"
+        ],
+        "_asVerb": [
+            "改一下",
+            "討論一下",
+            "調整一下"
+        ]
+    },
+    "utterance": {
+        "ok": {
+            "id": "43235769-08e7-4994-b0f0-8d7306da216a",
+            "pos": "<UserDefined>ok</UserDefined>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[Oo][Kk]</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "yes": {
+            "id": "95feb939-0343-454d-8c7f-330936a830dd",
+            "pos": "<ENTITY_oov>yes</ENTITY_oov>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[Yy][Ee][Ss]</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "好": {
+            "id": "2286c498-6eb0-4161-9a48-1540477fbb7b",
+            "pos": "<MODIFIER>好</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>好</(MODIFIER|ModifierP)>"
+        },
+        "對": {
+            "id": "04c58a0f-7491-4e74-8ab5-d29ca577807b",
+            "pos": "<MODIFIER>對</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>對</(MODIFIER|ModifierP)>"
+        },
+        "是": {
+            "id": "04246228-6eb1-44fa-b152-18626d266ccc",
+            "pos": "<AUX>是</AUX>",
+            "lexy": [],
+            "pattern": "<AUX>是</AUX>"
+        },
+        "okay": {
+            "id": "8c263070-db71-45e8-a962-893ab7578449",
+            "pos": "<UserDefined>okay</UserDefined>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[Oo][Kk][Aa][Yy]</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "好的": {
+            "id": "7ae4043e-06a1-419f-b631-4a09b649b1de",
+            "pos": "<FUNC_degreeHead>好</FUNC_degreeHead><FUNC_inner>的</FUNC_inner>",
+            "lexy": [],
+            "pattern": "<FUNC_degreeHead>好</FUNC_degreeHead><FUNC_in(ner|ter)>[^<]*?</FUNC_in(ner|ter)>"
+        },
+        "正確": {
+            "id": "6aa07eea-01a5-4aff-a6d6-fec8bb477daa",
+            "pos": "<MODIFIER>正確</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>正確</(MODIFIER|ModifierP)>"
+        },
+        "沒錯": {
+            "id": "33768722-408c-48b2-b5c1-756d7f572e0e",
+            "pos": "<FUNC_negation>沒</FUNC_negation><MODIFIER>錯</MODIFIER>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]*?</FUNC_negation><(MODIFIER|ModifierP)>錯</(MODIFIER|ModifierP)>"
+        },
+        "沒問題": {
+            "id": "de414057-8343-4795-a8d8-331a218e653b",
+            "pos": "<FUNC_negation>沒</FUNC_negation><ENTITY_noun>問題</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]*?</FUNC_negation><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>問題</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        }
+    }
+}
