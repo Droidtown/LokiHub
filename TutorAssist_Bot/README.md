@@ -20,7 +20,7 @@
 
 **操作時，請先和 TutorAssist Bot 打聲簡單的招呼，並且在訊息前標記```@ Bot``` 喔！**
 
-[實際操作範例：](https://youtu.be/slSJLKAhcxs)
+[實際操作範例：](https://youtu.be/QGVyK2efI3c)
 
 https://user-images.githubusercontent.com/86584322/189078205-7694952f-16aa-4c8b-a952-d27d804d58dc.mp4
 
