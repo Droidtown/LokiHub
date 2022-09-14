@@ -145,16 +145,16 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'cleft'
 
-    if utterance == "這[導致]了諸如畢業[舞會]、[高年級][學生]慶祝[活動]、[實地]考察旅行等[活動]什麼的被取消":
-        newSTR = inputSTR.replace('諸如','').replace('什麼的','都')
-        resultDICT['suggestion'] = newSTR
-        resultDICT['error'] = 'etc'
-
     if utterance == "還[許多][人]無視[政府]的[新冠肺炎]的[規則]":
         newSTR = inputSTR.replace('還','還有')
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'hai'
+    
+    if utterance == "這[導致]了[很多][活動]什麼的被取消":
+        newSTR = inputSTR.replace('什麼的','都')
+        resultDICT['suggestion'] = newSTR
+        resultDICT['error'] = 'etc'
 
     resultDICT['inq'] = None #inq的值為None
-    
+
     return resultDICT

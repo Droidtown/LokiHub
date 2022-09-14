@@ -47,16 +47,20 @@ from requests import codes
 import math
 import re
 import json
-#try:
-from intent import Loki_syntax
-from intent import Loki_semantics
-from intent import Loki_vocabulary
-from intent import Loki_ans
-# except:
-#     from .intent import Loki_syntax
-#     from .intent import Loki_semantics
-#     from .intent import Loki_vocabulary
-#     from .intent import Loki_ans
+try:
+    from intent import Loki_syntax
+    from intent import Loki_semantics
+    from intent import Loki_vocabulary
+    from intent import Loki_ans
+    from intent import Loki_time
+    from intent import Loki_name
+except:
+    from .intent import Loki_syntax
+    from .intent import Loki_semantics
+    from .intent import Loki_vocabulary
+    from .intent import Loki_ans
+    from .intent import Loki_name
+    from .intent import Loki_time
 
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
@@ -258,6 +262,15 @@ def runLoki(inputLIST, filterLIST=[]):
                 # ans
                 if lokiRst.getIntent(index, resultIndex) == "ans":
                     resultDICT = Loki_ans.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                
+                # time
+                if lokiRst.getIntent(index, resultIndex) == "time":
+                    resultDICT = Loki_time.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
+                # name
+                if lokiRst.getIntent(index, resultIndex) == "name":
+                    resultDICT = Loki_name.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}

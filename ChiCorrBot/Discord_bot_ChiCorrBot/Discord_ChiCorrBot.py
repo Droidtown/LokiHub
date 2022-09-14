@@ -89,27 +89,11 @@ class BotClient(discord.Client):
 # ##########非初次對話：這裡用 Loki 計算語意
             else: #開始處理正式對話
 
-                responseDICT = articut.parse(msgSTR)
-                #問候對話
-                #判斷「叫+名字」的句子，搜尋「叫」和「POS:ENTITY_nouny」。
-                if '>叫<' in responseDICT['result_pos'][0] and 'ENTITY_nouny' in responseDICT['result_pos'][0]:
-                    userName = responseDICT['result_pos'][0].split('<ENTITY_nouny>')[-1].rstrip('</ENTITY_nouny>')
-                    replySTR = f'{userName}，你好呀，很開心認識你，那你華語學多久了？'
-                #判斷使用者的回覆只回覆一個字詞，避免「是或否」等回覆。
-                elif msgSTR.lower() not in "是 否 對 不對 yes no y n".split() and len(responseDICT['result_obj'][0]) == 1: 
-                    if 'ENTITY_nouny' in responseDICT['result_pos'][0] or 'ENTITY_person' in responseDICT['result_pos'][0]:
-                        userName = msgSTR
-                        replySTR = f'{userName}，你好呀，很開心認識你，那你華語學多久了？'
-                    #判斷使用者只回覆「時間」
-                    elif 'TIME_' in responseDICT['result_pos'][0]:
-                        replySTR = '讓我幫你提升華語能力吧！\n請你輸入一個華語句子，如果有錯誤，我將會告訴你建議的說法和錯誤之處。\n我們開始學習華語吧！'
-                #判斷使用者的名字，POS:ENTITY_person。
-                elif 'ENTITY_person' in responseDICT['result_pos'][0]:
-                    userName = responseDICT['result_pos'][0].split('<ENTITY_person>')[-1].rstrip('</ENTITY_person>')
-                    replySTR = f'{userName}，你好呀，很開心認識你，那你華語學多久了？'
-                #判斷使用者回覆「學了+時間」的句子
-                elif '學了' in msgSTR and 'TIME_' in responseDICT['result_pos'][0]:
-                    replySTR = '讓我幫你提升華語能力吧！\n請你輸入一個華語句子，如果有錯誤，我將會告訴你建議的說法和錯誤之處。\n我們開始學習華語吧！'
+                #確認是否繼續檢查華語病句
+                if msgSTR.lower() in 'bye,bye bye,byebye,good bye,拜拜,拜咿,掰掰'.split(','):
+                    #刪除之前的對話，並給予結束的回覆。
+                    self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
+                    replySTR = '拜拜，我們下次見囉！'
 
                 else:
                 #從這裡開始接上 NLU 模型
@@ -122,29 +106,35 @@ class BotClient(discord.Client):
                         replySTR = '本bot覺得你的句子是對的！'
                     #如果resultDICT不是空字典
                     else:
-                        #inq有兩種可能，一是確認語意問題，二是使用者的回覆是或否。
-                        self.mscDICT[message.author.id]['inq'] = resultDICT['inq']
-                        if 'suggestion' in resultDICT:
-                            self.mscDICT[message.author.id]['suggestion'] = resultDICT['suggestion']
-                        if 'error' in resultDICT:
-                            self.mscDICT[message.author.id]['error'] = resultDICT['error']
-
-                        res = f"那你可以說：{self.mscDICT[message.author.id]['suggestion']}"
-                        expl = f"錯誤說明：{explanationDICT[self.mscDICT[message.author.id]['error']]}"
-                        replySTR = f'{res}\n{expl}'
-
-                        #不需要再次詢問的intent(vocabulary,syntax)，則直接印出建議句子和錯誤說明。
-                        if not self.mscDICT[message.author.id]['inq']:
-                            replySTR = replySTR
-                        #辨識回答為「是」，則印出建議句子和錯誤說明。
-                        elif self.mscDICT[message.author.id]['inq'] == '是':
-                            replySTR = replySTR
-                        #辨識回答為「否」，則印出該回答。
-                        elif self.mscDICT[message.author.id]['inq'] == '否':
-                            replySTR = '啊！本bot不知道，只好請教老師了！'
-                        #需要再次確認語意的intent(syntax)，則印出該問題。
+                        if 'greeting' in resultDICT:
+                            replySTR = resultDICT['greeting']
+                        elif 'time' in resultDICT:
+                            replySTR = resultDICT['time']
                         else:
-                            replySTR = self.mscDICT[message.author.id]['inq']
+                            #inq有兩種可能，一是確認語意問題，二是使用者的回覆是或否。
+                            self.mscDICT[message.author.id]['inq'] = resultDICT['inq']
+                            if 'suggestion' in resultDICT:
+                                self.mscDICT[message.author.id]['suggestion'] = resultDICT['suggestion']
+                            if 'error' in resultDICT:
+                                self.mscDICT[message.author.id]['error'] = resultDICT['error']
+
+                            res = f"那你可以說：{self.mscDICT[message.author.id]['suggestion']}"
+                            expl = f"錯誤說明：{explanationDICT[self.mscDICT[message.author.id]['error']]}"
+                            req = '\n你還有其他句子要討論嗎？如果有，請繼續輸入句子，如果沒有，請輸入「Bye」。'
+                            replySTR = f'{res}\n{expl}\n{req}'
+
+                            #不需要再次詢問的intent(vocabulary,syntax)，則直接印出建議句子和錯誤說明。
+                            if not self.mscDICT[message.author.id]['inq']:
+                                replySTR = replySTR
+                            #辨識回答為「是」，則印出建議句子和錯誤說明。
+                            elif self.mscDICT[message.author.id]['inq'] == '是':
+                                replySTR = replySTR
+                            #辨識回答為「否」，則印出該回答。
+                            elif self.mscDICT[message.author.id]['inq'] == '否':
+                                replySTR = f'啊！本bot不知道，只好請教老師了!\n{req}'
+                            #需要再次確認語意的intent(syntax)，則印出該問題。
+                            else:
+                                replySTR = self.mscDICT[message.author.id]['inq']
                 
         await message.reply(replySTR)
 
