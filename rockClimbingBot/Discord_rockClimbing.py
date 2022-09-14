@@ -5,8 +5,9 @@ import logging
 import discord
 import json
 import re
-from datetime import datetime
+from random import choice
 from pprint import pprint
+from datetime import datetime
 from rockClimbing import runLoki
 from rockClimbingNLUmodel import NLUmodel
 
@@ -53,7 +54,7 @@ class BotClient(discord.Client):
             logging.debug("人類說：{}".format(msgSTR))
 
             # keyword trigger 打招呼 
-            if msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello","妳好","嗨嗨","安安","hey","yo","阿羅哈","你好啊","你好呀",""]:
+            if msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello","妳好","嗨嗨","安安","hey","yo","阿羅哈","你好啊","你好呀"]:
                 logging.debug("msgSTR1:{}\n".format(msgSTR))
                 #有講過話(判斷對話時間差)
                 print("message.author.id = {}".format(message.author.id))
@@ -63,14 +64,19 @@ class BotClient(discord.Client):
                     if timeDIFF.total_seconds() >= 300: #有講過話，但與上次差超過 5 分鐘(視為沒有講過話，刷新template)
                         self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                         self.mscDICT[message.author.id]["replySTR"] = "嗨嗨，我們好像見過面，但卓騰的隱私政策不允許我記得你的資料，抱歉！"
-                    else:#有講過話，而且還沒超過5分鐘就又跟我 hello (就繼續上次的對話)
-                        self.mscDICT[message.author.id]["replySTR"] = self.mscDICT[message.author.id]["latestQuest"]
+                    else:#有講過話，而且還沒超過5分鐘就又hello 
+                        self.mscDICT[message.author.id]["replySTR"] = msgSTR.title() #self.mscDICT[message.author.id]["latestQuest"]
                 #沒有講過話(給他一個新的template)
                 else:
                     print("message.author.id = {}".format(message.author.id))
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                     self.mscDICT[message.author.id]["replySTR"] = "哈囉！我是你的攀岩知識小幫手～\n幫你解決對攀岩的各種疑惑！\n有什麼想問的呢？"#msgSTR.title()
-            #非初次對話：這裡用 Loki 計算語意
+            if "感謝" in msgSTR.lower() or "謝謝" in msgSTR.lower():
+                if message.author.id not in self.mscDICT.keys():
+                    self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
+                    self.mscDICT[message.author.id]["replySTR"] = "謝啥呢"
+                else:
+                    self.mscDICT[message.author.id]["replySTR"] = choice(["不客氣！","不客氣哦！歡迎再問我問題～","不會哦！還有什麼攀岩相關問題都歡迎提問:)"])
             else: #開始處理正式對話，接上 NLU 模型
                 print("msgSTR2:",msgSTR,)
                 print(self.mscDICT.keys())
@@ -79,7 +85,7 @@ class BotClient(discord.Client):
                 self.mscDICT[message.author.id]["msgSTR"] = msgSTR #將取回的資訊 update 到人類的 msc 裡。
                 self.mscDICT[message.author.id] = NLUmodel(self.mscDICT[message.author.id])
         
-        await message.reply(self.mscDICT[message.author.id]["replySTR"])
+        message.reply(self.mscDICT[message.author.id]["replySTR"])
 
 
 if __name__ == "__main__":
