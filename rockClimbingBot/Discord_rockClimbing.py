@@ -32,7 +32,8 @@ class BotClient(discord.Client):
                              "_person_loc":"",
                              "_day_of_week": "",
                              "_gym_name":"",
-                             "_distance_intent":0
+                             "_rock_climbing":"",
+                             "_distance_intent":0,
         }
         self.templateDICT["_day_of_week"] = datetime.today().weekday()
         self.mscDICT = { 
@@ -43,9 +44,7 @@ class BotClient(discord.Client):
         # Don't respond to bot itself. Or it would create a non-stop loop.
         if message.author == self.user:
             return None
-        #elif message.content.lower().replace(" ", "") in ("bot點名"):
-            #await message.reply("有！")
-
+        
         logging.debug("收到來自 {} 的訊息".format(message.author))
         logging.debug("訊息內容是 {}。".format(message.content))
         if self.user.mentioned_in(message):#if "<@!{}>".format(self.user.id) in message.content or "<@{}>".format(self.user.id) in message.content:#

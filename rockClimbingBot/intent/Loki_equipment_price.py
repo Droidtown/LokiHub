@@ -33,15 +33,19 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "[岩鞋][大概]多少[錢]？":
         if "租" not in utterance:
             if args[0] in userDefinedDICT["_shoes"]:
+                resultDICT["reply_price"] = "equipment"
                 resultDICT["reply_equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
             elif args[0] in userDefinedDICT["_climbingEquip"]:
+                resultDICT["reply_price"] = "equipment"
                 resultDICT["reply_equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
             elif args[0] in userDefinedDICT["_topRopingEquip"]:
+                resultDICT["reply_price"] = "equipment"
                 resultDICT["reply_equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
             else:
                 resultDICT["reply_equipment_price"] = '這我不知道噎'
         else:
             if args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_climbingEquip"] or args[0] in userDefinedDICT["_topRopingEquip"]:
+                resultDICT["reply_price"] = "equipment"
                 resultDICT["reply_equipment_price"] = "場館租借{}大多介於50-100之間哦".format(args[0])
             else:
                 resultDICT["reply_equipment_price"] = "應該是沒有場館在租借{}哦".format(args[0])
@@ -49,10 +53,13 @@ def getResult(inputSTR, utterance, args, resultDICT):
     if utterance == "[岩鞋][很貴]嗎？":
         if "租" not in utterance:
             if args[0] in userDefinedDICT["_shoes"]:
+                resultDICT["reply_price"] = "equipment"
                 resultDICT["reply_equipment_price"] = args[0]+'價錢介於1000~5000不等，可依預算和偏好考量入手鞋款'
             elif args[0] in userDefinedDICT["_climbingEquip"]:
+                resultDICT["reply_price"] = "equipment"
                 resultDICT["reply_equipment_price"] = args[0]+'價錢大多低於1000，喜歡抱石可考慮入手哦'
             elif args[0] in userDefinedDICT["_topRopingEquip"]:
+                resultDICT["reply_price"] = "equipment"
                 resultDICT["reply_equipment_price"] = args[0]+'的價位大約是800~2000左右，建議對上攀真的很有興趣再入手'
             else:
                 resultDICT["reply_equipment_price"] = '這我不知道噎'

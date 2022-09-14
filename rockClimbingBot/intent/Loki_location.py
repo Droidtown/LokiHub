@@ -34,29 +34,37 @@ def debugInfo(inputSTR, utterance):
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "[台中]":
+        resultDICT["_gym_loc_small"] = args[0]
         resultDICT["_person_loc"] = args[0]
         resultDICT["reply_person_location"] = args[0]
         
     if utterance == "[台北市][大安區]":
+        resultDICT["_gym_loc_small"] = args[0]
         resultDICT["_person_loc"] = args[0]
         resultDICT["reply_person_location"] = args[0]
 
     if utterance == "[我]在[台中]":
         if args[0][0] not in ("祢", "你","妳","您"):
+            resultDICT["_gym_loc_small"] = args[1]
             resultDICT["_person_loc"] = args[1]
-        resultDICT["reply_person_location"] = args[1]
+            resultDICT["reply_person_location"] = args[1]
+        else:
+            resultDICT["reply_person_location"] = "你怎麼知道"
 
     if utterance == "[我]在[東部]":
         if args[0][0] not in ("祢", "你","妳","您"):
-            if args[1] in userDefinedDICT["_sides"]:
-                resultDICT["_person_loc"] = args[1]
-        resultDICT["reply_person_location"] = args[1]
+            resultDICT["_gym_loc_large"] = args[1]
+            resultDICT["_person_loc"] = args[1]
+            resultDICT["reply_person_location"] = args[1]
+        else:
+            resultDICT["reply_person_location"] = "你怎麼知道"        
 
     if utterance == "[我]在[猩猩縣豬豬市悟淨路141號]":
         if args[0][0] not in ("祢", "你","妳","您"):
-            #if args[1][:1] in  
             resultDICT["_person_loc"] = args[1]
             resultDICT["reply_person_location"] = "addr"
+        else:
+            resultDICT["reply_person_location"] = "你怎麼知道"        
     if utterance == "[猩猩縣豬豬市悟淨路141號]":
         resultDICT["_person_loc"] = args[0]
         resultDICT["reply_person_location"] = "addr"

@@ -36,9 +36,7 @@ def _reply(key):
                     "[你]愛攀岩[麻]": ["當然！", "Yes！", "愛"],
                     "[我]不喜歡[上攀]":["我也是","這樣啊","好哦","謝謝你告訴我"],
                     "[我]喜歡[抱石]":["我也是!","我也喜歡","謝謝你告訴我"],
-                    "攀岩":["請問想問什麼呢？", "想問什麼呢？","有什麼想問的呢？"],
                     "攀岩[好無聊]！":["這樣啊","是哦","好哦","謝謝你告訴我"],
-                    "[攀岩鞋子]要買多[大]？":["要親自試過才知道哦"],
                     "[抱石][好玩]嗎":["當然！","好玩呀！","你覺得呢？"],
                     "攀岩[好玩]嗎":["當然！","好玩呀！","你覺得呢？"]
 
@@ -48,22 +46,22 @@ def _reply(key):
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "[你][會]攀岩嗎":
-        if args[0][0] in ("你", "妳", "您"):
+        if args[0] in ("你", "妳", "您"):
             resultDICT["reply_chat"] = _reply(utterance)
         else:
-            resultDICT["reply_chat"] = random.choice(defaultResponse["_not_sure"])
+            resultDICT["reply_chat"] = random.choice(defaultResponse["_Not_sure"])
 
     if utterance == "[你]喜歡攀岩嗎？":
-        if args[0][0] in ("你", "妳", "您"):
+        if args[0] in ("你", "妳", "您"):
             resultDICT["reply_chat"] = _reply(utterance)
         else:
-            resultDICT["reply_chat"] = random.choice(defaultResponse["_not_sure"])
+            resultDICT["reply_chat"] = random.choice(defaultResponse["_Not_sure"])
 
     if utterance == "[你]愛攀岩[麻]":
-        if args[0][0] in ("你", "妳", "您"):
+        if args[0] in ("你", "妳", "您"):
             resultDICT["reply_chat"] = _reply(utterance)
         else:
-            resultDICT["reply_chat"] = random.choice(defaultResponse["_not_sure"])        
+            resultDICT["reply_chat"] = random.choice(defaultResponse["_Not_sure"])        
 
     if utterance == "[我]不喜歡[上攀]":
         resultDICT["reply_chat"] = _reply(utterance)
@@ -77,23 +75,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
         else:
             resultDICT["reply_chat"] = random.choice(defaultResponse["_not_rock_climbing"])
 
-    if utterance == "[抱石]要穿[長褲]還[短褲]？":
-        if args[0] in userDefinedDICT["_climbing"]:
-            resultDICT["reply_chat"] = "以方便運動為主哦！"
-        else:
-            resultDICT["reply_chat"] = random.choice(defaultResponse["_not_rock_climbing"])        
-
-    if utterance == "[攀岩鞋子]要買多[大]？":
-        if args[0] in userDefinedDICT["_shoes"]:
-            resultDICT["reply_chat"] = _reply(utterance)
-        else:
-            resultDICT["reply_chat"] = random.choice(defaultResponse["_not_sure"])
-
     if utterance == "攀岩[好無聊]！":
         resultDICT["reply_chat"] = _reply(utterance)
-
-    if utterance == "攀岩要穿[長褲]還[短褲]？":
-        resultDICT["reply_chat"] = "以方便運動為主哦！"
 
     if utterance == "攀岩[好玩]嗎？":
         resultDICT["reply_chat"] = _reply(utterance)

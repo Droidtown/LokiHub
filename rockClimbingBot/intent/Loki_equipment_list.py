@@ -145,5 +145,20 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "要買哪些[裝備]":
         resultDICT["reply_equipment_list"] = defaultResponse["_equipment_bring"]
+    
+    if utterance == "[抱石]要穿[長褲]還[短褲]？":
+        if args[0] in userDefinedDICT["_climbing"]:
+            resultDICT["reply_equipment_list"] = "以方便運動為主哦！"
+        else:
+            resultDICT["reply_equipment_list"] = random.choice(defaultResponse["_not_rock_climbing"]) 
+    
+    if utterance == "攀岩要穿[長褲]還[短褲]？":
+        resultDICT["reply_equipment_list"] = "以方便運動為主哦！"    
+    
+    if utterance == "[攀岩鞋子]要買多[大]？":
+        if args[0] in userDefinedDICT["_shoes"]:
+            resultDICT["reply_equipment_list"] = "要親自試過才知道哦"
+        else:
+            resultDICT["reply_equipment_list"] = choice(defaultResponse["_not_sure"])    
 
     return resultDICT

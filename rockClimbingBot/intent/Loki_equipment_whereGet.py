@@ -61,11 +61,11 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     if utterance == "[你]知道[岩粉]要去哪買嗎":
-        if args[0] in userDefinedDICT["_climbingEquip"]:
+        if args[1] in userDefinedDICT["_climbingEquip"]:
             resultDICT["reply_equipment_whereGet"] = '很多岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
-        elif args[0] in userDefinedDICT["_topRopingEquip"]:
+        elif args[1] in userDefinedDICT["_topRopingEquip"]:
             resultDICT["reply_equipment_whereGet"] = '很多可以上攀的岩館都有賣，也可以逛逛戶外休閒用品店或網路商店'
-        elif args[0] in userDefinedDICT["_shoes"] or args[0] in userDefinedDICT["_peClothes"]:
+        elif args[1] in userDefinedDICT["_shoes"] or args[1] in userDefinedDICT["_peClothes"]:
             resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
             resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
@@ -81,11 +81,11 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
 
     if utterance == "[岩粉]哪裡[可以]租得到？":
-        if args[1] in userDefinedDICT["_climbingEquip"]:
+        if args[0] in userDefinedDICT["_climbingEquip"]:
             resultDICT["reply_equipment_whereGet"] = '一般岩館都有提供租借哦！'
-        elif "手套" in args[1]:
+        elif "手套" in args[0]:
             resultDICT["equipment_whereGet"] = '這應該租不太到，要自己買'        
-        elif args[1] in userDefinedDICT["_topRopingEquip"]:
+        elif args[0] in userDefinedDICT["_topRopingEquip"]:
             resultDICT["reply_equipment_whereGet"] = '一般上攀岩館都租借得到哦！'
         else:
             resultDICT["equipment_whereGet"] = '這應該租不太到'
@@ -159,4 +159,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["reply_equipment_whereGet"] = '戶外休閒用品店、迪卡儂，或是運動類型網路商店都有賣哦'
         else:
             resultDICT["reply_equipment_whereGet"] = '這超出我能力範圍了'
+    
+    
     return resultDICT
