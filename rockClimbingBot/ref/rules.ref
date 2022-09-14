@@ -57,6 +57,8 @@
             "B-plus",
             "Boulder Space",
             "Camp 4",
+            "Wusa",
+            "wusa",
             "Corner",
             "Dapro",
             "K2",
@@ -418,6 +420,87 @@
                     "text": "嗎",
                     "checked": false,
                     "checkbox": false
+                }
+            ]
+        },
+        "奧運的攀岩規則": {
+            "id": "b33ce6dd-2dcc-47da-b8aa-908e9db408b2",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "奧運",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "滑水",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "扯鈴",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "攀巖",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "攀樹",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拉筋",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "垂降",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "溜直",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑步",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "爬樹",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舞龍",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "攀岩",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "規則",
+                    "checked": true,
+                    "checkbox": true
                 }
             ]
         },
@@ -1672,93 +1755,6 @@
                 {
                     "pos": "PUNCTUATION",
                     "text": "？",
-                    "checked": false,
-                    "checkbox": false
-                }
-            ]
-        },
-        "奧運的攀岩規則是": {
-            "id": "83115f0a-9017-4cea-bfaa-6c7772adb2c0",
-            "argument": [
-                {
-                    "pos": "ENTITY_oov",
-                    "text": "奧運",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "FUNC_inner",
-                    "text": "的",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ACTION_verb",
-                    "lexy": [
-                        {
-                            "text": "滑水",
-                            "level": "word2vec",
-                            "checked": false
-                        },
-                        {
-                            "text": "扯鈴",
-                            "level": "word2vec",
-                            "checked": false
-                        },
-                        {
-                            "text": "攀巖",
-                            "level": "word2vec",
-                            "checked": false
-                        },
-                        {
-                            "text": "攀樹",
-                            "level": "word2vec",
-                            "checked": false
-                        },
-                        {
-                            "text": "拉筋",
-                            "level": "word2vec",
-                            "checked": false
-                        },
-                        {
-                            "text": "垂降",
-                            "level": "word2vec",
-                            "checked": false
-                        },
-                        {
-                            "text": "溜直",
-                            "level": "word2vec",
-                            "checked": false
-                        },
-                        {
-                            "text": "跑步",
-                            "level": "word2vec",
-                            "checked": false
-                        },
-                        {
-                            "text": "爬樹",
-                            "level": "word2vec",
-                            "checked": false
-                        },
-                        {
-                            "text": "舞龍",
-                            "level": "word2vec",
-                            "checked": false
-                        }
-                    ],
-                    "text": "攀岩",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "規則",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "AUX",
-                    "text": "是",
                     "checked": false,
                     "checkbox": false
                 }
