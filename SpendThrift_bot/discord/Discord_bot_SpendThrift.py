@@ -18,12 +18,6 @@ from datetime import datetime
 from pprint import pprint
 import function as fun
 
-class bcolors:
-    OK = '\033[92m' #GREEN
-    WARNING = '\033[93m' #YELLOW
-    FAIL = '\033[91m' #RED
-    RESET = '\033[0m' #RESET COLOR
-
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -76,8 +70,8 @@ class BotClient(discord.Client):
             return None
         
         # 如果 server 中的所有 bot 被點名，回答
-        elif message.content.lower().replace(" ", "") in ("bot點名"): 
-            await message.reply("有！")     # TODO: 敗家子 style
+        elif message.content.lower().replace(" ", "") in ("bot點名",): 
+            await message.reply("你這個敗家子不要亂叫我！我的時間可是很寶貴的呢！")
 
 
         # 顯示是哪個使用者傳了什麼訊息
