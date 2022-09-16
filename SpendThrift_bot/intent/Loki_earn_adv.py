@@ -24,7 +24,7 @@ DEBUG_earn_adv = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
-    userDefinedDICT = {"_key":["收入","支出","記帳狀況"],"_park":["六福村","九族文化村","義大","義大世界"],"money":["支出總額","支出費用","總金額","總額","費用","金錢","錢"]}
+    userDefinedDICT = {"_key":["收入","支出","記帳狀況"],"_park":["六福村","九族文化村","義大","義大世界"],"_money":["支出總額","支出費用","總金額","總額","費用","金錢","錢"]}
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
@@ -97,8 +97,8 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
 
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = reason         # 地點
-            resultDICT["description"] = ""          # 說明
+            resultDICT["location"] = ""         # 地點
+            resultDICT["description"] = reason          # 說明
             resultDICT["amount"] = result[1]        # 金額
         else:
             resultDICT["intent"] = "error"
@@ -122,8 +122,8 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
 
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = reason         # 地點
-            resultDICT["description"] = ""          # 說明
+            resultDICT["location"] =""              # 地點
+            resultDICT["description"] = reason      # 說明
             resultDICT["amount"] = result[1]        # 金額
         else:
             resultDICT["intent"] = "error"
