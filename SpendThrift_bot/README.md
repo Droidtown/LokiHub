@@ -10,7 +10,7 @@
 - 人性化設定，輸入時直接打入平常說的話語(自然語言)即可。
 - 無法克制享受花大錢的時光？小心會挨罵！根據條件觸發特殊對話，他可是很難取悅的！
 
-在處理輸入時，我們使用了 [卓滕語言科技](https://droidtown.co/zh-tw/) 的 [ArticutAPI](https://api.droidtown.co/document/) 與 [LOKI](https://github.com/Droidtown/LokiHub) ，相較於市面上的機器人大多採用關鍵字的方式檢測輸入條件，「敗家子終止機器人」使用 NLU 處理語料，比外面的記帳APP更準確、更聰明、更有溫度！
+在處理輸入時，我們使用了 [卓騰語言科技](https://droidtown.co/zh-tw/) 的 [ArticutAPI](https://api.droidtown.co/document/) 與 [LOKI](https://github.com/Droidtown/LokiHub) ，相較於市面上的機器人大多採用關鍵字的方式檢測輸入條件，「敗家子終止機器人」使用 NLU 處理語料，比外面的記帳APP更準確、更聰明、更有溫度！
 
 
 ## 專案內容列表
