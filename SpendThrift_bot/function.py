@@ -19,8 +19,15 @@ account = "ss96083@gmail.com"
 articut_key = "NRLknK9bqwxLWVcHMM!%QHvpiUMqKB+"
 loki_key = "BbcY-sJJE-bmc&^s!wZuXCxmzoLeHUh"
 
+"""
+    由於 LOKI 和 Articut 衝突問題，先把 LOKI 中的 tags(<>) 給去除
+"""
+def RemoveLokiTags(input):
+    return re.findall(r'<[^<]*>([^<>]*)</[^<]*>', input)
 
-"""_summary_
+
+"""
+    回覆格式
 """
 def SpendThriftReply(resultDICT):
     replySTR = ""
@@ -123,7 +130,7 @@ def TransformDate(inputSTR):
     # endregion
     articut = Articut(account, articut_key, level="lv3")
     articutResultDICT = articut.parse(inputSTR)
-    print(articutResultDICT)
+
     return articutResultDICT["time"][0][0]["datetime"][0:10]
 
 
@@ -267,13 +274,17 @@ def GetAdvArgs(intent, utterance, inputSTR, groupIndexLIST):
         patGroups = re.search(pat, articutResultDICT["result_pos"][0])
         args = []
         
-        for i in articutResultDICT["result_pos"]:
-            print(i)
+        # for i in articutResultDICT["result_pos"]:
+        #     print(i)
 
         # 把我們要的參數拿出來
-        for i in groupIndexLIST:
-            args.append(patGroups.group(i))
-        return (response["status"], args)
+        try:
+            for i in groupIndexLIST:
+                args.append(patGroups.group(i))
+            return (response["status"], args)
+        # 由於 Articut 不能採用 LOKI 的自定義辭典，因此在斷詞上會有差距，會發生錯誤
+        except:
+            return (False, "")
     # error
     else:
         return (response["status"], response["msg"])
