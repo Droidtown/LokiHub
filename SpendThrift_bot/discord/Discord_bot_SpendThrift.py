@@ -97,6 +97,9 @@ class BotClient(discord.Client):
 
 # ##########初次對話：這裡是 keyword trigger 的。
 
+            # 記錄使用者打招呼的次數
+            countHi = 0
+
             # 如果在跟 bot 打招呼
             if msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello"]:
                 #有講過話(判斷對話時間差)
@@ -105,19 +108,24 @@ class BotClient(discord.Client):
                     #有講過話，但與上次差超過 5 分鐘(視為沒有講過話，刷新template)
                     if timeDIFF.total_seconds() >= 300:
                         self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
-                        replySTR = "你之前好像跟我講過話呢...不過像你這種敗家子我不屑記得"
+                        replySTR = "你之前好像跟我講過話呢...不過像你這種敗家子我可不屑記得"
+                        countHi = 0
                     #有講過話，而且還沒超過5分鐘就又跟我 hello (就繼續上次的對話)
                     else:
-                        replySTR = self.mscDICT[message.author.id]["latestQuest"]
+                        replySTR = "你這個敗家子連記憶力都不好嗎...\n你剛剛才對我說：「" + self.mscDICT[message.author.id]["latestQuest"] + "」\n馬上就忘了還真可悲"
                 #沒有講過話(給他一個新的template)
                 else:
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
-                    replySTR = msgSTR.title() + "敗家子"
+                    replySTR = msgSTR.title() + "，敗家子"
+                    countHi += 1
+                    # 連續嗨了很多次
+                    if countHi >= 4:
+                        replySTR += "..." + msgSTR.titile() + "你個頭啦！這樣好玩嗎？"
 
 # ##########非初次對話：
 
             # 呼叫指令集
-            elif msgSTR == "出來":
+            elif msgSTR in ["出來","指令","使用說明"]:
                 replySTR = "你好啊敗家子：\n\n\我必須讚賞你的精神，至少你還願意看我的使用說明，比起其他可悲的人類好上不少了\n" + \
                 "如果你愚笨的腦袋實在不知道要怎麼跟我對話的話可以參考以下設定：\n\n" + \
                 "\[記帳\]：至少須包含 「形式」 與 「金額」\n" + \
@@ -134,8 +142,26 @@ class BotClient(discord.Client):
                 "                - 範例：@SpendThrift 查詢我昨天支出多少"
 
 
+            # 什麼都沒講，只標了bot
+            elif msgSTR == "":
+                replySTR = "看來你愚笨的腦袋實在不知道要怎麼跟我對話呢...請你參考以下設定：\n\n" + \
+                "\[記帳\]：至少須包含 「形式」 與 「金額」\n" + \
+                "        - 支出\n" + \
+                "                - 範例：@SpendThrift 昨天去全聯購物花了300元\n" + \
+                "        - 收入\n" + \
+                "                - 範例：@SpendThrift 上週五去打工賺了1400元\n\n" + \
+                "\[查詢\]：須包含一樣條件\n" + \
+                "        - 依\[時間\]查詢\n" + \
+                "                - 範例：@SpendThrift 查詢我上週五花了多少錢\n" + \
+                "        - 依\[收入\]查詢\n" + \
+                "                - 範例：@SpendThrift 查詢我上周收入多少\n" + \
+                "        - 依\[支出\]查詢\n" + \
+                "                - 範例：@SpendThrift 查詢我昨天支出多少"
+
+
             # 用 Loki 計算語意            
             else: #開始處理正式對話，開始接上 NLU 模型
+                self.mscDICT[message.author.id]["latestQuest"] = msgSTR
                 resultDICT = runLoki(str(message.author.id), [msgSTR])
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resultDICT)
