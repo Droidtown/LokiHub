@@ -339,4 +339,8 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
     if resultDICT["intent"] != "error":
         fun.SaveAccountToCSV(resultDICT, userID)
     
+    elif resultDICT["intent"] == "error" and resultDICT["err_msg"] == "":
+        resultDICT["err_msg"] = "不知道你幹了什麼敗家子的行為，反正我看不懂"
+    
+    
     return resultDICT
