@@ -257,7 +257,6 @@ def GetAdvArgs(intent, utterance, inputSTR, groupIndexLIST):
     
     # success
     if response["status"] == True:
-        
         # 將輸入丟進 articut 斷詞
         articut = Articut(account, articut_key, level="lv2")
         articutResultDICT = articut.parse(inputSTR)
