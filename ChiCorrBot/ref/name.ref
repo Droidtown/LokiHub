@@ -1,0 +1,1259 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v255",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_agreeExp": [
+            "YES",
+            "Yes",
+            "yes",
+            "Y",
+            "y"
+        ],
+        "_disagreeExp": [
+            "NO",
+            "No",
+            "no",
+            "N",
+            "n"
+        ]
+    },
+    "utterance": {
+        "小明": {
+            "id": "11c6f06c-464f-4281-8043-b7f5cc830785",
+            "argument": [
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "小明",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "陳小明": {
+            "id": "3dc575d0-6058-4f54-a2d5-a3a0c364326a",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "陳小明",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我叫小明": {
+            "id": "397d0e43-2ed7-4028-834c-2d1976c6a180",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "叫作",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫喊",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼叫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "召開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吆喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嗔喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拘傳",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "稱呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自稱",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "號召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "高喊",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "常叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "罵",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "叫",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "小明",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我是小明": {
+            "id": "dd41b85e-bba3-4eb2-9f0a-19aa7ec94d1e",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "小明",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我叫陳小明": {
+            "id": "5a0eb81d-f38b-4c32-a7ad-bb70822dcd6f",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "叫作",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫喊",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼叫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "召開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吆喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嗔喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拘傳",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "稱呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自稱",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "號召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "高喊",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "罵",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "叫",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "陳小明",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我是陳小明": {
+            "id": "beb57bd4-2f23-47e9-8616-1238813dcb41",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "陳小明",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "早餐店帥哥": {
+            "id": "3cafbcbf-84f8-4ada-8fd2-396829a8ece2",
+            "argument": [
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "早餐店",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "帥哥",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我叫早餐店帥哥": {
+            "id": "2a476773-d502-4432-b9ff-b9181b2a39b1",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "叫作",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫喊",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼叫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "召開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吆喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嗔喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拘傳",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "稱呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自稱",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "號召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "高喊",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "罵",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "叫",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "早餐店",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "帥哥",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我是早餐店帥哥": {
+            "id": "5d3dbab1-22e2-45e4-bc96-60668454276c",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "早餐店",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "帥哥",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我的名字叫小明": {
+            "id": "7a6ebcb9-a8e9-4215-9db3-d5fa9063e9fa",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "名字",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "叫作",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫喊",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼叫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "召開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吆喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嗔喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拘傳",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "稱呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自稱",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "號召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "高喊",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "常叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "罵",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "叫",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "小明",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我的名字是小明": {
+            "id": "928ac003-baa1-4356-8b28-87729ded3ca7",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "名字",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "小明",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我的名字叫陳小明": {
+            "id": "83356dba-bc57-444c-bd73-326cf03f697d",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "名字",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "叫作",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫喊",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼叫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "召開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吆喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嗔喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拘傳",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "稱呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自稱",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "號召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "高喊",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "罵",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "叫",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "陳小明",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我的名字是陳小明": {
+            "id": "9e226896-94d0-4d33-b1c3-3d123988d925",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "名字",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "陳小明",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我的名字叫早餐店帥哥": {
+            "id": "226c5d1f-c8d8-49cc-b04c-e9b9ff1449cb",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "名字",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "叫作",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫喊",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼叫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "召開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吆喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嗔喝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拘傳",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "稱呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自稱",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "號召",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "高喊",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "叫了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "罵",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "叫",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "早餐店",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "帥哥",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我的名字是早餐店帥哥": {
+            "id": "52aeabfa-180a-4bff-a54a-b93ae789b434",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "名字",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "早餐店",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "帥哥",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}

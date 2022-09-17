@@ -1,0 +1,734 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v255",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_agreeExp": [
+            "YES",
+            "Yes",
+            "yes",
+            "Y",
+            "y"
+        ],
+        "_disagreeExp": [
+            "NO",
+            "No",
+            "no",
+            "N",
+            "n"
+        ]
+    },
+    "utterance": {
+        "一分": {
+            "id": "6ab4b010-a5a0-4632-a555-b9a5b247aec0",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "一分",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "一天": {
+            "id": "a7c76675-9458-43d7-833b-bedcb69a632f",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "一天",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "一年": {
+            "id": "c5f33a55-cb2a-4992-9fef-37469e76f04e",
+            "argument": [
+                {
+                    "pos": "TIME_year",
+                    "text": "一年",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "一個月": {
+            "id": "589737f7-db8d-4d72-acb4-08514790ab07",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "一個月",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我學了一分": {
+            "id": "41c95ef4-19f3-4009-a557-b7c2bab3f1cb",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "剛升",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下剋",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨棍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剛考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演搶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恐得花",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "學了",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "一分",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我學了一天": {
+            "id": "2607ca04-17a5-46ac-8360-ac54dc0819bd",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "剛升",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下剋",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨棍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剛考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演搶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恐得花",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "學了",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "一天",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我學了一年": {
+            "id": "13e098ff-e6b6-4193-ba07-30584155eb88",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "剛升",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下剋",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨棍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剛考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演搶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恐得花",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "學了",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_year",
+                    "text": "一年",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我學了一個月": {
+            "id": "a905ec50-5927-488b-bf46-30682b14f27e",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "剛升",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下剋",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨棍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剛考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演搶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恐得花",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "學了",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_month",
+                    "text": "一個月",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "學中文學了一天": {
+            "id": "55a48156-28c1-4f27-8e37-251ac9a4cda3",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "學中文",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "剛升",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下剋",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨棍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剛考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演搶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恐得花",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "學了",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "一天",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "學華語學了一天": {
+            "id": "d0535d60-0a9d-48ff-b927-05402aa892b3",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "學華語",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "剛升",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下剋",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨棍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剛考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演搶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恐得花",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "學了",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "一天",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我學中文學了一天": {
+            "id": "b952772d-06fb-476f-8092-f9c4a20d1321",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "學中",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "文",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "剛升",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下剋",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨棍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剛考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演搶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恐得花",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "學了",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "一天",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我學華語學了一天": {
+            "id": "930f8792-b57e-4e75-84b4-4f77b6a1418d",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "學華",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "語",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "剛升",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下剋",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨棍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剛考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演搶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恐得花",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留級",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復讀",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "學了",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "一天",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        }
+    }
+}
