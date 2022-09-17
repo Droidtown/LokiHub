@@ -271,7 +271,7 @@ class BotClient(discord.Client):
                         sports_valLIST = list(sports_dict.values())                        
                         if today_cal >= 0:
                             rec_sportsSTR = '、'.join([str(s) for s in sports_keyLIST])
-                            replySTR = "你今日多消耗了" + str(today_cal) + "卡，恭喜你離你的目標又更近了一步！\n如果還有餘力，也推薦你可以做以下運動：\n" + rec_sportsSTR + "任一項進行10分鐘。"
+                            replySTR = "你今日多消耗了" + str(today_cal) + "卡。\n恭喜你離你的目標又更近了一步！如果還有餘力，也推薦你可以做以下運動喔！\n" + rec_sportsSTR + "任一項進行10分鐘。"
                         else:
                             rec_sportsLIST1 = []
                             rec_sportsLIST2 = []
@@ -330,6 +330,7 @@ class BotClient(discord.Client):
                 logging.debug("######\nLoki 處理結果如下：") 
                 logging.debug(resultDICT)
                 
+
 
         await message.reply(replySTR) #機器人統一回覆
         print(self.mscDICT)
