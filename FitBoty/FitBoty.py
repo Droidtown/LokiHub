@@ -180,34 +180,35 @@ class LokiResult():
 def runLoki(inputLIST, filterLIST=[]):
     # 將 intent 會使用到的 key 預先設爲空列表
     resultDICT = {
+       #"key": []
     }
     lokiRst = LokiResult(inputLIST, filterLIST)
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
-                # height
-                if lokiRst.getIntent(index, resultIndex) == "height":
-                    resultDICT = Loki_height.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                # food
+                if lokiRst.getIntent(index, resultIndex) == "food":
+                    resultDICT = Loki_food.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
                 # weight
                 if lokiRst.getIntent(index, resultIndex) == "weight":
                     resultDICT = Loki_weight.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
+                # height
+                if lokiRst.getIntent(index, resultIndex) == "height":
+                    resultDICT = Loki_height.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+
                 # age
                 if lokiRst.getIntent(index, resultIndex) == "age":
                     resultDICT = Loki_age.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-
-                # gender
-                if lokiRst.getIntent(index, resultIndex) == "gender":
-                    resultDICT = Loki_gender.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
                 # sports
                 if lokiRst.getIntent(index, resultIndex) == "sports":
                     resultDICT = Loki_sports.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
-                # food
-                if lokiRst.getIntent(index, resultIndex) == "food":
-                    resultDICT = Loki_food.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                # gender
+                if lokiRst.getIntent(index, resultIndex) == "gender":
+                    resultDICT = Loki_gender.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
@@ -276,6 +277,11 @@ def testLoki(inputLIST, filterLIST):
         print(resultDICT["msg"])
 
 def testIntent():
+    # food
+    print("[TEST] food")
+    inputLIST = ['一碗白飯','和一碗白飯','吃了一碗白飯','一碗白飯和一碗湯','早上吃了一碗白飯','晚餐還吃了一碗白飯']
+    testLoki(inputLIST, ['food'])
+    print("")
 
     # weight
     print("[TEST] weight")
@@ -295,22 +301,16 @@ def testIntent():
     testLoki(inputLIST, ['age'])
     print("")
 
-    # gender
-    print("[TEST] gender")
-    inputLIST = ['我是女生','我是個男的']
-    testLoki(inputLIST, ['gender'])
-    print("")
-
     # sports
     print("[TEST] sports")
     inputLIST = ['沒有','沒有運動','跳繩30分鐘','做瑜伽30分鐘','打排球30分鐘','爬樓梯30分鐘','跳國標舞30分鐘','騎腳踏車30分鐘','跳繩和重訓各30分鐘','跳繩30分鐘和重訓1小時']
     testLoki(inputLIST, ['sports'])
     print("")
 
-    # food
-    print("[TEST] food")
-    inputLIST = ['吃了一盤水果','吃了一盤炒飯和一碗湯','吃了一碗糙米飯、一盤小菜和一碗湯']
-    testLoki(inputLIST, ['food'])
+    # gender
+    print("[TEST] gender")
+    inputLIST = ['我是女生','我是個男的']
+    testLoki(inputLIST, ['gender'])
     print("")
 
 
@@ -329,5 +329,5 @@ if __name__ == "__main__":
     #print(resultDICT)
     #print("你想問他是{}".format(resultDICT["sex"]))
     
-    resultDICT = runLoki(["女生"])
+    resultDICT = runLoki(["早上吃了一碗粥、一碗白飯和一盤原味蛋餅"])
     print(resultDICT)
