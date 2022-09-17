@@ -19,6 +19,12 @@ import json
 import os
 from unicodedata import name
 from unittest import result
+from ArticutAPI import Articut
+
+with open("./account.info", encoding="utf-8") as f: #讀取account.info
+    accountDICT = json.loads(f.read())
+
+articut = Articut(username=accountDICT['username'], apikey=accountDICT['articut_key'])
 
 DEBUG_name = True
 try:
@@ -34,10 +40,12 @@ def debugInfo(inputSTR, utterance):
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     if utterance == "[小明]":
-        nameSTR = args[0]
+        if len(inputSTR) <= 3:
+            nameSTR = args[0]
 
     if utterance == "[我]叫[小明]":
-        nameSTR = args[1]
+        if articut.parse(inputSTR)["result_pos"] == "<ENTITY_person>{}</ENTITY_person>".format(inputSTR):
+            nameSTR = args[1]
 
     if utterance == "[我]叫[早餐店][帥哥]":
         nameSTR = args[1]+args[2]
