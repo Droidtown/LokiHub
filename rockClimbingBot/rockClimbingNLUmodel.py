@@ -244,7 +244,7 @@ def NLUmodel(mscDICT):
                     mscDICT["replySTR"] = resultDICT["reply_rocks"]
                     print("----what is rock------")
             else:
-                mscDICT["replySTR"] = resultDICT["reply_rules"]
+                mscDICT["replySTR"] = resultDICT["reply_whatIs"]
         elif "注意" in mscDICT["msgSTR"] or "小心" in mscDICT["msgSTR"]:
             print("----attention----\n")
             if "爬" in mscDICT["msgSTR"] and "reply_rocks" in resultDICT.keys():
@@ -268,7 +268,7 @@ def NLUmodel(mscDICT):
                 if "reply_gym_howMany" in resultDICT.keys():
                     pass
                 else:
-                    if resultDICT["reply_person_location"] == "addr":
+                    if resultDICT["reply_person_location"] == "addr": #改
                         mscDICT["_person_loc"] = resultDICT["_person_loc"]
                         mscDICT["replySTR"] = choice(defaultResponse["_msg_received"])
                     elif "_gym_loc_small" in resultDICT.keys():

@@ -71,12 +71,12 @@ class BotClient(discord.Client):
                     print("message.author.id = {}".format(message.author.id))
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                     self.mscDICT[message.author.id]["replySTR"] = "哈囉！我是你的攀岩知識小幫手～\n幫你解決對攀岩的各種疑惑！\n有什麼想問的呢？"#msgSTR.title()
-            if "感謝" in msgSTR.lower() or "謝謝" in msgSTR.lower():
+            elif "感謝" in msgSTR.lower() or "謝謝" in msgSTR.lower()  or "感恩" in msgSTR.lower() or "thank" in msgSTR.lower() or "tks" in msgSTR.lower() or "thx" in msgSTR.lower():
                 if message.author.id not in self.mscDICT.keys():
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
-                    self.mscDICT[message.author.id]["replySTR"] = "謝啥呢"
+                    self.mscDICT[message.author.id]["replySTR"] = "謝啥呢？都還沒問問題呢！"
                 else:
-                    self.mscDICT[message.author.id]["replySTR"] = choice(["不客氣！","不客氣哦！歡迎再問我問題～","不會哦！還有什麼攀岩相關問題都歡迎提問:)"])
+                    self.mscDICT[message.author.id]["replySTR"] = choice(["不客氣！","不客氣哦！隨時歡迎再問我問題～","不會！還有什麼攀岩相關問題都歡迎提問哦:)"])
             else: #開始處理正式對話，接上 NLU 模型
                 print("msgSTR2:",msgSTR,)
                 print(self.mscDICT.keys())
@@ -84,8 +84,8 @@ class BotClient(discord.Client):
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                 self.mscDICT[message.author.id]["msgSTR"] = msgSTR #將取回的資訊 update 到人類的 msc 裡。
                 self.mscDICT[message.author.id] = NLUmodel(self.mscDICT[message.author.id])
-        
-        message.reply(self.mscDICT[message.author.id]["replySTR"])
+            print('\n---message reply：',self.mscDICT[message.author.id]["replySTR"],"---\n")
+            await message.reply(self.mscDICT[message.author.id]["replySTR"])
 
 
 if __name__ == "__main__":

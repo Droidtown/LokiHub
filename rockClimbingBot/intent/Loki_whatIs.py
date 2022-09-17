@@ -38,7 +38,12 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["_what_is"] = args[0]
         if args[0] in userDefinedDICT["_rockTypes"]:
             resultDICT["reply_whatIs"] = "{0}是一種岩點，{1}".format(args[0],rocksInfo[args[0]][0])
-        elif args[0] in userDefinedDICT["_climbingEquip"] and args[0] in userDefinedDICT["_topRopingEquip"]:
+        elif args[0] in userDefinedDICT["_climbingEquip"]:
+            if "粉袋" in args[0]:
+                resultDICT["reply_whatIs"] = "{}是用來裝岩粉的".format(args[0])
+            else:
+                resultDICT["reply_whatIs"] = "{}是一種白色粉狀物，用來抹在手上增加手和牆壁的摩擦力".format(args[0])
+        elif args[0] in userDefinedDICT["_topRopingEquip"]:
             resultDICT["reply_whatIs"] = "{}是一種攀岩裝備".format(args[0])
         elif args[0] in whatIs.keys():
             resultDICT["reply_whatIs"] = "{0}{1}".format(args[0],whatIs[args[0]])
@@ -51,7 +56,12 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["_what_is"] = args[0]
         if args[0] in userDefinedDICT["_rockTypes"]:
             resultDICT["reply_whatIs"] = "{0}是一種岩點，{1}".format(args[0],rocksInfo[args[0]][0])
-        elif args[0] in userDefinedDICT["_climbingEquip"] and args[0] in userDefinedDICT["_topRopingEquip"]:
+        elif args[0] in userDefinedDICT["_climbingEquip"]:
+            if "粉袋" in args[0]:
+                resultDICT["reply_whatIs"] = "{}是用來裝岩粉的".format(args[0])
+            else:
+                resultDICT["reply_whatIs"] = "{}是一種白色粉狀物，用來抹在手上增加手和牆壁的摩擦力".format(args[0])
+        elif args[0] in userDefinedDICT["_topRopingEquip"]:
             resultDICT["reply_whatIs"] = "{}是一種攀岩裝備".format(args[0])
         elif args[0] in whatIs.keys():
             resultDICT["reply_whatIs"] = "{0}{1}".format(args[0],whatIs[args[0]])
@@ -64,7 +74,12 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["_what_is"] = args[0]
         if args[0] in userDefinedDICT["_rockTypes"]:
             resultDICT["reply_whatIs"] = "{0}是一種岩點，{1}".format(args[0],rocksInfo[args[0]][0])
-        elif args[0] in userDefinedDICT["_climbingEquip"] and args[0] in userDefinedDICT["_topRopingEquip"]:
+        elif args[0] in userDefinedDICT["_climbingEquip"]:
+            if "粉袋" in args[0]:
+                resultDICT["reply_whatIs"] = "{}是用來裝岩粉的".format(args[0])
+            else:
+                resultDICT["reply_whatIs"] = "{}是一種白色粉狀物，用來抹在手上增加手和牆壁的摩擦力".format(args[0])
+        elif args[0] in userDefinedDICT["_topRopingEquip"]:
             resultDICT["reply_whatIs"] = "{}是一種攀岩裝備".format(args[0])
         elif args[0] in whatIs.keys():
             resultDICT["reply_whatIs"] = "{0}{1}".format(args[0],whatIs[args[0]])

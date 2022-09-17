@@ -25,6 +25,8 @@ from rockClimbingFunc import checkGymInString
 from rockClimbingFunc import getGymTime
 from rockClimbingFunc import timeToString
 from rockClimbingFunc import checkGymCity
+from rockClimbingFunc import getLocBTSGym
+from rockClimbingFunc import containerToString
 DEBUG_gym_yesNo = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
@@ -126,7 +128,9 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "[苗栗]有[岩館]嗎":
         if hasGymCounty(args[0],args[1]):
-            resultDICT["reply_gym_yesNo"] = "有"
+            gymSet = getLocBTSGym(args[0], args[1])
+            gymsNames = containerToString(gymSet)
+            resultDICT["reply_gym_yesNo"] = "有，{0}的{1}有{2}".format(args[0], args[1], gymsNames)
         else:
             resultDICT["reply_gym_yesNo"] = "{0}沒有{1}哦".format(args[0],args[1])
 

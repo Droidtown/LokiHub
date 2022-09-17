@@ -207,7 +207,8 @@
             "攀岩場",
             "攀岩館",
             "抱石館",
-            "上攀館"
+            "上攀館",
+            "抱石場"
         ],
         "_taiwanAlias": [
             "全台",
@@ -249,7 +250,9 @@
             "裝",
             "裝備",
             "鎂粉",
-            "鎂粉球"
+            "鎂粉球",
+            "防滑粉",
+            "白粉"
         ],
         "_topRopingEquip": [
             "吊帶",
@@ -545,6 +548,107 @@
                     "text": "多少",
                     "checked": false,
                     "checkbox": false
+                }
+            ]
+        },
+        "double 8要多少錢": {
+            "id": "caad67d7-cba4-4b81-a55c-2f32be7f59e9",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "double 8",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "錢",
+                    "checked": false,
+                    "checkbox": true
                 }
             ]
         },

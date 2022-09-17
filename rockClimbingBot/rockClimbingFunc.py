@@ -343,7 +343,7 @@ def checkLocation(inputSTR):
         inputSTR = "台北"
     elif inputSTR == "臺南":
         inputSTR = "台南"
-    if inputSTR in extendedDICT["_taiwanCities"]:
+    if inputSTR[:2] in extendedDICT["_taiwanCities"]:
         return True
     return False
 
