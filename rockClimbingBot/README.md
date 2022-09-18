@@ -103,7 +103,7 @@
 ## 使用者互動說明
 完成上述程序後，執行 `python3 Discord_rockClimbing.py` 即可開始與 Bot 互動<br>
 <互動示例><br>
-[![IMAGE ALT TEXT]("https://img.youtube.com/vi/UiLrlxRH-aU/0.jpg")](https://www.youtube.com/watch?v=UiLrlxRH-aU "台灣攀岩 Bot DEMO")
+[![VIDEO]("https://img.youtube.com/vi/UiLrlxRH-aU/0.jpg")](https://www.youtube.com/watch?v=UiLrlxRH-aU "台灣攀岩 Bot DEMO")
 ❗與Bot對話不要忘了@它哦❗<br>
 
 ## 參考資料
