@@ -84,13 +84,8 @@ class BotClient(discord.Client):
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                 self.mscDICT[message.author.id]["msgSTR"] = msgSTR #將取回的資訊 update 到人類的 msc 裡。
                 self.mscDICT[message.author.id] = NLUmodel(self.mscDICT[message.author.id])
-<<<<<<< HEAD
             print('\n---message reply：',self.mscDICT[message.author.id]["replySTR"],"---\n")
             await message.reply(self.mscDICT[message.author.id]["replySTR"])
-=======
-        
-        await message.reply(self.mscDICT[message.author.id]["replySTR"])
->>>>>>> 89dfbbc34e4b68876a0a912abc868a4b4f5d1ac4
 
 
 if __name__ == "__main__":

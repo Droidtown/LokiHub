@@ -235,7 +235,11 @@ def NLUmodel(mscDICT):
                                         else:
                                             mscDICT["replySTR"] = "{0}沒有{1}岩館哦".format(mscDICT["_person_loc"], resultDICT["_rock_climbing"])
                                 else:
-                                    mscDICT["replySTR"] = choice(defaultResponse["_not_taiwan_city"])                
+                                    mscDICT["replySTR"] = choice(defaultResponse["_not_taiwan_city"]) 
+                elif "規則" in mscDICT["msgSTR"] or "規定" in mscDICT["msgSTR"]:
+                    mscDICT["replySTR"] = resultDICT["reply_rules"]
+                else:
+                    mscDICT["replySTR"] = resultDICT["reply_whatIs"]
             elif "地址" in mscDICT["msgSTR"] or "電話" in mscDICT["msgSTR"] or "聯絡" in mscDICT["msgSTR"]:
                 if "reply_gym_location" in resultDICT.keys():
                     mscDICT["replySTR"] = resultDICT["reply_gym_location"]
@@ -419,6 +423,12 @@ def NLUmodel(mscDICT):
             
             if "reply_gym_name" in resultDICT.keys() and "reply_gym_time" in resultDICT.keys():
                 mscDICT["replySTR"] = resultDICT["reply_gym_time"]
+            
+            if "reply_gym_name" in resultDICT.keys() and "reply_gym_location" in resultDICT.keys():
+                if "有名的" in mscDICT["msgSTR"]:
+                    mscDICT["replySTR"] = resultDICT["reply_gym_name"]
+                else:
+                    mscDICT["replySTR"] = resultDICT["reply_gym_location"]
             
             if "reply_gym_location" in resultDICT.keys() and "reply_gym_district" in resultDICT.keys() :
                 mscDICT["replySTR"] = resultDICT["reply_gym_district"]             

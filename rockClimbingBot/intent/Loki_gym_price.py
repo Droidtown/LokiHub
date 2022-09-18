@@ -152,12 +152,14 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "去[double8]攀岩[一次]多少":
         if args[0] in userDefinedDICT["_gymsShort"]:
+            resultDICT["reply_price"] = "gym"
             resultDICT["_gym_name"] = args[0]
             gymPriceDict = getGymPrice(args[0])
             gymPrice = priceToString(gymPriceDict)
             resultDICT["reply_gym_price"] = gymPrice
         elif args[0] in userDefinedDICT["_climbing"] or args[0] in userDefinedDICT["_climbingGym"]:
             resultDICT["reply_gym_price"] = defaultResponse["_climbing_price"]
+            resultDICT["reply_price"] = "gym"
         else:
             resultDICT["reply_gym_price"] = choice(defaultResponse["_gym_unknown"])
 
