@@ -86,7 +86,10 @@ class BotClient(discord.Client):
                 self.mscDICT[message.author.id] = NLUmodel(self.mscDICT[message.author.id])
             print('\n---message reply：',self.mscDICT[message.author.id]["replySTR"],"---\n")
             await message.reply(self.mscDICT[message.author.id]["replySTR"])
+<<<<<<< HEAD
 
+=======
+>>>>>>> b706f1357578c46139415df391fff9598a706615
 
 if __name__ == "__main__":
     client = BotClient()

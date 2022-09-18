@@ -85,7 +85,7 @@
 ## DiscordBot建置
 1. 註冊並登入 Discord 帳號
 2. 進入[Discord Developers](https://discord.com/developers/applications)
-3. 點擊畫面右上方的 `New Application` ->填上 Bot 名稱-> `create` 建立 Discord Bot
+3. 點擊畫面右上方的 `New Application` ->填上 Bot 名稱-> 點擊 `create` 建立 Discord Bot
 4. 點選右方欄位 SETTINGS 中的 `Bot` ->點選 `Add Bot`
 5. 點選右方欄位 SETTINGS 中的 `OAuth2` ->點選 `URL Generator`
 6. 於 SCOPES 欄位勾選「bot」
@@ -101,13 +101,16 @@
 }
 ```
 ## 使用者互動說明
-完成上述程序後，執行 `python3 Discord_rockClimbing.py` 即可開始與 Bot 互動<br>
+完成上述程序後，執行 `python3 Discord_rockClimbing.py` 即可開始與 Bot 互動<br><br>
 <互動示例><br>
-User: `@台灣攀岩`嘉義哪裡可以攀岩<br>
-台灣攀岩: 嘉義的岩館有「嘉義市國民運動中心8a攀岩場」, 「嘉義攀岩會館」<br>
-User: `@台灣攀岩` 攀岩有規則嗎<br>
-台灣攀岩: 有啊！攀岩規則包含 ...<br><br>
-❗與Bot對話不要忘了@它哦❗<br>
+
+
+https://user-images.githubusercontent.com/48231321/190892489-a8472ee4-ad6f-4d40-8583-cf417acf6c08.mp4
+
+
+
+<br>❗與Bot對話不要忘了@它哦❗<br>
+
 ## 參考資料
 - 岩館資訊：
   - [轟菌體能](https://shenlee799.com/climbinggyms-taiwan/) 
@@ -118,7 +121,7 @@ User: `@台灣攀岩` 攀岩有規則嗎<br>
     - [運動視界](https://www.sportsv.net/articles/86153)
     - [Yinggan Chen-Medium](https://yinggan.medium.com/%E7%B0%A1%E6%98%93%E6%94%80%E5%B2%A9%E8%A1%93%E8%AA%9E%E4%B8%80%E6%AC%A1%E4%BA%86%E8%A7%A3-223387bf04e7)
 - NLU模型＆Loki操作：
-    - [Driodtown Linguistic Tech](https://api.droidtown.co/document/#Loki_9)
+    - [Droidtown Linguistic Tech](https://api.droidtown.co/document/#Loki_9)
     - [LokiHub](https://github.com/Droidtown/LokiHub/tree/main/StatsBot)
 
 ## 作者
