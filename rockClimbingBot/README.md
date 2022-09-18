@@ -103,10 +103,11 @@
 ## 使用者互動說明
 完成上述程序後，執行 `python3 Discord_rockClimbing.py` 即可開始與 Bot 互動<br>
 <互動示例><br>
-[<img src="" width="50%">](https://youtu.be/UiLrlxRH-aU "Bot DEMO")
-
+[![thumbnail_480X360](https://user-images.githubusercontent.com/48231321/190891041-3992864c-6a72-497f-89e7-81a057165c84.jpg)
+" width="50%">](https://youtu.be/UiLrlxRH-aU "Bot DEMO")
 <br>
 ❗與Bot對話不要忘了@它哦❗<br>
+
 ## 參考資料
 - 岩館資訊：
   - [轟菌體能](https://shenlee799.com/climbinggyms-taiwan/) 
