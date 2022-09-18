@@ -1,0 +1,2254 @@
+{
+    "language": "en-us",
+    "type": "basic",
+    "version": {
+        "atk": "v100",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_soup": [
+            "broth",
+            "chowder",
+            "consomme",
+            "consommé",
+            "cream",
+            "cream of chicken",
+            "cream of mushroom",
+            "cream of tomato",
+            "gazpacho",
+            "mulligatawny",
+            "puree",
+            "veloute",
+            "velouté",
+            "vichyssoise"
+        ],
+        "_tmpFix": [
+            "Andrew's",
+            "Dean's"
+        ],
+        "_MassNounUnit": [
+            "block",
+            "bottle",
+            "box",
+            "bucket",
+            "case",
+            "chunk",
+            "cup",
+            "glass",
+            "handful",
+            "mouthful",
+            "pair",
+            "piece",
+            "pile",
+            "string"
+        ]
+    },
+    "utterance": {
+        "He sold 213": {
+            "id": "b5ec553d-f525-4997-85a6-6b35877453e0",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "He",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "sell",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "213",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "He sold 213 ants": {
+            "id": "c722f7b4-a7f7-4a80-ba16-f6116fa5b3d3",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "He",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "sell",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "213",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "ants",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the difference is 9": {
+            "id": "68eae13c-2890-4008-910f-86b1e1b9bcd5",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "difference",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "9",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "She gave 6 to Theresa": {
+            "id": "45ad6b48-fe4a-4955-8df7-2a9666ae50e0",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "She",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "grant",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "confer",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "give",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "6",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "Theresa",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "their difference is 16": {
+            "id": "433aeebf-009f-4650-996c-b4b239d6111b",
+            "argument": [
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "their",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "difference",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "16",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "whose difference is  6": {
+            "id": "d63df40b-41fb-47cf-9e22-fa324313c88f",
+            "argument": [
+                {
+                    "pos": "CLAUSE_WhoseQ",
+                    "text": "whose",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "difference",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "is",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "6",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "She gave 3 to her friend": {
+            "id": "3b6abe10-83a3-45e2-a5e5-ac7ffe1664bb",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "She",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "grant",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "confer",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "give",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "her",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "friend",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "she sent 66 of her gifts": {
+            "id": "749e5149-ee1b-4b2d-8c53-f63787b2ece6",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "send",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "66",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "her",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "gifts",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "A customer bought 1 pizza": {
+            "id": "a86021f1-516c-4883-97fa-4aa32b3564f4",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "A",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "customer",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "buy",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "pizza",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "32 bird families flew away": {
+            "id": "f4ed7705-ed3a-4f1e-9db7-3570aa3487fe",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "32",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "bird",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "families",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "fly",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "away",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "there was 1 word misspelled": {
+            "id": "1cd8b78f-9151-4f85-be12-f130e315204c",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "there",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "word",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "misspell",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "25 out of 55 salmon families": {
+            "id": "fa50b105-10d1-499f-9cc5-e94b4e602107",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "25",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "out",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "55",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "salmon",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "families",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "she got for a discount of $17": {
+            "id": "f3a9871c-697d-4bd2-a24f-33f72d52e6fb",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "win",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "obtain",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "gain",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "acquire",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "get",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "for",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "discount of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "KNOWLEDGE_currency",
+                    "text": "$17",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "She gave 105 candies to Marissa": {
+            "id": "b3370562-d221-46aa-831d-09c1173506ff",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "She",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "grant",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "confer",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "give",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "105",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "candies",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "Marissa",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the Blue Team lost by 13 points": {
+            "id": "48bed652-c20f-4d58-8131-7252543c0802",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "Blue",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "Team",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "lose",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "by",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "13",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "points",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "A number is 12 less than another": {
+            "id": "96c8969f-2979-486f-af6c-1b7b9b3ad127",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "A",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "less",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "than",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "another",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "25 out of 55 salmon families went": {
+            "id": "41b7a7d9-ae80-4f57-8dda-f50b35070f45",
+            "argument": [
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "25 out of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "55",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "salmon",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "families",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "go",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "She also gave 86 candies to Kayla": {
+            "id": "538c7538-bfb7-4e73-90ce-d92fa4d1b94a",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "She",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "also",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "grant",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "confer",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "give",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "86",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "candies",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "Kayla",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "The difference of two numbers is 9": {
+            "id": "5522d866-fe29-4d28-bd09-d4a7f577bcf9",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "The",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "difference",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "9",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Jasmine returned $27 worth of change": {
+            "id": "13dc5b27-7306-46ef-9ef2-4f7ff45f7b42",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Jasmine",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "restore",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "requite",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "report",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "repay",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "render",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "remit",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "recompense",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "return",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "KNOWLEDGE_currency",
+                    "text": "$27",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "worth",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "change",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "2 of her shots did not go in the hoop": {
+            "id": "c72db481-5373-49b9-bb02-1fa1a77c5a83",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "2",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "her",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "shots",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "not",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "go in",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "hoop",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Shara shared 3 candies with her friend": {
+            "id": "61e107a9-fbd2-43be-9497-188e91de53f1",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Shara",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "share",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "candies",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "with",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "her",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "friend",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "She also gave the 12 Egyptian weavings": {
+            "id": "05741aef-4fb9-4453-8353-036065a250d3",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "She",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "also",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "grant",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "confer",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "give",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "12",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "Egyptian",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "weavings",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "She shared 10 pieces of strawberry gum": {
+            "id": "2bdda865-d5fb-40ac-ba26-d08348369461",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "She",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "share",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "10 pieces of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "strawberry",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "gum",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the difference of whose squares is 207": {
+            "id": "f582f638-30da-42ad-ae06-596980837625",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "difference",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "whose",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "squares",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "207",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the difference of the two numbers is 57": {
+            "id": "2de41060-4376-4002-977b-d4355cf35f61",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "difference",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "57",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "One number is 3 less than a second number": {
+            "id": "6cfe58f3-ac00-490f-9aee-5d6fae1e6e66",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "One",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "less",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "than",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "second",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "The difference of the same 2 numbers is 4": {
+            "id": "0042ffc5-f619-4bce-b6c7-35fc7505109a",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "The",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "difference",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "same",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "2",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "4",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "One number is seven less than another number": {
+            "id": "9cfad9e8-8662-49c3-8c20-f20e4fd0f6e3",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "One",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "seven",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "less",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "than",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "another",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "If 21 chipmunks were left from the original 86": {
+            "id": "1b167b1a-8988-4b6f-8013-b4fccc0edaf6",
+            "argument": [
+                {
+                    "pos": "FUNC_inter",
+                    "text": "If",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "21",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "chipmunks",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "leave",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "from",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "original",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "86",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "she gave away 14 pairs of shoes to her friends": {
+            "id": "8892d958-dfbf-448f-8a53-ea416f059ca8",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "give away",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "14 pairs of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "shoes",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "her",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "friends",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the units digit is 5 more than the ten's digit": {
+            "id": "00e7360f-4111-4cb4-a115-bb4bca9e312a",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "units",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "digit",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "5",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "more",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "than",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "ten's",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "digit",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Adrianna shared another 10 pieces of bubble gum": {
+            "id": "7f28cf8e-19b7-444f-925e-315cd07ca5bf",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Adrianna",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "share",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "another",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "10 pieces of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "bubble",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "gum",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "A customer comes in to return 2 pairs of headphones": {
+            "id": "a74996f6-7c9b-467a-abc0-3f20155faac8",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "A",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "customer",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "come in",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "restore",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "requite",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "report",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "repay",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "render",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "remit",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "recompense",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "return",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "2 pairs of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "headphones",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the hobby store sold a total of 20,777 trading cards": {
+            "id": "8f9f87ed-01da-4609-9178-00299ed5f146",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "hobby",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "store",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "sell",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "total of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20,777",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "trading",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "cards",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "you sold 320 chocolate cookies and 270 vanilla cookies": {
+            "id": "0f41362b-bb7e-4612-9ea9-9f2f65ded61c",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "you",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "sell",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "320",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "chocolate",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "cookies",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "270",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "vanilla",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "cookies",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Alicia gave 51 Egyptian masks from her collection of 90": {
+            "id": "44804b0d-ae58-429f-acd0-04306ddf08c0",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Alicia",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "grant",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "confer",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "give",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "51",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "Egyptian",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "masks",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "from",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "her",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "collection",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "90",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "the hobby store sold 15,498 more trading cards than normal": {
+            "id": "a24a12c2-d94c-4a2c-abeb-0f8e5bf74022",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "hobby",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "store",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "sell",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "15,498",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "more",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "trading",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "cards",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "than",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "normal",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "One positive integer is 3 less than a second positive integer": {
+            "id": "e960e3f8-95e0-4fe0-8f85-c51f3be1a6d6",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "One",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "positive",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "integer",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "less",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "than",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "second",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "positive",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "integer",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "The hobby store normally sells 10,576 trading cards per month": {
+            "id": "3456edd2-3085-4384-844c-70b796bd5810",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "The",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "hobby",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "store",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "normally",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "sell",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "10,576",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "trading",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "cards",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "per",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "month",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Asha donated 46 medieval art pieces from the 70 she originally had": {
+            "id": "c79a69d2-4503-40dd-aa91-56a5bcc6d556",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Asha",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "donate",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "46",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "medieval",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "art",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pieces",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "from",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "70",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "originally",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "she gave away 49 miniature aircrafts to the National Air and Space Museum": {
+            "id": "ca264982-ca19-49c8-ab6d-adab68ce58fe",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "give away",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "49",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "miniature",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "aircrafts",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "National",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "Air",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "and",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "Space",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Museum",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,4919 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v256",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_asNoun": [
+            "連假",
+            "線上",
+            "進班",
+            "遠距",
+            "面對面",
+            "愉快",
+            "線下",
+            "到班",
+            "實體課程"
+        ],
+        "_asOkay": [
+            "ok",
+            "OK",
+            "oK",
+            "Ok",
+            "Okay",
+            "okay",
+            "OKAY"
+        ],
+        "_asTime": [
+            "小時半"
+        ],
+        "_asVerb": [
+            "改一下",
+            "討論一下",
+            "調整一下"
+        ]
+    },
+    "utterance": {
+        "XX先休息": {
+            "id": "17b5fd4e-5946-450f-96b0-f6dd8973b06e",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "休憩",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "休整",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "安息",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "歇息",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "安眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "沉睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡覺",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "躺倒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "午休",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "午睡",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留宿",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "過夜",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "坐下",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休養",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "休息",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX先停課": {
+            "id": "d39ffe4d-6bc2-47af-9a55-5c49aefb1ae3",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "停學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "停業",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "倒閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "封閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "截止",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "結算",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "緊閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "近親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "閉塞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "復課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停駛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "減班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "封路",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "減招",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "補課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停診",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "停課",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX先暫停": {
+            "id": "637b8a7d-60cd-451f-950f-3b91184a1e01",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "停止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取消",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "終止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中斷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暫停了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "延期",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "停止了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推遲",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "暫停",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX先病假": {
+            "id": "fcb787a4-c7bc-4373-85e3-2f01d958dfce",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "病假",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "XX先請假": {
+            "id": "591f0808-a62b-42ce-a3a1-33d932bd9476",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "告假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "請辭",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "報備",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "病假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "加班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "離職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辭官",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "辭職",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請假",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "先不用來": {
+            "id": "2f7a4633-a518-4719-bd05-c4d0fc78c753",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "上來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "下來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "來到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "前來",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "回來",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "進來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "性來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來文",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "端來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "值來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來第",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來語",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學來",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "來",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX先請病假": {
+            "id": "b673e0c7-d8ac-45cf-8b43-001099a5ae74",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "請求",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拜託",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要求",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "勸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "懇請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼籲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "建議",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想請",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "有請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "提醒",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "病假",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "今天先休息": {
+            "id": "17189dd3-dba4-4577-b769-c8833e705ccf",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "休憩",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "休整",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "安息",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "歇息",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "安眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "沉睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡覺",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "躺倒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "午休",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "午睡",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留宿",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "過夜",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "坐下",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休養",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "休息",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天先停課": {
+            "id": "cbe310b4-9ba3-47e4-b337-5f2f1b2e09b8",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "停學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "停業",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "倒閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "封閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "截止",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "結算",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "緊閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "近親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "閉塞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "復課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停駛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "減班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "封路",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "減招",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "補課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停診",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "停課",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天先暫停": {
+            "id": "1cacc318-a1f5-4a4c-abc4-a2d44fe7a2c8",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "停止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取消",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "終止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中斷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暫停了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "延期",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "停止了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推遲",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "暫停",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天先病假": {
+            "id": "bb0d113d-67db-4261-a4ae-1d2ed852635a",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "病假",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "今天先請假": {
+            "id": "47455521-a923-4267-950e-febc2198cbaa",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "告假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "請辭",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "報備",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "病假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "加班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "離職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辭官",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "辭職",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請假",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "先不上課喔": {
+            "id": "d67a20da-0647-4c1a-8448-f253368796f3",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "聽課",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "聽講",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "午休",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開課",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "授課",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講課",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "開學",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "補課",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "練球",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上學",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "上課",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_particle",
+                    "text": "喔",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "弟弟先休息": {
+            "id": "15d215a9-d3ce-4fe4-9277-abd2bf53de3d",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "弟弟",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "休憩",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "休整",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "安息",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "歇息",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "安眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "沉睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡覺",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "躺倒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "午休",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "午睡",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留宿",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "過夜",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "坐下",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休養",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "休息",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "弟弟先停課": {
+            "id": "b68f295e-09d4-48f5-9ded-df5b8801dfdd",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "弟弟",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "停學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "停業",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "倒閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "封閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "截止",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "結算",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "緊閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "近親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "閉塞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "復課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停駛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "減班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "封路",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "減招",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "補課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停診",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "停課",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "弟弟先暫停": {
+            "id": "6a8dacc8-e2f0-4e27-ab35-d62f95e95620",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "弟弟",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "停止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取消",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "終止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中斷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暫停了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "延期",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "停止了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推遲",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "暫停",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "弟弟先病假": {
+            "id": "1f26423c-621d-43cb-b696-72f229b388df",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "弟弟",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "病假",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "弟弟先請假": {
+            "id": "a8b9f2af-c0b5-4ba5-8953-c8daa1912e6a",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "弟弟",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "告假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "請辭",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "報備",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "病假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "加班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "離職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辭官",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "辭職",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請假",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天先請病假": {
+            "id": "d4c4eac2-1a25-447e-9b87-e7b60000e2a9",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "請求",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拜託",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要求",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "勸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "懇請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼籲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "建議",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想請",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "有請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "提醒",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "病假",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "先不用過來喔": {
+            "id": "98d66d63-d1d1-4ca0-8a45-6e59bcf8f302",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "過來了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "回來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進來",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "出來了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑出來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下來",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "上來",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "過來",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_particle",
+                    "text": "喔",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "弟弟先請病假": {
+            "id": "3cb720ae-a31e-4c8d-affb-3556150ef155",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "弟弟",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "請求",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拜託",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要求",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "勸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "懇請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼籲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "建議",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想請",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "有請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "提醒",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "病假",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "XX可能要先休息": {
+            "id": "67dba511-f3c6-41ef-959f-85c13dd6836e",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "休憩",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "休整",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "安息",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "歇息",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "安眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "沉睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡覺",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "躺倒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "午休",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休養",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "坐下",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "午睡",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留宿",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "過夜",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "休息",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX可能要先停課": {
+            "id": "0c3982b6-4fd1-4539-82e0-b2b54b508573",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "停學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "停業",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "倒閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "封閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "截止",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "結算",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "緊閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "近親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "閉塞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "減班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停診",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "封路",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "停辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "減招",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停駛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補課",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "停課",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX可能要先暫停": {
+            "id": "70f27c77-bebc-4bee-a312-85301e94cdd4",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "停止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取消",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "終止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中斷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暫停了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "延期",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "停止了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推遲",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "暫停",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX可能要先病假": {
+            "id": "23e9faf7-2e08-48da-86aa-e819b6731d82",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "病假",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "XX可能要先請假": {
+            "id": "f43fd054-3178-4b55-83c0-e1a1b6254a3e",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "告假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "請辭",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "報備",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "病假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "加班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "離職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辭官",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "辭職",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請假",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "先不用幫XX上課": {
+            "id": "7afe9420-a0f2-4cbe-95ac-dc74ee14c7c0",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "幫助",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "協助",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "扶助",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "援助",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "輔助",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想幫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "替",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "常幫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "幫著",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "幫了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "幫忙",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想替",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "陪著",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "陪",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "幫",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "聽課",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽講",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "練球",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "午休",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講課",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "授課",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "開學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補課",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "上課",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX可能要先休息了": {
+            "id": "dd9bf6ca-814f-495a-ac27-989f138fa755",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "休憩",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "休整",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "安息",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "歇息",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "安眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "沉睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡覺",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "躺倒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "隔了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "撐了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "坐了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "練了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "交往了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休養了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "等待了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "待了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "昏迷了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "昏迷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "練",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休養",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "等待",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "待",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "撐",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "坐",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "交往",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "隔",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "休息了",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX可能要先停課了": {
+            "id": "88cf4277-1d9c-4a12-aa86-0c316a6a219e",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "停學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "停業",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "倒閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "封閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "截止",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "結算",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "緊閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "近親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "閉塞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "停課了",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX可能要先暫停了": {
+            "id": "36de8633-8a0f-4c53-80e9-f696975e811c",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "中止了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "停止了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "中斷了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "終止了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "推遲了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "接手了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "退出了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "缺席了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擱置了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中斷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "終止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推遲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "接手",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "退出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "缺席",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擱置",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "暫停了",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX可能要先請假了": {
+            "id": "b3157362-e8bf-4d5c-b682-470abc2ee7a4",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "遊擴",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "熄火了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "發飆了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "報警了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "送魯",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "動ㄘ",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "癢到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開源了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "熄火",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "發飆",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "報警",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開源",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請假了",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "XX可能要先請病假": {
+            "id": "383e008f-098d-4afe-a3b6-a59a1f6977f3",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "XX",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "請求",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拜託",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要求",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "勸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "懇請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼籲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "建議",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想請",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "有請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "提醒",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "病假",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "今天可能要先休息": {
+            "id": "5443246b-f4e4-430e-82b0-b83954e28b33",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "休憩",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "休整",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "安息",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "歇息",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "安眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "沉睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡覺",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "躺倒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣眠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "酣睡",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "午休",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休養",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "坐下",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "午睡",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "留宿",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "過夜",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "休息",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天可能要先停課": {
+            "id": "5ffdd5eb-e127-4472-b755-6bcfc16dba39",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "停學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "停業",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "倒閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "封閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "截止",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "結算",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "緊閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "近親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "閉塞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "減班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停診",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "封路",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "停辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "減招",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "復課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "停駛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補課",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "停課",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天可能要先暫停": {
+            "id": "2827a705-cffd-4c7c-acde-f278bc9d25af",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "停止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "取消",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "終止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中斷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暫停了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "延期",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "停止了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推遲",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "暫停",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天可能要先病假": {
+            "id": "9646db48-d7d0-4d23-a3e8-7bceb6d97c36",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "病假",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "今天可能要先請假": {
+            "id": "a3139064-0b26-4dd2-aaad-7ee9ed48281d",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "告假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "請辭",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "報備",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "病假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "加班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "離職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辭官",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "辭職",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請假",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "先不用幫弟弟上課": {
+            "id": "18544164-0a49-4aba-9b08-2d294fa514c7",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "幫助",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "協助",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "扶助",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "援助",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "輔助",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想幫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "替",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "常幫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "幫著",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "幫了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "幫忙",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "想替",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "陪著",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "陪",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "幫",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "弟弟",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "聽課",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽講",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "練球",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "午休",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講課",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "授課",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "開學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補課",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "上課",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天可能要先請病假": {
+            "id": "281efc30-d4cd-4b1d-a58b-f97aa61ed8cd",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "可能",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "先",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "請求",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拜託",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要求",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "勸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "懇請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼籲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "建議",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想請",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "有請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "提醒",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "請",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "病假",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}

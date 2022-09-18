@@ -1,0 +1,130 @@
+{
+    "language": "en-us",
+    "type": "basic",
+    "version": {
+        "atk": "v100",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_soup": [
+            "broth",
+            "chowder",
+            "consomme",
+            "consommé",
+            "cream",
+            "cream of chicken",
+            "cream of mushroom",
+            "cream of tomato",
+            "gazpacho",
+            "mulligatawny",
+            "puree",
+            "veloute",
+            "velouté",
+            "vichyssoise"
+        ],
+        "_tmpFix": [
+            "Andrew's",
+            "Dean's"
+        ],
+        "_MassNounUnit": [
+            "block",
+            "bottle",
+            "box",
+            "bucket",
+            "case",
+            "chunk",
+            "cup",
+            "glass",
+            "handful",
+            "mouthful",
+            "pair",
+            "piece",
+            "pile",
+            "string"
+        ]
+    },
+    "utterance": {
+        "On top of each row": {
+            "id": "a2c8d8ee-d6fd-4609-9c16-baeec1c2668f",
+            "argument": [
+                {
+                    "pos": "RANGE_locality",
+                    "text": "On",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "top",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "each",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "row",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "A bricklayer stacks bricks in 2 rows": {
+            "id": "d2052405-3f30-4d68-9602-07602e68db67",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "A",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "bricklayer",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "stacks",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "bricks",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "2",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "rows",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}

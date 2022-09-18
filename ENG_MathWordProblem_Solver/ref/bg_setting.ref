@@ -1,0 +1,215 @@
+{
+    "language": "en-us",
+    "type": "basic",
+    "version": {
+        "atk": "v100",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_soup": [
+            "broth",
+            "chowder",
+            "consomme",
+            "consommé",
+            "cream",
+            "cream of chicken",
+            "cream of mushroom",
+            "cream of tomato",
+            "gazpacho",
+            "mulligatawny",
+            "puree",
+            "veloute",
+            "velouté",
+            "vichyssoise"
+        ],
+        "_tmpFix": [
+            "Andrew's",
+            "Dean's"
+        ],
+        "_MassNounUnit": [
+            "block",
+            "bottle",
+            "box",
+            "bucket",
+            "case",
+            "chunk",
+            "cup",
+            "glass",
+            "handful",
+            "mouthful",
+            "pair",
+            "piece",
+            "pile",
+            "string"
+        ]
+    },
+    "utterance": {
+        "I have two numbers": {
+            "id": "9b7dd019-98c9-4693-b883-dd1e590249e5",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "I",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "There wasn’t enough gum": {
+            "id": "31b3ce67-b487-43d0-acab-b727644ea630",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "There",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "not",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "enough",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "gum",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Ariel was playing basketball": {
+            "id": "7b78a9bb-ac48-47b3-a657-cf331b308aca",
+            "argument": [
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Ariel",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "play",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "basketball",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "if it takes 3 cutlets to make a dish": {
+            "id": "12eb966f-d053-4aa2-a9a0-a62d5d787f28",
+            "argument": [
+                {
+                    "pos": "FUNC_inter",
+                    "text": "if",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "it",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "take",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "3",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "cutlets",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "make",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "a",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "dish",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}

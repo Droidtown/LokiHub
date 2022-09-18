@@ -107,14 +107,14 @@ def debugInfo(inputSTR, utterance):
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[it] is [one]":
+    if utterance == "[it] be [one]":
         if args[0].lower() == "it":
             if len(args[1].split(" ")) == 1:
                 hour = None
                 if args[1] in clockNumDICT.keys():
                     if clockNumDICT[args[1]] <= 24:
                         hour = clockNumDICT[args[1]]
-                        resultDICT["time"] = "{} is {:02}:00".format(args[0], hour)
+                        resultDICT["time"] = "{:02}:00".format(hour)
             elif len(args[1].split(" ")) <= 3:
                 hour = None
                 minute = None
@@ -128,7 +128,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         else:
             pass
 
-    if utterance == "[it] is [one] o'clock":
+    if utterance == "[it] be [one] o'clock":
         if args[0].lower() == "it":
             if len(args[1].split(" ")) == 1:
                 hour = None
@@ -303,10 +303,10 @@ def getResult(inputSTR, utterance, args, resultDICT):
             if hour != None:
                 resultDICT["time"] = "{:02}:45".format(hour)
 
-    if utterance == "one-o-two":
+    if utterance == "[one-o-two]":
         try:
-            if len(utterance.split("-")) == 3:
-                argLIST = utterance.split("-")
+            if len(args[0].split("-")) == 3:
+                argLIST = args[0].split("-")
                 if argLIST[1] in ("o", "O", "oh"):
                     if argLIST[0] in clockNumDICT.keys() and argLIST[2] in clockNumDICT.keys():
                         if clockNumDICT[argLIST[0]] <= 24 and clockNumDICT[argLIST[2]] < 10:

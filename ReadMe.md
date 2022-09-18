@@ -1,4 +1,4 @@
-![](https://repository-images.githubusercontent.com/307279527/9d82e080-1798-11eb-8abd-68286f222dd8)
+![](https://repository-images.githubusercontent.com/307279527/18c3ef04-cd56-43ad-b3e3-8fa9ab0a3c0f)
 # LokiHub：開源的 Loki 意圖模型交流中心
 Loki 為 Linguistic Oriented Keyword Interface 的縮寫，是新一代專為中文語言特性設計的語意解析引擎。
 

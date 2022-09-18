@@ -1,0 +1,2801 @@
+{
+    "language": "en-us",
+    "type": "basic",
+    "version": {
+        "atk": "v100",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_soup": [
+            "broth",
+            "chowder",
+            "consomme",
+            "consommé",
+            "cream",
+            "cream of chicken",
+            "cream of mushroom",
+            "cream of tomato",
+            "gazpacho",
+            "mulligatawny",
+            "puree",
+            "veloute",
+            "velouté",
+            "vichyssoise"
+        ],
+        "_tmpFix": [
+            "Andrew's",
+            "Dean's"
+        ],
+        "_MassNounUnit": [
+            "block",
+            "bottle",
+            "box",
+            "bucket",
+            "case",
+            "chunk",
+            "cup",
+            "glass",
+            "handful",
+            "mouthful",
+            "pair",
+            "piece",
+            "pile",
+            "string"
+        ]
+    },
+    "utterance": {
+        "Find two numbers": {
+            "id": "26216670-443e-4fcb-80fe-31140dff029e",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "find",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Find these numbers": {
+            "id": "9199af6c-9c67-41d3-8c60-912f9fedc499",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "find",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "these",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "what are the numbers": {
+            "id": "17723937-7906-4d22-8703-38324e09a933",
+            "argument": [
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "what",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "Find the two numbers.": {
+            "id": "7d8ec276-7d39-4eb8-8b31-a89bbcf0332b",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "find",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "numbers",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": ".",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "Find the larger number": {
+            "id": "4ae3f545-94ba-4ac9-975c-10de36f391df",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "find",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "larger",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "how many pizzas are left": {
+            "id": "16dec195-710c-4588-812e-8503cf9d17da",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pizzas",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "leave",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many ants does he have": {
+            "id": "896d2aa2-0823-440d-a63b-6183772b1e1c",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "ants",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "he",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many boxes does she need?": {
+            "id": "28480dc4-a7e8-4342-aaa1-e24bf5473c62",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "boxes",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "need",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many cats does Sarah have": {
+            "id": "3491f2f9-5ba5-4b0d-919c-cc4451345835",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "cats",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Sarah",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many cookies did you sell": {
+            "id": "86c3cce3-452a-4cd8-99d5-96c3d64f6637",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "cookies",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "you",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "sell",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many rides can you go on?": {
+            "id": "7398d76f-1d5e-4d63-aab2-25fdad9f397f",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "rides",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "can",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "you",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "go on",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many stickers are missing": {
+            "id": "a0a8949b-6495-423a-b17c-4dffcc5c79be",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "stickers",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "miss",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many pots of soup are there": {
+            "id": "51de6cb0-b1cc-49cf-965b-5cfdda453857",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pots",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "soup",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "there",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "how many colors did Sheila use?": {
+            "id": "12c88200-c404-4203-9902-dfca68ba6e79",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "colors",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Sheila",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "employ",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "use",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many staff are working there": {
+            "id": "1020c65c-3d84-4d3f-8e37-bb776958f82c",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "staff",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "work",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "there",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "How much does 1 tennis ball cost?": {
+            "id": "c6d2ae2b-99eb-40f3-84ef-a6c18f7dd3d9",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "much",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "tennis",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "ball",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "cost",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many bird families were left ": {
+            "id": "ff7dd2aa-13a4-47c7-ab7d-394c1ce913f7",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "bird",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "families",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "leave",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many stations did they visit?": {
+            "id": "7feadd38-48be-4ad3-8e50-0b7b55a9e098",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "stations",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "they",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "visit",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many books does Billy have now": {
+            "id": "46341647-be49-4ce0-90ea-40f720f0923e",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "books",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Billy",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "now",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many levels did Sarah complete": {
+            "id": "08e67a25-53b7-4035-ae72-2037e7df7041",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "levels",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Sarah",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "complete",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "How many guitars are there in total": {
+            "id": "7ef9f263-e12c-42e2-985c-d6f514d92935",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "guitars",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "there",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "total",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many books do they have in total": {
+            "id": "d7f82078-a182-499c-b528-49a9d441dd08",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "books",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "they",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "total",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many candies does Andie have now": {
+            "id": "70eb0bc3-d134-49b7-b398-cc020c6bb11a",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "candies",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Andie",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "now",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many crayon boxes does she need?": {
+            "id": "25632376-39d5-44d8-b8ea-8075ffd0c8ad",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "crayon",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "boxes",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "need",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many headphones are in the store": {
+            "id": "d870d08e-3179-4374-a049-5fef968a48ad",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "headphones",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "store",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "How many music books are there in total": {
+            "id": "1ff4ddaa-5efd-4c57-a9d5-c94b2f75f4bb",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "music",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "books",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "there",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "total",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many trumpets did he order in total": {
+            "id": "f2670768-f9fc-4166-9c08-9ff2e085b9a2",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "trumpets",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "he",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "order",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "total",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many were scored in the second half": {
+            "id": "e6b48e16-ea63-4281-8640-ac262f19cd62",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "score",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_DetPhrase",
+                    "text": "the second",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "half",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many words were on the spelling test": {
+            "id": "c275940f-493d-4c70-8e40-774671c14fa2",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "words",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "be on",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "spelling",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "test",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "How many pieces of candy are in each bag?": {
+            "id": "dfd5ec80-caca-437c-97e1-023fe1e196f4",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pieces",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "candy",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "each",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "bag",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How much does 1 pack of tennis balls cost?": {
+            "id": "b197927c-f501-404d-8dfa-65f8eea2e109",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "much",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "pack",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "tennis",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "balls",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "cost",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many boxes of paper does Allen have now": {
+            "id": "cf3f9468-4fc1-43c3-a9d6-31d14b0b74ce",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "boxes",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "paper",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_person",
+                    "text": "Allen",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "now",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many pieces can the school buy in total?": {
+            "id": "40bc6e53-3988-417c-a544-6e10b64ef2d4",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pieces",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "can",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "school",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "buy in",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "total",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many pieces of gum does Adrianna have now": {
+            "id": "97b9b0d3-4f8a-4011-a8ee-a081fa0c04b6",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pieces",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "gum",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Adrianna",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "now",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many drawings will each neighbor receive?": {
+            "id": "e6f14e08-422c-46c2-8541-5ec5d2d99bd0",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "drawings",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "will",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "each",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "neighbor",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "take",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "retain",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "hold",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "allow",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "admit",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "accept",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "receive",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many chairs do the restaurant have in total": {
+            "id": "3ceade7e-0940-48b4-b849-08d0529f71b7",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "chairs",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "restaurant",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "total",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "How many pencil crayons does Charlene have left": {
+            "id": "a30c93dc-d866-45e0-83b0-089c1eb1e983",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "How",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "pencil",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "crayons",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "Charlene",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "leave",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many glasses of fresh lemonade can she make": {
+            "id": "67d12f30-fb66-480e-993c-1ec5084e81bd",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "glasses",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "fresh",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "lemonade",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "can",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "make",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many marbles will each of the boys receive?": {
+            "id": "7016b122-60d5-42ad-adae-0e24bf62242d",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "marbles",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "will",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "each",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "boys",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "take",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "retain",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "hold",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "allow",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "admit",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "accept",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "receive",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many trading cards did the hobby store sell": {
+            "id": "e8d653b5-c450-4884-8c7a-4e9b21e5b961",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "trading",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "cards",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "do",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "hobby",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "store",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "sell",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many pink flower stones will each bracelet have?": {
+            "id": "4642bb02-c606-42b3-a165-d29c10c5aebe",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pink",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "flower",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "stones",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "will",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "each",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "bracelet",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many star-shaped stones will be in each bracelet?": {
+            "id": "bb072f88-8b5c-4482-bca1-bdffeaaa34d0",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "star-shape",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "stones",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "will",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "each",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "bracelet",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many bracelets of blue shiny round stones will there be?": {
+            "id": "7e4e94a6-833d-4997-831a-aac26bbc9ac5",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "bracelets",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "blue",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "shiny",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "round",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "stones",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "will",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "there",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many paintings will be placed in each of the four rooms?": {
+            "id": "ba4242f4-4223-48d4-aeab-e606448393cb",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "paintings",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "will",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "put",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "place",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "each",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "four",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "rooms",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many paintings can she give to each of her two grandmothers?": {
+            "id": "8e055d01-1d1c-481f-90c2-fedde76ef7ac",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "paintings",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "can",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "grant",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "confer",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "give",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "to",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "each",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "her",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "two",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "grandmothers",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many cutlets will the restaurant have left over after making as many dishes as possible?": {
+            "id": "23d22862-8990-4b3a-b4fb-acb192e99886",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "cutlets",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "will",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "the",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "restaurant",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "to own",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "possess",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "have",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [],
+                    "text": "leave over",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "after",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [],
+                    "text": "make",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "as",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "dishes",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "as",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "possible",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "how many seeds will be placed in each can if she places an equal number of seeds in each can?": {
+            "id": "b889145a-83f7-4a59-a396-38d259a7c24d",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "how",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "many",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "seeds",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "will",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "be",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "put",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "place",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "each",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "can",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inter",
+                    "text": "if",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "she",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "places",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "an",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "equal",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "number",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "of",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "seeds",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "in",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "each",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "can",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "?",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    }
+}

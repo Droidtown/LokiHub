@@ -50,7 +50,9 @@ except:
     from .intent import Loki_TimeText
 
 import json
+
 infoDICT = json.loads(open("./account.info", encoding="utf-8").read())
+
 
 LOKI_URL = "https://nlu.droidtown.co/Loki/BulkAPI/"
 USERNAME = infoDICT["username"]

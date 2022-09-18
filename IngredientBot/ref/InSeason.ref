@@ -1,0 +1,1900 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v254",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_veg": [
+            "地瓜",
+            "地瓜葉",
+            "青江菜",
+            "紫甘藍",
+            "冬筍",
+            "綠竹筍",
+            "筊白筍"
+        ],
+        "_food": [
+            "水煮蛋",
+            "白帶魚",
+            "紅棗",
+            "紅蘿蔔",
+            "白果",
+            "日本馬頭魚",
+            "透抽",
+            "黃魚",
+            "比目魚"
+        ],
+        "_temp": [
+            "產季",
+            "盛產季"
+        ],
+        "_fruit": [
+            "哈密瓜",
+            "火龍果",
+            "藍莓",
+            "百香果"
+        ]
+    },
+    "utterance": {
+        "9月的食材": {
+            "id": "9e2c9035-0830-42c9-aebf-b64e1d7353cf",
+            "argument": [
+                {
+                    "pos": "TIME_month",
+                    "text": "9月",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "食材",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "有什麼水果": {
+            "id": "e4985c15-b876-4e1a-8259-7aed7d26f3ab",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "水果",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "現在有什麼": {
+            "id": "15869bf4-0485-4284-bf9f-999071db94f9",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "推薦一個食材": {
+            "id": "691fe800-b3e4-452e-b679-c25af9823a70",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "引薦",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "舉薦",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "引進",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "欽點",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "邀請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推荐",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "提拔",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "介紹",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推舉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "挑選",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推介",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "推薦",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一個",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "食材",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "推薦什麼食材": {
+            "id": "19a62171-f736-4543-91dc-453b4b1924be",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "引薦",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "舉薦",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "引進",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "介紹",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "挑選",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推荐",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推介",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "欽點",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "提拔",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推舉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "邀請",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "推薦",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "食材",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "現在盛產什麼": {
+            "id": "66aac4bb-4f5e-447b-ae7a-31e4e1c8961c",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "出產",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "栽種",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "種植",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "失收",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "廣植",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "栽植",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "歉收",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "釀製",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "種滿",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "種植了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "盛產",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "有什麼當季食材": {
+            "id": "3d6f7017-1eea-4a47-aaae-435743277393",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "食材",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "現在有甚麼海鮮": {
+            "id": "c7e8f027-1db8-4df7-a345-e8eb0993fff3",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "甚麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "海鮮",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "秋天可以吃什麼": {
+            "id": "931640bf-57d8-43ac-87c4-24e344c54fba",
+            "argument": [
+                {
+                    "pos": "TIME_season",
+                    "text": "秋天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "吃掉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "吸收",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "攝入",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "耗損",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "花掉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "生吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "啃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "喝",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "煮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃過",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "吃",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "目前盛產甚麼水果": {
+            "id": "82130c43-d37f-4218-9a9c-eae9d1e757ae",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "目前",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "出產",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "栽種",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "種植",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "失收",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "廣植",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "栽植",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "歉收",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "釀製",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "種滿",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "種植了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "盛產",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "甚麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "水果",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "現在有什麼水果好吃": {
+            "id": "cdf1d7f8-6aa2-4760-89bf-bdebcc1f5e4b",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "水果",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "好吃",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "現在有什麼當季食材": {
+            "id": "b089622c-19bc-40e1-bfd0-efe6d97612d5",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "食材",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "現在該吃哪些水果？": {
+            "id": "1ead1c76-a7c2-49b5-bfb2-e8fa803e54d3",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "該",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "吃掉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "吸收",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "攝入",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "耗損",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "花掉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "生吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "啃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常吃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "喝",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "煮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃過",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "吃",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "哪些",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "水果",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "？",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "現在當季的水果是什麼": {
+            "id": "4c3c5a1a-78ff-4159-90b8-145bb2e51602",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "水果",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "現在有甚麼當季水果好吃": {
+            "id": "5b3adce3-a9fd-4b39-b491-d7830b8125e8",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "甚麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "水果",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "好吃",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "告訴我現在有什麼當季食材": {
+            "id": "09051689-c563-45c1-bdf3-bd423e8a4741",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "傳告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傾訴",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告別",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告辭",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "報告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "敬告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "訴說",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂講",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "交談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳經",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "商量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "啟奏",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "報信",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "對談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "念叨",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扯談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "敘述",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "暢談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞎扯",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞎說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "胡說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "表示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "說到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "說服",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "談到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講述",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "責令",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "賜教",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "辯護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "通知",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "開導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "關說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "打給",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "告訴了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "奉勸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "反問",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "轉告",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "告知了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "告誡",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "知道了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "問過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "告知",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "知道",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "問",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "告訴",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "食材",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "現在有甚麼好吃的當季水果": {
+            "id": "5ae89bc1-d33c-4567-9ea0-428fd6428cc5",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "甚麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "好吃",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "水果",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    }
+}

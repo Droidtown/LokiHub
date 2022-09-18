@@ -1,0 +1,211 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v254",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_veg": [
+            "地瓜",
+            "地瓜葉",
+            "青江菜",
+            "紫甘藍",
+            "冬筍",
+            "綠竹筍",
+            "筊白筍"
+        ],
+        "_food": [
+            "水煮蛋",
+            "白帶魚",
+            "紅棗",
+            "紅蘿蔔",
+            "白果",
+            "日本馬頭魚",
+            "透抽",
+            "黃魚",
+            "比目魚"
+        ],
+        "_temp": [
+            "產季",
+            "盛產季"
+        ],
+        "_fruit": [
+            "哈密瓜",
+            "火龍果",
+            "藍莓",
+            "百香果"
+        ]
+    },
+    "utterance": {
+        "空心菜是當季的嗎": {
+            "id": "452dd723-6d2b-4776-a8a0-95421f6cd356",
+            "argument": [
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "空心菜",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "葡萄是不是當季的": {
+            "id": "aa4ebe8d-491c-441c-ae47-7883cb967ae3",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "葡萄",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "是不是",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "葡萄是當季水果嗎": {
+            "id": "18a48b0b-f28a-4e11-9f27-0046ffdaea1f",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "葡萄",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "水果",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "烏魚子是當季食材嗎": {
+            "id": "d73654fe-06c1-447f-a8b7-5f42e8b8e1d0",
+            "argument": [
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "烏魚子",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "食材",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "烏魚子是不是當季食材？": {
+            "id": "a8b0aca0-f320-475c-b1c5-b633f075ecba",
+            "argument": [
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "烏魚子",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "是不是",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_season",
+                    "text": "當季",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "食材",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "？",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    }
+}
