@@ -101,7 +101,7 @@
 }
 ```
 ## 使用者互動說明
-完成上述程序後，執行 `python3 Discord_rockClimbing.py` 即可開始與 Bot 互動<br>
+完成上述程序後，執行 `python3 Discord_rockClimbing.py` 即可開始與 Bot 互動<br><br>
 <互動示例><br>
 
 
