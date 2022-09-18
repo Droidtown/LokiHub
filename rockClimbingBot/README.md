@@ -104,10 +104,7 @@
 完成上述程序後，執行 `python3 Discord_rockClimbing.py` 即可開始與 Bot 互動<br><br>
 <互動示例><br>
 
-
 https://user-images.githubusercontent.com/48231321/190892489-a8472ee4-ad6f-4d40-8583-cf417acf6c08.mp4
-
-
 
 <br>❗與Bot對話不要忘了@它哦❗<br>
 
