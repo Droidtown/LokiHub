@@ -103,7 +103,7 @@
 ## 使用者互動說明
 完成上述程序後，執行 `python3 Discord_rockClimbing.py` 即可開始與 Bot 互動<br>
 <互動示例><br>
-[<img src="https://youtu.be/UiLrlxRH-aU/maxresdefault.jpg" width="50%">](https://youtu.be/UiLrlxRH-aU "Bot DEMO")
+[<img src="http://img.youtube.com/vi/UiLrlxRH-aU/hqdefault.jpg" width="50%">](https://youtu.be/UiLrlxRH-aU "Bot DEMO")
 <br>
 ❗與Bot對話不要忘了@它哦❗<br>
 
