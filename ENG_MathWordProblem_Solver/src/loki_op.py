@@ -33,7 +33,7 @@ def listUtterance(payloadDICT):
 def addUtterance(payloadDICT):
     url = "https://nlu.droidtown.co/Loki/Command/"
 
-    for i in range(0, len(payloadDICT["intent"]), 20):
+    for i in range(0, len(payloadDICT["utterance"]), 20):
         payload = {
             "username" : payloadDICT["username"],
             "loki_key" : payloadDICT["loki_key"],
