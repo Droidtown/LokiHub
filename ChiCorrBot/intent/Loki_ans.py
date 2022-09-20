@@ -16,6 +16,12 @@
 
 import json
 import os
+from ArticutAPI import Articut
+
+with open("./account.info", encoding="utf-8") as f: #讀取account.info
+    accountDICT = json.loads(f.read())
+
+articut = Articut(username=accountDICT['username'], apikey=accountDICT['articut_key'])
 
 DEBUG_ans = True
 try:
@@ -32,10 +38,12 @@ def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
     
     if utterance == "[resp]":
-        if args[0] in userDefinedDICT['_agreeExp']:
-            resultDICT['inq'] = '是'
-        elif args[0] in userDefinedDICT['_disagreeExp']:
-            resultDICT['inq'] = '否'
+        resultDICT = articut.parse(inputSTR)
+        if resultDICT['result_obj'][0][0]['pos'] == 'ENTITY_oov':
+            if args[0] in userDefinedDICT['_agreeExp']:
+                resultDICT['inq'] = '是'
+            elif args[0] in userDefinedDICT['_disagreeExp']:
+                resultDICT['inq'] = '否'
 
     if utterance == "[對]":
         if len(inputSTR) == 1:

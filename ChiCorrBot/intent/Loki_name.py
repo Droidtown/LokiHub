@@ -81,7 +81,12 @@ def getResult(inputSTR, utterance, args, resultDICT):
         nameSTR = args[1]
 
     if utterance == "[早餐店][帥哥]":
-        nameSTR = args[0]+args[1]
+        nameSTR = inputSTR
+        # articutResultDICT = articut.parse(inputSTR)
+        # if articutResultDICT['result_segmentation'].split('/') == 2:
+        #     nameSTR = args[0]+args[1]
+        # else:
+        #     nameSTR = ''
 
     if utterance == "[陳小明]":
         nameSTR = args[0]
