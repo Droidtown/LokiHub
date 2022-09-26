@@ -39,23 +39,32 @@ intent = "spend_adv"
 對照 utterance 拿到參數
 getResult() 多了第一個參數 userID，以使用者的 ID 作為檔案名稱記賬
 """
-def getResult(userID, inputSTR, utterance, args, resultDICT):
-    # debugInfo(inputSTR, utterance)
-
+def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
+    debugInfo(inputSTR, utterance)
+    print(rePAT)
     if utterance == "去全聯支出3000":
         """
             4: 地點
             6: 說明
             10: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [4,6,10])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [4,6,10])
         
         if status == True:
+            argsLoc = fun.RemoveLokiTags(result[0])
+            reasonLoc = ""
+            for i in argsLoc:
+                reasonLoc += i
+            argsDesc = fun.RemoveLokiTags(result[1])
+            reasonDesc = ""
+            for i in argsDesc:
+                reasonDesc += i
+            
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
-            resultDICT["description"] = result[1]   # 說明
-            resultDICT["amount"] = result[2]        # 金額
+            resultDICT["location"] = reasonLoc          # 地點
+            resultDICT["description"] = reasonDesc      # 說明
+            resultDICT["amount"] = result[2]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -68,14 +77,23 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
             6: 說明
             10: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [4,6,10])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [4,6,10])
         
         if status == True:
+            argsLoc = fun.RemoveLokiTags(result[0])
+            reasonLoc = ""
+            for i in argsLoc:
+                reasonLoc += i
+            argsDesc = fun.RemoveLokiTags(result[1])
+            reasonDesc = ""
+            for i in argsDesc:
+                reasonDesc += i
+            
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
-            resultDICT["description"] = result[1]   # 說明
-            resultDICT["amount"] = result[2]        # 金額
+            resultDICT["location"] = reasonLoc          # 地點
+            resultDICT["description"] = reasonDesc      # 說明
+            resultDICT["amount"] = result[2]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -87,12 +105,17 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
             3: 地點
             7: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,7])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [3,7])
         
         if status == True:
+            argsLoc = fun.RemoveLokiTags(result[0])
+            reasonLoc = ""
+            for i in argsLoc:
+                reasonLoc += i
+
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
+            resultDICT["location"] = reasonLoc      # 地點
             resultDICT["description"] = ""          # 說明
             resultDICT["amount"] = result[1]        # 金額
         else:
@@ -106,12 +129,17 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
             3: 地點
             7: 金額
         """ 
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,7])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [3,7])
         
         if status == True:
+            argsLoc = fun.RemoveLokiTags(result[0])
+            reasonLoc = ""
+            for i in argsLoc:
+                reasonLoc += i
+
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
+            resultDICT["location"] = reasonLoc      # 地點
             resultDICT["description"] = ""          # 說明
             resultDICT["amount"] = result[1]        # 金額
         else:
@@ -122,18 +150,23 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
 
     if utterance == "去台北支出3000":
         """
-            6: 地點
-            8: 說明
-            12: 金額
+            4: 地點
+            6: 說明
+            10: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [6,8,12])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [4,6,10])
         
         if status == True:
+            argsDesc = fun.RemoveLokiTags(result[1])
+            reasonDesc = ""
+            for i in argsDesc:
+                reasonDesc += i
+            
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
-            resultDICT["description"] = result[1]   # 說明
-            resultDICT["amount"] = result[2]        # 金額
+            resultDICT["location"] = result[0]          # 地點
+            resultDICT["description"] = reasonDesc      # 說明
+            resultDICT["amount"] = result[2]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -142,18 +175,23 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
 
     if utterance == "去台北花了3000":
         """
-            6: 地點
-            8: 說明
-            12: 金額
+            4: 地點
+            6: 說明
+            10: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [6,8,12])
-        
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [4,6,10])
+
         if status == True:
+            argsDesc = fun.RemoveLokiTags(result[1])
+            reasonDesc = ""
+            for i in argsDesc:
+                reasonDesc += i
+            
             resultDICT["intent"] = intent
             resultDICT["time"] = fun.GetCurrentDate()   # 時間
-            resultDICT["location"] = result[0]      # 地點
-            resultDICT["description"] = result[1]   # 說明
-            resultDICT["amount"] = result[2]        # 金額
+            resultDICT["location"] = result[0]          # 地點
+            resultDICT["description"] = reasonDesc      # 說明
+            resultDICT["amount"] = result[2]            # 金額
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
@@ -164,7 +202,7 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         """
             4: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [4])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [4])
         
         if status == True:
             resultDICT["intent"] = intent
@@ -185,7 +223,7 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
             11: 說明
             15: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,9,11,15])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [3,9,11,15])
         
         if status == True:
             resultDICT["intent"] = intent
@@ -206,7 +244,7 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
             11: 說明
             15: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,9,11,15])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [3,9,11,15])
         
         if status == True:
             resultDICT["intent"] = intent
@@ -222,15 +260,63 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
 
     if utterance == "昨天去六福村支出3000":
         # 進不來 :(
-        resultDICT["intent"] = "error"
-        resultDICT["err_msg"] = "不知道怎麼著但你成功進入我們無法進入的領域了！你成功證明了自己不是一個敗家子:)"
+        """
+            3: 時間
+            7: 地點
+            8: 說明
+            11: 金額
+        """
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [3,7,8,12])
+        
+        if status == True:
+            argsLoc = fun.RemoveLokiTags(result[1])
+            reasonLoc = ""
+            for i in argsLoc:
+                reasonLoc += i
+            argsDesc = fun.RemoveLokiTags(result[2])
+            reasonDesc = ""
+            for i in argsDesc:
+                reasonDesc += i              
+            
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.TransformDate(result[0])   # 時間
+            resultDICT["location"] = reasonLoc                  # 地點
+            resultDICT["description"] = reasonDesc              # 說明
+            resultDICT["amount"] = result[3]                    # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
 
 
     if utterance == "昨天去六福村花了3000":
         # 進不來 :(
-        resultDICT["intent"] = "error"
-        resultDICT["err_msg"] = "不知道怎麼著但你成功進入我們無法進入的領域了！你成功證明了自己不是一個敗家子:)"
+        """
+            3: 時間
+            7: 地點
+            8: 說明
+            11: 金額
+        """
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [3,7,8,12])
+        
+        if status == True:
+            argsLoc = fun.RemoveLokiTags(result[1])
+            reasonLoc = ""
+            for i in argsLoc:
+                reasonLoc += i
+            argsDesc = fun.RemoveLokiTags(result[2])
+            reasonDesc = ""
+            for i in argsDesc:
+                reasonDesc += i              
+            
+            resultDICT["intent"] = intent
+            resultDICT["time"] = fun.TransformDate(result[0])   # 時間
+            resultDICT["location"] = reasonLoc                  # 地點
+            resultDICT["description"] = reasonDesc              # 說明
+            resultDICT["amount"] = result[3]                    # 金額
+        else:
+            resultDICT["intent"] = "error"
+            resultDICT["err_msg"] = result
         pass
 
     if utterance == "昨天去台北支出3000":
@@ -240,7 +326,7 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
             10: 說明
             14: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,8,10,14])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [3,8,10,14])
         
         if status == True:
             resultDICT["intent"] = intent
@@ -261,7 +347,7 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
             12: 說明
             16: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,10,12,16])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [3,10,12,16])
         
         if status == True:
             resultDICT["intent"] = intent
@@ -281,7 +367,7 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
             5: 說明
             9: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,5,9])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [3,5,9])
         
         if status == True:
             resultDICT["intent"] = intent
@@ -301,7 +387,7 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
             5: 說明
             9: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [3,5,9])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [3,5,9])
         
         if status == True:
             resultDICT["intent"] = intent
@@ -321,7 +407,7 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         """
             4: 金額
         """
-        status, result = fun.GetAdvArgs(intent, utterance, inputSTR, [4])
+        status, result = fun.GetAdvArgs(inputSTR, rePAT, [4])
         
         if status == True:
             resultDICT["intent"] = intent
