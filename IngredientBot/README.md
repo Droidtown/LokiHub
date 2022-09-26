@@ -19,7 +19,7 @@ NOTE: 如果你在對話時不知道或忘記了小幫手知道的食材知識�
 
 Demo
 -------------
-<img src = "https://github.com/joehuangx/LokiHub/blob/main/IngredientBot/Demo.gif"></img>
+![image](https://github.com/Droidtown/LokiHub/blob/main/IngredientBot/Demo.gif)
 
 NOTE: 用 `@` 標註機器人，它才會回覆你哦。
 
