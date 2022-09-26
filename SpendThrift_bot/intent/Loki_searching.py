@@ -38,6 +38,7 @@ def debugInfo(inputSTR, utterance):
 
 def getResult(userID, inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
+    print(args)
     if utterance == "查詢[收入]":
         if args[0] in ["支出"]:
             result = fun.GetDataByCondition(userID, "cost")
