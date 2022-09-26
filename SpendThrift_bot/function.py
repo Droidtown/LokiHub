@@ -31,72 +31,75 @@ def RemoveLokiTags(input):
 """
 def SpendThriftReply(resultDICT):
     replySTR = ""
-    # 查詢
-    if resultDICT["intent"] == "searching":
-        replySTR = "查詢結果為 {} 元".format(resultDICT["search_result"])
-    
-    
-    # 進階收入
-    if resultDICT["intent"] == "earn_adv":
-        # 沒有地點和說明
-        if resultDICT["location"] == "" and resultDICT["description"] == "":
-            replySTR += "{} 賺到了 {} 元。".format(resultDICT["time"], resultDICT["amount"])
-        # 沒說明
-        elif resultDICT["description"] == "":
-            replySTR += "{} 去 {} 賺到了 {} 元。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"])
-        # 沒地點
-        elif resultDICT["location"] == "":
-            replySTR += "{} 賺到了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["amount"], resultDICT["description"])
-        # 全部都有
-        else:
-            replySTR += "{} 去 {} 賺到了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"], resultDICT["description"])
-    
-    
-        """
-            收入超過一定數目：增加特別的提示語
-        """
-        amount = int(resultDICT["amount"])
-        # 10000 元以上
-        if amount > 10000:
-            replySTR += "\n看來你想通了呢...歡迎來到正常的人世界，恭喜你脫離敗家子的可悲生活：)"        
-        # 1000元以上
-        elif amount > 5000:
-            replySTR += "\n幹得不錯！再過 50 年你就可以買一台二手車了呢。"        
-        # 1000元以上
-        elif amount > 1000:
-            replySTR += "\n好好保持，繼續下去你就不會被房債，卡債和稅務壓垮了。"
-    
-    # 進階支出
-    if resultDICT["intent"] == "spend_adv":
-        # 沒有地點和說明
-        if resultDICT["location"] == "" and resultDICT["description"] == "":
-            replySTR += "{} 花費了 {} 元。".format(resultDICT["time"], resultDICT["amount"])
-        # 沒說明
-        elif resultDICT["description"] == "":
-            replySTR += "{} 去 {} 花費了 {} 元。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"])
-        # 沒地點
-        elif resultDICT["location"] == "":
-            replySTR += "{} 花費了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["amount"], resultDICT["description"])
-        # 全部都有
-        else:
-            replySTR += "{} 去 {} 花費了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"], resultDICT["description"])
+    try:
+        # 查詢
+        if resultDICT["intent"] == "searching":
+            replySTR = "查詢結果為 {} 元".format(resultDICT["search_result"])
+        
+        
+        # 進階收入
+        if resultDICT["intent"] == "earn_adv":
+            # 沒有地點和說明
+            if resultDICT["location"] == "" and resultDICT["description"] == "":
+                replySTR += "{} 賺到了 {} 元。".format(resultDICT["time"], resultDICT["amount"])
+            # 沒說明
+            elif resultDICT["description"] == "":
+                replySTR += "{} 去 {} 賺到了 {} 元。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"])
+            # 沒地點
+            elif resultDICT["location"] == "":
+                replySTR += "{} 賺到了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["amount"], resultDICT["description"])
+            # 全部都有
+            else:
+                replySTR += "{} 去 {} 賺到了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"], resultDICT["description"])
+        
+        
+            """
+                收入超過一定數目：增加特別的提示語
+            """
+            amount = int(resultDICT["amount"])
+            # 10000 元以上
+            if amount > 10000:
+                replySTR += "\n看來你想通了呢...歡迎來到正常的人世界，恭喜你脫離敗家子的可悲生活：)"        
+            # 1000元以上
+            elif amount > 5000:
+                replySTR += "\n幹得不錯！再過 50 年你就可以買一台二手車了呢。"        
+            # 1000元以上
+            elif amount > 1000:
+                replySTR += "\n好好保持，繼續下去你就不會被房債，卡債和稅務壓垮了。"
+        
+        # 進階支出
+        if resultDICT["intent"] == "spend_adv":
+            # 沒有地點和說明
+            if resultDICT["location"] == "" and resultDICT["description"] == "":
+                replySTR += "{} 花費了 {} 元。".format(resultDICT["time"], resultDICT["amount"])
+            # 沒說明
+            elif resultDICT["description"] == "":
+                replySTR += "{} 去 {} 花費了 {} 元。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"])
+            # 沒地點
+            elif resultDICT["location"] == "":
+                replySTR += "{} 花費了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["amount"], resultDICT["description"])
+            # 全部都有
+            else:
+                replySTR += "{} 去 {} 花費了 {} 元，因為 {}。".format(resultDICT["time"], resultDICT["location"], resultDICT["amount"], resultDICT["description"])
 
 
-        """
-            支出超過一定數目：增加特別的提示語
-        """
-        amount = int(resultDICT["amount"])
-        # 10000 元以上
-        if amount > 10000:
-            replySTR += "\n我的天，你沒救了...\n沒關係，你就繼續當你的敗家子，到時候缺錢我可不會借你。"                
-        # 1000元以上
-        elif amount > 1000:
-            replySTR += "\n你這個臭敗家子！給我克制一點，不然你就等著去吃土吧>:("
-    
+            """
+                支出超過一定數目：增加特別的提示語
+            """
+            amount = int(resultDICT["amount"])
+            # 10000 元以上
+            if amount > 10000:
+                replySTR += "\n我的天，你沒救了...\n沒關係，你就繼續當你的敗家子，到時候缺錢我可不會借你。"                
+            # 1000元以上
+            elif amount > 1000:
+                replySTR += "\n你這個臭敗家子！給我克制一點，不然你就等著去吃土吧>:("
+        
 
-    # 錯誤
-    elif resultDICT["intent"] == "error":
-        replySTR += "出現錯誤:" + resultDICT["err_msg"] + "。\n你這敗家子給我去好好讀使用說明書:("
+        # 錯誤
+        elif resultDICT["intent"] == "error":
+            replySTR += "出現錯誤:" + resultDICT["err_msg"] + "。\n你這敗家子給我去好好讀使用說明書:("
+    except:
+        replySTR = "不知道怎麼搞的，不過你敗家到我不知道你在幹嘛呢..."
 
     return replySTR
 
@@ -132,6 +135,7 @@ def TransformDate(inputSTR):
     articutResultDICT = articut.parse(inputSTR)
 
     return articutResultDICT["time"][0][0]["datetime"][0:10]
+
 
 
 
@@ -229,63 +233,29 @@ def GetDataByCondition(userID="testUser", condition="all"):
 並使用 Articut 處理斷詞結果拿到參數
 參考：https://api.droidtown.co/document/?python#Loki_7
 """
-def GetAdvArgs(intent, utterance, inputSTR, groupIndexLIST):
-    payload = {     
-        "username": account,
-        "loki_key": loki_key,
-        "input_str": utterance
-    }
+def GetAdvArgs(inputSTR, rePAT, groupIndexLIST):
+    # 把對應的 regex 先編譯
+    pat = re.compile(rePAT)
+
+    # 將輸入丟進 articut 斷詞
+    articut = Articut(account, articut_key, level="lv2")
+    articutResultDICT = articut.parse(inputSTR, userDefinedDictFILE="./intent/USER_DEFINED.json")
+
+    # 將輸入用 re 比較
+    patGroups = re.search(pat, articutResultDICT["result_pos"][0])
+    args = []
     
-    # 去 LOKI 取得這個 utterance 的 regex
-    # region responseExample
-    """
-    {
-        "status": true,
-        "msg": "Success!",
-        "version": "v193",
-        "word_count_balance": 99988,
-        "results": [
-            {"intent": "Exchange",
-            "pattern": "<KNOWLEDGE_currency>[^<]*?</KNOWLEDGE_currency>(<MODAL>[^<]*?</MODAL>)?((<ACTION_verb>[^<不]*?[換][^<不]*?</ACTION_verb>)|(<VerbP>[^<不]*?[換][^<不]*?</VerbP>))<CLAUSE_HowQ>[^<]*?</CLAUSE_HowQ><ENTITY_UserDefined>[^<]*?</ENTITY_UserDefined>",
-            "utterance": "[100美金]能換多少[台幣]",
-            "argument": ["100美金", "台幣"]}
-        ]
-    }
-    """
-    # endregion
-    response = post(url, json=payload).json()
-    
-    # success
-    if response["status"] == True:
-        # 將輸入丟進 articut 斷詞
-        articut = Articut(account, articut_key, level="lv2")
-        articutResultDICT = articut.parse(inputSTR)
-       
-        # 要對應到指定的意圖
-        for i in range(len(response["results"])):
-            if response["results"][i]["intent"] == intent:
-                pat = re.compile(response["results"][i]["pattern"])
+    # for i in articutResultDICT["result_pos"]:
+    #     print(i)
 
-        # print(articutResultDICT["result_pos"][0])
-        # print(pat)
+    # 把我們要的參數拿出來
+    try:
+        for i in groupIndexLIST:
+            args.append(patGroups.group(i))
+        return (True, args)
+    # 在拿取參數的過程中發生錯誤
+    except:
+        return (False, "")
 
-        # 將輸入用 re 比較
-        patGroups = re.search(pat, articutResultDICT["result_pos"][0])
-        args = []
-        
-        # for i in articutResultDICT["result_pos"]:
-        #     print(i)
-
-        # 把我們要的參數拿出來
-        try:
-            for i in groupIndexLIST:
-                args.append(patGroups.group(i))
-            return (response["status"], args)
-        # 由於 Articut 不能採用 LOKI 的自定義辭典，因此在斷詞上會有差距，會發生錯誤
-        except:
-            return (False, "")
-    # error
-    else:
-        return (response["status"], response["msg"])
 
 
