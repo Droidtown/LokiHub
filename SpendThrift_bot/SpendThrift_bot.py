@@ -212,7 +212,7 @@ def runLoki(userID, inputLIST, filterLIST=[]):
                     
                 # searching: 查詢記賬結果
                 if lokiRst.getIntent(index, resultIndex) == "searching":
-                    resultDICT = Loki_searching.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getPattern(index, resultIndex), resultDICT)
+                    resultDICT = Loki_searching.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
 
 
                 
