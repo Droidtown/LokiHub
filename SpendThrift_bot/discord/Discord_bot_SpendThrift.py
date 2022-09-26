@@ -58,7 +58,7 @@ class BotClient(discord.Client):
         self.templateDICT = {"updatetime" : None,
                              "latestQuest": ""
         }
-        self.mscDICT = { #userid:templateDICT
+        self.mscDICT = { #userid: templateDICT
         }
         # ####################################################################################
         print('Logged on as {} with id {}'.format(self.user, self.user.id))
@@ -89,10 +89,15 @@ class BotClient(discord.Client):
             logging.debug("本 bot 被叫到了！")
             logging.debug("人類說：{}".format(msgSTR))
 
+            # 將使用者記錄下來，以便後續處理資料
+            try:
+                self.mscDICT[message.author.id]["updatetime"] = datetime.now()
+                self.mscDICT[message.author.id]["latestQuest"] = msgSTR
+            except:
+                self.mscDICT[message.author.id] = self.templateDICT
+            
 # ##########初次對話：這裡是 keyword trigger 的。
 
-            # 記錄使用者打招呼的次數
-            countHi = 0
 
             # 如果在跟 bot 打招呼
             if msgSTR.lower() in ["哈囉","嗨","你好","您好","hi","hello"]:
@@ -103,7 +108,6 @@ class BotClient(discord.Client):
                     if timeDIFF.total_seconds() >= 300:
                         self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                         replySTR = "你之前好像跟我講過話呢...不過像你這種敗家子我可不屑記得"
-                        countHi = 0
                     #有講過話，而且還沒超過5分鐘就又跟我 hello (就繼續上次的對話)
                     else:
                         replySTR = "你這個敗家子連記憶力都不好嗎...\n你剛剛才對我說：「" + self.mscDICT[message.author.id]["latestQuest"] + "」\n馬上就忘了還真可悲"
@@ -111,10 +115,6 @@ class BotClient(discord.Client):
                 else:
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                     replySTR = msgSTR.title() + "，敗家子"
-                    countHi += 1
-                    # 連續嗨了很多次
-                    if countHi >= 4:
-                        replySTR += "..." + msgSTR.titile() + "你個頭啦！這樣好玩嗎？"
 
 # ##########非初次對話：
 
@@ -155,7 +155,6 @@ class BotClient(discord.Client):
 
             # 用 Loki 計算語意            
             else: #開始處理正式對話，開始接上 NLU 模型
-                self.mscDICT[message.author.id]["latestQuest"] = msgSTR
                 resultDICT = runLoki(str(message.author.id), [msgSTR])
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resultDICT)
