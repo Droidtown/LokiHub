@@ -204,15 +204,15 @@ def runLoki(userID, inputLIST, filterLIST=[]):
                 
                 # earn_adv: 收入記賬
                 if lokiRst.getIntent(index, resultIndex) == "earn_adv":
-                    resultDICT = Loki_earn_adv.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_earn_adv.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getPattern(index, resultIndex), resultDICT)
                 
                 # spend_adv: 支出記賬
                 if lokiRst.getIntent(index, resultIndex) == "spend_adv":
-                    resultDICT = Loki_spend_adv.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_spend_adv.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getPattern(index, resultIndex), resultDICT)
                     
                 # searching: 查詢記賬結果
                 if lokiRst.getIntent(index, resultIndex) == "searching":
-                    resultDICT = Loki_searching.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    resultDICT = Loki_searching.getResult(userID, key, lokiRst.getUtterance(index, resultIndex), lokiRst.getPattern(index, resultIndex), resultDICT)
 
 
                 
