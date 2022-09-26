@@ -22,7 +22,7 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 |   ├── Updater.py
 |   └── USER_DEFINED 
 |
-└── ref                        # 於 Droidtown 網站使用 Loki 服務時，需匯入 .ref 檔案
+└── ref                       # 於 Droidtown 網站使用 Loki 服務時，需匯入 .ref 檔案
     ├── gender.ref
     ├── age.ref
     ├── height.ref
