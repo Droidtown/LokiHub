@@ -131,11 +131,14 @@ def TransformDate(inputSTR):
     }
     """
     # endregion
-    articut = Articut(account, articut_key, level="lv3")
-    articutResultDICT = articut.parse(inputSTR)
+    try:
+        articut = Articut(account, articut_key, level="lv3")
+        articutResultDICT = articut.parse(inputSTR)
 
-    return articutResultDICT["time"][0][0]["datetime"][0:10]
+        return articutResultDICT["time"][0][0]["datetime"][0:10]
 
+    except:
+        return GetCurrentDate()
 
 
 
