@@ -37,14 +37,14 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 * 於[卓騰語言科技網站](https://api.droidtown.co/)註冊會員。
 * 登入後，從 `服務資訊` 進入 `Loki`。
 * 選擇 `開始使用 Loki`。
-<img src=https://i.imgur.com/ilWGxij.png width=60% />
+<img src=readme_pic/enter_Loki.png width=60% />
 
 * 輸入專案名稱，按下 `建立專案`。
-<img src=https://i.imgur.com/dXirHXx.png width=60% />
+<img src=readme_pic/new_project.png width=60% />
 
 * 進入建立好的專案，點選 `Choose Files`，上傳所有 ref 檔案後，按下 `讀取意圖`。
 * 讀取完所有的意圖後，按下 `佈署全部模型`。
-<img src=https://i.imgur.com/fjuo340.png width=60% />
+<img src=readme_pic/upload_ref.png width=60% />
 
 * 回到 Loki 首頁，於 `專案金鑰` 欄複製金鑰。
-<img src=https://i.imgur.com/eZEfA5N.png width=60% />
+<img src=readme_pic/Loki_key.png width=60% />
