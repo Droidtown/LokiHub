@@ -38,7 +38,7 @@ def debugInfo(inputSTR, utterance):
 
 def getResult(userID, inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    print(args)
+
     if utterance == "查詢[收入]":
         if args[0] in ["支出"]:
             result = fun.GetDataByCondition(userID, "cost")
@@ -47,16 +47,45 @@ def getResult(userID, inputSTR, utterance, args, resultDICT):
         elif args[0] in ["記帳狀況"]:
             result = fun.GetDataByCondition(userID, "all")
         
-        # 錯誤
-        if result == "error":
-            resultDICT["intent"] = "error"
-            resultDICT["err_msg"] = "錯誤"
-        #
-        else:
-            resultDICT["intent"] = intent
-            resultDICT["search_result"] = result
         pass
     
 
+
+    if utterance == "[我][今年][總共]花了多少錢":
+        result = fun.GetDataByCondition(userID, "cost")
+        pass
+
+    if utterance == "[我][今年][總共]賺了多少錢":
+        result = fun.GetDataByCondition(userID, "earn")
+        pass
+
+    if utterance == "[我][總共]花了多少錢":
+        result = fun.GetDataByCondition(userID, "cost")
+        pass
+
+    if utterance == "[我][總共]賺了多少錢":
+        result = fun.GetDataByCondition(userID, "earn")
+        pass
+
+    if utterance == "[我][這個][月][總共]花了多少錢":
+        result = fun.GetDataByCondition(userID, "cost")
+        pass
+
+    if utterance == "[我][這個][月][總共]賺了多少錢":
+        result = fun.GetDataByCondition(userID, "earn")
+        pass
+
+
+    """
+    處理結果
+    """
+    # 錯誤
+    if result == "error":
+        resultDICT["intent"] = "error"
+        resultDICT["err_msg"] = "錯誤"
+    # 結果
+    else:
+        resultDICT["intent"] = intent
+        resultDICT["search_result"] = result
 
     return resultDICT
