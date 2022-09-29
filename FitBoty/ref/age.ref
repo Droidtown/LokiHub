@@ -3,12 +3,12 @@
     "type": "basic",
     "version": {
         "atk": "v254",
-        "intent": "1.0"
+        "intent": ""
     },
     "user_defined": {
         "_infoBMR": [
-            "體重",
-            "生理性別"
+            "生理性別",
+            "體重"
         ],
         "_asSports": [
             "上樓梯",
@@ -438,6 +438,7 @@
             "草莓鬆餅",
             "冰淇淋鬆餅",
             "巧克力鬆餅",
+            "麵包",
             "波蘿麵包",
             "紅豆麵包",
             "奶酥麵包",
@@ -543,115 +544,36 @@
             "香瓜",
             "水梨",
             "水蜜桃"
+        ],
+        "_asMaleFemale": [
+            "男",
+            "男生",
+            "男性",
+            "男人",
+            "男子",
+            "帥哥",
+            "大叔",
+            "先生",
+            "歐巴",
+            "女",
+            "女生",
+            "女人",
+            "女性",
+            "女子",
+            "美女",
+            "小姐",
+            "阿姨",
+            "大嬸"
         ]
     },
     "utterance": {
-        "我17歲": {
-            "id": "68f12041-3ec5-4551-966f-6ecdce8afe8f",
+        "17": {
+            "id": "87a1369b-276c-4a97-8bf2-b8139e87a1da",
             "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "我",
-                    "checked": false,
-                    "checkbox": false
-                },
                 {
                     "pos": "ENTITY_num",
                     "text": "17",
                     "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "歲",
-                    "checked": false,
-                    "checkbox": true
-                }
-            ]
-        },
-        "我快17歲": {
-            "id": "7eae4774-2491-49c1-9772-2c8aa882ae87",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "我",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "MODIFIER",
-                    "text": "快",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "17",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "歲",
-                    "checked": false,
-                    "checkbox": true
-                }
-            ]
-        },
-        "我今年17歲": {
-            "id": "f618116a-c682-46e9-ac2b-2b58014b49f9",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "我",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "TIME_year",
-                    "text": "今年",
-                    "checked": true,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "17",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "歲",
-                    "checked": false,
-                    "checkbox": true
-                }
-            ]
-        },
-        "我剛滿17歲": {
-            "id": "5ed4cad5-2994-4c66-8af1-57a69c82064e",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "我",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_nouny",
-                    "text": "剛滿",
-                    "checked": false,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "17",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_noun",
-                    "text": "歲",
-                    "checked": false,
                     "checkbox": true
                 }
             ]

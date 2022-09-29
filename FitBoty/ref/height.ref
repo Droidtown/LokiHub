@@ -7,8 +7,8 @@
     },
     "user_defined": {
         "_infoBMR": [
-            "體重",
-            "生理性別"
+            "生理性別",
+            "體重"
         ],
         "_asSports": [
             "上樓梯",
@@ -438,6 +438,7 @@
             "草莓鬆餅",
             "冰淇淋鬆餅",
             "巧克力鬆餅",
+            "麵包",
             "波蘿麵包",
             "紅豆麵包",
             "奶酥麵包",
@@ -543,51 +544,54 @@
             "香瓜",
             "水梨",
             "水蜜桃"
+        ],
+        "_asMaleFemale": [
+            "男",
+            "男生",
+            "男性",
+            "男人",
+            "男子",
+            "帥哥",
+            "大叔",
+            "先生",
+            "歐巴",
+            "女",
+            "女生",
+            "女人",
+            "女性",
+            "女子",
+            "美女",
+            "小姐",
+            "阿姨",
+            "大嬸"
         ]
     },
     "utterance": {
-        "150公分": {
-            "id": "559d0c28-9de1-4370-88c8-e262982cebd1",
+        "150": {
+            "id": "cebcab6b-8b52-46b7-883b-33af7c0a2c6e",
             "argument": [
                 {
-                    "pos": "ENTITY_measurement",
-                    "text": "150公分",
-                    "checked": true,
-                    "checkbox": false
-                }
-            ]
-        },
-        "我150公分": {
-            "id": "0da717b9-77cc-40b4-b31a-6273eaefbf0a",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "我",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_measurement",
-                    "text": "150公分",
-                    "checked": true,
-                    "checkbox": false
-                }
-            ]
-        },
-        "身高150公分": {
-            "id": "c3d367ec-9235-4eff-bab1-e00e549e0ac0",
-            "argument": [
-                {
-                    "pos": "ENTITY_oov",
-                    "text": "身高",
+                    "pos": "ENTITY_num",
+                    "text": "150",
                     "checked": true,
                     "checkbox": true
-                },
+                }
+            ]
+        },
+        "1米5": {
+            "id": "bcee875f-a0bf-4081-9b06-0bbfd2158742",
+            "argument": [
                 {
                     "pos": "ENTITY_measurement",
-                    "text": "150公分",
+                    "text": "1米",
                     "checked": true,
                     "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "5",
+                    "checked": true,
+                    "checkbox": true
                 }
             ]
         }

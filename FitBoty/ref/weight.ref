@@ -7,8 +7,8 @@
     },
     "user_defined": {
         "_infoBMR": [
-            "體重",
-            "生理性別"
+            "生理性別",
+            "體重"
         ],
         "_asSports": [
             "上樓梯",
@@ -438,6 +438,7 @@
             "草莓鬆餅",
             "冰淇淋鬆餅",
             "巧克力鬆餅",
+            "麵包",
             "波蘿麵包",
             "紅豆麵包",
             "奶酥麵包",
@@ -543,121 +544,43 @@
             "香瓜",
             "水梨",
             "水蜜桃"
+        ],
+        "_asMaleFemale": [
+            "男",
+            "男生",
+            "男性",
+            "男人",
+            "男子",
+            "帥哥",
+            "大叔",
+            "先生",
+            "歐巴",
+            "女",
+            "女生",
+            "女人",
+            "女性",
+            "女子",
+            "美女",
+            "小姐",
+            "阿姨",
+            "大嬸"
         ]
     },
     "utterance": {
+        "50": {
+            "id": "7025512b-d070-49db-a4e1-5c1c073974a9",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "50",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
         "50公斤": {
             "id": "4084fcb7-7bd6-4e9b-95cd-6e31205743ac",
             "argument": [
-                {
-                    "pos": "ENTITY_measurement",
-                    "text": "50公斤",
-                    "checked": true,
-                    "checkbox": false
-                }
-            ]
-        },
-        "我50初": {
-            "id": "61d21d0c-1ec3-4d74-b625-11659ff867fd",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "我",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "50",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "ENTITY_oov",
-                    "text": "初",
-                    "checked": false,
-                    "checkbox": true
-                }
-            ]
-        },
-        "我50多": {
-            "id": "afc40133-af78-4388-b229-3f858ba40b66",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "我",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "50",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "QUANTIFIER",
-                    "text": "多",
-                    "checked": false,
-                    "checkbox": false
-                }
-            ]
-        },
-        "我50幾": {
-            "id": "9845a056-abc9-412b-b42d-ad61bb2a04e9",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "我",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_num",
-                    "text": "50",
-                    "checked": true,
-                    "checkbox": true
-                },
-                {
-                    "pos": "CLAUSE_HowQ",
-                    "text": "幾",
-                    "checked": false,
-                    "checkbox": false
-                }
-            ]
-        },
-        "我50公斤": {
-            "id": "7ad0e0a4-2654-4952-9a11-ba304336d175",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "我",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "ENTITY_measurement",
-                    "text": "50公斤",
-                    "checked": true,
-                    "checkbox": false
-                }
-            ]
-        },
-        "我大約50公斤": {
-            "id": "d2f0ba44-65e1-44b3-847b-5ff332d2b16f",
-            "argument": [
-                {
-                    "pos": "ENTITY_pronoun",
-                    "text": "我",
-                    "checked": false,
-                    "checkbox": false
-                },
-                {
-                    "pos": "MODIFIER",
-                    "text": "大約",
-                    "checked": false,
-                    "checkbox": false
-                },
                 {
                     "pos": "ENTITY_measurement",
                     "text": "50公斤",
