@@ -44,7 +44,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
             nameSTR = args[0]
 
     if utterance == "[我]叫[小明]":
-        if articut.parse(inputSTR)["result_pos"] == "<ENTITY_person>{}</ENTITY_person>".format(inputSTR):
+        if len(args[1]) <= 4:
             nameSTR = args[1]
 
     if utterance == "[我]叫[早餐店][帥哥]":
@@ -57,7 +57,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         nameSTR = args[1]
 
     if utterance == "[我]是[早餐店][帥哥]":
-        nameSTR = args[0]+args[1]
+        nameSTR = args[1]+args[2]
 
     if utterance == "[我]是[陳小明]":
         nameSTR = args[1]
@@ -90,7 +90,10 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "[陳小明]":
         nameSTR = args[0]
-
-    resultDICT['greeting'] = f'{nameSTR}，你好！那你學華語多久了？'
+    
+    try:
+        resultDICT['greeting'] = f'{nameSTR}，你好！那你學華語多久了？'
+    except NameError:
+        resultDICT['greeting'] = '嗨，你好，那你學華語多久了？'
 
     return resultDICT

@@ -106,7 +106,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['error'] = 'sent6'
 
     if utterance == "[最近]教育和工作的變化[都]就是[額外]的[壓力]":
-        newSTR = inputSTR.replace('就是','都是')
+        newSTR = inputSTR.replace('就是','是')
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'dou'
 
@@ -136,7 +136,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT['error'] = 'genju'
 
     if utterance == "每[夏天][他]讓了我[妹妹]和[我]寫書報告":
-        newSTR = inputSTR.replace('每','每到').replace('讓了','讓')
+        newSTR = inputSTR.replace('每','每到').replace('讓了','讓').replace('書','書面')
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'rang'
 

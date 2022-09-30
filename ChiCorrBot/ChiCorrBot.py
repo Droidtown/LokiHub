@@ -42,12 +42,12 @@
         }
 """
 
+import json
+import math
+import re
 from cProfile import run
 from requests import post
 from requests import codes
-import math
-import re
-import json
 try:
     from intent import Loki_syntax
     from intent import Loki_semantics

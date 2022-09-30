@@ -1,21 +1,21 @@
 #!/user/bin/env python
 # -*- coding: utf-8 -*-
 
-import logging
-from typing import Counter
-from unicodedata import name
-from unittest import result
 import discord
 import json
+import logging
 import re
-from urllib import response
-from datetime import datetime
-from pprint import pprint
 from ArticutAPI import Articut
 from ChiCorrBot import runLoki, explanationDICT
+from datetime import datetime
+from pprint import pprint
 from Pinyin2Hanzi import DefaultHmmParams
 from Pinyin2Hanzi import viterbi
 from pypinyin import lazy_pinyin, Style  
+from typing import Counter
+from unicodedata import name
+from unittest import result
+from urllib import response
 
 hmmparams = DefaultHmmParams()
 style = Style.TONE3
@@ -45,13 +45,14 @@ class BotClient(discord.Client):
         '''
         templateDICT = self.templateDICT
         templateDICT["updatetime"] = datetime.now()
-        templateDICT["counter"] = 0 #新增counter
+        #templateDICT["counter"] = 0 #新增counter
         return templateDICT
 
     async def on_ready(self):
         self.templateDICT = {"updatetime" : None,
-                             "latestQuest": "我們已經打過招呼囉！你的華語名字是什麼呀？",
-                             #"counter": 0,
+                             "latestQuest": "",
+                             "name":"",
+                             "time":"",
 
         }
         self.mscDICT = { #userid:templateDICT
@@ -94,8 +95,9 @@ class BotClient(discord.Client):
                 else:
                     self.mscDICT[message.author.id] = self.resetMSCwith(message.author.id)
                     replySTR = f'{msgSTR.title()}，你的華語名字是什麼呀？'
+                    self.mscDICT[message.author.id]["latestQuest"] = replySTR
                     #設定每次counter都加一
-                    self.mscDICT[message.author.id]['counter'] += 1
+                    #self.mscDICT[message.author.id]['counter'] += 1
 
 # ##########非初次對話：這裡用 Loki 計算語意
             else: #開始處理正式對話
@@ -109,26 +111,28 @@ class BotClient(discord.Client):
                 #從這裡開始接上 NLU 模型
                 #設定counter的次數，判斷intent。
                 else:
-                    #第一次處理：姓名
-                    if self.mscDICT[message.author.id]['counter'] == 1:
+                    #第一次處理：姓名，使用intnet:name
+                    if self.mscDICT[message.authhor.id]["name"] == "":
+                    #if self.mscDICT[message.author.id]['counter'] == 1:
                         resultDICT = getLokiResult(msgSTR, ['name'])
                         logging.debug("######\nLoki 處理結果如下：")
                         logging.debug(resultDICT)
                         replySTR = resultDICT['greeting']
-                        self.mscDICT[message.author.id]['counter'] += 1
-                    #第二次處理：時間
-                    elif self.mscDICT[message.author.id]['counter'] == 2:
+                        #self.mscDICT[message.author.id]['counter'] += 1
+                    #第二次處理：時間，使用intent:time
+                    elif self.mscDICT[message.authhor.id]["time"] == "":
+                    #elif self.mscDICT[message.author.id]['counter'] == 2:
                         resultDICT = getLokiResult(msgSTR, ['time'])
                         logging.debug("######\nLoki 處理結果如下：")
                         logging.debug(resultDICT)
                         replySTR = resultDICT['time']
-                        self.mscDICT[message.author.id]['counter'] += 1
-                    #第三次處理：病句
+                        #self.mscDICT[message.author.id]['counter'] += 1
+                    #第三次處理：病句，使用intent:syntax,semantics,vocabulary,ans
                     else:
                         resultDICT = getLokiResult(msgSTR, ['syntax', 'semantics', 'vocabulary','ans'])
                         logging.debug("######\nLoki 處理結果如下：")
                         logging.debug(resultDICT)
-                        #如果resultDICT為空字典
+                        #如果resultDICT是空字典
                         if not resultDICT: 
                             replySTR = '本bot覺得你的句子是對的！'
                         #如果resultDICT不是空字典
@@ -148,7 +152,7 @@ class BotClient(discord.Client):
                             req = '\n你還有其他句子要討論嗎？如果有，請繼續輸入句子，如果沒有，請輸入「Bye」。'
                             replySTR = f'{res}\n{expl}\n{req}'
 
-                            #不需要再次詢問的intent(vocabulary,syntax)，則直接印出建議句子和錯誤說明。
+                            #不需要再次詢問的intent(syntax,vocabulary)，則直接印出建議句子和錯誤說明。
                             if not self.mscDICT[message.author.id]['inq']:
                                 replySTR = replySTR
                             #辨識回答為「是」，則印出建議句子和錯誤說明。
@@ -157,7 +161,7 @@ class BotClient(discord.Client):
                             #辨識回答為「否」，則印出該回答。
                             elif self.mscDICT[message.author.id]['inq'] == '否':
                                 replySTR = f'啊！本bot不知道，只好請教老師了!\n{req}'
-                            #需要再次確認語意的intent(syntax)，則印出該問題。
+                            #需要再次確認語意的intent(semantics)，則印出該問題。
                             else:
                                 replySTR = self.mscDICT[message.author.id]['inq']
 
