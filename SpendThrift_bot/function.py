@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 import re
 import os, sys
 from sre_constants import GROUPREF_UNI_IGNORE
@@ -96,6 +97,11 @@ def SpendThriftReply(resultDICT):
         
 
         # 錯誤
+        
+        # 幣值錯誤
+        elif resultDICT["intent"] == "error_currency":
+            replySTR += "你敗家到連金錢的單位都搞不清楚了嗎...我只聽得懂 '台幣'，或是 '錢', '元' 這種金錢代稱喔"
+        # 其他錯誤
         elif resultDICT["intent"] == "error":
             replySTR += "出現錯誤:" + resultDICT["err_msg"] + "。\n你這敗家子給我去好好讀使用說明書:("
     except:
@@ -103,34 +109,31 @@ def SpendThriftReply(resultDICT):
 
     return replySTR
 
-
+# region function_of_time
 """
 string GetCurrentDate()
 拿到當前的日期
-    return "yyyy/mm/dd"
+    return "yyyy-mm-dd"
 """
 def GetCurrentDate():
     return str(time.localtime().tm_year) + "-" + str(time.localtime().tm_mon) + "-" + str(time.localtime().tm_mday)
 
-
-
 """
 string TransformTime():
-用 Articut lv3(語意分析) 將中文時間轉換成 yyyy-mm-dd
+用 Articut lv3(語意分析) 將中文時間轉換成指定日期 yyyy-mm-dd
     return "yyyy-mm-dd"
 """
+# region ArticutLV3
+"""
+{   'person': [[]], 'event': [[]], 'time': [[{'absolute': False, 'datetime': '2022-08-24 00:00:00', 'text': '昨天',
+    'time_span': {'year': [2022, 2022], 'month': [8, 8], 'weekday': [3, 3], 'day': [24, 24], 'hour': [0, 23], 'minute': [0, 59], 'second': [0, 59], 'time_period': 'night'}}]],
+    'site': [[]], 'entity': [[]], 'number': {'300': 300}, 'user_defined': [[]], 'utterance': ['ㄗㄨㄛˊ ㄊㄧㄢ /ㄏㄨㄚ ㄌㄜ˙ /300'],
+    'input': [[0, 7]], 'unit': {'300': ''}, 'exec_time': 0.03658628463745117, 'level': 'lv3', 'version': 'v256', 'status': True, 'msg': 'Success!',
+    'word_count_balance': 0
+}
+"""
+# endregion
 def TransformDate(inputSTR):
-    # 去 LOKI 取得這個 utterance 的 regex
-    # region ArticutLV3
-    """
-    {   'person': [[]], 'event': [[]], 'time': [[{'absolute': False, 'datetime': '2022-08-24 00:00:00', 'text': '昨天',
-        'time_span': {'year': [2022, 2022], 'month': [8, 8], 'weekday': [3, 3], 'day': [24, 24], 'hour': [0, 23], 'minute': [0, 59], 'second': [0, 59], 'time_period': 'night'}}]],
-        'site': [[]], 'entity': [[]], 'number': {'300': 300}, 'user_defined': [[]], 'utterance': ['ㄗㄨㄛˊ ㄊㄧㄢ /ㄏㄨㄚ ㄌㄜ˙ /300'],
-        'input': [[0, 7]], 'unit': {'300': ''}, 'exec_time': 0.03658628463745117, 'level': 'lv3', 'version': 'v256', 'status': True, 'msg': 'Success!',
-        'word_count_balance': 0
-    }
-    """
-    # endregion
     try:
         articut = Articut(account, articut_key, level="lv3")
         articutResultDICT = articut.parse(inputSTR)
@@ -139,6 +142,74 @@ def TransformDate(inputSTR):
 
     except:
         return GetCurrentDate()
+
+""" 
+List GetTimeSpan():
+用 Articut lv3 將中文時間轉換成指定時間區間
+    return ["yyyy-mm-dd", "yyyy-mm-dd"]
+"""
+def GetTimeSpan(inputSTR, failedLIST=[]):
+    try:
+        articut = Articut(account, articut_key, level="lv3")
+        
+        # Articut 沒辦法處理的時間格式會被丟到這邊處理
+        if inputSTR == "_articut_failed_":
+            # 用現在的時間去推算
+            articutResultDICT = articut.parse("現在")
+            timespan = articutResultDICT["time"][0][0]["time_span"]
+            
+            if failedLIST[0] == "這個":                    
+                # 月
+                if failedLIST[1] in ["月", "月份"]:
+                    startDate = ToZeroString(timespan["year"][0]) + "-" + ToZeroString(timespan["month"][0]) + "-" + "01"
+                    endDate = ToZeroString(timespan["year"][1]) + "-" + ToZeroString(timespan["month"][1]) + "-" + "31"
+                
+                # 週
+                elif failedLIST[1] in ["週","周"]:
+                    # 如果上週有包含上個月
+                    if timespan["day"][0] - timespan["weekday"][0] < 1:
+                        # 再用一次Articut去抓取上個月的時間
+                        lastMonthDICT = articut.parse("上個月")
+                        lastMonthTime = lastMonthDICT["time"][0][0]["time_span"]
+                        startDate = ToZeroString(timespan["year"][1]) + "-" + ToZeroString(lastMonthTime["month"][1]) + "-" + ToZeroString(lastMonthTime["day"][1]+(timespan["day"][0] - timespan["weekday"][0]) + 1)
+                    else:
+                        startDate = ToZeroString(timespan["year"][0]) + "-" + ToZeroString(timespan["month"][0]) + "-" + ToZeroString(timespan["day"][0] - timespan["weekday"][0] + 1)
+                    endDate = ToZeroString(timespan["year"][1]) + "-" + ToZeroString(timespan["month"][1]) + "-" + ToZeroString(timespan["day"][0])
+                
+                # 日
+                elif failedLIST[1] in ["日", "天"]:
+                    startDate = ToZeroString(timespan["year"][0]) + "-" + ToZeroString(timespan["month"][0]) + "-" + ToZeroString(timespan["day"][0])
+                    endDate = ToZeroString(timespan["year"][1]) + "-" + ToZeroString(timespan["month"][1]) + "-" + ToZeroString(timespan["day"][1])
+                
+        else:        
+            articutResultDICT = articut.parse(inputSTR)
+            
+            timespan = articutResultDICT["time"][0][0]["time_span"]
+            startDate = ToZeroString(timespan["year"][0]) + "-" + ToZeroString(timespan["month"][0]) + "-" + ToZeroString(timespan["day"][0])
+            endDate = ToZeroString(timespan["year"][1]) + "-" + ToZeroString(timespan["month"][1]) + "-" + ToZeroString(timespan["day"][1])
+
+        return [startDate, endDate]
+
+    # 出現錯誤就回傳今天
+    except:
+        return [GetCurrentDate(),GetCurrentDate()]
+
+def ToZeroString(number):
+    if number < 10:
+        return "0" + str(number)
+    else:
+        return str(number)
+# endregion
+
+
+"""
+bool CorrectCurrency(string, list[string])
+判斷幣值是否正確
+"""
+def CorrectCurrency(inputSTR, currencyLIST):
+    if inputSTR not in currencyLIST:
+        return False
+    return True
 
 
 
@@ -191,7 +262,7 @@ int GetDataByCondition(username, condition)
 
 return 查詢情況的統計金額
 """
-def GetDataByCondition(userID="testUser", condition="all"):
+def GetDataByCondition(userID="testUser", condition="all", timespan=[]):
     # open csv
     with open("./user_data/" + userID + ".csv", 'r', encoding="utf-8") as f:
         # read data
@@ -204,30 +275,59 @@ def GetDataByCondition(userID="testUser", condition="all"):
         for row in reader:
             # 忽略欄位說明(第一列)
             if row[0] == "time":
-                pass
+                continue
             
-            # 收入
-            elif condition == "earn":
-                if row[1] == "earn_adv":    # 收入的 intent 名稱
-                    totalMoney += int(row[2])
+            # 搜尋條件有包含時間
+            if timespan != []:
+                # 不再要求的時間範圍內就直接跳過
+                if row[0] < timespan[0] or row[0] > timespan[1]:
+                    continue
+                
+                # 收入
+                if condition == "earn":
+                    if row[1] == "earn_adv":    # 收入的 intent 名稱
+                        totalMoney += int(row[2])
 
-            
-            # 支出        
-            elif condition == "cost":
-                if row[1] == "spend_adv":   # 支出的 intent 名稱
-                    totalMoney += int(row[2])
+                # 支出        
+                elif condition == "cost":
+                    if row[1] == "spend_adv":   # 支出的 intent 名稱
+                        totalMoney += int(row[2])
 
-                        
-            # 管他的
-            elif condition == "all":
-                if row[1] == "earn_adv":    # 收入的 intent 名稱
-                    totalMoney += int(row[2])
-                elif row[1] == "spend_adv":   # 支出的 intent 名稱
-                    totalMoney -= int(row[2])
-            
-            # error
+                            
+                # 總額
+                elif condition == "all":
+                    if row[1] == "earn_adv":    # 收入的 intent 名稱
+                        totalMoney += int(row[2])
+                    elif row[1] == "spend_adv":   # 支出的 intent 名稱
+                        totalMoney -= int(row[2])
+                
+                # error
+                else:
+                    return "error"
+                
+            # 沒有時間條件，直接計算
             else:
-                return "error"
+                # 收入
+                if condition == "earn":
+                    if row[1] == "earn_adv":    # 收入的 intent 名稱
+                        totalMoney += int(row[2])
+
+                # 支出        
+                elif condition == "cost":
+                    if row[1] == "spend_adv":   # 支出的 intent 名稱
+                        totalMoney += int(row[2])
+
+                            
+                # 總額
+                elif condition == "all":
+                    if row[1] == "earn_adv":    # 收入的 intent 名稱
+                        totalMoney += int(row[2])
+                    elif row[1] == "spend_adv":   # 支出的 intent 名稱
+                        totalMoney -= int(row[2])
+                
+                # error
+                else:
+                    return "error"
         return totalMoney
 
 
