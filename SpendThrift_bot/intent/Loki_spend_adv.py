@@ -24,7 +24,7 @@ DEBUG_spend_adv = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
-    userDefinedDICT = {"_key":["收入","支出","記帳狀況"],"_park":["六福村","九族文化村","義大","義大世界"],"_money":["支出總額","支出費用","總金額","總額","費用","金錢","錢"]}
+    userDefinedDICT = {"_key":["收入","支出","記帳狀況"],"_park":["六福村","九族文化村","義大","義大世界"],"_money":["錢","台幣","元"],"_income_key":["收入"],"_allcome_key":["記帳","財富"],"_outcome_key":["支出","消費","花費"]}
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
@@ -68,7 +68,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "去全聯花了3000":
@@ -97,7 +97,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "去六福村支出3000":
@@ -121,7 +121,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "去六福村花了3000":
@@ -145,7 +145,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "去台北支出3000":
@@ -170,7 +170,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "去台北花了3000":
@@ -195,7 +195,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "支出3000":
@@ -213,7 +213,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
 
 
     if utterance == "昨天去全聯支出3000":
@@ -234,7 +234,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "昨天去全聯花了3000":
@@ -255,7 +255,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "昨天去六福村支出3000":
@@ -286,7 +286,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
 
 
     if utterance == "昨天去六福村花了3000":
@@ -317,7 +317,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
 
     if utterance == "昨天去台北支出3000":
         """
@@ -337,7 +337,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "昨天去台北花了3000":
@@ -358,7 +358,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "昨天支出3000": 
@@ -378,7 +378,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
     
 
     if utterance == "昨天花了3000":
@@ -400,7 +400,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
 
 
     if utterance == "花了3000":
@@ -418,7 +418,7 @@ def getResult(userID, inputSTR, utterance, rePAT, resultDICT):
         else:
             resultDICT["intent"] = "error"
             resultDICT["err_msg"] = result
-        pass
+        
 
 
     # 分析完畢，儲存結果
