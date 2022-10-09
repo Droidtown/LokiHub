@@ -66,10 +66,10 @@ except:
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
 
-with open('./Loki_account.info', 'r', encoding='utf-8') as f:
+with open('account.info', 'r', encoding='utf-8') as f:
     LokiAccount = json.loads(f.read())
 USERNAME = LokiAccount['username']
-LOKI_KEY = LokiAccount['Loki_key']
+LOKI_KEY = LokiAccount['loki_key']
 
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)

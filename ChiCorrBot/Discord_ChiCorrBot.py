@@ -9,15 +9,12 @@ from ArticutAPI import Articut
 from ChiCorrBot import runLoki, explanationDICT
 from datetime import datetime
 from pprint import pprint
-from Pinyin2Hanzi import DefaultHmmParams
-from Pinyin2Hanzi import viterbi
 from pypinyin import lazy_pinyin, Style  
 from typing import Counter
 from unicodedata import name
 from unittest import result
 from urllib import response
 
-hmmparams = DefaultHmmParams()
 style = Style.TONE3
 
 logging.basicConfig(level=logging.DEBUG)
@@ -112,7 +109,7 @@ class BotClient(discord.Client):
                 #設定counter的次數，判斷intent。
                 else:
                     #第一次處理：姓名，使用intnet:name
-                    if self.mscDICT[message.authhor.id]["name"] == "":
+                    if self.mscDICT[message.author.id]["name"] == "" and self.mscDICT[message.author.id]["latestQuest"] != "name":
                     #if self.mscDICT[message.author.id]['counter'] == 1:
                         resultDICT = getLokiResult(msgSTR, ['name'])
                         logging.debug("######\nLoki 處理結果如下：")
@@ -120,12 +117,12 @@ class BotClient(discord.Client):
                         replySTR = resultDICT['greeting']
                         #self.mscDICT[message.author.id]['counter'] += 1
                     #第二次處理：時間，使用intent:time
-                    elif self.mscDICT[message.authhor.id]["time"] == "":
+                    elif self.mscDICT[message.author.id]["time"] == "" and self.mscDICT[message.author.id]["latestQuest"] != "time":
                     #elif self.mscDICT[message.author.id]['counter'] == 2:
                         resultDICT = getLokiResult(msgSTR, ['time'])
                         logging.debug("######\nLoki 處理結果如下：")
                         logging.debug(resultDICT)
-                        replySTR = resultDICT['time']
+                        replySTR = resultDICT['time']        
                         #self.mscDICT[message.author.id]['counter'] += 1
                     #第三次處理：病句，使用intent:syntax,semantics,vocabulary,ans
                     else:

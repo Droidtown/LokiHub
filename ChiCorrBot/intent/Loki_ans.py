@@ -27,7 +27,8 @@ DEBUG_ans = True
 try:
     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
 except:
-    userDefinedDICT = {"否":["NO","No","no","N","n","不是","不是的","不對"],"是":["YES","Yes","yes","Y","y","是的","對","對的"]}
+    userDefinedDICT = {"_agreeExp":["YES","Yes","yes","Y","y"],
+                    "_disagreeExp": ["NO","No","no","N","n"]}
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
