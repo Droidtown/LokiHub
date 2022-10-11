@@ -27,6 +27,7 @@ LokiHub 則為開放性的 Loki 意圖模型交流中心。
 * PyConTW2020_DiscordBot: 用於 PyConTW2020 的 DiscordBot
 * Restaurant-recommendation_bot: 在地美食推薦機器人
 * SmartHome: 專為智慧家電操作設計的意圖模型
+* SpendThrift_bot: 敗家子終止機器人
 * StatsBot: NBA 紀錄對話查詢機器人
 * TransportationBot: 高鐵的票價與車次時刻查詢聊天機器人
 * WeatherMan: 天氣情報互動機器人
