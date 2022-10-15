@@ -92,8 +92,10 @@ def getResult(inputSTR, utterance, args, resultDICT):
         nameSTR = args[0]
     
     try:
+        resultDICT['name'] = nameSTR
         resultDICT['greeting'] = f'{nameSTR}，你好！那你學華語多久了？'
     except NameError:
+        resultDICT['name'] = None
         resultDICT['greeting'] = '嗨，你好，那你學華語多久了？'
 
     return resultDICT

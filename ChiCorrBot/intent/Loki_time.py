@@ -56,7 +56,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "學華語學了[一天]":
         timeSTR = args[0]
-
-    resultDICT['time'] = f'哇～你學了{timeSTR}呀！好棒！\n讓我幫你提升華語能力吧！\n請你輸入一個華語句子，如果有錯誤，我將會告訴你建議的說法和錯誤之處。\n我們開始學習華語吧！'
+        
+    resultDICT['time'] = timeSTR
+    resultDICT['timeReply'] = f'哇～你學了{timeSTR}呀！好棒！\n讓我幫你提升華語能力吧！\n請你輸入一個華語句子，如果有錯誤，我將會告訴你建議的說法和錯誤之處。\n我們開始學習華語吧！'
 
     return resultDICT
