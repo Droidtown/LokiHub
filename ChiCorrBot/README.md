@@ -5,6 +5,9 @@
 # 檔案總覽
 
 # Demo
+- 必須先標註機器人@ChiCorrBot，並輸入「哈囉、嗨、你好」才可以開始使用喔！
+- [實際操作示範](<https://youtu.be/eDiZ0xB37tw>)
+  
 
 # 環境設置
 - Python 3.6+
@@ -47,5 +50,5 @@
 4. 填入account.info的 __articut_key__ 欄位
 
 # 聯絡資訊
-  若您有其他建議或疑問，歡迎透過E-mail來信，謝謝。
-  Joanne Chung : <joanne031913@gmail.com>
+- 若您有其他建議或疑問，歡迎透過E-mail來信，謝謝。
+- Joanne Chung : <joanne031913@gmail.com>
