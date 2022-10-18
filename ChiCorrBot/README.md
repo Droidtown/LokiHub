@@ -3,6 +3,7 @@
   Chinese Corrector Bot是基於真實的華語病句語料，使用者輸入華語句子後，經由Loki進行處理，判斷句子是否有誤和屬於哪種錯誤類型，再回覆使用者建議說法和錯誤之處，以提供使用者學習華語句子為目標。
 
 # 檔案總覽
+```
 .
 ├── ChiCorrBot.py
 ├── Discord_ChiCorrBot.py
@@ -25,10 +26,12 @@
 │   ├── time.ref
 │   └── vocabulary.ref
 └── requirements.txt
+```
 
 # Demo
 - 必須先標註機器人@ChiCorrBot，並輸入「哈囉、嗨、你好」才可以開始使用喔！
-- [實際操作示範](<https://youtu.be/eDiZ0xB37tw>)
+- __實際操作示範__
+- <img src = "https://youtu.be/eDiZ0xB37tw"></img>
 
 # 環境設置
 - Python 3.6+
@@ -36,6 +39,7 @@
 
 # 建立account.info檔案
 - __username__ 為註冊帳號的E-mail
+- 可以直接使用 __template_account.info__ 檔案
 
 ```Python
 {
