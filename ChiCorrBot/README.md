@@ -5,11 +5,11 @@
 # 檔案總覽
 ```
 .
-├── ChiCorrBot.py
-├── Discord_ChiCorrBot.py
-├── README.md
+├── ChiCorrBot.py  # NLU主程式，使用Loki進行處理
+├── Discord_ChiCorrBot.py  # 處理Discord的運作
+├── README.md 
 ├── account.info
-├── intent
+├── intent  # 全部的intent
 │   ├── Loki_ans.py
 │   ├── Loki_name.py
 │   ├── Loki_semantics.py
@@ -18,20 +18,20 @@
 │   ├── Loki_vocabulary.py
 │   ├── USER_DEFINED.json
 │   └── Updater.py
-├── ref
+├── ref  # 提供Loki讀取
 │   ├── ans.ref
 │   ├── name.ref
 │   ├── semantics.ref
 │   ├── syntax.ref
 │   ├── time.ref
 │   └── vocabulary.ref
-└── requirements.txt
+└── requirements.txt  # 安裝相關套件
 ```
 
 # Demo
 - 必須先標註機器人@ChiCorrBot，並輸入「哈囉、嗨、你好」才可以開始使用喔！
 - __實際操作示範__
-- <img src = "https://youtu.be/eDiZ0xB37tw"></img>
+  [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/eDiZ0xB37tw/0.jpg)](https://www.youtube.com/watch?v=eDiZ0xB37tw)
 
 # 環境設置
 - Python 3.6+
@@ -39,14 +39,14 @@
 
 # 建立account.info檔案
 - __username__ 為註冊帳號的E-mail
-- 可以直接使用 __template_account.info__ 檔案
+- 可以直接使用 __account.info__ 檔案
 
 ```Python
 {
-"discord_token":"",
-"username":"",
-"articut_key":"",
-"loki_key":""
+  "discord_token":"",
+  "username":"",
+  "articut_key":"",
+  "loki_key":""
 }
 ```
 
@@ -64,7 +64,7 @@
 3. 點選 __開始使用Loki__
 4. 輸入 __專案名稱__ 並建立
 5. 進入專案後 __選擇檔案__
-6. 選取ref的所有檔案並 __讀取意圖__
+6. 選取ref目錄的所有檔案並 __讀取意圖__
 7. 點選左上角的小房子複製 __專案金鑰__
 8. 填入account.info的 __loki_key__ 欄位
 
