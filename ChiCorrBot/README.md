@@ -31,7 +31,7 @@
 # Demo
 - 必須先標註機器人@ChiCorrBot，並輸入「哈囉、嗨、你好」才可以開始使用喔！
 - __實際操作示範__
-  [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/eDiZ0xB37tw/0.jpg)](https://www.youtube.com/watch?v=eDiZ0xB37tw)
+- <img src = "https://github.com/joanneyaya/LokiHub/blob/main/ChiCorrBot/ChiCorrBot_Demo.mov"></img>
 
 # 環境設置
 - Python 3.6+
