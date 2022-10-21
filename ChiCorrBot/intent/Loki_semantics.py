@@ -23,10 +23,11 @@ import os
 from unittest import result
 
 DEBUG_semantics = True
-try:
-    userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
-except:
-    userDefinedDICT = {}
+#此intent不需使用userDefined
+# try:
+#     userDefinedDICT = json.load(open(os.path.join(os.path.dirname(__file__), "USER_DEFINED.json"), encoding="utf-8"))
+# except:
+#     userDefinedDICT = {}
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
@@ -152,7 +153,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
 
     if utterance == "看起來[這個][男孩子]深思":
         inq = f'你的意思是「正在{inputSTR[-2:]}」嗎？'
-        newSTR = utterance[0]+args[0]+args[1]+'在'+inputSTR[-2:]
+        newSTR = utterance[0:2]+args[0]+args[1]+'在'+inputSTR[-2:]
         resultDICT['inq'] = inq
         resultDICT['suggestion'] = newSTR
         resultDICT['error'] = 'prg'
