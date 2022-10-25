@@ -20,6 +20,7 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 |   ├── Loki_incorrect.py
 |   ├── Loki_food.py
 |   ├── Loki_sports.py
+|   ├── Loki_update_info.py
 |   ├── Updater.py
 |   └── USER_DEFINED 
 |
