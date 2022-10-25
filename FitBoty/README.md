@@ -32,7 +32,8 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
     ├── correct.ref
     ├── incorrect.ref
     ├── food.ref
-    └── sports.ref
+    ├── sports.ref
+    └── update_info.ref
 ```
 
 ## 啟用 Loki 服務
