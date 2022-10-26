@@ -295,18 +295,6 @@ def testLoki(inputLIST, filterLIST):
         print(resultDICT["msg"])
 
 def testIntent():
-    # correct
-    print("[TEST] correct")
-    inputLIST = ['yes','是','正確','沒錯']
-    testLoki(inputLIST, ['correct'])
-    print("")
-
-    # gender
-    print("[TEST] gender")
-    inputLIST = ['女生','是女生','不是女的','是個男的','不是個男的']
-    testLoki(inputLIST, ['gender'])
-    print("")
-
     # sports
     print("[TEST] sports")
     inputLIST = ['沒有','沒有運動','跳繩30分鐘','30分鐘的瑜伽','做瑜伽30分鐘','打排球30分鐘','爬樓梯30分鐘','和40分鐘的跳繩','跳國標舞30分鐘','騎腳踏車30分鐘','跳繩和重訓各30分鐘','跳繩30分鐘和重訓1小時','30分鐘的瑜伽和40分鐘的跳繩']
@@ -317,18 +305,6 @@ def testIntent():
     print("[TEST] food")
     inputLIST = ['沒吃','吃白飯','和白飯','一碗白飯','中午沒吃','早餐沒吃','沒吃晚餐','加一杯奶茶','吐司加奶茶','吐司配奶茶','和一碗白飯','晚餐吃白飯','晚餐是雞排','配一杯奶茶','雞排和紅茶','一盤義大利麵','吃了一碗白飯','中午吃義大利麵','午餐吃義大利麵','午餐是義大利麵','一碗白飯和一碗湯','吃了一盤義大利麵','早上吃了一碗白飯','早上吃吐司加奶茶','早上吃吐司配奶茶','早餐吃吐司加奶茶','早餐吃吐司配奶茶','一片吐司加一杯奶茶','一片吐司配一杯奶茶','晚餐還吃了一碗白飯','中午吃了一盤義大利麵','午餐吃了一盤義大利麵','吃了一碗白飯和一碗湯','早上吃一片吐司加一杯奶茶','早上吃一片吐司配一杯奶茶','早上吃了一碗白飯和一碗湯','早餐吃一片吐司加一杯奶茶','早餐吃一片吐司配一杯奶茶','晚餐吃了一碗白飯和一碗湯']
     testLoki(inputLIST, ['food'])
-    print("")
-
-    # incorrect
-    print("[TEST] incorrect")
-    inputLIST = ['no','否','有錯','錯誤','年齡有錯','身高寫錯','體重打錯','身高打錯了']
-    testLoki(inputLIST, ['incorrect'])
-    print("")
-
-    # update_info
-    print("[TEST] update_info")
-    inputLIST = ['180','16歲','和180','性別','和16歲','180公分','180錯了','和年齡','16歲錯了','和180公分','和180錯了','性別錯了','我不是180','和16歲錯了','180公分錯了','和年齡錯了','性別和年齡','我不是男的','和180公分錯了','我不是180公分','性別和年齡錯了']
-    testLoki(inputLIST, ['update_info'])
     print("")
 
     # age
@@ -343,10 +319,34 @@ def testIntent():
     testLoki(inputLIST, ['weight'])
     print("")
 
+    # gender
+    print("[TEST] gender")
+    inputLIST = ['女生','是女生','不是女的','是個男的','不是個男的']
+    testLoki(inputLIST, ['gender'])
+    print("")
+
     # height
     print("[TEST] height")
-    inputLIST = ['150','1米5']
+    inputLIST = ['150','1米5','150公分','1米5公分']
     testLoki(inputLIST, ['height'])
+    print("")
+
+    # update_info
+    print("[TEST] update_info")
+    inputLIST = ['180','16歲','性別','180公分','180寫錯','180打錯','16歲錯了','180打錯了','我不是180','身高寫錯','體重打錯','180公分寫錯','180公分打錯','我不是男的','身高打錯了','180公分打錯了','我不是180公分']
+    testLoki(inputLIST, ['update_info'])
+    print("")
+
+    # incorrect
+    print("[TEST] incorrect")
+    inputLIST = ['no','否','有錯','錯誤']
+    testLoki(inputLIST, ['incorrect'])
+    print("")
+
+    # correct
+    print("[TEST] correct")
+    inputLIST = ['yes','是','正確','沒錯']
+    testLoki(inputLIST, ['correct'])
     print("")
 
 
