@@ -3,15 +3,12 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 
 ## 檔案總覽
 ```
-├── Discord_FitBoty.py        # 處理聊天對話，並連結 Discord 以驅動 FitBoty   
-├── FitBoty.py                # 連動 Loki 以對應使用者的輸入意圖 
-├── foodDICT.json             # 對照食物熱量
-├── sports_dict.json          # 對照運動消耗
-├── extra_sports_dict.json    # 估計未紀錄於 sports_dict.json 的運動消耗
-├── requirements.txt          # 需求套件
+├── Discord_FitBoty.py           # 處理聊天對話，並連結 Discord 以驅動 FitBoty   
+├── FitBoty.py                   # 連動 Loki 以對應使用者的輸入意圖 
+├── requirements.txt             # 需求套件
 ├── README.md
 |     
-├── intent                    # 所有使用者的對話均透過 Loki 處理以匹配話語意圖
+├── intent                       # 所有使用者的對話均透過 Loki 處理以匹配話語意圖
 |   ├── Loki_gender.py
 |   ├── Loki_age.py
 |   ├── Loki_height.py
@@ -24,16 +21,21 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 |   ├── Updater.py
 |   └── USER_DEFINED 
 |
-└── ref                       # 於 Droidtown 網站使用 Loki 服務時，需匯入 .ref 檔案
-    ├── gender.ref
-    ├── age.ref
-    ├── height.ref
-    ├── weight.ref
-    ├── correct.ref
-    ├── incorrect.ref
-    ├── food.ref
-    ├── sports.ref
-    └── update_info.ref
+├── ref                          # 於 Droidtown 網站使用 Loki 服務時，需匯入 .ref 檔案
+|   ├── gender.ref
+|   ├── age.ref
+|   ├── height.ref
+|   ├── weight.ref
+|   ├── correct.ref
+|   ├── incorrect.ref
+|   ├── food.ref
+|   ├── sports.ref
+|   └── update_info.ref
+|
+└── misc
+    ├── foodDICT.json            # 對照食物熱量
+    ├── sports_dict.json         # 對照運動消耗
+    └── extra_sports_dict.json   # 估計未紀錄於 sports_dict.json 的運動消耗    
 ```
 
 ## 啟用 Loki 服務
