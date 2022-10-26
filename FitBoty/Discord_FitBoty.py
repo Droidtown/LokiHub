@@ -22,9 +22,9 @@ articut = Articut(username = accountDICT["username"], apikey = accountDICT["api_
 with open("sports_dict.json", encoding="utf-8") as f: #讀取account.info
     sports_dict = json.loads(f.read())
 
-punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
+punctuationPat = re.compile("[,\?:;，。？、：；\n]+")
 def getLokiResult(inputSTR, filterLIST):
-    punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
+    punctuationPat = re.compile("[,\?:;，。？、：；\n]+")
     inputLIST = punctuationPat.sub("\n", inputSTR).split("\n")
     resultDICT = runLoki(inputLIST, filterLIST)
     logging.debug("Loki Result => {}".format(resultDICT))
@@ -151,7 +151,7 @@ class BotClient(discord.Client):
                     self.mscDICT[message.author.id]["filterLIST"] = ["weight"]
                 elif self.mscDICT[message.author.id]["correct"] == None and self.mscDICT[message.author.id]["incorrect"] == None:
                     replySTR = self.mscDICT[message.author.id]["gender"] + "\n" + str(self.mscDICT[message.author.id]["age"]) + "歲" + "\n" + str(self.mscDICT[message.author.id]["height"]) + "公分" + "\n" + str(self.mscDICT[message.author.id]["weight"]) + "公斤" + "\n" + "請確認以上資料是否正確？"
-                    self.mscDICT[message.author.id]["filterLIST"] = ["correct", "incorrect"]
+                    self.mscDICT[message.author.id]["filterLIST"] = ["correct", "incorrect", "update_info"]
                 elif self.mscDICT[message.author.id]["incorrect"] != None and self.mscDICT[message.author.id]["update_info"] == None:
                     replySTR = "請問哪一項資料錯誤？" 
                     self.mscDICT[message.author.id]["filterLIST"] = ["update_info"]
@@ -228,7 +228,7 @@ class BotClient(discord.Client):
                                 sports_valLIST = list(sports_dict.values())
                                 if today_cal >= 0:
                                     rec_sportsSTR = '、'.join([str(s) for s in sports_keyLIST])
-                                    replySTR = "你今日多消耗了" + str(today_cal) + "卡。\n恭喜你離你的目標又更近了一步！如果還有餘力，也推薦你可以做以下運動喔：\n" + rec_sportsSTR + "任一項進行10分鐘。"
+                                    replySTR = "你今天消耗的熱量比攝入還要多" + str(today_cal) + "卡。\n恭喜你離你的目標又更近了一步！如果還有餘力，也推薦你可以做以下運動喔：\n" + rec_sportsSTR + "任一項進行10分鐘。"
                                 else:
                                     rec_sportsLIST1 = []
                                     rec_sportsLIST2 = []
@@ -281,7 +281,7 @@ class BotClient(discord.Client):
                                     else:
                                         rec_50min = ""
 
-                                    replySTR = "你今日剩餘熱量為" + str(today_cal) + "卡。\n推薦你可以做以下運動消耗今日所剩的熱量喔：\n" + rec_10min + rec_20min + rec_30min + rec_50min
+                                    replySTR = "你今天攝入的熱量比消耗還要多" + str(today_cal) + "卡。\n推薦你可以做以下運動消耗今日剩餘的熱量喔：\n" + rec_10min + rec_20min + rec_30min + rec_50min
                             except TypeError:
                                 print("sportcal type error")
                                 #pass
