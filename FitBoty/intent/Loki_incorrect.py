@@ -30,23 +30,12 @@ def debugInfo(inputSTR, utterance):
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    #if utterance == "[身高]寫錯":
-        #resultDICT["incorrect"] = "資料有誤"
-
-    #if utterance == "[身高]打錯了":
-        #resultDICT["incorrect"] = "資料有誤"
-
-    #if utterance == "[體重]打[錯]":
-        #resultDICT["incorrect"] = "資料有誤"
 
     if utterance == "no":
         resultDICT["incorrect"] = "資料有誤"
 
     if utterance == "否":
         resultDICT["incorrect"] = "資料有誤"
-
-    #if utterance == "[年齡]有錯":
-        #resultDICT["incorrect"] = "資料有誤"
 
     if utterance == "有錯":
         resultDICT["incorrect"] = "資料有誤"
