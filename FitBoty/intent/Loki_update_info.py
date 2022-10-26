@@ -37,33 +37,73 @@ def debugInfo(inputSTR, utterance):
 
 def getResult(inputSTR, utterance, args, resultDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[180]":
-        if re.search("\d+", args[0]) == None:
-            args[0] = re.sub('公分|公斤', '', args[0])
+    if utterance == "[16]歲":
+        if re.search("\d+\\.?\d*", args[0]) == None:
             resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
+        elif re.search("\d+\\.?\d*", args[0]) != None:
             resultDICT["update_info"] = float(args[0])
-        
-    if utterance == "[180]錯了":
-        if re.search("\d+", args[0]) == None:
+
+    if utterance == "[16]歲錯了":
+        if re.search("\d+\\.?\d*", args[0]) == None:
+            resultDICT["update_info"] = cn2num.transform(args[0])
+        elif re.search("\d+\\.?\d*", args[0]) != None:
+            resultDICT["update_info"] = float(args[0])
+
+    if utterance == "[180]":
+        if re.search("\d+\\.?\d*", args[0]) == None:
             args[0] = re.sub('公分|公斤', '', args[0])
             resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
+        elif re.search("\d+\\.?\d*", args[0]) != None:
+            resultDICT["update_info"] = float(args[0])
+
+    if utterance == "[180]寫錯":
+        if re.search("\d+\\.?\d*", args[0]) == None:
+            args[0] = re.sub('公分|公斤', '', args[0])
+            resultDICT["update_info"] = cn2num.transform(args[0])
+        elif re.search("\d+\\.?\d*", args[0]) != None:
             resultDICT["update_info"] = float(args[0])
 
     if utterance == "[180公分]":
-        if re.search("\d+", args[0]) == None:
+        if re.search("\d+\\.?\d*", args[0]) == None:
             args[0] = re.sub('公分|公斤', '', args[0])
             resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
-            resultDICT["update_info"] = list(articut.parse(args[0],level="lv3")["number"].values())[0]        
+        elif re.search("\d+\\.?\d*", args[0]) != None:
+            resultDICT["update_info"] = list(articut.parse(args[0],level="lv3")["number"].values())[0]
 
-    if utterance == "[180公分]錯了":
-        if re.search("\d+", args[0]) == None:
+    if utterance == "[180公分]寫錯":
+        if re.search("\d+\\.?\d*", args[0]) == None:
             args[0] = re.sub('公分|公斤', '', args[0])
             resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
-            resultDICT["update_info"] = list(articut.parse(args[0],level="lv3")["number"].values())[0]      
+        elif re.search("\d+\\.?\d*", args[0]) != None:
+            resultDICT["update_info"] = list(articut.parse(args[0],level="lv3")["number"].values())[0]
+
+    if utterance == "[180公分]打[錯]":
+        if re.search("\d+\\.?\d*", args[0]) == None:
+            args[0] = re.sub('公分|公斤', '', args[0])
+            resultDICT["update_info"] = cn2num.transform(args[0])
+        elif re.search("\d+\\.?\d*", args[0]) != None:
+            resultDICT["update_info"] = list(articut.parse(args[0],level="lv3")["number"].values())[0]
+
+    if utterance == "[180公分]打錯了":
+        if re.search("\d+\\.?\d*", args[0]) == None:
+            args[0] = re.sub('公分|公斤', '', args[0])
+            resultDICT["update_info"] = cn2num.transform(args[0])
+        elif re.search("\d+\\.?\d*", args[0]) != None:
+            resultDICT["update_info"] = list(articut.parse(args[0],level="lv3")["number"].values())[0]
+
+    if utterance == "[180打][錯]":
+        if re.search("\d+\\.?\d*", args[0]) == None:
+            args[0] = re.sub('打', '', args[0])
+            resultDICT["update_info"] = cn2num.transform(args[0])
+        elif re.search("\d+\\.?\d*", args[0]) != None:
+            resultDICT["update_info"] = list(articut.parse(args[0],level="lv3")["number"].values())[0]
+
+    if utterance == "[180打]錯了":
+        if re.search("\d+\\.?\d*", args[0]) == None:
+            args[0] = re.sub('打', '', args[0])
+            resultDICT["update_info"] = cn2num.transform(args[0])
+        elif re.search("\d+\\.?\d*", args[0]) != None:
+            resultDICT["update_info"] = list(articut.parse(args[0],level="lv3")["number"].values())[0]
 
     if utterance == "[性別]":
         if args[0] in ("女|女生|女人|女性|女子|美女|小姐|阿姨|大嬸|男|男生|男性|男人|帥哥|大叔|先生|歐巴|男子|生理性別|性別"):
@@ -74,71 +114,26 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["update_info"] = "年齡"
         elif args[0] in ("體重"):
             resultDICT["update_info"] = "體重"
-        
-
-    #if utterance == "[性別]和[年齡]":
-        #pass
-
-    #if utterance == "[性別]和[年齡]錯了":
-        #pass
-
-    if utterance == "[性別]錯了":
-        if args[0] in ("女|女生|女人|女性|女子|美女|小姐|阿姨|大嬸|男|男生|男性|男人|帥哥|大叔|先生|歐巴|男子|生理性別|性別"):
-            resultDICT["update_info"] = "性別"
-        elif args[0] in ("身高"):
-            resultDICT["update_info"] = "身高"
-        elif args[0] in ("年齡"):
-            resultDICT["update_info"] = "年齡"
-        elif args[0] in ("體重"):
-            resultDICT["update_info"] = "體重"
 
     if utterance == "[我]不是[180]":
-        if re.search("\d+", args[1]) == None:
+        if re.search("\d+\\.?\d*", args[1]) == None:
             args[1] = re.sub('公分|公斤', '', args[1])
             resultDICT["update_info"] = cn2num.transform(args[1])
-        elif re.search("\d+", args[1]) != None:
+        elif re.search("\d+\\.?\d*", args[1]) != None:
             resultDICT["update_info"] = float(args[1])
 
     if utterance == "[我]不是[180公分]":
-        if re.search("\d+", args[1]) == None:
+        if re.search("\d+\\.?\d*", args[1]) == None:
             args[0] = re.sub('公分|公斤', '', args[0])
             resultDICT["update_info"] = cn2num.transform(args[1])
-        elif re.search("\d+", args[1]) != None:
-            resultDICT["update_info"] = list(articut.parse(args[1],level="lv3")["number"].values())[0]   
+        elif re.search("\d+\\.?\d*", args[1]) != None:
+            resultDICT["update_info"] = list(articut.parse(args[1],level="lv3")["number"].values())[0]
 
     if utterance == "[我]不是[男]的":
         if args[1] in ("女|女生|女人|女性|女子|美女|小姐|阿姨|大嬸|男|男生|男性|男人|帥哥|大叔|先生|歐巴|男子"):
             resultDICT["update_info"] = "性別"
 
-    if utterance == "和[180]":
-        if re.search("\d+", args[0]) == None:
-            args[0] = re.sub('公分|公斤', '', args[0])
-            resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
-            resultDICT["update_info"] = float(args[0])        
-
-    if utterance == "和[180]錯了":
-        if re.search("\d+", args[0]) == None:
-            args[0] = re.sub('公分|公斤', '', args[0])
-            resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
-            resultDICT["update_info"] = float(args[0])        
-
-    if utterance == "和[180公分]":
-        if re.search("\d+", args[0]) == None:
-            args[0] = re.sub('公分|公斤', '', args[0])
-            resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
-            resultDICT["update_info"] = list(articut.parse(args[0],level="lv3")["number"].values())[0]            
-
-    if utterance == "和[180公分]錯了":
-        if re.search("\d+", args[0]) == None:
-            args[0] = re.sub('公分|公斤', '', args[0])
-            resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
-            resultDICT["update_info"] = list(articut.parse(args[0],level="lv3")["number"].values())[0]            
-
-    if utterance == "和[年齡]":
+    if utterance == "[身高]寫錯":
         if args[0] in ("女|女生|女人|女性|女子|美女|小姐|阿姨|大嬸|男|男生|男性|男人|帥哥|大叔|先生|歐巴|男子|生理性別|性別"):
             resultDICT["update_info"] = "性別"
         elif args[0] in ("身高"):
@@ -148,7 +143,7 @@ def getResult(inputSTR, utterance, args, resultDICT):
         elif args[0] in ("體重"):
             resultDICT["update_info"] = "體重"
 
-    if utterance == "和[年齡]錯了":
+    if utterance == "[身高]打錯了":
         if args[0] in ("女|女生|女人|女性|女子|美女|小姐|阿姨|大嬸|男|男生|男性|男人|帥哥|大叔|先生|歐巴|男子|生理性別|性別"):
             resultDICT["update_info"] = "性別"
         elif args[0] in ("身高"):
@@ -157,30 +152,15 @@ def getResult(inputSTR, utterance, args, resultDICT):
             resultDICT["update_info"] = "年齡"
         elif args[0] in ("體重"):
             resultDICT["update_info"] = "體重"
-    
-    if utterance == "[16]歲":
-        if re.search("\d+", args[0]) == None:
-            resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
-            resultDICT["update_info"] = float(args[0])
-    
-    if utterance == "[16]歲錯了":
-        if re.search("\d+", args[0]) == None:
-            resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
-            resultDICT["update_info"] = float(args[0])
-    
-    if utterance == "和[16]歲":
-        if re.search("\d+", args[0]) == None:
-            resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
-            resultDICT["update_info"] = float(args[0])
-    
-    if utterance == "和[16]歲錯了":
-        if re.search("\d+", args[0]) == None:
-            resultDICT["update_info"] = cn2num.transform(args[0])
-        elif re.search("\d+", args[0]) != None:
-            resultDICT["update_info"] = float(args[0])
-            
-            
+
+    if utterance == "[體重]打[錯]":
+        if args[0] in ("女|女生|女人|女性|女子|美女|小姐|阿姨|大嬸|男|男生|男性|男人|帥哥|大叔|先生|歐巴|男子|生理性別|性別"):
+            resultDICT["update_info"] = "性別"
+        elif args[0] in ("身高"):
+            resultDICT["update_info"] = "身高"
+        elif args[0] in ("年齡"):
+            resultDICT["update_info"] = "年齡"
+        elif args[0] in ("體重"):
+            resultDICT["update_info"] = "體重"
+
     return resultDICT
