@@ -1,0 +1,98 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v255",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_agreeExp": [
+            "YES",
+            "Yes",
+            "yes",
+            "Y",
+            "y"
+        ],
+        "_disagreeExp": [
+            "NO",
+            "No",
+            "no",
+            "N",
+            "n"
+        ]
+    },
+    "utterance": {
+        "否": {
+            "id": "b078c234-2728-4100-8548-5c3ef8f75a7f",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "否",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "對": {
+            "id": "4132b5fb-26b0-4c77-93c0-d137fc901122",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "對",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "是": {
+            "id": "193ff5d7-130f-441e-b40d-f17ff7dc5e83",
+            "argument": [
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "resp": {
+            "id": "2998c041-20fc-45fc-bb3e-7086912bb07e",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "resp",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "不對": {
+            "id": "47bfc01f-f9e0-4418-a4dd-ac6f15b1af1a",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "不對",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不是": {
+            "id": "b6569aca-9bf6-4226-9627-c1980c474d20",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    }
+}
