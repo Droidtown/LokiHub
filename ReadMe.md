@@ -12,6 +12,7 @@ LokiHub 則為開放性的 Loki 意圖模型交流中心。
 ## 中文目錄：
 * AML: Anti-Money Laundering [反洗錢] 詐騙意圖偵測模組。
 * BeautiBot: 醫美諮詢及預約機器人
+* ChiCorrBot: 華語吉Bot分，華語病句教學助理
 * CovidInfoBot: 關注台灣疫情的最佳幫手
 * Depression-Language-Evaluation: 憂鬱指數評估模型
 * DrugBot: 藥物外觀搜尋機器人
