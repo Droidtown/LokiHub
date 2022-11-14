@@ -1,6 +1,8 @@
 # FitBoty
 FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，來幫助使用者達到健康控管。
 
+<img src=readme_pic/FitBoty_demo.gif />
+
 ## 檔案總覽
 ```
 ├── Discord_FitBoty.py           # 處理聊天對話，並連結 Discord 以驅動 FitBoty   
