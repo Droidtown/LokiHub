@@ -69,9 +69,9 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 <img src="https://i.imgur.com/pyDIqQ2.png" width='60%'>
 5. 最後在 TOKEN 的地方按下 copy，在另外創建的 account.info.json 檔中，輸入剛複製的token，就成功建立一個 Discord bot 了  
 <img src="https://i.imgur.com/369bFau.png" width='60%'>
+
 ```
 {"discord_token":"貼上 token"}
-
 ```
 
 
