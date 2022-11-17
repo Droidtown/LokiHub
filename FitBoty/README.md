@@ -61,10 +61,14 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 
 ## Discord
 1. 請進入[ Discord developer ](https://discord.com/login?redirect_to=%2Fdevelopers)後註冊並登入
-2. 點選右上角的 New application 後，為 application 取名並點選 create，就可以創建一個 app ![](https://i.imgur.com/nos2aUs.png)
-3. 點擊剛剛創立的 app 後，點下左邊欄位的 Bot 後，按下頁面右邊的 Add Bot，就可以建立機器人了![](https://i.imgur.com/U8wvJaH.png)
-4. 往下滑看到 Bot permissions 後，勾選同意 Bot 執行的動作![](https://i.imgur.com/pyDIqQ2.png)
-5. 最後在 TOKEN 的地方按下 copy，在另外創建的 account.info.json 檔中，輸入剛複製的token，就成功建立一個 Discord bot 了 ![](https://i.imgur.com/369bFau.png)
+2. 點選右上角的 New application 後，為 application 取名並點選 create，就可以創建一個 app  
+<img src="https://i.imgur.com/nos2aUs.png" width='65%'>
+3. 點擊剛剛創立的 app 後，點下左邊欄位的 Bot 後，按下頁面右邊的 Add Bot，就可以建立機器人了  
+<img src="https://i.imgur.com/U8wvJaH.png" width='65%'>
+4. 往下滑看到 Bot permissions 後，勾選同意 Bot 執行的動作  
+<img src="https://i.imgur.com/pyDIqQ2.png" width='65%'>
+5. 最後在 TOKEN 的地方按下 copy，在另外創建的 account.info.json 檔中，輸入剛複製的token，就成功建立一個 Discord bot 了  
+<img src="https://i.imgur.com/369bFau.png" width='65%'>
 ```
 {"discord_token":"貼上 token"}
 ```
