@@ -68,6 +68,5 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 ```
 {"discord_token":"貼上 token"}
 ```
-
 <img src=readme_pic/Fitboty_discord_demo.gif />
 
