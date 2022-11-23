@@ -44,7 +44,7 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 * 於[卓騰語言科技網站](https://api.droidtown.co/)註冊會員。
 * 登入後，從 `服務資訊` 進入 `Loki`。
 * 選擇 `開始使用 Loki`。
-<img src=readme_pic/enter_Loki.png width=60% />
+<img src=readme_pic/enter_Loki.png width=65% />
 
 * 輸入專案名稱，按下 `建立專案`。
 <img src=readme_pic/new_project.png width=60% />
@@ -68,5 +68,4 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 ```
 {"discord_token":"貼上 token"}
 ```
-<img src=readme_pic/Fitboty_discord_demo.gif width=60% />
 
