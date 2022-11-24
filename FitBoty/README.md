@@ -84,7 +84,7 @@ FitBoty 透過計算基礎代謝率 (BMR)、紀錄飲食攝取及運動消耗，
 
 ## 聯絡資訊
 * 如果您對於使用 FitBoty 有任何問題，歡迎來信詢問喔！
-* Carol Hsu: 109555003@g.nccu.edu.tw
-* Ting Tsai: 109555005@nccu.edu.tw
+    * Carol Hsu: 109555003@g.nccu.edu.tw
+    * Ting Tsai: 109555005@nccu.edu.tw
 
 
