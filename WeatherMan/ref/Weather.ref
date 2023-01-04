@@ -1,1 +1,3392 @@
-{"今天台北熱不熱":{"id":"5fa6d85a-7a78-4649-94e3-84db0beea9b5","argument":[{"pos":"TIME_day","text":"今天","checked":true,"checkbox":false},{"pos":"LOCATION","text":"台北","checked":true,"checkbox":true},{"pos":"CLAUSE_AnotAQ","text":"熱不熱","checked":true,"checkbox":false}]},"今天台北會下雨嗎":{"id":"5a5ab6ae-9a9d-4c65-b93b-351dcbe1643a","argument":[{"pos":"TIME_day","text":"今天","checked":true,"checkbox":false},{"pos":"LOCATION","text":"台北","checked":true,"checkbox":true},{"pos":"MODAL","text":"會","checked":false,"checkbox":false},{"pos":"ACTION_verb","text":"下雨","checked":false,"checkbox":false},{"pos":"CLAUSE_YesNoQ","text":"嗎","checked":false,"checkbox":false}]},"今天台北需不需要帶傘":{"id":"f995dd99-c385-4f30-9b9c-85985fab877b","argument":[{"pos":"TIME_day","text":"今天","checked":true,"checkbox":false},{"pos":"LOCATION","text":"台北","checked":true,"checkbox":true},{"pos":"CLAUSE_AnotAQ","text":"需不需","checked":true,"checkbox":false},{"pos":"ACTION_verb","text":"要","checked":false,"checkbox":false},{"pos":"VerbP","text":"帶傘","checked":false,"checkbox":false}]},"今天台北可以不用帶傘嗎":{"id":"9be4981f-b5c2-4181-8b44-4e5c999abd27","argument":[{"pos":"TIME_day","text":"今天","checked":true,"checkbox":false},{"pos":"LOCATION","text":"台北","checked":true,"checkbox":true},{"pos":"MODAL","text":"可以","checked":false,"checkbox":false},{"pos":"FUNC_negation","text":"不用","checked":false,"checkbox":false},{"pos":"VerbP","text":"帶傘","checked":false,"checkbox":false},{"pos":"CLAUSE_YesNoQ","text":"嗎","checked":false,"checkbox":false}]},"今天台北需不需要帶陽傘":{"id":"d2721409-a57f-40d7-98a3-97b6833f39f2","argument":[{"pos":"TIME_day","text":"今天","checked":true,"checkbox":false},{"pos":"LOCATION","text":"台北","checked":true,"checkbox":true},{"pos":"CLAUSE_AnotAQ","text":"需不需","checked":true,"checkbox":false},{"pos":"ACTION_verb","text":"要","checked":false,"checkbox":false},{"pos":"ACTION_verb","text":"帶","checked":false,"checkbox":false},{"pos":"ENTITY_nouny","text":"陽傘","checked":true,"checkbox":true}]},"台北今天可以不用帶傘嗎":{"id":"78dd0a32-86d6-431f-8291-c376d0c4d99e","argument":[{"pos":"LOCATION","text":"台北","checked":true,"checkbox":true},{"pos":"TIME_day","text":"今天","checked":true,"checkbox":false},{"pos":"MODAL","text":"可以","checked":false,"checkbox":false},{"pos":"FUNC_negation","text":"不用","checked":false,"checkbox":false},{"pos":"VerbP","text":"帶傘","checked":false,"checkbox":false},{"pos":"CLAUSE_YesNoQ","text":"嗎","checked":false,"checkbox":false}]},"後天晚上台北適合慢跑嗎":{"id":"a6b58cb4-7299-45dc-ad04-5cfbd4594d5f","argument":[{"pos":"TIME_day","text":"後天","checked":true,"checkbox":false},{"pos":"TIME_day","text":"晚上","checked":true,"checkbox":false},{"pos":"LOCATION","text":"台北","checked":true,"checkbox":true},{"pos":"MODIFIER","text":"適合","checked":false,"checkbox":false},{"pos":"ACTION_verb","text":"慢跑","checked":false,"checkbox":false},{"pos":"CLAUSE_YesNoQ","text":"嗎","checked":false,"checkbox":false}]},"今天台北中午過後天氣如何":{"id":"f46c5748-f657-4a45-a8be-797d9bb5b6ec","argument":[{"pos":"TIME_day","text":"今天","checked":true,"checkbox":false},{"pos":"LOCATION","text":"台北","checked":true,"checkbox":true},{"pos":"TIME_day","text":"中午","checked":true,"checkbox":false},{"pos":"ACTION_verb","text":"過","checked":false,"checkbox":false},{"pos":"RANGE_period","text":"後","checked":true,"checkbox":false},{"pos":"ENTITY_noun","text":"天氣","checked":false,"checkbox":true},{"pos":"CLAUSE_WhatQ","text":"如何","checked":false,"checkbox":false}]},"version":{"atk":"v235","intent":"1.0"},"user_defined":{}}
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v258",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_keyTerm": [
+            "空氣",
+            "溫度",
+            "濕度",
+            "體感"
+        ],
+        "_timeTerm": [
+            "白日",
+            "夜間"
+        ]
+    },
+    "utterance": {
+        "台北天氣": {
+            "id": "755fb16e-b183-4998-a24f-8af1f7a0700f",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "今天台北熱嗎": {
+            "id": "39e1ccb4-fcc3-41b9-abbc-aa4dddfa76dd",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "熱",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天天氣好嗎": {
+            "id": "5e8d20ff-14e5-4b8e-843f-6132aab9604f",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_degreeHead",
+                    "text": "好",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今日夜晚氣溫": {
+            "id": "f04b9453-8a35-4859-a910-615eb451a694",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今日",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "夜晚",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "氣溫",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "今日白日氣溫": {
+            "id": "83762de5-af01-46b3-9425-99c6f052ed7c",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今日",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "白日",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "氣溫",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "台北今天熱嗎": {
+            "id": "f82f93d5-8df7-432f-97f1-dcfa0d8e0b8f",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "熱",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北天氣如何": {
+            "id": "bcea8af6-d44c-41a8-afe3-d4cab211fa5c",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北明天天氣": {
+            "id": "fcf91471-4ea7-45d4-b029-2fba27d60dd1",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "明天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "台北氣象報告": {
+            "id": "a4ddec41-823f-490f-822f-02a7dd5f2d93",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "氣象",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "佈告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告密",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告捷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告狀",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "告訴",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "報信",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "報導",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "敬告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "稟告",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "稟報",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "舉報",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "通報",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "主講",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂講",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "交談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳經",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "公佈",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "公演",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "公開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "商量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "啟奏",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "對談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "念叨",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扯談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揭示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揭載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "敘述",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "數落",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "昭示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "暢談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "檢舉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "演講",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "登載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "發佈",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞎扯",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞎說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "聲稱",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "胡說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "表示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訓斥",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訴說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "說到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "說服",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "談到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講述",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "責令",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "賜教",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "辯護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "通信",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "通知",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "開導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "關說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "評估",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "決算",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "奏摺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "批示",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "匯報",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "簡報",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "調研",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "調查",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "報告",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "明天台北天氣": {
+            "id": "9448c524-09fc-4b5a-a702-5dce7b97227c",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "明天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "今天台北很熱嗎": {
+            "id": "82dd0648-e42d-43e6-94bd-fd553eabf4fc",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很熱",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北會熱嗎": {
+            "id": "c0352e52-3152-450a-8aa7-2ff439edfddd",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "熱",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北熱不熱": {
+            "id": "5fa6d85a-7a78-4649-94e3-84db0beea9b5",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "熱不熱",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天天氣怎麼樣": {
+            "id": "c63004d8-c77b-46ac-9896-12bce1941055",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼樣",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天很熱嗎": {
+            "id": "eafaa980-4286-47ad-803f-fb3badeb1cf5",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很熱",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天會熱嗎": {
+            "id": "99811fd9-c425-4fde-9039-88840a83f76f",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "熱",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天熱不熱": {
+            "id": "ed0c0a74-3c18-4f24-b9f1-4349247a295c",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "熱不熱",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北天氣怎麼樣": {
+            "id": "2dbe22da-f8ae-4884-9195-a70ec95e895c",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼樣",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北晚上下雨嗎": {
+            "id": "3f13a8d2-b8f4-49b6-8032-a39c44bd0a09",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "晚上",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "降雨",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "降水",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "起霧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放晴",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下雪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "漲潮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "結冰",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打雷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "結霜",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開燈",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "降雪",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下雨",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北會下雨嗎": {
+            "id": "5a5ab6ae-9a9d-4c65-b93b-351dcbe1643a",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "降雨",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "降水",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "起霧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放晴",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下雪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "漲潮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "結冰",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打雷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "結霜",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開燈",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "降雪",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下雨",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北會很熱嗎": {
+            "id": "7510b696-b0d5-4c7a-9874-2514939cbff8",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很熱",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天晚上氣溫如何": {
+            "id": "14decc8b-ab34-40dc-9138-0a7ca6361f63",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "晚上",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "氣溫",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今日台北體感溫度": {
+            "id": "fffb51ee-d45e-4be7-bfac-59e3c2525a64",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今日",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "體感",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "溫度",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "今日白日氣溫如何": {
+            "id": "3fb201d7-09d7-44b1-b2df-065a57e9e3bf",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今日",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "白日",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "氣溫",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天會下雨嗎": {
+            "id": "bafba954-ff07-46e2-a492-15f877573bca",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "降雨",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "降水",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "起霧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放晴",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下雪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "漲潮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "結冰",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打雷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "結霜",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開燈",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "降雪",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下雨",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天會很熱嗎": {
+            "id": "b850bd34-8af5-441c-8ee6-f3dc72fd5fad",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很熱",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北晚上要帶傘嗎": {
+            "id": "78bfcc97-99e6-4745-bcdc-ee1037785a33",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "晚上",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "帶錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呷飽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡飽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "考好",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暈到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餵雞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有問過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃飯了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有問",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃飯",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "帶傘",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北是不是很熱": {
+            "id": "82f283ab-77e5-40e1-bf48-6f98092c2770",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "是不是",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很熱",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "今天台北會不會下雨": {
+            "id": "3a47828c-ed71-4390-b749-94394b1aa2f4",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "會不會",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "降雨",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "降水",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "起霧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放晴",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下雪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "漲潮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "結冰",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打雷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "結霜",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開燈",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "降雪",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下雨",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天空氣品質怎麼樣": {
+            "id": "d1bab942-d1d3-4e77-863a-0afdcab5892c",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "空氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼樣",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天是不是很熱": {
+            "id": "884901ce-276e-469a-af99-98fa10392204",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "是不是",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很熱",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "台北今天會不會下雨": {
+            "id": "79b959d6-f4f4-4758-a8c5-f1029c6ae49a",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "會不會",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "降雨",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "降水",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "結霜",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打雷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "漲潮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "放晴",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開燈",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起霧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "降雪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下雪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "結冰",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下雨",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天午後台北天氣如何": {
+            "id": "74cc6da7-820e-483b-88d5-29ff2498caeb",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "午後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北午後天氣如何": {
+            "id": "33a10818-5405-42cf-b46d-03e3fa87586e",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "午後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北空氣品質如何": {
+            "id": "9ad7808e-f862-4a91-9602-b12ad742c54c",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "空氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北需不需要帶傘": {
+            "id": "f995dd99-c385-4f30-9b9c-85985fab877b",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "需不需",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "帶錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呷飽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡飽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "考好",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暈到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餵雞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有問過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃飯了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有問",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃飯",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "帶傘",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天午後天氣如何": {
+            "id": "afe3ca8e-b960-4ef4-b31a-a5f1df2912ad",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "午後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天空氣品質如何": {
+            "id": "92f722d7-f115-4159-9461-74c8c9e05039",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "空氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天需不需要帶傘": {
+            "id": "16c96e4f-e202-4c6b-8f0b-9ca7644a4115",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "需不需",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "帶錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呷飽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡飽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "考好",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暈到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餵雞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有問過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃飯了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有問",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃飯",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "帶傘",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北可以不用帶傘嗎": {
+            "id": "9be4981f-b5c2-4181-8b44-4e5c999abd27",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "帶錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呷飽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡飽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "考好",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暈到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餵雞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有問過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃飯了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有問",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃飯",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "帶傘",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北空氣品質怎麼樣": {
+            "id": "289ca49b-25bc-46ce-b81f-182fb2ad5b27",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "空氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼樣",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北需不需要帶陽傘": {
+            "id": "d2721409-a57f-40d7-98a3-97b6833f39f2",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "需不需",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "佩帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "夾帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶病",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶走",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "挾帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "攜帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "佩戴",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "承接",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "披掛",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "穿破",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "肩扛",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "背負",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "負載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "載攜",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運送",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "配戴",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "馱運",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "送",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶拉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶等",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常帶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "忙送",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶灘",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "忙趕",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有帶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶著",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "帶",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "陽傘",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "台北今天可以不用帶傘嗎": {
+            "id": "78dd0a32-86d6-431f-8291-c376d0c4d99e",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "帶錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呷飽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "睡飽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "考好",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暈到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餵雞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有問過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃飯了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有問",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃飯",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "帶傘",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天空氣品質怎麼樣": {
+            "id": "17c41b68-851f-421c-a119-14496497b3a7",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "空氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼樣",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天需不需要帶陽傘": {
+            "id": "d3b370b9-3b70-4874-9739-05d820223d4b",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "需不需",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "佩帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "夾帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶病",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶走",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "挾帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "攜帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "佩戴",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "承接",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "披掛",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "穿破",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "肩扛",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "背負",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "負載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "載攜",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運送",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "配戴",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "馱運",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶等",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有帶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常帶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "送",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "忙送",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "忙趕",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶灘",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶拉",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "帶",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "陽傘",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "台北後天晚上適合慢跑嗎": {
+            "id": "f5ab286f-c580-427a-86ea-be9920e202f8",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "後天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "晚上",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "適合",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "跑步",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "輕推",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "輕撞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "輕碰",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "走路",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "散步",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "玩耍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "騎車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "健走",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "爬山",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "划船",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遛狗",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "慢跑",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "後天晚上台北適合慢跑嗎": {
+            "id": "a6b58cb4-7299-45dc-ad04-5cfbd4594d5f",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "後天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "晚上",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "適合",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "跑步",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "輕推",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "輕撞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "輕碰",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "健走",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "走路",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "騎車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "玩耍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "划船",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遛狗",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "散步",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "爬山",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "慢跑",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天中午過後台北天氣如何": {
+            "id": "d61fdf0a-184d-4726-af1a-15788ed33606",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "中午",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "text": "過",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "今天台北中午過後天氣如何": {
+            "id": "f46c5748-f657-4a45-a8be-797d9bb5b6ec",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "中午",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "text": "過",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "台北今天中午過後天氣如何": {
+            "id": "d485f3df-e5a3-42e5-a2ac-c36a26566435",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "中午",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "text": "過",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "天氣",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    }
+}

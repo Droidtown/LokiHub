@@ -1,0 +1,449 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v258",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_keyTerm": [
+            "空氣",
+            "溫度",
+            "濕度",
+            "體感"
+        ],
+        "_timeTerm": [
+            "白日",
+            "夜間"
+        ]
+    },
+    "utterance": {
+        "台北呢": {
+            "id": "397a0726-f62a-4c59-b60f-1ad89272271b",
+            "argument": [
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_particle",
+                    "text": "呢",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "明天呢": {
+            "id": "09ce5a18-8920-4aa0-9e11-33584ae0617b",
+            "argument": [
+                {
+                    "pos": "TIME_day",
+                    "text": "明天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_particle",
+                    "text": "呢",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "查台北": {
+            "id": "4e490959-b72b-48c4-a6fd-2387903b6e96",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "指查",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "查干",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "納迪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "小塞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有查",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "熱拉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "普納",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "查",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "查明天": {
+            "id": "917699b2-13fd-4f28-b898-1222155a5017",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "指查",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "查干",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "納迪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "小塞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有查",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "熱拉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "普納",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "查",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "明天",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "查氣溫": {
+            "id": "f1392cc0-9b93-410d-8309-2b80e2507585",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "指查",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "查干",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "納迪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "小塞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有查",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "熱拉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "普納",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "查",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "氣溫",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "氣溫呢": {
+            "id": "dfba080a-ca96-4b36-8506-b7e62d536687",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "氣溫",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_particle",
+                    "text": "呢",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "再查台北": {
+            "id": "879cebf5-baf7-4e63-8255-8e80c20ec936",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "再",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "指查",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "查干",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "納迪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "小塞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有查",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "熱拉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "普納",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "查",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "再查氣溫": {
+            "id": "0aa53c82-7485-4898-808a-7c0d96f450e2",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "再",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "指查",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "查干",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "納迪",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "小塞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有查",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "熱拉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "考",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "普納",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "查",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "氣溫",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "那台北呢": {
+            "id": "58488dba-0e56-47ba-bd20-bfdf83b60060",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "那",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "LOCATION",
+                    "text": "台北",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_particle",
+                    "text": "呢",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "那明天呢": {
+            "id": "dbd00656-42c2-4d7e-891a-b42fc5a3fe8d",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "那",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "明天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_particle",
+                    "text": "呢",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "那氣溫呢": {
+            "id": "6c469a0b-593e-4db3-9ac7-89d78dec7810",
+            "argument": [
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "那",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "氣溫",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_particle",
+                    "text": "呢",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    }
+}
