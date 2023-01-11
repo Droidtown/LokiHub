@@ -33,8 +33,8 @@ try:
     API_KEY = infoDICT["api_key"]
 except:
     # HINT: 在這裡填入您在 https://api.droidtown.co 的帳號、Articut 的 API_Key
-    USERNAME = "ss96083@gmail.com"
-    API_KEY = "NRLknK9bqwxLWVcHMM!%QHvpiUMqKB+"
+    USERNAME = ""
+    API_KEY = ""
 
 CityDICT = glob("{}/datastore/*.json".format(os.path.dirname(BASEPATH)))
 
