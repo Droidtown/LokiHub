@@ -181,11 +181,15 @@ def runLoki(inputLIST, filterLIST=[]):
     lokiRst = LokiResult([x.replace("台", "臺") for x in inputLIST], filterLIST)
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
-            for resultIndex in range(0, lokiRst.getLokiLen(index)):
-                # Weather
-                if lokiRst.getIntent(index, resultIndex) == "Weather":
-                    resultDICT = Loki_Weather.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
-
+            # 正常輸入
+            if lokiRst.getLokiLen(index) > 0:
+                for resultIndex in range(0, lokiRst.getLokiLen(index)):
+                    # Weather
+                    if lokiRst.getIntent(index, resultIndex) == "Weather":
+                        resultDICT = Loki_Weather.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+            # 錯誤輸入
+            else:
+                resultDICT[key] = {'answer': "我只是個天氣機器人，如果您發現我無法理解您的話，可能是因為您的輸入有語法錯誤或是我的知識範圍無法回答您的問題。請再次檢查您的輸入，或著提出其他的話題以便我幫助您。"}
     else:
         resultDICT = {"msg": lokiRst.getMessage()}
     return resultDICT
@@ -200,13 +204,52 @@ if __name__ == "__main__":
     # Weather
     print("[TEST] Weather")
     inputLIST = [
-                 '今天台北熱不熱','今天台北會下雨嗎',
-                 '今天台北需不需要帶傘',
-                 '今天台北可以不用帶傘嗎',
+                 #'今天台北熱不熱',
+                 #'今天台北會下雨嗎',
+                 #'台北今天可以不用帶傘嗎',
+                 #'今天台北可以不用帶傘嗎',
+                 #'今天台北需不需要帶傘',
                  #'今天台北需不需要帶陽傘',
-                 '台北今天可以不用帶傘嗎',
-                 '後天晚上台北適合慢跑嗎',
-                 '今天台北中午過後天氣如何'
+                 #'今天台北中午過後天氣如何',
+                 #'後天晚上台北適合慢跑嗎',
+                 #'今天台北午後天氣如何',
+                 #'今天台北很熱嗎',
+                 #'今天台北會熱嗎',
+                 #'今天台北熱嗎',
+                 #'今天台北是不是很熱',
+                 #'台北今天很熱嗎',
+                 #'台北今天會很熱嗎',
+                 #'台北今天會熱嗎',
+                 #'台北今天熱嗎',
+                 #'台北今天是不是很熱',
+                 #'今天台北會不會下雨',
+                 #'今天天氣好嗎',
+                 #'今天天氣怎麼樣',
+                 #'今天中午過後台北天氣如何',
+                 #'今天午後台北天氣如何',
+                 #'今天晚上氣溫如何',
+                 #'今日台北體感溫度',
+                 #'今日白日氣溫',
+                 #'今日白日氣溫如何',
+                 #'今日夜晚氣溫',
+                 #'台北今天會下雨嗎',
+                 #'台北今天熱不熱',
+                 #'台北今天會不會下雨',
+                 #'台北今天需不需要帶陽傘',
+                 #'台北今天需不需要帶傘',
+                 #'台北今天中午過後天氣如何',
+                 #'台北今天午後天氣如何',
+                 #'台北天氣',
+                 #'台北天氣如何',
+                 #'台北天氣怎麼樣',
+                 #'台北後天晚上適合慢跑嗎',
+                 #'台北明天天氣',
+                 #'台北晚上下雨嗎',
+                 #'台北晚上要帶傘嗎',
+                 #'台北氣象報告',
+                 #'明天台北天氣',
+                 #'今天天氣是否熱',
+                 #'今天的天氣是溫暖還是寒冷',
                 ]
     #testLoki(inputLIST, ['Weather'])
     #print("")
