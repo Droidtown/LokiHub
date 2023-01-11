@@ -8,7 +8,7 @@
 
 2. 取得未來一週的氣象預報
 
-	```python3 DT_InfoBot.py```
+	```python3 GetWeatherData.py```
 
 ### 2 建立 Loki Bot
 
