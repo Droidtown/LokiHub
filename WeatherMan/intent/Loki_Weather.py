@@ -19,6 +19,7 @@ import os
 import requests
 
 from datetime import datetime
+from dateutil import relativedelta
 from glob import glob
 
 BASEPATH = os.path.dirname(os.path.abspath(__file__))
@@ -39,7 +40,7 @@ except:
 CityDICT = glob("{}/datastore/*.json".format(os.path.dirname(BASEPATH)))
 
 datetimeFMT = "%Y-%m-%d %H:%M:%S"
-defualtDatetime = datetime.now()
+defualtDatetime = datetime.now() + relativedelta.relativedelta(hours=8)
 
 def getCityForecastDict(city):
     forecastDICT = {}
