@@ -324,8 +324,8 @@ def getResult(inputSTR, utterance, args, resultDICT):
             if weatherElement["elementName"] == "WeatherDescription":
                 for elementTime in weatherElement["time"]:
                     if queryDatetime >= elementTime["startTime"] and queryDatetime <= elementTime["endTime"]:
-                        resultDICT[inputSTR]["WeatherDescription"] = elementTime["elementValue"][0]["value"]
-                        resultDICT[inputSTR]["answer"] = "WeatherDescription"
+                        #resultDICT[inputSTR]["WeatherDescription"] = elementTime["elementValue"][0]["value"]
+                        resultDICT[inputSTR]["answer"] = elementTime["elementValue"][0]["value"]
                         break
 
     if utterance == "[後天晚上][台北][適合]慢跑嗎":
