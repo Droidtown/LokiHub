@@ -931,7 +931,6 @@ def getResult(inputSTR, utterance, args, resultDICT):
         queryDatetime = convertDatetime2ForecastFMT(args[0])
         earliestTime = queryDatetime
         latestTime = queryDatetime
-        print(queryDatetime)
         for weatherElement in forecastDICT["weatherElement"]:
             if weatherElement["elementName"] == "MaxAT":
                 for elementTime in weatherElement["time"]:
