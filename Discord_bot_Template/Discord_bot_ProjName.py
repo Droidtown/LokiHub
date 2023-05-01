@@ -82,9 +82,9 @@ class BotClient(discord.Client):
 # ##########非初次對話：這裡用 Loki 計算語意
             else: #開始處理正式對話
                 #從這裡開始接上 NLU 模型
-                resulDICT = getLokiResult(msgSTR)
+                resultDICT = getLokiResult(msgSTR)
                 logging.debug("######\nLoki 處理結果如下：")
-                logging.debug(resulDICT)
+                logging.debug(resultDICT)
             await message.reply(replySTR)
 
 
