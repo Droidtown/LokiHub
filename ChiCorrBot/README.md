@@ -35,7 +35,7 @@
 
 # 環境設置
 - Python 3.6+
-- 安裝相關套件 requiremwnts.txt
+- 安裝相關套件 requiremnts.txt
 
 # 建立account.info檔案
 - __username__ 為註冊帳號的E-mail
