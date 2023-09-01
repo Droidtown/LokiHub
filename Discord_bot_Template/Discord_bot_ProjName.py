@@ -30,8 +30,11 @@ class BotClient(discord.Client):
         '''
         清空與 messageAuthorID 之間的對話記錄
         '''
-        templateDICT = self.templateDICT
-        templateDICT["updatetime"] = datetime.now()
+        templateDICT = {    "id": messageAuthorID,
+                             "updatetime" : datetime.now(),
+                             "latestQuest": "",
+                             "false_count" : 0
+        }
         return templateDICT
 
     async def on_ready(self):
