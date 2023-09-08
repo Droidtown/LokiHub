@@ -1,0 +1,658 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_ANoun": [
+            "別人"
+        ]
+    },
+    "utterance": {
+        "不多": {
+            "id": "14f273ed-09bf-4949-9159-f8c7f25b9933",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "不多",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "常常": {
+            "id": "ff1c4b18-6dda-4f9f-9066-d8f5226756b0",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "常常",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "很多": {
+            "id": "f2656e71-b133-42ef-ac10-c701eb732069",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "很多",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "不一定": {
+            "id": "cf6a0777-8654-418e-9b8b-f74a45b166ce",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "一定",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不太會": {
+            "id": "9ab60dca-c94f-4409-b40e-9cd1d63b30b7",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_degreeHead",
+                    "text": "太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "看心情": {
+            "id": "487a06ea-e709-4381-a35d-f65f55245294",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "探看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "收看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看守",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看戲",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看顧",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "光顧",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "收視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "注視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "盯住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "省親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞭望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀賞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訪問",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訪談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "走動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "走訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "迫視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "造訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "逼視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想看",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看起",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "看",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "心情",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "不太確定": {
+            "id": "3c0339c4-daea-484c-b75e-680709c0d8e4",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "不太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "定出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "定奪",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "指定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "敲定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "斷定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確立",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確認",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "肯定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "認定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "交辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "分發",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "分配",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "判斷",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "力保",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "安插",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "批准",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "抱持",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "核准",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "歸屬",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "清查",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "聲稱",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "轉讓",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "追認",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "驗算",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "排除",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "判定",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "證實",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "確知",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "定案",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "確定",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "會但聲音都很像": {
+            "id": "63d92f56-01db-4dd2-ac45-d6836ba74e11",
+            "argument": [
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inter",
+                    "text": "但",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "聲音",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很像",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "不太會而且聲音很少": {
+            "id": "1997a6ca-faa9-4006-9d64-6c2efbb31843",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_degreeHead",
+                    "text": "太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "而且",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "聲音",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很少",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "會但聲音沒什麼變化": {
+            "id": "868cda42-a425-4124-beb9-4a82c19ddeae",
+            "argument": [
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inter",
+                    "text": "但",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "聲音",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "沒",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "變動",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "變換",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "修改",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改換",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "異動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "變遷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "轉變",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "偏移",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "波動",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "變異",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "衰減",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "漲落",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "改變",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "畸變",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "變化",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "",
+        "system": "你是一個繁體中文的助理",
+        "assistant": "問題「{{Q1}}, {{Q2}}, {{Q3}}」，答案「{{A}}」"
+    },
+    "document": [
+        {
+            "title": "不太確定",
+            "content": {
+                "A": "那您是否看過您孩子會邊動嘴唇或舌頭邊發出聲音，好像在玩或試著產生各種不同的聲音",
+                "Q1": "不太確定",
+                "Q2": "看心情",
+                "Q3": "不太會",
+                "Q4": "不一定"
+            }
+        }
+    ]
+}

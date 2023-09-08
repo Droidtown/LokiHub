@@ -1,0 +1,496 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "不行": {
+            "id": "eb07f46d-19e5-4165-b6ae-76c8222e4d5e",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "不行",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "偶爾": {
+            "id": "c48762c9-7464-4fa5-b628-c57b6072c0dd",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "偶爾",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不太會": {
+            "id": "28bfa647-4326-4e5d-8704-c7d36c5b8d4b",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_degreeHead",
+                    "text": "太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不太行": {
+            "id": "49e313d2-a533-4862-81e6-0a78fecc8e24",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "太行",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "沒辦法": {
+            "id": "acf20132-4ceb-40cc-ba48-7e03106fccd2",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "沒",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "辦法",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "算有哦": {
+            "id": "fa18f293-9d61-40a1-a873-3f0f166fd94d",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "算輸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "算數",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "算真",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "行了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "夠了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "算做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願屈",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "算想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "算了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "算用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "行",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "夠",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "算",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_particle",
+                    "text": "哦",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "都可以": {
+            "id": "41b6455f-11b9-48e3-bfd9-0c0da8b085f7",
+            "argument": [
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不太確定": {
+            "id": "e72c5530-28ee-4186-8b58-4102d45c3e2a",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "不太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "定出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "定奪",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "指定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "敲定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "斷定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確立",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確認",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "肯定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "認定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "交辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "分發",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "分配",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "判斷",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "力保",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "安插",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "批准",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "抱持",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "核准",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "歸屬",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "清查",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "聲稱",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "轉讓",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "追認",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "驗算",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "排除",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "判定",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "證實",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "確知",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "定案",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "確定",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "好像不會": {
+            "id": "ffa8e6b2-32ee-4712-99a6-e7fdb6ceb231",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "好像",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "好像可以": {
+            "id": "d56df567-60f2-48b3-98d8-cf4832ed833c",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "好像",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "",
+        "system": "你是一個繁體中文的助理",
+        "assistant": "問題「{{Q1}}, {{Q2}}, {{Q3}}, {{Q4}}」，答案「{{A}}」"
+    },
+    "document": [
+        {
+            "title": "不太確定",
+            "content": {
+                "A": "哦～這樣呀...那如果家裡有兩個同類型的玩具，如：兩台大小不同的玩具車或兩顆大小不同的球，當您對小孩說：「小的車車給媽」時，孩子能不能正確拿小的車子給您呢？",
+                "Q1": "不太會",
+                "Q2": "不太行",
+                "Q3": "不太確定",
+                "Q4": "還不太會"
+            }
+        }
+    ]
+}

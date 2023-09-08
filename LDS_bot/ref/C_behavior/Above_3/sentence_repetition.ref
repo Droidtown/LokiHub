@@ -1,0 +1,276 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "對": {
+            "id": "cfd8ffde-4678-438f-9ac6-fc721652a16d",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "對",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "常常": {
+            "id": "4274bca6-e904-44e1-8c84-2ad20459989e",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "常常",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不太會": {
+            "id": "24588d43-5ec2-4c7a-9478-0b989b9346e0",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_degreeHead",
+                    "text": "太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "好像有": {
+            "id": "1cbacf6e-1a8d-4078-a0fe-a0ace4ca5fb4",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "好像",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "很少見": {
+            "id": "28d68eda-7a21-40a5-9a5e-07baa0eaf5e3",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "很少",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "見到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "見美",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "見古",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "見建",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "見得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "見了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看見",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "見圓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "見",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "好像不會": {
+            "id": "ab457006-5886-4ba7-b06f-4542f992dc66",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "好像",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "很常這樣": {
+            "id": "44128cee-f8c7-4efe-8dc8-5832532cc126",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "很常",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_DetPhrase",
+                    "text": "這樣",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "",
+        "system": "你是一個繁體中文的助理",
+        "assistant": "問題「{{Q1}}, {{Q2}}, {{Q3}}」，答案「{{A}}」"
+    },
+    "document": [
+        {
+            "title": "不太確定",
+            "content": {
+                "A": "是哦...不管是在與人互動或是自己在玩時，孩子都會自言自語重覆說一樣的語句嗎？",
+                "Q1": "不常",
+                "Q2": "很少見",
+                "Q3": "有時候"
+            }
+        }
+    ]
+}

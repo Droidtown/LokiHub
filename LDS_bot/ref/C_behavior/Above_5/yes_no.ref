@@ -1,0 +1,62 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_ANoun": [
+            "別人"
+        ]
+    },
+    "utterance": {
+        "否": {
+            "id": "6d54c595-4d1c-4696-9183-a99f9455f318",
+            "pos": "<ENTITY_oov>否</ENTITY_oov>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>否</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "對": {
+            "id": "6ea24c10-481f-4a23-8ccb-30c20e1a1759",
+            "pos": "<MODIFIER>對</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?|<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><CLAUSE_particle>[^<]+</CLAUSE_particle>"
+        },
+        "有": {
+            "id": "175213d9-565a-479d-857c-05955f530bbd",
+            "pos": "<ACTION_verb>有</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>|<AUX>[^<]+</AUX>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
+        },
+        "可以": {
+            "id": "53a6a5d1-f38a-4452-a00c-d3d3d0b92459",
+            "pos": "<MODAL>可以</MODAL>",
+            "lexy": [],
+            "pattern": "<MODAL>[^<]+</MODAL>|<CLAUSE_particle>[^<]+</CLAUSE_particle>"
+        },
+        "對啊": {
+            "id": "d94e75ac-f3cb-4285-a21e-fb2e4c647af6",
+            "pos": "<FUNC_inner>對</FUNC_inner><CLAUSE_particle>啊</CLAUSE_particle>",
+            "lexy": [],
+            "pattern": "<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><CLAUSE_particle>[^<]+</CLAUSE_particle>"
+        },
+        "沒有": {
+            "id": "07d7c296-86db-4025-8ed5-a8740202cf34",
+            "pos": "<FUNC_negation>沒有</FUNC_negation>",
+            "lexy": [],
+            "pattern": "(<(MODIFIER|ModifierP)>不對</(MODIFIER|ModifierP)>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?)|<FUNC_negation>[^<]+</FUNC_negation>(<AUX>[^<]+</AUX>)?(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
+        },
+        "不可以": {
+            "id": "daf597ad-6c07-4edd-b1d0-38c16b507778",
+            "pos": "<FUNC_negation>不</FUNC_negation><MODAL>可以</MODAL>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><MODAL>[^<]+</MODAL>|<CLAUSE_particle>[^<]+</CLAUSE_particle>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

@@ -1,0 +1,837 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_ANoun": [
+            "嘴巴"
+        ]
+    },
+    "utterance": {
+        "不常": {
+            "id": "705be7f9-b3bf-44fd-8480-2c586c080dd6",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "不常",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不行": {
+            "id": "e21770cd-c920-492b-a0a1-93f33a6c6934",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "不行",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "咬書": {
+            "id": "7834ed67-9fc8-4aaf-b234-c3f1764e45d6",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "咬死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "咬傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "咬到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "咬斷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "抓傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "螫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "咬了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃掉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "刺到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "啃食",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "咬",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "書",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "很少": {
+            "id": "6f42b757-da38-499e-80d2-b474415ba79f",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "很少",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "撕書": {
+            "id": "70356c51-f6f2-4ff2-b596-9531b65a2886",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "撕扯",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "撕掉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "撕毀",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "撕爛",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "撕破",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "撕碎",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "撕裂",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "扯破",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拆除",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掀掉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掀開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撤掉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "啃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "撕開",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "咬斷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "調包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "搓揉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剖開",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擰",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舔",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "壓扁",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "割開",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "撕",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "書",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "不太會": {
+            "id": "92a02e39-e638-4a5f-86ec-859e2090b37a",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_degreeHead",
+                    "text": "太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "沒辦法": {
+            "id": "f5f50c1e-53af-4be6-93ec-ad162509d24a",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "沒",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "辦法",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "看心情": {
+            "id": "d1b2d258-6abb-4fcd-ae24-b860921ef614",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "探看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "收看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看守",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看戲",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看顧",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "光顧",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "收視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "注視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "盯住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "省親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞭望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀賞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訪問",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訪談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "走動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "走訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "迫視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "造訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "逼視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看起",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想看",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看到",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "看",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "心情",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "都可以": {
+            "id": "b623b001-bfd2-4399-a163-98612e4cc203",
+            "argument": [
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "好像不會": {
+            "id": "99ffeddf-b8a7-480f-a592-fe0d32e09b57",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "好像",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "好像可以": {
+            "id": "a7c67caa-c3b5-45fc-bc09-f050e8a996f0",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "好像",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "好像沒有": {
+            "id": "91fd7b9c-a8fa-40de-a603-730db5be3717",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "好像",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "沒有",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "會把書丟掉": {
+            "id": "670efd6a-2273-4575-8f3c-d234419fb6ea",
+            "argument": [
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_lightVerb",
+                    "text": "把",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "書",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "丟失",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "丟棄",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "丟開",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂丟",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂掉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "弄丟",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "扔掉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "甩掉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "割棄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "廢棄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扔出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扔棄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "投入",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "投出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "投射",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "投擲",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "投放",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "投注",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拋出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拋射",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拋擲",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拋棄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拋開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拚棄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掙脫",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "摒棄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擯棄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擺脫",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拿走",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "燒掉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吞下去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "輸掉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "丟了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "丟掉了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用不到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "花掉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吞下",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "丟",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "丟掉",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "會把書用壞": {
+            "id": "a3ce00bc-c9ea-46f5-9551-2a90ec5bead6",
+            "argument": [
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_lightVerb",
+                    "text": "把",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "書",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "消損",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "磨合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "磨損",
+                            "level": "tier_2",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用壞",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "",
+        "system": "你是一個繁體中文的助理",
+        "assistant": "問題「{{Q1}}, {{Q2}}, {{Q3}}, {{Q4}}, {{Q5}}, {{Q6}}, {{Q7}}」，答案「{{A}}」"
+    },
+    "document": [
+        {
+            "title": "不太確定",
+            "content": {
+                "A": "是哦~如果讓孩子自己看書時，他會像大人那樣假裝在翻書或去指圖片嗎？",
+                "Q1": "不常",
+                "Q2": "咬書",
+                "Q3": "很少",
+                "Q4": "撕書",
+                "Q5": "看心情",
+                "Q6": "把書用壞",
+                "Q7": "把書丟掉"
+            }
+        }
+    ]
+}

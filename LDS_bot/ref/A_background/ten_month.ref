@@ -1,0 +1,89 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "genetic": [
+            "發展遲緩",
+            "聽損",
+            "自閉",
+            "自閉症",
+            "視障",
+            "視覺障礙",
+            "智能不足",
+            "精神疾病"
+        ],
+        "month_age": [
+            "個月"
+        ],
+        "congenital": [
+            "唐氏症",
+            "小胖威利症",
+            "唇裂",
+            "腭裂",
+            "顎裂",
+            "唇顎裂",
+            "唇腭裂",
+            "小兒症",
+            "聽損",
+            "甲狀腺功能低下",
+            "先天性心臟病",
+            "水腦症",
+            "脊柱裂",
+            "小腦症",
+            "腦出血",
+            "腦部缺氧性病變",
+            "腦部感染",
+            "中樞神經感染",
+            "癩癎",
+            "腦瘤"
+        ],
+        "child_school": [
+            "幼兒園",
+            "幼稚園",
+            "托兒所",
+            "托嬰中心"
+        ]
+    },
+    "utterance": {
+        "是足月": {
+            "id": "1117a540-7d88-45ad-9d6d-a319bfee9c19",
+            "pos": "<AUX>是</AUX><ACTION_verb>足月</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(足月|早產|分娩|死胎|剖腹|懷胎|懷過|夭折|過動|死產|斷奶)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?(<AUX>[^<]+</AUX>)?<(ACTION_verb|VerbP)>足月</(ACTION_verb|VerbP)>"
+        },
+        "有早產": {
+            "id": "db9efee3-746d-4d87-a6c7-18e7fdce731d",
+            "pos": "<ACTION_verb>有</ACTION_verb><ACTION_verb>早產</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(早產|過動|足月|自閉|受虐|失親|死胎|罹病|妊娠|慢飛|罕病)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?(<AUX>[^<]+</AUX>)?<(ACTION_verb|VerbP)>早產</(ACTION_verb|VerbP)>"
+        },
+        "不是早產": {
+            "id": "dc7f886e-29c8-4d05-aeaa-991fa59d5a10",
+            "pos": "<FUNC_negation>不</FUNC_negation><AUX>是</AUX><ACTION_verb>早產</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(早產|過動|足月|自閉|受虐|失親|死胎|罹病|妊娠|慢飛|罕病)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<AUX>[^<]+</AUX>)?<(ACTION_verb|VerbP)>早產</(ACTION_verb|VerbP)>"
+        },
+        "沒有足月": {
+            "id": "56c13a0f-5d23-4274-b8ac-805b4a444c70",
+            "pos": "<FUNC_negation>沒有</FUNC_negation><ACTION_verb>足月</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(足月|早產|分娩|死胎|剖腹|懷胎|懷過|夭折|過動|死產|斷奶)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<AUX>[^<]+</AUX>)?<(ACTION_verb|VerbP)>足月</(ACTION_verb|VerbP)>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

@@ -1,0 +1,657 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "不行": {
+            "id": "86d23753-8afe-4085-a018-da99186102e3",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "不行",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "錯亂": {
+            "id": "02acf0dd-088e-498e-afba-e472b09349c3",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "失常",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "崩潰",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "亢奮",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "崩壞",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "萎靡",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "錯置",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "緊繃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "昏沉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "失調",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "扭曲",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "錯亂",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不太會": {
+            "id": "1b8543ef-7ce6-479f-9de2-723e7faa93ab",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_degreeHead",
+                    "text": "太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不完整": {
+            "id": "43da23ae-899a-4710-9033-3fca48a54b16",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "完整",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "唸不完": {
+            "id": "d4b9204b-fb2a-4c7a-a8dd-fc8e7f4ccc65",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "念",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "念了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "念過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀完",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸完",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "唸",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ASPECT",
+                    "text": "完",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "數不完": {
+            "id": "ab2c872a-9636-4c24-b9a9-8e7b8736f3eb",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "數",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ASPECT",
+                    "text": "完",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "沒辦法": {
+            "id": "bcc02e6c-032c-45e1-b67f-2a40f8b32da9",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "沒",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "辦法",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "跳著唸": {
+            "id": "ebe598ab-324a-404c-b285-0a9c4973f1d2",
+            "argument": [
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "踢踏",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "照跳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唱著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂伎",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "邊跳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "造論",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擺臀",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跳了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跳完",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唱",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跳",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "跳著",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "念",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "念了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "念過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀完",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸完",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "唸",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "有些可以": {
+            "id": "64936963-b5f3-43de-9c27-bfdc7f5417ca",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "些",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "跳來跳去": {
+            "id": "c02646fe-fe19-483d-9df8-e5caee53654d",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "跳去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "走著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舔",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "痛得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "呆坐",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "啃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "揹著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "碰了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "摸著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "抓著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "走",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "揹",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "碰",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "摸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "抓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "跳來",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "跳來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "走著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "坐到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舔",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跟到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "滾來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "站著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "啃",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "抓著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "望著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "走",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "站",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "抓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "望",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "跳去",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "",
+        "system": "你是一個繁體中文的助理",
+        "assistant": "問題「{{Q}}」，答案「{{A}}」"
+    },
+    "document": [
+        {
+            "title": "不太確定",
+            "content": {
+                "A": "這樣呀...如果平時要求孩子從一數到三十，他可以完成這項任務嗎？",
+                "Q": "有些可以"
+            }
+        }
+    ]
+}
