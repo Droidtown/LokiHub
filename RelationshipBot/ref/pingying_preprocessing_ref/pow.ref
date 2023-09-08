@@ -1,0 +1,536 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_p": [
+            "p",
+            "P",
+            "ㄆ",
+            "泡",
+            "砲",
+            "火包"
+        ]
+    },
+    "utterance": {
+        "p友": {
+            "id": "c7d221e6-8c45-468c-899e-87c096a351e5",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "p",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "友",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "ㄩp": {
+            "id": "65cb567d-bf50-4b0f-b4c2-4d568a9ebecb",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "ㄩ",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "p",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "打P": {
+            "id": "8a607674-df33-45c8-9b9a-58bb3b500552",
+            "argument": [
+                {
+                    "pos": "ACTION_lightVerb",
+                    "text": "打",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "P",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "約p": {
+            "id": "82d5fea8-4c9a-457f-a5d0-adfc35539efc",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "超過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "約達",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "共約",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "長約",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "逾",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "約需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "少於",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "約合",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "達",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "方約",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "超",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "約",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "p",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "騙p": {
+            "id": "5410ceb0-be96-4ff6-ae81-2ef1e9051c60",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "哄騙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "欺騙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞞騙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "矇騙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "行騙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "哄瞞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "唬弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "混矇",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞞哄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "矇混",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "誤導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "騙了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "害死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "逼著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "冤枉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "騙去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "騙錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "調戲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "騙走",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "逼",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "騙",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "p",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "扌丁P": {
+            "id": "e43c96c3-1d54-4e98-9f2e-067412770220",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "扌丁",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "P",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "約過p": {
+            "id": "dddb2894-777a-4553-be4d-fe154b5b7420",
+            "argument": [
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "去約",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "公投過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "選舉過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "旅行過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "撐不住",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "閃婚",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "輸定",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "游了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "苦熬",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "深愛過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "公投",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "選舉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "旅行",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "游",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "深愛",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "約過",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "p",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "騙我p": {
+            "id": "34fc143a-e2a6-4699-b625-3da41deb4992",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "哄騙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "欺騙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞞騙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "矇騙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "行騙",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "呼弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "哄瞞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "唬弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "混矇",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞞哄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "矇混",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "誤導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "騙走",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "調戲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "逼著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "騙去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "冤枉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "害死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "騙錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "騙了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "逼",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "騙",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "p",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "ㄩ過ㄆ": {
+            "id": "fc96490f-4a1d-4254-a167-efb1d28f7ec4",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "ㄩ",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "text": "過",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "ㄆ",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

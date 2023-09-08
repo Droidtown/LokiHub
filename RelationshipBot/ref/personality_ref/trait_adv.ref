@@ -1,0 +1,43 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "term_Noun": [
+            "遠距離",
+            "另一半",
+            "男友",
+            "女友",
+            "伴侶",
+            "老媽子",
+            "三觀"
+        ],
+        "term_idiom": [
+            "管東管西",
+            "斤斤計較",
+            "口出狂言",
+            "背道而馳",
+            "心不在焉"
+        ],
+        "term_modifier": [
+            "囉嗦",
+            "囉囉嗦嗦"
+        ]
+    },
+    "utterance": {
+        "女友超黏我": {
+            "id": "3585d343-d652-4eb0-adde-9a65c35a99cb",
+            "pos": "<ENTITY_noun>女友</ENTITY_noun><ACTION_verb>超黏</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(超黏|)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov|pronoun))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov|pronoun))><(ACTION_verb|VerbP)>超黏</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

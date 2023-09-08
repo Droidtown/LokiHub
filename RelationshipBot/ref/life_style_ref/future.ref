@@ -1,0 +1,212 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "term_noun": [
+            "遠距離",
+            "另一半",
+            "男友",
+            "女友",
+            "伴侶",
+            "老媽子"
+        ],
+        "term_idiom": [
+            "囉哩八唆",
+            "長期以來",
+            "三更半夜"
+        ]
+    },
+    "utterance": {
+        "對方沒前途": {
+            "id": "d2a0a79e-2cf5-4d25-a324-ddcce185d119",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "對方",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "沒",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "前途",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "對方沒未來": {
+            "id": "795fe06b-5cd1-4ac4-bdde-0bff34c446ad",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "對方",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "沒",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "未來",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "對方毫無前途可言": {
+            "id": "21e87842-60ae-4808-9d53-472253aaff1e",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "對方",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "毫無",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "前途",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "可",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "言了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "言喻",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "盡信",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "估量",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "比擬",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "見得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "言說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "言傳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "抹滅",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "知論",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "言",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "對方是一個沒有未來的人": {
+            "id": "f3caac82-5443-428f-a2ab-f04f17281c44",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "對方",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一個",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "沒有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "未來",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "人",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "",
+        "system": "",
+        "assistant": ""
+    },
+    "document": []
+}
