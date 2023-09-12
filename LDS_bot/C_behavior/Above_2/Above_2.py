@@ -58,10 +58,10 @@ try:
     from intent import Loki_100_words
     from intent import Loki_two_steps_directions
     from intent import Loki_not_listen
-    from intent import Loki_yes_no
     from intent import Loki_point_pictures
     from intent import Loki_4_body_parts
     from intent import Loki_reading_books
+    from intent import Loki_yes_no
 except:
     from .intent import Loki_ten_words
     from .intent import Loki_imitate_and_say
@@ -72,10 +72,10 @@ except:
     from .intent import Loki_100_words
     from .intent import Loki_two_steps_directions
     from .intent import Loki_not_listen
-    from .intent import Loki_yes_no
     from .intent import Loki_point_pictures
     from .intent import Loki_4_body_parts
     from .intent import Loki_reading_books
+    from .intent import Loki_yes_no
 
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
@@ -241,10 +241,6 @@ def runLoki(inputLIST, filterLIST=[], refDICT={}):
                 if lokiRst.getIntent(index, resultIndex) == "not_listen":
                     lokiResultDICT = Loki_not_listen.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
 
-                # yes_no
-                if lokiRst.getIntent(index, resultIndex) == "yes_no":
-                    lokiResultDICT = Loki_yes_no.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
-
                 # point_pictures
                 if lokiRst.getIntent(index, resultIndex) == "point_pictures":
                     lokiResultDICT = Loki_point_pictures.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
@@ -256,6 +252,10 @@ def runLoki(inputLIST, filterLIST=[], refDICT={}):
                 # reading_books
                 if lokiRst.getIntent(index, resultIndex) == "reading_books":
                     lokiResultDICT = Loki_reading_books.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
+
+                # yes_no
+                if lokiRst.getIntent(index, resultIndex) == "yes_no":
+                    lokiResultDICT = Loki_yes_no.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
 
             # save lokiResultDICT to resultDICT
             for k in lokiResultDICT:
@@ -369,7 +369,7 @@ def testIntent():
 
     # 100_words
     print("[TEST] 100_words")
-    inputLIST = ['不常','不行','沒有','不太會','不太行','不說話','好像有','沒聽過','沒辦法','火星語','算有哦','不太確定','好像不會','好像可以','好像沒有','都用哭的','應該有超過','會但不愛講','會但不會說','還不會說話','都只用指的','只會出個聲音','只聽過一兩次','可以但不愛說','會但不到100個','有說但聽不懂','可以但沒那麼多','沒聽過小孩說話']
+    inputLIST = ['不常','不行','沒有','不太會','不太行','不說話','好像有','沒聽過','沒辦法','火星語','算有哦','不太確定','好像不會','好像可以','好像沒有','都用哭的','應該有超過','會但不愛講','還不會說話','都只用指的','只會出個聲音','只聽過一兩次','可以但不愛說','會但不到100個','有說但聽不懂','可以但沒那麼多','沒聽過小孩說話']
     testLoki(inputLIST, ['100_words'])
     print("")
 
@@ -383,12 +383,6 @@ def testIntent():
     print("[TEST] not_listen")
     inputLIST = ['是的','不一定','看心情','不會這樣','好像不會','就是這樣','常常這樣','有時候不聽']
     testLoki(inputLIST, ['not_listen'])
-    print("")
-
-    # yes_no
-    print("[TEST] yes_no")
-    inputLIST = ['否','對','有','可以','對啊','沒有','不可以']
-    testLoki(inputLIST, ['yes_no'])
     print("")
 
     # point_pictures
@@ -409,19 +403,24 @@ def testIntent():
     testLoki(inputLIST, ['reading_books'])
     print("")
 
+    # yes_no
+    print("[TEST] yes_no")
+    inputLIST = ['否','對','有','不對','可以','對啊','沒有','不可以']
+    testLoki(inputLIST, ['yes_no'])
+    print("")
+
 
 if __name__ == "__main__":
     # 測試所有意圖
-    # testIntent()
+    testIntent()
 
     # 測試其它句子
-    filterLIST = ["yes_no", "combined_words"]
+    filterLIST = []
     splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
     # 設定參考資料
     refDICT = {
         #"key": []
     }
-    # resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST=filterLIST, refDICT=refDICT)                      # output => {"key": ["今天天氣"]}
-    resultDICT = execLoki("可以", filterLIST=filterLIST, splitLIST=splitLIST, refDICT=refDICT) # output => {"key": ["今天天氣", "後天氣象"]}
-    # resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"], filterLIST=filterLIST, refDICT=refDICT)                # output => {"key": ["今天天氣", "後天氣象"]}
-    print(resultDICT)
+    resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST=filterLIST, refDICT=refDICT)                      # output => {"key": ["今天天氣"]}
+    resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST=filterLIST, splitLIST=splitLIST, refDICT=refDICT) # output => {"key": ["今天天氣", "後天氣象"]}
+    resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"], filterLIST=filterLIST, refDICT=refDICT)                # output => {"key": ["今天天氣", "後天氣象"]}

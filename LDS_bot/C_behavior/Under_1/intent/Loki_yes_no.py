@@ -57,6 +57,13 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             # write your code here
             pass
 
+    if utterance == "不對":
+        if CHATBOT_MODE:
+            resultDICT["yes_no"] = False
+        else:
+            # write your code here
+            pass
+
     if utterance == "可以":
         if CHATBOT_MODE:
             resultDICT["yes_no"] = True

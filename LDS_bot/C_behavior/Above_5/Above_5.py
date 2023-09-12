@@ -54,18 +54,18 @@ try:
     from intent import Loki_disfluent
     from intent import Loki_7_digits
     from intent import Loki_say_4_colors
-    from intent import Loki_yes_no
     from intent import Loki_articulation
     from intent import Loki_can_not_follow_directions
+    from intent import Loki_yes_no
 except:
     from .intent import Loki_self_talking
     from .intent import Loki_describe_story_or_things
     from .intent import Loki_disfluent
     from .intent import Loki_7_digits
     from .intent import Loki_say_4_colors
-    from .intent import Loki_yes_no
     from .intent import Loki_articulation
     from .intent import Loki_can_not_follow_directions
+    from .intent import Loki_yes_no
 
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
@@ -215,10 +215,6 @@ def runLoki(inputLIST, filterLIST=[], refDICT={}):
                 if lokiRst.getIntent(index, resultIndex) == "say_4_colors":
                     lokiResultDICT = Loki_say_4_colors.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
 
-                # yes_no
-                if lokiRst.getIntent(index, resultIndex) == "yes_no":
-                    lokiResultDICT = Loki_yes_no.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
-
                 # articulation
                 if lokiRst.getIntent(index, resultIndex) == "articulation":
                     lokiResultDICT = Loki_articulation.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
@@ -226,6 +222,10 @@ def runLoki(inputLIST, filterLIST=[], refDICT={}):
                 # can_not_follow_directions
                 if lokiRst.getIntent(index, resultIndex) == "can_not_follow_directions":
                     lokiResultDICT = Loki_can_not_follow_directions.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
+
+                # yes_no
+                if lokiRst.getIntent(index, resultIndex) == "yes_no":
+                    lokiResultDICT = Loki_yes_no.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
 
             # save lokiResultDICT to resultDICT
             for k in lokiResultDICT:
@@ -331,12 +331,6 @@ def testIntent():
     testLoki(inputLIST, ['say_4_colors'])
     print("")
 
-    # yes_no
-    print("[TEST] yes_no")
-    inputLIST = ['否','對','有','可以','對啊','沒有','不可以']
-    testLoki(inputLIST, ['yes_no'])
-    print("")
-
     # articulation
     print("[TEST] articulation")
     inputLIST = ['常常','不太會','很常這樣','大家都聽得懂','有幾個字會說不清楚']
@@ -347,6 +341,12 @@ def testIntent():
     print("[TEST] can_not_follow_directions")
     inputLIST = ['常常','很少','沒錯','不太會']
     testLoki(inputLIST, ['can_not_follow_directions'])
+    print("")
+
+    # yes_no
+    print("[TEST] yes_no")
+    inputLIST = ['否','對','有','不對','可以','對啊','沒有','不可以']
+    testLoki(inputLIST, ['yes_no'])
     print("")
 
 

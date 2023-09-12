@@ -21,7 +21,7 @@
             "id": "6ea24c10-481f-4a23-8ccb-30c20e1a1759",
             "pos": "<MODIFIER>對</MODIFIER>",
             "lexy": [],
-            "pattern": "<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?|<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><CLAUSE_particle>[^<]+</CLAUSE_particle>"
+            "pattern": "<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>"
         },
         "有": {
             "id": "175213d9-565a-479d-857c-05955f530bbd",
@@ -31,29 +31,35 @@
             ],
             "pattern": "<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>|<AUX>[^<]+</AUX>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
         },
+        "不對": {
+            "id": "27fd1a97-a098-42d2-bea1-4eae1e1563e2",
+            "pos": "<MODIFIER>不對</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>不對</(MODIFIER|ModifierP)>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
+        },
         "可以": {
-            "id": "53a6a5d1-f38a-4452-a00c-d3d3d0b92459",
+            "id": "71f34669-db13-4441-9731-f5278a71ab06",
             "pos": "<MODAL>可以</MODAL>",
             "lexy": [],
-            "pattern": "<MODAL>[^<]+</MODAL>|<CLAUSE_particle>[^<]+</CLAUSE_particle>"
+            "pattern": "<MODAL>[^<]+</MODAL>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
         },
         "對啊": {
-            "id": "d94e75ac-f3cb-4285-a21e-fb2e4c647af6",
+            "id": "87ad052a-fbfd-47ab-8b7a-136db3bf19ef",
             "pos": "<FUNC_inner>對</FUNC_inner><CLAUSE_particle>啊</CLAUSE_particle>",
             "lexy": [],
-            "pattern": "<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><CLAUSE_particle>[^<]+</CLAUSE_particle>"
+            "pattern": "<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
         },
         "沒有": {
-            "id": "07d7c296-86db-4025-8ed5-a8740202cf34",
+            "id": "3e89364f-d6e1-474e-852a-4caa10f4f482",
             "pos": "<FUNC_negation>沒有</FUNC_negation>",
             "lexy": [],
-            "pattern": "(<(MODIFIER|ModifierP)>不對</(MODIFIER|ModifierP)>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?)|<FUNC_negation>[^<]+</FUNC_negation>(<AUX>[^<]+</AUX>)?(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<AUX>[^<]+</AUX>)?(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
         },
         "不可以": {
-            "id": "daf597ad-6c07-4edd-b1d0-38c16b507778",
+            "id": "c25e599c-af78-45f5-b211-839136d7aaf0",
             "pos": "<FUNC_negation>不</FUNC_negation><MODAL>可以</MODAL>",
             "lexy": [],
-            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><MODAL>[^<]+</MODAL>|<CLAUSE_particle>[^<]+</CLAUSE_particle>"
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><MODAL>[^<]+</MODAL>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
         }
     },
     "alias": {},

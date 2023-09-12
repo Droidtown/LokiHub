@@ -387,7 +387,7 @@ def testIntent():
 
     # yes_no
     print("[TEST] yes_no")
-    inputLIST = ['否','對','有','可以','對啊','沒有','不可以']
+    inputLIST = ['否','對','有','不對','可以','對啊','沒有','不可以']
     testLoki(inputLIST, ['yes_no'])
     print("")
 

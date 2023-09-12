@@ -265,6 +265,7 @@ def condition_control(dicts, context, msgSTR):
         
         # 偵測 intent
         resultDICT = operateLoki(context, msgSTR, ["yes_no", question_tags[context][waiting_question[0]]])
+        print("內部測試: ",  resultDICT)
         if "yes_no" in resultDICT.keys() and waiting_question[0] not in resultDICT:
             if waiting_question[0] not in reverse_list[context]:
                 resultDICT[waiting_question[0]] = resultDICT["yes_no"]
@@ -294,8 +295,9 @@ def condition_control(dicts, context, msgSTR):
             data["behavior"]["c"] = True
         else:
             if "response" not in resultDICT.keys():
-                next_q = get_key_from_value(data["behavior"], "None")[0]
-                data["behavior"]["response"] = behavior_questions[context][next_q]
+                new_waiting = get_key_from_value(data["behavior"], "None")
+                new_waiting.sort(key=order_rule)
+                data["behavior"]["response"] = behavior_questions[context][new_waiting[0]]
 
         # 判斷對話是否結束，如果結束就給建議
         if "c" in data["behavior"].keys() and data["behavior"]["c"] == True:

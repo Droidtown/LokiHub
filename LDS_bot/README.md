@@ -6,8 +6,46 @@
 * LDS_bot是就使用者回覆關於孩童當下語言發展表現的結果進行簡易yes/no篩檢，關於孩童完整的語言評估與診斷則需由專業醫療人員執行
 
 # **檔案總覽**
-
-
+```
+├─A_background (詢問孩童出生及病史等相關背景)
+│  └─intent
+├─B_environment (詢問孩童生活或就學狀況)
+│  └─intent
+├─C_behavior (詢問孩童目前語言發展狀況)
+│  ├─Above_1
+│  │  ├─intent
+│  │  └─reply
+│  ├─Above_2
+│  │  ├─intent
+│  │  └─reply
+│  ├─Above_3
+│  │  ├─intent
+│  │  └─reply
+│  ├─Above_4
+│  │  ├─intent
+│  │  └─reply
+│  ├─Above_5
+│  │  ├─intent
+│  │  └─reply
+│  ├─Above_6
+│  │  ├─intent
+│  │  └─reply
+│  └─Under_1
+│      ├─intent
+│      └─reply
+├─image
+└─ref
+    ├─A_background
+    ├─B_environment
+    └─C_behavior
+        ├─Above_1
+        ├─Above_2
+        ├─Above_3
+        ├─Above_4
+        ├─Above_5
+        ├─Above_6
+        └─Under_1
+```
 # **操作說明**
 ### **環境設置**
 * Python 版本：
