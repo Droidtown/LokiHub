@@ -95,7 +95,7 @@
 │   │   ├── USER_DEFINED.json
 │   │   └── Updater.py
 │   └── pingying_preprocessing.py
-└── ref                             # 6個不同Context+前處理的ref檔
+└── ref                                 #6個不同Context+前處理的ref檔
    ├── family_ref
    │   └── family.ref
    ├── life_style_ref
@@ -132,11 +132,20 @@
 ## Loki啟用說明
 1. 註冊並登入[卓騰語言科技AI](https://api.droidtown.co/login/)
 2. 點選 `Loki` -> `開始啟用Loki` 進入Loki控制台
-3. 輸入專案名稱並點選 `建立專案`，並依序建立**family、life_style ... sex、pingying_preprocessing**，共7個專案
-4. 進入設立完成之專案**family**
-5. 點擊 `選擇檔案` ->選擇 `.ref` 檔->點選 `讀取意圖` 依序匯入目錄**family_ref** 中所有的`.ref`檔案
+3. 輸入專案名稱並點選 `建立專案`，並依序建立以下7個專案
+```
+1. family
+2. life_style
+3. money
+4. personality
+5. loyalty
+6. sex
+7. pingying_preprocessing
+```
+4. 進入設立完成之專案 **family**
+5. 點擊 `選擇檔案` ->選擇 `.ref` 檔->點選 `讀取意圖` 依序匯入目錄 **family_ref** 中所有的`.ref`檔案
 6. 點選畫面左上角房子圖示，回到 Loki控制台，點選 `複製` 專案金鑰
-7. 在目錄 **family** 底下創建檔案 `account.info` ，並輸入以下內容
+7. 在目錄 **family** 底下創建檔案 `account.info`，並輸入以下內容
 ```
 {
     "username":"--填入Loki註冊信箱--",
@@ -144,7 +153,7 @@
     "loki_key":"--填入專案金鑰--"
 }
 ```
-8. 對剩餘6個專案重複步驟4-7
+8. 對剩餘6個專案重複步驟4~7
 
 ## DiscordBot建置
 1. 註冊並登入 Discord 帳號
@@ -164,8 +173,8 @@
 }
 ```
 ## 使用者互動說明
-完成上述程序後，執行 `python3 Discord_bot.py` 即可開始與 Bot 互動<br><br>
-### <互動示例><br>
+完成上述程序後，執行 `python3 Discord_bot.py` 即可開始與 Bot 互動<br>
+### <互動示例>
 ```
 1. Tag RelationshipBot. 跟他打聲招呼吧！
 ```

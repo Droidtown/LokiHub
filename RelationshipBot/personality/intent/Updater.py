@@ -122,7 +122,7 @@ def updateUtterance(newIntentPath):
                 print("def runLoki(...):")
                 print("    # {}".format(intentNameSTR))
                 print("    if lokiRst.getIntent(index, resultIndex) == \"{}\":".format(intentNameSTR))
-                print("        resultDICT = Loki_{}.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)".format(intentNameSTR))
+                print("        lokiResultDICT = Loki_{}.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)".format(intentNameSTR))
             except Exception as e:
                 print("=> 新增失敗 {}".format(str(e)))
 

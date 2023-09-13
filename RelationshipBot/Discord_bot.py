@@ -109,7 +109,7 @@ class BotClient(discord.Client):
             logging.debug("人類說：{}".format(msgSTR))
             
 # ##########初次對話：這裡是 keyword trigger 的。
-            if any(i in msgSTR.lower() for i in ["哈囉","嗨","你好","妳好","您好","hi","hello","yo","安","hey","在嘛","在嗎","在嬤","嘿","sup"]) and all(i not in msgSTR.lower() for i in ["晚安", "you"]):
+            if msgSTR.lower() in ["哈囉","嗨","你好","妳好","您好","hi","hello","yo","安","hey","在嘛","在嗎","在嬤","嘿","sup"]:
                 #有講過話(判斷對話時間差)
                 if message.author.id in self.mscDICT.keys():
                     timeDIFF = datetime.now() - self.mscDICT[message.author.id]["updatetime"]
@@ -130,7 +130,7 @@ class BotClient(discord.Client):
                     replySTR = "嗨嗨~我是感情小助理🙂~\n可以協助您解決感情世界的疑難雜症~\n您可以試著問我有關男女朋友之間的煩惱\n"
                     self.mscDICT[message.author.id]["hi_count"] += 1
             
-            elif any(i in msgSTR.lower() for i in ["掰","bye","晚安","gn","night","滾"]):
+            elif msgSTR.lower() in ["掰","掰掰","bye","晚安","goodbye","掰囉","byebye","bye bye","good night","gn","night","night night","滾"]:
                 if message.author.id not in self.mscDICT.keys() or self.mscDICT[message.author.id]["Q_count"] == 0:
                     replySTR = "你甚麼都還沒問到欸?真的要走了?" 
                 else :
@@ -143,7 +143,7 @@ class BotClient(discord.Client):
                     else :
                         replySTR = "是要掰幾次啦???我都不用休息???不要在這裡浪費生命好不好😠"
                         
-            elif any(i in msgSTR.lower() for i in ["謝","thank","thx"]):
+            elif msgSTR.lower() in ["謝啦","謝謝你","謝謝妳","感謝你","感謝妳","thank you","thanks","thankyou","感謝","thx","謝謝"]:
                 if message.author.id not in self.mscDICT.keys() or self.mscDICT[message.author.id]["Q_count"] == 0 :
                     replySTR = "雖然不太清楚我幫了你甚麼，但不客氣~😎" 
                 else :
@@ -155,7 +155,7 @@ class BotClient(discord.Client):
                         self.mscDICT[message.author.id]["thx_count"] += 1
                     else :
                         replySTR = "不 客 氣。"
-            elif any(i in msgSTR.lower() for i in ["對不起","抱歉","sor","拍謝","我錯了","我的錯","不要生氣啦","bad"]):
+            elif msgSTR.lower() in ["對不起","抱歉","sor","sorry","拍謝","我錯了","我的錯","不要生氣啦","對不起啦"]:
                 if  message.author.id not in self.mscDICT.keys() or (self.mscDICT[message.author.id]["false_count"] < 4 and self.mscDICT[message.author.id]["bye_count"] < 4 and self.mscDICT[message.author.id]["thx_count"] < 4 and self.mscDICT[message.author.id]["hi_count"] < 4) :
                     replySTR = "怎麼突然道歉了?你沒做錯甚麼事啊~"
                 else:

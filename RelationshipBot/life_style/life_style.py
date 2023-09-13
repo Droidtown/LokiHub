@@ -50,14 +50,14 @@ import os
 import re
 try:
     from intent import Loki_habit
-    from intent import Loki_long_distance
     from intent import Loki_work
     from intent import Loki_future
+    from intent import Loki_long_distance
 except:
     from .intent import Loki_habit
-    from .intent import Loki_long_distance
     from .intent import Loki_work
     from .intent import Loki_future
+    from .intent import Loki_long_distance
 
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
@@ -191,10 +191,6 @@ def runLoki(inputLIST, filterLIST=[], refDICT={}):
                 if lokiRst.getIntent(index, resultIndex) == "habit":
                     lokiResultDICT = Loki_habit.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
 
-                # long_distance
-                if lokiRst.getIntent(index, resultIndex) == "long_distance":
-                    lokiResultDICT = Loki_long_distance.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
-
                 # work
                 if lokiRst.getIntent(index, resultIndex) == "work":
                     lokiResultDICT = Loki_work.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
@@ -202,6 +198,10 @@ def runLoki(inputLIST, filterLIST=[], refDICT={}):
                 # future
                 if lokiRst.getIntent(index, resultIndex) == "future":
                     lokiResultDICT = Loki_future.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
+
+                # long_distance
+                if lokiRst.getIntent(index, resultIndex) == "long_distance":
+                    lokiResultDICT = Loki_long_distance.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
 
             # save lokiResultDICT to resultDICT
             for k in lokiResultDICT:
@@ -279,14 +279,8 @@ def testLoki(inputLIST, filterLIST):
 def testIntent():
     # habit
     print("[TEST] habit")
-    inputLIST = ['對方嘴臭','對方很吵','男友很吵','對方不陪我','對方腳很臭','對方超髒的','晚上都不睡','不想每天視訊','對方常常晚睡','對方習慣很糟','每天視訊好煩','睡覺打呼超吵','不想天天講電話','對方去哪都不講','對方很常吃不完','對方愛亂丟垃圾','對方都不做家事','對方都要很晚睡','我們作息不一致','每天都要打電話','不喜歡每天講電話','對方上廁所不鎖門','對方上廁所不關門','對方不愛整理房間','對方很愛亂丟垃圾','對方愛吃垃圾食物','對方生活習慣很差','對方衛生習慣很糟','對方都半夜不睡覺','對方都很晚才睡覺','對方都要很晚才睡','對方一直說八卦好吵','對方不重視個人衛生','對方回家衣服都亂丟','對方打電動都不陪我','對方睡覺打呼超吵的','對方睡覺打呼超大聲','對方衣服襪子都亂丟','每天講電話很沒必要','對方上廁所不掀馬桶蓋','對方堅持睡覺不開冷氣','對方衣服丟得滿地都是','對方都要三更半夜才睡','對方點很多餐都不吃完','對方一直打電動都不陪我','對方囉哩八唆想跟他分手','我習慣早起對方喜歡晚睡','對方打電動打到很晚都不陪我','我們的休息時間無法保持一致','每天起床與睡覺的時間不一致']
+    inputLIST = ['對方嘴臭','對方很吵','男友很吵','對方不陪我','對方腳很臭','對方超髒的','晚上都不睡','不想每天視訊','對方常常晚睡','對方習慣很糟','每天視訊好煩','睡覺打呼超吵','不想天天講電話','對方去哪都不講','對方很常吃不完','對方愛亂丟垃圾','對方打呼很大聲','對方打呼超大聲','對方都不做家事','對方都要很晚睡','我們作息不一致','每天都要打電話','不喜歡每天講電話','對方上廁所不鎖門','對方上廁所不關門','對方不愛整理房間','對方愛吃垃圾食物','對方生活習慣很差','對方衛生習慣很糟','對方都半夜不睡覺','對方都很晚才睡覺','對方都要很晚才睡','對方一直說八卦好吵','對方不重視個人衛生','對方回家衣服都亂丟','對方打電動都不陪我','對方睡覺打呼超吵的','對方衣服襪子都亂丟','每天講電話很沒必要','對方上廁所不掀馬桶蓋','對方堅持睡覺不開冷氣','對方衣服丟得滿地都是','對方都要三更半夜才睡','對方點很多餐都不吃完','對方一直打電動都不陪我','對方囉哩八唆想跟他分手','我習慣早起對方喜歡晚睡','對方打電動打到很晚都不陪我','我們的休息時間無法保持一致','每天起床與睡覺的時間不一致']
     testLoki(inputLIST, ['habit'])
-    print("")
-
-    # long_distance
-    print("[TEST] long_distance")
-    inputLIST = ['一直遠距離','我們遠距離很久了','長期以來都遠距離','和對方在不同縣市工作','多年以來一直保持著遠距離。','我和對方一直以來都是遠距離']
-    testLoki(inputLIST, ['long_distance'])
     print("")
 
     # work
@@ -299,6 +293,12 @@ def testIntent():
     print("[TEST] future")
     inputLIST = ['對方沒前途','對方沒未來','對方毫無前途可言','對方是一個沒有未來的人']
     testLoki(inputLIST, ['future'])
+    print("")
+
+    # long_distance
+    print("[TEST] long_distance")
+    inputLIST = ['一直遠距離','在不同縣市工作','我們遠距離很久了','長期以來都遠距離','和對方在不同縣市工作','多年以來一直保持著遠距離。','我和對方一直以來都是遠距離']
+    testLoki(inputLIST, ['long_distance'])
     print("")
 
 
