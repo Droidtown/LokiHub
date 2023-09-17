@@ -129,6 +129,7 @@
 ## 環境設置
 - 套件安裝
     - `pip3 install ArticutAPI`
+    - `pip install -r requirements.txt`
 ## Loki啟用說明
 1. 註冊並登入[卓騰語言科技AI](https://api.droidtown.co/login/)
 2. 點選 `Loki` -> `開始啟用Loki` 進入Loki控制台
