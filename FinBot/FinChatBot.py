@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki 2.0 Template For Python3
+    Loki 4.0 Template For Python3
 
     [URL] https://api.droidtown.co/Loki/BulkAPI/
 
@@ -36,37 +36,39 @@
                 },
                 {
                     "status": False,
-                    "msg": "No Match Intent!"
+                    "msg": "No matching Intent."
                 }
             ]
         }
 """
 
-import requests
+from requests import post, get
+from requests import codes
+import json
+import math
+import os
+import re
 try:
     from intent import Loki_Exchange
 except:
     from .intent import Loki_Exchange
+from ArticutAPI import Articut
 
-API_KEY = ""
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
-USERNAME = ""
-LOKI_KEY = ""
 try:
-    from ArticutAPI import ArticutAPI
-    if API_KEY == "":
-        articut = ArticutAPI.Articut(username=USERNAME, apikey=API_KEY)
-    else:
-        articut = ArticutAPI.Articut(username=USERNAME, apikey=API_KEY)
-except:
-    print("需配合 ArticutAPI 使用。請至 https://github.com/Droidtown/ArticutAPI 下載")
-
-
-
+    accountInfo = json.load(open(os.path.join(os.path.dirname(__file__), "account.info"), encoding="utf-8"))
+    USERNAME = accountInfo["username"]
+    LOKI_KEY = accountInfo["loki_key"]
+except Exception as e:
+    print("[ERROR] AccountInfo => {}".format(str(e)))
+    USERNAME = ""
+    LOKI_KEY = ""
+articut = Articut(username=accountInfo["username"], apikey=accountInfo["api_key"])
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
 # INTENT_FILTER = [intentN] => 僅比對 INTENT_FILTER 內的意圖
 INTENT_FILTER = []
+INPUT_LIMIT = 20
 
 class LokiResult():
     status = False
@@ -75,31 +77,35 @@ class LokiResult():
     balance = -1
     lokiResultLIST = []
 
-    def __init__(self, inputLIST):
+    def __init__(self, inputLIST, filterLIST):
         self.status = False
         self.message = ""
         self.version = ""
         self.balance = -1
         self.lokiResultLIST = []
+        # filterLIST 空的就採用預設的 INTENT_FILTER
+        if filterLIST == []:
+            filterLIST = INTENT_FILTER
 
         try:
-            result = requests.post(LOKI_URL, json={
+            result = post(LOKI_URL, json={
                 "username": USERNAME,
                 "input_list": inputLIST,
                 "loki_key": LOKI_KEY,
-                "filter_list": INTENT_FILTER
+                "filter_list": filterLIST
             })
 
-            if result.status_code == requests.codes.ok:
+            if result.status_code == codes.ok:
                 result = result.json()
                 self.status = result["status"]
                 self.message = result["msg"]
                 if result["status"]:
                     self.version = result["version"]
-                    self.balance = result["word_count_balance"]
+                    if "word_count_balance" in result:
+                        self.balance = result["word_count_balance"]
                     self.lokiResultLIST = result["result_list"]
             else:
-                self.message = "Connect failed."
+                self.message = "{} Connection failed.".format(result.status_code)
         except Exception as e:
             self.message = str(e)
 
@@ -168,22 +174,99 @@ class LokiResult():
             rst = lokiResultDICT["argument"]
         return rst
 
-def runLoki(inputLIST):
-    resultDICT = {}
-    lokiRst = LokiResult(inputLIST)
+def runLoki(inputLIST, filterLIST=[], refDICT={}):
+    resultDICT = refDICT
+    lokiRst = LokiResult(inputLIST, filterLIST)
     if lokiRst.getStatus():
         for index, key in enumerate(inputLIST):
+            lokiResultDICT = {}
             for resultIndex in range(0, lokiRst.getLokiLen(index)):
                 # Exchange
                 if lokiRst.getIntent(index, resultIndex) == "Exchange":
-                    resultDICT = Loki_Exchange.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), resultDICT)
+                    lokiResultDICT = Loki_Exchange.getResult(key, lokiRst.getUtterance(index, resultIndex), lokiRst.getArgs(index, resultIndex), lokiResultDICT, refDICT)
 
+            # save lokiResultDICT to resultDICT
+            for k in lokiResultDICT:
+                if k not in resultDICT:
+                    resultDICT[k] = []
+                if type(resultDICT[k]) != list:
+                    resultDICT[k] = [resultDICT[k]] if resultDICT[k] else []
+                if type(lokiResultDICT[k]) == list:
+                    resultDICT[k].extend(lokiResultDICT[k])
+                else:
+                    resultDICT[k].append(lokiResultDICT[k])
     else:
-        resultDICT = {"msg": lokiRst.getMessage()}
+        resultDICT["msg"] = lokiRst.getMessage()
     return resultDICT
 
+def execLoki(content, filterLIST=[], splitLIST=[], refDICT={}):
+    """
+    input
+        content       STR / STR[]    要執行 loki 分析的內容 (可以是字串或字串列表)
+        filterLIST    STR[]          指定要比對的意圖 (空列表代表不指定)
+        splitLIST     STR[]          指定要斷句的符號 (空列表代表不指定)
+                                     * 如果一句 content 內包含同一意圖的多個 utterance，請使用 splitLIST 切割 content
+        refDICT       DICT           參考內容
+
+    output
+        resultDICT    DICT           合併 runLoki() 的結果
+
+    e.g.
+        splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
+        resultDICT = execLoki("今天天氣如何？後天氣象如何？")                      # output => ["今天天氣"]
+        resultDICT = execLoki("今天天氣如何？後天氣象如何？", splitLIST=splitLIST) # output => ["今天天氣", "後天氣象"]
+        resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"])                # output => ["今天天氣", "後天氣象"]
+    """
+    resultDICT = refDICT
+    if resultDICT is None:
+        resultDICT = {}
+
+    contentLIST = []
+    if type(content) == str:
+        contentLIST = [content]
+    if type(content) == list:
+        contentLIST = content
+
+    if contentLIST:
+        if splitLIST:
+            # 依 splitLIST 做分句切割
+            splitPAT = re.compile("[{}]".format("".join(splitLIST)))
+            inputLIST = []
+            for c in contentLIST:
+                tmpLIST = splitPAT.split(c)
+                inputLIST.extend(tmpLIST)
+            # 去除空字串
+            while "" in inputLIST:
+                inputLIST.remove("")
+        else:
+            # 不做分句切割處理
+            inputLIST = contentLIST
+
+        # 依 INPUT_LIMIT 限制批次處理
+        for i in range(0, math.ceil(len(inputLIST) / INPUT_LIMIT)):
+            resultDICT = runLoki(inputLIST[i*INPUT_LIMIT:(i+1)*INPUT_LIMIT], filterLIST=filterLIST, refDICT=refDICT)
+            if "msg" in resultDICT:
+                break
+
+    return resultDICT
+
+def testLoki(inputLIST, filterLIST):
+    INPUT_LIMIT = 20
+    for i in range(0, math.ceil(len(inputLIST) / INPUT_LIMIT)):
+        resultDICT = runLoki(inputLIST[i*INPUT_LIMIT:(i+1)*INPUT_LIMIT], filterLIST)
+
+    if "msg" in resultDICT:
+        print(resultDICT["msg"])
+
+def testIntent():
+    # Exchange
+    print("[TEST] Exchange")
+    inputLIST = ['100台幣換美金','我想要100元美金','我想要美金100元','我想買100元美金','我想買美金100元','100美金要台幣多少','100美金要多少台幣','美金100要台幣多少','美金100要多少台幣','100元美金要台幣多少','100元美金要多少台幣','100美金能換多少台幣','美金100元要台幣多少','美金100元要多少台幣','今天美金兌換台幣是多少','100元美金可以兌換台幣多少','100元美金可以兌換多少台幣','美金100元可以兌換台幣多少','美金100元可以兌換多少台幣']
+    testLoki(inputLIST, ['Exchange'])
+    print("")
+
 def getTodayExchangeRate(): # get ExchangeRate table
-    response = requests.get("https://tw.rter.info/capi.php")
+    response = get("https://tw.rter.info/capi.php")
     rateDICT = response.json()
     return rateDICT
 
@@ -210,16 +293,16 @@ def amountSTRconvert(inputSTR): # convert [X元] into [number X]
         resultDICT["number"] = 1
     else:
         resultDICT = articut.parse(inputSTR, level="lv3") # 有換匯金額就轉成Number
-    return resultDICT["number"]
+    return resultDICT["number"][inputSTR]
 
 if __name__ == "__main__": # python的程式進入點
     inputLIST = ["400元美金可以兌換台幣多少"]
     resultDICT = runLoki(inputLIST)
     print("Result => {}".format(resultDICT))
 
-    src = moneyName(resultDICT["source"])
-    tgt = moneyName(resultDICT["target"])
-    amt = amountSTRconvert(resultDICT['amount'])[resultDICT['amount']]
+    src = moneyName(resultDICT["source"][0])
+    tgt = moneyName(resultDICT["target"][0])
+    amt = amountSTRconvert(resultDICT['amount'][0])
 
     rateDICT = getTodayExchangeRate() # get ExchangeRate table
     # calculate ExchangeRate by [source -> USD -> target]
