@@ -1,0 +1,5130 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "term_noun": [
+            "遠距離",
+            "另一半",
+            "男友",
+            "女友",
+            "伴侶",
+            "老媽子"
+        ],
+        "term_idiom": [
+            "囉哩八唆",
+            "長期以來",
+            "三更半夜"
+        ]
+    },
+    "utterance": {
+        "對方工時很長": {
+            "id": "4e099d76-2b2c-4ace-a669-6e875e15c4bd",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "對方",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "工",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "時",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很長",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "老公每天加班": {
+            "id": "201c989c-d8de-4314-8130-ee9663d5c44a",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "老公",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "每天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "上班",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "值班",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "勞動",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "工作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣笑",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運轉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "請假",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "雇主",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "輪班",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "休假",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "排班",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出勤",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "補休",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補課",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "加班",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "下班只想靜一靜": {
+            "id": "ace5e292-db66-4c53-abef-190502ba5647",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "只",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "假想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "冥想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想像",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想念",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想起",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "料想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "暗想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "企盼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假設",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "希望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思考",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "感到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掂量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揣測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "期冀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自認",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "更想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願意",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打算",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "想",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "靜",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "一",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "靜",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "下班後不想被煩": {
+            "id": "0a01e582-32ca-4bd7-90c6-5e2e24639ee7",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "假想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "冥想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想像",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想念",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想起",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "料想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "暗想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "企盼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假設",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "希望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思考",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "感到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掂量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揣測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "期冀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自認",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "願",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願意",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打算",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "想",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_lightVerb",
+                    "text": "被",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "煩人",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "煩擾",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "作弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "喧擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嘲弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "困擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "干擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "影響",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "戲弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "打擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "打攪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招惹",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "挑弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "挑逗",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "捉弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "搔擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "搗亂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撩惹",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撩撥",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撩逗",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擾亂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擾動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "攪擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "添亂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猥褻",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "纏擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "調弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "逗弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "騷擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "騷攪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "驚動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "服氣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擔心了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "疼",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "狐疑",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "為難",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "扼腕",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "心煩",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "氣惱",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "懊惱",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "掃興",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擔心",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "煩",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "下班我不想回家": {
+            "id": "ca9afc01-5326-4330-a8cf-3052b435eec6",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "假想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "冥想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想像",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想念",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想起",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "料想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "暗想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "企盼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假設",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "希望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思考",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "感到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掂量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揣測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "期冀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自認",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "更想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願意",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打算",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "想",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "返家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回老家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出門",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回鄉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進房",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回家了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "回家",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "下班後我不想被吵": {
+            "id": "3346162f-dd44-4faa-a827-fbb12074511e",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "假想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "冥想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想像",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想念",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想起",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "料想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "暗想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "企盼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假設",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "希望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思考",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "感到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掂量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揣測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "期冀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自認",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "更想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願意",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打算",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "想",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_lightVerb",
+                    "text": "被",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "吵嘴",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "吵架",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "爭吵",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "作弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "取笑",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "喧擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嘲弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "困擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "干擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "影響",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "戲弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "打擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "打攪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "折騰",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招惹",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "挑弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "挑逗",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "捉弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "搔擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "搗亂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撩惹",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撩撥",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撩逗",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擦傷",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擾亂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擾動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "施虐",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "煩憂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "煩擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "爭執",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猥褻",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "纏夾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "纏擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "調弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "調笑",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "逗弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "騷擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "騷攪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "聊了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽話",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吵到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "疼",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吵鬧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "玩了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "哭了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "哭",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聊",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "玩",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "吵",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "下班後我只想放鬆": {
+            "id": "e58ce79e-c129-4d21-9f29-decdb073bddf",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "只",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "假想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "冥想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想像",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想念",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想起",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "料想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "暗想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "企盼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假設",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "希望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思考",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "感到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掂量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揣測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "期冀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自認",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "更想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願意",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打算",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "想",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放空",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "放開",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆動",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆垮",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆懈",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆綁",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆脫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆開",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "散裝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "減壓",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "紓解",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "脫落",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "解開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "舒緩",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舒展",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "調適",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舒壓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "熱敷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "紓壓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "流汗",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "降溫",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "放鬆",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "下班都不按時回家": {
+            "id": "1a10c3a7-d4d6-4d5b-90ef-e544c2f723fa",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "按壓",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "按捺",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "抑止",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "排擠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "推倒",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "推出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "推動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "推進",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "推開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撥開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撩開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擠占",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猛進",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "硬逼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "羈絆",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "設限",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "進取",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "依據",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "根據",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "依照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "依",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "按著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "按照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遵從",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遵循",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遵照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "依此",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "按",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "時",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "返家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回老家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出門",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回鄉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進房",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回家了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "回家",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "對方下班都不回家": {
+            "id": "d9135f56-44e6-4b62-8f31-668033a29ab7",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "對方",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "返家",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "回去",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "回來",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "回老家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出門",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回鄉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進房",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回家了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "回家",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "老公回家都不下班": {
+            "id": "1e61e3fc-88fb-49c5-b693-dcd029b27d44",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "老公",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "返家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "回老家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出門",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回鄉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進房",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回家了",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "回家",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "下班後我不想被女友吵": {
+            "id": "4a8f336b-670a-4289-9d96-26aed3f8663d",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "假想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "冥想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想像",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想念",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想起",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "料想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "暗想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "企盼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假設",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "希望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思考",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "感到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掂量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揣測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "期冀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自認",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "願",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願意",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打算",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "想",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_lightVerb",
+                    "text": "被",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "女友",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "吵嘴",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "吵架",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "爭吵",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "作弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "取笑",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "喧擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嘲弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "困擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "干擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "影響",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "戲弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "打擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "打攪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "折騰",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招惹",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "挑弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "挑逗",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "捉弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "搔擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "搗亂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撩惹",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撩撥",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "撩逗",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擦傷",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擾亂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擾動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "施虐",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "煩憂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "煩擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "爭執",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猥褻",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "纏夾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "纏擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "調弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "調笑",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "逗弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "騷擾",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "騷攪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "玩了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽話",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聊了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吵到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "疼",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "哭了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吵鬧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "哭",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聊",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "玩",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "吵",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "下班後我只想好好放鬆": {
+            "id": "aaf8ac83-41a3-44f6-8e22-4fb84ae5b6df",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_period",
+                    "text": "後",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "只",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "假想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "冥想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想像",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想念",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想起",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "料想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "暗想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "企盼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假設",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "希望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思考",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "感到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掂量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揣測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "期冀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自認",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "願",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願意",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打算",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "想",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "好好",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放空",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "放開",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆動",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆垮",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆懈",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆綁",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆脫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鬆開",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "散裝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "減壓",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "紓解",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "脫落",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "解開",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "降溫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舒展",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舒緩",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "熱敷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "流汗",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "紓壓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "調適",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舒壓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "放鬆",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "男友下班都不知道去哪": {
+            "id": "e7f7b64a-6196-4135-a8ab-7c2276c8cf22",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "男友",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "得知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "明知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "深知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "獲知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "知悉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "知情",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "知曉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "知足",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "了解",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得悉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懂得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掌握",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "曉得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "熟悉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "熟諳",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "熟識",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "獲悉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看懂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看穿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞭解",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "確信",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽得懂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽懂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "記得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "認出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "認得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "認識",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "識得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "辨認出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "知",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "驚覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "發覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "知道了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "意識到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "明白了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "明白",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "知道",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "去了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "趕去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "去",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "哪",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "老公下班都不知道去哪裡": {
+            "id": "49df6f6c-9050-4287-82b6-2b67ce622db9",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "老公",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "得知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "明知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "深知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "獲知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "知悉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "知情",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "知曉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "知足",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "了解",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "得悉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懂得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掌握",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "曉得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "熟悉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "熟諳",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "熟識",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "獲悉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看懂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看穿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞭解",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "確信",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽得懂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽懂",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "記得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "認出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "認得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "認識",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "識得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "辨認出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "知",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "驚覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "發覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "知道了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "意識到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "明白了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "明白",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "知道",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "去了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "趕去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "去",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhereQ",
+                    "text": "哪裡",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "下班回家只想一個人靜一靜": {
+            "id": "56ecee42-75de-443b-8f18-b1979e8e98f3",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "放學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "下課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就寢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下車",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用膳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收假",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "下班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "返家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回老家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出門",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回鄉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進房",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回家了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "回家",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "只",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "假想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "冥想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "回想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想像",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想念",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想起",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "料想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "暗想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預想",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "企盼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假設",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "希望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "思考",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "感到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷念",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掂量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揣測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "期冀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "猜測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祈願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "祝願",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "自認",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "願",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "願意",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打算",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "試",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "想",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一個",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "人",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "靜",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "一",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "靜",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "對方每天加班到很晚才回家": {
+            "id": "a0583d18-4dcc-4049-b6a9-bfc012dfd79d",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "對方",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "每天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "上班",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "值班",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "勞動",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "工作",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "賣笑",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運轉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "請假",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "雇主",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "輪班",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "休假",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補眠",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "排班",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "放假",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出勤",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "補休",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "補課",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "加班",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到約",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到受",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到離",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到回",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到隨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到愛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很晚",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "才",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "返家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回老家",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出門",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回鄉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進房",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "起床",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回家了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收工",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "回家",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "你是一個很有幫助的感情助理，請擬定 3 個回覆。",
+        "system": "你是一個繁體中文的感情助理。",
+        "assistant": "問題「{{Q1}}, {{Q2}}」，答案「{{A1}}, {{A2}}」。"
+    },
+    "document": []
+}

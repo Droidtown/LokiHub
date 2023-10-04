@@ -1,0 +1,542 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "term_noun": [
+            "遠距離",
+            "另一半",
+            "男友",
+            "女友",
+            "伴侶",
+            "老媽子"
+        ],
+        "term_idiom": [
+            "囉哩八唆",
+            "長期以來",
+            "三更半夜"
+        ]
+    },
+    "utterance": {
+        "一直遠距離": {
+            "id": "662293f6-8192-4030-9a35-d527cad07c0d",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "一直",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距離",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "在不同縣市工作": {
+            "id": "5acd700e-8e10-4151-a1e3-645859fbabe3",
+            "argument": [
+                {
+                    "pos": "FUNC_inner",
+                    "text": "在",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "不同",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "縣市",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "勞動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣笑",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運轉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "打工",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拍戲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "工作過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休假",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "工作了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "待業",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "加班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "在職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "服役",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "工作",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我們遠距離很久了": {
+            "id": "4d4e1cb2-d2b7-4a9a-8e2b-c318258ff081",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我們",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距離",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很久",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ASPECT",
+                    "text": "了",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "長期以來都遠距離": {
+            "id": "ea921776-268c-43d2-9067-07ab5ed1bc24",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "長期以來",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距離",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "和對方在不同縣市工作": {
+            "id": "ea3e9c82-321f-413e-8f78-b05b115f895a",
+            "argument": [
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "和",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "對方",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "在",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "不同",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "縣市",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "勞動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣笑",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運轉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "打工",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拍戲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "工作過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "休假",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "工作了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "待業",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "加班",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "在職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "服役",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "工作",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "多年以來一直保持著遠距離。": {
+            "id": "62440170-6aea-4f32-8867-08ccc70423ab",
+            "argument": [
+                {
+                    "pos": "TIME_year",
+                    "text": "多年",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "以來",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "一直",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "保住",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保全",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保存",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保管",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保藏",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保養",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持守",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持續",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "維持",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "留存",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "養護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保持",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "延續著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "持續著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保持了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "堅持著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保存著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維持著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維持",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "延續",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "堅持",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保存",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "持續",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "保持著",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距離",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "。",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "我和對方一直以來都是遠距離": {
+            "id": "09fde9cb-0920-46a9-8896-da4f9cd2d04d",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "和",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "對方",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "一直",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "以來",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "遠距離",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
