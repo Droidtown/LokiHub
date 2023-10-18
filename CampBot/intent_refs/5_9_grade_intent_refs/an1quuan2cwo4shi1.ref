@@ -1,0 +1,2614 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v266",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "優惠": [
+            "折扣",
+            "團報",
+            "團體報名",
+            "團報優惠"
+        ],
+        "地點": [
+            "位置",
+            "地方"
+        ],
+        "小孩": [
+            "孩子",
+            "學生",
+            "小孩子",
+            "小朋友"
+        ],
+        "年紀": [
+            "年級",
+            "年齡"
+        ],
+        "活動": [
+            "營隊",
+            "行程",
+            "課程"
+        ],
+        "照片": [
+            "圖片",
+            "影片",
+            "相片"
+        ],
+        "經驗": [
+            "實力",
+            "知識",
+            "硬實力",
+            "軟實力",
+            "知識點"
+        ],
+        "老師": [
+            "工作人員",
+            "營隊方",
+            "教師",
+            "師資"
+        ],
+        "費用": [
+            "價格",
+            "收費",
+            "花費",
+            "金額",
+            "費用"
+        ],
+        "as_camp": [
+            "創新創業營",
+            "最重要的小事營",
+            "世界和平遊戲營"
+        ],
+        "as_noun": [
+            "中午",
+            "休息時間",
+            "冬令營",
+            "夏令營",
+            "戶外",
+            "紀錄",
+            "行前",
+            "過夜",
+            "才藝",
+            "創業"
+        ],
+        "problem": [
+            "問題",
+            "情況",
+            "狀況",
+            "需求"
+        ],
+        "as_insur": [
+            "意外險",
+            "旅平險",
+            "醫療險",
+            "保險"
+        ],
+        "親師群": [
+            "Line群",
+            "群組",
+            "賴群"
+        ],
+        "吃的東西": [
+            "乖乖",
+            "午餐",
+            "宵夜",
+            "巧克力",
+            "早餐",
+            "晚餐",
+            "樂事",
+            "泡麵",
+            "洋芋片",
+            "糖果",
+            "零食",
+            "餅乾",
+            "點心"
+        ]
+    },
+    "utterance": {
+        "不適": {
+            "id": "48279b3f-dca3-4086-9af8-666eced9293d",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "不適",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不舒服": {
+            "id": "948cc398-38c9-4b67-ae90-83def0c16399",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "舒服",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "會受傷": {
+            "id": "85331082-386e-4a7c-8609-59dae5d2e041",
+            "argument": [
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "弄傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "打傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "砍傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "受害",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "受損",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "受虐",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃虧",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "容忍",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "隱忍",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拉傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中彈",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "掛彩",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "扭傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "傷患",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "負傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "喪命",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擦傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "摔傷",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "受傷",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "有危險": {
+            "id": "4d27b5c0-a706-45c1-a658-53c9a7cc9120",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "危險",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "發生危險": {
+            "id": "eb51ee23-8811-4736-9e9c-5c7b29d7aeb4",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "出生",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "來到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "到來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "到達",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "抵達",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "案發",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "發生過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "爆發",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遇到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "爆發了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遭逢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "重演",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遭遇",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "釀成",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "發生了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出現",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "發生",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "危險",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "碰上危險": {
+            "id": "b3439775-ba84-42c8-98ef-ba7782541376",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "碰到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "碰見",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "碰面",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "撞見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "會合",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "相聚",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "相見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "相逢",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "相遇",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "遇到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "遇見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "輸給",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "扯",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演搶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更遇",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剛升",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遇",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "正遇",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "盯",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "強碰",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "碰",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "RANGE_locality",
+                    "text": "上",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "危險",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "確保安全": {
+            "id": "76866572-9216-4b2d-9c27-3973d2e39033",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保修",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保固",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保管",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保障",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "力保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擔保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確信",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "昭示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "避免",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維繫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "期",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "鞏固",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "增進",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "確保",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "安全",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "受傷怎麼辦": {
+            "id": "9803d21c-b083-45e8-81b7-dec66248d779",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "弄傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "打傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "砍傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "受害",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "受損",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "受虐",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃虧",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "容忍",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "隱忍",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "中彈",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "扭傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "掛彩",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拉傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "傷患",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "摔傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "喪命",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "負傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擦傷",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "受傷",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "籌辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "承辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舉辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "主辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦副",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦理",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "合辦",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "辦",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "有安全措施": {
+            "id": "3420e699-8fd6-418d-9429-7e554e57dbdb",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "安全",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "措施",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "有防護措施": {
+            "id": "051b4f2f-abfa-4c5b-a813-1fe5818419d8",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "守護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "護著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "護衛",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "防備",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "防守",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "防禦",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "防衛",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "值守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "守住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "守望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "守禦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扼守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "把關",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "死守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "鎮守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "防寒",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防火",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防風",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防盜",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防震",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防災",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防範",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防毒",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防水",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "防護",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "措施",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "身體有狀況": {
+            "id": "a2899ff2-4146-4b9c-b747-5ccdb6a6831e",
+            "argument": [
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "身體",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "狀況",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "如何處理受傷": {
+            "id": "9a54051a-7156-4f27-be3c-6ae732af678b",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "懲處",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "處分",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "處治",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "處置",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "處罰",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦理",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "交涉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "做買賣",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "制裁",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "商談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "對付",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "應付",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懲治",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懲罰",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懲辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改過",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "教養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "治病",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "矯治",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "稱作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "管教",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "要求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "調教",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "責罰",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "醫治",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "重罰",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "過濾",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "解決",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "處理過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "分揀",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "判讀",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "處理不",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "應變",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防腐",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "管理",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "處理",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "弄傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "打傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "砍傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "受害",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "受損",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "受虐",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃虧",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "容忍",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "隱忍",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "中彈",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "扭傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "掛彩",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拉傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "傷患",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "摔傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "喪命",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "負傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擦傷",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "受傷",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "出現危險的情況": {
+            "id": "ee7080d6-fe61-49fb-a2ae-5dcbf985a672",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "呈現",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "展現",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "浮現",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "現形",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "現身",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "表現",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "顯現",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "來到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "到來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "到達",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "展示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "引領",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "抵達",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指引",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "揭示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "浮出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "演出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "演示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "當做",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "表演",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "表示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "賣弄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "露出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "顯得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "顯示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "顯露出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "出沒",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "冒出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "消失",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出現過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "登場",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出現了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遇到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "發生",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "出現",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "危險",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "情況",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "受傷了該怎麼辦": {
+            "id": "bf59ec1d-451d-4468-8676-d7a178b8dc2e",
+            "argument": [
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "弄傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "打傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "砍傷",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "受害",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "受損",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "受虐",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃虧",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "容忍",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "隱忍",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "弄傷了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "生病了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "傷了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "傷到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "折斷了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "撞傷了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "傷到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "摔斷了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "輕撫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打中了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "折斷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "弄傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "生病",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "摔斷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "撞傷",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打中",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "受傷了",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "該",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "籌辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "承辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舉辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "主辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦副",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦理",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "合辦",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "辦",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "有什麼安全措施": {
+            "id": "e9604cb9-1a00-491a-8dc1-feaae6ec9ddc",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "安全",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "措施",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "有安全保護措施": {
+            "id": "b6384930-eda9-458e-b052-8c8a5e0a7102",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "安全",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保住",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保全",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保存",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保持",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保藏",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保衛",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保障",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "守護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "護著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "護衛",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "防護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "值守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "守住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "守望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "守禦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扼守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "把關",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "維持",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "鎮守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "防守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "防禦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保育",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "愛護",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "捍衛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拯救",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "約束",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "保護",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "措施",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "有沒有安全措施": {
+            "id": "aba1164c-57c9-4be0-8c92-f4d07a6a5c20",
+            "argument": [
+                {
+                    "pos": "CLAUSE_AnotAQ",
+                    "text": "有沒有",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "安全",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "措施",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "有相關的安全措施": {
+            "id": "4f5e21d2-f408-40d4-84ce-952d662f56e8",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "相關",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "安全",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "措施",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "在你們那受傷怎麼辦": {
+            "id": "df5bf8fd-0b20-4093-af4a-44f324c4ded4",
+            "argument": [
+                {
+                    "pos": "FUNC_inner",
+                    "text": "在",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "你們",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_determiner",
+                    "text": "那",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "受傷",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "籌辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "承辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "舉辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "主辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦副",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦理",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "合辦",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "辦",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "你是一個和善的助理，請依上文擬定五句回覆「{{UTTERANCE}}」的句子",
+        "system": "你是一個繁體中文營隊客服助理",
+        "assistant": "問題「{{Q}}」，答案「{{A}}」"
+    },
+    "document": [
+        {
+            "title": "安全措施",
+            "content": {
+                "A": "基本上我們都會在教室活動，孩子並不會有太多的危險。如果到室外的話，我們也會確保有一位以上的玩伴陪著孩子出去，在安全的情況下活動。",
+                "Q": "營隊有什麼安全措施"
+            }
+        },
+        {
+            "title": "受傷",
+            "content": {
+                "A": "我們都備有醫療箱，可以簡單幫孩子清理傷口，也會第一時間通知爸爸媽媽。",
+                "Q": "受傷了怎麼辦?"
+            }
+        }
+    ]
+}

@@ -1,0 +1,1498 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v266",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "優惠": [
+            "折扣",
+            "團報",
+            "團體報名",
+            "團報優惠"
+        ],
+        "地點": [
+            "位置",
+            "地方"
+        ],
+        "小孩": [
+            "孩子",
+            "學生",
+            "小孩子",
+            "小朋友"
+        ],
+        "年紀": [
+            "年級",
+            "年齡"
+        ],
+        "活動": [
+            "營隊",
+            "行程",
+            "課程"
+        ],
+        "照片": [
+            "圖片",
+            "影片",
+            "相片"
+        ],
+        "經驗": [
+            "實力",
+            "知識",
+            "硬實力",
+            "軟實力",
+            "知識點"
+        ],
+        "老師": [
+            "工作人員",
+            "營隊方",
+            "教師",
+            "師資"
+        ],
+        "費用": [
+            "價格",
+            "收費",
+            "花費",
+            "金額",
+            "費用"
+        ],
+        "as_camp": [
+            "創新創業營",
+            "最重要的小事營",
+            "世界和平遊戲營"
+        ],
+        "as_noun": [
+            "中午",
+            "休息時間",
+            "冬令營",
+            "夏令營",
+            "戶外",
+            "紀錄",
+            "行前",
+            "過夜",
+            "才藝",
+            "創業"
+        ],
+        "problem": [
+            "問題",
+            "情況",
+            "狀況",
+            "需求"
+        ],
+        "as_insur": [
+            "意外險",
+            "旅平險",
+            "醫療險",
+            "保險"
+        ],
+        "親師群": [
+            "Line群",
+            "群組",
+            "賴群"
+        ],
+        "吃的東西": [
+            "乖乖",
+            "午餐",
+            "宵夜",
+            "巧克力",
+            "早餐",
+            "晚餐",
+            "樂事",
+            "泡麵",
+            "洋芋片",
+            "糖果",
+            "零食",
+            "餅乾",
+            "點心"
+        ]
+    },
+    "utterance": {
+        "分在一組": {
+            "id": "c53f743a-4583-4c8d-801b-2f9bd81a4968",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "分成",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "劃分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "細分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "共分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "略分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "概分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "粗分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "分作",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "區分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下分",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "在",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一組",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "劃分小組": {
+            "id": "7e974cad-a89e-4578-8fc2-0ea944969eb1",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "分治",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "分辨",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "分配",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "分隔",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "區分",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "瓜分",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "區辨",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "分類",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拆分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "統稱",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "細分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "分成",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "分割",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "劃定",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "界定",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "劃分",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "小組",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "安排分組": {
+            "id": "88fb6b5a-82ec-4775-8374-dcdcfbf9c049",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "安放",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "安置",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "安設",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "安頓",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "排列",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "排名",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "排序",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "排檢",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "排班",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "排行",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "排錯",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "編排",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "鋪排",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "企劃",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "創記錄",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "創造",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "協調",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "待遇",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "打算",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "搬鋪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "搭配",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "操辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擘劃",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擺放",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擺設",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "改編",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "歸入",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "籌劃",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "籌辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "約出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "約見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "編製",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "置放",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "興辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "規劃",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "設攤",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "開站",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "開辦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "開闢",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "邀請",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "編配",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "分派",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "規畫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "安排了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "挑選",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "調動",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指派",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "安排",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "抽籤",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "汰賽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "同分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "附加",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "總分",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分組",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "怎麼分組": {
+            "id": "067ad7f7-51db-4830-af38-891f041a7e58",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "抽籤",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "汰賽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "同分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "附加",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "總分",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分組",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "進行分組": {
+            "id": "ca95a06d-dc02-42c2-8824-d99b85a0d629",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "沿用",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "開展",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進行了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "展開",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "完成",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "實施",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦理",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進行過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "作出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "通過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進行著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "通",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "進行",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "抽籤",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "汰賽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "同分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "附加",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "總分",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分組",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "分在不同組": {
+            "id": "f6f233e0-a0c0-41aa-a37d-2c163dd3796c",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "分成",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "劃分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "細分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "共分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "略分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "概分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "粗分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "分作",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "區分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "下分",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "在",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "不同",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "組",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "與好友同組。": {
+            "id": "3b8aeac1-f143-46d7-a40d-45578ff8c388",
+            "argument": [
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "與",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "好友",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "同組",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "。",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "誰會負責分組": {
+            "id": "a4c61824-e8a1-4ddc-87be-d8a34c598a98",
+            "argument": [
+                {
+                    "pos": "CLAUSE_WhoQ",
+                    "text": "誰",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "做買賣",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "交給",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "承擔",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "肩負",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "受託",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擔當",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "掌管",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "統籌",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "掌理",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "分管",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擔負",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "負責",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "抽籤",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "汰賽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "同分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "附加",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "總分",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分組",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "跟朋友同一組": {
+            "id": "6cc0b999-2bc6-4a4c-920f-c9f0f8dc389f",
+            "argument": [
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "跟",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "朋友",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "同",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "一組",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "老師要進行分組": {
+            "id": "a5428cd4-1ddd-4513-93ef-a0bd61bae890",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "老師",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "想要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "需要",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "想拿",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "想買",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "渴求",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "真要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "得照",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更要",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "需",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "餓",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "要",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "沿用",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "開展",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進行了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "展開",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "完成",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "實施",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦理",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進行過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "作出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "通過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進行著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "通",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "進行",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "抽籤",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "汰賽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "同分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "附加",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "總分",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分組",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "分組方法是怎樣的": {
+            "id": "c8e021cd-06be-4d99-ae98-9ab85475af1c",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "抽籤",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "汰賽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "同分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "附加",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "總分",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分組",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "方法",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "怎樣",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "分組的方式是什麼": {
+            "id": "f18e81b2-886e-4285-8639-3f744f9951dc",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "抽籤",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "汰賽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "同分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "附加",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "總分",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分組",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "方式",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "由老師來進行分組": {
+            "id": "b0c8d1f4-c48f-4c88-b11a-397931e5825a",
+            "argument": [
+                {
+                    "pos": "FUNC_inner",
+                    "text": "由",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "老師",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "上來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "下來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "來到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "前來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "進來",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "值來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "性來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來語",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來第",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "端來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來文",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "來",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "沿用",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "開展",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進行著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "通過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "展開",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進行了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦理",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "作出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "實施",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "進行過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "完成",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "通",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "進行",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "抽籤",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "汰賽",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "同分",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "附加",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "總分",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分組",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "你是一個和善的助理，請依上文擬定5句回覆{{UTTERANCE}}的句子",
+        "system": "你是一個繁體中文助理",
+        "assistant": "問題{{Q}}，答案{{A}}"
+    },
+    "document": [
+        {
+            "title": "分組方式",
+            "content": {
+                "A": "分組前，活動引導員會和孩子討論和同齡同學、混齡同學在一組的情況與可能發生的事情會有哪些。我們讓孩子了解做了這些選擇後，有可能會發生哪些情形，並讓孩子自行分組，而我們會確保每位孩子都有夥伴。",
+                "Q": "營隊會怎麼分組？"
+            }
+        }
+    ]
+}
