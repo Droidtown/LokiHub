@@ -1,0 +1,2134 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v266",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "優惠": [
+            "折扣",
+            "團報",
+            "團體報名",
+            "團報優惠"
+        ],
+        "地點": [
+            "位置",
+            "地方"
+        ],
+        "小孩": [
+            "孩子",
+            "學生",
+            "小孩子",
+            "小朋友"
+        ],
+        "年紀": [
+            "年級",
+            "年齡"
+        ],
+        "活動": [
+            "營隊",
+            "行程",
+            "課程"
+        ],
+        "照片": [
+            "圖片",
+            "影片",
+            "相片"
+        ],
+        "經驗": [
+            "實力",
+            "知識",
+            "硬實力",
+            "軟實力",
+            "知識點"
+        ],
+        "老師": [
+            "工作人員",
+            "營隊方",
+            "教師",
+            "師資"
+        ],
+        "費用": [
+            "價格",
+            "收費",
+            "花費",
+            "金額",
+            "費用"
+        ],
+        "as_camp": [
+            "創新創業營",
+            "最重要的小事營",
+            "世界和平遊戲營"
+        ],
+        "as_noun": [
+            "中午",
+            "休息時間",
+            "冬令營",
+            "夏令營",
+            "戶外",
+            "紀錄",
+            "行前",
+            "過夜",
+            "才藝",
+            "創業"
+        ],
+        "problem": [
+            "問題",
+            "情況",
+            "狀況",
+            "需求"
+        ],
+        "as_insur": [
+            "意外險",
+            "旅平險",
+            "醫療險",
+            "保險"
+        ],
+        "親師群": [
+            "Line群",
+            "群組",
+            "賴群"
+        ],
+        "吃的東西": [
+            "乖乖",
+            "午餐",
+            "宵夜",
+            "巧克力",
+            "早餐",
+            "晚餐",
+            "樂事",
+            "泡麵",
+            "洋芋片",
+            "糖果",
+            "零食",
+            "餅乾",
+            "點心"
+        ]
+    },
+    "utterance": {
+        "是小班制": {
+            "id": "564ce936-f7ab-4014-b2c5-80193088dbed",
+            "argument": [
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "小班",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "制",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "班級人數": {
+            "id": "810667cf-44c9-46b1-a4d5-ada76d576698",
+            "argument": [
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "班級",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "人數",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "什麼是玩伴": {
+            "id": "f340912e-e6f5-40b0-a2a3-4d43f80c7b41",
+            "argument": [
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "玩伴",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "帶幾個小孩": {
+            "id": "1fab0399-f13b-40c4-99ac-20a39f2bd7a0",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "佩帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "夾帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶病",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶走",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "挾帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "攜帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "隨帶",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "佩戴",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "承接",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "披掛",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "穿破",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "肩扛",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "背負",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "負載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "載攜",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "運送",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "配戴",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "馱運",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "常帶",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶拉",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "送",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "忙趕",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶讓",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶灘",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "忙送",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶等",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有帶",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "帶",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "幾",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_classifier",
+                    "text": "個",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "小孩",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "玩伴是什麼": {
+            "id": "18f13164-11af-4648-ae12-b0b0e416835f",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "玩伴",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "師生比是多少": {
+            "id": "b6d113ea-f917-4159-9573-b83474482ec7",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "師生",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "比起",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "穿比",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有比",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "遠比",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到比",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "變得比",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "老比",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "更比",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "愛芝",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "受比",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "比",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "控制教學品質": {
+            "id": "86167255-700c-4912-856c-f80abc095173",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "掌控",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "操控",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "操縱",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "調節",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "管控",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "調控",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "支配",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "監控",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "控管",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "壓制",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "控制",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "授課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "教育",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學習",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "教材",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上課",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "教學",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "玩伴在做什麼": {
+            "id": "9e1fdebc-81de-43a6-8685-80f51a655056",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "玩伴",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ASPECT",
+                    "text": "在",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "作用",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假裝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "冒充",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "創作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "創造",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "喬裝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "孕育",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "攝製",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "生出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "產出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "裝作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "製作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "作",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "做出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "做了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "做過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "做事",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "新做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "做著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指做",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "做",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "確保教學品質": {
+            "id": "a82e79b9-73c1-472a-87a0-2bf28d15ef04",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保修",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保固",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保管",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保障",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "力保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擔保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確信",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "昭示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "避免",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維繫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "期",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "鞏固",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "增進",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "確保",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "授課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "教育",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學習",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "教材",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上課",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "教學",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "確保教師素質": {
+            "id": "c955b204-6b67-4e30-8503-3a4f41c2f16d",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保修",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保固",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保管",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保障",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "力保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擔保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確信",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "昭示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "避免",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "防止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維繫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "期",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "鞏固",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "增進",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "確保",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "教師",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "素質",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "管理教學品質": {
+            "id": "6f4178c4-bbdc-471f-a653-7cf238944ad4",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "打理",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "治理",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "監管",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "管轄",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "下令",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "主導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "主持",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "主演",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "命令",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嚮導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "執導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶領",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "引導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "引領",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指引",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "操持",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "支配",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "教導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "率領",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "監查",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "監督",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "監製",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "督促",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "督導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "統治",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "調度",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "調控",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "領導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "控管",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "託管",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "管制",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "管控",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "經營",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "管理",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "授課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "教育",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學習",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "教材",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上課",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "教學",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "維護教學品質": {
+            "id": "d51ef391-541d-40fa-a787-80208ed04a46",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "守護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "維持",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "維繫",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "護著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "護衛",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "防護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "養護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "主持",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保持",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保養",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "力保",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "堅持",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "守禦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "持守",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "秉持",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保衛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "鞏固",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼顧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "捍衛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保障",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "確保",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "監控",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "管理",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "維護",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "授課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "教育",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學習",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "教材",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上課",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "教學",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "師生比例是多少": {
+            "id": "a3dcdb9f-597b-460c-b064-ed9f8f2cf4c2",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "師生比例",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "如何把關教學品質": {
+            "id": "affa7c43-3aa4-4c59-ab9b-cefd5701870f",
+            "argument": [
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "如何",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_lightVerb",
+                    "text": "把",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "有關",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "關上",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "關心",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "關注",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "關涉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "關緊",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "關門",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "關閉",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "倒閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "封閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "截止",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "結算",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "緊閉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "近親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "閉塞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "關下",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關路",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原關",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "錄關",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關等",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "設辦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關衛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關段",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關間",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "關縣",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "關",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "授課",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "教育",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "學習",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辦學",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "教材",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上課",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "教學",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "確保營隊師資品質": {
+            "id": "fcfcec55-eb8a-4a6c-8c4d-709b48f496ac",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保修",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保固",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保管",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保障",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "力保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擔保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確信",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "昭示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "防止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "避免",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "鞏固",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維繫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "期",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "增進",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "確保",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "營隊",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "師資",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "品質",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "老師和學生的比例": {
+            "id": "818e7018-e543-4161-9d47-eb2e69404ceb",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "老師",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "和",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "學生",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "比例",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "師生之間的比例是多少": {
+            "id": "8f916061-8c55-4fb3-ab4d-c521d95ff4de",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "師生",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "之",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "間",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "比例",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "老師和學生的比例是多少？": {
+            "id": "ae6f9c96-462b-490e-bcd9-4072d5368b55",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "老師",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "和",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "學生",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "比例",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_HowQ",
+                    "text": "多少",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": "？",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "確保教師具備高水準的專業能力": {
+            "id": "ce61ee14-be45-49a9-9291-397accc2f576",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "保修",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保固",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保管",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保障",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "力保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擔保",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確信",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "確定",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "昭示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "防止",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維護",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "避免",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "鞏固",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "維繫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "期",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "增進",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "保證",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "確保",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "教師",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼備",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼具",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "符合",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "具備了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "缺少",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "具有了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "具有",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "具備",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "高水準",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "專業",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "能力",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "你是一個和善的助理，請依上文擬定五句回覆「{{UTTERANCE}}」的句子",
+        "system": "你是一個繁體中文營隊客服助理",
+        "assistant": "問題「{{Q}}」，答案「{{A}}」"
+    },
+    "document": [
+        {
+            "title": "營隊品質",
+            "content": {
+                "A": "玩轉營隊的引導員，至少培訓半年到一年的時間，經過教學現場的歷練，熟悉玩轉學校的核心理念與精神，確保可以即時回應孩子的需求與玩伴的疑問。\n營長則是豐富經驗的引導員、且熟悉玩轉的內部溝通方式，確保可以接下現場暫時無法處理的問題。\n而玩伴通常會是外部招募的夥伴，不過也會經過兩天的基礎訓，並且經過篩選才能擔任，在營隊前一個月，每個營隊的工作人員會至少開過多次會議確認狀態，以及營隊前一天的行前訓，才會進入營隊接觸孩子。",
+                "Q": "怎麼確保營隊品質"
+            }
+        },
+        {
+            "title": "營隊師生比",
+            "content": {
+                "A": "玩轉營隊都會是以小組的方式進行，除了帶領的活動的引導員以外，還會有營長注意營隊內容的進行，另外每 4-5人會安排一個陪伴孩子的工作人員，我們稱呼為「玩伴」。",
+                "Q": "營隊的師生比是多少？"
+            }
+        }
+    ]
+}

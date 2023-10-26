@@ -1,0 +1,2091 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v266",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "保險": [
+            "意外險",
+            "旅平險",
+            "醫療險"
+        ],
+        "優惠": [
+            "團報",
+            "團報優惠",
+            "團體報名",
+            "折扣"
+        ],
+        "問題": [
+            "事情",
+            "事項",
+            "問題",
+            "情況",
+            "狀況",
+            "需求"
+        ],
+        "地點": [
+            "位置",
+            "地址",
+            "地方",
+            "場地"
+        ],
+        "小孩": [
+            "孩子",
+            "學生",
+            "寶貝",
+            "小孩",
+            "小孩子",
+            "小朋友"
+        ],
+        "年紀": [
+            "年級",
+            "年齡"
+        ],
+        "教材": [
+            "教具",
+            "課表"
+        ],
+        "活動": [
+            "營隊",
+            "行程",
+            "課程"
+        ],
+        "照片": [
+            "圖片",
+            "影片",
+            "相片"
+        ],
+        "經驗": [
+            "實力",
+            "知識",
+            "知識點",
+            "硬實力",
+            "軟實力"
+        ],
+        "老師": [
+            "工作人員",
+            "師資",
+            "教師",
+            "營隊方"
+        ],
+        "費用": [
+            "價格",
+            "定價",
+            "支出",
+            "收費",
+            "花費",
+            "費用",
+            "金額"
+        ],
+        "點心": [
+            "",
+            "下午茶",
+            "小點心",
+            "巧克力",
+            "泡麵",
+            "洋芋片",
+            "甜點",
+            "糖果",
+            "零食",
+            "餅乾",
+            "點心"
+        ],
+        "as_camp": [
+            "世界和平遊戲營",
+            "創新創業營",
+            "最重要的小事營",
+            "拯救玩具島",
+            "探索生態島"
+        ],
+        "as_noun": [
+            "中午",
+            "休息時間",
+            "保險",
+            "冬令營",
+            "創業",
+            "團報優惠",
+            "夏令營",
+            "戶外",
+            "才藝",
+            "早上",
+            "紀錄",
+            "行前",
+            "親師群",
+            "過夜"
+        ],
+        "problem": [
+            "問題",
+            "情況",
+            "狀況",
+            "需求"
+        ],
+        "as_insur": [
+            "保險",
+            "意外險",
+            "旅平險",
+            "醫療險"
+        ],
+        "親師群": [
+            "Line群",
+            "line群",
+            "群組",
+            "親師群",
+            "親師群組",
+            "賴群"
+        ],
+        "吃的東西": [
+            "乖乖",
+            "午餐",
+            "宵夜",
+            "巧克力",
+            "早餐",
+            "晚餐",
+            "樂事",
+            "泡麵",
+            "洋芋片",
+            "糖果",
+            "零食",
+            "餅乾",
+            "點心"
+        ]
+    },
+    "utterance": {
+        "拯救玩具島": {
+            "id": "7f788f42-69ca-424c-890b-7a7453bd052c",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "拯救玩具島是啥": {
+            "id": "0957f2ab-d7d2-4cbf-a004-009151cfea71",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "啥",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "談談拯救玩具島": {
+            "id": "e99528d2-ee55-4880-9376-fa404a776bd1",
+            "argument": [
+                {
+                    "pos": "ACTION_quantifiedVerb",
+                    "text": "談談",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "拯救玩具島在幹嘛": {
+            "id": "83fc49d1-140c-44e7-9069-5557df340642",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "在",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhyQ",
+                    "text": "幹嘛",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "拯救玩具島的細節": {
+            "id": "19312d58-a76a-4bd3-a136-631e74b997ef",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "細節",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "介紹一下拯救玩具島": {
+            "id": "de0fb8d2-13cf-46e5-bd5c-d11a71f4d3fe",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "推介",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳送",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳達",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "分享",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣傳",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "導入",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "引入",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "引見",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "引進",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "指示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講述",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "轉達",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "述說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講解",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "展示",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "推薦",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "解說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "簡述",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "介紹了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "導覽",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "介紹",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "一",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "下",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "分享一下拯救玩具島": {
+            "id": "bfa172f1-f8e8-4b0a-82f5-7208b7815908",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "共享",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "分憂",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "分擔",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "分攤",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳送",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "傳達",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣傳",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講述",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "轉達",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "述說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "暢談",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "談論",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "分享了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "介紹",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "上傳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "互動",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "對談",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聊天",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "訴說",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "分享",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "一",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "下",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "拯救玩具島在做什麼": {
+            "id": "4a3c1dc5-c7e5-47cf-87ee-a355e954af3b",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ASPECT",
+                    "text": "在",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "作用",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "假裝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "冒充",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "創作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "創造",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "喬裝",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "孕育",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "攝製",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "生出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "產出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "裝作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "製作",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "常做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "作",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "做事",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "做了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "做過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "做著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "做出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指做",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "新做",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "做",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "拯救玩具島幾天幾夜": {
+            "id": "7909af6d-8935-4620-85c9-2f422d8fc99d",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "幾天",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhenQ",
+                    "text": "幾",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "夜",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "拯救玩具島都在幹嘛": {
+            "id": "21deeb02-aacd-4a8b-aaf2-0ecac3962a87",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "在",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhyQ",
+                    "text": "幹嘛",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "拯救玩具島感覺很有趣": {
+            "id": "fc2dc37c-6218-49bd-9916-efb748bb47d1",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "嗅覺",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "察覺",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "感到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "感受",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "感知",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺察",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "偵測",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "懂得",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "掌握",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "明瞭",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "明知",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "明辨",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "測知",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "顯得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "錯覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑起來",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "感覺",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很有趣",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "拯救玩具島的詳細內容": {
+            "id": "cc43996b-952f-48bf-b192-2a183aad84e2",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "詳細",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nounHead",
+                    "text": "內容",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "有拯救玩具島的課表嗎": {
+            "id": "5dbaa15e-9674-4da8-8466-00792d77c728",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "課表",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "拯救玩具島具有什麼特點": {
+            "id": "3f306809-aaa4-4fe1-b048-7b17798a6735",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具備",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼具",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "佩帶",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "攜帶",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "負載",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "具備了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "具備",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "具有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "特",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "點",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "拯救玩具島的特色是什麼": {
+            "id": "2b918cd6-c48b-4258-a6f1-94e80d2b767f",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "特色",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "AUX",
+                    "text": "是",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "什麼",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "拯救玩具島聽起來很有趣": {
+            "id": "1ea7d292-086d-44f7-9c13-1fae34d022bc",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "看起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "難懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "顯得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演得",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "聽起來",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很有趣",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "拯救玩具島有哪些獨特之處": {
+            "id": "a3704134-d132-4547-a520-656e24b534de",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhatQ",
+                    "text": "哪些",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "獨特",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "之",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "處",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "拯救玩具島聽起來相當有趣": {
+            "id": "7fc62636-85d1-4203-a514-674e0a5d09b4",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "看起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "難懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "顯得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演得",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "聽起來",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "相當",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "有趣",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "拯救玩具島都在教室活動嗎": {
+            "id": "7e55f9b2-6863-49b9-9d5b-4d1ba88aee7d",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ASPECT",
+                    "text": "在",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "教室",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "活動",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "拯救玩具島聽起來挺有意思的": {
+            "id": "47455127-6cac-4580-abda-6bfb0580225c",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "看起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "難懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "顯得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演得",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "聽起來",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "對抗",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "抵擋",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "抵禦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "頂住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "害了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "誇讚",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "嗆",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "相挺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "大讚",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "站出來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "嗆聲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聲援",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "力挺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "對不起",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "害",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "挺",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "意思",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "拯救玩具島聽起來似乎很有意思": {
+            "id": "5ae79cd2-7a55-488a-9187-6c5079f98442",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "看起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "難懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "顯得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演得",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "聽起來",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "似乎",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "很",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "具有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "兼有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "存有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "帶有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "懷有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "持有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "擁有",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有了",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "有著",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "保留",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "含有",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有同",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "存在",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "意思",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "拯救玩具島聽起來好像挺好玩的": {
+            "id": "96c04e3e-e0d9-4b9a-8c83-3b07620c7965",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "拯救玩具島",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "看起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "覺得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃起來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "感覺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "難懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "顯得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "演得",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "聽起來",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "好像",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "對抗",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "抵擋",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "抵禦",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "頂住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "害了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "誇讚",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "嗆",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "相挺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "大讚",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "站出來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "嗆聲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聲援",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "力挺",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "對不起",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "害",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "挺",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "好玩",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "你是一個和善的助理，請依上文擬定5個回覆{{UTTERENCE}}的句子",
+        "system": "你是一個繁體中文「營隊客服」助理",
+        "assistant": "問題「{{Q}}」，答案「{{A}}」"
+    },
+    "document": []
+}
