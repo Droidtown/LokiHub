@@ -1,0 +1,226 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "genetic": [
+            "發展遲緩",
+            "聽損",
+            "自閉",
+            "自閉症",
+            "視障",
+            "視覺障礙",
+            "智能不足",
+            "精神疾病"
+        ],
+        "month_age": [
+            "個月"
+        ],
+        "congenital": [
+            "唐氏症",
+            "小胖威利症",
+            "唇裂",
+            "腭裂",
+            "顎裂",
+            "唇顎裂",
+            "唇腭裂",
+            "小兒症",
+            "聽損",
+            "甲狀腺功能低下",
+            "先天性心臟病",
+            "水腦症",
+            "脊柱裂",
+            "小腦症",
+            "腦出血",
+            "腦部缺氧性病變",
+            "腦部感染",
+            "中樞神經感染",
+            "癩癎",
+            "腦瘤"
+        ],
+        "child_school": [
+            "幼兒園",
+            "幼稚園",
+            "托兒所",
+            "托嬰中心"
+        ]
+    },
+    "utterance": {
+        "1歲": {
+            "id": "b67783c2-9d48-4bea-adbe-5f4c15bb5ce0",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "歲",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "1歲半": {
+            "id": "d723105f-395a-4d00-b076-6bb12bc7e4f5",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "歲",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "半",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "1足歲": {
+            "id": "e658dc2b-5c1a-424f-b16e-671ed3d14303",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "足歲",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "2個月": {
+            "id": "55bb1a18-8b4a-436a-a575-a211d12dd4f5",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "2",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "個月",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "虛歲1歲": {
+            "id": "9bcf5ee7-c36a-4d17-8960-dce087c76bba",
+            "argument": [
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "虛歲",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "歲",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "1歲2個月": {
+            "id": "7f7b8364-68f6-417a-a66a-bf7c1fd6d400",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "歲",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "2",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "個月",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "1足歲2個月": {
+            "id": "42fdaea8-b7c2-454d-948a-84fe4900a0f7",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "1",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "足歲",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "2",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "個月",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        }
+    },
+    "alias": {
+        "ner": {
+            "id": false,
+            "url": false,
+            "route": false,
+            "person": false,
+            "address": false,
+            "currency": false
+        },
+        "text": {},
+        "regex": {}
+    },
+    "prompt": {
+        "user": "",
+        "system": "",
+        "assistant": ""
+    },
+    "document": []
+}

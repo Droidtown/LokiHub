@@ -1,0 +1,68 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "genetic": [
+            "發展遲緩",
+            "聽損",
+            "自閉",
+            "自閉症",
+            "視障",
+            "視覺障礙",
+            "智能不足",
+            "精神疾病"
+        ],
+        "month_age": [
+            "個月"
+        ],
+        "congenital": [
+            "唐氏症",
+            "小胖威利症",
+            "唇裂",
+            "腭裂",
+            "顎裂",
+            "唇顎裂",
+            "唇腭裂",
+            "小兒症",
+            "聽損",
+            "甲狀腺功能低下",
+            "先天性心臟病",
+            "水腦症",
+            "脊柱裂",
+            "小腦症",
+            "腦出血",
+            "腦部缺氧性病變",
+            "腦部感染",
+            "中樞神經感染",
+            "癩癎",
+            "腦瘤"
+        ],
+        "child_school": [
+            "幼兒園",
+            "幼稚園",
+            "托兒所",
+            "托嬰中心"
+        ]
+    },
+    "utterance": {
+        "爸爸": {
+            "id": "2f0a583c-bbec-4ff2-a970-c57ea9a82d12",
+            "pos": "<ENTITY_pronoun>爸爸</ENTITY_pronoun>",
+            "lexy": [],
+            "pattern": "(<ENTITY_pronoun>([^<]+)</ENTITY_pronoun>)"
+        },
+        "唇顎裂": {
+            "id": "1417d5dd-cb0f-4902-8090-c4f75be24d6d",
+            "pos": "<UserDefined>唇顎裂</UserDefined>",
+            "lexy": [],
+            "pattern": "(<(UserDefined)>([^<]+)</(UserDefined)>)"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
