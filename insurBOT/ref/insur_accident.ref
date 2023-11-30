@@ -1,0 +1,252 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "恢復": {
+            "id": "9394d64a-83d4-407f-ae80-30c67efdc2cc",
+            "pos": "<ACTION_verb>恢復</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(恢復|修復|回復|康復|復位|復原|復學|復活|復甦|復職|復課)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP|IDIOM)>(恢復|復原|康復|住院|休.|未雨綢繆)</(ACTION_verb|VerbP|IDIOM)>"
+        },
+        "意外險": {
+            "id": "31ebab85-da05-4416-886d-27a3869e3554",
+            "pos": "<UserDefined>意外險</UserDefined>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(意外險|傷害險|意外傷害險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "上學過程": {
+            "id": "e979456b-6e54-41a7-9981-e75966e43a18",
+            "pos": "<ACTION_verb>上學</ACTION_verb><ENTITY_noun>過程</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(上學|就學|求學|聽講|唸書|上課|放學|讀書|轉校|講課|聽課)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(上學|上班)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(過程|中間)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "在外奔走": {
+            "id": "182e6f37-6d08-403f-b4ec-4129b6c83a0d",
+            "pos": "<FUNC_inner>在</FUNC_inner><RANGE_locality>外</RANGE_locality><ACTION_verb>奔走</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(奔走|奔命|奔波|奔赴|奔跑|奔馳|跑走|飛奔|亂跑|快跑|湧進)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<RANGE_(locality|period)>[^<]+</RANGE_(locality|period)><(ACTION_verb|VerbP)>(奔走|工作|跑|賺錢)</(ACTION_verb|VerbP)>"
+        },
+        "考量工作": {
+            "id": "09e78081-0cd6-4ae7-a2f7-36045936fcf2",
+            "pos": "<ACTION_verb>考量</ACTION_verb><ACTION_verb>工作</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(考量|思考|思量|掂量|考慮|衡量|估摸|合算|審視|推尋|推想)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(工作|勞動|賣笑|運轉|工作過|工作了|待業|休假|打工|在職|拍戲)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>考量</(ACTION_verb|VerbP)><(ACTION_verb|VerbP|ENTITY_(nounHead|nouny|noun|oov))>(工作|職業)</(ACTION_verb|VerbP|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "遇到車禍": {
+            "id": "9506f56a-a260-4e20-8ac2-1b130b3103aa",
+            "pos": "<ACTION_verb>遇到</ACTION_verb><ENTITY_noun>車禍</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(遇到|相遇|碰到|遇見|遭遇|撞見|會合|相聚|相見|相逢|碰見)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>遇到</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(車禍|天災)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "非疾病的": {
+            "id": "03a4004c-b587-4635-9508-b6b0d7da30ae",
+            "pos": "<FUNC_negation>非</FUNC_negation><ENTITY_noun>疾病</ENTITY_noun><FUNC_inner>的</FUNC_inner>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>疾病</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?"
+        },
+        "不是疾病的": {
+            "id": "97000079-7ab9-4f76-893c-f191d1d7a77b",
+            "pos": "<FUNC_negation>不</FUNC_negation><AUX>是</AUX><ENTITY_noun>疾病</ENTITY_noun><FUNC_inner>的</FUNC_inner>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>不</FUNC_negation><AUX>[^<]+</AUX><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>疾病</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?"
+        },
+        "有工作考量": {
+            "id": "5b4326a1-b744-42cd-bf47-200db92a4341",
+            "pos": "<ACTION_verb>有</ACTION_verb><ACTION_verb>工作</ACTION_verb><ACTION_verb>考量</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(工作|勞動|賣笑|運轉|打工|拍戲|工作過|兼職|休假|工作了|待業)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(考量|思考|思量|掂量|考慮|衡量|估摸|合算|審視|推尋|推想)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP| UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(工作|職業)</(ACTION_verb|VerbP|UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>(考量|需求|需要)</(ACTION_verb|VerbP)>"
+        },
+        "應對突發狀況": {
+            "id": "34f21ec1-8b3d-462a-b80b-e3bd1e6349db",
+            "pos": "<MODAL>應</MODAL><FUNC_inner>對</FUNC_inner><MODIFIER>突發</MODIFIER><ENTITY_noun>狀況</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>狀況</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "預防突發事故": {
+            "id": "cd96c8e6-b380-4e3f-b8e2-8923e1e1cdfa",
+            "pos": "<ACTION_verb>預防</ACTION_verb><MODIFIER>突發</MODIFIER><ENTITY_noun>事故</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(預防|防備|防堵|防杜|防止|防治|防範|免除|遮斷|阻止|治療)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>預防|出</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>突發</(MODIFIER|ModifierP)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>事故|意外</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "保便宜的意外險": {
+            "id": "b17eac1c-0016-4be6-9d0d-aae10ad37319",
+            "pos": "<ACTION_verb>保</ACTION_verb><MODIFIER>便宜</MODIFIER><FUNC_inner>的</FUNC_inner><UserDefined>意外險</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(意外險|意外傷害險|傷害險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我的工作較危險": {
+            "id": "11ba5108-85cb-41d9-94af-9c007daaf96c",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>的</FUNC_inner><ACTION_verb>工作</ACTION_verb><DegreeP>較危險</DegreeP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(工作|勞動|賣笑|運轉|工作過|工作了|待業|休假|打工|在職|拍戲)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>(工作|職業)</(ACTION_verb|VerbP)><DegreeP>(.{0,2}危險)</DegreeP>"
+        },
+        "有職業上的考量": {
+            "id": "99f60034-f6a3-4306-97eb-a574ada1b43c",
+            "pos": "<ACTION_verb>有</ACTION_verb><ENTITY_noun>職業</ENTITY_noun><RANGE_locality>上</RANGE_locality><FUNC_inner>的</FUNC_inner><ENTITY_nouny>考量</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb)>(工作|職業)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb)><RANGE_(locality|period)>上</RANGE_(locality|period)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(考量|需求|需要)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "高危險性的工作": {
+            "id": "7296060d-8453-40fc-9cfc-1c27970352a4",
+            "pos": "<ENTITY_nouny>高危險性</ENTITY_nouny><FUNC_inner>的</FUNC_inner><ACTION_verb>工作</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(工作|勞動|賣笑|運轉|打工|拍戲|工作過|兼職|休假|工作了|待業)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>高危險性</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>工作</(ACTION_verb|VerbP)>"
+        },
+        "工作遇到一些事故": {
+            "id": "7212e3f2-18c6-485c-a9b1-fb7cb51fc078",
+            "pos": "<ACTION_verb>工作</ACTION_verb><ACTION_verb>遇到</ACTION_verb><ENTITY_classifier>一些</ENTITY_classifier><ENTITY_noun>事故</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(工作|勞動|賣笑|運轉|工作過|工作了|待業|休假|打工|在職|拍戲)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(遇到|相遇|碰到|遇見|遭遇|撞見|會合|相聚|相見|相逢|碰見)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>工作</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>遇到</(ACTION_verb|VerbP)>(<ENTITY_classifier>[^<]+</ENTITY_classifier>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(事故|意外)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "覺得意外無處不在": {
+            "id": "f0dc2dbe-eb11-473e-b5db-5b7da6c4fbd2",
+            "pos": "<ACTION_verb>覺得</ACTION_verb><ENTITY_nouny>意外</ENTITY_nouny><UserDefined>無處不在</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(覺得|察覺|感覺|感覺到|懂得|覺察|企盼|估摸|假想|假設|冥想)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>覺得</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>意外</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>無處不在</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "獲得廣泛的意外保障": {
+            "id": "baa943f4-078a-4adf-a7b2-29473299241d",
+            "pos": "<ACTION_verb>獲得</ACTION_verb><MODIFIER>廣泛</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_nouny>意外</ENTITY_nouny><ACTION_verb>保障</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(獲得|博得|取得|奪得|得出|得到|得著|拾獲|掙得|爭得|獲取)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>獲得</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP|DegreeP)>[^<]+</(MODIFIER|ModifierP|DegreeP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>意外</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?<(ACTION_verb|VerbP)>保障</(ACTION_verb|VerbP)>"
+        },
+        "讓我在工作的時候有保障": {
+            "id": "0c8e0223-c5a7-4a07-ace7-cf9d5a66eb0b",
+            "pos": "<ACTION_verb>讓</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><ASPECT>在</ASPECT><ACTION_verb>工作</ACTION_verb><FUNC_inner>的</FUNC_inner><TIME_justtime>時候</TIME_justtime><ACTION_verb>有</ACTION_verb><ACTION_verb>保障</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(讓|禮讓|讓位|讓步|避讓|任聽|任隨|屈服|拋開|放出|放過)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(工作|勞動|賣笑|運轉|打工|拍戲|工作過|兼職|休假|工作了|待業)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>讓</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<ASPECT>[^<]+</ASPECT>)?<(ACTION_verb|VerbP)>工作</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){0,10}<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>保障</(ACTION_verb|VerbP)>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

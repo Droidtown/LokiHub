@@ -1,0 +1,155 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "我是行人": {
+            "id": "60e256e3-a599-4464-8fd9-db3dfcfe6d2b",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><AUX>是</AUX><ENTITY_noun>行人</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "((<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<AUX>[^<]+</AUX>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>行人</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我都走路": {
+            "id": "de3d045e-fd92-4107-b98f-9494b09f64a9",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><QUANTIFIER>都</QUANTIFIER><ACTION_verb>走路</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(走路|行走|走入|走動|走去|走步|走秀|走過|踏進|站立|彎腰)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "((<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<QUANTIFIER>[^<]+</QUANTIFIER>)?)?<(ACTION_verb|VerbP)>(走路|走|散步|行走)</(ACTION_verb|VerbP)>"
+        },
+        "通勤方式": {
+            "id": "16dffdc1-ccb3-40d6-a35b-c3143b7f21ba",
+            "pos": "<UserDefined>通勤</UserDefined><ENTITY_noun>方式</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(通勤|交通|生活)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(方式|方面)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "在假日期間": {
+            "id": "ea593e19-56dc-48ba-b7ad-2fe4b6630b2f",
+            "pos": "<FUNC_inner>在</FUNC_inner><ENTITY_nouny>假日</ENTITY_nouny><RANGE_period>期間</RANGE_period>",
+            "lexy": [],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|TIME_week)>(假日|週末)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|TIME_week)>(<RANGE_(locality|period)>[^<]+</RANGE_(locality|period)>)?"
+        },
+        "與交通有關": {
+            "id": "d3c6c824-bf62-4961-b8d1-d7f035d4a67e",
+            "pos": "<FUNC_conjunction>與</FUNC_conjunction><ENTITY_noun>交通</ENTITY_noun><ACTION_verb>有關</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有關|關心|關注|關涉|符|吻合|相悖|針對|討論|關聯|涉及)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<FUNC_conjunction>[^<]+</FUNC_conjunction>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>交通</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>有關</(ACTION_verb|VerbP)>"
+        },
+        "交通上的考量": {
+            "id": "0faaab68-1b16-4d97-9a40-496fecb8145a",
+            "pos": "<ENTITY_noun>交通</ENTITY_noun><RANGE_locality>上</RANGE_locality><FUNC_inner>的</FUNC_inner><ENTITY_nouny>考量</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>交通</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<RANGE_(locality|period)>[^<]+</RANGE_(locality|period)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(考量|顧慮|考慮)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>"
+        },
+        "在假日的時候": {
+            "id": "73928eca-bede-4610-9d4c-57f68c1126d3",
+            "pos": "<FUNC_inner>在</FUNC_inner><ENTITY_nouny>假日</ENTITY_nouny><FUNC_inner>的</FUNC_inner><TIME_justtime>時候</TIME_justtime>",
+            "lexy": [],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|TIME_week)>(假日|週末)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|TIME_week)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}"
+        },
+        "搭乘大眾運輸": {
+            "id": "4dd1b8c7-0330-46e3-afd9-29a4108858e2",
+            "pos": "<ACTION_verb>搭乘</ACTION_verb><ENTITY_nouny>大眾</ENTITY_nouny><ACTION_verb>運輸</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(搭乘|乘坐|乘搭|乘車|搭坐|駛離|騎坐|搭到|改乘|轉搭|載送)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(運輸|搬運|販運|輸送|輸運|運送|運銷|馱運|駁運|押送|搭載)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(搭|搭乘|乘坐|坐車|騎車|開車|利用|騎|坐|使用)</(ACTION_verb|VerbP)>(?!(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(信用卡|現金|街口電子支付|電子支付|街口支付)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>))(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

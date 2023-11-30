@@ -1,0 +1,231 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "有給付住院": {
+            "id": "96a1226a-fb97-4e60-b2ec-b3d7cb0066f4",
+            "pos": "<ACTION_verb>有</ACTION_verb><ACTION_verb>給付</ACTION_verb><ACTION_verb>住院</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|付出|付款|付清|付現|付給|付費|付錢|償付|支付|繳付)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(住院|入院|留醫|靜養|洗腎|回診|臥床|休養|就診|養傷|就醫)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "((?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(給付|賠|賠償|保障|幫忙)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>付</(ACTION_verb|VerbP)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(醫療費|醫藥費|醫療|傷害醫療|住院|看醫生)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>"
+        },
+        "看醫生有給付": {
+            "id": "7cf068e8-f5ee-481f-a1fc-016e2cd611eb",
+            "pos": "<ACTION_verb>看醫生</ACTION_verb><ACTION_verb>有</ACTION_verb><ACTION_verb>給付</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(看醫生|看病|打針|探病|吃藥|求醫|看診|探望|就診|出診|撩落)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|付出|付款|付清|付現|付給|付費|付錢|償付|支付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(醫療費|醫藥費|醫療|傷害醫療|住院|看醫生)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(給付|賠|賠償|保障|幫忙)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>付</(ACTION_verb|VerbP)>)?"
+        },
+        "實支實付的保險": {
+            "id": "35f5a956-d2b8-43e7-a9a9-f31c8e0ac082",
+            "pos": "<UserDefined>實支實付</UserDefined><FUNC_inner>的</FUNC_inner><ENTITY_noun>保險</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(實支實付|骨折)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|險|方案|商品|意外險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>"
+        },
+        "有沒有包含醫療": {
+            "id": "cf96c3d9-b97e-414e-b653-e03816f02640",
+            "pos": "<CLAUSE_AnotAQ>有沒有</CLAUSE_AnotAQ><ENTITY_classifier>包</ENTITY_classifier><ACTION_verb>含</ACTION_verb><ENTITY_noun>醫療</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(含|內含|包含|含有|含蘊|蘊含|包藏|容納|蘊藏|富含|需特)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_AnotAQ>[^<]+</CLAUSE_AnotAQ><ENTITY_classifier>[^<]+</ENTITY_classifier><(ACTION_verb|VerbP)>含</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(醫療費|醫藥費|醫療|傷害醫療|住院|看醫生)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>"
+        },
+        "有沒有包括醫療": {
+            "id": "9d2e3a3e-7b35-4258-876a-61b9fd7d159a",
+            "pos": "<CLAUSE_AnotAQ>有沒有</CLAUSE_AnotAQ><ACTION_verb>包括</ACTION_verb><ENTITY_noun>醫療</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(包括|包含|包羅|包藏|囊括|涵括|內含|含有|容納|懷抱|採納)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_AnotAQ>[^<]+</CLAUSE_AnotAQ><(ACTION_verb|VerbP)>(給付|賠|賠償|保障|幫忙|包括|包含|有)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(醫療費|醫藥費|醫療|傷害醫療|住院|看醫生)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>"
+        },
+        "哪些保險有實支實付": {
+            "id": "d0e6fc0e-fb44-4220-bc00-8dc6639ee0a2",
+            "pos": "<CLAUSE_WhatQ>哪些</CLAUSE_WhatQ><ENTITY_noun>保險</ENTITY_noun><ACTION_verb>有</ACTION_verb><UserDefined>實支實付</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|險|方案|商品|意外險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(實支實付|骨折)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "有包含醫療的賠償嗎": {
+            "id": "3855d427-d93f-4e1b-b440-6da06fd2532c",
+            "pos": "<ACTION_verb>有</ACTION_verb><ENTITY_classifier>包</ENTITY_classifier><ACTION_verb>含</ACTION_verb><ENTITY_noun>醫療</ENTITY_noun><FUNC_inner>的</FUNC_inner><ENTITY_nouny>賠償</ENTITY_nouny><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(含|內含|包含|含有|含蘊|蘊含|包藏|容納|蘊藏|喝含|需特)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?(<ENTITY_classifier>包</ENTITY_classifier>)?<(ACTION_verb|VerbP)>(含|涵蓋|含|有賠|賠償|賠|給付|有)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(醫療費|醫藥費|醫療|傷害醫療|住院|看醫生)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(賠償|給付|保障|部分)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "有沒有包含實支實付": {
+            "id": "ffbd1780-193c-476b-a438-c4997714db04",
+            "pos": "<CLAUSE_AnotAQ>有沒有</CLAUSE_AnotAQ><ENTITY_classifier>包</ENTITY_classifier><ACTION_verb>含</ACTION_verb><UserDefined>實支實付</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(含|內含|包含|含有|含蘊|蘊含|包藏|容納|蘊藏|富含|需特)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_AnotAQ>[^<]+</CLAUSE_AnotAQ><ENTITY_classifier>[^<]+</ENTITY_classifier><(ACTION_verb|VerbP)>含</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(實支實付|骨折)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "有沒有包括實支實付": {
+            "id": "36de4f26-db18-4998-b33b-0092984c6732",
+            "pos": "<CLAUSE_AnotAQ>有沒有</CLAUSE_AnotAQ><ACTION_verb>包括</ACTION_verb><UserDefined>實支實付</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(包括|包含|包羅|包藏|囊括|涵括|內含|含有|容納|懷抱|採納)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<CLAUSE_AnotAQ>[^<]+</CLAUSE_AnotAQ>)?<(ACTION_verb|VerbP)>(給付|賠|賠償|保障|幫忙|包括|包含|有|涵蓋|有賠)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(實支實付|骨折)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "看醫生有給付有哪些": {
+            "id": "38cf72df-3967-424d-b497-abe3a0258a64",
+            "pos": "<ACTION_verb>看醫生</ACTION_verb><ACTION_verb>有</ACTION_verb><ACTION_verb>給付</ACTION_verb><ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(看醫生|看病|打針|探病|吃藥|求醫|看診|探望|就診|出診|撩落)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|付出|付款|付清|付現|付給|付費|付錢|償付|支付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(醫療費|醫藥費|醫療|傷害醫療|住院|看醫生)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(給付|賠|賠償|保障|幫忙)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>付</(ACTION_verb|VerbP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "有哪些有包含醫療給付": {
+            "id": "741832c2-0106-4651-a3b7-53468d69314b",
+            "pos": "<ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ><ACTION_verb>有</ACTION_verb><ENTITY_classifier>包</ENTITY_classifier><ACTION_verb>含</ACTION_verb><ENTITY_noun>醫療</ENTITY_noun><ACTION_verb>給付</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(含|內含|包含|含有|含蘊|蘊含|包藏|容納|蘊藏|富含|需特)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|付出|付款|付清|付現|付給|付費|付錢|償付|支付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?(<ENTITY_classifier>[^<]+</ENTITY_classifier>)?<(ACTION_verb|VerbP)>含</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(醫療費|醫藥費|醫療|傷害醫療|住院|看醫生)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(ACTION_verb|VerbP)>(給付|保障|賠償)</(ACTION_verb|VerbP)>)?"
+        },
+        "有哪些有包含骨折給付": {
+            "id": "bc4f010e-faea-4bd1-8112-f9776c345abf",
+            "pos": "<ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ><ACTION_verb>有</ACTION_verb><ENTITY_classifier>包</ENTITY_classifier><ACTION_verb>含</ACTION_verb><UserDefined>骨折</UserDefined><ACTION_verb>給付</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(含|內含|包含|含有|含蘊|蘊含|包藏|容納|蘊藏|喝含|需特)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|付出|付款|付清|付現|付給|付費|付錢|償付|支付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?(<ENTITY_classifier>[^<]+</ENTITY_classifier>)?<(ACTION_verb|VerbP)>含</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(骨折|實支實付)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(ACTION_verb|VerbP)>(給付|保障|賠償)</(ACTION_verb|VerbP)>)?"
+        },
+        "實支實付有給付的有哪些": {
+            "id": "622169d9-18c4-41fd-8161-b4ce1a4e6882",
+            "pos": "<UserDefined>實支實付</UserDefined><ACTION_verb>有</ACTION_verb><ACTION_verb>給付</ACTION_verb><FUNC_inner>的</FUNC_inner><ENTITY_nouny>有</ENTITY_nouny><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|付出|付款|付清|付現|付給|付費|付錢|償付|支付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(實支實付|骨折)(</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(給付|賠|賠償|保障|幫忙|包括|包含)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>有</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "有包含實支實付的賠償嗎": {
+            "id": "30b21a6c-44a3-45be-9819-b0a63c6c44e7",
+            "pos": "<ACTION_verb>有</ACTION_verb><ENTITY_classifier>包</ENTITY_classifier><ACTION_verb>含</ACTION_verb><UserDefined>實支實付</UserDefined><FUNC_inner>的</FUNC_inner><ENTITY_nouny>賠償</ENTITY_nouny><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(含|內含|包含|含有|含蘊|蘊含|包藏|容納|蘊藏|富含|需特)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?(<ENTITY_classifier>包</ENTITY_classifier>)?<(ACTION_verb|VerbP)>(含|涵蓋|有賠|賠償|賠|給付)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(實支實付|骨折)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(賠償|給付|保障|部分)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>)?"
+        },
+        "新iCarry傷害保險有實支實付嗎": {
+            "id": "05c5679c-7eae-44dc-86a9-1c25fa88eedc",
+            "pos": "<UserDefined>新iCarry傷害保險</UserDefined><ACTION_verb>有</ACTION_verb><UserDefined>實支實付</UserDefined><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(新iCarry傷害保險|享保障微型個人傷害保險|心e路平安傷害保險|保險|方案|險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)><(ACTION_verb|VerbP|AUX)>[^<]+</(ACTION_verb|VerbP|AUX)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>實支實付</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

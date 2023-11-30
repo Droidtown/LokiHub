@@ -1,0 +1,256 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "有家庭": {
+            "id": "33b4f32e-d51f-43b6-bdcf-0129412009c2",
+            "pos": "<ACTION_verb>有</ACTION_verb><UserDefined>家庭</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(家庭|小孩|孩子)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "保障多的": {
+            "id": "7c73e568-9a53-4941-810f-614bcf34f81f",
+            "pos": "<ACTION_verb>保障</ACTION_verb><MODIFIER>多</MODIFIER><FUNC_inner>的</FUNC_inner>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>保障</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>(多|廣)</(MODIFIER|ModifierP)>|<DegreeP>很多</DegreeP>)(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?"
+        },
+        "加倍保障": {
+            "id": "5e428cbf-3fdc-4f8e-b0be-69e6a7b82a9f",
+            "pos": "<ACTION_verb>加</ACTION_verb><ENTITY_measurement>倍</ENTITY_measurement><ACTION_verb>保障</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(加|懶加|給加|加也|長加|見加|致加|舊加|經加|付雙|加了)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(加|有加)</(ACTION_verb|VerbP)><ENTITY_measurement>[^<]+</ENTITY_measurement><(ACTION_verb|VerbP)>保障</(ACTION_verb|VerbP)>"
+        },
+        "多點保障": {
+            "id": "f2423401-e238-4939-ac34-66bae70482a8",
+            "pos": "<MODIFIER>多</MODIFIER><QUANTIFIER>點</QUANTIFIER><ACTION_verb>保障</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(MODIFIER|ModifierP)>多</(MODIFIER|ModifierP)>(<QUANTIFIER>[^<]+</QUANTIFIER>)?<(ACTION_verb|VerbP)>保障</(ACTION_verb|VerbP)>"
+        },
+        "預算多的": {
+            "id": "187e7d7f-e35f-4b65-92f7-178044ef6842",
+            "pos": "<ENTITY_noun>預算</ENTITY_noun><MODIFIER>多</MODIFIER><FUNC_inner>的</FUNC_inner>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>預算</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(MODIFIER|ModifierP)>(多|高)</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?"
+        },
+        "預算頗高": {
+            "id": "b2538ac0-422c-40c3-9f63-1457edaf170f",
+            "pos": "<ENTITY_noun>預算</ENTITY_noun><DegreeP>頗高</DegreeP>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>預算</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><DegreeP>(頗高|比較多|頗多|比較高|較多|較高|很夠)</DegreeP>"
+        },
+        "不在乎預算": {
+            "id": "261714f3-ddcf-4408-996a-9a19a4bb14e6",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>在乎</ACTION_verb><ENTITY_noun>預算</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(在乎|在意|介意|服氣|屑|曉得|爭氣|怕死|想問|記得了|看重)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>(在乎|在意|考慮|擔心)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>預算</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "不想要省錢": {
+            "id": "26c7b5d8-3116-4314-afd7-b916d16d15bd",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>想要</ACTION_verb><ACTION_verb>省錢</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想要|想拿|想買|需要|希望|試圖|想讓|願意|打算|試著|想)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(省錢|省力|省時間|賺錢|花錢|傷腦筋|消暑|自保|籌錢|掙錢|節稅)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<MODAL>會</MODAL>)?(<(ACTION_verb|VerbP)>(想要|想)</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>省錢</(ACTION_verb|VerbP)>"
+        },
+        "加強的保障": {
+            "id": "4eb9fcb7-a54a-441e-aaed-3c3af5f5967c",
+            "pos": "<ACTION_verb>加強</ACTION_verb><FUNC_inner>的</FUNC_inner><ENTITY_nouny>保障</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(加強|加劇|加勁|加固|加大|加派|加添|加重|增加|增強|強化)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>加強</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>保障</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "多一點保障": {
+            "id": "565d0927-8055-4e9c-b924-20aad04c4ab6",
+            "pos": "<MODIFIER>多</MODIFIER><TIME_justtime>一點</TIME_justtime><ACTION_verb>保障</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(MODIFIER|ModifierP)>多</(MODIFIER|ModifierP)>(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}<(ACTION_verb|VerbP)>保障</(ACTION_verb|VerbP)>"
+        },
+        "更好的保障": {
+            "id": "58bd7552-3bea-4e1b-98ec-f5fe9d138029",
+            "pos": "<DegreeP>更好</DegreeP><FUNC_inner>的</FUNC_inner><ENTITY_nouny>保障</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP|DegreeP)>更?(全面|好|多|廣泛|大|全方位)</(MODIFIER|ModifierP|DegreeP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(保障|保護|考量)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>"
+        },
+        "比較貴的險": {
+            "id": "3eda3313-2529-40c9-a63d-559628027ade",
+            "pos": "<DegreeP>比較貴</DegreeP><FUNC_inner>的</FUNC_inner><MODIFIER>險</MODIFIER>",
+            "lexy": [],
+            "pattern": "(?<!</FUNC_negation>)<(MODIFIER|ModifierP|DegreeP)>(.{0,2}貴|.{0,2}昂貴)</(MODIFIER|ModifierP|DegreeP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(MODIFIER|ModifierP|UserDefined|ENTITY_(nounHead|nouny|noun|oov))>.{0,5}險</(MODIFIER|ModifierP|UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+        },
+        "涵蓋範圍廣": {
+            "id": "744f5375-752f-4b14-bae2-b6d3344f6a0a",
+            "pos": "<ACTION_verb>涵蓋</ACTION_verb><ENTITY_nouny>範圍</ENTITY_nouny><MODIFIER>廣</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(涵蓋|掩蓋|涵括|覆蓋|遮蓋|內含|包含|庇護|意指|意謂|掩護)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(涵蓋|理賠|給付|保障)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(MODIFIER|ModifierP)>(廣|多|大|全面)</(MODIFIER|ModifierP)>"
+        },
+        "理賠比較多": {
+            "id": "db05c9bd-b5d7-43c8-9ce3-9f1c5b332bf5",
+            "pos": "<ACTION_verb>理賠</ACTION_verb><DegreeP>比較多</DegreeP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(理賠|退費|退款|賠付|保戶|退票|給付|承保|投保|賠償|付款)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(理賠|保障|給付|賠償)</(ACTION_verb|VerbP)><DegreeP>(比較多|比較好|較多|較好)</DegreeP>"
+        },
+        "不用擔心預算": {
+            "id": "69fe846c-e87c-482a-84ee-a7ffa5c3b7ee",
+            "pos": "<FUNC_negation>不用</FUNC_negation><ACTION_verb>擔心</ACTION_verb><ENTITY_noun>預算</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(擔心|傷心|勞心|掛心|提心|操心|擔憂|擔驚|費心|受怕|哀痛)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<(ACTION_verb|VerbP)>需要</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP|ENTITY_(nounHead|nouny|noun|oov))>(擔心|傷心|勞心|掛心|提心|操心|擔憂|擔驚|費心|操煩|焦慮)</(ACTION_verb|VerbP|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(預算|錢|資金|金錢|money|cash|coin|fund|錢財|財力|現金)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "工作危險性高": {
+            "id": "d6d1d835-d2aa-4b92-b043-89760ec655d7",
+            "pos": "<ACTION_verb>工作</ACTION_verb><ENTITY_nouny>危險性</ENTITY_nouny><MODIFIER>高</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(工作|勞動|賣笑|運轉|工作過|工作了|待業|休假|打工|在職|拍戲)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>工作</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>危險性</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(MODIFIER|ModifierP|DegreeP)>(高|較高)</(MODIFIER|ModifierP|DegreeP)>"
+        },
+        "保障可以更全面": {
+            "id": "beebb1b7-35cd-4c63-a76c-4bb2ffab1e65",
+            "pos": "<ACTION_verb>保障</ACTION_verb><MODAL>可以</MODAL><DegreeP>更全面</DegreeP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>保障</(ACTION_verb|VerbP)>(<MODAL>[^<]+</MODAL>)?<(MODIFIER|ModifierP|DegreeP)>更?(全面|好|多|廣泛|大|全方位)</(MODIFIER|ModifierP|DegreeP)>"
+        },
+        "可以有更多支出": {
+            "id": "cf30371c-96b6-4ea6-bfb9-f08a57d3df5c",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>有</ACTION_verb><ACTION_verb>更多</ACTION_verb><ENTITY_classifier>支</ENTITY_classifier><ENTITY_nouny>出</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(更多|多|較多|到多|供多|作多|太多|大多|指多|分多|求多)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "((<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>更多</(ACTION_verb|VerbP)><ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>出</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "覆蓋更廣泛的風險": {
+            "id": "23007aaa-1e70-434d-9efb-abb627f0bceb",
+            "pos": "<ACTION_verb>覆蓋</ACTION_verb><DegreeP>更廣泛</DegreeP><FUNC_inner>的</FUNC_inner><ENTITY_nouny>風險</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(覆蓋|塗蓋|掩蓋|涵蓋|遮蓋|偽裝|喬裝|庇護|彌縫|掩護|掩飾)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(覆蓋|照顧|考慮|考量)</(ACTION_verb|VerbP)><DegreeP>(更廣泛|更多)</DegreeP>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(風險|意外)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "照顧到比較多的需求": {
+            "id": "94492659-f73c-4234-813f-117c27b674d4",
+            "pos": "<ACTION_verb>照顧</ACTION_verb><ACTION_verb>到</ACTION_verb><DegreeP>比較多</DegreeP><FUNC_inner>的</FUNC_inner><ENTITY_nouny>需求</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(照顧|照看|照管|照護|關照|伴隨|侍奉|傾聽|參加|定期去|探望)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|到了|到約|到受|到離|到包|到經過|到回|到隨|到死|到愛)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(.?顧|考慮)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)><DegreeP>(比較多|較多)</DegreeP>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(需求|範圍|層面|計畫|方案|商品|保險|險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

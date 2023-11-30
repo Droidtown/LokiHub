@@ -1,0 +1,316 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "小額": {
+            "id": "fee78169-d553-4ebf-a1f2-0e8a8824a4e8",
+            "pos": "<ENTITY_nouny>小額</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "(?<!</FUNC_negation>)<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP|ACTION_verb|VerbP)>(小額|低保費|便宜|省錢|基本|一般|不貴|蠻窮)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP|ACTION_verb|VerbP)>"
+        },
+        "很窮": {
+            "id": "a9432a0d-fe7f-4d95-bfa2-b8b99b63deff",
+            "pos": "<DegreeP>很窮</DegreeP>",
+            "lexy": [],
+            "pattern": "<DegreeP>(很|非常)(拮据|緊縮|貧窮|窮|窘迫|侷促)</DegreeP>"
+        },
+        "低預算": {
+            "id": "8a9fef4c-b643-480a-87f8-4ee5e9d409b1",
+            "pos": "<ENTITY_nouny>低預算</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(低|少)預算</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "有點窮": {
+            "id": "4f9c7cc4-60f9-4ea3-aa7f-cdc76ea299cf",
+            "pos": "<ACTION_verb>有</ACTION_verb><QUANTIFIER>點</QUANTIFIER><MODIFIER>窮</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><QUANTIFIER>點</QUANTIFIER><(MODIFIER|ModifierP)>(拮据|緊縮|貧窮|窮|窘迫|侷促)</(MODIFIER|ModifierP)>"
+        },
+        "花費少": {
+            "id": "297ac511-2af8-48ab-85ee-f4b7c09831aa",
+            "pos": "<ACTION_verb>花費</ACTION_verb><MODIFIER>少</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(花費|亂花|枉費|浪費|消費|白費|破費|耗費|花光|花掉|花時間)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>花費</(ACTION_verb|VerbP)><(MODIFIER|ModifierP)>少</(MODIFIER|ModifierP)>"
+        },
+        "預算少": {
+            "id": "91d63c28-8a7c-48b8-bde4-1659b4b3e05c",
+            "pos": "<ENTITY_noun>預算</ENTITY_noun><MODIFIER>少</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(預算|壓力|錢|保費)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(MODIFIER|ModifierP)>(少|小|便宜|低)</(MODIFIER|ModifierP)>"
+        },
+        " 壓力大": {
+            "id": "faa1c7f1-6c52-4986-84b4-d10caf368925",
+            "pos": "<ENTITY_noun>壓力</ENTITY_noun><MODIFIER>大</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>壓力</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(MODIFIER|ModifierP|DegreeP)>(.{0,2}大|.{0,2}多|.{0,2}重)</(MODIFIER|ModifierP|DegreeP)>"
+        },
+        "不太有錢": {
+            "id": "562dff53-b1b8-4897-908b-0c75e87c5571",
+            "pos": "<FUNC_negation>不</FUNC_negation><DegreeP>太有錢</DegreeP>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><DegreeP>太有錢</DegreeP>"
+        },
+        "保一般的": {
+            "id": "5c978076-9f22-418a-be6a-bd963bde7773",
+            "pos": "<ACTION_verb>保</ACTION_verb><MODIFIER>一般</MODIFIER><FUNC_inner>的</FUNC_inner>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "((?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|要|想.?)</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>比較</(ACTION_verb|VerbP)>)?<(MODIFIER|ModifierP|UserDefined|ENTITY_(nounHead|nouny|noun|oov)|DegreeP)>(比?較)?(一般|便宜|基礎|基本|基礎款)</(MODIFIER|ModifierP|UserDefined|ENTITY_(nounHead|nouny|noun|oov)|DegreeP)><FUNC_in(ner|ter)>的</FUNC_in(ner|ter)>"
+        },
+        "價格實惠": {
+            "id": "dc180475-5f9d-46c1-8e6e-1963b7f8c3e2",
+            "pos": "<ENTITY_noun>價格</ENTITY_noun><MODIFIER>實惠</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(價格|經濟)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(MODIFIER|ModifierP|DegreeP)>(比?較)?(便宜|實惠|低|一般|比較低|比較少|較低|較少)</(MODIFIER|ModifierP|DegreeP)>"
+        },
+        "基礎保障": {
+            "id": "8fb251c9-4305-44d4-aa2a-79e389ae071d",
+            "pos": "<ENTITY_noun>基礎</ENTITY_noun><ACTION_verb>保障</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(基礎|基本|基礎款)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>保障</(ACTION_verb|VerbP)>"
+        },
+        "小資方案": {
+            "id": "18b83cc0-7046-4815-9b0d-ebc6ed620449",
+            "pos": "<ENTITY_nouny>小資方案</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|IDIOM)>(小資方案|窮人|精打細算|錙銖必較|窮鬼)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|IDIOM)>"
+        },
+        "錢不好賺": {
+            "id": "9233fd65-afa8-42ff-ae55-b8b160969b8f",
+            "pos": "<ENTITY_oov>錢</ENTITY_oov><UserDefined>不好</UserDefined><ACTION_verb>賺</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賺|賺到|賺了|想賺|賺取|賺進|賺得|賺到了|存了|大賺|賺錢)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(預算|錢|資金|金錢|money|cash|coin|fund|錢財|財力|現金)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>不好</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>賺</(ACTION_verb|VerbP)>"
+        },
+        "錢太難賺": {
+            "id": "0ea94932-8f7d-48fd-a003-d2c86635ddb1",
+            "pos": "<ENTITY_person>錢太難</ENTITY_person><ACTION_verb>賺</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賺|賺到|賺了|想賺|賺取|賺進|賺得|賺到了|存了|大賺|賺錢)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(ACTION_verb|VerbP)>賺</(ACTION_verb|VerbP)>"
+        },
+        "錢很難賺": {
+            "id": "a5232d3d-c81c-47bb-96c3-6fa642ec2090",
+            "pos": "<ENTITY_oov>錢</ENTITY_oov><DegreeP>很難</DegreeP><ACTION_verb>賺</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賺|賺到|賺了|想賺|賺取|賺進|賺得|賺到了|存了|大賺|賺錢)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>錢</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><DegreeP>很難</DegreeP><(ACTION_verb|VerbP)>賺</(ACTION_verb|VerbP)>"
+        },
+        "預算不多": {
+            "id": "7d9945e6-6751-4910-b4e8-b0bf2e5b5be2",
+            "pos": "<ENTITY_noun>預算</ENTITY_noun><MODIFIER>不多</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(預算|錢|資金|金錢|money|cash|coin|fund|錢財|財力|現金|錢包|荷包|口袋)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(MODIFIER|ModifierP)>(不多|不高|不足|有限|空空|不深)</(MODIFIER|ModifierP)>"
+        },
+        "不怎麼富裕": {
+            "id": "cd51a94d-faa6-4978-adcd-9bb92050dd18",
+            "pos": "<FUNC_negation>不</FUNC_negation><MODIFIER>怎麼</MODIFIER><MODIFIER>富裕</MODIFIER>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)><(MODIFIER|ModifierP)>(富裕|寬裕|富有|有錢)</(MODIFIER|ModifierP)>"
+        },
+        "不是很寬裕": {
+            "id": "664d66db-4e55-4a19-a25d-93d45f604f71",
+            "pos": "<UserDefined>不是</UserDefined><DegreeP>很寬</DegreeP><ENTITY_nounHead>裕</ENTITY_nounHead>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>不是</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><DegreeP>很寬</DegreeP><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>裕</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "快要吃土了": {
+            "id": "095ab11f-70a9-477f-9057-e8161719c94a",
+            "pos": "<MODIFIER>快要</MODIFIER><ACTION_verb>吃</ACTION_verb><ENTITY_noun>土</ENTITY_noun><ASPECT>了</ASPECT>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(吃|吃掉|吸收|攝入|耗損|花掉|煮|啃|吃著|喝|常吃)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>吃</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>土</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<ASPECT>[^<]+</ASPECT>)?"
+        },
+        "沒什麼預算": {
+            "id": "b8eea7d5-563d-448b-973d-b5c8098aef86",
+            "pos": "<FUNC_negation>沒</FUNC_negation><QUANTIFIER>什麼</QUANTIFIER><ENTITY_noun>預算</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<QUANTIFIER>[^<]+</QUANTIFIER>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(預算|錢|資金|金錢|money|cash|coin|fund|錢財|財力|現金)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "花費比較少": {
+            "id": "72592a23-a2b6-4d70-9a88-adbdab62147c",
+            "pos": "<ACTION_verb>花費</ACTION_verb><DegreeP>比較少</DegreeP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(花費|亂花|枉費|浪費|消費|白費|破費|耗費|花光|花掉|花時間)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>花費</(ACTION_verb|VerbP)><DegreeP>比較少</DegreeP>"
+        },
+        "預算比較少": {
+            "id": "8695313a-033f-4a71-8937-d136968d07f0",
+            "pos": "<ENTITY_noun>預算</ENTITY_noun><DegreeP>比較少</DegreeP>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(預算|錢|資金|金錢|money|cash|coin|fund|錢財|財力|現金)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><DegreeP>(比較少|比較便宜|比較低)</DegreeP>"
+        },
+        "不想花太多錢": {
+            "id": "e9769dc4-953f-433a-9f0c-9f254f9bdc10",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>想</ACTION_verb><ACTION_verb>花</ACTION_verb><DegreeP>太多</DegreeP><ENTITY_nounHead>錢</ENTITY_nounHead>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想|假想|冥想|回想|想像|想出|想到|想念|想拿|想望|想要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(花|花了|得花|花費|需要花|耗費|用了|用掉|花費了|花掉|耗掉)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<(ACTION_verb|VerbP)>(想.?|要)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(花.?|支出|出|用)</(ACTION_verb|VerbP)>)?<DegreeP>(太多|太貴|那麼貴|那麼多|這麼貴)</DegreeP><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(預算|錢|資金|金錢|money|cash|coin|fund|錢財|財力|現金)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "不想要這麼貴": {
+            "id": "d6008c68-15a1-4ec1-91c0-4f1d9414b937",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>想要</ACTION_verb><DegreeP>這麼貴</DegreeP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想要|想拿|想買|需要|渴望|試圖|更想|願意|想讓|打算|希望)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>想要</(ACTION_verb|VerbP)><DegreeP>這麼貴</DegreeP>"
+        },
+        "不要太貴的險": {
+            "id": "ac19d4b5-de8f-4e6b-88a4-2e559422adc8",
+            "pos": "<FUNC_negation>不要</FUNC_negation><DegreeP>太貴</DegreeP><FUNC_inner>的</FUNC_inner><MODIFIER>險</MODIFIER>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(MODIFIER|ModifierP|DegreeP)>(.{0,2}貴|.{0,2}昂貴)</(MODIFIER|ModifierP|DegreeP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(MODIFIER|ModifierP|UserDefined|ENTITY_(nounHead|nouny|noun|oov))>.{0,5}險</(MODIFIER|ModifierP|UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+        },
+        "沒有什麼預算": {
+            "id": "d77f77ab-6971-493e-8732-6b1a87bc421d",
+            "pos": "<FUNC_negation>沒有</FUNC_negation><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ENTITY_noun>預算</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>沒有</FUNC_negation><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(預算|錢|資金|金錢|money|cash|coin|fund|錢財|財力|現金)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "沒那麼多預算": {
+            "id": "8689cb3b-816e-48b2-9234-1ae87b3a5517",
+            "pos": "<FUNC_negation>沒</FUNC_negation><DegreeP>那麼多</DegreeP><ENTITY_noun>預算</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><DegreeP>那麼多</DegreeP><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(預算|錢|資金|金錢|money|cash|coin|fund|錢財|財力|現金)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "降低經濟壓力": {
+            "id": "8577ffed-e4e4-411f-ab95-99fb203bcb8c",
+            "pos": "<ACTION_verb>降低</ACTION_verb><ENTITY_noun>經濟</ENTITY_noun><ENTITY_noun>壓力</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(降低|下降|低估|減低|緩降|調降|降級|降調|中止|削減|取消)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(降低|減少)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(經濟|生活)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb)>(壓力|重擔|負擔)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb)>"
+        },
+        "預算沒那麼多": {
+            "id": "7e9e322e-65c9-4f3c-8d9f-3ad6e12bf9b5",
+            "pos": "<ENTITY_noun>預算</ENTITY_noun><FUNC_negation>沒</FUNC_negation><DegreeP>那麼多</DegreeP>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(預算|錢|資金|金錢|money|cash|coin|fund|錢財|財力|現金)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><FUNC_negation>[^<]+</FUNC_negation><DegreeP>(那麼多|那麼高)</DegreeP>"
+        },
+        "不想支出那麼多": {
+            "id": "d9fb65b7-0a9d-43ba-9cd2-b481e5eaa854",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>想</ACTION_verb><ACTION_verb>支出</ACTION_verb><DegreeP>那麼多</DegreeP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想|假想|冥想|回想|想像|想出|想到|想念|想拿|想望|想要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(支出|)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>(想.?|要)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(支出|花|花費|付錢|付費)</(ACTION_verb|VerbP)><DegreeP>(太多|太貴|那麼貴|那麼多)</DegreeP>"
+        },
+        "經濟狀況有點拮据": {
+            "id": "7cb49b2d-8f7e-45b6-bed0-6aef01a155d3",
+            "pos": "<ENTITY_noun>經濟</ENTITY_noun><ENTITY_noun>狀況</ENTITY_noun><ACTION_verb>有</ACTION_verb><QUANTIFIER>點</QUANTIFIER><MODIFIER>拮据</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(經濟|生活|錢包|財務|荷包)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>狀況</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><QUANTIFIER>[^<]+</QUANTIFIER>)?(<(MODIFIER|ModifierP)>(拮据|不好|不足|緊張|困難|緊縮|空空|有限)</(MODIFIER|ModifierP)|<DegreeP>很瘦</DegreeP>)"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

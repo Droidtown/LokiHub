@@ -1,0 +1,204 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "如何付款": {
+            "id": "c390045f-42f7-41ae-92ad-7ae486760fff",
+            "pos": "<CLAUSE_HowQ>如何</CLAUSE_HowQ><ACTION_verb>付款</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付出|付清|付現|付給|付費|付錢|償付|支付|給付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(繳費|付費|繳付|繳納|支付|付款|繳納)</(ACTION_verb|VerbP)>"
+        },
+        "用什麼繳費": {
+            "id": "b35e8616-52f9-4480-9574-4cc8c622ac40",
+            "pos": "<ACTION_verb>用</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ACTION_verb>繳費</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(用|使用|利用|採用|施用|活用|運用|假借|憑靠|有用|指用)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(繳費|付費|繳付|繳稅|繳納|交納|付出|付給|償付|支付|給付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>用</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>(繳費|付費|繳付|繳納|支付|付款|繳納)</(ACTION_verb|VerbP)>"
+        },
+        "現金可以付嗎": {
+            "id": "025292ef-9320-4526-8d63-2a3d90c7c3f7",
+            "pos": "<ENTITY_oov>現金</ENTITY_oov><MODAL>可以</MODAL><ACTION_verb>付</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付|付出|付款|付清|付現|付給|付費|付錢|償付|支付|給付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(付款|付費|付錢|支付|付)</(ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "付款選項有哪些": {
+            "id": "091fa565-04bc-4dc5-8c74-9111bd51533a",
+            "pos": "<ACTION_verb>付款</ACTION_verb><ENTITY_nouny>選項</ENTITY_nouny><ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付出|付清|付現|付給|付費|付錢|償付|支付|給付|繳付)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(ACTION_verb|VerbP)>(支付|付出|付款|付清|付現|付給|付費|付錢|償付|給付|繳付)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(方式|選項)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "有哪些支付方式": {
+            "id": "41382489-ad98-417f-b3b5-176f75d250d7",
+            "pos": "<ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ><ACTION_verb>支付</ACTION_verb><ENTITY_noun>方式</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(支付|付出|付款|付清|付現|付給|付費|付錢|償付|給付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(支付|付出|付款|付清|付現|付給|付費|付錢|償付|給付|繳付)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(方式|選項)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "可以用銀行轉帳嗎": {
+            "id": "21816057-ab48-459a-9d2c-6337b5e7012f",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>用</ACTION_verb><ENTITY_noun>銀行</ENTITY_noun><VerbP>轉帳</VerbP><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(用|使用|利用|採用|施用|活用|運用|假借|憑靠|中用|常用)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(轉帳|匯款|匯錢|匯出|匯進|轉賬|電匯|充值|提領|儲值|繳費)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>用</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>銀行</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>轉帳</(ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "可以用什麼方式付款": {
+            "id": "bf12fb1d-41ce-4dc2-abc4-b2608159540e",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>用</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ENTITY_noun>方式</ENTITY_noun><ACTION_verb>付款</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(用|使用|利用|採用|施用|活用|運用|假借|憑靠|有用|指用)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付出|付清|付現|付給|付費|付錢|償付|支付|給付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>.?用</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(方式|選項)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付清|付現|付給|付費|付錢|償付|支付|給付|繳付|付)</(ACTION_verb|VerbP)>"
+        },
+        "是否可以用街口繳費": {
+            "id": "6117a78f-1c7c-4a8d-8507-f952b52c0865",
+            "pos": "<CLAUSE_AnotAQ>是否</CLAUSE_AnotAQ><MODAL>可以</MODAL><ACTION_verb>用</ACTION_verb><UserDefined>街口</UserDefined><ACTION_verb>繳費</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(用|使用|利用|採用|施用|活用|運用|假借|憑靠|中用|常用)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(繳費|付費|繳付|繳稅|繳納|交納|付出|付給|償付|支付|給付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_AnotAQ>[^<]+</CLAUSE_AnotAQ>(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>.?用</(ACTION_verb|VerbP)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(街口電子支付|街口支付|街口|信用卡|活期帳戶)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>(繳費|支付|付款|付帳|付錢|付費|給付)</(ACTION_verb|VerbP)>"
+        },
+        "可以採用哪些支付方式": {
+            "id": "9428f345-2b84-4838-bca6-03316c47349c",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>採用</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ><ACTION_verb>支付</ACTION_verb><ENTITY_noun>方式</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(採用|使用|利用|採取|採納|施用|活用|運用|選用|假借|憑靠)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(支付|付出|付款|付清|付現|付給|付費|付錢|償付|給付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>.?用</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>(付款|付出|付清|付現|付給|付費|付錢|償付|支付|給付|繳付)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(方式|選項)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "可以用街口電子支付嗎": {
+            "id": "4ab94204-4c85-422c-b908-c0d0f27c26ad",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>用</ACTION_verb><UserDefined>街口電子支付</UserDefined><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(用|使用|利用|採用|施用|活用|運用|假借|憑靠|中用|常用)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?(<ACTION_verb|VerbP>用</ACTION_verb|VerbP>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(街口電子支付|街口支付|街口|信用卡|活期帳戶)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "可以選擇哪些結算方式": {
+            "id": "262eb026-8d8d-48c1-8396-bd4a5617eaaf",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>選擇</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ><ACTION_verb>結算</ACTION_verb><ENTITY_noun>方式</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(選擇|徵選|挑選|揀選|擇定|甄選|評選|遴選|選出|選定|選拔)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(結算|結束|倒閉|封閉|截止|緊閉|近親|閉塞|關閉|收兌|兌付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>選擇</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>(結算|支付|付出|付款|付清|付現|付給|付費|付錢|償付|給付|繳付)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(方式|選項)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "街口電子支付可以用嗎": {
+            "id": "b6bb595e-95a1-4f80-8d4a-9abef8ac0ed0",
+            "pos": "<UserDefined>街口電子支付</UserDefined><MODAL>可以</MODAL><ACTION_verb>用</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(用|使用|利用|採用|施用|活用|運用|假借|憑靠|有用|指用)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(街口電子支付|街口支付|街口|信用卡|活期帳戶)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>用</(ACTION_verb|VerbP)>)?<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

@@ -1,0 +1,1098 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "20了": {
+            "id": "73ab6216-923c-4181-8c29-75850bf91a15",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ASPECT",
+                    "text": "了",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "20歲": {
+            "id": "090c686f-1775-458d-bba6-be869cd584ba",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "歲",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我20": {
+            "id": "323ffc95-d624-4b56-9df5-ac2f1d50e718",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "中年": {
+            "id": "41d7f157-9298-42b2-9044-98e7499f27e9",
+            "argument": [
+                {
+                    "pos": "RANGE_locality",
+                    "text": "中",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "年",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "成年": {
+            "id": "814e0f7f-6baa-4536-995d-607286880983",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "成",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "年",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "老年": {
+            "id": "533a4e89-ce98-4150-af06-9c6e60970fb5",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "老",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "年",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "20足歲": {
+            "id": "11dec7ab-2eda-41f4-b27b-6b6734f5218b",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "足歲",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "到50歲": {
+            "id": "a72fc90c-d2d9-4958-9b60-f04698772532",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到約",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到受",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到離",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到回",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到隨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到愛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "50",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "歲",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "剛滿20": {
+            "id": "c1ef1b78-cf6f-4741-ab61-50bda55333f3",
+            "argument": [
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "剛滿",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "剛過20": {
+            "id": "d2a317e5-a35a-486d-95d5-67957491b1c2",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "要到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "過完",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "正逢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "剛放",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "恰逢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "適逢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開心過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來臨了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要來了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "等到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "開心",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來臨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "要來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "等到",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "剛過",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "大概20": {
+            "id": "86f3c7d4-4b49-4da8-83f4-daa702dad774",
+            "argument": [
+                {
+                    "pos": "MODIFIER",
+                    "text": "大概",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "年齡30": {
+            "id": "decdbdbf-f432-4c16-bbd1-91e0aea34485",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "年齡",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "從20歲": {
+            "id": "996cb912-c87d-4b3b-a269-f7e4ce7913d2",
+            "argument": [
+                {
+                    "pos": "FUNC_inner",
+                    "text": "從",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "歲",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "歲數30": {
+            "id": "94535c0d-f670-4ca3-b908-03e38d4ed61f",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "歲數",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "滿20了": {
+            "id": "ea5cf8cc-f8e2-467a-b011-5066d79ffb1f",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "滿",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ASPECT",
+                    "text": "了",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "現在20": {
+            "id": "774a503d-8cb0-4178-a6d8-113f375415d4",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "都44了": {
+            "id": "ddc4313c-4a3f-4742-892d-5c0a3f07ee75",
+            "argument": [
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "44",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ASPECT",
+                    "text": "了",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "未成年": {
+            "id": "1c59473d-b1a6-4ed8-9171-dca2161d5950",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "未",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "成",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "年",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "高中生": {
+            "id": "91b940f6-7de5-4cc3-ac2e-fa9fd8223693",
+            "argument": [
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "高中生",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我今年20": {
+            "id": "9167e153-990a-474d-bfb0-6aff4aa52a51",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "年",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我媽媽30": {
+            "id": "908b5f8c-30fc-4d75-b2fc-d7c53881b4fa",
+            "argument": [
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "媽媽",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我朋友30": {
+            "id": "83724126-b852-4095-adb5-3d931d6a7148",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "朋友",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "20歲到50歲": {
+            "id": "d8ee0df2-94e6-4232-bbd3-51deb738cc8c",
+            "argument": [
+                {
+                    "pos": "ENTITY_num",
+                    "text": "20",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "歲",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "到了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到約",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到受",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到離",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到包",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到回",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到隨",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到死",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到愛",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "到經",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "到",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "50",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "歲",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "民國88年生": {
+            "id": "ca45d1e1-56ce-48ea-97ad-40aeb4ac9155",
+            "argument": [
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "民國",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "88",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "年",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "生",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "退休的年紀": {
+            "id": "8751111c-619f-4536-9839-4b6774deeca9",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "退任",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "退出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "退場",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "退役",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "隱退",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "離休",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "離去",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "卸任",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "辭職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "退伍",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "離任",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "轉職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "退職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "離職",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "引退",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "退休",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "年",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "紀",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我媽媽今年30": {
+            "id": "c2c85ca4-0faa-4256-9ba9-c3be851ceb73",
+            "argument": [
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "媽媽",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "年",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我媽媽現在30": {
+            "id": "e7b88ed6-3cfb-474f-8d9f-18a1f7c9adc6",
+            "argument": [
+                {
+                    "pos": "ENTITY_possessive",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "媽媽",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我朋友今年30": {
+            "id": "7ab9d7f5-7ce1-4850-a2b4-e3022d0c1fdb",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "朋友",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_day",
+                    "text": "今",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "年",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "我朋友現在30": {
+            "id": "a334d6be-b94c-431f-ad78-8acddc80d1dc",
+            "argument": [
+                {
+                    "pos": "ENTITY_pronoun",
+                    "text": "我",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "朋友",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "TIME_justtime",
+                    "text": "現在",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_num",
+                    "text": "30",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "讀大學的年紀": {
+            "id": "b3bc16df-5f49-4778-90c7-50e5dfe5c729",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "讀書",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀完",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "念",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "讀過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "研讀",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "重讀",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "唸書",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "就讀",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "讀",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "大學",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "年",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "紀",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

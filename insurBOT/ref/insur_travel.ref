@@ -1,0 +1,255 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "出去玩": {
+            "id": "3b86910e-5c6f-4866-b96f-5567fd65d38c",
+            "pos": "<ACTION_verb>出去</ACTION_verb><ACTION_verb>玩</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出去|出來|回來|進去|進來|回去|過來|回家|出來了|開去|出去了)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(玩|玩忽|玩狎|玩著|玩樂|買東西|散步|遊玩|打電動|玩了|玩耍)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出去|出國|去)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(玩|旅行|旅遊|玩樂)</(ACTION_verb|VerbP)>"
+        },
+        "旅平險": {
+            "id": "92481865-618a-4e19-a230-599562210d36",
+            "pos": "<UserDefined>旅平險</UserDefined>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(旅平險|旅遊平安險|旅遊險|平安險|旅平)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "在韓國生病": {
+            "id": "a80882d2-a3cc-416a-b99b-ce2341440e83",
+            "pos": "<FUNC_inner>在</FUNC_inner><LOCATION>韓國</LOCATION><ACTION_verb>生病</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(生病|患病|得病|病重|病倒|重病|染病|打針|罹病|拉肚子|病危)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>[^<]+</LOCATION><(ACTION_verb|VerbP)>(生病|得病|病重|病倒|重病|染病|罹病|病危|住院)</(ACTION_verb|VerbP)>"
+        },
+        "於國外旅行": {
+            "id": "e70ba537-d7ee-4c85-9f0d-794a8068b7f6",
+            "pos": "<FUNC_inner>於</FUNC_inner><UserDefined>國外</UserDefined><ACTION_verb>旅行</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(旅行|巡行|旅遊|廣遊|漫遊|環遊|絆倒|遨遊|遊學|探險|遊歷)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>國外</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>(旅行|旅遊|讀書|遊玩|交換|工作|出差|代購|帶貨|留學|遊學)</(ACTION_verb|VerbP)>"
+        },
+        "於德國旅行": {
+            "id": "bf3542d1-49ee-4823-80c8-6f62010bfb1d",
+            "pos": "<FUNC_inner>於</FUNC_inner><LOCATION>德國</LOCATION><ACTION_verb>旅行</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(旅行|巡行|旅遊|廣遊|漫遊|環遊|絆倒|遨遊|遊歷|出遊|遊玩)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<LOCATION>[^<]+</LOCATION><(ACTION_verb|VerbP)>(旅行|旅遊|讀書|遊玩|交換|工作|出差|代購|帶貨|留學|遊學|玩|玩耍|實習)</(ACTION_verb|VerbP)>"
+        },
+        "在美國出車禍": {
+            "id": "ed9191e2-1181-49aa-91a9-444784f82fd6",
+            "pos": "<FUNC_inner>在</FUNC_inner><LOCATION>美國</LOCATION><ENTITY_oov>出</ENTITY_oov><ENTITY_noun>車禍</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>[^<]+</LOCATION><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>出</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(車禍|事故|意外)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "在韓國被感染": {
+            "id": "b901536e-0b31-4455-81e9-b8b1268b5eda",
+            "pos": "<FUNC_inner>在</FUNC_inner><LOCATION>韓國</LOCATION><ACTION_lightVerb>被</ACTION_lightVerb><ACTION_verb>感染</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(感染|傳染|感化|沾染|影響|毒害|確診|致病|咬傷|發病|染病)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>[^<]+</LOCATION><ACTION_lightVerb>[^<]+</ACTION_lightVerb><(ACTION_verb|VerbP)>感染</(ACTION_verb|VerbP)>"
+        },
+        "在韓國被車撞": {
+            "id": "b91add68-da39-4809-bd0f-4588af3ab1a6",
+            "pos": "<FUNC_inner>在</FUNC_inner><LOCATION>韓國</LOCATION><ACTION_lightVerb>被</ACTION_lightVerb><ENTITY_noun>車</ENTITY_noun><ACTION_verb>撞</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(撞|推撞|撞倒|撞擊|撞死|叩關|打死|推擠|搬倒|搭建|搭蓋)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>韓國</LOCATION><ACTION_lightVerb>[^<]+</ACTION_lightVerb><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>車</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>撞</(ACTION_verb|VerbP)>"
+        },
+        "探索世界各地": {
+            "id": "8244f307-6aa0-4101-a85f-95958a8babe7",
+            "pos": "<ACTION_verb>探索</ACTION_verb><LOCATION>世界</LOCATION><QUANTIFIER>各</QUANTIFIER><ENTITY_noun>地</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(探索|刺探|勘探|探勘|探問|探尋|探查|探測|探究|探討|探訪)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>探索</(ACTION_verb|VerbP)><LOCATION>世界</LOCATION><QUANTIFIER>各</QUANTIFIER><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>地</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "是一個海鷗族": {
+            "id": "19381bd2-795f-4481-b03b-b25db503c658",
+            "pos": "<AUX>是</AUX><ENTITY_classifier>一個</ENTITY_classifier><ENTITY_nouny>海鷗族</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<AUX>[^<]+</AUX><ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>海鷗族</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "保便宜的旅平險": {
+            "id": "d325dd03-995e-4d55-bd0e-af9786df9608",
+            "pos": "<ACTION_verb>保</ACTION_verb><MODIFIER>便宜</MODIFIER><FUNC_inner>的</FUNC_inner><UserDefined>旅平險</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(旅平險|旅遊平安險|旅遊險|平安險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "保旅遊相關的險": {
+            "id": "ada799a8-f905-41f0-8640-820acb07a307",
+            "pos": "<ACTION_verb>保</ACTION_verb><ACTION_verb>旅遊</ACTION_verb><MODIFIER>相關</MODIFIER><FUNC_inner>的</FUNC_inner><MODIFIER>險</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|保餘|保忠|保站)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(旅遊|廣遊|旅行|漫遊|環遊|遊歷|遊覽|遨遊|絆倒|遊程|休閒)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(旅遊|旅行|出國|遊玩|娛樂|玩樂|玩耍|.?遊)</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<FUNC_in(ner|ter)>的</FUNC_in(ner|ter)>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(險|保險|方案|商品)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>)?"
+        },
+        "到新竹參加活動": {
+            "id": "16e3ff47-679e-43f6-a1b4-c01068546855",
+            "pos": "<ACTION_verb>到</ACTION_verb><LOCATION>新竹</LOCATION><ACTION_verb>參加</ACTION_verb><ENTITY_nouny>活動</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|到了|到約|到受|到離|到包|到經過|到回|到隨|到死|到愛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(參加|加入|加盟|參與|伴隨|侍奉|傾聽|吸引住|定期去|投入|照看)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|.{0,1}去)</(ACTION_verb|VerbP)><LOCATION>[^<]+</LOCATION>(<(ACTION_verb|VerbP)>(參加|參與|出席)</(ACTION_verb|VerbP)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+        },
+        "在國外發生意外": {
+            "id": "d427b726-5bbe-4ecb-a31b-895b1d6f68ef",
+            "pos": "<FUNC_inner>在</FUNC_inner><UserDefined>國外</UserDefined><ACTION_verb>發生</ACTION_verb><ENTITY_nouny>意外</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(發生|出生|來到|到來|到達|抵達|案發|發生過|爆發|遇到|爆發了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>國外</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>發生</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>意外</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "在韓國發生意外": {
+            "id": "ff02cb38-004b-413a-bc43-bba1f148ce4c",
+            "pos": "<FUNC_inner>在</FUNC_inner><LOCATION>韓國</LOCATION><ACTION_verb>發生</ACTION_verb><ENTITY_nouny>意外</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(發生|出生|來到|到來|到達|抵達|案發|發生了|遭遇|遭逢|爆發)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>[^<]+</LOCATION><(ACTION_verb|VerbP)>(發生|出|有)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(車禍|事故|意外)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "外出要保的保險": {
+            "id": "b1b650fe-8c28-4e8a-8afe-322e6aac9b9e",
+            "pos": "<ACTION_verb>外出</ACTION_verb><ACTION_verb>要</ACTION_verb><ACTION_verb>保</ACTION_verb><FUNC_inner>的</FUNC_inner><ENTITY_noun>保險</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(外出|出門|出遊|返家|出國|逛街|遛狗|上門|回家|進城|出外)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>外出</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>保</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>"
+        },
+        "常常出國跑來跑去": {
+            "id": "e16c5834-e2d4-42db-9b16-4ee704a50447",
+            "pos": "<TIME_justtime>常常</TIME_justtime><ACTION_verb>出國</ACTION_verb><ACTION_verb>跑來</ACTION_verb><ACTION_verb>跑去</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出國|出走|分離|撤出|早退|溜走|漏掉|甩開|走出|走掉|走開)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(跑來|跑去|跑到|躲起來|哭著|趕去|跑出來|衝出來|跑出去|轉頭|常去)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(跑去|跑來|跑到|趕去|衝去|跑出去|要去|去了|回去|想去|躲起來)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}<(ACTION_verb|VerbP)>(出國|旅行|.?遊)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>跑來</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>跑去</(ACTION_verb|VerbP)>"
+        },
+        "保遊留學相關的方案": {
+            "id": "fbd60c45-4fa1-4dd5-a4d9-b6d56b540034",
+            "pos": "<ACTION_verb>保遊</ACTION_verb><ACTION_verb>留學</ACTION_verb><MODIFIER>相關</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_noun>方案</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保遊|)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(留學|學習|求學|留洋|遊學|攻讀|研判|研讀|考查|進修|唸書)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>保遊</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>留學</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(險|保險|方案|商品)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>)?"
+        },
+        "出差的話可以保什麼險": {
+            "id": "6b52ab35-9822-44aa-90ed-5b52d6c192ba",
+            "pos": "<ACTION_verb>出差</ACTION_verb><FUNC_inner>的</FUNC_inner><ENTITY_nouny>話</ENTITY_nouny><MODAL>可以</MODAL><ACTION_verb>保</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><MODIFIER>險</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出差|探親|探望|散心|遊歷|搬家|唸書|留學|拍戲|打工|赴任)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(旅行|旅遊|讀書|遊玩|交換|工作|出差|代購|帶貨|留學|遊學|.?遊)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(保|投.?|.?買|推薦|介紹)</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

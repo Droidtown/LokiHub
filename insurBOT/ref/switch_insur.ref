@@ -1,0 +1,147 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "換個保險": {
+            "id": "648f187c-610b-4bf7-982a-4cb2ae97dca4",
+            "pos": "<ACTION_verb>換</ACTION_verb><ACTION_eventQuantifier>個</ACTION_eventQuantifier><ENTITY_noun>保險</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(換|更換|換了|買|換到|轉換|換回|換成|有換|拆開|換購)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(.?換|換成)</(ACTION_verb|VerbP)>(<ACTION_eventQuantifier>[^<]+</ACTION_eventQuantifier>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|方案|商品|.{0,2}險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>"
+        },
+        "換一種保險吧": {
+            "id": "e8e144a5-d2a0-4ff3-9fa7-5ffea5b0b75d",
+            "pos": "<ACTION_verb>換</ACTION_verb><ENTITY_classifier>一種</ENTITY_classifier><ENTITY_noun>保險</ENTITY_noun><CLAUSE_particle>吧</CLAUSE_particle>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(換|更換|換了|買|換到|轉換|換回|換成|有換|拆開|換購)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(.?換|換成)</(ACTION_verb|VerbP)><ENTITY_classifier>一.</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|方案|商品|.{0,2}險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
+        },
+        "還有其他的嗎": {
+            "id": "554aebd9-95d5-40eb-8f3d-ea7faeb5915e",
+            "pos": "<FUNC_conjunction>還有</FUNC_conjunction><MODIFIER>其他</MODIFIER><FUNC_inner>的</FUNC_inner><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [],
+            "pattern": "<FUNC_conjunction>[^<]+</FUNC_conjunction><(MODIFIER|ModifierP)>(別|其他|不同)</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "需要別的推薦": {
+            "id": "b28f0528-1dbf-4a4b-b22f-f91a8481405c",
+            "pos": "<ACTION_verb>需要</ACTION_verb><MODIFIER>別</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_nouny>推薦</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(需要|想要|索要|要求|需求|想拿|想買|索求|索討|允許|願意)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(.?要|想.?)</(ACTION_verb|VerbP)><(MODIFIER|ModifierP)>(別|其他|不同)</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(推薦|介紹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我想問別的保險": {
+            "id": "4a195a58-dd89-4c38-b923-3530f602ccd2",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>想問</ACTION_verb><MODIFIER>別</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_noun>保險</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想問|納悶|常問|反問|問了|問過|敢說|想看|問說|敢講|有聽過)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "((<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>(想.?|要|.?買|投.?|保)</(ACTION_verb|VerbP)>)?<(MODIFIER|ModifierP)>(別|其他|不同)</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|方案|商品|.{0,2}險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>"
+        },
+        "我要保另一個險": {
+            "id": "56bb90f4-e10c-45d4-836c-278b749f7667",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>要</ACTION_verb><ACTION_verb>保另</ACTION_verb><ENTITY_classifier>一個</ENTITY_classifier><MODIFIER>險</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保另|)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "((<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>(想.?|要|.?買|投.?|保)</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>保另</(ACTION_verb|VerbP)><ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|方案|商品|.{0,2}險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
