@@ -1,0 +1,198 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "會給付": {
+            "id": "1455eee1-6412-40c5-b5f2-86cdf5350927",
+            "pos": "<MODAL>會</MODAL><ACTION_verb>給付</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|付出|付款|付清|付現|付給|付費|付錢|償付|支付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<MODAL>[^<]+</MODAL><(ACTION_verb|VerbP)>(給付|賠償|理賠|保障)</(ACTION_verb|VerbP)>"
+        },
+        "保障什麼": {
+            "id": "61bf50da-8e2c-4311-8c48-df12b30b9c3a",
+            "pos": "<ACTION_verb>保障</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|理賠|賠償|保障)</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "給付項目": {
+            "id": "e5c9b478-b20b-4ed1-a8ba-72abcbdfeb75",
+            "pos": "<ACTION_verb>給付</ACTION_verb><ENTITY_noun>項目</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|付出|付款|付清|付現|付給|付費|付錢|償付|支付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|保障|賠償|理賠)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(項目|範圍)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "賠償了啥": {
+            "id": "070fccbc-2fea-4fa7-99f4-8798d3b498e2",
+            "pos": "<VerbP>賠償了</VerbP><CLAUSE_WhatQ>啥</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賠償了|代償|償債|償還|抵償|清償|補償|賠付|報答|抵充|抵扣)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賠償了|理賠了|保障了|給付了)</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "保障有哪些": {
+            "id": "2e4f0edf-a041-4261-9d23-117c4a485881",
+            "pos": "<ACTION_verb>保障</ACTION_verb><ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|賠償|理賠)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "怎麼樣理賠": {
+            "id": "86455836-139a-48d6-a1e7-652e7c179946",
+            "pos": "<CLAUSE_HowQ>怎麼樣</CLAUSE_HowQ><ACTION_verb>理賠</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(理賠|退費|退款|賠付|保戶|退票|給付|承保|投保|賠償|付款)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(理賠|賠償)</(ACTION_verb|VerbP)>"
+        },
+        "給付的項目": {
+            "id": "1e71aa72-0b80-4d74-8394-6d21be5dfddc",
+            "pos": "<ACTION_verb>給付</ACTION_verb><FUNC_inner>的</FUNC_inner><ENTITY_noun>項目</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|付出|付款|付清|付現|付給|付費|付錢|償付|支付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給付|理賠|賠償|保障)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(項目|範圍|東西)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "獲得什麼保障": {
+            "id": "44af80ca-120e-40c3-9f4a-cf79f7485278",
+            "pos": "<ACTION_verb>獲得</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ACTION_verb>保障</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(獲得|博得|取得|奪得|得出|得到|得著|拾獲|掙得|爭得|獲取)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(獲得|得到|拿到|有)</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>(給付|理賠|賠償|保障)</(ACTION_verb|VerbP)>"
+        },
+        "那有哪些保障": {
+            "id": "a0b3473f-3926-4587-9522-43523670e58d",
+            "pos": "<ENTITY_nouny>那有</ENTITY_nouny><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ><ACTION_verb>保障</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>那有</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>(保障|賠償|理賠)</(ACTION_verb|VerbP)>"
+        },
+        "可以保障我什麼": {
+            "id": "0e7c3e0a-b6fe-4949-beff-ea240db8568d",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>保障</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(給付|理賠|賠償|保障)</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "獲得什麼樣的保障": {
+            "id": "01b03d44-952a-46c9-92e6-3f68fc7078e2",
+            "pos": "<ACTION_verb>獲得</ACTION_verb><CLAUSE_WhatQ>什麼樣</CLAUSE_WhatQ><FUNC_inner>的</FUNC_inner><ENTITY_nouny>保障</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(獲得|博得|取得|奪得|得出|得到|得著|拾獲|掙得|爭得|獲取)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>獲得</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>保障</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "給我什麼樣的保障": {
+            "id": "6b65da0e-fe16-4e8b-b430-e9f6b18512e8",
+            "pos": "<ACTION_verb>給</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><CLAUSE_WhatQ>什麼樣</CLAUSE_WhatQ><FUNC_inner>的</FUNC_inner><ENTITY_nouny>保障</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給|供給|帶給|提供|發放|資助|給老|交給|留給|給聖|分給)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>給</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(保障|賠償|理賠)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

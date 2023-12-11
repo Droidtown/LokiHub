@@ -1,0 +1,154 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "此險特色": {
+            "id": "ee37a667-e9d8-41db-9f26-389f6a091649",
+            "pos": "<FUNC_determiner>此</FUNC_determiner><ENTITY_nouny>險特色</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<FUNC_determiner>[^<]+</FUNC_determiner><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>險特色</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "壽險的特色": {
+            "id": "84948b4c-d0c6-421e-9bc4-374a049a6f9c",
+            "pos": "<UserDefined>壽險</UserDefined><FUNC_inner>的</FUNC_inner><ENTITY_noun>特色</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov|pronoun))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov|pronoun))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(特色|特點|優點|優勢)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "有什麼特別": {
+            "id": "cd664178-68b4-40df-b3c9-39c542071d57",
+            "pos": "<ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><MODIFIER>特別</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(MODIFIER|ModifierP|ENTITY_(nounHead|nouny|noun|oov))>(特別|特色|優點|優勢|特點)</(MODIFIER|ModifierP|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "此險的特色": {
+            "id": "aefd01a4-ff73-4e19-9817-e2078dfda75b",
+            "pos": "<FUNC_determiner>此</FUNC_determiner><MODIFIER>險</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_noun>特色</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "(<FUNC_determiner>[^<]+</FUNC_determiner><(MODIFIER|ModifierP)>險</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(特別|特色|優點|優勢|特點)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "特色是什麼": {
+            "id": "d4d31812-1f22-4b3c-8438-854a657843b3",
+            "pos": "<ENTITY_noun>特色</ENTITY_noun><AUX>是</AUX><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(特色|特點|優點|優勢)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><AUX>[^<]+</AUX><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "這個險的特色": {
+            "id": "4d99fbc6-e19c-49f4-865c-af611680f784",
+            "pos": "<ENTITY_DetPhrase>這個</ENTITY_DetPhrase><MODIFIER>險</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_noun>特色</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<ENTITY_DetPhrase>這個</ENTITY_DetPhrase><(MODIFIER|ModifierP)>險</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>特色</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "是會有哪些特色": {
+            "id": "e766fe40-5935-4f09-bfdb-18eb0df35767",
+            "pos": "<AUX>是</AUX><MODAL>會</MODAL><ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ><ENTITY_noun>特色</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<AUX>[^<]+</AUX>)?(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(特色|特點|優點|優勢)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "特色是會有哪些": {
+            "id": "0076d442-4c52-41ef-95c7-4264c4122e22",
+            "pos": "<ENTITY_noun>特色</ENTITY_noun><AUX>是</AUX><MODAL>會</MODAL><ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(特色|特點|優點|優勢)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<AUX>[^<]+</AUX>)?(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

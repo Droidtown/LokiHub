@@ -1,0 +1,1877 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "用現金付": {
+            "id": "ad90929f-1575-4dee-b62e-515974693db1",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "現金",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "付出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付款",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付清",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付現",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付給",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付費",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付錢",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "償付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "支付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "給付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "賠付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "交納",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳納",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "付難",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "償還",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "付阿",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "清償",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "付多",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "付過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "付了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "付",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "用line pay付": {
+            "id": "d8c12549-5f22-4305-a14b-a4d165db2101",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "line",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": " ",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pay",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "付出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付款",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付清",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付現",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付給",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付費",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付錢",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "償付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "支付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "給付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "賠付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "交納",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳納",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "付難",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "償還",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "付阿",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "清償",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "付多",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "付過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "付了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "付",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "用現金付款": {
+            "id": "79cacc4c-a34b-410b-8abe-4d27656404dd",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "現金",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "付出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付清",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "付現",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付給",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付費",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "付錢",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "償付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "支付",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "給付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳付",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "賠付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "賠款",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "還款",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "交納",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳納",
+                            "level": "tier_2",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉帳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "充值",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "匯款",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "繳費",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "儲值",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收款",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "退款",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳款",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "刷卡",
+                            "level": "word2vec",
+                            "checked": true
+                        }
+                    ],
+                    "text": "付款",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "用現金給錢": {
+            "id": "87f5c7b4-4185-4b11-bcb9-a82b896fbb3b",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "現金",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "退錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拿錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "認帳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吭聲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "付錢",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "還錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "怕了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "管了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "閉嘴",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "怕",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "管",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "給錢",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "用line pay給錢": {
+            "id": "40e1a5a3-a363-4812-8df1-de5ecc82dbeb",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "line",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": " ",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pay",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "VerbP",
+                    "lexy": [
+                        {
+                            "text": "退錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "拿錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "認帳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吭聲",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "付錢",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "還錢",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "怕了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "管了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "閉嘴",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "怕",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "管",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "給錢",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "用line pay繳費": {
+            "id": "31822e15-361a-42f7-84d4-758e2a2c2f17",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "line",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": " ",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pay",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "付費",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "繳付",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "繳稅",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳納",
+                            "level": "tier_1",
+                            "checked": true
+                        },
+                        {
+                            "text": "交納",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "付出",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "付給",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "償付",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "支付",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "給付",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "賠付",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "預付",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扣款",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "扣繳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "付款",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "轉帳",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳款",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "儲值",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "退費",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "刷卡",
+                            "level": "word2vec",
+                            "checked": true
+                        },
+                        {
+                            "text": "代收",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "繳費",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "可以用現金嗎": {
+            "id": "137b69ed-6863-42d6-bd9c-93a0e6d87a2e",
+            "argument": [
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "現金",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "可以用line pay嗎": {
+            "id": "e641a797-c383-444f-bce3-1c2a5fbdddd8",
+            "argument": [
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "line",
+                    "checked": true,
+                    "checkbox": true
+                },
+                {
+                    "pos": "PUNCTUATION",
+                    "text": " ",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_oov",
+                    "text": "pay",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "可以用信用卡嗎": {
+            "id": "bf0fd411-47e9-45b3-b4d0-0ace4c35fbf5",
+            "argument": [
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "信用卡",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "可以用電子支付嗎": {
+            "id": "ae21011e-4bdd-4983-a7a6-1ef06c21cc14",
+            "argument": [
+                {
+                    "pos": "MODAL",
+                    "text": "可以",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "使用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "利用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "採用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "施用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "活用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "運用",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "假借",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "憑靠",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "中用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用此",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "原用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有用",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "用來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "指用",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "用",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_noun",
+                    "text": "電子",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "付出",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付款",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付清",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付現",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付給",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付費",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "付錢",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "償付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "給付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "賠付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預付",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "預支",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "交納",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳交",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳納",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳費",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "代付",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "繳稅",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "償還",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "收取",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "支付",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_YesNoQ",
+                    "text": "嗎",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

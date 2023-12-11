@@ -1,0 +1,207 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "how to start": {
+            "id": "64d9ae65-bcf2-4113-afbc-16010eadb9ae",
+            "pos": "<ENTITY_oov>how</ENTITY_oov><ENTITY_oov>to</ENTITY_oov><ENTITY_oov>start</ENTITY_oov>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>how</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>to</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(start|begin|type|say)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "可以怎麼問": {
+            "id": "489a7de3-d0bc-4976-9647-57a03bc519e6",
+            "pos": "<MODAL>可以</MODAL><CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>問</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(問|問起|追問|詢問|問道|問到|反問|問說|談|質問|問了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>可以</MODAL>)?<CLAUSE_HowQ>怎麼</CLAUSE_HowQ><(ACTION_verb|VerbP)>(講|問.?|.?說|打|打字|提供|開始|提.?|言說)</(ACTION_verb|VerbP)>"
+        },
+        "我該說什麼": {
+            "id": "5c704417-7f8a-4cbe-86cd-551a3a4ea9c7",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><MODAL>該</MODAL><ACTION_verb>說</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(說|演說|說話|宣判|拼讀|談到|辯護|說真|有說|講出|說過)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(ACTION_verb|VerbP)>(講|問.?|.?說|打|打字|提供|開始|提.?|言說)</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "給個例句吧": {
+            "id": "c9c48c91-5e99-4ae2-a64e-686adb5d520b",
+            "pos": "<ACTION_verb>給</ACTION_verb><ACTION_eventQuantifier>個</ACTION_eventQuantifier><ENTITY_oov>例句</ENTITY_oov><CLAUSE_particle>吧</CLAUSE_particle>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給|供給|帶給|提供|發放|資助|給老|交給|留給|給聖|分給)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給|提供|說|講|示範)</(ACTION_verb|VerbP)><ACTION_eventQuantifier>[^<]+</ACTION_eventQuantifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(例句|句子)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
+        },
+        "不知道他幾歲": {
+            "id": "2b07509a-213c-42b1-a2bc-8ef51f27f372",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>知道</ACTION_verb><ENTITY_pronoun>他</ENTITY_pronoun><CLAUSE_HowQ>幾</CLAUSE_HowQ><ENTITY_noun>歲</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知道|得知|明知|深知|獲知|知悉|知情|知曉|知足|確知|了解)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>知道</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>歲</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "教我怎麼使用": {
+            "id": "2f831549-db50-4470-952e-b6652df25e42",
+            "pos": "<ACTION_verb>教</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>使用</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(教|教授|教過|教給|教了|教導|教程|教席|講授|教會了|選修了)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(使用|利用|動用|應用|採用|施用|沿用|活用|運用|假借|憑靠)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "((?<!</FUNC_negation>)<(ACTION_verb|VerbP)>教</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>.?用</(ACTION_verb|VerbP)>"
+        },
+        "示範一下例句": {
+            "id": "94127823-6867-49f0-a780-d6ba3b5245c1",
+            "pos": "<ACTION_verb>示範</ACTION_verb><ENTITY_num>一</ENTITY_num><ENTITY_oov>下例句</ENTITY_oov>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(示範|展示|揭示|演示|表示|顯示|引領|指引|演出|表演|賣弄)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(示範|演示)</(ACTION_verb|VerbP)><ENTITY_num>一</ENTITY_num><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>下例句</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "不知該從何問起": {
+            "id": "643b90de-82e8-481e-9a39-616689b5109d",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>知</ACTION_verb><MODAL>該</MODAL><FUNC_inner>從</FUNC_inner><CLAUSE_WhereQ>何</CLAUSE_WhereQ><ACTION_verb>問起</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知|明知|深知|知悉|知情|知曉|知足|知道|確知|了解|懂得)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(問起|問到|追問|問|問道|逼問|反問|詢問|問說|問過|問了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>(知|知道|了解|曉得|懂)</(ACTION_verb|VerbP)>(<MODAL>[^<]+</MODAL>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<CLAUSE_WhereQ>[^<]+</CLAUSE_WhereQ><(ACTION_verb|VerbP)>(講|問.?|.?說|打|打字|提供|開始|提.?|言說)</(ACTION_verb|VerbP)>"
+        },
+        "不知道他的年齡": {
+            "id": "059d2371-6de3-4883-9f47-b4ffaf6ceca1",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>知道</ACTION_verb><ENTITY_pronoun>他</ENTITY_pronoun><FUNC_inner>的</FUNC_inner><UserDefined>年齡</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知道|得知|明知|深知|獲知|知悉|知情|知曉|知足|確知|了解)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>知道</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>年齡</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "不知道他的職業": {
+            "id": "cf7d5398-b419-4b19-8041-1df69bfec165",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>知道</ACTION_verb><ENTITY_pronoun>他</ENTITY_pronoun><FUNC_inner>的</FUNC_inner><ENTITY_noun>職業</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知道|得知|明知|深知|獲知|知悉|知情|知曉|知足|確知|了解)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>知道</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>職業</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "不知道該怎麼問": {
+            "id": "20e7a985-6d2c-4525-82d8-911c6ae0b4f3",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>知道</ACTION_verb><MODAL>該</MODAL><CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>問</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知道|得知|明知|深知|獲知|知悉|知情|知曉|知足|確知|了解)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(問|問起|追問|詢問|問道|問到|反問|問說|談|質問|問了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>(知|知道|了解|曉得)</(ACTION_verb|VerbP)>(<MODAL>[^<]+</MODAL>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(講|問.?|.?說|打|打字|提供|開始|提.?|言說)</(ACTION_verb|VerbP)>"
+        },
+        "不知該怎麼跟你講": {
+            "id": "f9cb722c-645b-453c-985a-8fcdaa561c91",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>知</ACTION_verb><MODAL>該</MODAL><CLAUSE_HowQ>怎麼</CLAUSE_HowQ><FUNC_conjunction>跟</FUNC_conjunction><ENTITY_pronoun>你</ENTITY_pronoun><ACTION_verb>講</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知|明知|深知|知悉|知情|知曉|知足|知道|確知|了解|懂得)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(講|主講|演講|講學|講授|講習|講話|講課|講述|交涉|公演)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>(知|知道|了解|曉得|懂)</(ACTION_verb|VerbP)>(<MODAL>[^<]+</MODAL>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><FUNC_conjunction>[^<]+</FUNC_conjunction>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>(講|問.?|.?說|打|打字|提供|開始|提.?|言說)</(ACTION_verb|VerbP)>"
+        },
+        "不知道我要去哪裡": {
+            "id": "19fd873a-416d-4adf-a7eb-b4ea125a8553",
+            "pos": "<FUNC_negation>不</FUNC_negation><ACTION_verb>知道</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>要去</ACTION_verb><CLAUSE_WhereQ>哪裡</CLAUSE_WhereQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(知道|得知|明知|深知|獲知|知悉|知情|知曉|知足|確知|了解)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要去|想去|跑去|去|去了|跑來|想來|回去|得去|硬要|忙著)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>知道</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>要去</(ACTION_verb|VerbP)><CLAUSE_WhereQ>[^<]+</CLAUSE_WhereQ>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

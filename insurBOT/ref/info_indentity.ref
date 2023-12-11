@@ -1,0 +1,172 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "捕魚": {
+            "id": "376c6f26-f31d-4439-bf1e-1d7587cdc92e",
+            "pos": "<ACTION_verb>捕魚</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(捕魚|等展|禁航)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(捕魚|種田|耕田|打魚|播種|收成|種植|耕種)</(ACTION_verb|VerbP)>"
+        },
+        "上班族": {
+            "id": "f56da389-f65d-4ef8-b8c3-54e5d040b418",
+            "pos": "<ENTITY_noun>上班族</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(上班族|小資族|新鮮人|學生|研究生|小資|小資女|剛出社會|剛畢業)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "低收入戶": {
+            "id": "133dd53f-cefc-4911-b5fd-b69757e596ec",
+            "pos": "<ENTITY_nouny>低收入戶</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(低收入戶|弱勢群體|社會服務|原住民|社福|農業|漁業|身心障礙|老人生活津貼|身障|農民|特殊身份|農夫|特殊身分|漁民|農保|阿美族|泰雅族|巴宰族|卑南族|布農族|邵族|魯凱族|台灣原住民族|排灣族|噶瑪蘭族|邰灣族|鄒族|賽德克族|高山族|馬太鞍族|卡那卡那富族)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "家庭主婦": {
+            "id": "73429ea3-7f48-495c-8ed1-22c7da1c6164",
+            "pos": "<UserDefined>家庭主婦</UserDefined>",
+            "lexy": [],
+            "pattern": "(?<!(<ACTION_verb>想幫</ACTION_verb>))(?<!(<ACTION_verb>換成</ACTION_verb>))(?<!(<ACTION_verb>變成</ACTION_verb>))(?<!(<ACTION_verb>幫</ACTION_verb>))(?<!(<ACTION_verb>換</ACTION_verb>))(?<!(<ACTION_verb>換幫</ACTION_verb>))(?<!(<ENTITY_possessive>我</ENTITY_possessive>))<(UserDefined|ENTITY_(nounHead|nouny|noun|oov|pronoun))>(家庭主婦|家庭|為人父母|父親|母親|爸爸|媽媽)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov|pronoun))>"
+        },
+        "經濟弱勢": {
+            "id": "95781408-d5ee-4ad4-a9c3-5bae04ef2b50",
+            "pos": "<ENTITY_noun>經濟</ENTITY_noun><MODIFIER>弱勢</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>經濟</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(MODIFIER|ModifierP)>(困難|弱勢|困頓|困苦)</(MODIFIER|ModifierP)>"
+        },
+        "剛進入社會": {
+            "id": "ad47ecfd-cc42-45f7-8b8f-ccf26f049911",
+            "pos": "<MODIFIER>剛</MODIFIER><ACTION_verb>進入</ACTION_verb><ENTITY_noun>社會</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(進入|進來|進去|供認|埋伏|承認|招認|沉入|沉潛|深入|潛伏)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>(進入|步入|剛入)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>社會</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "剛開始上班": {
+            "id": "09373e57-7ebf-4e15-a269-0e4c3a5ad418",
+            "pos": "<MODIFIER>剛</MODIFIER><ACTION_verb>開始</ACTION_verb><ACTION_verb>上班</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(開始|啟用|開創|結束|展開|停止|停止了|開始了)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(上班|值班|加班|勞動|工作|賣笑|運轉|換屋|用膳|放假|打工)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>開始</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>上班</(ACTION_verb|VerbP)>"
+        },
+        "早八要上課": {
+            "id": "07442a64-d7c2-4e41-96bd-1741cad49bcc",
+            "pos": "<TIME_day>早</TIME_day><ENTITY_num>八</ENTITY_num><ACTION_verb>要</ACTION_verb><ACTION_verb>上課</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(上課|聽課|上學|就學|求學|聽講|講課|練球|放學|開學|補課)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<TIME_(holiday|justtime|day|week|month|season|year|decade)>早</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}<ENTITY_num>八</ENTITY_num><(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(上課|上學|學習|讀書)</(ACTION_verb|VerbP)>"
+        },
+        "經濟有困難": {
+            "id": "d9c235f6-390f-47c0-a753-e5364d234221",
+            "pos": "<ENTITY_noun>經濟</ENTITY_noun><ACTION_verb>有</ACTION_verb><MODIFIER>困難</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>經濟</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(MODIFIER|ModifierP|ENTITY_noun)>(困難|困頓|困苦|狀況)</(MODIFIER|ModifierP|ENTITY_noun)>"
+        },
+        "平時朝九晚五": {
+            "id": "f065f7f1-3bcd-4bce-a929-5f063605a289",
+            "pos": "<TIME_justtime>平時</TIME_justtime><IDIOM>朝九晚五</IDIOM>",
+            "lexy": [],
+            "pattern": "(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}<IDIOM>朝九晚五</IDIOM>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

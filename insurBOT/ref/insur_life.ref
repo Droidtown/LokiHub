@@ -1,0 +1,213 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "壽險": {
+            "id": "53d1a06d-96a1-45d5-847c-c47c453462d9",
+            "pos": "<UserDefined>壽險</UserDefined>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(壽險|人壽保險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "買新房": {
+            "id": "551d8bf3-931a-4973-81c4-3d74a8cbe5cb",
+            "pos": "<ACTION_verb>買</ACTION_verb><ENTITY_nouny>新房</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(買|採買|收買|買進|購買|採辦|購得|買東西|吃|賣|買不起)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(.{0,1}買|購入|背|.?付)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(新房|房子|房屋|房貸|貸款)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>"
+        },
+        "一家之主": {
+            "id": "14774c4d-1ec1-438a-99cf-dcd5f0ac1d24",
+            "pos": "<IDIOM>一家之主</IDIOM>",
+            "lexy": [],
+            "pattern": "<IDIOM>一家之主</IDIOM>"
+        },
+        "單親家庭": {
+            "id": "3a4a1a8c-d663-415d-803e-cc82ad4e4fff",
+            "pos": "<MODIFIER>單親</MODIFIER><UserDefined>家庭</UserDefined>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>單親</(MODIFIER|ModifierP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>家庭</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "怕留給家人": {
+            "id": "261df30d-6ece-4342-8368-c43f92df14e6",
+            "pos": "<ACTION_verb>怕</ACTION_verb><ACTION_verb>留給</ACTION_verb><ENTITY_noun>家人</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(怕|受怕|擔驚|介意|擔心|最怕|覺得|懼怕|怕死|甘心|忍心)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(留給|保留|留傳|預留|囤積|遺贈|分給|傳承給|交給|給了|送給)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>怕</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>留給</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "是一位父親": {
+            "id": "3e8c2141-971e-4b41-b709-902946fb98b8",
+            "pos": "<AUX>是</AUX><ENTITY_classifier>一位</ENTITY_classifier><ENTITY_pronoun>父親</ENTITY_pronoun>",
+            "lexy": [],
+            "pattern": "(?<!(<ENTITY_possessive>我</ENTITY_possessive>))<AUX>[^<]+</AUX>(<ENTITY_classifier>[^<]+</ENTITY_classifier>)?<ENTITY_pronoun>(父親|母親|爸爸|媽媽)</ENTITY_pronoun>"
+        },
+        "保便宜的壽險": {
+            "id": "902ff8d9-0f49-404a-afdf-a257e92663ae",
+            "pos": "<ACTION_verb>保</ACTION_verb><MODIFIER>便宜</MODIFIER><FUNC_inner>的</FUNC_inner><UserDefined>壽險</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>壽險</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "隔代教養家庭": {
+            "id": "a243a5bb-7b17-4145-9680-e0de3739707c",
+            "pos": "<ACTION_verb>隔</ACTION_verb><ENTITY_nouny>代教養</ENTITY_nouny><UserDefined>家庭</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(隔|隔近|隔約|相隔|設隔|隔了|拖了|時隔|暌違|相距|經近)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>隔</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>代教養</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>家庭</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "擔心自己的家人": {
+            "id": "d1bfab63-713f-430a-93a3-8ee1ea40bfe0",
+            "pos": "<ACTION_verb>擔心</ACTION_verb><ENTITY_pronoun>自己</ENTITY_pronoun><FUNC_inner>的</FUNC_inner><ENTITY_noun>家人</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(擔心|傷心|勞心|掛心|提心|操心|擔憂|擔驚|費心|受怕|哀痛)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>擔心</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>家人</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "是一位單親媽媽": {
+            "id": "3bb36ab6-aad3-4e96-92a0-7d4fef185cb2",
+            "pos": "<AUX>是</AUX><ENTITY_classifier>一位</ENTITY_classifier><ENTITY_nouny>單親</ENTITY_nouny><ENTITY_pronoun>媽媽</ENTITY_pronoun>",
+            "lexy": [],
+            "pattern": "<AUX>[^<]+</AUX><ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>單親</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<ENTITY_pronoun>(父親|母親|爸爸|媽媽)</ENTITY_pronoun>)?"
+        },
+        "只有一個人在賺錢": {
+            "id": "1740d408-e1d0-419e-bd51-8e8b85924609",
+            "pos": "<MODIFIER>只有</MODIFIER><ENTITY_classifier>一個</ENTITY_classifier><ENTITY_noun>人</ENTITY_noun><ASPECT>在</ASPECT><ACTION_verb>賺錢</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賺錢|賺取|賺回來|賺得|致富|掙錢|養家|賺|還債|做生意|存錢)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<MODIFIER>只有</MODIFIER><ENTITY_classifier>一個</ENTITY_classifier><ENTITY_noun>人</ENTITY_noun><ASPECT>在</ASPECT><(ACTION_verb|VerbP)>賺錢</(ACTION_verb|VerbP)>"
+        },
+        "為家裡的經濟支柱": {
+            "id": "57c85e47-cf7e-48ea-b310-7a38f081049e",
+            "pos": "<AUX>為</AUX><ENTITY_noun>家</ENTITY_noun><RANGE_locality>裡</RANGE_locality><FUNC_inner>的</FUNC_inner><ENTITY_noun>經濟</ENTITY_noun><ENTITY_noun>支柱</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<AUX>[^<]+</AUX><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>家</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>經濟</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(支柱|來源)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "給家人多一份保障": {
+            "id": "e45df62f-8795-4866-8dbc-0046a075f870",
+            "pos": "<ACTION_verb>給</ACTION_verb><ENTITY_noun>家人</ENTITY_noun><ACTION_verb>多</ACTION_verb><ENTITY_classifier>一份</ENTITY_classifier><ENTITY_nouny>保障</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給|供給|帶給|提供|發放|資助|給老|交給|留給|給聖|分給)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(多|到多|更多|獲多|作多|分多|較多|受多|供多|處多|赴多)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>給</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>多</(ACTION_verb|VerbP)><ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>保障</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "使家庭生活陷入困境": {
+            "id": "8cf8f40a-e877-4bb6-ad50-75b607dcd9b3",
+            "pos": "<ACTION_lightVerb>使</ACTION_lightVerb><UserDefined>家庭</UserDefined><ENTITY_noun>生活</ENTITY_noun><ACTION_verb>陷入</ACTION_verb><ENTITY_nouny>困境</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(陷入|淪陷|陷落|下跌|下降|套住|捲入|沉降|沒落|淪落|牽扯)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<ACTION_lightVerb>[^<]+</ACTION_lightVerb><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>家庭</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>生活</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>陷入</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>困境</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "死後想要給家人保障": {
+            "id": "0c1edf61-4e29-46a1-9424-7f10b3dc9ece",
+            "pos": "<ACTION_verb>死</ACTION_verb><RANGE_period>後</RANGE_period><ACTION_verb>想要</ACTION_verb><ACTION_verb>給</ACTION_verb><ENTITY_noun>家人</ENTITY_noun><ACTION_verb>保障</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(死|死去|死了|死亡|斷氣|去世|殺死|慘死|過世|病死|身亡)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想要|想拿|想買|需要|渴望|試圖|更想|願意|想讓|打算|希望)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給|供給|帶給|提供|發放|資助|給老|交給|留給|給聖|分給)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保障|保修|保固|保管|保衛|保證|保護|力保|擔保|確保|昭示)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(死|死亡|身故|亡故|逝世|過世|去世)</(ACTION_verb|VerbP)><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)><(ACTION_verb|VerbP)>想要</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>給</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>保障</(ACTION_verb|VerbP)>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

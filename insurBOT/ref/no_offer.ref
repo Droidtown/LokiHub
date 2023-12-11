@@ -1,0 +1,384 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "賠償多少": {
+            "id": "610223a5-ae64-480b-8105-ff56f38414fc",
+            "pos": "<ACTION_verb>賠償</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賠償|代償|償債|償還|抵償|清償|補償|賠付|報答|抵充|抵扣)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賠.?|給付|給|拿|得到|取得|領取)</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>"
+        },
+        "錢怎麼算": {
+            "id": "cc80d6a2-308b-4cec-b3c9-2614629b84e5",
+            "pos": "<ENTITY_oov>錢</ENTITY_oov><CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>算</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(算|算輸|算數|算真|行了|夠了|算做|願屈|算想|算了|算用)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(錢|保費)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>算</(ACTION_verb|VerbP)>"
+        },
+        "保費有多少": {
+            "id": "cc32db0a-5ea4-48e6-86d8-e28c62a31265",
+            "pos": "<ENTITY_nouny>保費</ENTITY_nouny><ACTION_verb>有</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>保費</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>"
+        },
+        "賠償金多少": {
+            "id": "74f01c30-2dbe-43d6-a454-79a07a8102bc",
+            "pos": "<ENTITY_nouny>賠償金</ENTITY_nouny><CLAUSE_HowQ>多少</CLAUSE_HowQ>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(賠償金|保險金)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>"
+        },
+        "2000可以買啥": {
+            "id": "60389457-7b91-424f-98b1-dbda6ca1ef0b",
+            "pos": "<ENTITY_num>2000</ENTITY_num><MODAL>可以</MODAL><ACTION_verb>買</ACTION_verb><CLAUSE_WhatQ>啥</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(買|採買|收買|買進|購買|採辦|購得|買到|買不到|買東西|吃)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<ENTITY_num>[^<]+</ENTITY_num><MODAL>[^<]+</MODAL><(ACTION_verb|VerbP)>(.?買|投.?|保)</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "保險有幾年期": {
+            "id": "6364b46f-6a9c-4e03-b962-04fc48ff841e",
+            "pos": "<ENTITY_noun>保險</ENTITY_noun><ACTION_verb>有</ACTION_verb><CLAUSE_HowQ>幾</CLAUSE_HowQ><UserDefined>年期</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|險|方案|商品|合約)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>年期</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "可以賠多少錢": {
+            "id": "e94bfc8a-ac4d-43df-9fb7-f1c53cdfc825",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>賠</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ><ENTITY_oov>錢</ENTITY_oov>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賠|賠償|獲賠|賠付|付給|繳付|判賠|還錢|拒付|求償|繳清)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(賠.?|給付|給|拿|得到|取得|領取)</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(錢|賠償|給付|保險金|賠償金|金額|money|cash|coin|fund|金錢)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>"
+        },
+        "合約有幾年期": {
+            "id": "8707fc91-00a1-4f79-a754-ebbdb6fc1a4c",
+            "pos": "<ACTION_verb>合</ACTION_verb><MODIFIER>約</MODIFIER><ACTION_verb>有</ACTION_verb><CLAUSE_HowQ>幾</CLAUSE_HowQ><UserDefined>年期</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(合|合併|合圍|合攏|接合|聯合|併吞|侵吞|倒閉|兼併|加入)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>合</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>年期</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "有什麼附約嗎": {
+            "id": "2c9a7d34-40bb-42dd-bb5f-bda128d0758b",
+            "pos": "<ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ACTION_verb>附約</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(附約|險等|給付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>附約</(ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "有哪些限制嗎": {
+            "id": "5136b206-f09d-47e7-9a28-5e209dc5a86f",
+            "pos": "<ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>哪些</CLAUSE_WhatQ><ACTION_verb>限制</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(限制|克制|制止|制約|局限|牽制|管制|節制|設限|遏制|限價)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>(限制|規定|要求|設限)</(ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "賠償金有多少": {
+            "id": "1dd91eff-6e2d-4e14-b395-37983dad922e",
+            "pos": "<ACTION_verb>賠償</ACTION_verb><ENTITY_person>金有多</ENTITY_person><MODIFIER>少</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賠償|代償|償債|償還|抵償|清償|補償|賠付|報答|抵充|抵扣)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>賠償</(ACTION_verb|VerbP)>(<ENTITY_person>[^<]+</ENTITY_person>)?<(MODIFIER|ModifierP)>少</(MODIFIER|ModifierP)>"
+        },
+        "這個險怎麼賣": {
+            "id": "fd3a06e7-1871-4738-9918-168a9175e32f",
+            "pos": "<ENTITY_DetPhrase>這個</ENTITY_DetPhrase><MODIFIER>險</MODIFIER><CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>賣</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(賣|買|售賣|有賣|販售|販賣|想買|買了|賣到|賺|賣了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_DetPhrase>這個</ENTITY_DetPhrase><(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|險|方案|商品|合約)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>.?賣</(ACTION_verb|VerbP)>"
+        },
+        "可以分期付款嗎": {
+            "id": "5bdbe801-1105-480e-973f-dfc773303b0a",
+            "pos": "<MODAL>可以</MODAL><IDIOM>分期付款</IDIOM><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<IDIOM>分期付款</IDIOM><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "合約可以有幾年": {
+            "id": "958f973f-198b-42be-abf1-f5509360914b",
+            "pos": "<ENTITY_oov>合約</ENTITY_oov><MODAL>可以</MODAL><ACTION_verb>有</ACTION_verb><CLAUSE_HowQ>幾</CLAUSE_HowQ><UserDefined>年</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|險|方案|商品|合約)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>年</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "壽險以外的保險": {
+            "id": "736bcecd-c892-44cd-a39c-80f0f6dee60d",
+            "pos": "<UserDefined>壽險</UserDefined><RANGE_locality>以外</RANGE_locality><FUNC_inner>的</FUNC_inner><ENTITY_noun>保險</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|險|方案|商品)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))|MODIFIER|ModifierP>"
+        },
+        "屬於哪一類職業": {
+            "id": "7a5df4fb-c8cb-44c9-afcf-9fc231cc6b35",
+            "pos": "<ACTION_verb>屬於</ACTION_verb><CLAUSE_WhereQ>哪</CLAUSE_WhereQ><ENTITY_classifier>一類</ENTITY_classifier><ENTITY_noun>職業</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(屬於|歸屬|隸屬|合得來|佔餘|游近|轄鄉|轄以|兼手|放給|集誕)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>屬於</(ACTION_verb|VerbP)><CLAUSE_WhereQ>[^<]+</CLAUSE_WhereQ><ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(職業|工作)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "想保健康醫療險": {
+            "id": "7b4a075f-8fab-4d72-9466-a40413216ff5",
+            "pos": "<ACTION_verb>想</ACTION_verb><ACTION_verb>保健</ACTION_verb><ENTITY_nouny>康醫療</ENTITY_nouny><MODIFIER>險</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想|假想|冥想|回想|想像|想出|想到|想念|想拿|想望|想要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保健|保養|護膚|助產|調理|美容|塗氟|照護|護理|養生)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>想.?</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>保健</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>康醫療</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?"
+        },
+        "想保投資型保險": {
+            "id": "d9cddc11-b110-4bc2-8176-c854617ea7f2",
+            "pos": "<ACTION_verb>想保</ACTION_verb><ENTITY_nouny>投資型</ENTITY_nouny><ENTITY_noun>保險</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想保|奉上|按上|分等|突升|罷崗)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想.?|.?保|投|.?買)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>.{0,2}型</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(保險|險|方案|商品)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>"
+        },
+        "算我可以買哪個": {
+            "id": "892f4ac7-757d-46e3-bf31-4985c5f4fd83",
+            "pos": "<ACTION_verb>算</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><MODAL>可以</MODAL><ACTION_verb>買</ACTION_verb><CLAUSE_WhatQ>哪個</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(算|算輸|算數|算真|行了|夠了|算做|願屈|算想|算了|算用)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(買|採買|收買|買進|購買|採辦|購得|買到|買不到|買東西|吃)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP|ACTION_quantifiedVerb)>(算算|計算|算)</(ACTION_verb|VerbP|ACTION_quantifiedVerb)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(ACTION_verb|VerbP)>(.?買|投|保)</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "職業屬於哪一類": {
+            "id": "db37fb4e-48d8-4770-95e7-6ba4590390d7",
+            "pos": "<ENTITY_noun>職業</ENTITY_noun><ACTION_verb>屬於</ACTION_verb><CLAUSE_WhereQ>哪</CLAUSE_WhereQ><ENTITY_classifier>一類</ENTITY_classifier>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(屬於|歸屬|隸屬|合得來|佔餘|游近|轄鄉|轄以|兼手|放給|集誕)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>職業</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>屬於</(ACTION_verb|VerbP)><CLAUSE_WhereQ>[^<]+</CLAUSE_WhereQ><ENTITY_classifier>[^<]+</ENTITY_classifier>"
+        },
+        "職業是哪種類型": {
+            "id": "325ed035-a57c-43f4-9807-2b3ec2597c27",
+            "pos": "<ENTITY_noun>職業</ENTITY_noun><AUX>是</AUX><CLAUSE_WhatQ>哪種</CLAUSE_WhatQ><ENTITY_nouny>類型</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>職業</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><AUX>[^<]+</AUX><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>類型</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "幫我算要花多少錢": {
+            "id": "90dadafe-7693-4ffe-82e3-5524a96a221c",
+            "pos": "<ACTION_verb>幫</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>算</ACTION_verb><ACTION_verb>要</ACTION_verb><ACTION_verb>花</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ><ENTITY_oov>錢</ENTITY_oov>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(幫|幫助|協助|扶助|援助|輔助|想幫|陪著|替|幫著|幫了)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(算|算輸|算數|算真|行了|夠了|算做|願屈|算想|算了|算用)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(花|花了|得花|花費|需要花|耗費|用了|用掉|花費了|花掉|耗掉)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>(幫.?|替)</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>.?算</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(要|需要)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>花.?</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(錢|預算|money|cash|coin|fund|金錢|保費)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "年齡有什麼限制嗎": {
+            "id": "d171b6ef-85af-4269-8839-dd1e05ee09fb",
+            "pos": "<UserDefined>年</UserDefined><ENTITY_oov>齡</ENTITY_oov><ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ACTION_verb>限制</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(限制|克制|制止|制約|局限|牽制|管制|節制|設限|遏制|限價)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>年</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>齡</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>(<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>)?<(ACTION_verb|VerbP)>(限制|規定|要求|設限)</(ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "有什麼年齡限制嗎": {
+            "id": "36371965-f739-49f3-a900-c2cee9608770",
+            "pos": "<ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><UserDefined>年</UserDefined><ENTITY_oov>齡</ENTITY_oov><ACTION_verb>限制</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(限制|克制|制止|制約|局限|牽制|管制|節制|設限|遏制|限價)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>年</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>齡</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<RANGE_(locality|period)>上</RANGE_(locality|period)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>(限制|規定|要求|設限)</(ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "有提供保費試算嗎": {
+            "id": "f986eb0d-cd7a-4e2c-8a7d-b4c6a0fe64f0",
+            "pos": "<ACTION_verb>有</ACTION_verb><ACTION_verb>提供</ACTION_verb><UserDefined>保費試算</UserDefined><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(提供|供應|供給|供貨|供銷|供電|提出|提案|協助|奉獻|帶給)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "((?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>提供</(ACTION_verb|VerbP)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(保費試算|保額|年期|職業分類|附約|職業類型|保險費|保費)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>)?"
+        },
+        "有提供分期付款嗎": {
+            "id": "5b2f2d8e-78b2-43c3-9bf4-e504d82c8d3e",
+            "pos": "<ACTION_verb>有</ACTION_verb><ACTION_verb>提供</ACTION_verb><IDIOM>分期付款</IDIOM><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(提供|供應|供給|供貨|供銷|供電|提出|提案|協助|奉獻|帶給)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>提供</(ACTION_verb|VerbP)><IDIOM>分期付款</IDIOM><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "有沒有附加的合約": {
+            "id": "01bff05d-8af7-44ff-a878-1e66f9ed319e",
+            "pos": "<CLAUSE_AnotAQ>有沒有</CLAUSE_AnotAQ><ACTION_verb>附加</ACTION_verb><FUNC_inner>的</FUNC_inner><ENTITY_nouny>合約</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(附加|依附|加上|加進|追加|附上|附件|附帶|附著|合併|增添)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<CLAUSE_AnotAQ>[^<]+</CLAUSE_AnotAQ>)?<(ACTION_verb|VerbP)>附加</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>合約</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "賠償金可以拿多少": {
+            "id": "dd171967-9423-446b-ab55-a2efcdb1f0d1",
+            "pos": "<ENTITY_nouny>賠償金</ENTITY_nouny><MODAL>可以</MODAL><ACTION_verb>拿</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(拿|捉拿|捕拿|懂得|抓包|抓姦|捉住|捉姦|捕捉|捕撈|捕獲)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(錢|賠償|給付|保險金|賠償金|金額|money|cash|coin|fund|金錢)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>拿</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>"
+        },
+        "可以幫我算保費嗎?": {
+            "id": "c24483cc-a1b9-4766-90b3-be9528bb7c07",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>幫</ACTION_verb><ENTITY_pronoun>我</ENTITY_pronoun><ENTITY_nouny>算保費</ENTITY_nouny><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(幫|幫助|協助|扶助|援助|輔助|想幫|陪著|替|幫著|幫了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>幫</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>算保費</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<VerbP>算錢</VerbP>)?<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "有2000元可以買什麼": {
+            "id": "23f54b8e-88c2-499c-8146-415c67a4b222",
+            "pos": "<ACTION_verb>有</ACTION_verb><KNOWLEDGE_currency>2000元</KNOWLEDGE_currency><MODAL>可以</MODAL><ACTION_verb>買</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(買|採買|收買|買進|購買|採辦|購得|買東西|吃|賣|買不起)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><KNOWLEDGE_currency>[^<]+</KNOWLEDGE_currency>(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(.?買|投.?|保)</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>"
+        },
+        "工人是哪一類的職業": {
+            "id": "082bcab8-7faa-4d87-ab68-ff35e9dde78a",
+            "pos": "<ENTITY_noun>工人</ENTITY_noun><AUX>是</AUX><ENTITY_DetPhrase>哪一類</ENTITY_DetPhrase><FUNC_inner>的</FUNC_inner><ENTITY_noun>職業</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>工人</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><AUX>[^<]+</AUX><ENTITY_DetPhrase>哪一類</ENTITY_DetPhrase>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>職業</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "有什麼職業的限制嗎": {
+            "id": "aac80428-fb00-4933-8a92-8a57f9523700",
+            "pos": "<ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ENTITY_noun>職業</ENTITY_noun><FUNC_inner>的</FUNC_inner><ENTITY_nouny>限制</ENTITY_nouny><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(職業類型|職業)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<RANGE_(locality|period)>上</RANGE_(locality|period)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)>(限制|規定|要求|設限)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "職業類型有什麼限制嗎": {
+            "id": "578cb0d3-3c31-4c5e-a536-a024713d4016",
+            "pos": "<UserDefined>職業類型</UserDefined><ACTION_verb>有</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ACTION_verb>限制</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(限制|克制|制止|制約|局限|牽制|管制|節制|設限|遏制|限價)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(職業類型|職業)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>(限制|規定|要求|設限)</(ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "我的職業會被分到哪一類": {
+            "id": "f05d9f3c-0e91-4e27-bd3f-c6e1db929a84",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>的</FUNC_inner><ENTITY_noun>職業</ENTITY_noun><MODAL>會</MODAL><ACTION_lightVerb>被</ACTION_lightVerb><ACTION_verb>分到</ACTION_verb><ENTITY_DetPhrase>哪一類</ENTITY_DetPhrase>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(分到|分入|抽入|分到了|編到|刷掉|算作|歸入|換到|理解成|排進)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>職業</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<MODAL>[^<]+</MODAL>)?<ACTION_lightVerb>[^<]+</ACTION_lightVerb><(ACTION_verb|VerbP)>分到</(ACTION_verb|VerbP)><ENTITY_DetPhrase>(哪一類|哪一種)</ENTITY_DetPhrase>"
+        },
+        "職業是工人的話可以保意外險嗎": {
+            "id": "8ea215c1-1dc3-4d9a-9a91-f664794f8d7c",
+            "pos": "<ENTITY_noun>職業</ENTITY_noun><AUX>是</AUX><ENTITY_noun>工人</ENTITY_noun><FUNC_inner>的</FUNC_inner><ENTITY_nouny>話</ENTITY_nouny><MODAL>可以</MODAL><ACTION_verb>保</ACTION_verb><UserDefined>意外險</UserDefined><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|保餘|保忠|保站)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(職業|工作)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?<AUX>[^<]+</AUX><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>保</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(意外險|保險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

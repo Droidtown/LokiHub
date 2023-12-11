@@ -1,0 +1,157 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "內勤": {
+            "id": "db67a107-545d-4a00-87c3-60a475db2f3a",
+            "pos": "<ENTITY_noun>內勤</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(內勤|外勤)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "是捕魚的": {
+            "id": "d62d3e9d-f132-4635-97c7-028ba241df53",
+            "pos": "<AUX>是</AUX><ACTION_verb>捕魚</ACTION_verb><FUNC_inner>的</FUNC_inner>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(捕魚|等展|禁航)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<AUX>(是|為)</AUX><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?"
+        },
+        "為一工人": {
+            "id": "785ccb35-daa9-4aa3-8b79-81fc84903810",
+            "pos": "<AUX>為</AUX><ENTITY_num>一</ENTITY_num><ENTITY_noun>工人</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<AUX>(是|為)</AUX><ENTITY_num>一</ENTITY_num><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "從事服務業": {
+            "id": "161338f9-d230-4c11-80df-f0b79572c6df",
+            "pos": "<ACTION_verb>從事</ACTION_verb><ENTITY_nouny>服務業</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(從事|供職|任職|擔任|承做|承包|承辦|參與|從事過|投身|從事家)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(從事|做|當|擔任)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "職業是漁夫": {
+            "id": "6eb85a49-f008-4258-9610-adeba1380c9d",
+            "pos": "<ENTITY_noun>職業</ENTITY_noun><AUX>是</AUX><ENTITY_noun>漁夫</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(職業|工作)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><AUX>[^<]+</AUX><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "是一位服務員": {
+            "id": "9c7f694c-a594-4e39-bdac-05e7952604b7",
+            "pos": "<AUX>是</AUX><ENTITY_classifier>一位</ENTITY_classifier><ENTITY_nouny>服務員</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<AUX>(是|為)</AUX>(<ENTITY_classifier>[^<]+</ENTITY_classifier>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "以種植蔬果為生": {
+            "id": "a5cdc999-eea3-41ff-81be-ad12ba4824d7",
+            "pos": "<FUNC_inner>以</FUNC_inner><ACTION_verb>種植</ACTION_verb><ENTITY_nouny>蔬果</ENTITY_nouny><ACTION_verb>為生</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(種植|培植|栽植|栽種|植樹|種樹|種花|耕種|安插|誣陷|盛產)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(為生|維生|營生|為主|餬口|起家|群生|過活|為榮|為恥|見長)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_in(ner|ter)>以</FUNC_in(ner|ter)>(<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?<(ACTION_verb|VerbP)>為生</(ACTION_verb|VerbP)>"
+        },
+        "在外商公司上班": {
+            "id": "4aff696f-13c2-4a61-9699-0c508608822a",
+            "pos": "<FUNC_inner>在</FUNC_inner><ENTITY_noun>外商</ENTITY_noun><ENTITY_noun>公司</ENTITY_noun><ACTION_verb>上班</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(上班|值班|加班|勞動|工作|賣笑|運轉|換屋|用膳|放假|打工)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>(上班|工作|就職|打工|勞動|賣笑|兼職|工讀|搬磚)</(ACTION_verb|VerbP)>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

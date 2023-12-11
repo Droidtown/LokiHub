@@ -1,0 +1,154 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "是定期的嗎": {
+            "id": "6ff1d800-020a-401e-9907-e9dc73534ed4",
+            "pos": "<AUX>是</AUX><MODIFIER>定期</MODIFIER><FUNC_inner>的</FUNC_inner><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [],
+            "pattern": "<AUX>[^<]+</AUX><(MODIFIER|ModifierP)>(定期|終生|終身)</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "終生或定期": {
+            "id": "6a547902-ed64-4192-bbd5-ffcfd44b6dba",
+            "pos": "<MODIFIER>終生</MODIFIER><FUNC_conjunction>或</FUNC_conjunction><MODIFIER>定期</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>(定期|終生|終身)</(MODIFIER|ModifierP)><FUNC_conjunction>[^<]+</FUNC_conjunction><(MODIFIER|ModifierP)>(定期|終生|終身)</(MODIFIER|ModifierP)>"
+        },
+        "保定期的方案": {
+            "id": "31c57a21-66f2-485b-b4c9-217bc218e6d5",
+            "pos": "<LOCATION>保定</LOCATION><ACTION_eventQuantifier>期</ACTION_eventQuantifier><FUNC_inner>的</FUNC_inner><ENTITY_noun>方案</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<LOCATION>保定</LOCATION><ACTION_eventQuantifier>[^<]+</ACTION_eventQuantifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+        },
+        "終身還是定期": {
+            "id": "89fd0442-10a0-46cc-817f-a0eba67781c2",
+            "pos": "<MODIFIER>終身</MODIFIER><ACTION_verb>還</ACTION_verb><AUX>是</AUX><MODIFIER>定期</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(還|還錢|報|了情|察|給錢|付錢|守令|還清|戴套|夢)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(MODIFIER|ModifierP)>(定期|終生|終身)</(MODIFIER|ModifierP)><(ACTION_verb|VerbP)>還</(ACTION_verb|VerbP)>(<AUX>[^<]+</AUX>)?<(MODIFIER|ModifierP)>(定期|終生|終身)</(MODIFIER|ModifierP)>"
+        },
+        "想保終身的壽險": {
+            "id": "313278a0-8b98-4691-acdc-8d34c7f25a75",
+            "pos": "<ACTION_verb>想保</ACTION_verb><MODIFIER>終身</MODIFIER><FUNC_inner>的</FUNC_inner><UserDefined>壽險</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想保|奉上|按上|分等|突升|罷崗)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想保|保|想要|要|詢問|知道|了解)</(ACTION_verb|VerbP)><(MODIFIER|ModifierP)>(終身|終生|定期)</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>壽險</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "想保終身的方案": {
+            "id": "bef1b8c7-c012-42c9-8777-d03e1c12ac68",
+            "pos": "<ACTION_verb>想保</ACTION_verb><MODIFIER>終身</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_noun>方案</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想保|奉上|按上|分等|突升|罷崗)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想保|保|想要|要|詢問|知道|了解)</(ACTION_verb|VerbP)><(MODIFIER|ModifierP)>(終生|終身|定期)</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+        },
+        "哪一個壽險是定期": {
+            "id": "fbade5c9-cddd-4b44-bd9d-d90df96a0396",
+            "pos": "<ENTITY_DetPhrase>哪一個</ENTITY_DetPhrase><UserDefined>壽險</UserDefined><AUX>是</AUX><MODIFIER>定期</MODIFIER>",
+            "lexy": [],
+            "pattern": "<ENTITY_DetPhrase>哪一個</ENTITY_DetPhrase><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><AUX>[^<]+</AUX><(MODIFIER|ModifierP)>(定期|終生|終身)</(MODIFIER|ModifierP)>"
+        },
+        "這個是終身的壽險嗎": {
+            "id": "c0119ab0-15ab-4ec0-9bfc-8427d2bb9405",
+            "pos": "<ENTITY_DetPhrase>這個</ENTITY_DetPhrase><AUX>是</AUX><MODIFIER>終身</MODIFIER><FUNC_inner>的</FUNC_inner><UserDefined>壽險</UserDefined><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [],
+            "pattern": "(<ENTITY_DetPhrase>[^<]+</ENTITY_DetPhrase>)?<AUX>[^<]+</AUX><(MODIFIER|ModifierP)>(終身|終生|定期)</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>(壽險|險|保險)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|MODIFIER|ModifierP)>)?<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

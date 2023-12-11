@@ -1,0 +1,220 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "不同的人要保": {
+            "id": "4ed1b900-f7fa-410f-b033-c72703bfb677",
+            "pos": "<MODIFIER>不同</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_noun>人</ENTITY_noun><ACTION_verb>要</ACTION_verb><ACTION_verb>保</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|保餘|保忠|保站)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(MODIFIER|ModifierP)>(不同|其他)</(MODIFIER|ModifierP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>人</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>(想.?|要)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(.?保|.?問)</(ACTION_verb|VerbP)>"
+        },
+        "另一個人要保": {
+            "id": "16dff6e9-22d9-4e38-8175-58b8661a68c6",
+            "pos": "<MODIFIER>另</MODIFIER><ENTITY_classifier>一個</ENTITY_classifier><ENTITY_noun>人</ENTITY_noun><ACTION_verb>要</ACTION_verb><ACTION_verb>保</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(MODIFIER|ModifierP)>另</(MODIFIER|ModifierP)><ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>人</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>(想.?|要)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(.?保|.?問)</(ACTION_verb|VerbP)>"
+        },
+        "想幫別人問問": {
+            "id": "d492a0a6-2a40-4a15-b6fe-e0d12d8037b3",
+            "pos": "<ACTION_verb>想幫</ACTION_verb><ENTITY_pronoun>別人</ENTITY_pronoun><ACTION_quantifiedVerb>問問</ACTION_quantifiedVerb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想幫|常問|想帶|想替|想叫|快給|想請|想讓|想娶|常幫|深愛著)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想幫|幫)</(ACTION_verb|VerbP)><ENTITY_pronoun>[^<]+</ENTITY_pronoun><ACTION_quantifiedVerb>[^<]+</ACTION_quantifiedVerb>"
+        },
+        "想幫我媽媽保": {
+            "id": "c27bd0bb-7200-4aa5-8ea7-bb8e4065cb51",
+            "pos": "<ACTION_verb>想幫</ACTION_verb><ENTITY_possessive>我</ENTITY_possessive><ENTITY_pronoun>媽媽</ENTITY_pronoun><ACTION_verb>保</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想幫|常問|想帶|想替|想叫|快給|想請|想讓|想娶|常幫|深愛著)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想幫|幫|換|換成|變成|代替|替|代|換幫)</(ACTION_verb|VerbP)>(<ENTITY_possessive>[^<]+</ENTITY_possessive>)?(<ENTITY_pronoun>我</ENTITY_pronoun>)?(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>|<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?<(ACTION_verb|VerbP)>(保|問)</(ACTION_verb|VerbP)>"
+        },
+        "我妹妹也想保": {
+            "id": "88789a2e-e432-4f73-8916-316fc5c0cfbf",
+            "pos": "<ENTITY_possessive>我</ENTITY_possessive><ENTITY_pronoun>妹妹</ENTITY_pronoun><MODIFIER>也</MODIFIER><ACTION_verb>想保</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想保|奉上|按上|分等|突升|罷崗)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<ENTITY_possessive>[^<]+</ENTITY_possessive><ENTITY_pronoun>[^<]+</ENTITY_pronoun>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>(想保|要|保|想要)</(ACTION_verb|VerbP)>"
+        },
+        "換另一個人保": {
+            "id": "2b5edab7-4ceb-4134-93f1-2a9214f103bd",
+            "pos": "<ACTION_verb>換另</ACTION_verb><ENTITY_classifier>一個</ENTITY_classifier><ENTITY_noun>人</ENTITY_noun><ACTION_verb>保</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(換另|用另|指另|去另|說另|過另|舉另|有另|問另|據另|賣仔)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|保餘|保忠|保站)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>換另</(ACTION_verb|VerbP)><ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>人</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>(.?保|.?問)</(ACTION_verb|VerbP)>"
+        },
+        "換成媽媽要問": {
+            "id": "2ce6b616-9343-40d7-9208-7f320abfaaab",
+            "pos": "<ACTION_verb>換成</ACTION_verb><ENTITY_pronoun>媽媽</ENTITY_pronoun><ACTION_verb>要</ACTION_verb><ACTION_verb>問</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(換成|代換|換置|撤換|更換|替換|置換|調換|變換|轉換|代替)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(問|問起|追問|詢問|問道|問到|反問|問說|談|質問|問了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想幫|幫|換|換成|變成|代替|替|代|換幫)</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>.?要</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(.?保|.?問)</(ACTION_verb|VerbP)>"
+        },
+        "不一樣的人要保": {
+            "id": "988a0aba-7c27-42c8-b320-be18587fe29c",
+            "pos": "<FUNC_negation>不</FUNC_negation><ENTITY_classifier>一樣</ENTITY_classifier><FUNC_inner>的</FUNC_inner><ENTITY_noun>人</ENTITY_noun><ACTION_verb>要</ACTION_verb><ACTION_verb>保</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>不</FUNC_negation><ENTITY_classifier>一樣</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>人</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>(想.?|要)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(.?保|.?問)</(ACTION_verb|VerbP)>"
+        },
+        "可以幫我媽保嗎": {
+            "id": "39765f95-d38e-4811-a3f2-222b4ca6fbea",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>幫</ACTION_verb><ENTITY_possessive>我</ENTITY_possessive><ENTITY_pronoun>媽</ENTITY_pronoun><ACTION_verb>保</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(幫|幫助|協助|扶助|援助|輔助|想幫|陪著|替|幫著|幫了)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(幫|想幫|換|換成|變成|代替|替|代|換幫)</(ACTION_verb|VerbP)><ENTITY_possessive>[^<]+</ENTITY_possessive><ENTITY_pronoun>[^<]+</ENTITY_pronoun><(ACTION_verb|VerbP)>(.?保|.?問)</(ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "想幫另一個人保": {
+            "id": "527b4407-e8b6-4928-8c84-1c4adcf59c04",
+            "pos": "<ACTION_verb>想</ACTION_verb><ACTION_verb>幫另</ACTION_verb><ENTITY_classifier>一個</ENTITY_classifier><ENTITY_noun>人</ENTITY_noun><ACTION_verb>保</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想|假想|冥想|回想|想像|想出|想到|想念|想拿|想望|想要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(幫另|譯朗|解老|念間|騎回來|守真|據另|怒踹|挖下去|買同)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "((?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想.?|要)</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(幫另|換|換成|變成|代替|替|代|換幫)</(ACTION_verb|VerbP)>(<RANGE_(locality|period)>外</RANGE_(locality|period)>)?<ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>人</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>(.?保|.?問)</(ACTION_verb|VerbP)>"
+        },
+        "我媽媽要保保險": {
+            "id": "569f4942-2619-43d9-9459-73477e707b9e",
+            "pos": "<ENTITY_possessive>我</ENTITY_possessive><ENTITY_pronoun>媽媽</ENTITY_pronoun><ACTION_verb>要</ACTION_verb><ACTION_verb>保</ACTION_verb><ENTITY_noun>保險</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|有保|保站|保港)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<ENTITY_possessive>[^<]+</ENTITY_possessive><ENTITY_pronoun>[^<]+</ENTITY_pronoun>(<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(保|想保)</(ACTION_verb|VerbP)>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>保險</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+        },
+        "我朋友要保保險": {
+            "id": "8cec5be0-9601-493a-9f10-0863ae17b262",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ENTITY_noun>朋友</ENTITY_noun><ACTION_verb>要</ACTION_verb><ACTION_verb>保</ACTION_verb><ENTITY_noun>保險</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保|保衛|保護|守禦|守護|維護|防護|保通|保餘|保忠|保站)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>朋友</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>保</(ACTION_verb|VerbP)>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>保險</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+        },
+        "我媽媽是一個家庭主婦": {
+            "id": "62d19453-2b45-4d22-b1e0-74c0ffe2f5fc",
+            "pos": "<ENTITY_possessive>我</ENTITY_possessive><ENTITY_pronoun>媽媽</ENTITY_pronoun><AUX>是</AUX><ENTITY_classifier>一個</ENTITY_classifier><UserDefined>家庭主婦</UserDefined>",
+            "lexy": [],
+            "pattern": "<ENTITY_possessive>[^<]+</ENTITY_possessive><ENTITY_pronoun>[^<]+</ENTITY_pronoun><AUX>[^<]+</AUX>(<ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+        },
+        "我朋友是一個家庭主婦": {
+            "id": "1b45f76d-c502-412e-b590-a6d34131e8db",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ENTITY_noun>朋友</ENTITY_noun><AUX>是</AUX><ENTITY_classifier>一個</ENTITY_classifier><UserDefined>家庭主婦</UserDefined>",
+            "lexy": [],
+            "pattern": "<ENTITY_pronoun>[^<]+</ENTITY_pronoun><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>朋友</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><AUX>[^<]+</AUX>(<ENTITY_classifier>[^<]+</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

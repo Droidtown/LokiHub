@@ -1,0 +1,154 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v267",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "idiom": [
+            "無處不在"
+        ],
+        "noun_": [
+            "保費試算",
+            "國外",
+            "通勤",
+            "職業分類",
+            "職業類型",
+            "年金型",
+            "保險金",
+            "歲數",
+            "年齡",
+            "特點"
+        ],
+        "yes_no": [
+            "不可以",
+            "不好",
+            "不對",
+            "不是"
+        ],
+        "pay_term": [
+            "信用卡",
+            "活期帳戶",
+            "街口",
+            "街口支付",
+            "街口電子支付"
+        ],
+        "year_term": [
+            "年",
+            "年期",
+            "繳費年期"
+        ],
+        "insur_term": [
+            "人壽保險",
+            "傷害險",
+            "壽險",
+            "平安險",
+            "意外傷害險",
+            "意外險",
+            "旅平險",
+            "旅遊平安險",
+            "旅遊險",
+            "旅平"
+        ],
+        "benefit_term": [
+            "傷害醫療",
+            "喪葬",
+            "失能",
+            "完全失能",
+            "實支實付",
+            "意外失能",
+            "意外身故",
+            "祝壽",
+            "身故",
+            "骨折",
+            "意外骨折"
+        ],
+        "product_term": [
+            "180天留遊學差旅專案",
+            "e悠遊旅行平安險",
+            "一日平安專案",
+            "享保障定期壽險",
+            "享保障小額終身壽險",
+            "享保障微型個人定期壽險",
+            "刷平安一年定期意外身故傷害保險",
+            "心e路平安傷害保險",
+            "心iLife一年期定期壽險",
+            "新iCarry傷害保險",
+            "享保障微型個人傷害保險"
+        ],
+        "identity_term": [
+            "剛出社會",
+            "剛畢業",
+            "家庭",
+            "家庭主婦",
+            "弱勢群體",
+            "新鮮人",
+            "為人父母",
+            "特殊身份",
+            "社會服務",
+            "老人生活津貼",
+            "身心障礙",
+            "身障"
+        ]
+    },
+    "utterance": {
+        "一天": {
+            "id": "09dc5504-021f-4eaa-9430-32e419b410af",
+            "pos": "<TIME_day>一天</TIME_day>",
+            "lexy": [],
+            "pattern": "(<TIME_(holiday|justtime|day|week|month|season|year|decade)>(.{1,3}天|.{1,3}日|.{1,3}個月|.{1,3}週|.{1,3}個禮拜|.{1,3}個星期|.{1,3}星期|.{1,3}禮拜)</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}"
+        },
+        "一學年": {
+            "id": "cb732d08-2b29-48b4-90d3-bb1296a87897",
+            "pos": "<ENTITY_num>一</ENTITY_num><ACTION_verb>學</ACTION_verb><UserDefined>年</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(學|學當|學教|學校|學等|學站|託兒|學伴)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_num>[^<]+</ENTITY_num>|<ENTITY_classifier>[^<]+</ENTITY_classifier>)<(ACTION_verb|VerbP)>學</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>年</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "一學期": {
+            "id": "4e966d1f-4920-411d-8131-752ffbed8197",
+            "pos": "<ENTITY_num>一</ENTITY_num><ENTITY_noun>學期</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<ENTITY_num>一</ENTITY_num><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>學期</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "半個學期": {
+            "id": "ca8d7868-e41b-485d-b117-8b4608e18e17",
+            "pos": "<ENTITY_classifier>半個</ENTITY_classifier><ENTITY_noun>學期</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<ENTITY_classifier>.個</ENTITY_classifier><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>學期</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "德國一年": {
+            "id": "4f94730a-1e59-4a5d-9c69-9d1dfe18ff14",
+            "pos": "<LOCATION>德國</LOCATION><ENTITY_num>一</ENTITY_num><UserDefined>年</UserDefined>",
+            "lexy": [],
+            "pattern": "<LOCATION>[^<]+</LOCATION><ENTITY_num>[^<]+</ENTITY_num><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>年</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "玩一整個暑假": {
+            "id": "60a93382-ba1c-4597-b279-abbef007ff5d",
+            "pos": "<ACTION_verb>玩</ACTION_verb><ENTITY_num>一</ENTITY_num><ENTITY_DetPhrase>整個</ENTITY_DetPhrase><TIME_season>暑假</TIME_season>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(玩|玩忽|玩狎|玩著|玩樂|買東西|散步|遊玩|打電動|玩了|玩耍)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "((?<!</FUNC_negation>)<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?(<ENTITY_num>一</ENTITY_num>)?(<ENTITY_DetPhrase>整個</ENTITY_DetPhrase>|<ENTITY_classifier>[^<]+</ENTITY_classifier>)(<TIME_(holiday|justtime|day|week|month|season|year|decade)>(暑假|寒假)</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}"
+        },
+        "於德國旅行一年": {
+            "id": "dbf7fc7c-8ae6-485a-a1c0-867881b3e1c0",
+            "pos": "<FUNC_inner>於</FUNC_inner><LOCATION>德國</LOCATION><ACTION_verb>旅行</ACTION_verb><ENTITY_num>一</ENTITY_num><UserDefined>年</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(旅行|巡行|旅遊|廣遊|漫遊|環遊|絆倒|遨遊|遊歷|出遊|遊玩)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<LOCATION>[^<]+</LOCATION><(ACTION_verb|VerbP)>(旅行|旅遊|讀書|遊玩|交換|工作|出差|代購|帶貨|留學|遊學|玩|玩耍|實習)</(ACTION_verb|VerbP)><ENTITY_num>[^<]+</ENTITY_num><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>年</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "暑假都會在國外": {
+            "id": "0fb1932b-1a1a-4c48-b979-ea078d1bcc63",
+            "pos": "<TIME_season>暑假</TIME_season><QUANTIFIER>都</QUANTIFIER><MODAL>會</MODAL><FUNC_inner>在</FUNC_inner><UserDefined>國外</UserDefined>",
+            "lexy": [],
+            "pattern": "(<TIME_(holiday|justtime|day|week|month|season|year|decade)>(暑假|寒假)</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}(<QUANTIFIER>[^<]+</QUANTIFIER>)?(<MODAL>[^<]+</MODAL>)?<FUNC_in(ner|ter)>在</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|LOCATION)>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov)|LOCATION)>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
