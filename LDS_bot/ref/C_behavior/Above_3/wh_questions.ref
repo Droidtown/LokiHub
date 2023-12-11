@@ -1,0 +1,127 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_ANoun": [
+            "別人"
+        ],
+        "genetic": [
+            "智能不足",
+            "發展遲緩",
+            "精神疾病",
+            "聽損",
+            "自閉",
+            "自閉症",
+            "視覺障礙",
+            "視障"
+        ],
+        "month_age": [
+            "個月"
+        ],
+        "congenital": [
+            "中樞神經感染",
+            "先天性心臟病",
+            "唇腭裂",
+            "唇裂",
+            "唇顎裂",
+            "唐氏症",
+            "小兒症",
+            "小胖威利症",
+            "小腦症",
+            "水腦症",
+            "甲狀腺功能低下",
+            "癩癎",
+            "聽損",
+            "脊柱裂",
+            "腦出血",
+            "腦瘤",
+            "腦部感染",
+            "腦部缺氧性病變",
+            "腭裂",
+            "顎裂"
+        ],
+        "child_school": [
+            "幼兒園",
+            "幼稚園",
+            "托兒所",
+            "托嬰中心"
+        ],
+        "see_condition": [
+            "要看"
+        ]
+    },
+    "utterance": {
+        "不常": {
+            "id": "a91b4548-b97a-4b89-a048-3b47d8ba0684",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "不常",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不太會": {
+            "id": "6d14e94d-e730-4bbf-9fc2-a208f7059e47",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_degreeHead",
+                    "text": "太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不太行": {
+            "id": "2ba2a6ce-b88d-477f-9197-ddfc77cf6ce2",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "太行",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "",
+        "system": "你是一個繁體中文的助理",
+        "assistant": "問題「{{Q1}}, {{Q2}}, {{Q3}}」，答案「{{A}}」"
+    },
+    "document": [
+        {
+            "title": "不太確定",
+            "content": {
+                "A": "那…當孩子對生活周遭人事物感到好奇時，會不會問說：「那是誰？」或「這是什麼？」",
+                "Q1": "不常",
+                "Q2": "不太會",
+                "Q3": "不太行"
+            }
+        }
+    ]
+}

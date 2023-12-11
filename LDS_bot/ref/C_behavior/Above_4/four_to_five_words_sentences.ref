@@ -1,0 +1,1345 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_ANoun": [
+            "別人"
+        ],
+        "genetic": [
+            "智能不足",
+            "發展遲緩",
+            "精神疾病",
+            "聽損",
+            "自閉",
+            "自閉症",
+            "視覺障礙",
+            "視障"
+        ],
+        "month_age": [
+            "個月"
+        ],
+        "congenital": [
+            "中樞神經感染",
+            "先天性心臟病",
+            "唇腭裂",
+            "唇裂",
+            "唇顎裂",
+            "唐氏症",
+            "小兒症",
+            "小胖威利症",
+            "小腦症",
+            "水腦症",
+            "甲狀腺功能低下",
+            "癩癎",
+            "聽損",
+            "脊柱裂",
+            "腦出血",
+            "腦瘤",
+            "腦部感染",
+            "腦部缺氧性病變",
+            "腭裂",
+            "顎裂"
+        ],
+        "child_school": [
+            "幼兒園",
+            "幼稚園",
+            "托兒所",
+            "托嬰中心"
+        ],
+        "see_condition": [
+            "要看"
+        ]
+    },
+    "utterance": {
+        "不常": {
+            "id": "01fa8d2e-1bae-48c2-8b7f-65f4397424ec",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "不常",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "很少": {
+            "id": "5df1bb96-5cd4-4928-b423-cf23bb820b6f",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "很少",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "不太會": {
+            "id": "4c63268a-9c06-42b1-b026-864ee92e5a47",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_degreeHead",
+                    "text": "太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不太行": {
+            "id": "95250bc5-7da2-4438-b896-d8cecd772b0a",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "太行",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        },
+        "看心情": {
+            "id": "d0b76f26-3256-4842-82b0-40d46bc5d1b1",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "探看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "收看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看守",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看戲",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看顧",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "光顧",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "收視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "注視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "盯住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "省親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞭望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀賞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訪問",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訪談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "走動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "走訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "迫視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "造訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "逼視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想看",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看起",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "看",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_nouny",
+                    "text": "心情",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "不常這樣": {
+            "id": "d94286a2-bf67-4e4a-ab19-2a7b663e7063",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "不常",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ENTITY_DetPhrase",
+                    "text": "這樣",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "講不完整": {
+            "id": "952b7e92-6236-4871-9874-d4a86e043399",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "主講",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "演講",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講授",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講習",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講話",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講課",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講述",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "交涉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "公演",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "報告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣判",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拼讀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "演說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訓斥",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "談判",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "談到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "辯護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂講",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說話",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽得懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "講",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODIFIER",
+                    "text": "完整",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "看跟誰說話": {
+            "id": "00efc953-9b2f-475a-bf51-716fed571f42",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "探看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "收看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看守",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看戲",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看望",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看護",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "看顧",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀看",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "光顧",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "探訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "收視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "注視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "盯住",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "省親",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞭望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀望",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "觀賞",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訪問",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訪談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "走動",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "走訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "迫視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "造訪",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "逼視",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "看了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看起",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想看",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞧",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看到",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "看",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_conjunction",
+                    "text": "跟",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "CLAUSE_WhoQ",
+                    "text": "誰",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "亂說",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "搭話",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "演說",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞎說",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "胡說",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "訴說",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "說到",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "說服",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "說謊",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講話",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "關說",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂講",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "交談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "叨嘮",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "商量",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "啟奏",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "嘮叨",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "報告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣判",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "對談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "念叨",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "扯談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "招呼",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拼讀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "攀談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "敘談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "數落",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "暢談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "瞎扯",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "空談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "表示",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "談到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講述",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "辯護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "開導",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "閒扯",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "閒聊",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "閒談",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "罵人",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "生氣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "打招呼",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "發脾氣",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吼叫",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "吃東西",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "說話",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "都說很短的": {
+            "id": "04a3e628-5d23-4978-9de4-58ddd3b1ed66",
+            "argument": [
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "演說",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "說話",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣判",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拼讀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "談到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "辯護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "說過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說真",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "罵",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "說",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很短",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "都講很短的": {
+            "id": "c703b412-01a4-48cc-89b1-6f2e465451ee",
+            "argument": [
+                {
+                    "pos": "QUANTIFIER",
+                    "text": "都",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "主講",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "演講",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講學",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講授",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講習",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講話",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講課",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "講述",
+                            "level": "tier_1",
+                            "checked": false
+                        },
+                        {
+                            "text": "交涉",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "公演",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "報告",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "宣判",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "拼讀",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "演說",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "訓斥",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "談判",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "談到",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "辯護",
+                            "level": "tier_2",
+                            "checked": false
+                        },
+                        {
+                            "text": "講出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "亂講",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說話",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽得懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "講過",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說著",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說了",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "講",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "很短",
+                    "checked": false,
+                    "checkbox": true
+                },
+                {
+                    "pos": "FUNC_inner",
+                    "text": "的",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "有說但聽不懂": {
+            "id": "f1b7074c-54ca-4bbf-9cb5-afff1e10aa63",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "常說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "認得",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有稱",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "有指",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "說",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "直稱",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "慨嘆",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "常稱",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "暗指",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "自稱",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "有說",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_inter",
+                    "text": "但",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "看不懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽得懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "記不住",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "聽不到",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "忘記了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "看得懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "懂",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想不出",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "忘記",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "聽不懂",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "",
+        "system": "你是一個繁體中文的助理",
+        "assistant": "問題「{{Q1}}, {{Q2}}, {{Q3}}, {{Q4}}, {{Q5}}, {{Q6}}, {{Q7}}」，答案「{{A}}」"
+    },
+    "document": [
+        {
+            "title": "不太確定",
+            "content": {
+                "A": "是哦...那您的孩子平時說時會用到四到五個字組成的句子嗎？例如：我想要去公園。",
+                "Q1": "不常",
+                "Q2": "很少",
+                "Q3": "不太會",
+                "Q4": "不太行",
+                "Q5": "有時候",
+                "Q6": "看心情",
+                "Q7": "看跟誰說"
+            }
+        }
+    ]
+}

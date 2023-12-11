@@ -1,0 +1,130 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_ANoun": [
+            "別人"
+        ],
+        "genetic": [
+            "智能不足",
+            "發展遲緩",
+            "精神疾病",
+            "聽損",
+            "自閉",
+            "自閉症",
+            "視覺障礙",
+            "視障"
+        ],
+        "month_age": [
+            "個月"
+        ],
+        "congenital": [
+            "中樞神經感染",
+            "先天性心臟病",
+            "唇腭裂",
+            "唇裂",
+            "唇顎裂",
+            "唐氏症",
+            "小兒症",
+            "小胖威利症",
+            "小腦症",
+            "水腦症",
+            "甲狀腺功能低下",
+            "癩癎",
+            "聽損",
+            "脊柱裂",
+            "腦出血",
+            "腦瘤",
+            "腦部感染",
+            "腦部缺氧性病變",
+            "腭裂",
+            "顎裂"
+        ],
+        "child_school": [
+            "幼兒園",
+            "幼稚園",
+            "托兒所",
+            "托嬰中心"
+        ],
+        "see_condition": [
+            "要看"
+        ]
+    },
+    "utterance": {
+        "否": {
+            "id": "f9480f10-775a-40de-84ee-4ff949797637",
+            "pos": "<ENTITY_oov>否</ENTITY_oov>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>否</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "對": {
+            "id": "c2b4ebeb-92fe-4944-92fd-8cb8d689fb28",
+            "pos": "<MODIFIER>對</MODIFIER>",
+            "lexy": [],
+            "pattern": "<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>"
+        },
+        "是": {
+            "id": "fa065914-9bdc-41ea-b301-707cc0a7add5",
+            "pos": "<AUX>是</AUX>",
+            "lexy": [],
+            "pattern": "<AUX>[^<]+</AUX>"
+        },
+        "有": {
+            "id": "89d2ffc2-c0e6-47ac-9bf7-e631d20bec50",
+            "pos": "<ACTION_verb>有</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
+        },
+        "不是": {
+            "id": "8263c32f-efe0-4fa2-9f2a-495f8413c97f",
+            "pos": "<FUNC_negation>不</FUNC_negation><AUX>是</AUX>",
+            "lexy": [],
+            "pattern": "(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<FUNC_negation>[^<]+</FUNC_negation><AUX>[^<]+</AUX>"
+        },
+        "可以": {
+            "id": "6bc964f1-4186-418d-86f5-8992093f585f",
+            "pos": "<MODAL>可以</MODAL>",
+            "lexy": [],
+            "pattern": "(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<MODAL>[^<]+</MODAL>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
+        },
+        "對啊": {
+            "id": "f721cca8-9cf1-4d93-b4c4-23453c5d8c11",
+            "pos": "<FUNC_inner>對</FUNC_inner><CLAUSE_particle>啊</CLAUSE_particle>",
+            "lexy": [],
+            "pattern": "<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><CLAUSE_particle>[^<]+</CLAUSE_particle>"
+        },
+        "沒有": {
+            "id": "99182feb-9c21-49eb-b3db-aa67e1792191",
+            "pos": "<FUNC_negation>沒有</FUNC_negation>",
+            "lexy": [],
+            "pattern": "(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<FUNC_negation>[^<]+</FUNC_negation>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
+        },
+        "沒錯": {
+            "id": "646ca23e-f4e5-4f09-a56a-1675a629f93e",
+            "pos": "<FUNC_negation>沒</FUNC_negation><MODIFIER>錯</MODIFIER>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>"
+        },
+        "不可以": {
+            "id": "22b45212-387f-4746-8b3e-56d7eb940402",
+            "pos": "<FUNC_negation>不</FUNC_negation><MODAL>可以</MODAL>",
+            "lexy": [],
+            "pattern": "(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<FUNC_negation>[^<]+</FUNC_negation><MODAL>[^<]+</MODAL>(<CLAUSE_particle>[^<]+</CLAUSE_particle>)?"
+        },
+        "沒問題": {
+            "id": "3de27901-3995-453e-88f0-dd8d0e86e55d",
+            "pos": "<FUNC_negation>沒</FUNC_negation><ENTITY_noun>問題</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>問題</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

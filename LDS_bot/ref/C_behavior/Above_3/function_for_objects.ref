@@ -1,0 +1,138 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "_ANoun": [
+            "別人"
+        ],
+        "genetic": [
+            "智能不足",
+            "發展遲緩",
+            "精神疾病",
+            "聽損",
+            "自閉",
+            "自閉症",
+            "視覺障礙",
+            "視障"
+        ],
+        "month_age": [
+            "個月"
+        ],
+        "congenital": [
+            "中樞神經感染",
+            "先天性心臟病",
+            "唇腭裂",
+            "唇裂",
+            "唇顎裂",
+            "唐氏症",
+            "小兒症",
+            "小胖威利症",
+            "小腦症",
+            "水腦症",
+            "甲狀腺功能低下",
+            "癩癎",
+            "聽損",
+            "脊柱裂",
+            "腦出血",
+            "腦瘤",
+            "腦部感染",
+            "腦部缺氧性病變",
+            "腭裂",
+            "顎裂"
+        ],
+        "child_school": [
+            "幼兒園",
+            "幼稚園",
+            "托兒所",
+            "托嬰中心"
+        ],
+        "see_condition": [
+            "要看"
+        ]
+    },
+    "utterance": {
+        "不常": {
+            "id": "f776e457-6efb-46e7-88f9-00430753ae3d",
+            "argument": [
+                {
+                    "pos": "TIME_justtime",
+                    "text": "不常",
+                    "checked": true,
+                    "checkbox": false
+                }
+            ]
+        },
+        "很少": {
+            "id": "f5ba96ec-a4bc-4958-acd6-d5f1014501b7",
+            "argument": [
+                {
+                    "pos": "DegreeP",
+                    "text": "很少",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "不太會": {
+            "id": "4eb488d0-27fb-40d0-ad36-a8811bb5436d",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "FUNC_degreeHead",
+                    "text": "太",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "MODAL",
+                    "text": "會",
+                    "checked": false,
+                    "checkbox": false
+                }
+            ]
+        },
+        "不太行": {
+            "id": "b9684e79-9e21-4735-8ca0-2ca884cfd4f4",
+            "argument": [
+                {
+                    "pos": "FUNC_negation",
+                    "text": "不",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "DegreeP",
+                    "text": "太行",
+                    "checked": false,
+                    "checkbox": true
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {
+        "user": "",
+        "system": "你是一個繁體中文的助理",
+        "assistant": "問題「{{Q1}}, {{Q2}}, {{Q3}}」，答案「{{A}}」"
+    },
+    "document": [
+        {
+            "title": "不太確定",
+            "content": {
+                "A": "這樣呀...那如果您問孩子：「媽媽要喝湯，要用什麼喝？」孩子可以正確指出湯匙的圖片或拿湯匙給您呢？",
+                "Q1": "很少",
+                "Q2": "不太會",
+                "Q3": "不太行"
+            }
+        }
+    ]
+}

@@ -1,0 +1,163 @@
+{
+    "language": "zh-tw",
+    "type": "basic",
+    "version": {
+        "atk": "v265",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "genetic": [
+            "智能不足",
+            "發展遲緩",
+            "精神疾病",
+            "聽損",
+            "自閉",
+            "自閉症",
+            "視覺障礙",
+            "視障"
+        ],
+        "child_ner": [
+            "兒子",
+            "女兒",
+            "女孩",
+            "男孩"
+        ],
+        "month_age": [
+            "個月"
+        ],
+        "congenital": [
+            "中樞神經感染",
+            "先天性心臟病",
+            "唇裂",
+            "唐氏症",
+            "小兒症",
+            "小胖威利症",
+            "小腦症",
+            "水腦症",
+            "甲狀腺功能低下",
+            "癩癎",
+            "聽損",
+            "脊柱裂",
+            "腦出血",
+            "腦瘤",
+            "腦部感染",
+            "腦部缺氧性病變",
+            "腭裂"
+        ],
+        "child_school": [
+            "幼兒園",
+            "幼稚園",
+            "托兒所",
+            "托嬰中心"
+        ],
+        "child_sympton": [
+            "發高燒",
+            "確診"
+        ],
+        "hospitalize_history": [
+            "住院"
+        ]
+    },
+    "utterance": {
+        "幼兒園": {
+            "id": "37661304-7644-46f1-88bc-f30c1e6ce2be",
+            "argument": [
+                {
+                    "pos": "UserDefined",
+                    "text": "幼兒園",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "上幼兒園": {
+            "id": "d1b0abf5-b3fb-4c09-9dd1-eca0d344492e",
+            "argument": [
+                {
+                    "pos": "RANGE_locality",
+                    "text": "上",
+                    "checked": true,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "幼兒園",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        },
+        "去幼兒園": {
+            "id": "2b5dfae5-2fcc-47ab-807a-ffc0f57869ab",
+            "argument": [
+                {
+                    "pos": "ACTION_verb",
+                    "lexy": [
+                        {
+                            "text": "要去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "想去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "去了",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "回來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "跑來",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "趕去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "出去",
+                            "level": "word2vec",
+                            "checked": false
+                        },
+                        {
+                            "text": "來",
+                            "level": "word2vec",
+                            "checked": false
+                        }
+                    ],
+                    "text": "去",
+                    "checked": false,
+                    "checkbox": false
+                },
+                {
+                    "pos": "UserDefined",
+                    "text": "幼兒園",
+                    "checked": true,
+                    "checkbox": true
+                }
+            ]
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
