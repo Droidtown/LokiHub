@@ -15,7 +15,7 @@ except:
     AuthorizationKEY = ""
 
 BASEPATH = os.path.dirname(os.path.abspath(__file__))
-weatherURL = "https://opendata.cwb.gov.tw/api/v1/rest/datastore"
+weatherURL = "https://opendata.cwa.gov.tw/api/v1/rest/datastore"
 
 DatastoreID = {
     # "城市" : ["未來 2 天", "未來 1 週"]
