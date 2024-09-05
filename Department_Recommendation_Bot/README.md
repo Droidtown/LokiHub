@@ -7,7 +7,7 @@
 ## 安裝步驟
 
 1. 下載專案文件。
-2. 編輯 `account.info` 檔案，將 `api_key` 和 `USERNAME` 替換為你自己的資訊。
+2. 編輯 `account.info` 檔案，將 `api_key` 、 `username` 和 `discord_token` 替換為你自己的資訊。
 3. 安裝專案所需的 Python 套件：
     ```bash
     pip install -r requirements.txt
