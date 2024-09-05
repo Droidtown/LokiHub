@@ -20,25 +20,6 @@
 1. 在 Discord 伺服器中啟動機器人。
 2. 輸入你的興趣，機器人將提供適合的學群與科系建議。
 
-## 功能或特性
-
-- 基於使用者興趣提供學群與科系推薦
-- 集成 IOH 網站資料
-- 支援 Discord 平台
-
-## 貢獻指南
-
-如有興趣貢獻，請參考以下步驟：
-1. Fork 此專案。
-2. 創建新的分支 (`git checkout -b feature-branch`)。
-3. 提交你的更改 (`git commit -am 'Add new feature'`)。
-4. 推送至分支 (`git push origin feature-branch`)。
-5. 創建 Pull Request。
-
 ## 聯繫方式
 
-如有問題或建議，請聯繫 [你的聯繫方式]。
-
-## 授權
-
-此專案使用 [你選擇的授權方式] 授權。
+如有問題或建議，請聯繫 patpatpat1015@gmail.com
