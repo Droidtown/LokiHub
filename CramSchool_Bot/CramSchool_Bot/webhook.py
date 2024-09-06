@@ -12,9 +12,14 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from CramSchool_Bot import execLoki
 import pandas as pd
 
+import os
+BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+
 app = Flask(__name__)
-access_token = '2888VCjR7/N/m0BaPi0UbXOAGSZXw8AjmUVjedz2e1bJABAToyvTTaAlI+itamNT3ummLB0BbHzfZBvsXr1sw/I/Ultb6RCG8MdGtCBBxHrRa/D1bW5I1TJlrg2+U31JOzBpevhhci+avlkTRAYSiwdB04t89/1O/w1cDnyilFU='
-secret = '995ae6fdeb97bfdceb37a8789b5e9ef6'
+
+accountInfo = json.load(open(os.path.join(BASE_PATH, "account.info"), encoding="utf-8"))
+access_token = accountInfo["access_token"]
+secret = accountInfo["secret"]
 line_bot_api = LineBotApi(access_token)              # 確認 token 是否正確
 handler = WebhookHandler(secret)                     # 確認 secret 是否正確
 
@@ -34,7 +39,7 @@ def linebot():
         
         if type=='text':
             msg = json_data['events'][0]['message']['text']  # 取得 LINE 收到的文字訊息
-            if msg == '重新詢問':
+            if msg == '重新查詢':
                     user_state[user_id] = {'step': 'ask_username'}
                     reply = "請輸入您的使用者名稱以便重新查詢。"
             elif user_id not in user_state:
@@ -65,7 +70,7 @@ def linebot():
                     filtered_columns = filtered_rows[columns_to_keep]
                     reply = f"{filtered_columns}"
                 else:
-                    reply = "對話結束，輸入[重新詢問]，可再查詢其他資訊，謝謝！"
+                    reply = "對話結束，輸入[重新查詢]，可再查詢其他資訊，謝謝！"
         else:
             reply = '你傳的不是文字呦～'
 
