@@ -1,0 +1,28 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v271",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "一碗100克的白飯": {
+            "id": "495958a2-398c-4afc-9b5e-a952ecf56495",
+            "pos": "<ENTITY_classifier>一碗</ENTITY_classifier><ENTITY_measurement>100克</ENTITY_measurement><FUNC_inner>的</FUNC_inner><ENTITY_nounHead>白飯</ENTITY_nounHead>",
+            "lexy": [],
+            "pattern": "(<ENTITY_classifier>([^<]+)</ENTITY_classifier>)?(<ENTITY_measurement>([^<]+)</ENTITY_measurement>)?(?:(?!(noun|oov)).)*(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(?:(?!(noun|oov)).)*<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>([^<]+)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我吃了一份雞胸": {
+            "id": "046c62b7-2004-4d27-8462-ac85cb80d64e",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><VerbP>吃了</VerbP><ENTITY_classifier>一份</ENTITY_classifier><ENTITY_nouny>雞胸</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(吃了|吃下|喝了|吃過|吃|吃完|想吃|吃進|吃下去|吃完了|餵了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(?:(?!(noun|oov)).)*(<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)(<ENTITY_classifier>([^<]+)</ENTITY_classifier>)?(<ENTITY_measurement>([^<]+)</ENTITY_measurement>)?(?:(?!(noun|oov)).)*<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>([^<]+)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
