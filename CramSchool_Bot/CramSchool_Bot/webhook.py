@@ -49,8 +49,8 @@ def linebot():
             else:
                 current_step = user_state[user_id].get('step', 'ask_username')
                 if current_step == 'ask_username':
-                    user_state[user_id]['username'] = msg  # 保存使用者輸入的 username
-                    user_state[user_id]['step'] = 'ask_matter'  # 更新狀態到下一步
+                    user_state[user_id]['username'] = msg 
+                    user_state[user_id]['step'] = 'ask_matter'
                     reply = "請問您需要什麼資料？"
                 elif current_step == 'ask_matter': 
                     username_input = user_state[user_id]['username']
@@ -66,11 +66,16 @@ def linebot():
                         choice = resultDICT['Chapter'][0]
                     else: 
                         choice = resultDICT['Need'][0]    
-                    columns_to_keep = ['Username', '姓名', choice]
+                    columns_to_keep = ['姓名', choice]
                     filtered_columns = filtered_rows[columns_to_keep]
-                    reply = f"{filtered_columns}"
+                    reply = "以下是根據您查詢條件的資料：\n\n" 
+                    reply += f"課程：{resultDICT['Class'][0]}\n\n" 
+                    for index, row in filtered_columns.iterrows():
+                            for col in columns_to_keep:
+                                reply += f"{col}：{row[col]}\n"
+                    reply = reply.strip()
                 else:
-                    reply = "對話結束，輸入[重新查詢]，可再查詢其他資訊，謝謝！"
+                    reply = "若需要查詢其他資訊，請輸入[重新查詢]，謝謝！"
         else:
             reply = '你傳的不是文字呦～'
 
