@@ -1,0 +1,271 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v271",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "我喜歡運動": {
+            "id": "d76292b4-a2ec-4535-bf91-99f637e13de0",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>喜歡</ACTION_verb><ACTION_verb>運動</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(喜歡|喜愛|崇拜|愛戴|愛護|愛過|憐愛|深愛|熱愛|疼愛|相愛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(運動|溜冰|鬥爭|舉重|慢跑)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>喜歡</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>"
+        },
+        "我很喜歡物理": {
+            "id": "ec9dbe1e-70b4-4cf7-b8f9-4112557acadf",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><MODIFIER>很</MODIFIER><ACTION_verb>喜歡</ACTION_verb><ENTITY_nouny>物理</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(喜歡|喜愛|崇拜|愛戴|愛護|愛過|憐愛|深愛|熱愛|疼愛|相愛)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>喜歡</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "他很喜歡當導師": {
+            "id": "c7ec6854-9439-4094-a499-4bc5a5ef7e6e",
+            "pos": "<ENTITY_pronoun>他</ENTITY_pronoun><MODIFIER>很</MODIFIER><ACTION_verb>喜歡</ACTION_verb><ACTION_verb>當</ACTION_verb><ENTITY_noun>導師</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(喜歡|喜愛|崇拜|愛戴|愛護|愛過|憐愛|深愛|熱愛|疼愛|相愛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(當|據當|供當|指當|令當|收酒|幫當|當水|佔當)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>喜歡</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我享受創作文字和故事": {
+            "id": "ea85f3d7-a853-4f9e-97dd-31c405d99b09",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>享受</ACTION_verb><ACTION_verb>創作</ACTION_verb><ENTITY_noun>文字</ENTITY_noun><FUNC_conjunction>和</FUNC_conjunction><ENTITY_noun>故事</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(享受|享用|打發|品嚐|盡享|領略|感受|品嘗|享受著|欣賞|享有)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(創作|創製|創設|創造|擬作|製作|填寫|孕育|打造|撰述|攝製)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>享受</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><FUNC_conjunction>[^<]+</FUNC_conjunction><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我對說服他人很感興趣": {
+            "id": "ce0bbac0-7235-4b09-bb28-04fba7dced43",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>對</FUNC_inner><ACTION_verb>說服</ACTION_verb><ENTITY_pronoun>他人</ENTITY_pronoun><MODIFIER>很</MODIFIER><ACTION_verb>感</ACTION_verb><ENTITY_nouny>興趣</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(說服|亂說|勸服|勸說|瞎說|胡說|訴說|說到|說動|說話|說謊)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(感|更感|頗感|甚感|最感|看重|極感|著迷|在乎|較感|記得了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>說服</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>感</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>興趣</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我熱衷於探索人類行為": {
+            "id": "7872237e-bcdf-4ad0-9ffe-0a3c3fe8f2aa",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>熱衷</ACTION_verb><FUNC_inner>於</FUNC_inner><ACTION_verb>探索</ACTION_verb><ENTITY_noun>人類</ENTITY_noun><ENTITY_noun>行為</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(熱衷|熱愛|喜愛|著迷|沉溺|專精|沉迷|致力|執著|痴迷|專注)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(探索|刺探|勘探|探勘|探問|探尋|探查|探測|探究|探討|探訪)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>熱衷</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我熱衷於閱讀科幻小說": {
+            "id": "258d1f83-786b-4b49-88bb-fac8744f9887",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>熱衷</ACTION_verb><FUNC_inner>於</FUNC_inner><ACTION_verb>閱讀</ACTION_verb><ENTITY_nounHead>科幻小說</ENTITY_nounHead>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(熱衷|熱愛|喜愛|著迷|沉溺|專精|沉迷|致力|執著|痴迷|專注)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(閱讀|宣讀|朗讀|熟讀|略讀|精讀|評閱|試讀|誦讀|讀出|讀懂)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>熱衷</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我一直都很喜歡處理問題": {
+            "id": "9ee7fc64-f4fb-4acb-9575-96897b56794a",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><TIME_justtime>一直</TIME_justtime><QUANTIFIER>都</QUANTIFIER><MODIFIER>很</MODIFIER><ACTION_verb>喜歡</ACTION_verb><ACTION_verb>處理</ACTION_verb><ENTITY_noun>問題</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(喜歡|喜愛|崇拜|愛戴|愛護|愛過|憐愛|深愛|熱愛|疼愛|相愛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(處理|懲處|處分|處治|處置|處罰|辦理|交涉|做買賣|制裁|商談)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}(<QUANTIFIER>[^<]+</QUANTIFIER>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>喜歡|喜愛|熱愛</(ACTION_verb|VerbP)>((<FUNC_conjunction>[^<]+</FUNC_conjunction>)?(((((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?)|(((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>))|((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)|(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)))*)"
+        },
+        "我對思維模式的研究感興趣": {
+            "id": "83759096-51e6-4ccf-a841-7f11e659932c",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>對</FUNC_inner><ENTITY_nouny>思維模式</ENTITY_nouny><FUNC_inner>的</FUNC_inner><ENTITY_nouny>研究</ENTITY_nouny><ACTION_verb>感</ACTION_verb><ENTITY_nouny>興趣</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(感|更感|頗感|甚感|最感|看重|極感|著迷|在乎|較感|記得了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>感</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>興趣</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我對醫學和健康科學感興趣": {
+            "id": "183564f3-4225-4b4a-8609-2c1923e4f1d2",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>對</FUNC_inner><ENTITY_nouny>醫學</ENTITY_nouny><FUNC_conjunction>和</FUNC_conjunction><MODIFIER>健康</MODIFIER><ENTITY_noun>科學</ENTITY_noun><ACTION_verb>感</ACTION_verb><ENTITY_nouny>興趣</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(感|更感|頗感|甚感|最感|看重|極感|著迷|在乎|較感|記得了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><FUNC_conjunction>[^<]+</FUNC_conjunction>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>感</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>興趣</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我熱衷於學習新的藝術技巧": {
+            "id": "ab8e67a8-dcb8-43c8-9dfb-1a94a51669bf",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>熱衷</ACTION_verb><FUNC_inner>於</FUNC_inner><ACTION_verb>學習</ACTION_verb><MODIFIER>新</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_nouny>藝術技巧</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(熱衷|熱愛|喜愛|沈迷|專精|執著|痴迷|著迷|專注|沉迷|致力)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(學習|修習|傳習|求學|留學|習得|見習|遊學|加入|吸取|吸收)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>熱衷</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我一直都對處理問題很有興趣": {
+            "id": "bb6fd004-2e2b-454b-b519-64f37fd3f5d1",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><TIME_justtime>一直</TIME_justtime><QUANTIFIER>都</QUANTIFIER><FUNC_inner>對</FUNC_inner><ACTION_verb>處理</ACTION_verb><ENTITY_noun>問題</ENTITY_noun><MODIFIER>很</MODIFIER><ACTION_verb>有</ACTION_verb><ENTITY_nouny>興趣</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(處理|懲處|處分|處治|處置|處罰|辦理|交涉|做買賣|制裁|商談)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}(<QUANTIFIER>[^<]+</QUANTIFIER>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?((<FUNC_conjunction>[^<]+</FUNC_conjunction>)?(((((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?)|(((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>))|((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)|(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)))*)(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>充滿|充滿著|洋溢著|飽含|洋溢|充滿了|極具|有|具有|懷有|擁有|有著|懷抱|感|感到</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>興趣</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我喜歡學習如何製作數位內容": {
+            "id": "06c86984-b03d-4361-94bf-03cf316ba3c3",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>喜歡</ACTION_verb><ACTION_verb>學習</ACTION_verb><CLAUSE_HowQ>如何</CLAUSE_HowQ><ACTION_verb>製作</ACTION_verb><MODIFIER>數位</MODIFIER><ENTITY_nounHead>內容</ENTITY_nounHead>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(喜歡|喜愛|崇拜|愛戴|愛護|愛過|憐愛|深愛|熱愛|疼愛|相愛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(學習|修習|傳習|求學|留學|習得|見習|遊學|加入|吸取|吸收)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(製作|作出|創作|攝製|研製|製成|製造|創造|孕育|生出|產出)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>喜歡</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我對數據分析有強烈的好奇心": {
+            "id": "5b6a766e-feba-4199-8d68-96cbd55ceeb5",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>對</FUNC_inner><ENTITY_noun>數據</ENTITY_noun><ACTION_verb>分析</ACTION_verb><ACTION_verb>有</ACTION_verb><MODIFIER>強烈</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_nouny>好奇心</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(分析|剖析|研析|解析|判讀|剖視|化驗|建模|研究|探究|探討)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>好奇心</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我對機器學習的應用感到興奮": {
+            "id": "e27cb216-e6b2-4d8f-96eb-0088bb021404",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>對</FUNC_inner><ENTITY_noun>機器</ENTITY_noun><ACTION_verb>學習</ACTION_verb><FUNC_inner>的</FUNC_inner><ACTION_verb>應用</ACTION_verb><ACTION_verb>感到</ACTION_verb><ACTION_verb>興奮</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(學習|修習|傳習|求學|留學|習得|見習|遊學|加入|吸取|吸收)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(應用|使用|沿用|活用|自動化|編程|嵌入|專精|感測|建模|實作)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(感到|想到|感受|感知|感覺|感覺到|企盼|假想|假設|偵測|冥想)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(興奮|引發|激動|激發|雀躍|開心|驚愕|吃驚|沮喪|亢奮|懊惱)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>感到</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>興奮</(ACTION_verb|VerbP)>"
+        },
+        "我喜歡參加戶外活動，探索自然": {
+            "id": "537229dc-a41a-4a98-8276-a69cd1945ecc",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>喜歡</ACTION_verb><ACTION_verb>參加</ACTION_verb><ENTITY_nouny>戶</ENTITY_nouny><RANGE_locality>外</RANGE_locality><ENTITY_noun>活動</ENTITY_noun><ACTION_verb>探索</ACTION_verb><MODIFIER>自然</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(喜歡|喜愛|崇拜|愛戴|愛護|愛過|憐愛|深愛|熱愛|疼愛|相愛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(參加|加入|加盟|參與|伴隨|侍奉|傾聽|吸引住|定期去|投入|照看)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(探索|刺探|勘探|探勘|探問|探尋|探查|探測|探究|探討|探訪)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>喜歡</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?"
+        },
+        "我對哲學和倫理學有濃厚的興趣": {
+            "id": "5e95aaee-c958-4bbc-8a3a-18b201428dcd",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>對</FUNC_inner><ENTITY_nouny>哲</ENTITY_nouny><ACTION_verb>學</ACTION_verb><FUNC_conjunction>和</FUNC_conjunction><ENTITY_nouny>倫理學</ENTITY_nouny><ACTION_verb>有</ACTION_verb><MODIFIER>濃厚</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_nouny>興趣</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(學|學當|學教|學校|學等|學站|託兒|學伴)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><FUNC_conjunction>[^<]+</FUNC_conjunction><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>興趣</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我對心理學的理論有濃厚的興趣": {
+            "id": "a716dcfb-56b7-4f60-b18b-b917a15bbe12",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>對</FUNC_inner><ENTITY_nouny>心理學</ENTITY_nouny><FUNC_inner>的</FUNC_inner><ENTITY_noun>理論</ENTITY_noun><ACTION_verb>有</ACTION_verb><MODIFIER>濃厚</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_nouny>興趣</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>興趣</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我從高中時起就很喜歡處理問題": {
+            "id": "0733ddc2-d92a-455f-84fe-212558158c7d",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>從</FUNC_inner><ENTITY_nounHead>高中</ENTITY_nounHead><FUNC_inner>時</FUNC_inner><ENTITY_nouny>起</ENTITY_nouny><FUNC_inner>就</FUNC_inner><MODIFIER>很</MODIFIER><ACTION_verb>喜歡</ACTION_verb><ACTION_verb>處理</ACTION_verb><ENTITY_noun>問題</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(喜歡|喜愛|崇拜|愛戴|愛護|愛過|憐愛|深愛|熱愛|疼愛|相愛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(處理|懲處|處分|處治|處置|處罰|辦理|交涉|做買賣|制裁|商談)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>國小|小學|國中|中學|高中|大學</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>起</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>喜歡|喜愛|熱愛</(ACTION_verb|VerbP)>((<FUNC_conjunction>[^<]+</FUNC_conjunction>)?(((((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?)|(((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>))|((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)|(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)))*)"
+        },
+        "我對創新思維和解決方案很感興趣": {
+            "id": "6c938119-a349-4e11-a81e-cd3d80754b4a",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>對</FUNC_inner><MODIFIER>創新</MODIFIER><ENTITY_noun>思維</ENTITY_noun><FUNC_conjunction>和</FUNC_conjunction><ENTITY_noun>解決方案</ENTITY_noun><MODIFIER>很</MODIFIER><ACTION_verb>感</ACTION_verb><ENTITY_nouny>興趣</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(感|更感|頗感|甚感|最感|看重|極感|著迷|在乎|較感|記得了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><FUNC_conjunction>[^<]+</FUNC_conjunction><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>感</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>興趣</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我對文化交流和全球化現象感興趣": {
+            "id": "989a05f9-6a3f-4223-9dc7-e7f8a795a46b",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>對</FUNC_inner><ENTITY_noun>文化</ENTITY_noun><ACTION_verb>交流</ACTION_verb><FUNC_conjunction>和</FUNC_conjunction><ACTION_verb>全球化</ACTION_verb><ENTITY_nouny>現象</ENTITY_nouny><ACTION_verb>感</ACTION_verb><ENTITY_nouny>興趣</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(交流|互訪|互動|溝通|切磋|對談|合作|觀摩|經貿|研討|往來)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(全球化|)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(感|更感|頗感|甚感|最感|看重|極感|著迷|在乎|較感|記得了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><FUNC_conjunction>[^<]+</FUNC_conjunction><(ACTION_verb|VerbP)>[^<]+化</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>感</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>興趣</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我對環境保護和可持續發展感興趣": {
+            "id": "34ed053a-69c7-4604-a489-6ba931f76bb4",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>對</FUNC_inner><ENTITY_nouny>環境</ENTITY_nouny><ACTION_verb>保護</ACTION_verb><FUNC_conjunction>和</FUNC_conjunction><MODAL>可</MODAL><ACTION_verb>持續</ACTION_verb><ACTION_verb>發展</ACTION_verb><ACTION_verb>感</ACTION_verb><ENTITY_nouny>興趣</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(保護|保住|保全|保存|保持|保藏|保衛|保障|守護|維護|護著)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(持續|保持|堅持|存續|延續|持久|接續|維持|繼續|下去|偏要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(發展|拓展|推展|培養|增加|打造|研發|研製|開發|成長|演進)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(感|更感|頗感|甚感|最感|看重|極感|著迷|在乎|較感|記得了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><FUNC_conjunction>[^<]+</FUNC_conjunction>(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>感</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>興趣</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我一直都對人工智慧的技術充滿好奇": {
+            "id": "b0c794cd-d564-4f4c-8d2b-64e1efe3c123",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><TIME_justtime>一直</TIME_justtime><QUANTIFIER>都</QUANTIFIER><FUNC_inner>對</FUNC_inner><ENTITY_noun>人工</ENTITY_noun><ENTITY_noun>智慧</ENTITY_noun><FUNC_inner>的</FUNC_inner><ENTITY_noun>技術</ENTITY_noun><ACTION_verb>充滿</ACTION_verb><MODIFIER>好奇</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(充滿|充實|滿了|充滿著|洋溢著|瀰漫著|飽含|洋溢|充滿了|更添|極具)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}(<QUANTIFIER>[^<]+</QUANTIFIER>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>充滿|充滿著|洋溢著|飽含|洋溢|充滿了|極具|有|具有|懷有|擁有|有著|懷抱|感|感到</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?"
+        },
+        "我從高中時起就對處理問題很有興趣": {
+            "id": "08a371fa-0b25-4f64-bfd2-e045563afa08",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>從</FUNC_inner><ENTITY_nounHead>高中</ENTITY_nounHead><FUNC_inner>時</FUNC_inner><ENTITY_nouny>起</ENTITY_nouny><FUNC_inner>就</FUNC_inner><FUNC_inner>對</FUNC_inner><ACTION_verb>處理</ACTION_verb><ENTITY_noun>問題</ENTITY_noun><MODIFIER>很</MODIFIER><ACTION_verb>有</ACTION_verb><ENTITY_nouny>興趣</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(處理|懲處|處分|處治|處置|處罰|辦理|交涉|做買賣|制裁|商談)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>國小|小學|國中|中學|高中|大學</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>起</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?((<FUNC_conjunction>[^<]+</FUNC_conjunction>)?(((((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?)|(((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>))|((<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>)|(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)))*)(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>充滿|充滿著|洋溢著|飽含|洋溢|充滿了|極具|有|具有|懷有|擁有|有著|懷抱|感|感到</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>興趣</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "我越來越享受在這發掘知識的過程中": {
+            "id": "1d639997-4339-41d1-99cc-524c63756746",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><ACTION_verb>越來</ACTION_verb><MODIFIER>越</MODIFIER><ACTION_verb>享受</ACTION_verb><FUNC_inner>在</FUNC_inner><FUNC_determiner>這</FUNC_determiner><ACTION_verb>發掘</ACTION_verb><ENTITY_nouny>知識</ENTITY_nouny><FUNC_inner>的</FUNC_inner><ENTITY_noun>過程</ENTITY_noun><RANGE_locality>中</RANGE_locality>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(越來|愈來|越打|越變|越做|越走|越發|越傳|越辦|愈發|越積)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(享受|享用|打發|品嚐|盡享|領略|感受|品嘗|享受著|欣賞|享有)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(發掘|輕拍|探尋|發掘了|發掘出|探查|出土|探勘|挖掘|考古|尋覓)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>越來|愈來|越變|越做|越發|愈發</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>享受</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<FUNC_determiner>[^<]+</FUNC_determiner><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)>"
+        },
+        "我一直都喜歡學習如何有效溝通和說服他人": {
+            "id": "18f2ffdb-adfa-4f4c-83d5-adcccb69af5d",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><TIME_justtime>一直</TIME_justtime><QUANTIFIER>都</QUANTIFIER><ACTION_verb>喜歡</ACTION_verb><ACTION_verb>學習</ACTION_verb><CLAUSE_HowQ>如何</CLAUSE_HowQ><MODIFIER>有效</MODIFIER><ACTION_verb>溝通</ACTION_verb><FUNC_conjunction>和</FUNC_conjunction><ACTION_verb>說服</ACTION_verb><ENTITY_pronoun>他人</ENTITY_pronoun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(喜歡|喜愛|崇拜|愛戴|愛護|愛過|憐愛|深愛|熱愛|疼愛|相愛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(學習|修習|傳習|求學|留學|習得|見習|遊學|加入|吸取|吸收)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(溝通|接通|交結|傳告|接合|搭接|灌輸|聯絡|交談|相處|協商)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(說服|亂說|勸服|勸說|瞎說|胡說|訴說|說到|說動|說話|說謊)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10}(<QUANTIFIER>[^<]+</QUANTIFIER>)?<(ACTION_verb|VerbP)>喜歡</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><FUNC_conjunction>[^<]+</FUNC_conjunction><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?"
+        },
+        "我從大學時起就對人工智慧的技術充滿好奇": {
+            "id": "1b03d3ef-ae7f-4fb8-995b-595ebdcb45eb",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>從</FUNC_inner><ENTITY_noun>大學</ENTITY_noun><FUNC_inner>時</FUNC_inner><ENTITY_nouny>起</ENTITY_nouny><FUNC_inner>就</FUNC_inner><FUNC_inner>對</FUNC_inner><ENTITY_noun>人工</ENTITY_noun><ENTITY_noun>智慧</ENTITY_noun><FUNC_inner>的</FUNC_inner><ENTITY_noun>技術</ENTITY_noun><ACTION_verb>充滿</ACTION_verb><MODIFIER>好奇</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(充滿|充實|滿了|洋溢著|富於|瀰漫著|洋溢|飽含|充滿著|極具|更添)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>國小|小學|國中|中學|高中|大學</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>起</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>人工</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>[^<]+</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>充滿|充滿著|洋溢著|飽含|洋溢|充滿了|極具|有|具有|懷有|擁有|有著|懷抱|感|感到</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?"
+        },
+        "我從高中時起就很喜歡學習如何有效溝通和說服他人": {
+            "id": "57037223-c6bf-4e0e-9f16-f90a8ed5c125",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_inner>從</FUNC_inner><ENTITY_nounHead>高中</ENTITY_nounHead><FUNC_inner>時</FUNC_inner><ENTITY_nouny>起</ENTITY_nouny><FUNC_inner>就</FUNC_inner><MODIFIER>很</MODIFIER><ACTION_verb>喜歡</ACTION_verb><ACTION_verb>學習</ACTION_verb><CLAUSE_HowQ>如何</CLAUSE_HowQ><MODIFIER>有效</MODIFIER><ACTION_verb>溝通</ACTION_verb><FUNC_conjunction>和</FUNC_conjunction><ACTION_verb>說服</ACTION_verb><ENTITY_pronoun>他人</ENTITY_pronoun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(喜歡|喜愛|崇拜|愛戴|愛護|愛過|憐愛|深愛|熱愛|疼愛|相愛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(學習|修習|傳習|求學|留學|習得|見習|遊學|加入|吸取|吸收)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(溝通|接通|交結|傳告|接合|搭接|灌輸|連繫|協調|相處|互動)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(說服|亂說|勸服|勸說|瞎說|胡說|訴說|說到|說動|說話|說謊)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>國小|小學|國中|中學|高中|大學</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>起</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>喜歡</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)><FUNC_conjunction>[^<]+</FUNC_conjunction><(ACTION_verb|VerbP)>[^<]+</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
