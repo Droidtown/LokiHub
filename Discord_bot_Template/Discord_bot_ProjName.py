@@ -8,19 +8,21 @@ import re
 from datetime import datetime
 from pprint import pprint
 
-#from <your_loki_main_program> import runLoki
+#from <your_loki_main_program> import execLoki
 
 logging.basicConfig(level=logging.DEBUG)
 
 
 
 
-punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
-def getLokiResult(inputSTR):
-    punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
-    inputLIST = punctuationPat.sub("\n", inputSTR).split("\n")
-    filterLIST = []
-    resultDICT = runLoki(inputLIST, filterLIST)
+
+def getLokiResult(inputSTR, filterLIST=[]):
+    splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"] #
+    # 設定參考資料
+    refDICT = { # value 必須為 list
+        #"key": []
+    }
+    resultDICT = execLoki(inputSTR, filterLIST=filterLIST, splitLIST=splitLIST, refDICT=refDICT)
     logging.debug("Loki Result => {}".format(resultDICT))
     return resultDICT
 
