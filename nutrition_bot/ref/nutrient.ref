@@ -1,0 +1,48 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v271",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "可以攝取多少鈉": {
+            "id": "b6b2446a-112f-46d3-ba52-ae39c9dd76c2",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>攝取</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ><KNOWLEDGE_chemical>鈉</KNOWLEDGE_chemical>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(攝取|吸取|攝入|汲取|併吞|侵吞|加入|吞噬|吞嚥|吞服|吞滅)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(攝取|吃進|補充)</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><KNOWLEDGE_chemical>([^<]+)</KNOWLEDGE_chemical>"
+        },
+        "可以攝取多少營養": {
+            "id": "822823e9-feb4-4054-977a-1a21db3dc8ae",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>攝取</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ><ENTITY_noun>營養</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(攝取|吸取|攝入|汲取|併吞|侵吞|加入|吞噬|吞嚥|吞服|吞滅)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(攝取|吃進|補充)</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(營養)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "需要攝取多少營養": {
+            "id": "ca6a368e-d273-453a-aa54-ea48d7559bf7",
+            "pos": "<ACTION_verb>需要</ACTION_verb><ACTION_verb>攝取</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ><ENTITY_noun>營養</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(需要|想要|索要|要求|需求|想拿|想買|索求|索討|允許|願意)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(攝取|吸取|攝入|汲取|併吞|侵吞|加入|吞噬|吞嚥|吞服|吞滅)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(需要|需)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(攝取|吃進|補充)</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(營養)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "需要攝取多少維生素A": {
+            "id": "8156e422-64d1-4c4b-b780-15375db4fa67",
+            "pos": "<ACTION_verb>需要</ACTION_verb><ACTION_verb>攝取</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ><KNOWLEDGE_chemical>維生素A</KNOWLEDGE_chemical>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(需要|想要|索要|要求|需求|想拿|想買|索求|索討|允許|願意)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(攝取|吸取|攝入|汲取|併吞|侵吞|加入|吞噬|吞嚥|吞服|吞滅)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(需要|需)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(攝取|吃進|補充)</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><KNOWLEDGE_chemical>([^<]+)</KNOWLEDGE_chemical>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
