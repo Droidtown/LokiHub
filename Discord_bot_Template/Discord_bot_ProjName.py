@@ -90,6 +90,14 @@ class BotClient(discord.Client):
                 resultDICT = getLokiResult(msgSTR)
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resultDICT)
+                if resultDICT["response"] == []:
+                    replySTR = "抱歉，我的資料庫裡沒有相關的知識！"
+                elif resultDICT["response"] != [] and resultDICT["source"] != ["LLM_reply"]:
+                    replySTR = resultDICT["response"][0]
+                else:
+                    assistantSTR = "！"
+                    userSTR = msgSTR
+                    replySTR = llmCall(accountDICT["username"], assistantSTR, userSTR)
             await message.reply(replySTR)
 
 
