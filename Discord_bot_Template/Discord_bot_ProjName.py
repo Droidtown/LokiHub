@@ -8,13 +8,10 @@ import re
 from datetime import datetime
 from pprint import pprint
 
-#from <your_loki_main_program> import execLoki
+#from <your_loki_main_program>.main import askLoki, askLLM, getSimilarity
+
 
 logging.basicConfig(level=logging.DEBUG)
-
-
-
-
 
 def getLokiResult(inputSTR, filterLIST=[]):
     splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"] #
@@ -22,7 +19,7 @@ def getLokiResult(inputSTR, filterLIST=[]):
     refDICT = { # value 必須為 list
         #"key": []
     }
-    resultDICT = execLoki(inputSTR, filterLIST=filterLIST, splitLIST=splitLIST, refDICT=refDICT)
+    resultDICT = askLoki(inputSTR, filterLIST=filterLIST, splitLIST=splitLIST, refDICT=refDICT)
     logging.debug("Loki Result => {}".format(resultDICT))
     return resultDICT
 
