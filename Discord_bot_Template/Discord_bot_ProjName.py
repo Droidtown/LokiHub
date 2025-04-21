@@ -84,7 +84,9 @@ class BotClient(discord.Client):
 # ##########非初次對話：這裡用 Loki 計算語意
             else: #開始處理正式對話
                 #從這裡開始接上 NLU 模型
-                resultDICT = getLokiResult(msgSTR)
+
+                #askLoki(content, **kwargs)
+                resultDICT = askLoki(msgSTR)
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resultDICT)
                 if resultDICT["response"] == []:
@@ -94,7 +96,8 @@ class BotClient(discord.Client):
                 else:
                     assistantSTR = "！"
                     userSTR = msgSTR
-                    replySTR = llmCall(accountDICT["username"], assistantSTR, userSTR)
+                    #askLLM(system="", assistant="", user="")
+                    replySTR = askLLM(accountDICT["username"], assistantSTR, userSTR)
             await message.reply(replySTR)
 
 
