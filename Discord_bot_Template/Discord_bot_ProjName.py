@@ -8,7 +8,7 @@ import re
 from datetime import datetime
 from pprint import pprint
 
-#from <your_loki_main_program>.main import askLoki, askLLM, getSimilarity
+#from <your_loki_main_program>.main import askLoki, askLLM, getSimilarity, simLoki, ARTICUT
 
 
 logging.basicConfig(level=logging.DEBUG)
@@ -85,19 +85,37 @@ class BotClient(discord.Client):
             else: #開始處理正式對話
                 #從這裡開始接上 NLU 模型
 
+                """
+                bot 處理過程參考 (以下項目根據專案可互相配合或調換順序)
+                ● Loki 語意分析 (askLoki)，結果最為嚴謹，可視為第一處理項目
+                ● Similarity 相似度比對 (simLoki)，計算 Loki 模型中的訓練句型相似度，門檻值為 account.info 中的 utterance_threshold
+                ● ContentWord 脈絡模糊比對 (ARTICUT.getContentWordLIST)，將脈絡作為關鍵字查詢出相關的資料
+                ● LLM 生成模型 (askLLM)，除了 msgSTR 外，建議將相關的資料一併附上，以獲得更精確的結果
+                """
+                # Loki 語意分析
                 #askLoki(content, **kwargs)
                 resultDICT = askLoki(msgSTR)
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resultDICT)
-                if resultDICT["response"] == []:
-                    replySTR = "抱歉，我的資料庫裡沒有相關的知識！"
-                elif resultDICT["response"] != [] and resultDICT["source"] != ["LLM_reply"]:
+
+                replySTR = "抱歉，我的資料庫裡沒有相關的知識！"  # 預設回覆
+                if resultDICT["response"] != [] and resultDICT["source"] != ["LLM_reply"]:
                     replySTR = resultDICT["response"][0]
                 else:
+                    """
+                    # Similarity 相似度比對
+                    simDICT = simLoki(msgSTR)
+                    # ContentWord 脈絡模糊比對
+                    atkDICT = ARTICUT.parse(msgSTR)
+                    contentWordLIST = ARTICUT.getContentWordLIST(atkDICT)
+                    # LLM 生成模型
+                    responseSTR = askLLM(system, assistant, user)
+                    """
                     assistantSTR = "！"
                     userSTR = msgSTR
                     #askLLM(system="", assistant="", user="")
-                    replySTR = askLLM(accountDICT["username"], assistantSTR, userSTR)
+                    replySTR = askLLM(assistant=assistantSTR, user=userSTR)
+
             await message.reply(replySTR)
 
 
