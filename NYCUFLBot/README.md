@@ -26,6 +26,18 @@ pip install -r requirements.txt
 7. 將 Discord 機器人添加到你的 Discord 伺服器中。
 8. 開始與機器人互動！
 
+使用方式
+---
+在 Discord 伺服器中啟動機器人。
+輸入你的問題，機器人將提供適合的修課建議。
+
+參考資料
+---
+陽明交通大學外文系修課問答 (https://fl.nycu.edu.tw/qa/)
+
+聯繫方式
+---
+如有問題或建議，請聯繫 ctchou@nycu.edu.tw
 
 
 
