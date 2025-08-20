@@ -2,24 +2,14 @@
 ===
 專案簡介
 ---
-我可以回答大學部修課相關的七類問題：
-1. 雙主修
-2. 第二外語
-3. 英語評鑑
-4. 專業必修科目
-5. 最低畢業學分
-6. 預修碩士學位
-7. 「英文作文 / 傳達技巧工作坊」修課與免修方式
+我是陽明交通大學外國語文學系的聊天機器人。你可以問我大學部、碩士班以及「語言學與人工智能學分學程」的相關問題。
 
 安裝步驟
 ---
-1. 下載專案文件。
-2. 註冊 Discord Portal 並建立一個 discord bot。可參考教程：https://realpython.com/how-to-make-a-discord-bot-python/
-3. 到 driodtown 網站 (https://api.droidtown.co/) 註冊登入
-...
-5. 安裝專案所需的 Python 套件：pip install -r requirements.txt
-6. 將 Discord 機器人添加到你的 Discord 伺服器中。
-7. 開始與機器人互動！
+1. 下載 Discord。
+2. 將 Discord 機器人添加到你的 Discord 伺服器中:
+https://discord.com/oauth2/authorize?client_id=1407225128328101979&permissions=67584&integration_type=0&scope=bot
+3. 開始與機器人互動！
 
 使用方式
 ---
@@ -28,7 +18,9 @@
 
 參考資料
 ---
-陽明交通大學外文系修課問答 (https://fl.nycu.edu.tw/qa/)
+陽明交通大學外文系 QA (https://fl.nycu.edu.tw/qa/)
+陽明交通大學外文所 QA (https://fl.nycu.edu.tw/masterqa/)
+陽明交通大學語言學與人工智能學分學程網頁 (https://sites.google.com/nycu.edu.tw/linguisticsai/)
 
 聯繫方式
 ---
