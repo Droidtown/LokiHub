@@ -7,13 +7,13 @@
 安裝步驟
 ---
 1. 下載 Discord。
-2. 將 Discord 機器人添加到你的 Discord 伺服器中:
-https://discord.com/oauth2/authorize?client_id=1407225128328101979&permissions=67584&integration_type=0&scope=bot
-3. 開始與機器人互動！
+2. 將 NYCUFLbot 機器人添加到你的 Discord 伺服器中:
+   https://discord.com/oauth2/authorize?client_id=1410849133039845547&permissions=274877990912&integration_type=0&scope=bot
+4. 開始與 NYCUFLbot 互動！
 
 使用方式
 ---
-在 Discord 伺服器中啟動機器人。
+在 Discord 伺服器中啟動機器人 NYCUFLbot。
 輸入你的問題，機器人將提供適合的答覆。
 
 參考資料
