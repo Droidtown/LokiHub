@@ -4,11 +4,14 @@
 ---
 我是陽明交通大學外國語文學系的聊天機器人。你可以問我大學部、碩士班以及「語言學與人工智能學分學程」的相關問題。
 
-安裝步驟
+建立步驟
 ---
 1. 下載 Discord。
-2. 將 Discord 機器人添加到你的 Discord 伺服器中:
-4. 開始與 Discord 機器人互動！
+2. 建立 Discord 機器人。
+3. 建立 Loki NeuroKumoko 文本分類模型。
+4. 建立 CopyToaster 搜尋模型
+5. 將 Discord 機器人添加到你的 Discord 伺服器中。
+6. 開始與 Discord 機器人互動！
 
 使用方式
 ---
