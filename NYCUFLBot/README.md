@@ -6,12 +6,13 @@
 
 建立步驟
 ---
-1. 下載 Discord。
-2. 建立 Discord 機器人。
-3. 建立 Loki NeuroKumoko 文本分類模型。
-4. 建立 CopyToaster 文本搜尋模型
-5. 將 Discord 機器人添加到你的 Discord 伺服器中。
-6. 開始與 Discord 機器人互動！
+1. 建立參考文件檔案
+2. 建立 Loki NeuroKumoko 文本分類模型。
+3. 建立 CopyToaster 文本搜尋模型
+4. 下載 Discord。
+5. 建立 Discord 機器人。
+6. 將 Discord 機器人添加到 Discord 伺服器中。
+7. 開始與 Discord 機器人互動！
 
 使用方式
 ---
