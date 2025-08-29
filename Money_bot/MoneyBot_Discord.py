@@ -191,10 +191,10 @@ def add_postprocessing(resultDICT, uttSTR, category):
 
 def view_preprocessing(uttSTR, category):
     
-    '''
-    前處理1：去掉標點符號，存為uttSTR
-    '''
-    try:  
+    try:
+        '''
+        前處理1：去掉標點符號，存為uttSTR
+        '''        
         articutResult1 = articut.parse(uttSTR, userDefinedDictFILE="./Money_add/intent/USER_DEFINED.json")
         uttSTR = ""
         for i in articutResult1["result_pos"]:
@@ -238,8 +238,6 @@ def view_preprocessing(uttSTR, category):
         logging.error(f"view_preprocessing錯誤: {e}")
         raise RuntimeError("⚠️ 搜尋紀錄失敗，請檢查輸入格式或換句話說～")
 
-
-    
     
 class Record:
     def __init__(self, user_name, user_id):
@@ -352,7 +350,6 @@ class Record:
         """
         try:
             view_preResult = view_preprocessing(text, category)
-
             #排除三個條件皆None的情形
             if not any([view_preResult["time"], view_preResult["type"], view_preResult["category"]]):
                 return "⚠️ 請至少輸入日期、收支或類別來搜尋～"
@@ -360,7 +357,8 @@ class Record:
             income = 0
             expense = 0
             msg = []
-            msg.append(f"{user_name}的記帳紀錄：\n({text})\n")
+            msg.append(f"{user_name}的記帳紀錄：\n「{text}」")
+            msg.append(f"「時間：{view_preResult['time']} / 收支：{view_preResult['type']} / 類別：{view_preResult['category']}」\n")
             
             found = False
             for i, record in enumerate(self._recordList, start=1):
@@ -390,7 +388,7 @@ class Record:
                         expense += record_num
             #找不到同時滿足條件的紀錄
             if not found:
-                return f"找不到「{text}」的相關紀錄～"
+                return f"找不到「{text}」的相關紀錄～\n「時間：{view_preResult['time']} / 收支：{view_preResult['type']} / 類別：{view_preResult['category']}」"
     
             msg.append("-" * 80)
             msg.append(f"💰 總收入：{income:>12,} 元")
