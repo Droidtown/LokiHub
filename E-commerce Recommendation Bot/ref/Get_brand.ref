@@ -1,0 +1,91 @@
+{
+    "language": "en-us",
+    "type": "advance",
+    "version": {
+        "atk": "v101",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "__brandname__": [
+            "AMD",
+            "AORUS",
+            "ASUS",
+            "Acer America",
+            "Adreamer",
+            "Apple",
+            "Auusda",
+            "BHP",
+            "BMAX",
+            "DELL",
+            "Electronic Arts",
+            "Fusion5",
+            "GIGABYTE",
+            "GXMO",
+            "Gateway",
+            "Geo Deo",
+            "Google",
+            "HP",
+            "Intel",
+            "JWEIBK",
+            "Kamrui",
+            "LG Electronics",
+            "Lenovo",
+            "Lenovo (Beijing) Co., Ltd",
+            "Lsxvern",
+            "MSI",
+            "Microsoft",
+            "Panasonic",
+            "QERE",
+            "SAMSUNG",
+            "Toshiba",
+            "Tradernoors",
+            "Urban Factory",
+            "VAIO",
+            "XPG"
+        ],
+        "solid-state drive": [
+            "solid-state drive, SSD, ssd"
+        ]
+    },
+    "utterance": {
+        "__brandname__ brand": {
+            "id": "a4760b7c-74b3-424f-a461-5cbda640ea01",
+            "pos": "<UserDefined>__brandname__</UserDefined><ACTION_verb>brand</ACTION_verb>",
+            "lexy": {},
+            "pattern": "<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:ACTION_verb|VerbP)>brand</(?:ACTION_verb|VerbP)>"
+        },
+        "a __brandname__ one": {
+            "id": "cb4377ab-e2d0-49c9-83ac-aa56600a3bf4",
+            "pos": "<FUNC_determiner>a</FUNC_determiner><UserDefined>__brandname__</UserDefined><ENTITY_num>one</ENTITY_num>",
+            "lexy": {},
+            "pattern": "<FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><ENTITY_num>one</ENTITY_num>"
+        },
+        "an __brandname__ mac": {
+            "id": "36923540-a23e-4607-ab16-d59bf9c29225",
+            "pos": "<FUNC_determiner>an</FUNC_determiner><UserDefined>__brandname__</UserDefined><ENTITY_oov>mac</ENTITY_oov>",
+            "lexy": {},
+            "pattern": "<FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "probably __brandname__": {
+            "id": "5ddd2321-a7c0-4a89-8cb9-6a59e4fb1e59",
+            "pos": "<MODIFIER>probably</MODIFIER><UserDefined>__brandname__</UserDefined>",
+            "lexy": {},
+            "pattern": "<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I like __brandname__ products": {
+            "id": "50241a46-823e-408f-a1b8-eff634e56d39",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><ACTION_verb>like</ACTION_verb><UserDefined>__brandname__</UserDefined><ENTITY_oov>products</ENTITY_oov>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(?:ACTION_verb|VerbP)>like</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>products</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "__brandname__ or __brandname__": {
+            "id": "fbdc644a-3be4-431b-8baf-8ea34211dbd8",
+            "pos": "<UserDefined>__brandname__</UserDefined><FUNC_conjunction>or</FUNC_conjunction><UserDefined>__brandname__</UserDefined>",
+            "lexy": {},
+            "pattern": "<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_conjunction>[^<]+</FUNC_conjunction><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

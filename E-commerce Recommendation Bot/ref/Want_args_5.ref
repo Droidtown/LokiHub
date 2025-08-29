@@ -1,0 +1,89 @@
+{
+    "language": "en-us",
+    "type": "advance",
+    "version": {
+        "atk": "v101",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "__brandname__": [
+            "AMD",
+            "AORUS",
+            "ASUS",
+            "Acer America",
+            "Adreamer",
+            "Apple",
+            "Auusda",
+            "BHP",
+            "BMAX",
+            "DELL",
+            "Electronic Arts",
+            "Fusion5",
+            "GIGABYTE",
+            "GXMO",
+            "Gateway",
+            "Geo Deo",
+            "Google",
+            "HP",
+            "Intel",
+            "JWEIBK",
+            "Kamrui",
+            "LG Electronics",
+            "Lenovo",
+            "Lenovo (Beijing) Co., Ltd",
+            "Lsxvern",
+            "MSI",
+            "Microsoft",
+            "Panasonic",
+            "QERE",
+            "SAMSUNG",
+            "Toshiba",
+            "Tradernoors",
+            "Urban Factory",
+            "VAIO",
+            "XPG"
+        ],
+        "solid-state drive": [
+            "solid-state drive, SSD, ssd"
+        ]
+    },
+    "utterance": {
+        "I would get a galaxy case and keyboard cover to match to protect my laptop.": {
+            "id": "1a2d264e-75d8-4202-b542-43894e2da158",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>get</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>galaxy</ENTITY_nouny><ENTITY_noun>case</ENTITY_noun><FUNC_conjunction>and</FUNC_conjunction><ENTITY_oov>keyboard</ENTITY_oov><ACTION_verb>cover</ACTION_verb><FUNC_inner>to</FUNC_inner><ENTITY_noun>match</ENTITY_noun><FUNC_inner>to</FUNC_inner><ACTION_verb>protect</ACTION_verb><ENTITY_possessive>my</ENTITY_possessive><ENTITY_nouny>laptop</ENTITY_nouny>",
+            "lexy": {
+                "get": [
+                    "win",
+                    "acquire",
+                    "obtain",
+                    "gain",
+                    "get"
+                ],
+                "cover": [
+                    "screen",
+                    "shelter",
+                    "overspread",
+                    "shield",
+                    "hide",
+                    "cover"
+                ],
+                "protect": [
+                    "protect",
+                    "shield",
+                    "preserve",
+                    "guard"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>get</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_conjunction>[^<]+</FUNC_conjunction><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:ACTION_verb|VerbP)>cover</(?:ACTION_verb|VerbP)><FUNC_inner>[^<]+</FUNC_inner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_inner>[^<]+</FUNC_inner><(?:ACTION_verb|VerbP)>protect</(?:ACTION_verb|VerbP)><ENTITY_possessive>[^<]+</ENTITY_possessive><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would personally choose an Apple Macbook Pro or possibly a Macbook Air as a replacement": {
+            "id": "91bdbf20-f430-451f-be4a-69e90d1b7735",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><MODIFIER>personally</MODIFIER><ACTION_verb>choose</ACTION_verb><FUNC_determiner>an</FUNC_determiner><ENTITY_noun>Apple</ENTITY_noun><ENTITY_oov>Macbook</ENTITY_oov><ENTITY_oov>Pro</ENTITY_oov><FUNC_conjunction>or</FUNC_conjunction><MODIFIER>possibly</MODIFIER><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>Macbook</ENTITY_nouny><ENTITY_noun>Air</ENTITY_noun><FUNC_inner>as</FUNC_inner><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>replacement</ENTITY_nouny>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_conjunction>[^<]+</FUNC_conjunction>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_inner>as</FUNC_inner><FUNC_determiner>a</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>replacement</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

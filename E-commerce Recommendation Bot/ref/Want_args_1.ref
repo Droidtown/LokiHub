@@ -1,0 +1,298 @@
+{
+    "language": "en-us",
+    "type": "advance",
+    "version": {
+        "atk": "v101",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "__brandname__": [
+            "AMD",
+            "AORUS",
+            "ASUS",
+            "Acer America",
+            "Adreamer",
+            "Apple",
+            "Auusda",
+            "BHP",
+            "BMAX",
+            "DELL",
+            "Electronic Arts",
+            "Fusion5",
+            "GIGABYTE",
+            "GXMO",
+            "Gateway",
+            "Geo Deo",
+            "Google",
+            "HP",
+            "Intel",
+            "JWEIBK",
+            "Kamrui",
+            "LG Electronics",
+            "Lenovo",
+            "Lenovo (Beijing) Co., Ltd",
+            "Lsxvern",
+            "MSI",
+            "Microsoft",
+            "Panasonic",
+            "QERE",
+            "SAMSUNG",
+            "Toshiba",
+            "Tradernoors",
+            "Urban Factory",
+            "VAIO",
+            "XPG"
+        ],
+        "solid-state drive": [
+            "solid-state drive, SSD, ssd"
+        ]
+    },
+    "utterance": {
+        "I would choose something": {
+            "id": "3f1ee756-b533-4e17-bd5c-fabb63ebec96",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><ENTITY_nouny>something</ENTITY_nouny>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would choose a Mac book.": {
+            "id": "72caf399-f7ed-419b-b756-02f98d6514bc",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>Mac</ENTITY_nouny><ACTION_verb>book</ACTION_verb>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:ACTION_verb|VerbP)>book</(?:ACTION_verb|VerbP)>"
+        },
+        "I would choose a new product": {
+            "id": "a5c904a0-b47d-4b85-8fdb-084dc0ce5697",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_determiner>a</FUNC_determiner><MODIFIER>new</MODIFIER><ENTITY_noun>product</ENTITY_noun>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would like to buy a laptop": {
+            "id": "94944b68-ae42-4e1a-8855-5337c2a86198",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>like</ACTION_verb><FUNC_inner>to</FUNC_inner><ACTION_verb>buy</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>laptop</ENTITY_nouny>",
+            "lexy": {
+                "buy": [
+                    "buy",
+                    "bid",
+                    "acquire",
+                    "purchase"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>like</(?:ACTION_verb|VerbP)><FUNC_inner>[^<]+</FUNC_inner><(?:ACTION_verb|VerbP)>buy</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I'd purchase a silver laptop": {
+            "id": "6958d46e-4877-4b6c-af97-567c5c8c40d9",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>purchase</ACTION_verb><FUNC_determiner>a</FUNC_determiner><MODIFIER>silver</MODIFIER><ENTITY_nouny>laptop</ENTITY_nouny>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>purchase</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would choose a brand new one.": {
+            "id": "03ef9ba9-5036-440d-833c-a8cdfb206934",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_noun>brand</ENTITY_noun><MODIFIER>new</MODIFIER><ENTITY_num>one</ENTITY_num>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<ENTITY_num>[^<]+</ENTITY_num>"
+        },
+        "I would choose a top spec laptop": {
+            "id": "01dbd787-2bc2-466e-aa25-e39091593a7d",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_determiner>a</FUNC_determiner><MODIFIER>top</MODIFIER><ENTITY_nouny>spec</ENTITY_nouny><ENTITY_oov>laptop</ENTITY_oov>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>spec</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would choose to buy a Chromebook": {
+            "id": "efb0507e-e85c-4a1f-aab6-799fae5d6f8a",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_inner>to</FUNC_inner><ACTION_verb>buy</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>Chromebook</ENTITY_nouny>",
+            "lexy": {
+                "buy": [
+                    "buy",
+                    "bid",
+                    "acquire",
+                    "purchase"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_inner>[^<]+</FUNC_inner><(?:ACTION_verb|VerbP)>buy</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would probably get a chromebook.": {
+            "id": "0d9d22e7-240d-4947-a5f5-2595cae51db1",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><MODIFIER>probably</MODIFIER><ACTION_verb>get</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>chromebook</ENTITY_nouny>",
+            "lexy": {
+                "get": [
+                    "win",
+                    "acquire",
+                    "obtain",
+                    "gain",
+                    "get"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:ACTION_verb|VerbP)>get</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would buy a MacBook in Rose Gold.": {
+            "id": "46022eb2-60e9-4724-b7fc-cf1ee588e25e",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>buy</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>MacBook</ENTITY_nouny><RANGE_locality>in</RANGE_locality><LOCATION>Rose Gold</LOCATION>",
+            "lexy": {
+                "buy": [
+                    "buy",
+                    "bid",
+                    "acquire",
+                    "purchase"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>buy</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><RANGE_(?:locality|period)>[^<]+</RANGE_(?:locality|period)><LOCATION>[^<]+</LOCATION>"
+        },
+        "I would choose a laptop from a brand": {
+            "id": "523c4920-9c45-4367-a5b8-77aa79301847",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>laptop</ENTITY_nouny><FUNC_inner>from</FUNC_inner><FUNC_determiner>a</FUNC_determiner><ENTITY_noun>brand</ENTITY_noun>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_inner>[^<]+</FUNC_inner><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would need some kind of a MacBook.": {
+            "id": "9c4bb3c0-2edc-473b-bca7-101ce058085f",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>need</ACTION_verb><QUANTIFIER>some</QUANTIFIER><MODIFIER>kind</MODIFIER><FUNC_inner>of</FUNC_inner><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>MacBook</ENTITY_nouny>",
+            "lexy": {
+                "need": [
+                    "need",
+                    "demand",
+                    "require"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>need</(?:ACTION_verb|VerbP)>(?:<QUANTIFIER>[^<]+</QUANTIFIER>)?(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<FUNC_inner>[^<]+</FUNC_inner><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would choose a higher end gaming laptop.": {
+            "id": "8984ee30-5e11-45c8-99d2-2da2d687b5c4",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_determiner>a</FUNC_determiner><MODIFIER>higher</MODIFIER><ENTITY_nouny>end</ENTITY_nouny><ACTION_verb>game</ACTION_verb><ENTITY_oov>laptop</ENTITY_oov>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>end</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:ACTION_verb|VerbP)>game</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would chose a mac book as a replacement.": {
+            "id": "57bd35f1-7deb-456c-93e0-60738203a6fe",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>mac</ENTITY_nouny><ACTION_verb>book</ACTION_verb><FUNC_inner>as</FUNC_inner><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>replacement</ENTITY_nouny>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:ACTION_verb|VerbP)>book</(?:ACTION_verb|VerbP)><FUNC_inner>[^<]+</FUNC_inner><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>replacement</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would choose an efficient and modern laptop": {
+            "id": "e26d31b0-eede-4e91-8a41-736a102c3fa9",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_determiner>an</FUNC_determiner><MODIFIER>efficient</MODIFIER><FUNC_conjunction>and</FUNC_conjunction><MODIFIER>modern</MODIFIER><ENTITY_nouny>laptop</ENTITY_nouny>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<FUNC_conjunction>[^<]+</FUNC_conjunction>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would choose something small and lightweight": {
+            "id": "084029d8-49b1-416c-8793-252b79725a88",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><ENTITY_nouny>something</ENTITY_nouny><MODIFIER>small</MODIFIER><FUNC_conjunction>and</FUNC_conjunction><ENTITY_oov>lightweight</ENTITY_oov>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<FUNC_conjunction>[^<]+</FUNC_conjunction><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>lightweight</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would like a silver or gold coloured laptop.": {
+            "id": "199ecaa3-4cc1-402f-9c02-3472d5a52f6a",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>like</ACTION_verb><FUNC_determiner>a</FUNC_determiner><MODIFIER>silver</MODIFIER><FUNC_conjunction>or</FUNC_conjunction><ENTITY_oov>gold</ENTITY_oov><MODIFIER>coloured</MODIFIER><ENTITY_nouny>laptop</ENTITY_nouny>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>like</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<FUNC_conjunction>[^<]+</FUNC_conjunction><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>gold</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would choose a more reliable high spec laptop": {
+            "id": "eed39a22-e5e2-48c4-af1b-bfdcda26efec",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_determiner>a</FUNC_determiner><QUANTIFIER>more</QUANTIFIER><MODIFIER>reliable</MODIFIER><MODIFIER>high</MODIFIER><ENTITY_nouny>spec</ENTITY_nouny><ENTITY_oov>laptop</ENTITY_oov>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner>(?:<QUANTIFIER>[^<]+</QUANTIFIER>)?(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>spec</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would choose as a replacement another Macbook": {
+            "id": "0725f57f-ae58-46f0-b2e2-c665ace6df16",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_inner>as</FUNC_inner><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>replacement</ENTITY_nouny><MODIFIER>another</MODIFIER><ENTITY_nouny>Macbook</ENTITY_nouny>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_inner>[^<]+</FUNC_inner><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>replacement</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would want to purchase a Mac book from Apple.": {
+            "id": "1c66db17-4c2d-4061-bea2-b7ea340a163c",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>want</ACTION_verb><FUNC_inner>to</FUNC_inner><ACTION_verb>purchase</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>Mac</ENTITY_nouny><ACTION_verb>book</ACTION_verb><FUNC_inner>from</FUNC_inner><LOCATION>Apple</LOCATION>",
+            "lexy": {
+                "want": [
+                    "want",
+                    "desire",
+                    "expect"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>want</(?:ACTION_verb|VerbP)><FUNC_inner>[^<]+</FUNC_inner><(?:ACTION_verb|VerbP)>purchase</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:ACTION_verb|VerbP)>book</(?:ACTION_verb|VerbP)><FUNC_inner>[^<]+</FUNC_inner><LOCATION>[^<]+</LOCATION>"
+        },
+        "I would also want it to be as light as possible.": {
+            "id": "9503f471-6b76-4ce0-a8a5-201cc2cfee80",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><MODIFIER>also</MODIFIER><ACTION_verb>want</ACTION_verb><ENTITY_pronoun>it</ENTITY_pronoun><FUNC_inner>to</FUNC_inner><AUX>be</AUX><FUNC_inner>as</FUNC_inner><ENTITY_oov>light</ENTITY_oov><FUNC_inner>as</FUNC_inner><MODIFIER>possible</MODIFIER>",
+            "lexy": {
+                "want": [
+                    "want",
+                    "desire",
+                    "expect"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:ACTION_verb|VerbP)>want</(?:ACTION_verb|VerbP)>(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<FUNC_inner>[^<]+</FUNC_inner><AUX>[^<]+</AUX><FUNC_inner>[^<]+</FUNC_inner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_inner>[^<]+</FUNC_inner>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?"
+        },
+        "I would choose to replace it with a tablet style laptop": {
+            "id": "2cdccb5b-1200-483d-a164-473760a9db8f",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_inner>to</FUNC_inner><ACTION_verb>replace</ACTION_verb><ENTITY_pronoun>it</ENTITY_pronoun><FUNC_inner>with</FUNC_inner><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>tablet</ENTITY_nouny><ACTION_verb>style</ACTION_verb><ENTITY_oov>laptop</ENTITY_oov>",
+            "lexy": {
+                "style": [
+                    "characterize",
+                    "name",
+                    "designate",
+                    "style",
+                    "call",
+                    "denominate",
+                    "term"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_inner>[^<]+</FUNC_inner><(?:ACTION_verb|VerbP)>replace</(?:ACTION_verb|VerbP)>(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<FUNC_inner>[^<]+</FUNC_inner><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:ACTION_verb|VerbP)>style</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would want to purchase a Chromebook as a replacement.": {
+            "id": "f1a74ee7-47d2-4cc5-ab78-793d2594072f",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>want</ACTION_verb><FUNC_inner>to</FUNC_inner><ACTION_verb>purchase</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>Chromebook</ENTITY_nouny><FUNC_inner>as</FUNC_inner><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>replacement</ENTITY_nouny>",
+            "lexy": {
+                "want": [
+                    "want",
+                    "desire",
+                    "expect"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>want</(?:ACTION_verb|VerbP)><FUNC_inner>[^<]+</FUNC_inner><(?:ACTION_verb|VerbP)>purchase</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_inner>[^<]+</FUNC_inner><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>replacement</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would ideally like a Macbook but they are too expensive.": {
+            "id": "787031aa-a2fe-49f7-a0ed-6cca0ce636ea",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><MODIFIER>ideally</MODIFIER><ACTION_verb>like</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>Macbook</ENTITY_nouny><FUNC_inter>but</FUNC_inter><ENTITY_pronoun>they</ENTITY_pronoun><AUX>be</AUX><MODIFIER>too</MODIFIER><MODIFIER>expensive</MODIFIER>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:ACTION_verb|VerbP)>like</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>(?:<FUNC_inter>[^<]+</FUNC_inter>)?(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<AUX>[^<]+</AUX>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?"
+        },
+        "I would choose either a black or grey finish to the laptop.": {
+            "id": "d8eda623-d51b-4ed1-9d33-abe8250b7841",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><FUNC_negation>either</FUNC_negation><FUNC_determiner>a</FUNC_determiner><MODIFIER>black</MODIFIER><FUNC_conjunction>or</FUNC_conjunction><MODIFIER>grey</MODIFIER><ENTITY_nouny>finish</ENTITY_nouny><FUNC_inner>to</FUNC_inner><FUNC_determiner>the</FUNC_determiner><ENTITY_nouny>laptop</ENTITY_nouny>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)><FUNC_negation>[^<]+</FUNC_negation><FUNC_determiner>[^<]+</FUNC_determiner>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<FUNC_conjunction>[^<]+</FUNC_conjunction>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>finish</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_inner>[^<]+</FUNC_inner><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would like to replace the laptop with an updated version of an Apple laptop": {
+            "id": "f3bb596e-bdd3-4ee8-ad06-434159bf94c7",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>like</ACTION_verb><FUNC_inner>to</FUNC_inner><ACTION_verb>replace</ACTION_verb><FUNC_determiner>the</FUNC_determiner><ENTITY_nouny>laptop</ENTITY_nouny><FUNC_inner>with</FUNC_inner><FUNC_determiner>an</FUNC_determiner><MODIFIER>updated</MODIFIER><ENTITY_nouny>version</ENTITY_nouny><FUNC_inner>of</FUNC_inner><FUNC_determiner>an</FUNC_determiner><ENTITY_noun>Apple</ENTITY_noun><ENTITY_oov>laptop</ENTITY_oov>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>like</(?:ACTION_verb|VerbP)><FUNC_inner>[^<]+</FUNC_inner><(?:ACTION_verb|VerbP)>replace</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>laptop</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_inner>[^<]+</FUNC_inner><FUNC_determiner>[^<]+</FUNC_determiner>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>version</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_inner>[^<]+</FUNC_inner><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>Apple</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would probably get a netbook as I would mainly be using it to surf the web.": {
+            "id": "1d13a7ff-45f6-4816-bab5-25cd07b9810f",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><MODIFIER>probably</MODIFIER><ACTION_verb>get</ACTION_verb><FUNC_determiner>a</FUNC_determiner><ENTITY_nouny>netbook</ENTITY_nouny><FUNC_inner>as</FUNC_inner><ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><MODIFIER>mainly</MODIFIER><AUX>be</AUX><ACTION_verb>use</ACTION_verb><ENTITY_pronoun>it</ENTITY_pronoun><FUNC_inner>to</FUNC_inner><ACTION_verb>surf</ACTION_verb><FUNC_determiner>the</FUNC_determiner><ENTITY_noun>web</ENTITY_noun>",
+            "lexy": {
+                "get": [
+                    "win",
+                    "acquire",
+                    "obtain",
+                    "gain",
+                    "get"
+                ],
+                "use": [
+                    "use",
+                    "employ"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:ACTION_verb|VerbP)>get</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_inner>[^<]+</FUNC_inner>(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<AUX>[^<]+</AUX><(?:ACTION_verb|VerbP)>use</(?:ACTION_verb|VerbP)>(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<FUNC_inner>[^<]+</FUNC_inner><(?:ACTION_verb|VerbP)>surf</(?:ACTION_verb|VerbP)><FUNC_determiner>[^<]+</FUNC_determiner><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "I would choose a laptop from a brand that I had heard of and new to be reliable.": {
+            "id": "61130c50-8329-46eb-87f8-7b793bece85e",
+            "pos": "<ENTITY_pronoun>I</ENTITY_pronoun><MODAL>will</MODAL><ACTION_verb>choose</ACTION_verb><ENTITY_pronoun>a</ENTITY_pronoun><ENTITY_nouny>laptop</ENTITY_nouny><FUNC_inner>from</FUNC_inner><ENTITY_pronoun>a</ENTITY_pronoun><ENTITY_noun>brand</ENTITY_noun><ENTITY_pronoun>that</ENTITY_pronoun><ENTITY_pronoun>I</ENTITY_pronoun><ASPECT>have</ASPECT><VerbP>hear of</VerbP><FUNC_conjunction>and</FUNC_conjunction><MODIFIER>new</MODIFIER><FUNC_inner>to</FUNC_inner><AUX>be</AUX><MODIFIER>reliable</MODIFIER>",
+            "lexy": {},
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<MODAL>[^<]+</MODAL><(?:ACTION_verb|VerbP)>choose</(?:ACTION_verb|VerbP)>(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_inner>[^<]+</FUNC_inner>(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>brand</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<ASPECT>[^<]+</ASPECT><(?:ACTION_verb|VerbP)>hear of</(?:ACTION_verb|VerbP)><FUNC_conjunction>[^<]+</FUNC_conjunction>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<FUNC_inner>[^<]+</FUNC_inner><AUX>[^<]+</AUX>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
