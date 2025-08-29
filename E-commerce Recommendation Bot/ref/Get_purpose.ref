@@ -1,0 +1,135 @@
+{
+    "language": "en-us",
+    "type": "advance",
+    "version": {
+        "atk": "v101",
+        "intent": "1.0"
+    },
+    "user_defined": {
+        "__brandname__": [
+            "AMD",
+            "AORUS",
+            "ASUS",
+            "Acer America",
+            "Adreamer",
+            "Apple",
+            "Auusda",
+            "BHP",
+            "BMAX",
+            "DELL",
+            "Electronic Arts",
+            "Fusion5",
+            "GIGABYTE",
+            "GXMO",
+            "Gateway",
+            "Geo Deo",
+            "Google",
+            "HP",
+            "Intel",
+            "JWEIBK",
+            "Kamrui",
+            "LG Electronics",
+            "Lenovo",
+            "Lenovo (Beijing) Co., Ltd",
+            "Lsxvern",
+            "MSI",
+            "Microsoft",
+            "Panasonic",
+            "QERE",
+            "SAMSUNG",
+            "Toshiba",
+            "Tradernoors",
+            "Urban Factory",
+            "VAIO",
+            "XPG"
+        ],
+        "solid-state drive": [
+            "solid-state drive, SSD, ssd"
+        ]
+    },
+    "utterance": {
+        "for studying": {
+            "id": "05deb199-4ece-4ec3-8f18-b4aee5be242d",
+            "pos": "<FUNC_inner>for</FUNC_inner><ACTION_verb>study</ACTION_verb>",
+            "lexy": {},
+            "pattern": "<FUNC_inner>for</FUNC_inner>(<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>)"
+        },
+        "for VR gaming": {
+            "id": "7038bce5-9e8a-433d-9696-9c64bd6d1cbd",
+            "pos": "<FUNC_inner>for</FUNC_inner><ENTITY_oov>VR</ENTITY_oov><ACTION_verb>game</ACTION_verb>",
+            "lexy": {},
+            "pattern": "<FUNC_inner>for</FUNC_inner>(<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>)"
+        },
+        "for managing emails": {
+            "id": "7179db4b-9831-4d31-91b6-96b4cad4c5e5",
+            "pos": "<FUNC_inner>for</FUNC_inner><ACTION_verb>manage</ACTION_verb><ENTITY_oov>emails</ENTITY_oov>",
+            "lexy": {
+                "manage": [
+                    "conduct",
+                    "direct",
+                    "order",
+                    "wield",
+                    "transact",
+                    "govern",
+                    "manage",
+                    "control",
+                    "concert",
+                    "contrive"
+                ]
+            },
+            "pattern": "<FUNC_inner>for</FUNC_inner>(<(?:ACTION_verb|VerbP)>manage</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>emails</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>)"
+        },
+        "for accounting software": {
+            "id": "ce7f3c05-c80e-4eab-9efe-e3e201884d6d",
+            "pos": "<FUNC_inner>for</FUNC_inner><ENTITY_nouny>accounting</ENTITY_nouny><ENTITY_oov>software</ENTITY_oov>",
+            "lexy": {},
+            "pattern": "<FUNC_inner>[^<]+</FUNC_inner>(<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>)"
+        },
+        "to run educational apps": {
+            "id": "73aa28a8-4180-4059-ac8b-e19e15ee8eba",
+            "pos": "<FUNC_inner>to</FUNC_inner><ACTION_verb>run</ACTION_verb><MODIFIER>educational</MODIFIER><ENTITY_nouny>apps</ENTITY_nouny>",
+            "lexy": {},
+            "pattern": "<FUNC_inner>to</FUNC_inner>(<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>)"
+        },
+        "for work documents and spreadsheets": {
+            "id": "9844a4c9-aa48-423d-9278-867b0247af72",
+            "pos": "<FUNC_inner>for</FUNC_inner><ENTITY_noun>work</ENTITY_noun><ACTION_verb>document</ACTION_verb><FUNC_conjunction>and</FUNC_conjunction><ENTITY_oov>spreadsheets</ENTITY_oov>",
+            "lexy": {},
+            "pattern": "<FUNC_inner>for</FUNC_inner>(<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>work</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:ACTION_verb|VerbP)>document</(?:ACTION_verb|VerbP)><FUNC_conjunction>[^<]+</FUNC_conjunction><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>spreadsheets</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>)"
+        },
+        "For managing emails and office tasks": {
+            "id": "2b9dff9c-26e7-4c4f-80d1-439dbf359d5b",
+            "pos": "<FUNC_inner>For</FUNC_inner><ACTION_verb>manage</ACTION_verb><ENTITY_oov>emails</ENTITY_oov><FUNC_conjunction>and</FUNC_conjunction><ENTITY_nouny>office</ENTITY_nouny><ENTITY_oov>tasks</ENTITY_oov>",
+            "lexy": {
+                "manage": [
+                    "conduct",
+                    "direct",
+                    "order",
+                    "wield",
+                    "transact",
+                    "govern",
+                    "manage",
+                    "control",
+                    "concert",
+                    "contrive"
+                ]
+            },
+            "pattern": "<FUNC_inner>(?:For|for)</FUNC_inner>(<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_conjunction>[^<]+</FUNC_conjunction><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>)"
+        },
+        "for studying and taking online classes": {
+            "id": "da733cb4-415f-4c4f-aa8e-c3b5f196c37f",
+            "pos": "<FUNC_inner>for</FUNC_inner><ACTION_verb>study</ACTION_verb><FUNC_conjunction>and</FUNC_conjunction><ACTION_verb>take</ACTION_verb><MODIFIER>online</MODIFIER><ENTITY_nouny>classes</ENTITY_nouny>",
+            "lexy": {},
+            "pattern": "<FUNC_inner>for</FUNC_inner>(<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><FUNC_conjunction>[^<]+</FUNC_conjunction><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>)"
+        },
+        "for presentations and business meetings": {
+            "id": "19a7993e-87e2-43f3-8355-283a5d2d94da",
+            "pos": "<FUNC_inner>for</FUNC_inner><ENTITY_oov>presentations</ENTITY_oov><FUNC_conjunction>and</FUNC_conjunction><ENTITY_nouny>business</ENTITY_nouny><ENTITY_oov>meetings</ENTITY_oov>",
+            "lexy": {},
+            "pattern": "<FUNC_inner>for</FUNC_inner>(<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><FUNC_conjunction>[^<]+</FUNC_conjunction><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>)"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
