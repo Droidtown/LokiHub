@@ -1,0 +1,61 @@
+{
+    "debug": true,
+    "server": "https://nlu.droidtown.co",
+    "username": "Your Loki Account name",
+    "api_key": "Your Articut API Key",
+    "version": "v101",
+    "loki_key": "Your Loki Key",
+    "loki_project": "RSBot",
+    "copytoaster_key": "",
+    "copytoaster_category": [],
+    "llm_prompt": {
+        "system": "You are an assistant.",
+        "assistant": "",
+        "user": "answer the question '{{INPUT}}'.",
+        "resp_header": [
+            "My database does not contain relevant information, but online sources indicate that..."
+        ]
+    },
+    "discord_token" : "Your Discord Token",
+    "chatbot_mode": false,
+    "chatbot_prompt": {
+        "Get_brand": {
+            "prompt": {},
+            "document": {}
+        },
+        "Want_args_0": {
+            "prompt": {},
+            "document": {}
+        },
+        "Get_purpose": {
+            "prompt": {},
+            "document": {}
+        },
+        "Want_args_1": {
+            "prompt": {},
+            "document": {}
+        },
+        "Want_args_2": {
+            "prompt": {},
+            "document": {}
+        },
+        "Want_args_3": {
+            "prompt": {},
+            "document": {}
+        },
+        "Want_args_4": {
+            "prompt": {},
+            "document": {}
+        },
+        "Want_args_5": {
+            "prompt": {},
+            "document": {}
+        }
+    },
+    "utterance_count": {},
+    "utterance_feature": [
+        "verb",
+        "noun"
+    ],
+    "utterance_threshold": 0.4
+}
